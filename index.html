@@ -20,13 +20,13 @@
   .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
   nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
   nav a:hover{color:var(--ink);}
-  .hero{padding:64px 0 48px;text-align:center;}
+  .hero{padding:40px 0 20px;text-align:center;}
   .hero h1{font-family:'Fraunces',serif;font-weight:700;font-size:52px;margin-bottom:16px;}
   .hero p{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0 auto 28px;line-height:1.6;}
   .hero-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:6px 13px;border-radius:999px;border:1px solid var(--line-strong);background:var(--paper-2);}
-  .tag.gold{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600;}
-  .continents{display:grid;grid-template-columns:1fr;gap:24px;padding:20px 0 80px;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:6px 14px;border-radius:999px;border:1px solid var(--gold);color:var(--ink);background:var(--paper-2);}
+  .bottom-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:8px 0 56px;}
+  .continents{display:grid;grid-template-columns:1fr;gap:24px;padding:8px 0 64px;}
   .continent-card{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:4px;padding:28px 32px;}
   .continent-card h2{font-family:'Fraunces',serif;font-size:26px;margin-bottom:4px;}
   .continent-desc{font-size:14px;color:var(--ink-soft);margin-bottom:20px;}
@@ -44,20 +44,14 @@
 </head>
 <body>
 <header>
-  <div class="brand"><span class="brand-mark">Atlas Abierto</span><span class="brand-sub">Cartografía escolar libre</span></div>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
   <nav><a href="index.html">Explorar</a><a href="licencias.html">Licencias</a></nav>
 </header>
 
 <div class="wrap">
   <div class="hero">
-    <h1>Mapas escolares, gratis y sin fricción</h1>
-    <p>Un repositorio abierto de mapas físicos y políticos de alta resolución, listos para ver en pantalla o imprimir en A4, con datos geográficos reales (GISCO / Eurostat). Pensado para profesores y estudiantes de Secundaria y Bachillerato.</p>
-    <div class="hero-tags">
-      <span class="tag gold">CC BY 4.0 — gratis para siempre</span>
-      <span class="tag">4 continentes completos</span>
-      <span class="tag">16 mapas</span>
-      <span class="tag">Personalizables</span>
-    </div>
+    <h1>Mapas escolares personalizables</h1>
+    <p>Un repositorio abierto de mapas físicos y políticos de alta resolución, listos para ver en pantalla o imprimir en A4, con datos geográficos reales (GISCO / Eurostat). Siempre gratis, sin publicidad, sin datos privados.</p>
   </div>
 
   <div class="continents">
@@ -82,6 +76,13 @@
       <p class="continent-desc">49 países, más el oriente de Rusia (desde los Urales)</p>
       <div class="cat-grid"><a href="asia-relieve.html" class="cat-link"><span class="cat-name">Físico: Relieve</span><span class="cat-desc">Cordilleras, picos y regiones físicas</span></a><a href="asia-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos, lagos y mares</span></a><a href="asia-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="asia-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
     </div>
+  </div>
+
+  <div class="bottom-tags">
+    <span class="tag">CC BY 4.0 — gratis para siempre</span>
+    <span class="tag">4 continentes completos</span>
+    <span class="tag">16 mapas</span>
+    <span class="tag">Personalizables</span>
   </div>
 </div>
 

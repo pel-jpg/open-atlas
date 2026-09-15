@@ -61,9 +61,9 @@
   .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
   .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
-  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 11px;border-radius:999px;border:1px solid var(--line-strong);}
-  .tag.license{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600;}
-  .tag.category{background:var(--ink);border-color:var(--ink);color:var(--paper);font-weight:600;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
   .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:16px;}
   .country{fill:var(--land);stroke:none;}
   .country:hover{fill:#93B587;}
@@ -120,7 +120,7 @@
 </head>
 <body>
 <header>
-  <div class="brand"><span class="brand-mark">Atlas Abierto</span><span class="brand-sub">Cartografía escolar libre</span></div>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
   <nav><a href="index.html">Explorar</a><a href="licencias.html">Licencias</a></nav>
 </header>
 <div class="wrap">
@@ -131,7 +131,6 @@
       <span class="tag category">FÍSICO: HIDROGRAFÍA</span>
       <span class="tag license">CC BY 4.0 — EUROGEOGRAPHICS / GISCO</span>
       <span class="tag">Nivel: Secundaria · Bachillerato</span>
-      <span class="tag">Idioma: ES</span>
       <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
     </div>
     <div class="siblings">
@@ -139,6 +138,43 @@
       <a class="" href="asia-relieve.html">Relieve</a><a class="current" href="asia-hidrografia.html">Hidrografía</a><a class="" href="asia-costeros.html">Accidentes costeros</a><a class="" href="asia-politico.html">Político</a>
     </div>
   </div>
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="estandar" class="active">Estándar (todo)</button>
+      </div>
+    </div>
+    <div class="cat-toggles">
+      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
+    </div>
+    <details class="advanced-block">
+      <summary>Elegir ríos y lagos uno a uno →</summary>
+      <div class="advanced-groups">
+        <div class="advanced-group"><h4>Ríos (14)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Obi" checked> Obi</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Yeniséi" checked> Yeniséi</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Lena" checked> Lena</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Amur" checked> Amur</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Huang He (Amarillo)" checked> Huang He (Amarillo)</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Yangtsé" checked> Yangtsé</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Mekong" checked> Mekong</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Ganges" checked> Ganges</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Indo" checked> Indo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Brahmaputra" checked> Brahmaputra</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Tigris" checked> Tigris</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Éufrates" checked> Éufrates</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Amu Daria" checked> Amu Daria</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Sir Daria" checked> Sir Daria</label></div>
+        <div class="advanced-group"><h4>Lagos (5)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Baikal" checked> Baikal</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Balkash" checked> Balkash</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Aral (histórico)" checked> Aral (histórico)</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Van" checked> Van</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Urmía" checked> Urmía</label></div>
+      </div>
+    </details>
+  </div>
+
   <div class="print-page-body">
     <div class="print-title-bar">
       <div style="display:flex;align-items:baseline;">
@@ -364,43 +400,6 @@
 <text class="river-label" data-cat="river" data-name="Amu Daria" x="510.0" y="539.6" text-anchor="start">Amu Daria</text>
 <text class="river-label" data-cat="river" data-name="Sir Daria" x="532.8" y="480.0" text-anchor="start">Sir Daria</text>
     </svg>
-  </div>
-  
-  <div class="custom-panel" id="customPanel">
-    <div class="custom-panel-head">
-      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
-      <div class="preset-btns">
-        <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Estándar (todo)</button>
-      </div>
-    </div>
-    <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-    </div>
-    <details class="advanced-block">
-      <summary>Elegir ríos y lagos uno a uno →</summary>
-      <div class="advanced-groups">
-        <div class="advanced-group"><h4>Ríos (14)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Obi" checked> Obi</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Yeniséi" checked> Yeniséi</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Lena" checked> Lena</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Amur" checked> Amur</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Huang He (Amarillo)" checked> Huang He (Amarillo)</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Yangtsé" checked> Yangtsé</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Mekong" checked> Mekong</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Ganges" checked> Ganges</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Indo" checked> Indo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Brahmaputra" checked> Brahmaputra</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Tigris" checked> Tigris</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Éufrates" checked> Éufrates</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Amu Daria" checked> Amu Daria</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Sir Daria" checked> Sir Daria</label></div>
-        <div class="advanced-group"><h4>Lagos (5)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Baikal" checked> Baikal</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Balkash" checked> Balkash</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Aral (histórico)" checked> Aral (histórico)</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Van" checked> Van</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Urmía" checked> Urmía</label></div>
-      </div>
-    </details>
   </div>
 
   <div class="details">

@@ -61,9 +61,9 @@
   .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
   .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
-  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 11px;border-radius:999px;border:1px solid var(--line-strong);}
-  .tag.license{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600;}
-  .tag.category{background:var(--ink);border-color:var(--ink);color:var(--paper);font-weight:600;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
   .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:16px;}
   .country{fill:var(--land);stroke:none;}
   .country:hover{fill:#93B587;}
@@ -120,7 +120,7 @@
 </head>
 <body>
 <header>
-  <div class="brand"><span class="brand-mark">Atlas Abierto</span><span class="brand-sub">Cartografía escolar libre</span></div>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
   <nav><a href="index.html">Explorar</a><a href="licencias.html">Licencias</a></nav>
 </header>
 <div class="wrap">
@@ -131,7 +131,6 @@
       <span class="tag category">FÍSICO: HIDROGRAFÍA</span>
       <span class="tag license">CC BY 4.0 — EUROGEOGRAPHICS / GISCO</span>
       <span class="tag">Nivel: Secundaria · Bachillerato</span>
-      <span class="tag">Idioma: ES</span>
       <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
     </div>
     <div class="siblings">
@@ -140,6 +139,50 @@
       <a class="" href="africa-politico.html">Político</a>
     </div>
   </div>
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="estandar" class="active">Estándar (todo)</button>
+      </div>
+    </div>
+    <div class="cat-toggles">
+      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
+    </div>
+    <details class="advanced-block">
+      <summary>Elegir ríos y lagos uno a uno →</summary>
+      <div class="advanced-groups">
+        <div class="advanced-group"><h4>Ríos (16)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Nilo" checked> Nilo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Congo" checked> Congo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Níger" checked> Níger</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Zambeze" checked> Zambeze</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Naranja" checked> Naranja</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Limpopo" checked> Limpopo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Senegal" checked> Senegal</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Volta" checked> Volta</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Chari" checked> Chari</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Ubangui" checked> Ubangui</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Juba" checked> Juba</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Nilo Azul" checked> Nilo Azul</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Rovuma" checked> Rovuma</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Kasai" checked> Kasai</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Cunene" checked> Cunene</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Cuango" checked> Cuango</label></div>
+        <div class="advanced-group"><h4>Lagos (10)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Victoria" checked> Victoria</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Tanganica" checked> Tanganica</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Malaui" checked> Malaui</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Chad" checked> Chad</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Turkana" checked> Turkana</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Alberto" checked> Alberto</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Eduardo" checked> Eduardo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Kivu" checked> Kivu</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Bangweulu" checked> Bangweulu</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Mweru" checked> Mweru</label></div>
+      </div>
+    </details>
+  </div>
+
   <div class="print-page-body">
     <div class="print-title-bar">
       <div style="display:flex;align-items:baseline;">
@@ -387,50 +430,6 @@
 <text class="river-label" data-cat="river" data-name="Cunene" x="712.5" y="1154.4" text-anchor="start">Cunene</text>
 <text class="river-label" data-cat="river" data-name="Cuango" x="774.7" y="994.8" text-anchor="start">Cuango</text>
     </svg>
-  </div>
-  
-  <div class="custom-panel" id="customPanel">
-    <div class="custom-panel-head">
-      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
-      <div class="preset-btns">
-        <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Estándar (todo)</button>
-      </div>
-    </div>
-    <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-    </div>
-    <details class="advanced-block">
-      <summary>Elegir ríos y lagos uno a uno →</summary>
-      <div class="advanced-groups">
-        <div class="advanced-group"><h4>Ríos (16)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Nilo" checked> Nilo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Congo" checked> Congo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Níger" checked> Níger</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Zambeze" checked> Zambeze</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Naranja" checked> Naranja</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Limpopo" checked> Limpopo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Senegal" checked> Senegal</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Volta" checked> Volta</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Chari" checked> Chari</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Ubangui" checked> Ubangui</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Juba" checked> Juba</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Nilo Azul" checked> Nilo Azul</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Rovuma" checked> Rovuma</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Kasai" checked> Kasai</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Cunene" checked> Cunene</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Cuango" checked> Cuango</label></div>
-        <div class="advanced-group"><h4>Lagos (10)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Victoria" checked> Victoria</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Tanganica" checked> Tanganica</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Malaui" checked> Malaui</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Chad" checked> Chad</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Turkana" checked> Turkana</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Alberto" checked> Alberto</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Eduardo" checked> Eduardo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Kivu" checked> Kivu</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Bangweulu" checked> Bangweulu</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Mweru" checked> Mweru</label></div>
-      </div>
-    </details>
   </div>
 
   <div class="details">

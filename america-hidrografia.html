@@ -61,9 +61,9 @@
   .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
   .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
-  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 11px;border-radius:999px;border:1px solid var(--line-strong);}
-  .tag.license{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600;}
-  .tag.category{background:var(--ink);border-color:var(--ink);color:var(--paper);font-weight:600;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
   .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:16px;}
   .country{fill:var(--land);stroke:none;}
   .country:hover{fill:#93B587;}
@@ -120,7 +120,7 @@
 </head>
 <body>
 <header>
-  <div class="brand"><span class="brand-mark">Atlas Abierto</span><span class="brand-sub">Cartografía escolar libre</span></div>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
   <nav><a href="index.html">Explorar</a><a href="licencias.html">Licencias</a></nav>
 </header>
 <div class="wrap">
@@ -131,7 +131,6 @@
       <span class="tag category">FÍSICO: HIDROGRAFÍA</span>
       <span class="tag license">CC BY 4.0 — EUROGEOGRAPHICS / GISCO</span>
       <span class="tag">Nivel: Secundaria · Bachillerato</span>
-      <span class="tag">Idioma: ES</span>
       <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
     </div>
     <div class="siblings">
@@ -140,6 +139,49 @@
       <a class="" href="america-politico.html">Político</a>
     </div>
   </div>
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="estandar" class="active">Estándar (todo)</button>
+      </div>
+    </div>
+    <div class="cat-toggles">
+      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
+    </div>
+    <details class="advanced-block">
+      <summary>Elegir ríos y lagos uno a uno →</summary>
+      <div class="advanced-groups">
+        <div class="advanced-group"><h4>Ríos (15)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Misisipi" checked> Misisipi</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Misuri" checked> Misuri</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Bravo/Grande" checked> Bravo/Grande</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Colorado" checked> Colorado</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Mackenzie" checked> Mackenzie</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="San Lorenzo" checked> San Lorenzo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Orinoco" checked> Orinoco</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Amazonas" checked> Amazonas</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Madeira" checked> Madeira</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Negro" checked> Negro</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Paraná" checked> Paraná</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Paraguay" checked> Paraguay</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Uruguay" checked> Uruguay</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="San Francisco" checked> San Francisco</label>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Magdalena" checked> Magdalena</label></div>
+        <div class="advanced-group"><h4>Lagos (10)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Superior" checked> Superior</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Hurón" checked> Hurón</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Míchigan" checked> Míchigan</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Erie" checked> Erie</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Ontario" checked> Ontario</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Gran Lago del Oso" checked> Gran Lago del Oso</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Gran Lago del Esclavo" checked> Gran Lago del Esclavo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Titicaca" checked> Titicaca</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Maracaibo" checked> Maracaibo</label>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Nicaragua" checked> Nicaragua</label></div>
+      </div>
+    </details>
+  </div>
+
   <div class="print-page-body">
     <div class="print-title-bar">
       <div style="display:flex;align-items:baseline;">
@@ -343,49 +385,6 @@
 <text class="river-label" data-cat="river" data-name="San Francisco" x="1585.9" y="1067.4" text-anchor="start">San Francisco</text>
 <text class="river-label" data-cat="river" data-name="Magdalena" x="1180.9" y="849.7" text-anchor="start">Magdalena</text>
     </svg>
-  </div>
-  
-  <div class="custom-panel" id="customPanel">
-    <div class="custom-panel-head">
-      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
-      <div class="preset-btns">
-        <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Estándar (todo)</button>
-      </div>
-    </div>
-    <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-    </div>
-    <details class="advanced-block">
-      <summary>Elegir ríos y lagos uno a uno →</summary>
-      <div class="advanced-groups">
-        <div class="advanced-group"><h4>Ríos (15)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Misisipi" checked> Misisipi</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Misuri" checked> Misuri</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Bravo/Grande" checked> Bravo/Grande</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Colorado" checked> Colorado</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Mackenzie" checked> Mackenzie</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="San Lorenzo" checked> San Lorenzo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Orinoco" checked> Orinoco</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Amazonas" checked> Amazonas</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Madeira" checked> Madeira</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Negro" checked> Negro</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Paraná" checked> Paraná</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Paraguay" checked> Paraguay</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Uruguay" checked> Uruguay</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="San Francisco" checked> San Francisco</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Magdalena" checked> Magdalena</label></div>
-        <div class="advanced-group"><h4>Lagos (10)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Superior" checked> Superior</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Hurón" checked> Hurón</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Míchigan" checked> Míchigan</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Erie" checked> Erie</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Ontario" checked> Ontario</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Gran Lago del Oso" checked> Gran Lago del Oso</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Gran Lago del Esclavo" checked> Gran Lago del Esclavo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Titicaca" checked> Titicaca</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Maracaibo" checked> Maracaibo</label>
-<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Nicaragua" checked> Nicaragua</label></div>
-      </div>
-    </details>
   </div>
 
   <div class="details">

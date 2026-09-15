@@ -26,9 +26,9 @@
   .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
   .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
-  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 11px;border-radius:999px;border:1px solid var(--line-strong);}
-  .tag.license{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600;}
-  .tag.category{background:var(--ink);border-color:var(--ink);color:var(--paper);font-weight:600;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
   .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
   .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
   .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
@@ -89,7 +89,7 @@
 </head>
 <body>
 <header>
-  <div class="brand"><span class="brand-mark">Atlas Abierto</span><span class="brand-sub">Cartografía escolar libre</span></div>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
   <nav><a href="index.html">Explorar</a><a href="licencias.html">Licencias</a></nav>
 </header>
 <div class="wrap">
@@ -110,6 +110,58 @@
       <a href="europa-politico.html">Político</a>
     </div>
   </div>
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="estandar" class="active">Estándar</button>
+      </div>
+    </div>
+    <div class="cat-toggles">
+      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
+      <label><input type="checkbox" data-cat-toggle="peninsula" checked> Penínsulas</label>
+    </div>
+    <details class="advanced-block">
+      <summary>Elegir golfos, cabos, estrechos e islas uno a uno →</summary>
+      <div class="advanced-groups">
+        <div class="advanced-group"><h4>Golfos (10)</h4><label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Vizcaya" checked> Golfo de Vizcaya</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Cádiz" checked> Golfo de Cádiz</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de León" checked> Golfo de León</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Génova" checked> Golfo de Génova</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Venecia" checked> Golfo de Venecia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Tarento" checked> Golfo de Tarento</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Corinto" checked> Golfo de Corinto</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Botnia" checked> Golfo de Botnia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Finlandia" checked> Golfo de Finlandia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Riga" checked> Golfo de Riga</label></div>
+        <div class="advanced-group"><h4>Cabos (6)</h4><label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Finisterre" checked> Cabo Finisterre</label>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Norte" checked> Cabo Norte</label>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Ténaro" checked> Cabo Ténaro</label>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo San Vicente" checked> Cabo San Vicente</label>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo de Creus" checked> Cabo de Creus</label>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Trafalgar" checked> Cabo Trafalgar</label></div>
+        <div class="advanced-group"><h4>Estrechos (6)</h4><label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Gibraltar" checked> Estrecho de Gibraltar</label>
+<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Canal de la Mancha" checked> Canal de la Mancha</label>
+<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Mesina" checked> Estrecho de Mesina</label>
+<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Otranto" checked> Estrecho de Otranto</label>
+<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Kattegat" checked> Kattegat</label>
+<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Skagerrak" checked> Skagerrak</label></div>
+        <div class="advanced-group"><h4>Islas (11)</h4><label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islandia" checked> Islandia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islas Británicas" checked> Islas Británicas</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Córcega" checked> Córcega</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Cerdeña" checked> Cerdeña</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Sicilia" checked> Sicilia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islas Baleares" checked> Islas Baleares</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Creta" checked> Creta</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Malta" checked> Malta</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Chipre" checked> Chipre</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islas Jónicas" checked> Islas Jónicas</label>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Cícladas" checked> Cícladas</label></div>
+      </div>
+    </details>
+  </div>
+
   <div class="map-frame">
     <svg viewBox="0 0 1900 1236" width="100%">
 <defs>
@@ -239,58 +291,6 @@
 <text x="52" y="131" class="legend-text">Península</text>
 </g>
     </svg>
-  </div>
-
-  <div class="custom-panel" id="customPanel">
-    <div class="custom-panel-head">
-      <span class="custom-panel-title">🎛 Personaliza este mapa</span>
-      <div class="preset-btns">
-        <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Estándar</button>
-      </div>
-    </div>
-    <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-      <label><input type="checkbox" data-cat-toggle="peninsula" checked> Penínsulas</label>
-    </div>
-    <details class="advanced-block">
-      <summary>Elegir golfos, cabos, estrechos e islas uno a uno →</summary>
-      <div class="advanced-groups">
-        <div class="advanced-group"><h4>Golfos (10)</h4><label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Vizcaya" checked> Golfo de Vizcaya</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Cádiz" checked> Golfo de Cádiz</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de León" checked> Golfo de León</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Génova" checked> Golfo de Génova</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Venecia" checked> Golfo de Venecia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Tarento" checked> Golfo de Tarento</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Corinto" checked> Golfo de Corinto</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Botnia" checked> Golfo de Botnia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Finlandia" checked> Golfo de Finlandia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Riga" checked> Golfo de Riga</label></div>
-        <div class="advanced-group"><h4>Cabos (6)</h4><label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Finisterre" checked> Cabo Finisterre</label>
-<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Norte" checked> Cabo Norte</label>
-<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Ténaro" checked> Cabo Ténaro</label>
-<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo San Vicente" checked> Cabo San Vicente</label>
-<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo de Creus" checked> Cabo de Creus</label>
-<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Trafalgar" checked> Cabo Trafalgar</label></div>
-        <div class="advanced-group"><h4>Estrechos (6)</h4><label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Gibraltar" checked> Estrecho de Gibraltar</label>
-<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Canal de la Mancha" checked> Canal de la Mancha</label>
-<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Mesina" checked> Estrecho de Mesina</label>
-<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Otranto" checked> Estrecho de Otranto</label>
-<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Kattegat" checked> Kattegat</label>
-<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Skagerrak" checked> Skagerrak</label></div>
-        <div class="advanced-group"><h4>Islas (11)</h4><label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islandia" checked> Islandia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islas Británicas" checked> Islas Británicas</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Córcega" checked> Córcega</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Cerdeña" checked> Cerdeña</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Sicilia" checked> Sicilia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islas Baleares" checked> Islas Baleares</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Creta" checked> Creta</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Malta" checked> Malta</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Chipre" checked> Chipre</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Islas Jónicas" checked> Islas Jónicas</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Cícladas" checked> Cícladas</label></div>
-      </div>
-    </details>
   </div>
 
   <div class="details">
