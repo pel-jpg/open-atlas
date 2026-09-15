@@ -147,9 +147,6 @@
         <button data-preset="estandar" class="active">Estándar (todo)</button>
       </div>
     </div>
-    <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-    </div>
     <details class="advanced-block">
       <summary>Elegir ríos y lagos uno a uno →</summary>
       <div class="advanced-groups">
@@ -663,12 +660,10 @@
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
     if (name === 'mudo') {
       setByName(RIVER_ALL, true); setByName(LAKE_ALL, true);
-      setCategory('sea', true); document.querySelector('[data-cat-toggle="sea"]').checked = true;
       syncChecks('river', RIVER_ALL); syncChecks('lake', LAKE_ALL);
       setAllLabels(false);
     } else {
       setByName(RIVER_ALL, true); setByName(LAKE_ALL, true);
-      setCategory('sea', true); document.querySelector('[data-cat-toggle="sea"]').checked = true;
       syncChecks('river', RIVER_ALL); syncChecks('lake', LAKE_ALL);
       setAllLabels(true);
     }

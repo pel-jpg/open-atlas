@@ -118,10 +118,6 @@
         <button data-preset="estandar" class="active">Estándar</button>
       </div>
     </div>
-    <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-      <label><input type="checkbox" data-cat-toggle="peninsula" checked> Penínsulas</label>
-    </div>
     <details class="advanced-block">
       <summary>Elegir golfos, cabos, estrechos e islas uno a uno →</summary>
       <div class="advanced-groups">
@@ -360,8 +356,6 @@
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
     setByName(GULF_ALL, true); setByName(CAPE_ALL, true);
     setByName(STRAIT_ALL, true); setByName(ISLAND_ALL, true);
-    setCategory('sea', true); document.querySelector('[data-cat-toggle="sea"]').checked = true;
-    setCategory('peninsula', true); document.querySelector('[data-cat-toggle="peninsula"]').checked = true;
     syncChecks('gulf', GULF_ALL); syncChecks('cape', CAPE_ALL);
     syncChecks('strait', STRAIT_ALL); syncChecks('island', ISLAND_ALL);
     setAllLabels(name !== 'mudo');
