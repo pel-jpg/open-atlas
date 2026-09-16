@@ -679,9 +679,13 @@
 
   // presets
   function setAllLabels(visible) {
-    // "mudo": oculta el texto identificativo (nombres), pero conserva leyenda y escala gráfica
+    // "mudo": oculta todo el texto sin excepción. En cambio, al REACTIVAR (estándar/completo)
+    // no tocamos las categorías con casilla individual (río/lago/accidente/isla/península),
+    // porque su visibilidad ya se decidió arriba y esto la pisaría por encima.
+    const INDIVIDUAL = ['river', 'lake', 'feature', 'island', 'peninsula'];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
+      if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
       el.style.display = visible ? '' : 'none';
     });
   }
