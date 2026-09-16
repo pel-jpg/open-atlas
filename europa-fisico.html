@@ -118,6 +118,8 @@
     <div class="siblings">
       <span style="font-size:12px;color:var(--ink-soft);align-self:center;">Mapas relacionados de Europa:</span>
       <a class="current" href="europa-fisico.html">Físico</a>
+      <a href="europa-hidrografia.html">Hidrografía</a>
+      <a href="europa-costeros.html">Accidentes costeros</a>
       <a href="europa-politico.html">Político</a>
     </div>
   </div>
@@ -608,7 +610,7 @@
       <h2>Sobre este mapa</h2>
       <p>Mapa físico de Europa rediseñado siguiendo el formato de atlas clásico: sin países ni fronteras, con cordilleras identificadas por su nombre en texto curvo sobre la cresta, regiones físicas (llanuras, penínsulas), estrechos, cabos, golfos e islas, y una selección de los ríos y lagos principales del continente.</p>
       <p>Incluye, a diferencia de la versión anterior, el borde occidental de Rusia hasta los <strong>Urales</strong> y el <strong>Cáucaso</strong> — son accidentes geográficos de Europa aunque el país no forme parte de nuestro catálogo por países.</p>
-      <p><strong>Nuevo:</strong> este mapa fusiona lo que antes eran tres páginas separadas (Relieve, Hidrografía y Accidentes costeros) en una sola. Usa el panel de arriba para adaptarlo antes de imprimir — quita ríos, lagos, accidentes costeros o islas que no necesites para tu clase, o activa el modo "Completo" para ver todo lo disponible.</p>
+      <p><strong>Nuevo:</strong> esta página reúne cordilleras, ríos, lagos, mares y accidentes costeros en un único mapa completo. Usa el panel de arriba para adaptarlo antes de imprimir. Si prefieres una vista más simple centrada solo en un aspecto, están también <a href="europa-hidrografia.html">Hidrografía</a> y <a href="europa-costeros.html">Accidentes costeros</a> por separado.</p>
       <h2>Sobre los colores de relieve</h2>
       <p><strong>Importante:</strong> a diferencia de un mapa hipsométrico real (que usa un modelo de elevación medido, punto por punto), estos colores son una <strong>aproximación ilustrativa en 3 niveles</strong> construida a partir de la ubicación real de cordilleras, colinas y picos — no de datos de altitud medidos en cada punto. Para un hipsométrico real haría falta un modelo de elevación (DEM) de cientos de MB, inviable de traer a este chat; sí es viable en QGIS con capas como SRTM o la propia "Cross-blended Hypsometric Tints" de Natural Earth.</p>
       <h2>Elementos incluidos</h2>
@@ -733,6 +735,7 @@
     }
   }
   presetBtns.forEach(b => b.addEventListener('click', () => applyPreset(b.dataset.preset)));
+  applyPreset('completo');
 })();
 </script>
 </body>
