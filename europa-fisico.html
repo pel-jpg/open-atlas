@@ -131,9 +131,13 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-toggle="sea" checked> Mares y océanos</label>
-      <label><input type="checkbox" data-cat-toggle="region" checked> Regiones físicas</label>
-      <label><input type="checkbox" data-cat-toggle="hill" checked> Colinas y mesetas</label>
+      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
+      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -644,6 +648,8 @@
   const ISLAND_ALL = ["Islandia", "Islas Brit\u00e1nicas", "C\u00f3rcega", "Cerde\u00f1a", "Sicilia", "Islas Baleares", "Creta", "Malta", "Chipre", "Islas J\u00f3nicas", "C\u00edcladas"];
   const PENINSULA_DEFAULT = ["Pen\u00ednsula Ib\u00e9rica", "Pen\u00ednsula It\u00e1lica", "Pen\u00ednsula Balc\u00e1nica", "Pen\u00ednsula Escandinava"];
   const PENINSULA_ALL = ["Pen\u00ednsula Ib\u00e9rica", "Pen\u00ednsula It\u00e1lica", "Pen\u00ednsula Balc\u00e1nica", "Pen\u00ednsula Escandinava", "Pen\u00ednsula de Jutlandia", "Pen\u00ednsula de Kola", "Pen\u00ednsula de Breta\u00f1a", "Pen\u00ednsula de Crimea", "Pen\u00ednsula del Peloponeso", "Pen\u00ednsula de Anatolia"];
+  const mountainAllNames = ["Alpes", "Pirineos", "Montes Balcanes", "Din\u00e1ricos", "C\u00e1rpatos", "Apeninos", "Sistema Central", "Montes Escandinavos", "Montes Grampianos", "Urales", "C\u00e1ucaso"];
+  const peakAllNames = ["Mont Blanc", "Cervino", "Aneto", "Musala", "Olimpo", "Etna", "Moldoveanu", "Mulhac\u00e9n", "Elbr\u00fas"];
 
   function setByName(catName, names, visible) {
     names.forEach(n => {
@@ -663,10 +669,18 @@
     });
   }
 
-  // casillas de categoría simples (mares, regiones, colinas: todo o nada)
-  document.querySelectorAll('[data-cat-toggle]').forEach(cb => {
-    cb.addEventListener('change', () => setCategory(cb.dataset.catToggle, cb.checked));
+  // casillas maestras: activan/desactivan TODOS los elementos de su categoría a la vez
+  document.querySelectorAll('[data-cat-master]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const cat = cb.dataset.catMaster;
+      document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(itemCb => { itemCb.checked = cb.checked; });
+      document.querySelectorAll('[data-cat="' + cat + '"]').forEach(el => { el.style.display = cb.checked ? '' : 'none'; });
+    });
   });
+  function setCatMaster(cat, checked) {
+    const master = document.querySelector('[data-cat-master="' + cat + '"]');
+    if (master) master.checked = checked;
+  }
 
   // casillas individuales (ríos, lagos, cordilleras, picos, accidentes, islas, penínsulas)
   document.querySelectorAll('[data-item-cat]').forEach(cb => {
@@ -682,7 +696,7 @@
     // "mudo": oculta todo el texto sin excepción. En cambio, al REACTIVAR (estándar/completo)
     // no tocamos las categorías con casilla individual (río/lago/accidente/isla/península),
     // porque su visibilidad ya se decidió arriba y esto la pisaría por encima.
-    const INDIVIDUAL = ['river', 'lake', 'feature', 'island', 'peninsula'];
+    const INDIVIDUAL = ['river', 'lake', 'feature', 'island', 'peninsula', 'mountain', 'peak'];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -698,37 +712,25 @@
       ['feature', FEATURE_ALL, FEATURE_DEFAULT],
       ['island', ISLAND_ALL, ISLAND_DEFAULT],
       ['peninsula', PENINSULA_ALL, PENINSULA_DEFAULT],
+      ['mountain', mountainAllNames, mountainAllNames],
+      ['peak', peakAllNames, peakAllNames],
     ];
     if (name === 'mudo') {
-      groups.forEach(([cat, all]) => { setByName(cat, all, true); syncItemCheckboxes(cat, all); });
-      ['sea','region','hill'].forEach(c => {
-        setCategory(c, true);
-        document.querySelector('[data-cat-toggle="' + c + '"]').checked = true;
-      });
+      groups.forEach(([cat, all]) => { setByName(cat, all, true); syncItemCheckboxes(cat, all); setCatMaster(cat, true); });
+      ['sea','region','hill'].forEach(c => setCategory(c, true));
       setAllLabels(false);
     } else if (name === 'estandar') {
       groups.forEach(([cat, all, def]) => {
-        setByName(cat, all, false); setByName(cat, def, true); syncItemCheckboxes(cat, def);
+        setByName(cat, all, false); setByName(cat, def, true);
+        syncItemCheckboxes(cat, def); setCatMaster(cat, true);
       });
-      ['sea','region','hill'].forEach(c => {
-        setCategory(c, true);
-        document.querySelector('[data-cat-toggle="' + c + '"]').checked = true;
-      });
+      ['sea','region','hill'].forEach(c => setCategory(c, true));
       setAllLabels(true);
     } else if (name === 'completo') {
-      groups.forEach(([cat, all]) => { setByName(cat, all, true); syncItemCheckboxes(cat, all); });
-      ['sea','region','hill'].forEach(c => {
-        setCategory(c, true);
-        document.querySelector('[data-cat-toggle="' + c + '"]').checked = true;
-      });
+      groups.forEach(([cat, all]) => { setByName(cat, all, true); syncItemCheckboxes(cat, all); setCatMaster(cat, true); });
+      ['sea','region','hill'].forEach(c => setCategory(c, true));
       setAllLabels(true);
     }
-    document.querySelectorAll('[data-item-cat="mountain"], [data-item-cat="peak"]').forEach(cb => {
-      cb.checked = true;
-    });
-    document.querySelectorAll('[data-cat="mountain"]:not(text), [data-cat="peak"]:not(text)').forEach(el => {
-      el.style.display = '';
-    });
   }
   presetBtns.forEach(b => b.addEventListener('click', () => applyPreset(b.dataset.preset)));
 })();
