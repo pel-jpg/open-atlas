@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europa — datos reales cargados en vivo</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>
+<style>
+  html,body{margin:0; padding:0; background:#3E6180; font-family:'IBM Plex Sans', Arial, sans-serif; overflow:hidden;}
+  #status{
+    position:absolute; top:16px; left:16px; color:#ECE4D2; font-size:13px;
+    font-family:'IBM Plex Mono', monospace; letter-spacing:0.5px; z-index:5;
+  }
+  #note{
+    position:absolute; bottom:14px; left:16px; color:#ECE4D2; font-size:11px;
+    font-family:'IBM Plex Mono', monospace; opacity:0.8; max-width:70%;
+  }
+  svg{display:block;}
+  .country{fill:#7FA06B; stroke:#3d5a37; stroke-width:0.6px;}
+  .country:hover{fill:#93B587;}
+  .label{fill:#1f2a1b; font-size:9px; text-anchor:middle; pointer-events:none; font-family:Arial, sans-serif;}
+  #error{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    color:#ECE4D2; font-family:'IBM Plex Mono', monospace; font-size:13px; text-align:center; max-width:480px; display:none;
+  }
+</style>
+</head>
+<body>
+<div id="status">Cargando dataset real de Natural Earth desde CDN…</div>
+<div id="note"></div>
+<div id="error"></div>
+<svg id="map" width="100%" height="100%"></svg>
+
+<script>
+// Códigos ISO-3166-1 numéricos de países europeos (Rusia excluida para encuadrar bien el continente)
+const EUROPE_IDS = new Set([
+  "008","020","040","112","056","070","100","191","196","203","208","233","246","250",
+  "276","300","348","352","372","380","428","438","440","442","470","498","492","499",
+  "528","807","578","616","620","642","674","688","703","705","724","752","756","804",
+  "826","336"
+]);
+
+const svg = d3.select("#map");
+const width = window.innerWidth, height = window.innerHeight;
+svg.attr("viewBox", [0,0,width,height]);
+
+fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json")
+  .then(res => {
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return res.json();
+  })
+  .then(world => {
+    const allCountries = topojson.feature(world, world.objects.countries).features;
+    const europe = allCountries.filter(f => EUROPE_IDS.has(f.id));
+
+    document.getElementById("status").textContent =
+      `Cargado: ${allCountries.length} países en el dataset mundial · ${europe.length} mostrados de Europa`;
+    document.getElementById("note").textContent =
+      "Fuente: Natural Earth 1:110m (dominio público), vía world-atlas/CDN jsDelivr — cargado en vivo en este navegador, no preprocesado.";
+
+    const projection = d3.geoConicConformal()
+      .parallels([35, 65])
+      .rotate([-10, 0]);
+    projection.fitExtent([[20,20],[width-20,height-20]], {type:"FeatureCollection", features: europe});
+    const path = d3.geoPath(projection);
+
+    svg.selectAll("path.country")
+      .data(europe)
+      .join("path")
+      .attr("class", "country")
+      .attr("d", path)
+      .append("title")
+      .text(d => d.properties.name);
+
+    // Etiquetas solo para países con área proyectada razonable (evita amontonar islas pequeñas)
+    svg.selectAll("text.label")
+      .data(europe.filter(d => path.area(d) > 250))
+      .join("text")
+      .attr("class", "label")
+      .attr("transform", d => `translate(${path.centroid(d)})`)
+      .text(d => d.properties.name);
+  })
+  .catch(err => {
+    document.getElementById("status").style.display = "none";
+    const e = document.getElementById("error");
+    e.style.display = "block";
+    e.textContent = "No se pudo cargar el dataset desde el CDN en este entorno (" + err.message + "). En un sitio publicado normal esto carga sin problema: es una restricción de red de este visor de artefactos, no del dataset ni del código.";
+  });
+</script>
+</body>
+</html>

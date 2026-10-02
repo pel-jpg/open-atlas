@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Abierto — Mapas escolares del mundo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #ECE4D2;
+    --paper-2: #E2D8C0;
+    --ink: #22301F;
+    --ink-soft: #4B5A45;
+    --land: #6E8F6C;
+    --land-deep: #52704F;
+    --water: #2A4258;
+    --gold: #B8862B;
+    --gold-soft: #D9B366;
+    --line: rgba(34,48,31,0.18);
+    --line-strong: rgba(34,48,31,0.35);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background: var(--paper);
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width: 1180px; margin: 0 auto; padding: 0 32px;}
+
+  /* HEADER */
+  header{
+    border-bottom: 1px solid var(--line-strong);
+    background: var(--paper);
+    position: sticky; top:0; z-index: 20;
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 32px;
+  }
+  .brand{
+    display:flex; align-items:baseline; gap:10px;
+  }
+  .brand-mark{
+    font-family:'Fraunces', serif; font-weight:700; font-size:22px; letter-spacing:0.5px;
+  }
+  .brand-sub{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:1.5px;
+    color: var(--ink-soft); text-transform:uppercase;
+  }
+  nav{display:flex; gap:28px; font-size:14px; font-weight:500;}
+  nav a{text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px; transition: border-color .15s;}
+  nav a:hover{border-color: var(--gold);}
+  .btn-contribute{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.5px;
+    background: var(--ink); color: var(--paper);
+    padding: 9px 16px; border-radius: var(--radius); text-decoration:none;
+  }
+
+  /* HERO */
+  .hero{
+    padding: 72px 0 56px;
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items:center;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:2px;
+    color: var(--gold); text-transform:uppercase; margin-bottom:18px; display:block;
+  }
+  h1{
+    font-family:'Fraunces', serif; font-weight:600; font-size: 54px; line-height:1.05;
+    letter-spacing:-0.5px; max-width: 11ch;
+  }
+  .hero p{
+    margin-top:22px; font-size:16px; line-height:1.6; color: var(--ink-soft); max-width: 46ch;
+  }
+  .hero-actions{margin-top:32px; display:flex; gap:14px;}
+  .btn-primary{
+    background: var(--ink); color: var(--paper); text-decoration:none;
+    padding: 13px 22px; font-size:14px; font-weight:600; border-radius: var(--radius);
+  }
+  .btn-ghost{
+    border: 1px solid var(--line-strong); text-decoration:none; color:var(--ink);
+    padding: 13px 22px; font-size:14px; font-weight:600; border-radius: var(--radius);
+  }
+  .hero-stats{
+    display:flex; gap:28px; margin-top:40px; font-family:'IBM Plex Mono', monospace;
+  }
+  .hero-stats div{border-left: 2px solid var(--gold); padding-left:10px;}
+  .hero-stats b{display:block; font-size:20px;}
+  .hero-stats span{font-size:11px; color:var(--ink-soft); letter-spacing:0.5px;}
+
+  /* GLOBE / GRATICULE SVG */
+  .globe-frame{position:relative; display:flex; justify-content:center;}
+  .compass-label{
+    position:absolute; font-family:'IBM Plex Mono', monospace; font-size:10px;
+    color: var(--ink-soft); letter-spacing:1px;
+  }
+
+  /* FILTER BAR */
+  .filters{
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+    padding: 20px 0;
+  }
+  .filters-inner{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+  .filters-label{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:1.5px;
+    color: var(--ink-soft); text-transform:uppercase; margin-right:6px;
+  }
+  .chip{
+    font-size:13px; padding:8px 14px; border:1px solid var(--line-strong);
+    border-radius: 999px; cursor:pointer; background:transparent; font-family:inherit;
+    color:var(--ink); transition: all .15s;
+  }
+  .chip.active{background: var(--land-deep); border-color:var(--land-deep); color:#fff;}
+  .chip:hover:not(.active){border-color: var(--ink);}
+
+  /* CATALOG SECTION */
+  .catalog{padding: 56px 0 100px;}
+  .catalog-head{
+    display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:32px;
+  }
+  .catalog-head h2{
+    font-family:'Fraunces', serif; font-size:28px; font-weight:600;
+  }
+  .catalog-count{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft);}
+
+  .grid{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .plate{
+    background: var(--paper-2);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .plate:hover{transform: translateY(-3px); box-shadow: 0 10px 24px rgba(34,48,31,0.15);}
+  .plate-thumb{
+    aspect-ratio: 4/3; position:relative; border-bottom:1px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .plate-number{
+    position:absolute; top:10px; left:10px; font-family:'IBM Plex Mono', monospace;
+    font-size:10px; background: var(--ink); color: var(--paper); padding:3px 7px; letter-spacing:1px;
+  }
+  .plate-license{
+    position:absolute; top:10px; right:10px; font-family:'IBM Plex Mono', monospace;
+    font-size:10px; background: var(--gold); color: var(--ink); padding:3px 7px; letter-spacing:0.5px; font-weight:600;
+  }
+  .plate-body{padding:16px 18px 18px;}
+  .plate-eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:1.5px;
+    color: var(--ink-soft); text-transform:uppercase;
+  }
+  .plate-title{
+    font-family:'Fraunces', serif; font-size:19px; font-weight:600; margin-top:6px;
+  }
+  .plate-meta{
+    display:flex; gap:12px; margin-top:12px; font-family:'IBM Plex Mono', monospace;
+    font-size:11px; color:var(--ink-soft);
+  }
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid var(--line-strong); padding: 40px 0; margin-top:20px;
+  }
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-inner p{font-size:13px; color: var(--ink-soft);}
+  .footer-links{display:flex; gap:20px; font-size:13px;}
+  .footer-links a{text-decoration:none; color:var(--ink-soft);}
+  .footer-links a:hover{color:var(--ink);}
+
+  @media (max-width: 880px){
+    .hero{grid-template-columns:1fr; padding-top:48px;}
+    h1{font-size:38px;}
+    .grid{grid-template-columns: 1fr 1fr;}
+  }
+  @media (max-width: 560px){
+    .header-inner{flex-direction:column; gap:12px; align-items:flex-start;}
+    nav{gap:16px; flex-wrap:wrap;}
+    .grid{grid-template-columns: 1fr;}
+    .hero-stats{flex-wrap:wrap;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">Atlas Abierto</span>
+      <span class="brand-sub">Cartografía escolar libre</span>
+    </div>
+    <nav>
+      <a href="#">Explorar</a>
+      <a href="#">Por país</a>
+      <a href="#">Licencias</a>
+      <a href="#">Sobre el proyecto</a>
+    </nav>
+    <a class="btn-contribute" href="#">+ APORTAR MAPA</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="display:contents;">
+    <div>
+      <span class="eyebrow">Repositorio público — CC0 / CC BY</span>
+      <h1>Mapas de clase, para todo el que enseñe el mundo.</h1>
+      <p>Una colección abierta de mapas políticos, físicos, históricos y temáticos, listos para imprimir o descargar, con licencia clara y fuente verificada. Sin registro, sin coste, sin letra pequeña.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#">Explorar el catálogo</a>
+        <a class="btn-ghost" href="#">Cómo contribuir</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>1 240</b><span>MAPAS PUBLICADOS</span></div>
+        <div><b>94</b><span>PAÍSES CUBIERTOS</span></div>
+        <div><b>18</b><span>IDIOMAS</span></div>
+      </div>
+    </div>
+    <div class="globe-frame">
+      <svg viewBox="0 0 400 400" width="100%" style="max-width:420px;">
+        <circle cx="200" cy="200" r="170" fill="none" stroke="var(--line-strong)" stroke-width="1"/>
+        <ellipse cx="200" cy="200" rx="170" ry="60" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <ellipse cx="200" cy="200" rx="170" ry="115" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <ellipse cx="200" cy="200" rx="60" ry="170" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <ellipse cx="200" cy="200" rx="115" ry="170" fill="none" stroke="var(--line)" stroke-width="1"/>
+        <line x1="30" y1="200" x2="370" y2="200" stroke="var(--line)" stroke-width="1"/>
+        <line x1="200" y1="30" x2="200" y2="370" stroke="var(--line)" stroke-width="1"/>
+        <!-- landmasses, stylized -->
+        <path d="M120,150 Q150,130 190,140 Q210,150 200,175 Q180,190 150,185 Q120,180 120,150 Z" fill="var(--land)" opacity="0.85"/>
+        <path d="M210,180 Q250,170 270,195 Q275,225 250,240 Q220,235 210,210 Z" fill="var(--land-deep)" opacity="0.85"/>
+        <path d="M140,220 Q170,215 180,245 Q175,270 150,272 Q125,260 140,220 Z" fill="var(--land)" opacity="0.75"/>
+        <circle cx="200" cy="200" r="170" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="3" fill="var(--gold)"/>
+      </svg>
+      <span class="compass-label" style="top:2px; left:calc(50% - 8px);">N</span>
+      <span class="compass-label" style="bottom:2px; left:calc(50% - 8px);">S</span>
+      <span class="compass-label" style="top:calc(50% - 6px); right:6px;">E</span>
+      <span class="compass-label" style="top:calc(50% - 6px); left:6px;">O</span>
+    </div>
+  </div>
+</section>
+
+<div class="filters">
+  <div class="wrap filters-inner">
+    <span class="filters-label">Tipo</span>
+    <button class="chip active">Todos</button>
+    <button class="chip">Político</button>
+    <button class="chip">Físico</button>
+    <button class="chip">Histórico</button>
+    <button class="chip">Climático</button>
+    <button class="chip">Mudo</button>
+    <span class="filters-label" style="margin-left:18px;">Nivel</span>
+    <button class="chip">Primaria</button>
+    <button class="chip">Secundaria</button>
+  </div>
+</div>
+
+<section class="catalog">
+  <div class="wrap">
+    <div class="catalog-head">
+      <h2>Últimos mapas añadidos</h2>
+      <span class="catalog-count">MOSTRANDO 6 DE 1 240</span>
+    </div>
+    <div class="grid">
+
+      <div class="plate">
+        <div class="plate-thumb" style="background: linear-gradient(135deg, var(--water), var(--land));">
+          <span class="plate-number">PL. 0142</span>
+          <span class="plate-license">CC0</span>
+        </div>
+        <div class="plate-body">
+          <span class="plate-eyebrow">Político · Europa</span>
+          <div class="plate-title">Europa, fronteras 2024</div>
+          <div class="plate-meta"><span>ES · EN · FR</span><span>SVG / PDF</span></div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-thumb" style="background: linear-gradient(135deg, var(--land-deep), var(--gold-soft));">
+          <span class="plate-number">PL. 0143</span>
+          <span class="plate-license">CC BY</span>
+        </div>
+        <div class="plate-body">
+          <span class="plate-eyebrow">Físico · América del Sur</span>
+          <div class="plate-title">Relieve y cuencas hidrográficas</div>
+          <div class="plate-meta"><span>ES · PT</span><span>SVG / PNG</span></div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-thumb" style="background: linear-gradient(135deg, var(--ink-soft), var(--paper-2));">
+          <span class="plate-number">PL. 0144</span>
+          <span class="plate-license">CC0</span>
+        </div>
+        <div class="plate-body">
+          <span class="plate-eyebrow">Histórico · Mundo</span>
+          <div class="plate-title">Rutas de la seda, s. XIII</div>
+          <div class="plate-meta"><span>ES · EN</span><span>PDF</span></div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-thumb" style="background: linear-gradient(135deg, var(--water), var(--gold-soft));">
+          <span class="plate-number">PL. 0145</span>
+          <span class="plate-license">CC0</span>
+        </div>
+        <div class="plate-body">
+          <span class="plate-eyebrow">Mudo · África</span>
+          <div class="plate-title">África, contorno sin nombres</div>
+          <div class="plate-meta"><span>Multi.</span><span>SVG / PDF</span></div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-thumb" style="background: linear-gradient(135deg, var(--land), var(--water));">
+          <span class="plate-number">PL. 0146</span>
+          <span class="plate-license">CC BY</span>
+        </div>
+        <div class="plate-body">
+          <span class="plate-eyebrow">Climático · Asia</span>
+          <div class="plate-title">Zonas climáticas de Asia</div>
+          <div class="plate-meta"><span>ES · ZH</span><span>PNG</span></div>
+        </div>
+      </div>
+
+      <div class="plate">
+        <div class="plate-thumb" style="background: linear-gradient(135deg, var(--gold-soft), var(--land-deep));">
+          <span class="plate-number">PL. 0147</span>
+          <span class="plate-license">CC0</span>
+        </div>
+        <div class="plate-body">
+          <span class="plate-eyebrow">Político · Oceanía</span>
+          <div class="plate-title">Oceanía, países y capitales</div>
+          <div class="plate-meta"><span>ES · EN</span><span>SVG / PDF</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>Atlas Abierto — datos cartográficos de Natural Earth, OpenStreetMap y fuentes gubernamentales de dominio público.</p>
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">Licencias</a>
+      <a href="#">Cómo citar</a>
+      <a href="#">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
