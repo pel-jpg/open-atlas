@@ -97,6 +97,12 @@
   .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
   .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
 
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
 </style>
 </head>
 <body>

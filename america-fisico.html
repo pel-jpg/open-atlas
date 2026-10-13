@@ -97,6 +97,12 @@
   .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
   .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
 
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
 </style>
 </head>
 <body>
