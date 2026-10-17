@@ -129,7 +129,6 @@
   body.mudo svg text{display:none !important;}
   body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
   body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
-  .names-toggle{display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;margin-left:auto;margin-right:14px;}
   .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
   .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
   .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
@@ -779,26 +778,18 @@
 <script>
 (function(){
   var presets=document.querySelector('.preset-btns');
-  if(!presets||!presets.querySelector('[data-preset]'))return;
+  if(!presets)return;
   var mudoBtn=presets.querySelector('[data-preset="mudo"]'),estBtn=presets.querySelector('[data-preset="estandar"]');
   if(!mudoBtn||!estBtn)return;
-  var wrap=document.createElement('label');wrap.className='names-toggle';
-  wrap.innerHTML='<input type="checkbox" id="namesToggle" checked> Mostrar nombres';
-  presets.parentNode.insertBefore(wrap,presets);
-  var cb=wrap.querySelector('input');
-  function setNames(on){cb.checked=on;document.body.classList.toggle('mudo',!on);}
-  cb.addEventListener('change',function(){
-    setNames(cb.checked);
-    if(cb.checked)mudoBtn.classList.remove('active');
-    else{presets.querySelectorAll('button').forEach(function(b){b.classList.remove('active');});mudoBtn.classList.add('active');}
-  });
+  var busy=false;
   presets.querySelectorAll('[data-preset]').forEach(function(b){
     b.addEventListener('click',function(){
+      if(busy)return;
       if(b===mudoBtn){
-        if(!mudoBtn.dataset.busy){mudoBtn.dataset.busy='1';estBtn.click();delete mudoBtn.dataset.busy;}
+        busy=true;estBtn.click();busy=false;
         presets.querySelectorAll('button').forEach(function(x){x.classList.remove('active');});
-        mudoBtn.classList.add('active');setNames(false);
-      } else if(!mudoBtn.dataset.busy){setNames(true);}
+        mudoBtn.classList.add('active');document.body.classList.add('mudo');
+      } else document.body.classList.remove('mudo');
     });
   });
 })();
