@@ -132,6 +132,7 @@
   .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
   .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
   .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
 </style>
 </head>
 
@@ -441,8 +442,8 @@
       <span class="custom-panel-title">🎛 Personaliza este mapa</span>
       <div class="preset-btns">
         <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Estándar</button>
-        <button data-preset="completo">Completo</button>
+        <button data-preset="estandar" hidden>Estándar</button>
+        <button data-preset="completo" class="active">Completo</button>
       </div>
     </div>
     <div class="cat-toggles">
@@ -756,5 +757,6 @@
   });
 })();
 </script>
+<script>document.querySelector('[data-preset="completo"]').click();</script>
 </body>
 </html>
