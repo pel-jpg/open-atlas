@@ -610,6 +610,9 @@
       if(busy)return;
       if(b===mudoBtn){
         busy=true;estBtn.click();busy=false;
+        document.querySelectorAll('[data-item-cat]').forEach(function(c){if(c.checked){c.checked=false;c.dispatchEvent(new Event('change',{bubbles:true}));}});
+        document.querySelectorAll('svg [data-cat="hill"]').forEach(function(e){e.style.display='none';});
+        if(!document.querySelector('[data-item-cat="feature"]'))document.querySelectorAll('svg [data-cat="feature"]').forEach(function(e){e.style.display='none';});
         presets.querySelectorAll('button').forEach(function(x){x.classList.remove('active');});
         mudoBtn.classList.add('active');document.body.classList.add('mudo');
       } else document.body.classList.remove('mudo');
