@@ -64,7 +64,7 @@
   .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
   .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
   .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
-  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:16px;}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
   .country{fill:var(--land);stroke:none;}
   .country:hover{fill:#93B587;}
   .country-pol{fill:var(--pol1);stroke:var(--pol-edge);stroke-width:0.6;}
@@ -152,6 +152,8 @@
   .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
   .cat-list-acts button:hover{color:var(--ink);}
   .preset-btns [hidden]{display:none !important;}
+  .map-frame svg{display:block;}
+  /*mf-block*/ .map-frame svg{display:block;}
 </style>
 </head>
 <body>

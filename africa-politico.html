@@ -64,7 +64,7 @@
   .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
   .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
   .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
-  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:16px;}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
   .country{fill:var(--land);stroke:none;}
   .country:hover{fill:#93B587;}
   .country-pol{fill:var(--pol1);stroke:var(--pol-edge);stroke-width:0.6;}
@@ -106,6 +106,57 @@
     .map-frame{background:var(--water,#3E6180) !important;}
     .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
   }
+  .map-frame svg{display:block;}
+  /*mf-block*/ .map-frame svg{display:block;}
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;
+    border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;
+  }
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+  .item-row input{margin-right:6px;}
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+  @media print{.custom-panel{display:none !important;}}
 </style>
 </head>
 <body>
@@ -379,7 +430,20 @@
       </svg>
     </div>
   </div>
-  <div class="map-frame map-frame-screen">
+  <div class="custom-panel" id="customPanel">
+  <div class="custom-panel-head"><span class="custom-panel-title">Personaliza este mapa</span>
+    <div class="preset-btns"><button data-preset="mudo">Mudo</button><button data-preset="completo" class="active">Completo</button></div></div>
+  <div class="cat-toggles">
+    <label><input type="checkbox" data-cat-master="country" checked> Países</label>
+    <label><input type="checkbox" data-cat-master="capital" checked> Capitales</label>
+  </div>
+  <details class="advanced-block"><summary>Elegir países y capitales uno a uno →</summary>
+    <div class="advanced-groups">
+      <div class="advanced-group"><h4>Países (55)</h4><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Angola" checked> Angola</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Argelia" checked> Argelia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Benín" checked> Benín</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Botsuana" checked> Botsuana</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Burkina Faso" checked> Burkina Faso</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Burundi" checked> Burundi</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Cabo Verde" checked> Cabo Verde</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Camerún" checked> Camerún</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Chad" checked> Chad</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Comoras" checked> Comoras</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Costa de Marfil" checked> Costa de Marfil</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Egipto" checked> Egipto</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Eritrea" checked> Eritrea</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Esuatini" checked> Esuatini</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Etiopía" checked> Etiopía</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Gabón" checked> Gabón</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Gambia" checked> Gambia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Ghana" checked> Ghana</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Guinea" checked> Guinea</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Guinea Ecuatorial" checked> Guinea Ecuatorial</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Guinea-Bisáu" checked> Guinea-Bisáu</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Kenia" checked> Kenia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Lesoto" checked> Lesoto</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Liberia" checked> Liberia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Libia" checked> Libia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Madagascar" checked> Madagascar</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Malaui" checked> Malaui</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Malí" checked> Malí</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Marruecos" checked> Marruecos</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Mauricio" checked> Mauricio</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Mauritania" checked> Mauritania</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Mozambique" checked> Mozambique</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Namibia" checked> Namibia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Níger" checked> Níger</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Nigeria" checked> Nigeria</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="R.D. Congo" checked> R.D. Congo</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Rep. Centroafricana" checked> Rep. Centroafricana</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Rep. del Congo" checked> Rep. del Congo</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Ruanda" checked> Ruanda</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Sáhara Occidental" checked> Sáhara Occidental</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Santo Tomé y Príncipe" checked> Santo Tomé y Príncipe</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Senegal" checked> Senegal</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Seychelles" checked> Seychelles</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Sierra Leona" checked> Sierra Leona</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Somalia" checked> Somalia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Sudáfrica" checked> Sudáfrica</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Sudán" checked> Sudán</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Sudán del Sur" checked> Sudán del Sur</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Tanzania" checked> Tanzania</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Togo" checked> Togo</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Túnez" checked> Túnez</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Uganda" checked> Uganda</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Yibuti" checked> Yibuti</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Zambia" checked> Zambia</label><label class="item-row"><input type="checkbox" data-item-cat="country" data-item-name="Zimbabue" checked> Zimbabue</label></div>
+      <div class="advanced-group"><h4>Capitales (51)</h4><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Abuya" checked> Abuya</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Acra" checked> Acra</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Adís Abeba" checked> Adís Abeba</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Antananarivo" checked> Antananarivo</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Argel" checked> Argel</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Asmara" checked> Asmara</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Bamako" checked> Bamako</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Bangui" checked> Bangui</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Banjul" checked> Banjul</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Bisáu" checked> Bisáu</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Brazzaville" checked> Brazzaville</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Conakry" checked> Conakry</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Dakar" checked> Dakar</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Dodoma" checked> Dodoma</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="El Aaiún" checked> El Aaiún</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="El Cairo" checked> El Cairo</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Freetown" checked> Freetown</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Gaborone" checked> Gaborone</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Gitega" checked> Gitega</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Harare" checked> Harare</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Jartum" checked> Jartum</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Kampala" checked> Kampala</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Kigali" checked> Kigali</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Kinsasa" checked> Kinsasa</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Libreville" checked> Libreville</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Lilongwe" checked> Lilongwe</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Lomé" checked> Lomé</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Luanda" checked> Luanda</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Lusaka" checked> Lusaka</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Malabo" checked> Malabo</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Maputo" checked> Maputo</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Maseru" checked> Maseru</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Mbabane" checked> Mbabane</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Mogadiscio" checked> Mogadiscio</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Monrovia" checked> Monrovia</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Moroni" checked> Moroni</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Nairobi" checked> Nairobi</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Niamey" checked> Niamey</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Nuakchot" checked> Nuakchot</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Porto-Novo" checked> Porto-Novo</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Pretoria" checked> Pretoria</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Rabat" checked> Rabat</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Trípoli" checked> Trípoli</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Túnez" checked> Túnez</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Uagadugú" checked> Uagadugú</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Windhoek" checked> Windhoek</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Yamena" checked> Yamena</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Yamusukro" checked> Yamusukro</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Yaundé" checked> Yaundé</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Yibuti" checked> Yibuti</label><label class="item-row"><input type="checkbox" data-item-cat="capital" data-item-name="Yuba" checked> Yuba</label></div>
+    </div></details>
+</div>
+<div class="map-frame map-frame-screen">
     <svg viewBox="0 0 1500 1562" style="overflow:hidden" width="100%">
 <path class="country-pol" data-cat="country" data-name="Benín" style="fill:#8FA6C9" d="M 480.1,564.7 L 485.0,571.3 L 486.0,575.4 L 485.7,577.5 L 487.5,581.0 L 486.5,585.7 L 484.2,585.1 L 482.8,586.1 L 482.2,589.1 L 484.2,591.0 L 481.5,596.8 L 477.2,598.4 L 477.3,600.8 L 475.7,601.8 L 472.9,606.0 L 473.3,609.1 L 471.9,612.9 L 465.7,614.0 L 464.6,620.2 L 465.1,624.0 L 465.1,625.5 L 463.8,629.0 L 465.0,631.8 L 463.7,639.0 L 464.5,640.6 L 464.3,643.1 L 464.7,645.1 L 465.8,647.1 L 464.8,648.5 L 465.3,653.6 L 464.3,657.4 L 464.7,660.9 L 465.6,662.4 L 464.7,664.0 L 464.5,666.2 L 464.0,668.1 L 464.0,669.7 L 460.9,669.9 L 459.7,670.0 L 456.9,670.2 L 456.4,670.2 L 448.8,671.2 L 446.0,671.7 L 441.7,672.6 L 444.7,671.6 L 445.1,670.8 L 444.4,668.0 L 441.6,664.9 L 440.8,663.2 L 441.6,662.0 L 440.6,658.3 L 440.4,657.0 L 441.9,656.3 L 442.2,645.7 L 442.1,645.2 L 442.1,644.3 L 441.9,643.5 L 441.8,629.3 L 441.4,628.2 L 442.2,625.8 L 441.6,623.8 L 441.3,613.5 L 440.4,611.9 L 437.7,609.1 L 436.7,605.4 L 435.8,604.2 L 436.3,602.1 L 436.0,594.6 L 434.9,593.9 L 432.5,592.4 L 431.8,592.0 L 430.7,591.4 L 428.7,590.0 L 424.1,586.4 L 424.6,579.9 L 426.1,577.7 L 426.8,573.9 L 427.0,573.4 L 427.5,573.0 L 428.5,572.1 L 430.5,572.5 L 430.3,570.7 L 431.7,569.9 L 431.7,568.3 L 434.1,568.4 L 434.3,567.3 L 435.6,567.4 L 435.6,566.1 L 437.1,564.3 L 440.1,564.2 L 441.9,565.4 L 446.0,564.7 L 448.1,565.1 L 449.8,564.8 L 455.6,559.8 L 456.4,557.9 L 457.0,557.3 L 457.9,555.1 L 457.7,554.3 L 458.8,553.2 L 457.6,550.7 L 457.4,548.0 L 460.5,547.4 L 460.9,547.3 L 463.8,546.8 L 466.5,544.6 L 467.4,545.0 L 469.4,547.1 L 470.4,547.5 L 471.5,549.1 L 472.6,549.7 L 475.4,552.5 L 475.5,553.3 L 476.6,555.2 L 480.1,556.0 L 480.8,556.8 L 481.0,557.4 L 481.7,557.8 L 481.6,558.7 L 482.7,559.4 L 481.1,561.7 L 480.1,564.7 Z"><title>Benín</title></path>
 <path class="country-pol" data-cat="country" data-name="Angola" style="fill:#8FA6C9" d="M 698.2,922.8 L 706.1,924.0 L 710.5,924.2 L 714.2,923.6 L 742.0,923.4 L 749.9,923.1 L 751.5,923.8 L 752.2,926.7 L 754.6,929.4 L 754.4,932.9 L 753.9,933.8 L 756.4,942.9 L 758.2,944.9 L 758.5,947.2 L 759.5,948.2 L 758.9,949.6 L 759.4,951.8 L 761.7,953.8 L 762.4,954.2 L 762.5,954.8 L 762.7,955.5 L 763.8,955.8 L 763.7,956.8 L 764.8,958.7 L 766.4,960.1 L 767.2,962.8 L 769.4,964.8 L 771.4,969.7 L 772.8,970.3 L 778.6,969.4 L 782.7,969.6 L 783.5,968.5 L 785.6,967.4 L 788.4,968.1 L 791.6,967.6 L 792.8,966.0 L 796.8,966.0 L 798.1,967.7 L 809.4,967.6 L 809.1,965.6 L 810.3,961.5 L 809.7,959.3 L 811.7,958.6 L 812.9,956.4 L 812.0,953.5 L 812.3,950.3 L 813.4,947.2 L 821.9,947.0 L 828.3,946.9 L 829.6,945.3 L 835.3,945.3 L 835.2,947.2 L 834.1,950.0 L 834.0,952.1 L 834.6,952.8 L 859.7,952.8 L 861.1,956.3 L 860.5,960.6 L 859.5,962.9 L 859.1,966.5 L 859.4,968.2 L 861.2,971.0 L 861.9,973.6 L 862.6,974.5 L 862.9,978.1 L 861.3,985.1 L 861.0,992.9 L 859.9,997.0 L 861.6,1001.8 L 865.2,1006.1 L 867.9,1008.1 L 868.7,1012.9 L 870.5,1016.8 L 869.9,1019.4 L 870.5,1021.5 L 870.7,1024.9 L 867.7,1027.0 L 869.5,1035.2 L 871.4,1033.7 L 873.3,1033.3 L 874.3,1032.2 L 874.4,1031.0 L 875.2,1030.6 L 876.6,1030.8 L 879.3,1032.3 L 882.0,1031.3 L 888.9,1032.0 L 892.6,1029.3 L 894.7,1028.7 L 902.6,1030.4 L 905.5,1027.6 L 906.2,1035.4 L 907.2,1038.0 L 906.1,1039.2 L 906.2,1040.9 L 904.9,1043.6 L 905.8,1046.8 L 905.1,1053.7 L 906.7,1056.2 L 907.0,1058.4 L 904.4,1062.2 L 903.4,1067.9 L 905.8,1070.0 L 905.9,1071.3 L 864.3,1071.5 L 864.0,1086.5 L 864.0,1095.1 L 864.0,1137.2 L 866.4,1140.7 L 866.9,1143.3 L 867.9,1144.9 L 876.3,1152.5 L 880.8,1157.7 L 884.4,1159.9 L 887.6,1163.8 L 889.9,1165.5 L 892.6,1166.1 L 893.8,1167.5 L 874.4,1171.3 L 861.2,1173.8 L 852.2,1175.5 L 846.4,1173.6 L 842.8,1174.2 L 839.4,1175.7 L 833.8,1174.5 L 829.0,1172.2 L 824.8,1173.0 L 820.9,1172.3 L 817.4,1172.9 L 815.6,1172.0 L 813.3,1172.4 L 807.0,1171.3 L 803.3,1171.6 L 799.6,1171.2 L 794.4,1167.7 L 789.8,1162.5 L 781.1,1162.4 L 779.8,1162.4 L 778.9,1162.4 L 778.1,1162.4 L 777.3,1162.4 L 776.0,1162.4 L 774.8,1162.4 L 773.4,1162.4 L 771.4,1162.4 L 770.5,1162.4 L 768.6,1162.4 L 767.9,1162.4 L 766.0,1162.4 L 730.3,1162.4 L 702.6,1162.7 L 700.3,1163.3 L 697.3,1163.1 L 695.7,1161.6 L 688.4,1157.2 L 687.2,1154.8 L 685.2,1153.9 L 677.3,1154.0 L 668.1,1159.3 L 666.1,1159.5 L 665.2,1158.7 L 662.0,1159.2 L 660.0,1157.8 L 658.1,1157.4 L 652.5,1159.8 L 651.5,1159.5 L 652.4,1150.6 L 651.6,1149.3 L 652.9,1148.7 L 653.1,1143.3 L 652.6,1134.4 L 651.4,1130.7 L 652.2,1129.4 L 654.5,1128.6 L 656.9,1124.9 L 657.9,1118.1 L 659.5,1116.5 L 659.5,1114.6 L 662.6,1107.5 L 664.1,1100.1 L 664.1,1094.2 L 665.5,1090.1 L 667.3,1088.8 L 668.0,1082.4 L 668.0,1080.0 L 669.9,1078.6 L 670.5,1076.8 L 672.7,1075.5 L 676.8,1071.1 L 676.4,1067.9 L 681.2,1063.4 L 684.7,1063.1 L 685.9,1062.2 L 687.1,1061.2 L 688.2,1058.4 L 690.9,1055.6 L 693.3,1049.3 L 694.0,1045.6 L 693.5,1042.1 L 695.3,1029.9 L 692.6,1025.1 L 693.4,1023.7 L 693.2,1022.7 L 688.7,1017.5 L 688.6,1015.6 L 687.6,1014.1 L 684.2,1009.1 L 684.1,1007.2 L 681.7,1002.9 L 682.1,1002.2 L 680.8,996.1 L 677.8,990.5 L 682.1,984.4 L 685.6,983.3 L 686.0,981.2 L 684.8,977.7 L 685.5,976.7 L 685.5,975.6 L 679.4,963.8 L 675.6,954.0 L 674.5,952.4 L 673.6,946.5 L 671.0,942.9 L 668.7,940.3 L 662.6,929.5 L 662.6,928.5 L 664.4,927.3 L 666.2,927.7 L 672.2,926.2 L 674.6,924.7 L 678.4,923.5 L 679.9,924.0 L 682.2,923.4 L 684.6,924.2 L 686.3,923.4 L 689.3,923.8 L 698.2,922.8 Z M 650.8,1143.8 L 650.8,1146.0 L 648.9,1144.5 L 649.9,1143.7 L 650.8,1143.8 Z M 674.8,893.9 L 679.6,898.9 L 674.6,900.3 L 671.5,904.3 L 670.1,904.6 L 669.1,906.0 L 666.8,907.0 L 666.5,907.8 L 667.7,909.0 L 667.6,920.6 L 662.2,920.9 L 660.9,921.5 L 659.8,918.7 L 661.4,915.8 L 658.9,909.0 L 658.0,907.6 L 657.0,906.3 L 658.9,904.4 L 660.1,903.3 L 660.9,901.3 L 663.7,900.9 L 665.1,897.5 L 666.8,896.7 L 669.8,896.3 L 671.3,894.9 L 672.6,895.0 L 672.7,892.8 L 674.8,893.9 Z"><title>Angola</title></path>
@@ -637,5 +701,89 @@
   </div>
 </div>
 <footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var NEUTRAL='#D8D0BC';
+  function sel(cat,n){return document.querySelectorAll('[data-cat="'+cat+'"][data-name="'+CSS.escape(n)+'"]');}
+  function setCountry(n,on){sel('country',n).forEach(function(el){
+    if(el.tagName.toLowerCase()==='text'){el.style.display=on?'':'none';return;}
+    if(!el.dataset.fill)el.dataset.fill=el.style.fill||el.getAttribute('fill')||'';
+    el.style.fill=on?el.dataset.fill:NEUTRAL;});}
+  function setCapital(n,on){sel('capital',n).forEach(function(el){el.style.display=on?'':'none';});}
+  var apply={country:setCountry,capital:setCapital};
+  document.querySelectorAll('[data-item-cat]').forEach(function(cb){
+    cb.addEventListener('change',function(){apply[cb.dataset.itemCat](cb.dataset.itemName,cb.checked);});
+  });
+  document.querySelectorAll('[data-cat-master]').forEach(function(m){
+    m.addEventListener('change',function(){
+      document.querySelectorAll('[data-item-cat="'+m.dataset.catMaster+'"]').forEach(function(cb){cb.checked=m.checked;apply[cb.dataset.itemCat](cb.dataset.itemName,cb.checked);});
+    });
+  });
+  var presets=document.querySelector('.preset-btns');
+  function setAll(on){
+    document.querySelectorAll('[data-item-cat]').forEach(function(cb){cb.checked=on;apply[cb.dataset.itemCat](cb.dataset.itemName,on);});
+    document.querySelectorAll('[data-cat-master]').forEach(function(m){m.checked=on;});
+  }
+  presets.querySelectorAll('[data-preset]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var mudo=b.dataset.preset==='mudo';
+      setAll(!mudo);document.body.classList.toggle('mudo',mudo);
+      presets.querySelectorAll('button').forEach(function(x){x.classList.toggle('active',x===b);});
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var adv=document.querySelector('.advanced-block');
+  if(!adv)return;
+  var toggles=document.querySelector('.cat-toggles');
+  if(!toggles){toggles=document.createElement('div');toggles.className='cat-toggles';adv.before(toggles);}
+  var groups=[].slice.call(adv.querySelectorAll('.advanced-group'));
+  var host=document.createElement('div');host.className='cat-lists';toggles.after(host);
+  var hint=document.createElement('p');hint.className='cat-hint';
+  hint.textContent='Marca o desmarca una categoría entera, o pulsa el número (▾) para elegir elementos concretos.';
+  toggles.before(hint);
+  toggles.classList.add('enhanced');
+  var chips=[];
+  var firstExisting=toggles.firstChild;
+  groups.forEach(function(g){
+    var cb=g.querySelector('[data-item-cat]');if(!cb)return;
+    var cat=cb.dataset.itemCat,items=g.querySelectorAll('.item-row');
+    var title=g.querySelector('h4').textContent.replace(/\s*\(\d+\)\s*$/,'').trim();
+    var master=document.querySelector('[data-cat-master="'+cat+'"]');
+    var lab=master?master.closest('label'):null;
+    var chip=document.createElement('span');chip.className='cat-chip'+(lab?'':' nomaster');
+    if(lab){lab.parentNode.insertBefore(chip,lab);chip.appendChild(lab);}
+    else toggles.insertBefore(chip,firstExisting);
+    var btn=document.createElement('button');btn.type='button';btn.className='cat-more';
+    btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-label','Elegir elementos de «'+title+'» ('+items.length+')');
+    btn.innerHTML=(lab?'':'<span class="cat-name">'+title+'</span>')+'<span>'+items.length+'</span><span class="car">▾</span>';
+    chip.appendChild(btn);
+    var box=document.createElement('div');box.className='cat-list';box.hidden=true;
+    var grid=document.createElement('div');grid.className='cat-list-items';
+    var head=document.createElement('div');head.className='cat-list-head';
+    head.innerHTML='<span>'+title+' · '+items.length+'</span>';
+    var acts=document.createElement('span');acts.className='cat-list-acts';
+    function mk(t,fn){var b=document.createElement('button');b.type='button';b.textContent=t;b.addEventListener('click',fn);acts.appendChild(b);}
+    function setAll(v){grid.querySelectorAll('input[type=checkbox]').forEach(function(c){if(c.checked!==v){c.checked=v;c.dispatchEvent(new Event('change',{bubbles:true}));}});}
+    mk('Marcar todos',function(){setAll(true);});
+    mk('Ninguno',function(){setAll(false);});
+    var close=document.createElement('button');close.type='button';close.textContent='Cerrar';acts.appendChild(close);head.appendChild(acts);
+    items.forEach(function(r){grid.appendChild(r);});
+    if(master)grid.addEventListener('change',function(){master.checked=[].some.call(grid.querySelectorAll('input[type=checkbox]'),function(c){return c.checked;});});
+    box.appendChild(head);box.appendChild(grid);host.appendChild(box);
+    function setOpen(o){
+      chips.forEach(function(c){if(c.chip!==chip){c.chip.classList.remove('open');c.btn.setAttribute('aria-expanded','false');c.box.hidden=true;}});
+      chip.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);box.hidden=!o;
+    }
+    btn.addEventListener('click',function(){setOpen(box.hidden);});
+    close.addEventListener('click',function(){setOpen(false);btn.focus();});
+    chips.push({chip:chip,btn:btn,box:box});
+  });
+  adv.style.display='none';
+})();
+</script>
 </body>
 </html>
