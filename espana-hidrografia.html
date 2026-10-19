@@ -184,13 +184,20 @@
       <span class="custom-panel-title">Personaliza este mapa</span>
       <div class="preset-btns">
         <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Completo</button>
+        <button data-preset="estandar" hidden>Estándar</button>
+        <button data-preset="completo" class="active">Completo</button>
       </div>
+    </div>
+    <div class="cat-toggles">
+      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos y lagos uno a uno →</summary>
       <div class="advanced-groups">
-        <div class="advanced-group"><h4>Ríos (19)</h4><label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Bidasoa" checked> Bidasoa</label>
+        <div class="advanced-group">
+          <h4>Ríos (19)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Bidasoa" checked> Bidasoa</label>
 <label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Duero" checked> Duero</label>
 <label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Ebro" checked> Ebro</label>
 <label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Guadalhorce" checked> Guadalhorce</label>
@@ -208,8 +215,12 @@
 <label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Ter" checked> Ter</label>
 <label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Tormes" checked> Tormes</label>
 <label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Turia" checked> Turia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Vouga" checked> Vouga</label></div>
-        <div class="advanced-group"><h4>Lagos (1)</h4><label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Sanabria" checked> Sanabria</label></div>
+<label class="item-row"><input type="checkbox" data-item-cat="river" data-item-name="Vouga" checked> Vouga</label>
+</div>
+        <div class="advanced-group">
+          <h4>Lagos (1)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Sanabria" checked> Sanabria</label>
+</div>
       </div>
     </details>
   </div>
@@ -349,46 +360,83 @@
 </div>
 <footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
 
+
+
+
+
+
+
+
+
+
+
 <script>
 (function() {
-  const RIVER_ALL = ["Tajo", "Duero", "Ebro", "Guadalquivir", "Guadiana", "Mi\u00f1o", "J\u00facar", "Segura", "Turia", "Tormes", "Sil", "Navia", "Bidasoa", "Llobregat", "Ter", "Guadalhorce", "Mondego", "Vouga", "Sado"];
-  const LAKE_ALL = ["Sanabria"];
-
+  const ALL = {
+    river: ["Bidasoa", "Duero", "Ebro", "Guadalhorce", "Guadalquivir", "Guadiana", "Júcar", "Llobregat", "Miño", "Mondego", "Navia", "Sado", "Segura", "Sil", "Tajo", "Ter", "Tormes", "Turia", "Vouga"],
+    lake: ["Sanabria"]
+  };
+  const DEFAULT = ALL;
   function setByName(names, visible) {
     names.forEach(n => {
-      document.querySelectorAll('[data-name="' + CSS.escape(n) + '"]').forEach(el => el.style.display = visible ? '' : 'none');
+      document.querySelectorAll('[data-name="' + CSS.escape(n) + '"]').forEach(el => { el.style.display = visible ? '' : 'none'; });
     });
   }
-  function setCategory(cat, visible) {
-    document.querySelectorAll('[data-cat="' + cat + '"]').forEach(el => el.style.display = visible ? '' : 'none');
+  function syncItemCheckboxes(cat, visibleNames) {
+    document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(cb => { cb.checked = visibleNames.includes(cb.dataset.itemName); });
   }
-  function syncChecks(cat, visibleNames) {
-    document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(cb => cb.checked = visibleNames.includes(cb.dataset.itemName));
+  function setCatMaster(cat, checked) {
+    const master = document.querySelector('[data-cat-master="' + cat + '"]');
+    if (master) master.checked = checked;
   }
-  function setAllLabels(visible) {
-    document.querySelectorAll('svg text, svg .leader').forEach(el => el.style.display = visible ? '' : 'none');
-  }
-
-  document.querySelectorAll('[data-cat-toggle]').forEach(cb => {
-    cb.addEventListener('change', () => setCategory(cb.dataset.catToggle, cb.checked));
+  document.querySelectorAll('[data-cat-master]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const cat = cb.dataset.catMaster;
+      document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(itemCb => { itemCb.checked = cb.checked; });
+      document.querySelectorAll('[data-cat="' + cat + '"]').forEach(el => { el.style.display = cb.checked ? '' : 'none'; });
+    });
   });
   document.querySelectorAll('[data-item-cat]').forEach(cb => {
     cb.addEventListener('change', () => {
-      document.querySelectorAll('[data-name="' + CSS.escape(cb.dataset.itemName) + '"]').forEach(el => {
-        el.style.display = cb.checked ? '' : 'none';
-      });
+      document.querySelectorAll('[data-name="' + CSS.escape(cb.dataset.itemName) + '"]').forEach(el => { el.style.display = cb.checked ? '' : 'none'; });
     });
   });
-
+  function setAllLabels(visible) {
+    const INDIVIDUAL = ["river", "lake"];
+    document.querySelectorAll('svg text, svg .leader2').forEach(el => {
+      if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
+      if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
+      el.style.display = visible ? '' : 'none';
+    });
+  }
+  function setCategory_seaRegionHill(v) {
+    ['sea','region','hill'].forEach(c => {
+      document.querySelectorAll('[data-cat="' + c + '"]').forEach(el => { el.style.display = v ? '' : 'none'; });
+    });
+  }
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    setByName(RIVER_ALL, true); setByName(LAKE_ALL, true);
-    setCategory('sea', true);
-    syncChecks('river', RIVER_ALL); syncChecks('lake', LAKE_ALL);
-    setAllLabels(name !== 'mudo');
+    const cats = ["river", "lake"];
+    if (name === 'mudo') {
+      cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
+      setCategory_seaRegionHill(true);
+      setAllLabels(false);
+    } else if (name === 'estandar') {
+      cats.forEach(cat => {
+        setByName(ALL[cat], false); setByName(DEFAULT[cat], true);
+        syncItemCheckboxes(cat, DEFAULT[cat]); setCatMaster(cat, true);
+      });
+      setCategory_seaRegionHill(true);
+      setAllLabels(true);
+    } else if (name === 'completo') {
+      cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
+      setCategory_seaRegionHill(true);
+      setAllLabels(true);
+    }
   }
   presetBtns.forEach(b => b.addEventListener('click', () => applyPreset(b.dataset.preset)));
+  applyPreset('completo');
 })();
 </script>
 
@@ -444,6 +492,7 @@
   adv.style.display='none';
 })();
 </script>
+
 <script>
 (function(){
   var presets=document.querySelector('.preset-btns');
@@ -466,6 +515,7 @@
   });
 })();
 </script>
+
 <script>
 /* antisolapamiento de etiquetas: las fijas (capitales, accidentes, picos, cordilleras, mares) mandan; el resto se desplaza lo mínimo para quedar libre */
 (function(){

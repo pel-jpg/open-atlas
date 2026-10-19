@@ -153,19 +153,33 @@
       <span class="custom-panel-title">Personaliza este mapa</span>
       <div class="preset-btns">
         <button data-preset="mudo">Mudo</button>
-        <button data-preset="estandar" class="active">Completo</button>
+        <button data-preset="estandar" hidden>Estándar</button>
+        <button data-preset="completo" class="active">Completo</button>
       </div>
+    </div>
+    <div class="cat-toggles">
+      <label><input type="checkbox" data-cat-master="gulf" checked> Golfos</label>
+      <label><input type="checkbox" data-cat-master="cape" checked> Cabos</label>
+      <label><input type="checkbox" data-cat-master="strait" checked> Estrechos</label>
+      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
     </div>
     <details class="advanced-block">
       <summary>Elegir golfos, cabos, estrechos, islas y penínsulas uno a uno →</summary>
       <div class="advanced-groups">
-        <div class="advanced-group"><h4>Golfos y rías (7)</h4><label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Almería" checked> Golfo de Almería</label>
+        <div class="advanced-group">
+          <h4>Golfos (7)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Almería" checked> Golfo de Almería</label>
 <label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Cádiz" checked> Golfo de Cádiz</label>
 <label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Valencia" checked> Golfo de Valencia</label>
 <label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Golfo de Vizcaya" checked> Golfo de Vizcaya</label>
 <label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Ría de Arousa" checked> Ría de Arousa</label>
 <label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Ría de Aveiro" checked> Ría de Aveiro</label>
-<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Ría de Vigo" checked> Ría de Vigo</label></div><div class="advanced-group"><h4>Cabos (11)</h4><label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Carvoeiro*" checked> Cabo Carvoeiro*</label>
+<label class="item-row"><input type="checkbox" data-item-cat="gulf" data-item-name="Ría de Vigo" checked> Ría de Vigo</label>
+</div>
+        <div class="advanced-group">
+          <h4>Cabos (11)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Carvoeiro*" checked> Cabo Carvoeiro*</label>
 <label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo da Roca*" checked> Cabo da Roca*</label>
 <label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo de Creus" checked> Cabo de Creus</label>
 <label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo de Gata" checked> Cabo de Gata</label>
@@ -175,10 +189,23 @@
 <label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Finisterre" checked> Cabo Finisterre</label>
 <label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Machichaco" checked> Cabo Machichaco</label>
 <label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Peñas" checked> Cabo Peñas</label>
-<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Trafalgar" checked> Cabo Trafalgar</label></div><div class="advanced-group"><h4>Estrechos (1)</h4><label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Gibraltar" checked> Estrecho de Gibraltar</label></div><div class="advanced-group"><h4>Islas (4)</h4><label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Formentera" checked> Formentera</label>
+<label class="item-row"><input type="checkbox" data-item-cat="cape" data-item-name="Cabo Trafalgar" checked> Cabo Trafalgar</label>
+</div>
+        <div class="advanced-group">
+          <h4>Estrechos (1)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="strait" data-item-name="Estrecho de Gibraltar" checked> Estrecho de Gibraltar</label>
+</div>
+        <div class="advanced-group">
+          <h4>Islas (4)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Formentera" checked> Formentera</label>
 <label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Ibiza" checked> Ibiza</label>
 <label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Mallorca" checked> Mallorca</label>
-<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Menorca" checked> Menorca</label></div><div class="advanced-group"><h4>Penínsulas (1)</h4><label class="item-row"><input type="checkbox" data-item-cat="peninsula" data-item-name="Península Ibérica" checked> Península Ibérica</label></div>
+<label class="item-row"><input type="checkbox" data-item-cat="island" data-item-name="Menorca" checked> Menorca</label>
+</div>
+        <div class="advanced-group">
+          <h4>Penínsulas (1)</h4>
+<label class="item-row"><input type="checkbox" data-item-cat="peninsula" data-item-name="Península Ibérica" checked> Península Ibérica</label>
+</div>
       </div>
     </details>
   </div>
@@ -278,40 +305,86 @@
 </div>
 <footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
 
+
+
+
+
+
+
+
+
+
+
 <script>
 (function() {
-  const ALL_BY_CAT = {'gulf': ['Golfo de Cádiz', 'Golfo de Valencia', 'Golfo de Vizcaya', 'Golfo de Almería', 'Ría de Arousa', 'Ría de Vigo', 'Ría de Aveiro'], 'cape': ['Cabo Finisterre', 'Cabo de Creus', 'Cabo de Gata', 'Cabo Trafalgar', 'Cabo de Palos', 'Cabo Machichaco', 'Cabo Peñas', 'Cabo da Roca*', 'Cabo de San Vicente*', 'Cabo Espichel*', 'Cabo Carvoeiro*'], 'strait': ['Estrecho de Gibraltar'], 'island': ['Mallorca', 'Menorca', 'Ibiza', 'Formentera'], 'peninsula': ['Península Ibérica']};
-
+  const ALL = {
+    gulf: ["Golfo de Almería", "Golfo de Cádiz", "Golfo de Valencia", "Golfo de Vizcaya", "Ría de Arousa", "Ría de Aveiro", "Ría de Vigo"],
+    cape: ["Cabo Carvoeiro*", "Cabo da Roca*", "Cabo de Creus", "Cabo de Gata", "Cabo de Palos", "Cabo de San Vicente*", "Cabo Espichel*", "Cabo Finisterre", "Cabo Machichaco", "Cabo Peñas", "Cabo Trafalgar"],
+    strait: ["Estrecho de Gibraltar"],
+    island: ["Formentera", "Ibiza", "Mallorca", "Menorca"],
+    peninsula: ["Península Ibérica"]
+  };
+  const DEFAULT = ALL;
   function setByName(names, visible) {
     names.forEach(n => {
-      document.querySelectorAll('[data-name="' + CSS.escape(n) + '"]').forEach(el => el.style.display = visible ? '' : 'none');
+      document.querySelectorAll('[data-name="' + CSS.escape(n) + '"]').forEach(el => { el.style.display = visible ? '' : 'none'; });
     });
   }
-  function syncChecks(cat, visibleNames) {
-    document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(cb => cb.checked = visibleNames.includes(cb.dataset.itemName));
+  function syncItemCheckboxes(cat, visibleNames) {
+    document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(cb => { cb.checked = visibleNames.includes(cb.dataset.itemName); });
   }
-  function setAllLabels(visible) {
-    document.querySelectorAll('svg text, svg .leader2, svg .feature-dot').forEach(el => el.style.display = visible ? '' : 'none');
+  function setCatMaster(cat, checked) {
+    const master = document.querySelector('[data-cat-master="' + cat + '"]');
+    if (master) master.checked = checked;
   }
-
-  document.querySelectorAll('[data-item-cat]').forEach(cb => {
+  document.querySelectorAll('[data-cat-master]').forEach(cb => {
     cb.addEventListener('change', () => {
-      document.querySelectorAll('[data-name="' + CSS.escape(cb.dataset.itemName) + '"]').forEach(el => {
-        el.style.display = cb.checked ? '' : 'none';
-      });
+      const cat = cb.dataset.catMaster;
+      document.querySelectorAll('[data-item-cat="' + cat + '"]').forEach(itemCb => { itemCb.checked = cb.checked; });
+      document.querySelectorAll('[data-cat="' + cat + '"]').forEach(el => { el.style.display = cb.checked ? '' : 'none'; });
     });
   });
-
+  document.querySelectorAll('[data-item-cat]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      document.querySelectorAll('[data-name="' + CSS.escape(cb.dataset.itemName) + '"]').forEach(el => { el.style.display = cb.checked ? '' : 'none'; });
+    });
+  });
+  function setAllLabels(visible) {
+    const INDIVIDUAL = ["gulf", "cape", "strait", "island", "peninsula"];
+    document.querySelectorAll('svg text, svg .leader2').forEach(el => {
+      if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
+      if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
+      el.style.display = visible ? '' : 'none';
+    });
+  }
+  function setCategory_seaRegionHill(v) {
+    ['sea','region','hill'].forEach(c => {
+      document.querySelectorAll('[data-cat="' + c + '"]').forEach(el => { el.style.display = v ? '' : 'none'; });
+    });
+  }
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    Object.keys(ALL_BY_CAT).forEach(cat => {
-      setByName(ALL_BY_CAT[cat], true);
-      syncChecks(cat, ALL_BY_CAT[cat]);
-    });
-    setAllLabels(name !== 'mudo');
+    const cats = ["gulf", "cape", "strait", "island", "peninsula"];
+    if (name === 'mudo') {
+      cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
+      setCategory_seaRegionHill(true);
+      setAllLabels(false);
+    } else if (name === 'estandar') {
+      cats.forEach(cat => {
+        setByName(ALL[cat], false); setByName(DEFAULT[cat], true);
+        syncItemCheckboxes(cat, DEFAULT[cat]); setCatMaster(cat, true);
+      });
+      setCategory_seaRegionHill(true);
+      setAllLabels(true);
+    } else if (name === 'completo') {
+      cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
+      setCategory_seaRegionHill(true);
+      setAllLabels(true);
+    }
   }
   presetBtns.forEach(b => b.addEventListener('click', () => applyPreset(b.dataset.preset)));
+  applyPreset('completo');
 })();
 </script>
 
@@ -367,6 +440,7 @@
   adv.style.display='none';
 })();
 </script>
+
 <script>
 (function(){
   var presets=document.querySelector('.preset-btns');
@@ -389,6 +463,7 @@
   });
 })();
 </script>
+
 <script>
 /* antisolapamiento de etiquetas: las fijas (capitales, accidentes, picos, cordilleras, mares) mandan; el resto se desplaza lo mínimo para quedar libre */
 (function(){
