@@ -145,6 +145,13 @@
   svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.78);}
   svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
   .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+/* legibilidad costeros */
+svg text.feature-label,svg text.feature-label2{paint-order:stroke;stroke:rgba(255,255,255,.9);stroke-width:3.6px;stroke-linejoin:round;}
+svg text.feature-label[data-name^="Cabo"],svg text.feature-label[data-name^="Punta"],svg text.feature-label[data-name^="Pen"],
+svg text.feature-label2[data-cat="cape"]{fill:#4a2a10;font-style:normal;font-weight:700;}
+svg text.feature-label[data-name^="Golfo"],svg text.feature-label[data-name^="Estrecho"],svg text.feature-label[data-name^="Paso"],svg text.feature-label[data-name^="Canal"],
+svg text.feature-label2[data-cat="gulf"],svg text.feature-label2[data-cat="strait"]{fill:#0d2a4a;font-style:italic;font-weight:700;}
+svg circle.feature-dot{r:2.8px;fill:#12283a;stroke:#fff;stroke-width:1.1px;}
 </style>
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -454,53 +461,53 @@
 <text class="region-label" data-cat="region" data-name="DEPRESIÓN DEL CASPIO" x="1526.1" y="684.6" style="font-size:10px">DEPRESIÓN DEL CASPIO</text>
 <text class="region-label" data-cat="region" data-name="MESETA DE USTIURT" x="1709.1" y="743.8" style="font-size:10px">MESETA DE USTIURT</text>
 <text class="region-label" data-cat="region" data-name="MESETA DE PODOLIA" x="1109.4" y="782.3" style="font-size:10px">MESETA DE PODOLIA</text>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Vizcaya" cx="457.3" cy="850.3" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Cádiz" cx="301.4" cy="1069.2" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de León" style="display:none" cx="601.6" cy="951" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Génova" style="display:none" cx="714.1" cy="930.3" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Venecia" style="display:none" cx="805.6" cy="904" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Tarento" style="display:none" cx="893.1" cy="1067.5" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Corinto" style="display:none" cx="1013.2" cy="1118.8" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Botnia" cx="943" cy="379.6" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Finlandia" style="display:none" cx="1034.4" cy="455.5" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Golfo de Riga" style="display:none" cx="1003.4" cy="532" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Finisterre" cx="317" cy="870" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Norte" cx="993.8" cy="107.7" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Matapán" style="display:none" cx="1023.3" cy="1177.3" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo San Vicente" cx="260" cy="1040.1" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo de Creus" style="display:none" cx="583.2" cy="965.4" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Trafalgar" style="display:none" cx="320" cy="1089.4" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Gibraltar" cx="328" cy="1099.7" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Canal de la Mancha" cx="529.9" cy="714.5" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Mesina" style="display:none" cx="854.7" cy="1122.8" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Otranto" style="display:none" cx="935.3" cy="1066" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Kattegat" style="display:none" cx="801.6" cy="540.7" r="1.8"/>
-<circle class="feature-dot" data-cat="feature" data-name="Skagerrak" style="display:none" cx="758.3" cy="514.9" r="1.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Vizcaya" cx="457.3" cy="850.3" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Cádiz" cx="301.4" cy="1069.2" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de León" style="display:none" cx="601.6" cy="951" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Génova" style="display:none" cx="714.1" cy="930.3" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Venecia" style="display:none" cx="805.6" cy="904" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Tarento" style="display:none" cx="893.1" cy="1067.5" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Corinto" style="display:none" cx="1013.2" cy="1118.8" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Botnia" cx="943" cy="379.6" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Finlandia" style="display:none" cx="1034.4" cy="455.5" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Golfo de Riga" style="display:none" cx="1003.4" cy="532" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Finisterre" cx="317" cy="870" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Norte" cx="993.8" cy="107.7" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Matapán" style="display:none" cx="1023.3" cy="1177.3" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo San Vicente" cx="260" cy="1040.1" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo de Creus" style="display:none" cx="583.2" cy="965.4" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Trafalgar" style="display:none" cx="320" cy="1089.4" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Gibraltar" cx="328" cy="1099.7" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Canal de la Mancha" cx="529.9" cy="714.5" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Mesina" style="display:none" cx="854.7" cy="1122.8" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Otranto" style="display:none" cx="935.3" cy="1066" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Kattegat" style="display:none" cx="801.6" cy="540.7" r="2.8"/>
+<circle class="feature-dot" data-cat="feature" data-name="Skagerrak" style="display:none" cx="758.3" cy="514.9" r="2.8"/>
 <line class="leader2" data-cat="feature" data-name="Cabo San Vicente" x1="260" y1="1040.1" x2="270.4" y2="1029"/>
 <line class="leader2" data-cat="feature" data-name="Estrecho de Gibraltar" x1="328" y1="1099.7" x2="330.2" y2="1112.1"/>
 <line class="leader2" data-cat="feature" data-name="Estrecho de Otranto" style="display:none" x1="935.3" y1="1066" x2="941.1" y2="1084.1"/>
 <text class="feature-label" data-cat="feature" data-name="Golfo de Vizcaya" x="462.9" y="849" text-anchor="start" style="font-size:12px">Golfo de Vizcaya</text>
 <text class="feature-label" data-cat="feature" data-name="Golfo de Cádiz" x="307.8" y="1068.4" text-anchor="start" style="font-size:10.5px">Golfo de Cádiz</text>
 <text class="feature-label" data-cat="feature" data-name="Golfo de León" x="607.3" y="949.1" text-anchor="start" style="font-size:10.5px;display:none">Golfo de León</text>
-<text class="feature-label" data-cat="feature" data-name="Golfo de Génova" x="719.6" y="928.1" text-anchor="start" style="font-size:10px;display:none">Golfo de Génova</text>
-<text class="feature-label" data-cat="feature" data-name="Golfo de Venecia" x="810.7" y="901.4" text-anchor="start" style="font-size:10px;display:none">Golfo de Venecia</text>
-<text class="feature-label" data-cat="feature" data-name="Golfo de Tarento" x="898.6" y="1064.6" text-anchor="start" style="font-size:10px;display:none">Golfo de Tarento</text>
-<text class="feature-label" data-cat="feature" data-name="Golfo de Corinto" x="1018.8" y="1115.5" text-anchor="start" style="font-size:9.5px;display:none">Golfo de Corinto</text>
-<text class="feature-label" data-cat="feature" data-name="Golfo de Botnia" x="946.2" y="376.6" text-anchor="start" style="font-size:12px">Golfo de Botnia</text>
+<text class="feature-label" data-cat="feature" data-name="Golfo de Génova" x="719.6" y="928.1" text-anchor="start" style="font-size:10.5px;display:none">Golfo de Génova</text>
+<text class="feature-label" data-cat="feature" data-name="Golfo de Venecia" x="810.7" y="901.4" text-anchor="start" style="font-size:10.5px;display:none">Golfo de Venecia</text>
+<text class="feature-label" data-cat="feature" data-name="Golfo de Tarento" x="898.6" y="1055.6" text-anchor="start" style="font-size:10.5px;display:none">Golfo de Tarento</text>
+<text class="feature-label" data-cat="feature" data-name="Golfo de Corinto" x="1018.8" y="1115.5" text-anchor="start" style="font-size:10.5px;display:none">Golfo de Corinto</text>
+<text class="feature-label" data-cat="feature" data-name="Golfo de Botnia" x="966.2" y="364.6" text-anchor="start" style="font-size:12px">Golfo de Botnia</text>
 <text class="feature-label" data-cat="feature" data-name="Golfo de Finlandia" x="1037.7" y="452.2" text-anchor="start" style="font-size:10.5px;display:none">Golfo de Finlandia</text>
-<text class="feature-label" data-cat="feature" data-name="Golfo de Riga" x="1007" y="528.8" text-anchor="start" style="font-size:9px;display:none">Golfo de Riga</text>
+<text class="feature-label" data-cat="feature" data-name="Golfo de Riga" x="1007" y="528.8" text-anchor="start" style="font-size:10.5px;display:none">Golfo de Riga</text>
 <text class="feature-label" data-cat="feature" data-name="Cabo Finisterre" x="322.9" y="869.3" text-anchor="start" style="font-size:11px">Cabo Finisterre</text>
-<text class="feature-label" data-cat="feature" data-name="Cabo Norte" x="995.9" y="104.3" text-anchor="start" style="font-size:12px">Cabo Norte</text>
-<text class="feature-label" data-cat="feature" data-name="Cabo Matapán" x="1028.9" y="1174" text-anchor="start" style="font-size:9.5px;display:none">Cabo Matapán</text>
-<text class="feature-label" data-cat="feature" data-name="Cabo San Vicente" x="270.4" y="1029" text-anchor="start" style="font-size:10px">Cabo San Vicente</text>
-<text class="feature-label" data-cat="feature" data-name="Cabo de Creus" x="588.9" y="963.6" text-anchor="start" style="font-size:9px;display:none">Cabo de Creus</text>
-<text class="feature-label" data-cat="feature" data-name="Cabo Trafalgar" x="326.5" y="1088.5" text-anchor="start" style="font-size:9px;display:none">Cabo Trafalgar</text>
-<text class="feature-label" data-cat="feature" data-name="Estrecho de Gibraltar" x="330.2" y="1112.1" text-anchor="start" style="font-size:12.5px">Estrecho de Gibraltar</text>
-<text class="feature-label" data-cat="feature" data-name="Canal de la Mancha" x="535" y="713" text-anchor="start" style="font-size:13px">Canal de la Mancha</text>
-<text class="feature-label" data-cat="feature" data-name="Estrecho de Mesina" x="860.5" y="1120" text-anchor="start" style="font-size:9.5px;display:none">Estrecho de Mesina</text>
-<text class="feature-label" data-cat="feature" data-name="Estrecho de Otranto" x="941.1" y="1084.1" text-anchor="start" style="font-size:9.5px;display:none">Estrecho de Otranto</text>
-<text class="feature-label" data-cat="feature" data-name="Kattegat" x="805.7" y="538.2" text-anchor="start" style="font-size:10px;display:none">Kattegat</text>
-<text class="feature-label" data-cat="feature" data-name="Skagerrak" x="762.5" y="512.5" text-anchor="start" style="font-size:10px;display:none">Skagerrak</text>
+<text class="feature-label" data-cat="feature" data-name="Cabo Norte" x="995.9" y="110.3" text-anchor="start" style="font-size:12px">Cabo Norte</text>
+<text class="feature-label" data-cat="feature" data-name="Cabo Matapán" x="1028.9" y="1174" text-anchor="start" style="font-size:10.5px;display:none">Cabo Matapán</text>
+<text class="feature-label" data-cat="feature" data-name="Cabo San Vicente" x="270.4" y="1029" text-anchor="start" style="font-size:10.5px">Cabo San Vicente</text>
+<text class="feature-label" data-cat="feature" data-name="Cabo de Creus" x="588.9" y="969.6" text-anchor="start" style="font-size:10.5px;display:none">Cabo de Creus</text>
+<text class="feature-label" data-cat="feature" data-name="Cabo Trafalgar" x="326.5" y="1088.5" text-anchor="start" style="font-size:10.5px;display:none">Cabo Trafalgar</text>
+<text class="feature-label" data-cat="feature" data-name="Estrecho de Gibraltar" x="330.2" y="1121.1" text-anchor="start" style="font-size:12.5px">Estrecho de Gibraltar</text>
+<text class="feature-label" data-cat="feature" data-name="Canal de la Mancha" x="535" y="719" text-anchor="start" style="font-size:13px">Canal de la Mancha</text>
+<text class="feature-label" data-cat="feature" data-name="Estrecho de Mesina" x="840.5" y="1102" text-anchor="start" style="font-size:10.5px;display:none">Estrecho de Mesina</text>
+<text class="feature-label" data-cat="feature" data-name="Estrecho de Otranto" x="917.1" y="1084.1" text-anchor="start" style="font-size:10.5px;display:none">Estrecho de Otranto</text>
+<text class="feature-label" data-cat="feature" data-name="Kattegat" x="805.7" y="538.2" text-anchor="start" style="font-size:10.5px;display:none">Kattegat</text>
+<text class="feature-label" data-cat="feature" data-name="Skagerrak" x="762.5" y="512.5" text-anchor="start" style="font-size:10.5px;display:none">Skagerrak</text>
 <text class="island-label" data-cat="island" data-name="Islandia" x="436.7" y="193.4" text-anchor="middle" style="font-size:16px">Islandia</text>
 <text class="island-label" data-cat="island" data-name="Islas Británicas" x="527.3" y="570" text-anchor="middle" style="font-size:12px">Islas Británicas</text>
 <text class="island-label" data-cat="island" data-name="Córcega" x="711.2" y="991.2" text-anchor="middle" style="font-size:10px;display:none">Córcega</text>
@@ -522,24 +529,24 @@
 <text class="region-label" data-cat="peninsula" data-name="Península de Crimea" x="1255.4" y="872.2" text-anchor="middle" style="font-size:9.5px;display:none">PENÍNSULA DE CRIMEA</text>
 <text class="region-label" data-cat="peninsula" data-name="Península del Peloponeso" x="1017" y="1143.4" text-anchor="middle" style="font-size:10px;display:none">PENÍNSULA DEL PELOPONESO</text>
 <text class="region-label" data-cat="peninsula" data-name="Península de Anatolia" x="1267.8" y="1063.9" text-anchor="middle" style="font-size:11px;display:none">PENÍNSULA DE ANATOLIA</text>
-<circle class="feature-dot" data-cat="feature" data-name="Paso de Calais" style="display:none" cx="601.3" cy="700.5" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Paso de Calais" x="596.5" y="697.5" text-anchor="end" style="display:none;text-anchor:end;font-size:10px">Paso de Calais</text>
-<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Kerch" style="display:none" cx="1304.2" cy="857.9" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Estrecho de Kerch" x="1311.5" y="862" text-anchor="start" style="display:none;text-anchor:start;font-size:9px">Estrecho de Kerch</text>
-<circle class="feature-dot" data-cat="feature" data-name="Estrecho del Bósforo" style="display:none" cx="1165.6" cy="1016.3" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Estrecho del Bósforo" x="1171.5" y="1011.5" text-anchor="start" style="display:none;text-anchor:start;font-size:9px">Estrecho del Bósforo</text>
-<circle class="feature-dot" data-cat="feature" data-name="Land's End" style="display:none" cx="460.9" cy="690.6" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Land's End" x="452.7" y="697.8" text-anchor="end" style="display:none;text-anchor:end;font-size:9px">Land's End</text>
-<circle class="feature-dot" data-cat="feature" data-name="Punta de San Mateo" style="display:none" cx="462.1" cy="746.1" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Punta de San Mateo" x="459" y="737.2" text-anchor="end" style="display:none;text-anchor:end;font-size:9px">Punta de San Mateo</text>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Lindesnes" style="display:none" cx="736" cy="511.1" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Cabo Lindesnes" x="730.7" y="516.1" text-anchor="end" style="display:none;text-anchor:end;font-size:9px">Cabo Lindesnes</text>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Spartivento" style="display:none" cx="864.7" cy="1132.3" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Cabo Spartivento" x="857.5" y="1143.8" text-anchor="end" style="display:none;text-anchor:end;font-size:9px">Cabo Spartivento</text>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo de Gata" style="display:none" cx="416.3" cy="1102.1" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Cabo de Gata" x="420.5" y="1113.4" text-anchor="start" style="display:none;text-anchor:start;font-size:9px">Cabo de Gata</text>
-<circle class="feature-dot" data-cat="feature" data-name="Cabo Espichel" style="display:none" cx="269.4" cy="998.1" r="1.8"/>
-<text class="feature-label" data-cat="feature" data-name="Cabo Espichel" x="263.1" y="995.6" text-anchor="end" style="display:none;text-anchor:end;font-size:9px">Cabo Espichel</text>
+<circle class="feature-dot" data-cat="feature" data-name="Paso de Calais" style="display:none" cx="601.3" cy="700.5" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Paso de Calais" x="596.5" y="697.5" text-anchor="end" style="display:none;text-anchor:end;font-size:10.5px">Paso de Calais</text>
+<circle class="feature-dot" data-cat="feature" data-name="Estrecho de Kerch" style="display:none" cx="1304.2" cy="857.9" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Estrecho de Kerch" x="1311.5" y="853" text-anchor="start" style="display:none;text-anchor:start;font-size:10.5px">Estrecho de Kerch</text>
+<circle class="feature-dot" data-cat="feature" data-name="Estrecho del Bósforo" style="display:none" cx="1165.6" cy="1016.3" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Estrecho del Bósforo" x="1171.5" y="1011.5" text-anchor="start" style="display:none;text-anchor:start;font-size:10.5px">Estrecho del Bósforo</text>
+<circle class="feature-dot" data-cat="feature" data-name="Land's End" style="display:none" cx="460.9" cy="690.6" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Land's End" x="452.7" y="697.8" text-anchor="end" style="display:none;text-anchor:end;font-size:10.5px">Land's End</text>
+<circle class="feature-dot" data-cat="feature" data-name="Punta de San Mateo" style="display:none" cx="462.1" cy="746.1" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Punta de San Mateo" x="459" y="737.2" text-anchor="end" style="display:none;text-anchor:end;font-size:10.5px">Punta de San Mateo</text>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Lindesnes" style="display:none" cx="736" cy="511.1" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Cabo Lindesnes" x="730.7" y="510.1" text-anchor="end" style="display:none;text-anchor:end;font-size:10.5px">Cabo Lindesnes</text>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Spartivento" style="display:none" cx="864.7" cy="1132.3" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Cabo Spartivento" x="857.5" y="1158.8" text-anchor="end" style="display:none;text-anchor:end;font-size:10.5px">Cabo Spartivento</text>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo de Gata" style="display:none" cx="416.3" cy="1102.1" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Cabo de Gata" x="420.5" y="1101.4" text-anchor="start" style="display:none;text-anchor:start;font-size:10.5px">Cabo de Gata</text>
+<circle class="feature-dot" data-cat="feature" data-name="Cabo Espichel" style="display:none" cx="269.4" cy="998.1" r="2.8"/>
+<text class="feature-label" data-cat="feature" data-name="Cabo Espichel" x="263.1" y="995.6" text-anchor="end" style="display:none;text-anchor:end;font-size:10.5px">Cabo Espichel</text>
 <text class="island-label" data-cat="island" data-name="Islas Hébridas" x="497.8" y="476.9" text-anchor="end" style="display:none;font-size:10px">Islas Hébridas</text>
 <text class="island-label" data-cat="island" data-name="Islas Orcadas" x="603.2" y="447.2" text-anchor="start" style="display:none;font-size:10px">Islas Orcadas</text>
 <text class="island-label" data-cat="island" data-name="Islas Shetland" x="639" y="420" text-anchor="start" style="display:none;font-size:10px">Islas Shetland</text>

@@ -127,6 +127,13 @@
   svg .country,svg .bg-country{fill:transparent;stroke:none;}
   svg .country:hover{fill:rgba(255,255,255,.16);}
   svg text.biome-label{fill:#2d3a1c;}
+/* legibilidad costeros */
+svg text.feature-label,svg text.feature-label2{paint-order:stroke;stroke:rgba(255,255,255,.9);stroke-width:3.6px;stroke-linejoin:round;}
+svg text.feature-label[data-name^="Cabo"],svg text.feature-label[data-name^="Punta"],svg text.feature-label[data-name^="Pen"],
+svg text.feature-label2[data-cat="cape"]{fill:#4a2a10;font-style:normal;font-weight:700;}
+svg text.feature-label[data-name^="Golfo"],svg text.feature-label[data-name^="Estrecho"],svg text.feature-label[data-name^="Paso"],svg text.feature-label[data-name^="Canal"],
+svg text.feature-label2[data-cat="gulf"],svg text.feature-label2[data-cat="strait"]{fill:#0d2a4a;font-style:italic;font-weight:700;}
+svg circle.feature-dot{r:2.8px;fill:#12283a;stroke:#fff;stroke-width:1.1px;}
 </style>
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -270,33 +277,33 @@
   <div class="map-frame">
     <svg viewBox="150 0 1300 1681" width="100%">
 <image href="america-fisico-relieve.jpg" x="150" y="0" width="1300" height="1681" preserveAspectRatio="none"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo de Hornos" cx="966.7" cy="1655.7" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Mendocino" cx="438.4" cy="439.7" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Cañaveral" cx="854" cy="640.5" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Gracias a Dios" cx="821.9" cy="807.6" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo San Lucas" cx="517.5" cy="687.9" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Frío" cx="1310.4" cy="1274.2" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo San Roque" cx="1411.6" cy="1037" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Punta Gallinas" cx="959.1" cy="838.8" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Punta Arenas (Patagonia)" cx="963.8" cy="1625.3" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Deseado" cx="907.8" cy="1621.5" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Cod" cx="958" cy="474.9" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Punta Lavapié" cx="930.6" cy="1446.2" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Punta Galera" cx="927" cy="1478.5" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Punta Parinas" cx="844.4" cy="1054.6" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Cuba" cx="878.3" cy="722.6" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="La Española" cx="971.4" cy="755.7" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Puerto Rico" cx="1021.8" cy="763.7" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Jamaica" cx="893.1" cy="768.8" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Trinidad" cx="1090.6" cy="857.6" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Tierra del Fuego" cx="960.5" cy="1634.3" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Islas Bahamas" cx="889.5" cy="688.8" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Islas de Barlovento" cx="1085.7" cy="819.7" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Islas de Sotavento" cx="1001.7" cy="840.3" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Isla de Vancouver" cx="486.3" cy="327.4" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Archipiélago de Chiloé" cx="923.6" cy="1507.1" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Archipiélago de los Chonos" cx="920.8" cy="1535.2" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Isla Marajó" cx="1239.6" cy="995.5" r="2"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo de Hornos" cx="966.7" cy="1655.7" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Mendocino" cx="438.4" cy="439.7" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Cañaveral" cx="854" cy="640.5" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Gracias a Dios" cx="821.9" cy="807.6" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo San Lucas" cx="517.5" cy="687.9" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Frío" cx="1310.4" cy="1274.2" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo San Roque" cx="1411.6" cy="1037" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Punta Gallinas" cx="959.1" cy="838.8" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Punta Arenas (Patagonia)" cx="963.8" cy="1625.3" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Deseado" cx="907.8" cy="1621.5" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Cod" cx="958" cy="474.9" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Punta Lavapié" cx="930.6" cy="1446.2" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Punta Galera" cx="927" cy="1478.5" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Punta Parinas" cx="844.4" cy="1054.6" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Cuba" cx="878.3" cy="722.6" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="La Española" cx="971.4" cy="755.7" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Puerto Rico" cx="1021.8" cy="763.7" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Jamaica" cx="893.1" cy="768.8" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Trinidad" cx="1090.6" cy="857.6" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Tierra del Fuego" cx="960.5" cy="1634.3" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Islas Bahamas" cx="889.5" cy="688.8" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Islas de Barlovento" cx="1085.7" cy="819.7" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Islas de Sotavento" cx="1001.7" cy="840.3" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Isla de Vancouver" cx="486.3" cy="327.4" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Archipiélago de Chiloé" cx="923.6" cy="1507.1" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Archipiélago de los Chonos" cx="920.8" cy="1535.2" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Isla Marajó" cx="1239.6" cy="995.5" r="2.8"/>
 <line class="leader2" data-cat="cape" data-name="Cabo de Hornos" x1="966.7" y1="1655.7" x2="967" y2="1654.4"/>
 <line class="leader2" data-cat="cape" data-name="Cabo Cañaveral" x1="854" y1="640.5" x2="863" y2="631.1"/>
 <line class="leader2" data-cat="cape" data-name="Cabo Gracias a Dios" x1="821.9" y1="807.6" x2="829.6" y2="820.5"/>
@@ -312,64 +319,64 @@
 <line class="leader2" data-cat="island" data-name="Archipiélago de Chiloé" x1="923.6" y1="1507.1" x2="929.1" y2="1487.5"/>
 <text class="feature-label2" data-cat="gulf" data-name="Golfo de México" x="746.2" y="680.3" text-anchor="middle" style="font-size:14px">Golfo de México</text>
 <text class="feature-label2" data-cat="gulf" data-name="Golfo de Alaska" x="417.7" y="177.6" text-anchor="middle" style="font-size:10.5px">Golfo de Alaska</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de California" x="511.4" y="603.7" text-anchor="middle" style="font-size:10px">Golfo de California</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Panamá" x="873.2" y="881.8" text-anchor="middle" style="font-size:9px">Golfo de Panamá</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Honduras" x="770.1" y="794.1" text-anchor="middle" style="font-size:9px">Golfo de Honduras</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Guayaquil" x="857" y="1033.4" text-anchor="middle" style="font-size:9px">Golfo de Guayaquil</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de San Jorge" x="993.7" y="1547.4" text-anchor="middle" style="font-size:9px">Golfo de San Jorge</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Venezuela" x="965.6" y="860.4" text-anchor="middle" style="font-size:9px">Golfo de Venezuela</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Darién" x="895.8" y="917.7" text-anchor="middle" style="font-size:8.5px">Golfo de Darién</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Fonseca" x="766.7" y="829.2" text-anchor="middle" style="font-size:8px">Golfo de Fonseca</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo Dulce" x="808.8" y="882.5" text-anchor="middle" style="font-size:8px">Golfo Dulce</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Urabá" x="900.9" y="928.8" text-anchor="middle" style="font-size:8px">Golfo de Urabá</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Paria" x="1082" y="858.1" text-anchor="middle" style="font-size:8px">Golfo de Paria</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Penas" x="908.5" y="1571.6" text-anchor="middle" style="font-size:9px">Golfo de Penas</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo Corcovado" x="932.5" y="1512.8" text-anchor="middle" style="font-size:8px">Golfo Corcovado</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Arauco" x="933.8" y="1446.7" text-anchor="middle" style="font-size:8px">Golfo de Arauco</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de California" x="511.4" y="603.7" text-anchor="middle" style="font-size:10.5px">Golfo de California</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Panamá" x="901.2" y="869.8" text-anchor="middle" style="font-size:10.5px">Golfo de Panamá</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Honduras" x="770.1" y="794.1" text-anchor="middle" style="font-size:10.5px">Golfo de Honduras</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Guayaquil" x="857" y="1033.4" text-anchor="middle" style="font-size:10.5px">Golfo de Guayaquil</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de San Jorge" x="993.7" y="1538.4" text-anchor="middle" style="font-size:10.5px">Golfo de San Jorge</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Venezuela" x="977.6" y="887.4" text-anchor="middle" style="font-size:10.5px">Golfo de Venezuela</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Darién" x="895.8" y="917.7" text-anchor="middle" style="font-size:10.5px">Golfo de Darién</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Fonseca" x="766.7" y="838.2" text-anchor="middle" style="font-size:10.5px">Golfo de Fonseca</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo Dulce" x="800.8" y="885.5" text-anchor="middle" style="font-size:10.5px">Golfo Dulce</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Urabá" x="900.9" y="934.8" text-anchor="middle" style="font-size:10.5px">Golfo de Urabá</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Paria" x="1082" y="849.1" text-anchor="middle" style="font-size:10.5px">Golfo de Paria</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Penas" x="908.5" y="1571.6" text-anchor="middle" style="font-size:10.5px">Golfo de Penas</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo Corcovado" x="920.5" y="1497.8" text-anchor="middle" style="font-size:10.5px">Golfo Corcovado</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Arauco" x="933.8" y="1437.7" text-anchor="middle" style="font-size:10.5px">Golfo de Arauco</text>
 <text class="feature-label2" data-cat="gulf" data-name="Bahía de Hudson" x="826" y="261.9" text-anchor="middle" style="font-size:11px">Bahía de Hudson</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Campeche" x="696.4" y="726.9" text-anchor="middle" style="font-size:9px">Bahía de Campeche</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Chesapeake" x="899.5" y="524.5" text-anchor="middle" style="font-size:8.5px">Bahía de Chesapeake</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de San Francisco" x="443.9" y="475.5" text-anchor="middle" style="font-size:8px">Bahía de San Francisco</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Todos os Santos" x="1366.6" y="1142.7" text-anchor="middle" style="font-size:8px">Bahía de Todos os Santos</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Paracas" x="906.9" y="1167.1" text-anchor="middle" style="font-size:8px">Bahía de Paracas</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Valparaíso" x="955.7" y="1398" text-anchor="middle" style="font-size:8px">Bahía de Valparaíso</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Sechura" x="848.2" y="1065.8" text-anchor="middle" style="font-size:8px">Bahía de Sechura</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo de Hornos" x="967" y="1654.4" text-anchor="start" style="font-size:10px">Cabo de Hornos</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Mendocino" x="431.4" y="437.7" text-anchor="end" style="font-size:8.5px">Cabo Mendocino</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Cañaveral" x="863" y="631.1" text-anchor="start" style="font-size:8.5px">Cabo Cañaveral</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Gracias a Dios" x="829.6" y="820.5" text-anchor="start" style="font-size:8px">Cabo Gracias a Dios</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo San Lucas" x="516.2" y="695.8" text-anchor="start" style="font-size:8px">Cabo San Lucas</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Frío" x="1318" y="1272.1" text-anchor="start" style="font-size:8px">Cabo Frío</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo San Roque" x="1406" y="1036.1" text-anchor="end" style="font-size:8.5px">Cabo San Roque</text>
-<text class="feature-label2" data-cat="cape" data-name="Punta Gallinas" x="958.3" y="813.1" text-anchor="start" style="font-size:8px">Punta Gallinas</text>
-<text class="feature-label2" data-cat="cape" data-name="Punta Arenas (Patagonia)" x="961.2" y="1640" text-anchor="start" style="font-size:8.5px">Punta Arenas (Patagonia)</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Deseado" x="902.1" y="1621.4" text-anchor="end" style="font-size:7.5px">Cabo Deseado</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Cod" x="963.8" y="470.8" text-anchor="start" style="font-size:8px">Cabo Cod</text>
-<text class="feature-label2" data-cat="cape" data-name="Punta Lavapié" x="924.4" y="1430.7" text-anchor="end" style="font-size:7.5px">Punta Lavapié</text>
-<text class="feature-label2" data-cat="cape" data-name="Punta Galera" x="920.2" y="1478.5" text-anchor="end" style="font-size:7.5px">Punta Galera</text>
-<text class="feature-label2" data-cat="cape" data-name="Punta Parinas" x="834.3" y="1054.6" text-anchor="end" style="font-size:7.5px">Punta Parinas</text>
-<text class="feature-label2" data-cat="strait" data-name="Estrecho de Magallanes" x="946.4" y="1611.6" text-anchor="middle" style="font-size:10px">Estrecho de Magallanes</text>
-<text class="feature-label2" data-cat="strait" data-name="Canal de Panamá" x="878.9" y="869.1" text-anchor="middle" style="font-size:9.5px">Canal de Panamá</text>
-<text class="feature-label2" data-cat="strait" data-name="Paso de los Vientos" x="931.8" y="744.3" text-anchor="middle" style="font-size:8.5px">Paso de los Vientos</text>
-<text class="feature-label2" data-cat="strait" data-name="Canal de Yucatán" x="792.7" y="725.6" text-anchor="middle" style="font-size:8px">Canal de Yucatán</text>
-<text class="feature-label2" data-cat="strait" data-name="Estrecho de Florida" x="860.7" y="689" text-anchor="middle" style="font-size:8.5px">Estrecho de Florida</text>
-<text class="feature-label2" data-cat="strait" data-name="Canal de la Reina Carlota" x="480.9" y="294.4" text-anchor="middle" style="font-size:7.5px">Canal de la Reina Carlota</text>
-<text class="feature-label2" data-cat="strait" data-name="Estrecho de Le Maire" x="997.2" y="1600.6" text-anchor="middle" style="font-size:7.5px">Estrecho de Le Maire</text>
-<text class="feature-label2" data-cat="strait" data-name="Canal Beagle" x="972.9" y="1587.5" text-anchor="middle" style="font-size:7.5px">Canal Beagle</text>
-<text class="feature-label2" data-cat="strait" data-name="Canal de Chacao" x="928.3" y="1499.2" text-anchor="middle" style="font-size:7.5px">Canal de Chacao</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Campeche" x="696.4" y="726.9" text-anchor="middle" style="font-size:10.5px">Bahía de Campeche</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Chesapeake" x="899.5" y="524.5" text-anchor="middle" style="font-size:10.5px">Bahía de Chesapeake</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de San Francisco" x="443.9" y="475.5" text-anchor="middle" style="font-size:10.5px">Bahía de San Francisco</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Todos os Santos" x="1366.6" y="1142.7" text-anchor="middle" style="font-size:10.5px">Bahía de Todos os Santos</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Paracas" x="906.9" y="1167.1" text-anchor="middle" style="font-size:10.5px">Bahía de Paracas</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Valparaíso" x="955.7" y="1398" text-anchor="middle" style="font-size:10.5px">Bahía de Valparaíso</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Sechura" x="848.2" y="1071.8" text-anchor="middle" style="font-size:10.5px">Bahía de Sechura</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo de Hornos" x="967" y="1660.4" text-anchor="start" style="font-size:10.5px">Cabo de Hornos</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Mendocino" x="431.4" y="437.7" text-anchor="end" style="font-size:10.5px">Cabo Mendocino</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Cañaveral" x="863" y="631.1" text-anchor="start" style="font-size:10.5px">Cabo Cañaveral</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Gracias a Dios" x="805.6" y="820.5" text-anchor="start" style="font-size:10.5px">Cabo Gracias a Dios</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo San Lucas" x="516.2" y="695.8" text-anchor="start" style="font-size:10.5px">Cabo San Lucas</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Frío" x="1318" y="1272.1" text-anchor="start" style="font-size:10.5px">Cabo Frío</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo San Roque" x="1406" y="1036.1" text-anchor="end" style="font-size:10.5px">Cabo San Roque</text>
+<text class="feature-label2" data-cat="cape" data-name="Punta Gallinas" x="974.3" y="813.1" text-anchor="start" style="font-size:10.5px">Punta Gallinas</text>
+<text class="feature-label2" data-cat="cape" data-name="Punta Arenas (Patagonia)" x="969.2" y="1643" text-anchor="start" style="font-size:10.5px">Punta Arenas (Patagonia)</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Deseado" x="902.1" y="1612.4" text-anchor="end" style="font-size:10.5px">Cabo Deseado</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Cod" x="963.8" y="470.8" text-anchor="start" style="font-size:10.5px">Cabo Cod</text>
+<text class="feature-label2" data-cat="cape" data-name="Punta Lavapié" x="924.4" y="1421.7" text-anchor="end" style="font-size:10.5px">Punta Lavapié</text>
+<text class="feature-label2" data-cat="cape" data-name="Punta Galera" x="920.2" y="1478.5" text-anchor="end" style="font-size:10.5px">Punta Galera</text>
+<text class="feature-label2" data-cat="cape" data-name="Punta Parinas" x="834.3" y="1054.6" text-anchor="end" style="font-size:10.5px">Punta Parinas</text>
+<text class="feature-label2" data-cat="strait" data-name="Estrecho de Magallanes" x="946.4" y="1596.6" text-anchor="middle" style="font-size:10.5px">Estrecho de Magallanes</text>
+<text class="feature-label2" data-cat="strait" data-name="Canal de Panamá" x="878.9" y="887.1" text-anchor="middle" style="font-size:10.5px">Canal de Panamá</text>
+<text class="feature-label2" data-cat="strait" data-name="Paso de los Vientos" x="931.8" y="744.3" text-anchor="middle" style="font-size:10.5px">Paso de los Vientos</text>
+<text class="feature-label2" data-cat="strait" data-name="Canal de Yucatán" x="796.7" y="725.6" text-anchor="middle" style="font-size:10.5px">Canal de Yucatán</text>
+<text class="feature-label2" data-cat="strait" data-name="Estrecho de Florida" x="860.7" y="680" text-anchor="middle" style="font-size:10.5px">Estrecho de Florida</text>
+<text class="feature-label2" data-cat="strait" data-name="Canal de la Reina Carlota" x="480.9" y="294.4" text-anchor="middle" style="font-size:10.5px">Canal de la Reina Carlota</text>
+<text class="feature-label2" data-cat="strait" data-name="Estrecho de Le Maire" x="1005.2" y="1579.6" text-anchor="middle" style="font-size:10.5px">Estrecho de Le Maire</text>
+<text class="feature-label2" data-cat="strait" data-name="Canal Beagle" x="1012.9" y="1563.5" text-anchor="middle" style="font-size:10.5px">Canal Beagle</text>
+<text class="feature-label2" data-cat="strait" data-name="Canal de Chacao" x="924.3" y="1523.2" text-anchor="middle" style="font-size:10.5px">Canal de Chacao</text>
 <text class="feature-label2" data-cat="island" data-name="Cuba" x="883" y="718.7" text-anchor="start" style="font-size:12px">Cuba</text>
-<text class="feature-label2" data-cat="island" data-name="La Española" x="976.5" y="762.8" text-anchor="start" style="font-size:10px">La Española</text>
-<text class="feature-label2" data-cat="island" data-name="Puerto Rico" x="1037.8" y="752.9" text-anchor="start" style="font-size:9px">Puerto Rico</text>
-<text class="feature-label2" data-cat="island" data-name="Jamaica" x="897.8" y="764.9" text-anchor="start" style="font-size:9px">Jamaica</text>
-<text class="feature-label2" data-cat="island" data-name="Trinidad" x="1094.6" y="843.8" text-anchor="start" style="font-size:8.5px">Trinidad</text>
-<text class="feature-label2" data-cat="island" data-name="Tierra del Fuego" x="975.9" y="1625.4" text-anchor="start" style="font-size:10.5px">Tierra del Fuego</text>
-<text class="feature-label2" data-cat="island" data-name="Islas Bahamas" x="893.9" y="674.9" text-anchor="start" style="font-size:9px">Islas Bahamas</text>
-<text class="feature-label2" data-cat="island" data-name="Islas de Barlovento" x="1090.2" y="815.5" text-anchor="start" style="font-size:8px">Islas de Barlovento</text>
-<text class="feature-label2" data-cat="island" data-name="Islas de Sotavento" x="1004.7" y="800.4" text-anchor="start" style="font-size:8px">Islas de Sotavento</text>
-<text class="feature-label2" data-cat="island" data-name="Isla de Vancouver" x="491.4" y="324.8" text-anchor="start" style="font-size:8.5px">Isla de Vancouver</text>
-<text class="feature-label2" data-cat="island" data-name="Archipiélago de Chiloé" x="929.1" y="1487.5" text-anchor="start" style="font-size:8px">Archipiélago de Chiloé</text>
-<text class="feature-label2" data-cat="island" data-name="Archipiélago de los Chonos" x="925" y="1531.8" text-anchor="start" style="font-size:7.5px">Archipiélago de los Chonos</text>
-<text class="feature-label2" data-cat="island" data-name="Isla Marajó" x="1244.4" y="991.2" text-anchor="start" style="font-size:8px">Isla Marajó</text>
+<text class="feature-label2" data-cat="island" data-name="La Española" x="988.5" y="753.8" text-anchor="start" style="font-size:10.5px">La Española</text>
+<text class="feature-label2" data-cat="island" data-name="Puerto Rico" x="1037.8" y="737.9" text-anchor="start" style="font-size:10.5px">Puerto Rico</text>
+<text class="feature-label2" data-cat="island" data-name="Jamaica" x="897.8" y="764.9" text-anchor="start" style="font-size:10.5px">Jamaica</text>
+<text class="feature-label2" data-cat="island" data-name="Trinidad" x="1094.6" y="831.8" text-anchor="start" style="font-size:10.5px">Trinidad</text>
+<text class="feature-label2" data-cat="island" data-name="Tierra del Fuego" x="975.9" y="1613.4" text-anchor="start" style="font-size:10.5px">Tierra del Fuego</text>
+<text class="feature-label2" data-cat="island" data-name="Islas Bahamas" x="893.9" y="662.9" text-anchor="start" style="font-size:10.5px">Islas Bahamas</text>
+<text class="feature-label2" data-cat="island" data-name="Islas de Barlovento" x="1090.2" y="815.5" text-anchor="start" style="font-size:10.5px">Islas de Barlovento</text>
+<text class="feature-label2" data-cat="island" data-name="Islas de Sotavento" x="1004.7" y="797.4" text-anchor="start" style="font-size:10.5px">Islas de Sotavento</text>
+<text class="feature-label2" data-cat="island" data-name="Isla de Vancouver" x="491.4" y="324.8" text-anchor="start" style="font-size:10.5px">Isla de Vancouver</text>
+<text class="feature-label2" data-cat="island" data-name="Archipiélago de Chiloé" x="933.1" y="1481.5" text-anchor="start" style="font-size:10.5px">Archipiélago de Chiloé</text>
+<text class="feature-label2" data-cat="island" data-name="Archipiélago de los Chonos" x="965" y="1522.8" text-anchor="start" style="font-size:10.5px">Archipiélago de los Chonos</text>
+<text class="feature-label2" data-cat="island" data-name="Isla Marajó" x="1244.4" y="991.2" text-anchor="start" style="font-size:10.5px">Isla Marajó</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península de Alaska" x="393.3" y="133.7" text-anchor="middle" style="font-size:9.5px">PENÍNSULA DE ALASKA</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península de Baja California" x="495.7" y="624.6" text-anchor="middle" style="font-size:11px">PENÍNSULA DE BAJA CALIFORNIA</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península de Yucatán" x="754" y="749.6" text-anchor="middle" style="font-size:11px">PENÍNSULA DE YUCATÁN</text>

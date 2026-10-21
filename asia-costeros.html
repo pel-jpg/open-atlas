@@ -127,6 +127,13 @@
   svg .country,svg .bg-country{fill:transparent;stroke:none;}
   svg .country:hover{fill:rgba(255,255,255,.16);}
   svg text.biome-label{fill:#2d3a1c;}
+/* legibilidad costeros */
+svg text.feature-label,svg text.feature-label2{paint-order:stroke;stroke:rgba(255,255,255,.9);stroke-width:3.6px;stroke-linejoin:round;}
+svg text.feature-label[data-name^="Cabo"],svg text.feature-label[data-name^="Punta"],svg text.feature-label[data-name^="Pen"],
+svg text.feature-label2[data-cat="cape"]{fill:#4a2a10;font-style:normal;font-weight:700;}
+svg text.feature-label[data-name^="Golfo"],svg text.feature-label[data-name^="Estrecho"],svg text.feature-label[data-name^="Paso"],svg text.feature-label[data-name^="Canal"],
+svg text.feature-label2[data-cat="gulf"],svg text.feature-label2[data-cat="strait"]{fill:#0d2a4a;font-style:italic;font-weight:700;}
+svg circle.feature-dot{r:2.8px;fill:#12283a;stroke:#fff;stroke-width:1.1px;}
 </style>
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -227,40 +234,40 @@
   <div class="map-frame">
     <svg viewBox="310 0 1340 1206" width="100%">
 <image href="asia-fisico-relieve.jpg" x="310" y="0" width="1340" height="1206" preserveAspectRatio="none"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Comorín" cx="746.5" cy="943.2" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Sur (Corea)" cx="1296.9" cy="621.6" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Sri Lanka" cx="786.5" cy="953.5" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Taiwán" cx="1266.2" cy="755.5" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Borneo" cx="1226.2" cy="1061.7" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Sumatra" cx="1047.9" cy="1094.4" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Java" cx="1181.6" cy="1181.7" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Honshu" cx="1399.8" cy="553.1" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Hokkaido" cx="1410.8" cy="463.8" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Filipinas (Luzón)" cx="1282.7" cy="842.3" r="2"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Comorín" cx="746.5" cy="943.2" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Sur (Corea)" cx="1296.9" cy="621.6" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Sri Lanka" cx="786.5" cy="953.5" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Taiwán" cx="1266.2" cy="755.5" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Borneo" cx="1226.2" cy="1061.7" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Sumatra" cx="1047.9" cy="1094.4" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Java" cx="1181.6" cy="1181.7" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Honshu" cx="1399.8" cy="553.1" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Hokkaido" cx="1410.8" cy="463.8" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Filipinas (Luzón)" cx="1282.7" cy="842.3" r="2.8"/>
 <line class="leader2" data-cat="island" data-name="Sri Lanka" x1="786.5" y1="953.5" x2="794.5" y2="938.3"/>
 <line class="leader2" data-cat="island" data-name="Taiwán" x1="1266.2" y1="755.5" x2="1272.1" y2="761.4"/>
 <text class="feature-label2" data-cat="gulf" data-name="Golfo Pérsico" x="527.8" y="626.1" text-anchor="middle" style="font-size:12px">Golfo Pérsico</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Adén" x="411.2" y="775.1" text-anchor="middle" style="font-size:10px">Golfo de Adén</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Omán" x="586.2" y="683.8" text-anchor="middle" style="font-size:9.5px">Golfo de Omán</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Adén" x="411.2" y="775.1" text-anchor="middle" style="font-size:10.5px">Golfo de Adén</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Omán" x="586.2" y="683.8" text-anchor="middle" style="font-size:10.5px">Golfo de Omán</text>
 <text class="feature-label2" data-cat="gulf" data-name="Golfo de Bengala" x="889.3" y="876.6" text-anchor="middle" style="font-size:12px">Golfo de Bengala</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Tailandia" x="1052.8" y="941.1" text-anchor="middle" style="font-size:9.5px">Golfo de Tailandia</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Tonkín" x="1120.4" y="819.6" text-anchor="middle" style="font-size:8.5px">Golfo de Tonkín</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo Arábigo (Kutch)" x="694.9" y="745.4" text-anchor="middle" style="font-size:8px">Golfo Arábigo (Kutch)</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Comorín" x="744.9" y="950.9" text-anchor="start" style="font-size:9px">Cabo Comorín</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Sur (Corea)" x="1298.6" y="628.7" text-anchor="start" style="font-size:8px">Cabo Sur (Corea)</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Tailandia" x="1052.8" y="941.1" text-anchor="middle" style="font-size:10.5px">Golfo de Tailandia</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Tonkín" x="1120.4" y="819.6" text-anchor="middle" style="font-size:10.5px">Golfo de Tonkín</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo Arábigo (Kutch)" x="694.9" y="745.4" text-anchor="middle" style="font-size:10.5px">Golfo Arábigo (Kutch)</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Comorín" x="744.9" y="944.9" text-anchor="start" style="font-size:10.5px">Cabo Comorín</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Sur (Corea)" x="1298.6" y="628.7" text-anchor="start" style="font-size:10.5px">Cabo Sur (Corea)</text>
 <text class="feature-label2" data-cat="strait" data-name="Estrecho de Ormuz" x="569.2" y="661.4" text-anchor="middle" style="font-size:10.5px">Estrecho de Ormuz</text>
-<text class="feature-label2" data-cat="strait" data-name="Bab-el-Mandeb" x="369.1" y="733.2" text-anchor="middle" style="font-size:9px">Bab-el-Mandeb</text>
-<text class="feature-label2" data-cat="strait" data-name="Estrecho de Malaca" x="1040.7" y="1039.6" text-anchor="middle" style="font-size:10px">Estrecho de Malaca</text>
-<text class="feature-label2" data-cat="strait" data-name="Estrecho de Taiwán" x="1248.1" y="748.9" text-anchor="middle" style="font-size:9px">Estrecho de Taiwán</text>
-<text class="feature-label2" data-cat="strait" data-name="Estrecho de Corea" x="1324.5" y="608.4" text-anchor="middle" style="font-size:8.5px">Estrecho de Corea</text>
-<text class="feature-label2" data-cat="island" data-name="Sri Lanka" x="794.5" y="938.3" text-anchor="start" style="font-size:11px">Sri Lanka</text>
-<text class="feature-label2" data-cat="island" data-name="Taiwán" x="1272.1" y="761.4" text-anchor="start" style="font-size:10px">Taiwán</text>
+<text class="feature-label2" data-cat="strait" data-name="Bab-el-Mandeb" x="369.1" y="733.2" text-anchor="middle" style="font-size:10.5px">Bab-el-Mandeb</text>
+<text class="feature-label2" data-cat="strait" data-name="Estrecho de Malaca" x="1040.7" y="1039.6" text-anchor="middle" style="font-size:10.5px">Estrecho de Malaca</text>
+<text class="feature-label2" data-cat="strait" data-name="Estrecho de Taiwán" x="1248.1" y="745.9" text-anchor="middle" style="font-size:10.5px">Estrecho de Taiwán</text>
+<text class="feature-label2" data-cat="strait" data-name="Estrecho de Corea" x="1324.5" y="608.4" text-anchor="middle" style="font-size:10.5px">Estrecho de Corea</text>
+<text class="feature-label2" data-cat="island" data-name="Sri Lanka" x="794.5" y="929.3" text-anchor="start" style="font-size:11px">Sri Lanka</text>
+<text class="feature-label2" data-cat="island" data-name="Taiwán" x="1272.1" y="761.4" text-anchor="start" style="font-size:10.5px">Taiwán</text>
 <text class="feature-label2" data-cat="island" data-name="Borneo" x="1231.4" y="1056.8" text-anchor="start" style="font-size:12px">Borneo</text>
 <text class="feature-label2" data-cat="island" data-name="Sumatra" x="1053.7" y="1090.2" text-anchor="start" style="font-size:11px">Sumatra</text>
 <text class="feature-label2" data-cat="island" data-name="Java" x="1187.4" y="1176.6" text-anchor="start" style="font-size:11px">Java</text>
-<text class="feature-label2" data-cat="island" data-name="Honshu" x="1402.4" y="548.3" text-anchor="start" style="font-size:10px">Honshu</text>
-<text class="feature-label2" data-cat="island" data-name="Hokkaido" x="1412.9" y="458.9" text-anchor="start" style="font-size:9.5px">Hokkaido</text>
-<text class="feature-label2" data-cat="island" data-name="Filipinas (Luzón)" x="1286.8" y="837.7" text-anchor="start" style="font-size:10px">Filipinas (Luzón)</text>
+<text class="feature-label2" data-cat="island" data-name="Honshu" x="1402.4" y="548.3" text-anchor="start" style="font-size:10.5px">Honshu</text>
+<text class="feature-label2" data-cat="island" data-name="Hokkaido" x="1412.9" y="458.9" text-anchor="start" style="font-size:10.5px">Hokkaido</text>
+<text class="feature-label2" data-cat="island" data-name="Filipinas (Luzón)" x="1286.8" y="837.7" text-anchor="start" style="font-size:10.5px">Filipinas (Luzón)</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península Arábiga" x="413.5" y="691.7" text-anchor="middle" style="font-size:13px">PENÍNSULA ARÁBIGA</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península de Anatolia" x="444.1" y="413.4" text-anchor="middle" style="font-size:10px">PENÍNSULA DE ANATOLIA</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península de Corea" x="1297.8" y="584" text-anchor="middle" style="font-size:10px">PENÍNSULA DE COREA</text>

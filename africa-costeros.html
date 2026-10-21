@@ -127,6 +127,13 @@
   svg .country,svg .bg-country{fill:transparent;stroke:none;}
   svg .country:hover{fill:rgba(255,255,255,.16);}
   svg text.biome-label{fill:#2d3a1c;}
+/* legibilidad costeros */
+svg text.feature-label,svg text.feature-label2{paint-order:stroke;stroke:rgba(255,255,255,.9);stroke-width:3.6px;stroke-linejoin:round;}
+svg text.feature-label[data-name^="Cabo"],svg text.feature-label[data-name^="Punta"],svg text.feature-label[data-name^="Pen"],
+svg text.feature-label2[data-cat="cape"]{fill:#4a2a10;font-style:normal;font-weight:700;}
+svg text.feature-label[data-name^="Golfo"],svg text.feature-label[data-name^="Estrecho"],svg text.feature-label[data-name^="Paso"],svg text.feature-label[data-name^="Canal"],
+svg text.feature-label2[data-cat="gulf"],svg text.feature-label2[data-cat="strait"]{fill:#0d2a4a;font-style:italic;font-weight:700;}
+svg circle.feature-dot{r:2.8px;fill:#12283a;stroke:#fff;stroke-width:1.1px;}
 </style>
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -219,37 +226,37 @@
   <div class="map-frame">
     <svg viewBox="0 0 1500 1562" width="100%">
 <image href="africa-fisico-relieve.jpg" x="0" y="0" width="1500" height="1562" preserveAspectRatio="none"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo de Buena Esperanza" cx="791.3" cy="1441.5" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Verde" cx="142.8" cy="509.7" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Guardafui" cx="1387.3" cy="572.4" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo Blanco" cx="168.8" cy="391.1" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Ras Hafun" cx="1391.3" cy="599.5" r="2"/>
-<circle class="feature-dot" data-cat="cape" data-name="Cabo de las Agujas" cx="816.3" cy="1449.4" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Madagascar" cx="1296.4" cy="1168.6" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Zanzíbar" cx="1174.6" cy="921.4" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Santo Tomé y Príncipe" cx="566.7" cy="796.5" r="2"/>
-<circle class="feature-dot" data-cat="island" data-name="Islas Comoras" cx="1247.3" cy="1028.5" r="2"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo de Buena Esperanza" cx="791.3" cy="1441.5" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Verde" cx="142.8" cy="509.7" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Guardafui" cx="1387.3" cy="572.4" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo Blanco" cx="168.8" cy="391.1" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Ras Hafun" cx="1391.3" cy="599.5" r="2.8"/>
+<circle class="feature-dot" data-cat="cape" data-name="Cabo de las Agujas" cx="816.3" cy="1449.4" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Madagascar" cx="1296.4" cy="1168.6" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Zanzíbar" cx="1174.6" cy="921.4" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Santo Tomé y Príncipe" cx="566.7" cy="796.5" r="2.8"/>
+<circle class="feature-dot" data-cat="island" data-name="Islas Comoras" cx="1247.3" cy="1028.5" r="2.8"/>
 <line class="leader2" data-cat="cape" data-name="Cabo de las Agujas" x1="816.3" y1="1449.4" x2="816.3" y2="1464.7"/>
 <line class="leader2" data-cat="island" data-name="Madagascar" x1="1296.4" y1="1168.6" x2="1302.6" y2="1150.3"/>
 <text class="feature-label2" data-cat="gulf" data-name="Golfo de Guinea" x="497.9" y="767.4" text-anchor="middle" style="font-size:12px">Golfo de Guinea</text>
 <text class="feature-label2" data-cat="gulf" data-name="Golfo de Adén" x="1328.1" y="571" text-anchor="middle" style="font-size:11px">Golfo de Adén</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Sidra" x="791.5" y="220.3" text-anchor="middle" style="font-size:9.5px">Golfo de Sidra</text>
-<text class="feature-label2" data-cat="gulf" data-name="Golfo de Tadjoura" x="1234.9" y="580.3" text-anchor="middle" style="font-size:8px">Golfo de Tadjoura</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Walvis" x="718.7" y="1234.1" text-anchor="middle" style="font-size:8px">Bahía de Walvis</text>
-<text class="feature-label2" data-cat="gulf" data-name="Bahía de Delagoa" x="1040.7" y="1291" text-anchor="middle" style="font-size:8px">Bahía de Delagoa</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo de Buena Esperanza" x="791.3" y="1448.3" text-anchor="start" style="font-size:10px">Cabo de Buena Esperanza</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Verde" x="136.2" y="509.2" text-anchor="end" style="font-size:9px">Cabo Verde</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Guardafui" x="1393.8" y="568.3" text-anchor="start" style="font-size:9px">Cabo Guardafui</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo Blanco" x="162.4" y="390.5" text-anchor="end" style="font-size:8px">Cabo Blanco</text>
-<text class="feature-label2" data-cat="cape" data-name="Ras Hafun" x="1398.2" y="599.2" text-anchor="start" style="font-size:7.5px">Ras Hafun</text>
-<text class="feature-label2" data-cat="cape" data-name="Cabo de las Agujas" x="816.3" y="1464.7" text-anchor="start" style="font-size:8.5px">Cabo de las Agujas</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Sidra" x="791.5" y="220.3" text-anchor="middle" style="font-size:10.5px">Golfo de Sidra</text>
+<text class="feature-label2" data-cat="gulf" data-name="Golfo de Tadjoura" x="1234.9" y="580.3" text-anchor="middle" style="font-size:10.5px">Golfo de Tadjoura</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Walvis" x="718.7" y="1234.1" text-anchor="middle" style="font-size:10.5px">Bahía de Walvis</text>
+<text class="feature-label2" data-cat="gulf" data-name="Bahía de Delagoa" x="1040.7" y="1291" text-anchor="middle" style="font-size:10.5px">Bahía de Delagoa</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo de Buena Esperanza" x="791.3" y="1439.3" text-anchor="start" style="font-size:10.5px">Cabo de Buena Esperanza</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Verde" x="136.2" y="509.2" text-anchor="end" style="font-size:10.5px">Cabo Verde</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Guardafui" x="1393.8" y="568.3" text-anchor="start" style="font-size:10.5px">Cabo Guardafui</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo Blanco" x="162.4" y="390.5" text-anchor="end" style="font-size:10.5px">Cabo Blanco</text>
+<text class="feature-label2" data-cat="cape" data-name="Ras Hafun" x="1398.2" y="599.2" text-anchor="start" style="font-size:10.5px">Ras Hafun</text>
+<text class="feature-label2" data-cat="cape" data-name="Cabo de las Agujas" x="816.3" y="1464.7" text-anchor="start" style="font-size:10.5px">Cabo de las Agujas</text>
 <text class="feature-label2" data-cat="strait" data-name="Estrecho de Gibraltar" x="413.1" y="123.3" text-anchor="middle" style="font-size:10.5px">Estrecho de Gibraltar</text>
-<text class="feature-label2" data-cat="strait" data-name="Bab-el-Mandeb" x="1244.6" y="562.7" text-anchor="middle" style="font-size:9.5px">Bab-el-Mandeb</text>
-<text class="feature-label2" data-cat="strait" data-name="Canal de Mozambique" x="1205.2" y="1137.9" text-anchor="middle" style="font-size:10px">Canal de Mozambique</text>
+<text class="feature-label2" data-cat="strait" data-name="Bab-el-Mandeb" x="1244.6" y="562.7" text-anchor="middle" style="font-size:10.5px">Bab-el-Mandeb</text>
+<text class="feature-label2" data-cat="strait" data-name="Canal de Mozambique" x="1205.2" y="1137.9" text-anchor="middle" style="font-size:10.5px">Canal de Mozambique</text>
 <text class="feature-label2" data-cat="island" data-name="Madagascar" x="1302.6" y="1150.3" text-anchor="start" style="font-size:14px">Madagascar</text>
-<text class="feature-label2" data-cat="island" data-name="Zanzíbar" x="1179.2" y="917.7" text-anchor="start" style="font-size:9px">Zanzíbar</text>
-<text class="feature-label2" data-cat="island" data-name="Santo Tomé y Príncipe" x="571.2" y="792.9" text-anchor="start" style="font-size:8px">Santo Tomé y Príncipe</text>
-<text class="feature-label2" data-cat="island" data-name="Islas Comoras" x="1251.9" y="1024.8" text-anchor="start" style="font-size:8.5px">Islas Comoras</text>
+<text class="feature-label2" data-cat="island" data-name="Zanzíbar" x="1179.2" y="917.7" text-anchor="start" style="font-size:10.5px">Zanzíbar</text>
+<text class="feature-label2" data-cat="island" data-name="Santo Tomé y Príncipe" x="571.2" y="792.9" text-anchor="start" style="font-size:10.5px">Santo Tomé y Príncipe</text>
+<text class="feature-label2" data-cat="island" data-name="Islas Comoras" x="1251.9" y="1024.8" text-anchor="start" style="font-size:10.5px">Islas Comoras</text>
 <text class="region-label2" data-cat="peninsula" data-name="Península del Sinaí" x="1048.2" y="252.3" text-anchor="middle" style="font-size:10px">PENÍNSULA DEL SINAÍ</text>
 <text class="region-label2" data-cat="peninsula" data-name="Cuerno de África" x="1297" y="649.5" text-anchor="middle" style="font-size:11px">CUERNO DE ÁFRICA</text>
 <text class="sea-label2" data-cat="sea" data-name="OCÉANO ATLÁNTICO" x="206.4" y="704" text-anchor="middle" style="font-size:15px">OCÉANO ATLÁNTICO</text>
