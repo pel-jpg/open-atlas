@@ -103,11 +103,15 @@
   function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
   function shown(e){return getComputedStyle(e).display!=='none';}
 
+  /* durante el juego se quitan los <title> del mapa: si no, el navegador muestra el nombre al pasar el ratón */
+  var held=[];
+  function hideTips(){if(held.length)return;[].slice.call(svg.querySelectorAll('title')).forEach(function(t){if(t.parentNode===svg)return;held.push([t.parentNode,t]);t.parentNode.removeChild(t);});}
+  function showTips(){held.forEach(function(h){h[0].insertBefore(h[1],h[0].firstChild);});held=[];}
   /* ---------- pantalla de configuración ---------- */
   function setup(){
     clearTimeout(S.at);
     var cp=document.querySelector('.preset-btns [data-preset="completo"]');var act=document.querySelector('.preset-btns .active');if(cp&&((act&&act.dataset.preset==='mudo')||(document.querySelector('[data-item-cat]')&&!document.querySelector('[data-item-cat]:checked'))))cp.click();
-    clearMarks();document.body.classList.remove('juego-on');S.on=false;bar.hidden=false;
+    clearMarks();showTips();document.body.classList.remove('juego-on');S.on=false;bar.hidden=false;
     var opts='',first=true;
     present.forEach(function(c){
       refresh(c);var k=CATS[c],n=T[c].list.filter(function(t){return t.ok;}).length;if(!n)return;
@@ -131,7 +135,7 @@
     var p=shuffle(avail);if(n&&p.length>n)p=p.slice(0,n);
     begin(p);
   }
-  function begin(p){S.q=p;S.i=0;S.sc={first:0,second:0};S.fails=[];S.on=true;document.body.classList.add('juego-on');ask();var y=bar.getBoundingClientRect().top+window.pageYOffset-6;window.scrollTo(0,Math.max(0,y));}
+  function begin(p){hideTips();S.q=p;S.i=0;S.sc={first:0,second:0};S.fails=[];S.on=true;document.body.classList.add('juego-on');ask();var y=bar.getBoundingClientRect().top+window.pageYOffset-6;window.scrollTo(0,Math.max(0,y));}
 
   /* medir las etiquetas (zonas de clic) antes de ocultarlas */
   function toSvg(r){
@@ -259,7 +263,7 @@
     var rep=bar.querySelector('#g-rep');if(rep)rep.onclick=function(){begin(shuffle(S.fails.slice()));};
     bar.querySelector('#g-again').onclick=setup;bar.querySelector('#g-exit').onclick=exit;
   }
-  function exit(){clearTimeout(S.at);clearMarks();S.on=false;document.body.classList.remove('juego-on');bar.hidden=true;bar.innerHTML='';}
+  function exit(){clearTimeout(S.at);clearMarks();showTips();S.on=false;document.body.classList.remove('juego-on');bar.hidden=true;bar.innerHTML='';}
   btn.addEventListener('click',function(){if(bar.hidden||!S.on&&!bar.querySelector('#g-go'))setup();else bar.scrollIntoView({behavior:'smooth',block:'nearest'});});
   document.addEventListener('keydown',function(e){
     if(e.key==='Escape'&&!bar.hidden)exit();
