@@ -29,9 +29,13 @@
     strait:{pl:'estrechos y canales',q:function(n){return n;},kind:'box',tol:[14,34,56]},
     island:{pl:'islas',q:function(n){return n;},kind:'point'},
     peninsula:{pl:'penínsulas',q:function(n){return n;},kind:'box',tol:[14,34,56]},
+    plate:{pl:'placas tectónicas',q:function(n){return 'la placa '+n;},kind:'fill'},
+    volcano:{pl:'volcanes',q:function(n){return 'el volcán '+n;},kind:'point'},
+    tect:{pl:'dorsales, fosas y cordilleras',q:function(n){return n;},kind:'box',tol:[14,34,56]},
+    quake:{pl:'grandes terremotos',q:function(n){return 'el terremoto de '+n;},kind:'point'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','region','feature','cape','gulf','strait','island','peninsula','sea'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
 
   /* ---------- objetivos jugables ---------- */
