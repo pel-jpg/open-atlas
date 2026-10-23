@@ -8,20 +8,21 @@
   var MAXZ=10;
   var css=document.createElement('style');css.textContent=
    '.map-frame,.map-frame-screen{position:relative}'+
-   '.zoom-ctl{position:absolute;top:10px;right:10px;z-index:20;display:flex;flex-direction:column;gap:6px}'+
-   '.zoom-ctl button{width:38px;height:38px;border-radius:6px;border:1px solid var(--line-strong,#8a8f7d);background:var(--paper,#f4efe0);color:var(--ink,#22301F);font-size:22px;line-height:1;cursor:pointer;font-family:"IBM Plex Mono",monospace;box-shadow:0 1px 4px rgba(0,0,0,.2);padding:0}'+
+   '.zoom-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 8px;background:var(--paper,#f4efe0);border-bottom:1px solid var(--line-strong,#8a8f7d)}'+
+   '.zoom-ctl{display:flex;gap:6px}'+
+   '.zoom-ctl button{width:34px;height:34px;border-radius:6px;border:1px solid var(--line-strong,#8a8f7d);background:var(--paper,#f4efe0);color:var(--ink,#22301F);font-size:21px;line-height:1;cursor:pointer;font-family:"IBM Plex Mono",monospace;padding:0}'+
    '.zoom-ctl button:hover{background:var(--ink,#22301F);color:var(--paper,#f4efe0)}'+
    '.zoom-ctl button[disabled]{opacity:.4;cursor:default}'+
    '.zoom-ctl .zr{font-size:15px}'+
-   '.zoom-hint{position:absolute;left:10px;bottom:10px;z-index:20;font-family:"IBM Plex Mono",monospace;font-size:11px;background:rgba(244,239,224,.92);color:var(--ink,#22301F);padding:4px 9px;border-radius:999px;pointer-events:none;transition:opacity .6s}'+
+   '.zoom-hint{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-soft,#4B5A45)}'+
    'svg.zoomed{cursor:grab;touch-action:none}svg.zoomed.panning{cursor:grabbing}'+
-   '@media print{.zoom-ctl,.zoom-hint{display:none !important}}';
+   '@media print{.zoom-bar{display:none !important}}';
   document.head.appendChild(css);
+  var bar=document.createElement('div');bar.className='zoom-bar';
+  var hint=document.createElement('span');hint.className='zoom-hint';hint.textContent='Ctrl + rueda para ampliar · arrastra para mover';
   var ctl=document.createElement('div');ctl.className='zoom-ctl';
   ctl.innerHTML='<button type="button" data-z="in" aria-label="Ampliar" title="Ampliar">+</button><button type="button" data-z="out" aria-label="Reducir" title="Reducir">−</button><button type="button" data-z="reset" class="zr" aria-label="Vista completa" title="Vista completa">⤢</button>';
-  frame.appendChild(ctl);
-  var hint=document.createElement('div');hint.className='zoom-hint';hint.textContent='Ctrl + rueda para ampliar · arrastra para mover';frame.appendChild(hint);
-  setTimeout(function(){hint.style.opacity='0';},6000);
+  bar.appendChild(hint);bar.appendChild(ctl);frame.insertBefore(bar,frame.firstChild);
   var bIn=ctl.querySelector('[data-z=in]'),bOut=ctl.querySelector('[data-z=out]'),bRs=ctl.querySelector('[data-z=reset]');
   function apply(){
     var z=B.w/V.w;
@@ -45,7 +46,7 @@
   bRs.onclick=function(){V={x:B.x,y:B.y,w:B.w,h:B.h};apply();};
   frame.addEventListener('wheel',function(e){
     if(!(e.ctrlKey||e.metaKey))return;e.preventDefault();
-    zoomAt(Math.exp(-e.deltaY*(e.deltaMode===1?0.05:0.0025)),e.clientX,e.clientY);hint.style.opacity='0';
+    zoomAt(Math.exp(-e.deltaY*(e.deltaMode===1?0.05:0.0025)),e.clientX,e.clientY);
   },{passive:false});
   /* arrastrar (ratón o dedo) y pellizcar */
   var ptrs={},drag=null,moved=false,pinch=null;
