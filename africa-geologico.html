@@ -203,7 +203,7 @@
       </div>
     </div>
     <p class="layer-hint">Activa o desactiva capas. Pulsa un volcán o un terremoto para ver sus datos. «Mudo» quita todos los nombres (placas, fallas, cordilleras y volcanes) para que el alumnado los escriba.</p>
-    <div class="cat-toggles"><label><input type="checkbox" data-layer="placas" checked> Colorear placas</label><label><input type="checkbox" data-layer="lim-div" checked> Límites divergentes</label><label><input type="checkbox" data-layer="lim-con" checked> Límites convergentes</label><label><input type="checkbox" data-layer="lim-tr" checked> Límites transformantes</label><label><input type="checkbox" data-layer="terremotos"> Terremotos</label><label><input type="checkbox" data-layer="volcanes" checked> Volcanes</label><label><input type="checkbox" data-layer="nombres-placas" checked> Nombres de placas</label><label><input type="checkbox" data-layer="accidentes" checked> Fallas y cordilleras</label><label><input type="checkbox" data-layer="volc-nombres" checked> Volcanes con nombre</label><label><input type="checkbox" data-layer="relieve" checked> Relieve de fondo</label></div>
+    <div class="cat-toggles"><label><input type="checkbox" data-layer="nombres-placas" checked> Placas tectónicas</label><label><input type="checkbox" data-layer="placas" checked> Colorear placas</label><label><input type="checkbox" data-layer="lim-div" checked> Límites divergentes</label><label><input type="checkbox" data-layer="lim-con" checked> Límites convergentes</label><label><input type="checkbox" data-layer="lim-tr" checked> Límites transformantes</label><label><input type="checkbox" data-layer="terremotos"> Terremotos</label><label><input type="checkbox" data-layer="volcanes" checked> Volcanes</label><label><input type="checkbox" data-layer="accidentes" checked> Fallas y cordilleras</label><label><input type="checkbox" data-layer="relieve" checked> Relieve de fondo</label></div>
   </div>
 
   <div class="map-frame">
@@ -371,15 +371,17 @@
 <footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
 <script>
 (function(){
-  var NAMES=['nombres-placas','accidentes','volc-nombres'];
+  var NAMES=['nombres-placas','accidentes'];
   function show(id,v){
     var ids=id==='relieve'?['relieve','velo']:[id];
     ids.forEach(function(i){var e=document.getElementById(i);if(e)e.style.display=v?'':'none';});
+    if(id==='volcanes')updVolc();
   }
   var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function updVolc(){var c=document.querySelector('[data-layer=volcanes]'),e=document.getElementById('volc-nombres');if(e)e.style.display=(c&&c.checked&&!document.body.classList.contains('mudo'))?'':'none';}
   cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);syncBtn();});});
   var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
-  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');updVolc();}
   function syncBtn(){
     var anyName=cbs.some(function(c){return NAMES.indexOf(c.dataset.layer)>=0&&c.checked;});
     setBtn(anyName?'completo':'mudo');
