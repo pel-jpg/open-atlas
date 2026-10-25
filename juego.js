@@ -60,7 +60,8 @@
   var css=document.createElement('style');css.textContent=
   '.game-start{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:#9a6a12;color:#fff;border:1px solid #9a6a12;padding:6px 14px;border-radius:999px;cursor:pointer;font-weight:600;margin-left:8px}'+
   '.game-start:hover{background:#7c540c}'+
-  '.panel-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.panel-actions .game-start{margin-left:10px}'+
+  '.panel-actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px}.panel-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.panel-print .print-btn{margin-left:0}@media print{.panel-print{display:none !important}}'+
+  '.panel-actions-x{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.panel-actions .game-start{margin-left:10px}'+
   '.game-bar{margin:14px 0 0;background:var(--paper);border:2px solid #9a6a12;border-radius:4px;padding:12px 18px;font-size:14px;position:sticky;top:6px;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,.18)}'+
   '.game-top{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap}'+
   '.game-actions{display:flex;gap:8px}'+
@@ -92,7 +93,8 @@
   var btn=document.createElement('button');btn.type='button';btn.className='game-start';btn.textContent='▶ Jugar';
   btn.setAttribute('title','Modo juego: señala en el mapa lo que se te pregunta');
   var grp=document.createElement('div');grp.className='panel-actions';var pb=head.querySelector('.preset-btns');
-  if(pb){head.appendChild(grp);grp.appendChild(pb);grp.appendChild(btn);}else head.appendChild(btn);
+  if(pb){head.appendChild(grp);var r1=document.createElement('div');r1.className='panel-row';r1.appendChild(pb);r1.appendChild(btn);grp.appendChild(r1);
+    var pr=document.querySelector('.print-btn');if(pr){var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
   var bar=document.createElement('div');bar.className='game-bar';bar.hidden=true;bar.setAttribute('aria-live','polite');
   panel.after(bar);
 
