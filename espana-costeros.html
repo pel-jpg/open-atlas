@@ -440,9 +440,6 @@
   if(!toggles){toggles=document.createElement('div');toggles.className='cat-toggles';adv.before(toggles);}
   var groups=[].slice.call(adv.querySelectorAll('.advanced-group'));
   var host=document.createElement('div');host.className='cat-lists';toggles.after(host);
-  var hint=document.createElement('p');hint.className='cat-hint';
-  hint.textContent='Marca o desmarca una categoría entera, o pulsa el número (▾) para elegir elementos concretos.';
-  toggles.before(hint);
   toggles.classList.add('enhanced');
   var chips=[];
   var firstExisting=toggles.firstChild;
