@@ -60,8 +60,8 @@
   var css=document.createElement('style');css.textContent=
   '.game-start{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:#9a6a12;color:#fff;border:1px solid #9a6a12;padding:6px 14px;border-radius:999px;cursor:pointer;font-weight:600;margin-left:8px}'+
   '.game-start:hover{background:#7c540c}'+
-  '.custom-panel-head{align-items:flex-start !important}.custom-panel-title{line-height:30px}'+
-  '.panel-actions{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.panel-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-start}.panel-print .print-btn{margin-left:0;border-radius:999px;padding:6px 14px;font-size:11.5px;background:transparent;color:var(--ink,#22301F);border:1px solid var(--line-strong,#8a8f7d)}.panel-print .print-btn:hover{background:var(--ink,#22301F);color:var(--paper,#f4efe0)}@media print{.panel-print{display:none !important}}'+
+  '.custom-panel-head{margin-bottom:12px !important}.custom-panel-title{display:none}'+
+  '.panel-actions{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px 12px;flex-wrap:wrap;width:100%}.panel-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-start}.panel-print .print-btn{margin-left:0;border-radius:999px;padding:6px 14px;font-size:11.5px;background:transparent;color:var(--ink,#22301F);border:1px solid var(--line-strong,#8a8f7d)}.panel-print .print-btn:hover{background:var(--ink,#22301F);color:var(--paper,#f4efe0)}@media print{.panel-print{display:none !important}}'+
   '.panel-actions-x{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.panel-actions .game-start{margin-left:10px}'+
   '.game-bar{margin:14px 0 0;background:var(--paper);border:2px solid #9a6a12;border-radius:4px;padding:12px 18px;font-size:14px;position:sticky;top:6px;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,.18)}'+
   '.game-top{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap}'+
