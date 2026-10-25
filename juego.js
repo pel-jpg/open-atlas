@@ -95,7 +95,8 @@
   var btn=document.createElement('button');btn.type='button';btn.className='game-start';btn.textContent='▶ Jugar';
   btn.setAttribute('title','Modo juego: señala en el mapa lo que se te pregunta');
   var grp=document.createElement('div');grp.className='panel-actions';var pb=head.querySelector('.preset-btns');
-  if(pb){head.appendChild(grp);var r1=document.createElement('div');r1.className='panel-row';r1.appendChild(pb);r1.appendChild(btn);grp.appendChild(r1);
+  if(pb){head.appendChild(grp);var cb=pb.querySelector('[data-preset=completo]'),mb=pb.querySelector('[data-preset=mudo]');if(cb&&mb)pb.insertBefore(cb,mb);
+    var r1=document.createElement('div');r1.className='panel-row';r1.appendChild(pb);r1.appendChild(btn);grp.appendChild(r1);
     var pr=document.querySelector('.print-btn');if(pr){pr.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>Imprimir en A4 horizontal';var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
   var bar=document.createElement('div');bar.className='game-bar';bar.hidden=true;bar.setAttribute('aria-live','polite');
   panel.after(bar);
