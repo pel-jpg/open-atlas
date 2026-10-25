@@ -61,6 +61,7 @@
   '.game-start{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:#9a6a12;color:#fff;border:1px solid #9a6a12;padding:6px 14px;border-radius:999px;cursor:pointer;font-weight:600;margin-left:8px}'+
   '.game-start:hover{background:#7c540c}'+
   '.custom-panel-head{margin-bottom:12px !important}.custom-panel-title{display:none}'+
+  '.plate-head{padding-bottom:10px !important}.custom-panel{margin-top:6px !important;padding:12px 16px !important}.custom-panel-head{margin-bottom:8px !important}.cat-toggles{padding-bottom:10px !important}.cat-lists:empty{margin:0 !important}@media screen{.custom-panel{padding-bottom:4px !important}.map-frame{margin:16px 0 !important}}.print-btn svg{width:14px;height:14px;vertical-align:-2px;margin-right:6px}'+
   '.panel-actions{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px 12px;flex-wrap:wrap;width:100%}.panel-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-start}.panel-print .print-btn{margin-left:0;border-radius:999px;padding:6px 14px;font-size:11.5px;background:var(--ink,#22301F);color:var(--paper,#f4efe0);border:1px solid var(--ink,#22301F)}.panel-print .print-btn:hover{background:#3a4d34}@media print{.panel-print{display:none !important}}'+
   '.panel-actions-x{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.panel-actions .game-start{margin-left:10px}'+
   '.game-bar{margin:14px 0 0;background:var(--paper);border:2px solid #9a6a12;border-radius:4px;padding:12px 18px;font-size:14px;position:sticky;top:6px;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,.18)}'+
@@ -95,7 +96,7 @@
   btn.setAttribute('title','Modo juego: señala en el mapa lo que se te pregunta');
   var grp=document.createElement('div');grp.className='panel-actions';var pb=head.querySelector('.preset-btns');
   if(pb){head.appendChild(grp);var r1=document.createElement('div');r1.className='panel-row';r1.appendChild(pb);r1.appendChild(btn);grp.appendChild(r1);
-    var pr=document.querySelector('.print-btn');if(pr){var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
+    var pr=document.querySelector('.print-btn');if(pr){pr.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>Imprimir en A4 horizontal';var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
   var bar=document.createElement('div');bar.className='game-bar';bar.hidden=true;bar.setAttribute('aria-live','polite');
   panel.after(bar);
 
