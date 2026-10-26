@@ -557,7 +557,7 @@
     document.querySelectorAll('[data-cat-master]').forEach(function(m){m.checked=v;});
   }
   presets.forEach(function(b){b.addEventListener('click',function(){
-    var mudo=b.dataset.preset==='mudo';setAll(!mudo);document.body.classList.toggle('mudo',mudo);
+    var mudo=b.dataset.preset==='mudo';setAll(!mudo);if(mudo){['capccaa','capprov'].forEach(function(c){document.querySelectorAll('[data-item-cat="'+c+'"]').forEach(function(cb){cb.checked=true;setItem(c,cb.dataset.itemName,true);});var cm=document.querySelector('[data-cat-master="'+c+'"]');if(cm)cm.checked=true;});}document.body.classList.toggle('mudo',mudo);
     presets.forEach(function(x){x.classList.toggle('active',x===b);});
   });});
   renderProv();renderCaps();

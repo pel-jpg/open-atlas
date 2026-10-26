@@ -364,7 +364,7 @@
   presets.querySelectorAll('[data-preset]').forEach(function(b){
     b.addEventListener('click',function(){
       var mudo=b.dataset.preset==='mudo';
-      setAll(!mudo);document.body.classList.toggle('mudo',mudo);
+      setAll(!mudo);if(mudo){document.querySelectorAll('[data-item-cat="capital"]').forEach(function(cb){cb.checked=true;apply.capital(cb.dataset.itemName,true);});var cm=document.querySelector('[data-cat-master="capital"]');if(cm)cm.checked=true;}document.body.classList.toggle('mudo',mudo);
       presets.querySelectorAll('button').forEach(function(x){x.classList.toggle('active',x===b);});
     });
   });
