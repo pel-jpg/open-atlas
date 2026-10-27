@@ -18,6 +18,8 @@
     capital:{pl:'capitales',q:function(n){return n+' (capital)';},kind:'point'},
     ccaa:{pl:'comunidades autónomas',q:function(n){return n;},kind:'fill'},
     capccaa:{pl:'capitales autonómicas',q:function(n){return n+' (capital)';},kind:'point'},
+    state:{pl:'estados',q:function(n){return n;},kind:'fill'},
+    capstate:{pl:'capitales de estado',q:function(n){return n+' (capital)';},kind:'point'},
     prov:{pl:'provincias',q:function(n){return n;},kind:'fill'},
     capprov:{pl:'capitales de provincia',q:function(n){return n+' (capital)';},kind:'point'},
     peak:{pl:'picos',q:function(n){return 'el pico '+n;},kind:'point'},
@@ -35,7 +37,7 @@
     quake:{pl:'grandes terremotos',q:function(n){return 'el terremoto de '+n;},kind:'point'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','state','capstate','prov','capprov','peak','mountain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
 
   /* ---------- objetivos jugables ---------- */
