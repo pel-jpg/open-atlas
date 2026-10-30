@@ -219,7 +219,7 @@ function show(i){
   [...per.children].forEach((b,k)=>b.classList.toggle('active',k===i));
   document.getElementById('st-title').textContent=META[i].year+' · '+META[i].title;
   document.getElementById('st-text').textContent=META[i].text;
-  document.querySelectorAll('.city,.reg').forEach(c=>{c.style.display=(i>=+c.dataset.from&&i<=+c.dataset.to)?'':'none';});
+  document.querySelectorAll('.city,.reg,.evlabel').forEach(c=>{c.style.display=(i>=+c.dataset.from&&i<=+c.dataset.to)?'':'none';});
   drawLegend(i);
 }
 function drawLegend(i){
