@@ -230,10 +230,16 @@ function drawLegend(i){
   const r=document.createElementNS(NS,'rect');
   [['x',x0],['y',y0],['width',w],['height',h],['rx',3],['fill','#F4EEDF'],['fill-opacity','.93'],['stroke','#241b12'],['stroke-width','.8']].forEach(([k,v])=>r.setAttribute(k,v));g.appendChild(r);
   L.forEach(([c,tx],k)=>{
-    const sw=document.createElementNS(NS,'rect'),y=y0+10+k*rh;
+    const y=y0+10+k*rh;
+    if(/^(\d\. )?(Ruta|Vía|Calzada)/.test(tx)){
+      const ln=document.createElementNS(NS,'path');ln.setAttribute('d','M'+(x0+9)+','+(y+6.5)+' L'+(x0+26)+','+(y+6.5)+' M'+(x0+22)+','+(y+1.5)+' L'+(x0+32)+','+(y+6.5)+' L'+(x0+22)+','+(y+11.5)+' Z');
+      [['stroke',c],['stroke-width',3],['fill',c],['stroke-linejoin','round']].forEach(([a,v])=>ln.setAttribute(a,v));g.appendChild(ln);
+    } else {
+    const sw=document.createElementNS(NS,'rect');
     [['x',x0+10],['y',y],['width',22],['height',13],['stroke','#241b12'],['stroke-width','.5']].forEach(([a,v])=>sw.setAttribute(a,v));
     const fills={hat14:'url(#hat14)',hatgr:'url(#hatgr)',hatlim:'url(#hatlim)',hatge:'url(#hatge)',hatbz:'url(#hatbz)',hathu:'url(#hathu)',hateph:'url(#hateph)'};
     sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);
+    }
     const te=document.createElementNS(NS,'text');
     [['x',x0+40],['y',y+10.5],['font-size',11.5],['fill','#1b1409'],['font-family',"'IBM Plex Sans',sans-serif"]].forEach(([a,v])=>te.setAttribute(a,v));
     te.textContent=tx;g.appendChild(te);});
