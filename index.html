@@ -33,6 +33,11 @@
   .hero{padding:40px 0 0;text-align:center;}
   .hero h1{font-family:'Fraunces',serif;font-weight:700;font-size:52px;margin-bottom:16px;}
   .hero p{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0 auto 4px;line-height:1.6;}
+  .hero-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;}
+  .hero-nav a{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.5px;text-decoration:none;color:var(--ink);background:var(--paper-2);border:1px solid var(--line-strong);border-radius:3px;padding:10px 22px;transition:background .15s,border-color .15s;}
+  .hero-nav a:hover{background:var(--paper);border-color:var(--gold);}
+  html{scroll-behavior:smooth;}
+  .section-label{scroll-margin-top:16px;}
   .hero-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
   .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:6px 14px;border-radius:999px;border:1px solid var(--gold);color:var(--ink);background:var(--paper-2);}
   .bottom-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:8px 0 56px;}
@@ -69,9 +74,10 @@
   <div class="hero">
     <h1>Mapas escolares personalizables</h1>
     <p>Un repositorio abierto de mapas físicos, políticos, geológicos e históricos de alta resolución, listos para ver en pantalla o imprimir en A4, con datos geográficos abiertos y reales (Natural Earth, GISCO / Eurostat). Siempre gratis, sin publicidad, sin cookies, sin datos privados.</p>
+    <nav class="hero-nav" aria-label="Secciones"><a href="#geografia">Geografía</a><a href="#geologia">Geología</a><a href="#historia">Historia</a></nav>
   </div>
 
-  <h3 class="section-label">Geografía</h3>
+  <h3 class="section-label" id="geografia">Geografía</h3>
   <div class="continents">
     <div class="continent-card">
       <h2>España</h2>
@@ -121,7 +127,7 @@
     </div>
   </div>
 
-  <h3 class="section-label">Geología</h3>
+  <h3 class="section-label" id="geologia">Geología</h3>
   <div class="continents">
     <div class="continent-card">
       <h2>Mapas geológicos</h2>
@@ -130,7 +136,7 @@
     </div>
   </div>
 
-  <h3 class="section-label">Historia</h3>
+  <h3 class="section-label" id="historia">Historia</h3>
   <div class="continents">
     <div class="continent-card">
       <h2>Imperios y reinos</h2>
