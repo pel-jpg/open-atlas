@@ -107,7 +107,7 @@
   </div>
   <div class="stage">
     <div><h2 id="st-title"></h2><p id="st-text"></p></div>
-    <div class="tools"><button class="pill active" id="b-full">Completo</button><button class="pill" id="b-mudo">Mudo</button><button class="print-btn" onclick="window.print()">Imprimir</button></div>
+    <div class="tools"><button class="print-btn" onclick="window.print()">Imprimir</button></div>
   </div>
   <div class="map-frame" id="frame">
 <svg id="mapsvg" viewBox="0 0 1200 787" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa del Imperio romano">
@@ -459,8 +459,6 @@ function drawLegend(i){
     te.textContent=tx;g.appendChild(te);});
   svg.appendChild(g);
 }
-document.getElementById('b-full').onclick=()=>{document.getElementById('frame').classList.remove('mudo');document.getElementById('b-full').classList.add('active');document.getElementById('b-mudo').classList.remove('active');};
-document.getElementById('b-mudo').onclick=()=>{document.getElementById('frame').classList.add('mudo');document.getElementById('b-mudo').classList.add('active');document.getElementById('b-full').classList.remove('active');};
 show(3);
 </script>
 </body>
