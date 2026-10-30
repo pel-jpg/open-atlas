@@ -1,0 +1,87 @@
+# Atlas Abierto
+
+> Repositorio gratuito de mapas escolares en español: geografía, historia y geología. Mapas de HTML y SVG listos para imprimir en A4, con licencia CC BY 4.0, sin publicidad, sin cookies y sin datos privados. Pensados para estudiantes de ESO y Bachillerato y sus docentes.
+
+Todos los mapas se pueden usar, copiar y adaptar citando la fuente (Atlas Abierto, atlasabierto.org). Los mapas históricos tienen varias etapas con texto explicativo; los mapas físicos y políticos incluyen versión con nombres y versión muda.
+
+## Historia
+
+- [Mesopotamia](https://atlasabierto.org/mesopotamia.html): Mapa histórico de Mesopotamia: ciudades-estado sumerias, imperio acadio, Babilonia, Asiria, neobabilonios y conquista persa.
+- [Egipto faraónico](https://atlasabierto.org/egipto.html): Mapa histórico del Egipto faraónico: unificación, Imperio Antiguo, Medio y Nuevo, Nubia, Tutmosis III y Ramsés II frente a los hititas.
+- [Grecia antigua](https://atlasabierto.org/grecia.html): Mapa histórico de la Grecia antigua: minoicos y micénicos, colonización, guerras médicas, guerra del Peloponeso y el dominio de Macedonia.
+- [Las guerras médicas](https://atlasabierto.org/guerras-medicas.html): Mapa histórico de las guerras médicas (499–478 a. C.): la revuelta de Jonia, Maratón, la invasión de Jerjes, Termópilas, Salamina, Platea y la Liga de Delos. Gratuito y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Hispania: pueblos prerromanos y conquista romana](https://atlasabierto.org/hispania-romana.html): Mapa histórico de Hispania: pueblos prerromanos, Cartago y Roma, las provincias, Viriato y Numancia, las guerras cántabras y la Hispania romanizada.
+- [Alejandro Magno y el helenismo](https://atlasabierto.org/alejandro-helenismo.html): Mapa histórico de Alejandro Magno y el helenismo: Macedonia y Persia, las conquistas, el imperio hasta el Indo, los diádocos y los reinos helenísticos.
+- [Roma: de los orígenes a la República](https://atlasabierto.org/roma-republica.html): Mapa histórico de Roma desde su fundación hasta el 146 a. C.: pueblos de Italia, conquista de la península, guerras púnicas y Aníbal.
+- [Imperio romano — Expansión](https://atlasabierto.org/imperio-romano.html): Mapa histórico del Imperio romano: expansión de 264 a. C. a 117 d. C. y división de 395.
+- [La caída del Imperio romano](https://atlasabierto.org/caida-imperio-romano.html): Mapa histórico de la caída del Imperio romano: tetrarquía, invasiones germánicas y de los hunos, reinos germánicos y la reconquista de Justiniano.
+- [La expansión del islam](https://atlasabierto.org/islam.html): Mapa histórico de la expansión del islam: Arabia y la Hégira, los primeros califas, el Califato omeya, el Califato abasí y la división en califatos.
+- [Carlomagno y el Imperio carolingio](https://atlasabierto.org/carolingio.html): Mapa histórico de Carlomagno y el Imperio carolingio: el reino de Clodoveo, Carlos Martel, las conquistas de Carlomagno, su coronación imperial y el Tratado de Verdún.
+- [Europa feudal y las Cruzadas](https://atlasabierto.org/cruzadas.html): Mapa histórico de la Europa feudal y las Cruzadas: del año 1000 a la Cuarta Cruzada, con las rutas de cada cruzada, los estados cruzados y Saladino.
+- [Al-Ándalus y la Reconquista](https://atlasabierto.org/al-andalus-reconquista.html): Mapa histórico de Al-Ándalus y la Reconquista: de la conquista de 711 a la caída de Granada en 1492.
+- [Descubrimientos y exploraciones](https://atlasabierto.org/descubrimientos.html): Mapa histórico de los descubrimientos: rutas de las especias, Portugal y África, los viajes de Colón, Tordesillas, la vuelta al mundo de Magallanes y Elcano y el galeón de Manila.
+- [Carlos V y Felipe II](https://atlasabierto.org/carlos-v-felipe-ii.html): Mapa histórico de Carlos V y Felipe II (1516–1598): la herencia de los Habsburgo, las guerras contra Francia y los turcos, la Reforma, la rebelión de los Países Bajos, Lepanto y la Armada Invencible.
+- [El Imperio español](https://atlasabierto.org/imperio-espanol.html): Mapa histórico del Imperio español: de los Reyes Católicos (1492) a 1800, con Europa, América, África y Asia.
+- [Napoleón y el Congreso de Viena](https://atlasabierto.org/napoleon-congreso-viena.html): Mapa histórico de la época napoleónica (1799–1815): el Consulado, Austerlitz, la guerra en España, la campaña de Rusia, Waterloo y la Europa del Congreso de Viena.
+- [El imperialismo del siglo XIX](https://atlasabierto.org/imperialismo-siglo-xix.html): Mapa histórico del imperialismo del siglo XIX: el mundo hacia 1880, el reparto de África, el reparto de Asia y el Pacífico, y los imperios coloniales en 1914.
+- [La Primera Guerra Mundial](https://atlasabierto.org/primera-guerra-mundial.html): Mapa histórico de la Primera Guerra Mundial: las alianzas de 1914, el frente y las trincheras, la guerra de desgaste, la derrota de los Imperios Centrales, lo que perdieron los vencidos en 1919 y la nueva Europa.
+- [La Segunda Guerra Mundial](https://atlasabierto.org/segunda-guerra-mundial.html): Mapa histórico de la Segunda Guerra Mundial: la expansión nazi, la guerra relámpago, el apogeo del Eje, el Holocausto, la derrota de Alemania, la guerra del Pacífico y la Europa dividida de 1945.
+- [La unificación de Alemania y la guerra franco-prusiana](https://atlasabierto.org/unificacion-alemania.html): Mapa histórico de la unificación de Alemania y la guerra franco-prusiana (1815-1871): la Confederación Germánica, las guerras de 1864 y 1866, Sedán y la proclamación del Imperio alemán en Versalles. Gratuito y listo para imprimir en A4. Licencia CC BY 4.0.
+- [La Guerra Civil española](https://atlasabierto.org/guerra-civil-espanola.html): Mapa histórico de la Guerra Civil española (1936-1939): el golpe de julio, la división del país, la campaña del norte, la batalla del Ebro y el final de la guerra. Mapa gratuito y libre para clase.
+- [La independencia de Hispanoamérica](https://atlasabierto.org/independencia-hispanoamerica.html): Mapa histórico de la independencia de Hispanoamérica (1808–1830): la crisis de la monarquía, las juntas, la reconquista realista, San Martín y Bolívar, Ayacucho y las nuevas repúblicas.
+- [La América precolombina](https://atlasabierto.org/america-precolombina.html): Mapa histórico de la América precolombina: primeras civilizaciones de Mesoamérica y los Andes, mayas, Imperio azteca, Imperio inca y el continente hacia 1492.
+
+## Geografía
+
+- [África — Físico: Accidentes costeros](https://atlasabierto.org/africa-costeros.html): África — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [África — Físico: Relieve](https://atlasabierto.org/africa-fisico.html): África — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [África — Físico: Hidrografía](https://atlasabierto.org/africa-hidrografia.html): África — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [África — Político](https://atlasabierto.org/africa-politico.html): África — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [África — Físico: Relieve](https://atlasabierto.org/africa-relieve.html): África — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América — Físico: Accidentes costeros](https://atlasabierto.org/america-costeros.html): América — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América — Físico: Relieve](https://atlasabierto.org/america-fisico.html): América — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América — Físico: Hidrografía](https://atlasabierto.org/america-hidrografia.html): América — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América — Político](https://atlasabierto.org/america-politico.html): América — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América — Físico: Relieve](https://atlasabierto.org/america-relieve.html): América — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Asia — Físico: Accidentes costeros](https://atlasabierto.org/asia-costeros.html): Asia — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Asia — Físico: Relieve](https://atlasabierto.org/asia-fisico.html): Asia — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Asia — Físico: Hidrografía](https://atlasabierto.org/asia-hidrografia.html): Asia — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Asia — Político](https://atlasabierto.org/asia-politico.html): Asia — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Asia — Físico: Relieve](https://atlasabierto.org/asia-relieve.html): Asia — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [España — Físico: Accidentes costeros](https://atlasabierto.org/espana-costeros.html): España — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [España — Físico](https://atlasabierto.org/espana-fisico.html): España — Físico. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [España — Físico: Hidrografía](https://atlasabierto.org/espana-hidrografia.html): España — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [España — Político](https://atlasabierto.org/espana-politico.html): España — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Europa — Físico: Accidentes costeros](https://atlasabierto.org/europa-costeros.html): Europa — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Europa — Físico](https://atlasabierto.org/europa-fisico.html): Europa — Físico. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Europa — Físico: Hidrografía](https://atlasabierto.org/europa-hidrografia.html): Europa — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Europa — Político](https://atlasabierto.org/europa-politico.html): Europa — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Europa — Físico: Relieve](https://atlasabierto.org/europa-relieve.html): Europa — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Oceanía — Físico: Accidentes costeros](https://atlasabierto.org/oceania-costeros.html): Oceanía — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Oceanía — Físico: Relieve](https://atlasabierto.org/oceania-fisico.html): Oceanía — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Oceanía — Físico: Hidrografía](https://atlasabierto.org/oceania-hidrografia.html): Oceanía — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Oceanía — Político](https://atlasabierto.org/oceania-politico.html): Oceanía — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Sur — Físico: Relieve](https://atlasabierto.org/sudamerica-fisico.html): América del Sur — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Sur — Físico: Hidrografía](https://atlasabierto.org/sudamerica-hidrografia.html): América del Sur — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Sur — Físico: Accidentes costeros](https://atlasabierto.org/sudamerica-costeros.html): América del Sur — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Sur — Político](https://atlasabierto.org/sudamerica-politico.html): América del Sur — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Norte — Físico: Relieve](https://atlasabierto.org/norteamerica-fisico.html): América del Norte — Físico: Relieve. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Norte — Físico: Hidrografía](https://atlasabierto.org/norteamerica-hidrografia.html): América del Norte — Físico: Hidrografía. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Norte — Físico: Accidentes costeros](https://atlasabierto.org/norteamerica-costeros.html): América del Norte — Físico: Accidentes costeros. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América del Norte — Político](https://atlasabierto.org/norteamerica-politico.html): América del Norte — Político. Mapa escolar gratuito, personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+
+## Geología
+
+- [Mundo — Placas tectónicas, volcanes y terremotos](https://atlasabierto.org/mundo-placas.html): Mapamundi geológico gratuito con las placas tectónicas, sus límites, 10.503 terremotos de magnitud 6 o más y volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Europa — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/europa-geologico.html): Mapa geológico gratuito de Europa con las placas tectónicas, sus límites, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [África — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/africa-geologico.html): Mapa geológico gratuito de África con las placas tectónicas, el Gran Valle del Rift, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [América — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/america-geologico.html): Mapa geológico gratuito de América con las placas tectónicas, la falla de San Andrés, los Andes, el Cinturón de Fuego, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Asia — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/asia-geologico.html): Mapa geológico gratuito de Asia con las placas tectónicas, el Himalaya, el Cinturón de Fuego, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+- [Oceanía — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/oceania-geologico.html): Mapa geológico gratuito de Oceanía con las placas tectónicas, Nueva Zelanda, Papúa Nueva Guinea, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
+
+## Más información
+
+- [Licencias y fuentes de datos](https://atlasabierto.org/licencias.html)
+- [Para docentes](https://atlasabierto.org/para-docentes.html)
+- [Ayuda](https://atlasabierto.org/ayuda.html)
+- [Mapa del sitio](https://atlasabierto.org/sitemap.xml)
