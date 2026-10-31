@@ -1,0 +1,30 @@
+window.QUIZ={kmu:29.84,
+cards:[
+{f:"¿Qué dominaban los europeos hacia 1870?",b:"La India británica, las Indias Orientales neerlandesas, Argelia, Filipinas y Cuba españolas y Siberia y Asia central rusas."},
+{f:"¿Cuánto de África estaba ocupado hacia 1880?",b:"Casi nada: solo la costa y algunos enclaves como Argelia, El Cabo, Senegal, el litoral de Angola y Mozambique."},
+{f:"¿Por qué empezó el imperialismo a partir de 1870?",b:"Por la Segunda Revolución Industrial: las fábricas necesitaban materias primas y mercados, y sobraban capitales para invertir."},
+{f:"¿Qué fue la Conferencia de Berlín (1884–1885)?",b:"La reunión convocada por Bismarck donde las potencias fijaron las reglas del reparto de África."},
+{f:"¿Qué regla se fijó en Berlín?",b:"Bastaba con la «ocupación efectiva» de un territorio."},
+{f:"¿Cómo se trazaron las fronteras africanas?",b:"En los despachos, sin contar con los pueblos africanos; muchas siguen hoy."},
+{f:"¿Quién se quedó con el Congo?",b:"El rey Leopoldo II de Bélgica, como propiedad personal."},
+{f:"¿Qué fue la crisis de Fachoda (1898)?",b:"El choque entre el proyecto británico de unir el Cabo con El Cairo y el francés de unir Dakar con Yibuti."},
+{f:"¿Qué fue la guerra de los bóers (1899–1902)?",b:"La guerra de Gran Bretaña contra los colonos neerlandeses del sur de África."},
+{f:"¿Por qué era la India la «joya de la Corona»?",b:"Era la colonia más valiosa del Imperio británico; la Corona la gobernó directamente desde 1858, tras la rebelión de los cipayos."},
+{f:"¿Qué dominaban Francia, los Países Bajos y Estados Unidos en Asia?",b:"Francia, Indochina; los Países Bajos, las Indias Orientales; Estados Unidos, Filipinas (1898)."},
+{f:"¿Qué pasó con China?",b:"Quedó dividida en zonas de influencia (rusa, alemana, británica, francesa y japonesa) tras las Guerras del Opio."},
+{f:"¿Qué construyó Rusia para unir su imperio?",b:"El ferrocarril Transiberiano."},
+{f:"¿Cuál era el mayor imperio colonial en 1914?",b:"El británico, con hasta una cuarta parte de la superficie y de la población del mundo."},
+{f:"¿Qué otras potencias se unieron al reparto?",b:"Estados Unidos y Japón."}
+],
+pins:[
+{q:"¿Dónde está Berlín, donde se reunió la Conferencia de 1884–1885?",x:402,y:70,r:26,e:"Berlín está en el norte de Alemania."},
+{q:"¿Dónde está Ciudad del Cabo, el enclave europeo del sur de África?",x:414,y:468,r:26,e:"Ciudad del Cabo está en el extremo sur de África."},
+{q:"¿Dónde está El Cairo, donde Gran Bretaña quería llegar desde el Cabo?",x:458,y:163,r:26,e:"El Cairo está en el delta del Nilo."},
+{q:"¿Dónde está Fachoda, donde chocaron británicos y franceses en 1898?",x:464,y:258,r:26,e:"Fachoda, hoy Kodok, está en el Nilo Blanco, en Sudán del Sur."},
+{q:"¿Dónde está el Congo, la propiedad personal de Leopoldo II?",x:422,y:317,r:26,e:"El Congo está en el centro de África."},
+{q:"¿Dónde está Dakar, el punto de partida del proyecto colonial francés?",x:284,y:235,r:26,e:"Dakar está en la costa de Senegal, en el extremo oeste de África."},
+{q:"¿Dónde está Delhi, en la India británica?",x:615,y:170,r:26,e:"Delhi está en el norte de la India."},
+{q:"¿Dónde está Pekín, la capital de China?",x:731,y:120,r:26,e:"Pekín está en el norte de China."},
+{q:"¿Dónde está Tokio, la capital de Japón?",x:815,y:138,r:26,e:"Tokio está en la costa del Pacífico, en la isla de Honshu."},
+{q:"¿Dónde está Singapur, un puerto clave británico en el sudeste asiático?",x:723,y:300,r:26,e:"Singapur está en el extremo sur de la península de Malaca."}
+]};

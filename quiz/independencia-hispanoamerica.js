@@ -1,0 +1,32 @@
+window.QUIZ={kmu:9.44,
+cards:[
+{f:"¿Qué ocurrió en 1808 que desencadenó las independencias?",b:"Napoleón invadió España, obligó a abdicar a Carlos IV y a Fernando VII y puso en el trono a su hermano José."},
+{f:"¿Quiénes eran los criollos?",b:"Los descendientes de españoles nacidos en América."},
+{f:"¿Por qué estaban descontentos los criollos?",b:"Porque los altos cargos eran para españoles y el comercio estaba controlado por España."},
+{f:"¿Cuáles eran los cuatro virreinatos americanos?",b:"Nueva España, Perú, Nueva Granada y Río de la Plata."},
+{f:"¿Qué fue el Grito de Dolores (1810)?",b:"El llamamiento del cura Miguel Hidalgo en México, que llevó a una gran revuelta de indios y mestizos."},
+{f:"¿Qué fue la Revolución de Mayo (1810)?",b:"El movimiento de Buenos Aires que formó un gobierno propio en el Río de la Plata."},
+{f:"¿Qué declaró Venezuela en 1811?",b:"Su independencia."},
+{f:"¿Qué base de la resistencia realista siguió en pie hasta 1824?",b:"El virreinato del Perú, con Lima, y el Alto Perú."},
+{f:"¿Qué hizo Fernando VII al volver al trono en 1814?",b:"Intentó recuperar el control de América: la expedición de Morillo (1815) reconquistó casi todo el norte de Sudamérica."},
+{f:"¿Qué ocurrió el 9 de julio de 1816 en Tucumán?",b:"Las Provincias Unidas del Río de la Plata declararon su independencia."},
+{f:"¿Qué hizo San Martín en 1817?",b:"Cruzó los Andes, venció en Chacabuco y Maipú y liberó Chile (1818); después liberó el Perú (1821)."},
+{f:"¿Qué logró Bolívar en Boyacá (1819) y Carabobo (1821)?",b:"Boyacá abrió el camino a Bogotá y Carabobo liberó Venezuela. Creó la Gran Colombia en Angostura (1819)."},
+{f:"¿Quién declaró la independencia de México en 1821?",b:"Iturbide y Guerrero."},
+{f:"¿Qué ocurrió en Pichincha (1822) y en Ayacucho (1824)?",b:"Sucre liberó Quito en Pichincha; Bolívar y Sucre acabaron con el poder español en el Perú en Ayacucho."},
+{f:"¿Qué pasó en Guayaquil en 1822?",b:"Se reunieron San Martín y Bolívar, y San Martín se retiró."},
+{f:"¿Cómo nacieron Bolivia y Uruguay?",b:"Bolivia, del Alto Perú (1825), en honor de Bolívar; Uruguay (1828), con mediación británica entre Argentina y Brasil."},
+{f:"¿Qué le pasó a la Gran Colombia en 1830?",b:"Se rompió en Venezuela, Colombia y Ecuador."},
+{f:"¿Qué colonias americanas conservó España?",b:"Cuba y Puerto Rico (y las Filipinas, en Asia)."}
+],
+pins:[
+{q:"¿Dónde está Buenos Aires, donde estalló la Revolución de Mayo de 1810?",x:693,y:850,r:26,e:"Buenos Aires está en el Río de la Plata."},
+{q:"¿Dónde está Caracas, la capital de Venezuela?",x:594,y:298,r:26,e:"Caracas está en la costa norte de Sudamérica."},
+{q:"¿Dónde está Bogotá, la capital de Nueva Granada?",x:511,y:366,r:26,e:"Bogotá está en los Andes de Colombia."},
+{q:"¿Dónde está Lima, la capital del virreinato del Perú?",x:476,y:562,r:26,e:"Lima está en la costa del Pacífico."},
+{q:"¿Dónde está Ciudad de México, la capital de Nueva España?",x:219,y:190,r:26,e:"Ciudad de México está en el centro de México."},
+{q:"¿Dónde está Santiago de Chile, liberada por San Martín en 1818?",x:551,y:834,r:26,e:"Santiago está entre los Andes y la costa del Pacífico."},
+{q:"¿Dónde está Ayacucho, donde terminó el poder español en el Perú?",x:509,y:575,r:26,e:"Ayacucho está en los Andes del sur de Perú."},
+{q:"¿Dónde está Quito, liberada por Sucre en Pichincha?",x:459,y:423,r:26,e:"Quito está en los Andes, en el actual Ecuador."},
+{q:"¿Dónde está Tucumán, donde se declaró la independencia de las Provincias Unidas?",x:614,y:745,r:26,e:"Tucumán está en el noroeste de Argentina."}
+]};
