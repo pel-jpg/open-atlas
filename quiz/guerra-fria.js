@@ -1,0 +1,30 @@
+window.QUIZ={kmu:32.19,
+cards:[
+{f:"¿Qué fue la Guerra Fría?",b:"El enfrentamiento político, económico, militar y propagandístico entre Estados Unidos y la Unión Soviética tras 1945, sin guerra directa entre ambos."},
+{f:"¿Qué fue el telón de acero?",b:"La frontera que, según Churchill (1946), dividía Europa entre el bloque occidental y el bloque soviético."},
+{f:"¿Qué establecía la doctrina Truman (1947)?",b:"Que Estados Unidos ayudaría a cualquier país que resistiera al comunismo; fue la política de «contención»."},
+{f:"¿Qué fue el Plan Marshall?",b:"La ayuda económica de Estados Unidos a la Europa occidental para reconstruirla y frenar el comunismo."},
+{f:"¿Qué fue el bloqueo de Berlín (1948–1949)?",b:"Stalin cortó el acceso por tierra a Berlín occidental y los aliados respondieron con un puente aéreo de casi un año."},
+{f:"¿Qué eran la OTAN y el Pacto de Varsovia?",b:"Las alianzas militares de cada bloque: la OTAN (1949), occidental, y el Pacto de Varsovia (1955), soviético."},
+{f:"¿Cómo terminó la guerra de Corea (1950–1953)?",b:"Con el país dividido en el paralelo 38: Corea del Norte comunista y Corea del Sur aliada de EE. UU."},
+{f:"¿Qué ocurrió en Berlín en 1961?",b:"Se levantó el Muro de Berlín para impedir que los alemanes orientales huyeran a Occidente."},
+{f:"¿Qué fue la crisis de los misiles de Cuba (1962)?",b:"El momento más cercano a una guerra nuclear: EE. UU. exigió retirar los misiles soviéticos instalados en Cuba y la URSS cedió."},
+{f:"¿Qué fue la Conferencia de Bandung (1955)?",b:"La reunión de países de Asia y África que reclamaron un lugar propio frente a los dos bloques; de ella nació el Movimiento de Países No Alineados."},
+{f:"¿Cuándo se independizó la mayor parte de África?",b:"Sobre todo desde 1957 (Ghana); 1960 es el «año de África», con 17 colonias independientes."},
+{f:"¿Cómo acabó la guerra de Vietnam?",b:"Estados Unidos se retiró en 1973 y en 1975 cayó Saigón: Vietnam se reunificó bajo el régimen comunista."},
+{f:"¿Qué fue la distensión?",b:"El periodo de los años 60 y 70 con «teléfono rojo», acuerdos SALT y los Acuerdos de Helsinki (1975)."},
+{f:"¿Qué ocurrió en 1979?",b:"La URSS invadió Afganistán, triunfó la revolución iraní y la revolución sandinista llegó al poder en Nicaragua."},
+{f:"¿Cómo terminó la Guerra Fría?",b:"Con las reformas de Gorbachov (perestroika y glasnost), la caída del Muro de Berlín (1989) y la disolución de la URSS (1991)."}
+],
+pins:[
+{q:"¿Dónde está Washington, capital de Estados Unidos, líder del bloque occidental?",x:193,y:112,r:26,e:"Washington está en la costa este de Estados Unidos."},
+{q:"¿Dónde está Moscú, capital de la Unión Soviética?",x:524,y:52,r:26,e:"Moscú está en la parte europea de Rusia."},
+{q:"¿Dónde está Berlín, ciudad dividida por el Muro desde 1961?",x:461,y:63,r:26,e:"Berlín está en el nordeste de Alemania."},
+{q:"¿Dónde está La Habana, capital de la Cuba de Fidel Castro?",x:153,y:176,r:26,e:"La Habana está en la costa norte de Cuba."},
+{q:"¿Dónde está Pekín, capital de la China comunista de Mao?",x:758,y:108,r:26,e:"Pekín está en el nordeste de China."},
+{q:"¿Dónde está Hanói, capital de Vietnam del Norte?",x:748,y:185,r:26,e:"Hanói está en el norte de Vietnam."},
+{q:"¿Dónde está Nueva Delhi, capital de la India independiente en 1947?",x:653,y:153,r:26,e:"Nueva Delhi está en el norte de la India."},
+{q:"¿Dónde está Luanda, capital de Angola, independiente en 1975?",x:453,y:316,r:26,e:"Luanda está en la costa atlántica de África."},
+{q:"¿Dónde está Kabul, capital de Afganistán, invadido en 1979?",x:624,y:129,r:26,e:"Kabul está en el este de Afganistán."},
+{q:"¿Dónde está Santiago de Chile, donde hubo un golpe de Estado en 1973?",x:203,y:420,r:26,e:"Santiago de Chile está en el centro de Chile."}
+]};
