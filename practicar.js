@@ -4,6 +4,7 @@
 (function(){
   var Q=window.QUIZ; if(!Q||typeof META==='undefined') return;
   var css=document.createElement('style'); css.textContent=
+  '.pr-open{font-family:"IBM Plex Mono",monospace;font-size:12px;background:#9a6a12;color:#fff;border:1px solid #9a6a12;padding:9px 16px;border-radius:999px;cursor:pointer;font-weight:600;margin-right:8px}.pr-open:hover{background:#7c540c}'+
   '.pr-ov{position:fixed;inset:0;background:rgba(20,28,18,.62);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px}'+
   '.pr-box{background:#F4EEDF;color:#22301F;width:min(680px,100%);max-height:92vh;overflow:auto;border-radius:6px;border:1px solid rgba(34,48,31,.35);box-shadow:0 18px 60px rgba(0,0,0,.4);font-family:"IBM Plex Sans",sans-serif}'+
   '.pr-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:18px 22px 10px;border-bottom:1px solid rgba(34,48,31,.18)}'+
@@ -29,11 +30,11 @@
   '.pr-ov.dock{background:none;pointer-events:none;align-items:flex-end;padding:0 12px 12px}'+
   '.pr-ov.dock .pr-box{pointer-events:auto;width:min(620px,100%);max-height:46vh}'+
   '.pr-ov.dock .pr-b{padding:10px 22px 16px}.pr-ov.dock .pr-q{font-size:17px;margin-bottom:8px}.pr-ov.dock .pr-h{padding:10px 22px 6px}.pr-ov.dock .pr-bar{padding-top:8px}'+
-  'body.pr-pinmode #mapsvg .clabel,body.pr-pinmode #mapsvg .evlabel,body.pr-pinmode #mapsvg g.city,body.pr-pinmode #mapsvg .star{display:none}body.pr-pinmode #mapsvg{cursor:crosshair}'+
+  'body.pr-pinmode #mapsvg .clabel,body.pr-pinmode #mapsvg .cdot,body.pr-pinmode #mapsvg .evlabel,body.pr-pinmode #mapsvg g.city,body.pr-pinmode #mapsvg .star{display:none}body.pr-pinmode #mapsvg{cursor:crosshair}'+
   '@media print{.pr-ov,.pr-open{display:none!important}}';
   document.head.appendChild(css);
   var tools=document.querySelector('.tools'); if(!tools) return;
-  var open=document.createElement('button'); open.className='print-btn pr-open'; open.textContent='Practicar'; open.style.marginRight='8px';
+  var open=document.createElement('button'); open.type='button'; open.className='pr-open'; open.textContent='▶ Practicar'; open.title='Practica con flashcards y preguntas sobre el mapa';
   open.setAttribute('aria-haspopup','dialog'); tools.insertBefore(open,tools.firstChild);
   var ov,box,mode='cards',scope='todo',items=[],idx=0,score=0,answered=false,flip=false,lastFocus;
   function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
@@ -70,7 +71,7 @@
   function mapClick(e){
     if(!ov||mode!=='pins'||answered||idx>=items.length) return;
     var sv=document.getElementById('mapsvg'), pt=sv.createSVGPoint(); pt.x=e.clientX; pt.y=e.clientY; var m=sv.getScreenCTM(); if(!m) return; var q=pt.matrixTransform(m.inverse());
-    var t=items[idx], d=Math.hypot(q.x-t.x,q.y-t.y); t.ok=d<=t.r; t.d=Math.round(d*5.3/10)*10; /* ≈ 5,3 km por unidad del mapa */
+    var t=items[idx], d=Math.hypot(q.x-t.x,q.y-t.y); t.ok=d<=t.r; var kk=Q.kmu||5.3; t.d=kk<2?Math.round(d*kk):Math.round(d*kk/10)*10; /* km por unidad del mapa */
     if(t.ok) score++; answered=true; clearMk();
     var g=document.createElementNS(NS,'g'); g.id='pr-mk'; g.setAttribute('pointer-events','none');
     function el(n,a){var x=document.createElementNS(NS,n); for(var k in a) x.setAttribute(k,a[k]); g.appendChild(x);}
