@@ -6,6 +6,7 @@ Todos los mapas se pueden usar, copiar y adaptar citando la fuente (Atlas Abiert
 
 ## Historia
 
+- [La Prehistoria](https://atlasabierto.org/prehistoria.html): Mapa histórico de la Prehistoria: origen del ser humano en África, poblamiento del planeta en el Paleolítico, focos agrícolas del Neolítico y Edad de los Metales con megalitos. Gratuito y listo para imprimir en A4. Licencia CC BY 4.0.
 - [Mesopotamia](https://atlasabierto.org/mesopotamia.html): Mapa histórico de Mesopotamia: ciudades-estado sumerias, imperio acadio, Babilonia, Asiria, neobabilonios y conquista persa.
 - [Egipto faraónico](https://atlasabierto.org/egipto.html): Mapa histórico del Egipto faraónico: unificación, Imperio Antiguo, Medio y Nuevo, Nubia, Tutmosis III y Ramsés II frente a los hititas.
 - [Grecia antigua](https://atlasabierto.org/grecia.html): Mapa histórico de la Grecia antigua: minoicos y micénicos, colonización, guerras médicas, guerra del Peloponeso y el dominio de Macedonia.
