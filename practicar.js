@@ -35,13 +35,13 @@
   var tools=document.querySelector('.tools'); if(!tools) return;
   var open=document.createElement('button'); open.className='print-btn pr-open'; open.textContent='Practicar'; open.style.marginRight='8px';
   open.setAttribute('aria-haspopup','dialog'); tools.insertBefore(open,tools.firstChild);
-  var ov,box,mode='test',scope='etapa',items=[],idx=0,score=0,answered=false,flip=false,lastFocus;
+  var ov,box,mode='cards',scope='etapa',items=[],idx=0,score=0,answered=false,flip=false,lastFocus;
   function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
   function pool(){var src=mode==='test'?Q.tests:mode==='pins'?(Q.pins||[]):Q.cards;return src.filter(function(x){return scope==='todo'||x.s===cur;});}
   function start(){items=sh(pool()); if(mode==='test') items=items.map(function(t){var ord=sh(t.o.map(function(_,i){return i;}));return{q:t.q,e:t.e,o:ord.map(function(i){return t.o[i];}),a:ord.indexOf(t.a)};}); idx=0;score=0;answered=false;flip=false;clearMk();draw();}
   function bar(){return '<div class="pr-bar" role="tablist">'+
-    '<button data-m="test" class="'+(mode==='test'?'on':'')+'">Test</button><button data-m="cards" class="'+(mode==='cards'?'on':'')+'">Flashcards</button><button data-m="pins" class="'+(mode==='pins'?'on':'')+'">En el mapa</button><span class="sp"></span>'+
+    '<button data-m="cards" class="'+(mode==='cards'?'on':'')+'">Flashcards</button><button data-m="pins" class="'+(mode==='pins'?'on':'')+'">En el mapa</button><span class="sp"></span>'+
     '<button data-s="etapa" class="'+(scope==='etapa'?'on':'')+'">Esta etapa</button><button data-s="todo" class="'+(scope==='todo'?'on':'')+'">Todo el mapa</button></div>';}
   function draw(){
     var st=META[cur], h='<div class="pr-h"><div><h2>Practicar</h2><small>'+esc(META[cur].year)+' · '+esc(META[cur].title)+'</small></div><button class="pr-x" aria-label="Cerrar">×</button></div>'+bar()+'<div class="pr-b">';
