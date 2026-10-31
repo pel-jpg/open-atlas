@@ -62,11 +62,17 @@
         '<div class="pr-row"><button class="pr-go alt" data-a="prev">Anterior</button><button class="pr-go" data-a="nextc">Siguiente</button></div><p class="pr-hint">Teclado: ← → para moverte, espacio para girar.</p>';
     }
     box.innerHTML=h+'</div>';
-    ov.classList.toggle('dock',mode==='pins'); document.body.classList.toggle('pr-pinmode',mode==='pins'); if(mode!=='pins') clearMk();
+    ov.classList.toggle('dock',mode==='pins'); pinVB(mode==='pins'); document.body.classList.toggle('pr-pinmode',mode==='pins'); if(mode!=='pins') clearMk();
     if(mode==='pins'&&items.length&&idx<items.length&&!answered){ var sv=document.getElementById('mapsvg'); var rc=sv.getBoundingClientRect(); if(rc.top<0||rc.bottom>innerHeight*0.55) sv.scrollIntoView({block:'start',behavior:'smooth'}); }
     var f=box.querySelector('.pr-card,.pr-o:not(:disabled),.pr-go'); if(f&&mode==='cards') f.focus();
   }
   var NS='http://www.w3.org/2000/svg';
+  var obs=null;
+  function fullVB(){ if(typeof VB==='undefined'||!VB||!VB.length) return null; var b=VB[0]; VB.forEach(function(v){ if(v[2]*v[3]>b[2]*b[3]) b=v; }); return b.join(' '); }
+  function setVB(){ var sv=document.getElementById('mapsvg'),f=fullVB(); if(f&&sv.getAttribute('viewBox')!==f) sv.setAttribute('viewBox',f); }
+  function pinVB(on){ var sv=document.getElementById('mapsvg'); if(!fullVB()) return;
+    if(on){ setVB(); if(!obs){ obs=new MutationObserver(function(){ if(mode==='pins'&&ov) setVB(); }); obs.observe(sv,{attributes:true,attributeFilter:['viewBox']}); } }
+    else { if(obs){obs.disconnect();obs=null;} if(typeof VB!=='undefined'&&VB[cur]) sv.setAttribute('viewBox',VB[cur].join(' ')); } }
   function clearMk(){var g=document.getElementById('pr-mk'); if(g) g.remove();}
   function mapClick(e){
     if(!ov||mode!=='pins'||answered||idx>=items.length) return;
@@ -83,7 +89,7 @@
     var tx=document.createElementNS(NS,'text'); tx.setAttribute('x',t.x+t.r+4); tx.setAttribute('y',t.y+4); tx.setAttribute('font-size','11'); tx.setAttribute('font-weight','700'); tx.setAttribute('fill','#22301F'); tx.setAttribute('stroke','#fff'); tx.setAttribute('stroke-width','3'); tx.setAttribute('paint-order','stroke'); tx.textContent=(t.q.match(/¿Dónde está ([^,?]+)/)||[])[1]||''; g.appendChild(tx);
     sv.appendChild(g); draw();
   }
-  function close(){ if(ov){ document.removeEventListener('keydown',key); ov.remove(); ov=null; clearMk(); document.body.classList.remove('pr-pinmode'); document.getElementById('mapsvg').removeEventListener('click',mapClick); if(lastFocus) lastFocus.focus(); } }
+  function close(){ if(ov){ document.removeEventListener('keydown',key); ov.remove(); ov=null; clearMk(); pinVB(false); document.body.classList.remove('pr-pinmode'); document.getElementById('mapsvg').removeEventListener('click',mapClick); if(lastFocus) lastFocus.focus(); } }
   function key(e){
     if(e.key==='Escape'){close();return;}
     if(mode==='cards'&&items.length){ if(e.key==='ArrowRight'){idx=(idx+1)%items.length;flip=false;draw();} else if(e.key==='ArrowLeft'){idx=(idx-1+items.length)%items.length;flip=false;draw();} else if(e.key===' '&&document.activeElement.classList.contains('pr-card')){e.preventDefault();flip=!flip;draw();} }
