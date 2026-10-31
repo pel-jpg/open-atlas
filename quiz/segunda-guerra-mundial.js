@@ -1,0 +1,31 @@
+window.QUIZ={kmu:5.44,
+cards:[
+{f:"¿Qué hizo Alemania desde 1933 en contra del Tratado de Versalles?",b:"Se rearmó y en 1936 ocupó militarmente la Renania."},
+{f:"¿Qué fue el Eje?",b:"La alianza entre la Alemania nazi y la Italia fascista."},
+{f:"¿Qué fue el Anschluss (1938)?",b:"La anexión de Austria por Alemania."},
+{f:"¿Qué fue el apaciguamiento?",b:"La política de Gran Bretaña y Francia de ceder ante Hitler: aceptaron la anexión de los Sudetes en la Conferencia de Múnich."},
+{f:"¿Qué ocurrió el 1 de septiembre de 1939?",b:"Alemania invadió Polonia y Gran Bretaña y Francia le declararon la guerra."},
+{f:"¿Qué hizo la Unión Soviética el 17 de septiembre de 1939?",b:"Atacó Polonia por el este y después se quedó con los países bálticos y Besarabia."},
+{f:"¿Qué fue la guerra relámpago?",b:"Los rápidos ataques alemanes de 1940: ocuparon Dinamarca, Noruega, los Países Bajos, Bélgica y Francia."},
+{f:"¿Qué fue el régimen de Vichy?",b:"El gobierno colaboracionista que gobernó el sur de Francia tras el armisticio de 1940."},
+{f:"¿Qué fue la Operación Barbarroja?",b:"El ataque alemán a la Unión Soviética el 22 de junio de 1941, que llegó a las puertas de Moscú y sitió Leningrado."},
+{f:"¿Qué ocurrió el 7 de diciembre de 1941?",b:"Japón atacó Pearl Harbor y Estados Unidos entró en la guerra: el conflicto se hizo mundial."},
+{f:"¿Qué fue el Holocausto?",b:"La persecución y el asesinato de los judíos europeos por el régimen nazi, en campos de exterminio como Auschwitz-Birkenau."},
+{f:"¿Por qué fue decisiva la batalla de Stalingrado (1943)?",b:"La victoria soviética marcó el cambio de rumbo de la guerra en el este."},
+{f:"¿Qué fue el Día D?",b:"El desembarco aliado en Normandía, el 6 de junio de 1944."},
+{f:"¿Cómo terminó la guerra en Europa?",b:"Con la caída de Berlín (2 de mayo de 1945) y la rendición alemana."},
+{f:"¿Qué ocurrió el 6 y el 9 de agosto de 1945?",b:"Estados Unidos lanzó bombas atómicas sobre Hiroshima y Nagasaki."},
+{f:"¿Qué se decidió en Yalta y Potsdam?",b:"La nueva geografía de Europa: Polonia se desplazó hacia el oeste (línea Óder-Neisse) y Alemania y Austria se dividieron."}
+],
+pins:[
+{q:"¿Dónde está Berlín, la capital de la Alemania nazi?",x:518,y:248,r:31,e:"Berlín está en el nordeste de Alemania."},
+{q:"¿Dónde está Varsovia, invadida en septiembre de 1939?",x:613,y:258,r:31,e:"Varsovia está en el centro de Polonia, junto al Vístula."},
+{q:"¿Dónde está Moscú, a cuyas puertas llegó el ejército alemán en 1941?",x:803,y:162,r:31,e:"Moscú es la capital de la Unión Soviética."},
+{q:"¿Dónde está Stalingrado, donde cambió el rumbo de la guerra?",x:925,y:279,r:31,e:"Stalingrado está junto al río Volga."},
+{q:"¿Dónde está Leningrado, sitiada durante casi 900 días?",x:708,y:91,r:31,e:"Leningrado, hoy San Petersburgo, está en el golfo de Finlandia."},
+{q:"¿Dónde está París, ocupada por los alemanes en 1940?",x:365,y:300,r:31,e:"París está en el norte de Francia."},
+{q:"¿Dónde está Londres, la capital que resistió en 1940?",x:346,y:240,r:31,e:"Londres está en el sureste de Gran Bretaña."},
+{q:"¿Dónde está El Alamein, donde vencieron los británicos en 1942?",x:763,y:690,r:31,e:"El Alamein está en la costa de Egipto."},
+{q:"¿Dónde está Normandía, donde desembarcaron los aliados el 6 de junio de 1944?",x:326,y:279,r:31,e:"Normandía está en la costa norte de Francia."},
+{q:"¿Dónde está Auschwitz, el mayor campo de exterminio nazi?",x:589,y:303,r:31,e:"Auschwitz está en el sur de Polonia."}
+]};

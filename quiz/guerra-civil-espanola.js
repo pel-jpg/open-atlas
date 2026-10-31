@@ -1,0 +1,30 @@
+window.QUIZ={kmu:1.45,
+cards:[
+{f:"¿Quién ganó las elecciones de febrero de 1936?",b:"El Frente Popular."},
+{f:"¿Cuándo y dónde empezó el golpe de Estado de 1936?",b:"El 17 de julio, con una sublevación militar en Melilla contra la Segunda República."},
+{f:"¿En qué zonas triunfó el golpe?",b:"En Galicia, Castilla y León, Navarra, Álava, parte de Aragón, Andalucía occidental, Baleares (excepto Menorca), Canarias y el Protectorado de Marruecos."},
+{f:"¿Dónde fracasó el golpe?",b:"En Madrid, Barcelona y gran parte del país."},
+{f:"¿Qué ayuda recibieron los sublevados?",b:"Aviones alemanes e italianos que pasaron el Ejército de África a la Península."},
+{f:"¿Qué ocurrió en Toledo en septiembre de 1936?",b:"Los sublevados liberaron a los sitiados del Alcázar."},
+{f:"¿Qué pasó el 1 de octubre de 1936?",b:"Franco fue nombrado jefe del Estado en Burgos."},
+{f:"¿Qué pasó en Madrid en noviembre de 1936?",b:"Los sublevados atacaron la capital, el gobierno republicano se trasladó a Valencia y Madrid resistió."},
+{f:"¿Qué fue la batalla de Guadalajara (marzo de 1937)?",b:"Las tropas italianas fueron derrotadas por los republicanos."},
+{f:"¿Qué ocurrió en Guernica el 26 de abril de 1937?",b:"La aviación alemana bombardeó la ciudad."},
+{f:"¿Qué cayó en la guerra en el norte en 1937?",b:"Bilbao (junio), Santander (agosto) y Asturias (octubre)."},
+{f:"¿Qué pasó el 15 de abril de 1938 en Vinaroz?",b:"Los sublevados llegaron al Mediterráneo y dividieron la zona republicana en dos: Cataluña, y el centro y sur."},
+{f:"¿Qué fue la batalla del Ebro?",b:"La última gran ofensiva de la República (julio–noviembre de 1938), la mayor y más larga de la guerra; terminó en derrota."},
+{f:"¿Qué ocurrió el 26 de enero de 1939?",b:"Cayó Barcelona y cerca de medio millón de personas huyeron a Francia en la Retirada."},
+{f:"¿Cómo terminó la guerra?",b:"Franco exigió la rendición; Madrid cayó el 28 de marzo de 1939."}
+],
+pins:[
+{q:"¿Dónde está Melilla, donde empezó el golpe de 1936?",x:572,y:747,r:31,e:"Melilla está en la costa norte de África."},
+{q:"¿Dónde está Sevilla, desde donde avanzaron las columnas sublevadas hacia el norte?",x:386,y:584,r:31,e:"Sevilla está en el suroeste de la Península."},
+{q:"¿Dónde está Badajoz, ocupada en agosto de 1936?",x:330,y:468,r:31,e:"Badajoz está en la frontera con Portugal."},
+{q:"¿Dónde está Madrid, la capital que resistió en 1936?",x:525,y:354,r:31,e:"Madrid está en el centro de la Península."},
+{q:"¿Dónde está Burgos, donde Franco fue nombrado jefe del Estado?",x:526,y:207,r:31,e:"Burgos está en el norte de Castilla."},
+{q:"¿Dónde está Guernica, bombardeada en 1937?",x:583,y:133,r:31,e:"Guernica está en Vizcaya, en el País Vasco."},
+{q:"¿Dónde está Teruel, tomada por los republicanos en 1937 y perdida en 1938?",x:676,y:358,r:31,e:"Teruel está en el este de Aragón."},
+{q:"¿Dónde está Vinaroz, por donde los sublevados llegaron al Mediterráneo?",x:768,y:345,r:31,e:"Vinaroz está en la costa de Castellón."},
+{q:"¿Dónde está Barcelona, que cayó el 26 de enero de 1939?",x:862,y:269,r:31,e:"Barcelona está en el nordeste de la Península."},
+{q:"¿Dónde está Málaga, ocupada en febrero de 1937?",x:481,y:637,r:31,e:"Málaga está en la costa del sur."}
+]};
