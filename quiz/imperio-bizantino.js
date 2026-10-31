@@ -1,0 +1,31 @@
+window.QUIZ={kmu:4.85,
+cards:[
+{f:"¿Por qué se llama «bizantino» al Imperio romano de Oriente?",b:"Es un nombre que le dieron los historiadores siglos después, por Bizancio, la antigua ciudad sobre la que se fundó Constantinopla; sus habitantes se llamaban romanos."},
+{f:"¿Qué ocurrió en 395?",b:"Al morir Teodosio I, el Imperio romano se dividió definitivamente entre sus hijos: Occidente y Oriente, con capital en Constantinopla."},
+{f:"¿Quién fundó Constantinopla y cuándo?",b:"Constantino I, en 330, sobre la antigua Bizancio, en una posición estratégica entre Europa y Asia."},
+{f:"¿Qué es la Sedición de Niká (532)?",b:"Una gran revuelta en Constantinopla contra Justiniano, aplastada con miles de muertos; después se construyó Santa Sofía."},
+{f:"¿Qué conquistó Justiniano I (527–565)?",b:"Norte de África (vándalos), Italia (ostrogodos) y el sur de Hispania (Spania): reconquistó buena parte del antiguo Imperio de Occidente."},
+{f:"¿Qué es el Corpus iuris civilis?",b:"La compilación del derecho romano ordenada por Justiniano, base de muchos sistemas jurídicos europeos."},
+{f:"¿Qué pasó en la batalla del Yarmuk (636)?",b:"Los árabes derrotaron a los bizantinos y Siria y Palestina quedaron perdidas; poco después cayeron Egipto y el norte de África."},
+{f:"¿Qué fue el fuego griego?",b:"Un arma incendiaria naval que permitió resistir los asedios árabes de Constantinopla (674–678 y 717–718)."},
+{f:"¿Qué fue el sistema de temas?",b:"La organización del imperio en provincias militares gobernadas por un general, cuyos soldados recibían tierras a cambio de servicio."},
+{f:"¿Qué fue la iconoclasia (726–843)?",b:"La prohibición de venerar imágenes religiosas, que dividió al imperio y a la Iglesia hasta su restablecimiento en 843."},
+{f:"¿Qué logró Basilio II (976–1025)?",b:"Derrotó a los búlgaros (le llamaron «Bulgaróctono») y llevó el imperio a su máxima extensión medieval desde Justiniano."},
+{f:"¿Qué fue el Cisma de Oriente (1054)?",b:"La ruptura entre la Iglesia católica de Roma y la ortodoxa de Constantinopla."},
+{f:"¿Qué consecuencias tuvo Manzikert (1071)?",b:"Los turcos selyúcidas derrotaron a los bizantinos y ocuparon Anatolia, el corazón del imperio."},
+{f:"¿Qué pasó en la Cuarta Cruzada (1204)?",b:"Los cruzados, con Venecia, saquearon Constantinopla y crearon el Imperio latino; los bizantinos se refugiaron en Nicea, Epiro y Trebisonda."},
+{f:"¿Cómo se recuperó Constantinopla en 1261?",b:"Miguel VIII Paleólogo, emperador de Nicea, reconquistó la ciudad y puso fin al Imperio latino."},
+{f:"¿Cómo terminó el Imperio bizantino?",b:"El 29 de mayo de 1453 el sultán otomano Mehmed II tomó Constantinopla con cañones; murió el último emperador, Constantino XI."}
+],
+pins:[
+{q:"¿Dónde está Constantinopla, capital del Imperio bizantino?",x:769,y:261,r:31,e:"Constantinopla (hoy Estambul) está junto al estrecho del Bósforo, entre Europa y Asia."},
+{q:"¿Dónde está Rávena, capital bizantina en Italia desde Justiniano?",x:485,y:192,r:31,e:"Rávena está en la costa adriática del norte de Italia."},
+{q:"¿Dónde está Roma, ciudad conquistada por Belisario en 536?",x:486,y:250,r:31,e:"Roma está en el centro de Italia."},
+{q:"¿Dónde está Cartago, capital del África bizantina reconquistada a los vándalos?",x:439,y:362,r:31,e:"Cartago está junto a la actual Túnez, en el norte de África."},
+{q:"¿Dónde está Jerusalén, perdida ante los persas y luego ante los árabes?",x:918,y:452,r:31,e:"Jerusalén está en Oriente Próximo, cerca del mar Mediterráneo."},
+{q:"¿Dónde está Antioquía, gran ciudad siria, tomada por árabes (637) y recuperada en 969?",x:915,y:348,r:31,e:"Antioquía está en el sur de la actual Turquía, cerca de Siria."},
+{q:"¿Dónde está Manzikert, batalla perdida ante los selyúcidas en 1071?",x:1011,y:254,r:31,e:"Manzikert está en el este de Turquía, cerca del lago Van."},
+{q:"¿Dónde está Nicea, capital del imperio en el exilio tras 1204?",x:784,y:273,r:31,e:"Nicea (İznik) está en el noroeste de Turquía, junto a un lago."},
+{q:"¿Dónde está Trebisonda, imperio griego del mar Negro?",x:952,y:226,r:31,e:"Trebisonda está en la costa turca del mar Negro."},
+{q:"¿Dónde está Tesalónica, segunda ciudad del imperio en los Balcanes?",x:666,y:279,r:31,e:"Tesalónica está en el norte de Grecia, junto al mar Egeo."}
+]};
