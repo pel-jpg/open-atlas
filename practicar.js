@@ -24,6 +24,7 @@
   '.pr-card{min-height:190px;display:flex;align-items:center;justify-content:center;text-align:center;background:#fff;border:1px solid rgba(34,48,31,.3);border-radius:6px;padding:22px;font-size:19px;line-height:1.4;cursor:pointer;font-family:"Fraunces",serif;margin-bottom:12px}'+
   '.pr-card.back{background:#ECE4D2;font-family:"IBM Plex Sans",sans-serif;font-size:17px}'+
   '.pr-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.pr-sc{font-family:"Fraunces",serif;font-size:30px;margin:4px 0 8px}'+
+  '.pr-tag{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#B8862B;margin-bottom:10px}'+
   '.pr-hint{font-size:12px;color:#4B5A45;margin-top:10px}'+
   '@media print{.pr-ov,.pr-open{display:none!important}}';
   document.head.appendChild(css);
@@ -47,7 +48,7 @@
         t.o.forEach(function(o,i){ var c=''; if(answered){c=i===t.a?' ok':(i===t.sel?' ko':'');} h+='<button class="pr-o'+c+'" data-o="'+i+'"'+(answered?' disabled':'')+'>'+esc(o)+'</button>'; });
         if(answered){ h+='<p class="pr-e">'+(t.sel===t.a?'<b>¡Correcto!</b> ':'<b>No exactamente.</b> ')+esc(t.e||'')+'</p><button class="pr-go" data-a="next">'+(idx+1<items.length?'Siguiente':'Ver resultado')+'</button>'; } }
     } else {
-      var c=items[Math.min(idx,items.length-1)]; h+='<div class="pr-n">Tarjeta '+(idx+1)+' de '+items.length+' · toca la tarjeta para girarla</div><div class="pr-card'+(flip?' back':'')+'" data-a="flip" tabindex="0" role="button" aria-label="Girar tarjeta">'+esc(flip?c.b:c.f)+'</div>'+
+      var c=items[Math.min(idx,items.length-1)]; h+='<div class="pr-n">Tarjeta '+(idx+1)+' de '+items.length+' · toca la tarjeta para ver la '+(flip?'pregunta':'respuesta')+'</div><div class="pr-card'+(flip?' back':'')+'" data-a="flip" tabindex="0" role="button" aria-label="Girar tarjeta"><div><span class="pr-tag">'+(flip?'Respuesta':'Pregunta')+'</span>'+esc(flip?c.b:c.f)+'</div></div>'+
         '<div class="pr-row"><button class="pr-go alt" data-a="prev">Anterior</button><button class="pr-go" data-a="nextc">Siguiente</button><button class="pr-go alt" data-a="shuf">Barajar</button></div><p class="pr-hint">Teclado: ← → para moverte, espacio para girar.</p>';
     }
     box.innerHTML=h+'</div>';
