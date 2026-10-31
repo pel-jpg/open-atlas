@@ -49,7 +49,7 @@
         if(answered){ h+='<p class="pr-e">'+(t.sel===t.a?'<b>¡Correcto!</b> ':'<b>No exactamente.</b> ')+esc(t.e||'')+'</p><button class="pr-go" data-a="next">'+(idx+1<items.length?'Siguiente':'Ver resultado')+'</button>'; } }
     } else {
       var c=items[Math.min(idx,items.length-1)]; h+='<div class="pr-n">Tarjeta '+(idx+1)+' de '+items.length+' · toca la tarjeta para ver la '+(flip?'pregunta':'respuesta')+'</div><div class="pr-card'+(flip?' back':'')+'" data-a="flip" tabindex="0" role="button" aria-label="Girar tarjeta"><div><span class="pr-tag">'+(flip?'Respuesta':'Pregunta')+'</span>'+esc(flip?c.b:c.f)+'</div></div>'+
-        '<div class="pr-row"><button class="pr-go alt" data-a="prev">Anterior</button><button class="pr-go" data-a="nextc">Siguiente</button><button class="pr-go alt" data-a="shuf">Barajar</button></div><p class="pr-hint">Teclado: ← → para moverte, espacio para girar.</p>';
+        '<div class="pr-row"><button class="pr-go alt" data-a="prev">Anterior</button><button class="pr-go" data-a="nextc">Siguiente</button></div><p class="pr-hint">Teclado: ← → para moverte, espacio para girar.</p>';
     }
     box.innerHTML=h+'</div>';
     var f=box.querySelector('.pr-card,.pr-o:not(:disabled),.pr-go'); if(f&&mode==='cards') f.focus();
@@ -68,7 +68,7 @@
       if(b.dataset.m){mode=b.dataset.m;start();return;} if(b.dataset.s){scope=b.dataset.s;start();return;}
       if(b.dataset.o!==undefined&&!answered){var it=items[idx];it.sel=+b.dataset.o;answered=true;if(it.sel===it.a)score++;draw();return;}
       var a=b.dataset.a; if(a==='next'){idx++;answered=false;draw();} else if(a==='again'){start();}
-      else if(a==='flip'){flip=!flip;draw();} else if(a==='nextc'){idx=(idx+1)%items.length;flip=false;draw();} else if(a==='prev'){idx=(idx-1+items.length)%items.length;flip=false;draw();} else if(a==='shuf'){start();}
+      else if(a==='flip'){flip=!flip;draw();} else if(a==='nextc'){idx=(idx+1)%items.length;flip=false;draw();} else if(a==='prev'){idx=(idx-1+items.length)%items.length;flip=false;draw();}
     });
     document.addEventListener('keydown',key); start();
   };
