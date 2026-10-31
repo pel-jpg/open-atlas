@@ -1,0 +1,30 @@
+window.QUIZ={kmu:4.00,
+cards:[
+{f:"¿Qué hizo Lutero el 31 de octubre de 1517?",b:"Publicó en Wittenberg sus 95 tesis contra la venta de indulgencias; es el inicio simbólico de la Reforma."},
+{f:"¿Qué defendía Lutero?",b:"Que la salvación se alcanza solo por la fe y que la autoridad es la Biblia, que tradujo al alemán."},
+{f:"¿Por qué se llama «protestantes» a los reformados?",b:"Porque en la Dieta de Espira (1529) los príncipes luteranos protestaron contra la orden de volver al catolicismo."},
+{f:"¿Qué fue la Guerra de los Campesinos (1524–1525)?",b:"Un levantamiento de campesinos alemanes que invocaban la Reforma y fue aplastado por los príncipes."},
+{f:"¿Quién fue Juan Calvino y qué defendía?",b:"Un reformador francés que desde Ginebra predicó la predestinación y una Iglesia austera; su doctrina se extendió por Suiza, Francia, Escocia y los Países Bajos."},
+{f:"¿Por qué nació la Iglesia anglicana?",b:"Porque Enrique VIII rompió con Roma por su divorcio y se proclamó jefe de la Iglesia (Acta de Supremacía, 1534)."},
+{f:"¿Qué estableció la Paz de Augsburgo (1555)?",b:"Que cada príncipe alemán eligiera entre catolicismo y luteranismo y sus súbditos lo siguieran: «cuius regio, eius religio»."},
+{f:"¿Qué fue el Concilio de Trento (1545–1563)?",b:"La gran reunión de la Iglesia católica que reafirmó su doctrina y reformó la formación del clero: la base de la Contrarreforma."},
+{f:"¿Qué fue la Compañía de Jesús?",b:"Una orden fundada por Ignacio de Loyola (aprobada en 1540) que creó colegios y recuperó territorios para el catolicismo."},
+{f:"¿Qué fue la matanza de San Bartolomé (1572)?",b:"El asesinato de miles de hugonotes (calvinistas franceses) en París y otras ciudades."},
+{f:"¿Qué estableció el Edicto de Nantes (1598)?",b:"Enrique IV concedió libertad de culto a los hugonotes y puso fin a las guerras de religión en Francia."},
+{f:"¿Por qué se rebelaron los Países Bajos contra Felipe II?",b:"Por el calvinismo, los impuestos y la defensa de sus privilegios; las provincias del norte formaron la Unión de Utrecht (1579) y se independizaron."},
+{f:"¿Qué fue la Armada Invencible (1588)?",b:"La flota con la que Felipe II intentó invadir Inglaterra; fracasó por los temporales y los ataques ingleses."},
+{f:"¿Cómo empezó la Guerra de los Treinta Años?",b:"Con la Defenestración de Praga (1618), cuando nobles protestantes de Bohemia se rebelaron contra los Habsburgo."},
+{f:"¿Qué estableció la Paz de Westfalia (1648)?",b:"Reconoció la independencia de las Provincias Unidas y de Suiza, extendió la tolerancia a los calvinistas en el Imperio y dio territorios a Suecia y Francia."}
+],
+pins:[
+{q:"¿Dónde está Wittenberg, donde Lutero publicó sus 95 tesis?",x:569,y:362,r:31,e:"Wittenberg está en el este de Alemania, junto al río Elba."},
+{q:"¿Dónde está Worms, donde Lutero se negó a retractarse ante Carlos V?",x:494,y:425,r:31,e:"Worms está en el oeste de Alemania, junto al Rin."},
+{q:"¿Dónde está Ginebra, la «Roma protestante» de Calvino?",x:449,y:519,r:31,e:"Ginebra está en el oeste de Suiza, junto al lago Lemán."},
+{q:"¿Dónde está Trento, sede del concilio de la Contrarreforma?",x:545,y:524,r:31,e:"Trento está en el norte de Italia, en los Alpes."},
+{q:"¿Dónde está Londres, capital de la Inglaterra anglicana?",x:348,y:363,r:31,e:"Londres está en el sureste de Inglaterra."},
+{q:"¿Dónde está Edimburgo, donde predicó John Knox?",x:314,y:232,r:31,e:"Edimburgo, capital de Escocia, está en la costa este."},
+{q:"¿Dónde está París, donde ocurrió la matanza de San Bartolomé?",x:384,y:441,r:31,e:"París está en el norte de Francia."},
+{q:"¿Dónde está Praga, donde empezó la Guerra de los Treinta Años?",x:602,y:411,r:31,e:"Praga, capital de Bohemia, está en el oeste de la actual Chequia."},
+{q:"¿Dónde está Amberes, saqueada por tropas españolas en 1576?",x:425,y:378,r:31,e:"Amberes está en el norte de Bélgica."},
+{q:"¿Dónde está Roma, sede del papa y de los jesuitas?",x:575,y:639,r:31,e:"Roma está en el centro de Italia."}
+]};
