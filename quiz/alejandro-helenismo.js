@@ -57,4 +57,16 @@ cards:[
 {s:4,f:'¿Quién fue Hierón II de Siracusa?',b:'El rey de Siracusa entre 270 y 215 a. C., aliado de Roma.'},
 {s:4,f:'¿Qué pasó con Sicilia tras la primera guerra púnica (241 a. C.)?',b:'El resto de la isla pasó a Roma y fue su primera provincia.'},
 {s:4,f:'¿Quién fue Arquímedes y dónde vivió?',b:'Un sabio del helenismo que vivió en Siracusa, en Sicilia.'}
+],
+pins:[
+{s:0,q:'¿Dónde está Pela, la capital del reino de Macedonia?',x:313,y:171,r:26,e:'Pela fue la capital de Macedonia y la ciudad donde nació Alejandro.'},
+{s:0,q:'¿Dónde está Siracusa, la ciudad griega más importante de Sicilia?',x:195,y:211,r:26,e:'Siracusa dirigía a los griegos de Sicilia frente a Cartago.'},
+{s:0,q:'¿Dónde está Queronea, donde Filipo II venció a las ciudades griegas en el 338 a. C.?',x:308,y:213,r:26,e:'Queronea está en Beocia, en la Grecia central.'},
+{s:1,q:'¿Dónde está Issos, donde Alejandro venció a Darío III en el 333 a. C.?',x:495,y:272,r:26,e:'Issos está en el sur de la actual Turquía, junto al golfo de Iskenderun.'},
+{s:1,q:'¿Dónde está Tiro, la ciudad fenicia que Alejandro asedió?',x:475,y:336,r:26,e:'Tiro estaba en una isla frente a la costa fenicia; Alejandro construyó un dique para tomarla.'},
+{s:1,q:'¿Dónde está Alejandría, la ciudad que Alejandro fundó en Egipto?',x:389,y:364,r:26,e:'Alejandría está en el delta del Nilo, en la costa mediterránea.'},
+{s:1,q:'¿Dónde está Gaugamela, la batalla decisiva contra Darío III en el 331 a. C.?',x:601,y:284,r:26,e:'Gaugamela estaba en el norte de Mesopotamia, cerca de la actual Mosul.'},
+{s:2,q:'¿Dónde está Babilonia, donde murió Alejandro en el 323 a. C.?',x:616,y:356,r:26,e:'Babilonia, en Mesopotamia, junto al río Éufrates.'},
+{s:2,q:'¿Dónde está Persépolis, la capital ceremonial del imperio persa?',x:751,y:400,r:26,e:'Persépolis estaba en el sur de Irán y fue incendiada en el 330 a. C.'},
+{s:4,q:'¿Dónde está Pérgamo, capital de un reino helenístico independiente?',x:371,y:214,r:26,e:'Pérgamo, en el oeste de Asia Menor, tuvo una gran biblioteca rival de la de Alejandría.'}
 ]};
