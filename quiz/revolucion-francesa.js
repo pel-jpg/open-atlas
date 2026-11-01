@@ -1,0 +1,32 @@
+window.QUIZ={kmu:1.64,
+cards:[
+{f:"¿Por qué convocó Luis XVI los Estados Generales en 1789?",b:"Por la crisis financiera de la monarquía y las malas cosechas; no se reunían desde 1614."},
+{f:"¿Cuáles eran los tres estamentos de la sociedad del Antiguo Régimen?",b:"El clero, la nobleza y el Tercer Estado (la gran mayoría: campesinos, burgueses y artesanos)."},
+{f:"¿Qué fue el Juramento del Juego de Pelota (junio de 1789)?",b:"Los diputados del Tercer Estado, proclamados Asamblea Nacional, juraron no separarse hasta dar una Constitución a Francia."},
+{f:"¿Qué ocurrió el 14 de julio de 1789?",b:"El pueblo de París tomó la Bastilla, la prisión-fortaleza símbolo del poder absoluto del rey."},
+{f:"¿Qué aprobó la Asamblea en agosto de 1789?",b:"La abolición de los privilegios feudales y la Declaración de los Derechos del Hombre y del Ciudadano."},
+{f:"¿Qué eran los departamentos?",b:"Las nuevas divisiones administrativas de tamaño parecido que sustituyeron a las provincias en 1790."},
+{f:"¿Qué fue la fuga de Varennes (junio de 1791)?",b:"El intento de Luis XVI de huir al extranjero; fue detenido en Varennes y devuelto a París, lo que destruyó la confianza en él."},
+{f:"¿Qué estableció la Constitución de 1791?",b:"Una monarquía constitucional, en la que el rey compartía el poder con una asamblea elegida."},
+{f:"¿Por qué Francia declaró la guerra a Austria en 1792?",b:"Porque los monarcas europeos veían la Revolución como una amenaza y temían su extensión; Prusia se unió a Austria."},
+{f:"¿Qué fue la batalla de Valmy (20 de septiembre de 1792)?",b:"La victoria francesa que detuvo la invasión austro-prusiana; al día siguiente se proclamó la República."},
+{f:"¿Qué territorios se anexionó Francia en 1792–1793?",b:"Saboya y Niza, y ocupó Bélgica tras la victoria de Jemappes."},
+{f:"¿Cuándo fue ejecutado Luis XVI?",b:"El 21 de enero de 1793, en la guillotina, tras ser juzgado por la Convención."},
+{f:"¿Qué fue la Vendée?",b:"Una región del oeste donde campesinos católicos y monárquicos se sublevaron contra la Convención en 1793."},
+{f:"¿Qué fue el Terror (1793–1794)?",b:"El periodo en que el Comité de Salud Pública, dominado por Robespierre, ejecutó a miles de supuestos enemigos de la Revolución."},
+{f:"¿Cómo terminó el Terror?",b:"El 9 de termidor (27 de julio de 1794) Robespierre fue derrocado y ejecutado."},
+{f:"¿Qué fueron las repúblicas hermanas?",b:"Estados aliados creados por Francia en los territorios conquistados: la Bátava, la Cisalpina, la Ligur, la Helvética y la Romana."},
+{f:"¿Qué ocurrió el 18 de brumario (noviembre de 1799)?",b:"El golpe de Estado de Napoleón Bonaparte, que acabó con el Directorio y puso fin a la Revolución."}
+],
+pins:[
+{q:"¿Dónde está París, capital de la Revolución?",x:430,y:348,r:31,e:"París está en el norte de Francia, junto al río Sena."},
+{q:"¿Dónde está Versalles, donde se juró el Juego de Pelota?",x:420,y:352,r:31,e:"Versalles está al suroeste de París."},
+{q:"¿Dónde está Varennes, donde fue detenido el rey?",x:550,y:325,r:31,e:"Varennes está en el noreste de Francia, cerca de la frontera con Bélgica."},
+{q:"¿Dónde está Valmy, victoria sobre los austro-prusianos?",x:538,y:335,r:31,e:"Valmy está en el noreste de Francia, en la región de Champaña."},
+{q:"¿Dónde está Lyon, ciudad federalista sometida en 1793?",x:541,y:561,r:31,e:"Lyon está en el sureste de Francia, junto a los ríos Ródano y Saona."},
+{q:"¿Dónde está Tolón, puerto sitiado donde destacó Napoleón?",x:594,y:740,r:31,e:"Tolón está en la costa mediterránea del sur de Francia."},
+{q:"¿Dónde está Cholet, batalla de la Vendée?",x:276,y:462,r:31,e:"Cholet está en el oeste de Francia, cerca del río Loira."},
+{q:"¿Dónde está Bruselas, capital de Bélgica, ocupada por Francia?",x:520,y:214,r:31,e:"Bruselas está en el centro de Bélgica."},
+{q:"¿Dónde está Milán, capital de la República Cisalpina?",x:748,y:576,r:31,e:"Milán está en el norte de Italia, en la llanura del Po."},
+{q:"¿Dónde está Estrasburgo, ciudad fronteriza de Alsacia, junto al Rin?",x:672,y:367,r:31,e:"Estrasburgo está en el este de Francia, en la frontera con Alemania."}
+]};
