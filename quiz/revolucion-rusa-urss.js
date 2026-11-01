@@ -1,0 +1,33 @@
+window.QUIZ={kmu:9.92,
+cards:[
+{f:"¿Qué fue la Revolución de Febrero de 1917?",b:"Una huelga general y un motín de soldados en Petrogrado que obligaron al zar Nicolás II a abdicar; se formó un Gobierno Provisional."},
+{f:"¿Qué eran los soviets?",b:"Consejos de obreros, soldados y campesinos que tenían un poder paralelo al del Gobierno Provisional."},
+{f:"¿Quién era Lenin y qué prometió en 1917?",b:"El líder de los bolcheviques; prometió paz, tierra para los campesinos y control obrero de las fábricas («Tesis de abril»)."},
+{f:"¿Qué fue la Revolución de Octubre?",b:"El golpe de los bolcheviques, que tomaron el Palacio de Invierno en Petrogrado (noviembre de 1917 en el calendario occidental) y formaron un gobierno soviético."},
+{f:"¿Qué estableció el Tratado de Brest-Litovsk (1918)?",b:"La paz con Alemania: Rusia perdió Polonia, los países bálticos, Finlandia, Ucrania y parte del Cáucaso."},
+{f:"¿Quiénes se enfrentaron en la guerra civil rusa (1918–1921)?",b:"Los rojos (bolcheviques, con el Ejército Rojo de Trotski) contra los blancos (monárquicos, liberales y militares), con intervención de potencias aliadas."},
+{f:"¿Qué fue el comunismo de guerra?",b:"La política económica de la guerra civil: requisas de grano, nacionalización de la industria y reparto del trabajo."},
+{f:"¿Qué fue la NEP (1921)?",b:"La Nueva Política Económica de Lenin, que permitió un pequeño comercio privado y frenó la crisis tras la revuelta de Kronstadt."},
+{f:"¿Cuándo se creó la URSS y con qué repúblicas?",b:"En diciembre de 1922, con Rusia, Ucrania, Bielorrusia y Transcaucasia."},
+{f:"¿Cómo llegó Stalin al poder?",b:"Tras la muerte de Lenin (1924), se impuso a Trotski y a otros dirigentes y concentró el poder en el Partido."},
+{f:"¿Qué eran los planes quinquenales?",b:"Los planes de industrialización forzosa de Stalin desde 1928, con la colectivización del campo."},
+{f:"¿Qué fue el Gulag?",b:"El sistema de campos de trabajo forzado donde fueron enviados millones de personas, sobre todo durante las purgas de 1936–1938."},
+{f:"¿Qué fue el Pacto Mólotov-Ribbentrop (1939)?",b:"El pacto de no agresión entre la URSS y Alemania, con un protocolo secreto para repartirse Europa oriental."},
+{f:"¿Qué fue la Operación Barbarroja?",b:"La invasión alemana de la URSS, el 22 de junio de 1941."},
+{f:"¿Por qué fue decisiva la batalla de Stalingrado (1942–43)?",b:"La derrota alemana, con el cerco del VI Ejército, cambió el curso de la guerra y empezó el avance soviético hacia Berlín."},
+{f:"¿Qué fue el Pacto de Varsovia (1955)?",b:"La alianza militar de la URSS y los países comunistas de Europa oriental, frente a la OTAN."},
+{f:"¿Qué fueron la perestroika y la glasnost?",b:"Las reformas de Gorbachov: reestructuración económica (perestroika) y transparencia política (glasnost)."},
+{f:"¿Cómo terminó la URSS?",b:"Tras el golpe fallido de agosto de 1991, los dirigentes de Rusia, Ucrania y Bielorrusia firmaron el Acuerdo de Belavezha; la URSS dejó de existir el 26 de diciembre de 1991."}
+],
+pins:[
+{q:"¿Dónde está Moscú, capital de la URSS?",x:357,y:249,r:31,e:"Moscú está en el oeste de Rusia, en la región central."},
+{q:"¿Dónde está San Petersburgo, Petrogrado o Leningrado, cuna de la Revolución?",x:349,y:186,r:31,e:"San Petersburgo está en el noroeste de Rusia, en la costa del golfo de Finlandia."},
+{q:"¿Dónde está Ekaterimburgo, ciudad de la ejecución de la familia imperial?",x:492,y:295,r:31,e:"Ekaterimburgo está en los montes Urales, en el centro de Rusia."},
+{q:"¿Dónde está Brest-Litovsk, donde se firmó la paz con Alemania en 1918?",x:260,y:223,r:31,e:"Brest está en la frontera entre Bielorrusia y Polonia."},
+{q:"¿Dónde está Kiev, capital de Ucrania?",x:283,y:269,r:31,e:"Kiev está en el centro-norte de Ucrania, junto al río Dniéper."},
+{q:"¿Dónde está Stalingrado, hoy Volgogrado, gran victoria soviética?",x:358,y:341,r:31,e:"Stalingrado está junto al río Volga, en el sur de Rusia."},
+{q:"¿Dónde está Berlín, tomada por el Ejército Rojo en 1945?",x:217,y:167,r:31,e:"Berlín está en el noreste de Alemania."},
+{q:"¿Dónde está Omsk, capital de Kolchak en la guerra civil?",x:567,y:328,r:31,e:"Omsk está en el sur de Siberia occidental."},
+{q:"¿Dónde está Vladivostok, puerto del Pacífico, final del Transiberiano?",x:1003,y:298,r:31,e:"Vladivostok está en el extremo sureste de Rusia, junto al mar de Japón."},
+{q:"¿Dónde está Kabul, capital de Afganistán, invadida en 1979?",x:511,y:558,r:31,e:"Kabul está en el este de Afganistán, entre montañas."}
+]};
