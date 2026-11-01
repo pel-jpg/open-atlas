@@ -1,0 +1,31 @@
+window.QUIZ={kmu:11.77,
+cards:[
+{f:"¿Quién fue Gengis Kan?",b:"Temüjin, el jefe que unificó las tribus mongolas y en 1206 fue proclamado Gengis Kan («gobernante universal») en un kurultai."},
+{f:"¿Por qué era tan eficaz el ejército mongol?",b:"Por su caballería ligera con arcos, su gran movilidad, su disciplina (decenas, centenas, millares) y los ascensos por mérito."},
+{f:"¿Qué ciudad china tomó Gengis Kan en 1215?",b:"Zhongdu, la capital del Imperio Jin, en el lugar de la actual Pekín."},
+{f:"¿Qué provocó la invasión mongola de Asia Central?",b:"El sha de Joresmia mandó matar a unos mercaderes mongoles; Gengis Kan respondió arrasando Bujará, Samarcanda, Urgench, Merv y Nishapur (1219–1221)."},
+{f:"¿Qué fue la batalla de Kalka (1223)?",b:"La victoria de los generales Yebe y Subotai sobre rusos y cumanos, primer contacto de los mongoles con Europa oriental."},
+{f:"¿Quién sucedió a Gengis Kan?",b:"Su hijo Ögedei, que fundó Karakórum (1235) y destruyó el Imperio Jin (1234)."},
+{f:"¿Qué conquistó Batu Kan entre 1237 y 1240?",b:"Los principados rusos: Riazán, Vladimir y Kiev; de ahí nació el dominio mongol sobre Rusia, la Horda de Oro."},
+{f:"¿Qué pasó en Legnica y Mohi (1241)?",b:"Los mongoles derrotaron a polacos y alemanes en Legnica y a los húngaros en Mohi, pero se retiraron al morir el gran kan Ögedei."},
+{f:"¿Qué destruyó Hulagu en 1258?",b:"Bagdad: acabó con el califato abasí y la ciudad fue saqueada."},
+{f:"¿Qué fue la batalla de Ain Yalut (1260)?",b:"La derrota de un ejército mongol ante los mamelucos de Egipto, que frenó el avance hacia el Mediterráneo."},
+{f:"¿Cuáles fueron los cuatro kanatos?",b:"La Dinastía Yuan (China y Mongolia), el Kanato de Chagatai (Asia Central), el Ilkanato (Persia) y la Horda de Oro (Rusia y estepas)."},
+{f:"¿Qué logró Kublai Kan?",b:"Completó la conquista de China (los Song cayeron en 1279), fundó la Dinastía Yuan y trasladó la capital a Dadu (Pekín)."},
+{f:"¿Por qué fracasaron las invasiones de Japón (1274 y 1281)?",b:"Por los fuertes temporales (los «kamikaze», «viento divino») que destruyeron las flotas mongolas."},
+{f:"¿Qué fue la Pax Mongolica?",b:"El periodo de paz y comercio seguro entre Asia y Europa gracias al dominio mongol, que favoreció la Ruta de la Seda y viajes como el de Marco Polo."},
+{f:"¿Cómo terminó el dominio mongol en China?",b:"En 1368 una revuelta expulsó a los Yuan y fundó la Dinastía Ming."},
+{f:"¿Qué fue la Horda de Oro y cómo terminó su dominio en Rusia?",b:"El kanato mongol de las estepas del oeste, al que pagaban tributo los príncipes rusos; Moscú dejó de pagarlo en 1480 (río Ugra)."}
+],
+pins:[
+{q:"¿Dónde está Karakórum, capital del Imperio mongol?",x:758,y:230,r:31,e:"Karakórum estuvo en el centro de Mongolia, en el valle del río Orjón."},
+{q:"¿Dónde está Pekín, capital de los Yuan (Dadu)?",x:870,y:262,r:31,e:"Pekín está en el noreste de China, cerca de la costa del mar de Bohai."},
+{q:"¿Dónde está Samarcanda, arrasada en 1220 y capital de Tamerlán?",x:520,y:319,r:31,e:"Samarcanda está en el actual Uzbekistán, en Asia Central."},
+{q:"¿Dónde está Bagdad, saqueada por Hulagu en 1258?",x:339,y:334,r:31,e:"Bagdad está en el centro de Irak, junto al río Tigris."},
+{q:"¿Dónde está Kiev, tomada por Batu en 1240?",x:323,y:145,r:31,e:"Kiev, hoy capital de Ucrania, está junto al río Dniéper."},
+{q:"¿Dónde está Moscú, principado ruso que dejó de pagar tributo en 1480?",x:384,y:120,r:31,e:"Moscú está en el centro de la Rusia europea."},
+{q:"¿Dónde está Mohi, batalla contra los húngaros (1241)?",x:260,y:132,r:31,e:"Mohi está en el noreste de la actual Hungría."},
+{q:"¿Dónde está Hangzhou, capital de los Song del Sur, tomada en 1276?",x:937,y:331,r:31,e:"Hangzhou está en la costa este de China, al sur de Shanghái."},
+{q:"¿Dónde está Ain Yalut, derrota mongola ante los mamelucos (1260)?",x:270,y:310,r:31,e:"Ain Yalut está en Palestina, entre el Mediterráneo y el río Jordán."},
+{q:"¿Dónde está Delhi, saqueada por Tamerlán en 1398?",x:593,y:429,r:31,e:"Delhi está en el norte de India, junto al río Yamuna."}
+]};
