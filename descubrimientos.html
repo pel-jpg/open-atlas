@@ -78,6 +78,7 @@
   .fort{fill:#241b12;stroke:#fff;stroke-width:.6;}
   .star{fill:#fff;stroke:#241b12;stroke-width:1;}
   .evlabel{fill:#1b1409;font-weight:700;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.9);stroke-width:2.4px;}
+  g:has(> path.star) > .evlabel{font-weight:600;font-style:italic;font-family:'Fraunces',Georgia,serif;}
   .reg{fill:#2b2316;font-weight:600;font-style:italic;letter-spacing:1.5px;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.65);stroke-width:2.5px;}
   .sea-label{fill:#d7e4ee;font-weight:600;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;opacity:.85;}
   .cdot{fill:#241b12;stroke:#ECE4D2;stroke-width:.9;}
@@ -178,7 +179,7 @@
 <g class="city" data-from="4" data-to="4"><rect class="fort" x="984.7" y="293.8" width="5" height="5"/><text class="clabel" x="993.2" y="300.3" font-size="9">Ormuz</text></g>
 <g class="city" data-from="4" data-to="4"><rect class="fort" x="912.1" y="431.4" width="5" height="5"/><text class="clabel" x="920.6" y="437.9" font-size="9">Mombasa</text></g>
 <g class="city ev" data-from="0" data-to="0"><path class="star" d="M868.4,228.6 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="878.4" y="214.6" text-anchor="start" font-size="9">Caída de Constantinopla (1453)</text></g>
-<g class="city ev" data-from="1" data-to="1"><path class="star" d="M720.2,254.3 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="730.2" y="242.3" text-anchor="start" font-size="9">Ceuta (1415)</text></g>
+<g class="city ev" data-from="1" data-to="1"><path class="star" d="M720.2,254.3 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="733.4" y="256.7" text-anchor="start" font-size="9">Ceuta (1415)</text></g>
 <g class="city ev" data-from="1" data-to="1"><path class="star" d="M823.0,570.8 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="833.0" y="574.8" text-anchor="start" font-size="9">Cabo de Buena Esperanza (1488)</text></g>
 <g class="city ev" data-from="1" data-to="1"><path class="star" d="M1070.7,367.5 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="1080.7" y="363.5" text-anchor="start" font-size="9">Calicut (1498)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M421.3,310.1 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="411.3" y="296.1" text-anchor="end" font-size="9">Colón llega a América (1492)</text></g>
@@ -243,13 +244,14 @@ function drawLegend(i){
     const sw=document.createElementNS(NS,'rect');
     [['x',x0+10],['y',y],['width',22],['height',13],['stroke','#241b12'],['stroke-width','.5']].forEach(([a,v])=>sw.setAttribute(a,v));
     const fills={hat14:'url(#hat14)',hatgr:'url(#hatgr)',hatlim:'url(#hatlim)',hateph:'url(#hateph)'};
-    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);
+    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);if(c==='star'){sw.remove();const st=document.createElementNS(NS,'path');st.setAttribute('d','M0,0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z');st.setAttribute('transform','translate('+(+sw.getAttribute('x')+11)+','+(+sw.getAttribute('y')-0.5)+') scale(.9)');[['fill','#fff'],['stroke','#2b2a22'],['stroke-width','1']].forEach(([a,v])=>st.setAttribute(a,v));g.appendChild(st);}
     }
     const te=document.createElementNS(NS,'text');
     [['x',x0+40],['y',y+10.5],['font-size',11.5],['fill','#1b1409'],['font-family',"'IBM Plex Sans',sans-serif"]].forEach(([a,v])=>te.setAttribute(a,v));
     te.textContent=tx;g.appendChild(te);});
   svg.appendChild(g);
 }
+LEG.forEach((L,i)=>{if([...document.querySelectorAll('#mapsvg path.star')].some(s=>{const p=s.closest('[data-from]');return p&&+p.dataset.from<=i&&i<=+p.dataset.to}))L.push(['star','Acontecimiento destacado (nombre en cursiva)'])});
 show(0);
 </script>
 <script src="quiz/descubrimientos.js"></script><script src="practicar.js"></script><script src="declutter-hist.js"></script>

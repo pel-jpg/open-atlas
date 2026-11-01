@@ -78,6 +78,7 @@
   .fort{fill:#241b12;stroke:#fff;stroke-width:.6;}
   .star{fill:#fff;stroke:#241b12;stroke-width:1;}
   .evlabel{fill:#1b1409;font-weight:700;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.9);stroke-width:2.4px;}
+  g:has(> path.star) > .evlabel{font-weight:600;font-style:italic;font-family:'Fraunces',Georgia,serif;}
   .reg{fill:#2b2316;font-weight:600;font-style:italic;letter-spacing:1.5px;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.65);stroke-width:2.5px;}
   .sea-label{fill:#d7e4ee;font-weight:600;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;opacity:.85;}
   .cdot{fill:#241b12;stroke:#ECE4D2;stroke-width:.9;}
@@ -178,11 +179,11 @@
 <g class="city" data-from="3" data-to="3"><circle class="cdot" cx="388.9" cy="492.4" r="2.6"/><text class="clabel" x="394.9" y="495.4" text-anchor="start" font-size="9.5">Argos</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M455.9,460.8 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="465.9" y="454.8" text-anchor="start" font-size="9">Maratón (490 a. C.)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M383.5,413.3 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="373.5" y="407.3" text-anchor="end" font-size="9">Termópilas (480 a. C.)</text></g>
-<g class="city ev" data-from="2" data-to="2"><path class="star" d="M430.9,473.1 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="442.9" y="501.1" text-anchor="start" font-size="9">Salamina (480 a. C.)</text></g>
+<g class="city ev" data-from="2" data-to="2"><path class="star" d="M430.9,473.1 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="392.5" y="502.2" text-anchor="start" font-size="9">Salamina (480 a. C.)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M419.7,454.4 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="407.7" y="464.4" text-anchor="end" font-size="9">Platea (479 a. C.)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M616.2,498.9 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="626.2" y="510.9" text-anchor="start" font-size="9">Mícale (479 a. C.)</text></g>
 <g class="city ev" data-from="4" data-to="4"><path class="star" d="M398.6,435.0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="388.6" y="425.0" text-anchor="end" font-size="9">Queronea (338 a. C.)</text></g>
-<g class="city ev" data-from="0" data-to="0"><path class="star" d="M578.7,343.0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="588.7" y="331.0" text-anchor="start" font-size="9">Guerra de Troya (según la tradición)</text></g>
+<g class="city ev" data-from="0" data-to="0"><path class="star" d="M578.7,343.0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="591.6" y="345.4" text-anchor="start" font-size="9">Guerra de Troya (según la tradición)</text></g>
 </g>
 </svg>
   </div>
@@ -233,12 +234,13 @@ function drawLegend(i){
     const sw=document.createElementNS(NS,'rect'),y=y0+10+k*rh;
     [['x',x0+10],['y',y],['width',22],['height',13],['stroke','#241b12'],['stroke-width','.5']].forEach(([a,v])=>sw.setAttribute(a,v));
     const fills={hat14:'url(#hat14)',hatgr:'url(#hatgr)',hatlim:'url(#hatlim)',hatpe:'url(#hatpe)',hatmn:'url(#hatmn)',hatne:'url(#hatne)',hateph:'url(#hateph)'};
-    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);
+    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);if(c==='star'){sw.remove();const st=document.createElementNS(NS,'path');st.setAttribute('d','M0,0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z');st.setAttribute('transform','translate('+(+sw.getAttribute('x')+11)+','+(+sw.getAttribute('y')-0.5)+') scale(.9)');[['fill','#fff'],['stroke','#2b2a22'],['stroke-width','1']].forEach(([a,v])=>st.setAttribute(a,v));g.appendChild(st);}
     const te=document.createElementNS(NS,'text');
     [['x',x0+40],['y',y+10.5],['font-size',11.5],['fill','#1b1409'],['font-family',"'IBM Plex Sans',sans-serif"]].forEach(([a,v])=>te.setAttribute(a,v));
     te.textContent=tx;g.appendChild(te);});
   svg.appendChild(g);
 }
+LEG.forEach((L,i)=>{if([...document.querySelectorAll('#mapsvg path.star')].some(s=>{const p=s.closest('[data-from]');return p&&+p.dataset.from<=i&&i<=+p.dataset.to}))L.push(['star','Acontecimiento destacado (nombre en cursiva)'])});
 show(0);
 </script>
 <script src="quiz/grecia.js"></script><script src="practicar.js"></script><script src="declutter-hist.js"></script>

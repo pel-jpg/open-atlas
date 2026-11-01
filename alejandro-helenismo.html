@@ -78,6 +78,7 @@
   .fort{fill:#241b12;stroke:#fff;stroke-width:.6;}
   .star{fill:#fff;stroke:#241b12;stroke-width:1;}
   .evlabel{fill:#1b1409;font-weight:700;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.9);stroke-width:2.4px;}
+  g:has(> path.star) > .evlabel{font-weight:600;font-style:italic;font-family:'Fraunces',Georgia,serif;}
   .reg{fill:#2b2316;font-weight:600;font-style:italic;letter-spacing:1.5px;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.65);stroke-width:2.5px;}
   .sea-label{fill:#d7e4ee;font-weight:600;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;opacity:.85;}
   .cdot{fill:#241b12;stroke:#ECE4D2;stroke-width:.9;}
@@ -192,7 +193,7 @@
 <g class="city ev" data-from="1" data-to="1"><path class="star" d="M495.8,272.8 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="503.8" y="264.8" text-anchor="start" font-size="9">Issos (333)</text></g>
 <g class="city ev" data-from="1" data-to="2"><path class="star" d="M600.0,283.6 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="608.0" y="275.6" text-anchor="start" font-size="9">Gaugamela (331)</text></g>
 <g class="city ev" data-from="1" data-to="1"><path class="star" d="M388.7,363.8 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="378.7" y="381.8" text-anchor="end" font-size="9">Fundación de Alejandría (331)</text></g>
-<g class="city ev" data-from="2" data-to="2"><path class="star" d="M750.9,400.2 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="758.9" y="418.2" text-anchor="start" font-size="9">Incendio de Persépolis (330)</text></g>
+<g class="city ev" data-from="2" data-to="2"><path class="star" d="M750.9,400.2 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="632.3" y="408.1" text-anchor="start" font-size="9">Incendio de Persépolis (330)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M1054.3,291.0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="1046.3" y="307.0" text-anchor="end" font-size="9">Hidaspes (326)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M615.8,357.2 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="625.8" y="349.2" text-anchor="start" font-size="9">Muerte de Alejandro en Babilonia (323)</text></g>
 <g class="city ev" data-from="3" data-to="3"><path class="star" d="M424.9,226.1 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="434.9" y="218.1" text-anchor="start" font-size="9">Ipsos (301): se reparten el imperio</text></g>
@@ -252,13 +253,14 @@ function drawLegend(i){
     const sw=document.createElementNS(NS,'rect');
     [['x',x0+10],['y',y],['width',22],['height',13],['stroke','#241b12'],['stroke-width','.5']].forEach(([a,v])=>sw.setAttribute(a,v));
     const fills={hat14:'url(#hat14)',hatgr:'url(#hatgr)',hatlim:'url(#hatlim)',hatas:'url(#hatas)',hatma:'url(#hatma)',hatpe:'url(#hatpe)',hateph:'url(#hateph)'};
-    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);
+    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);if(c==='star'){sw.remove();const st=document.createElementNS(NS,'path');st.setAttribute('d','M0,0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z');st.setAttribute('transform','translate('+(+sw.getAttribute('x')+11)+','+(+sw.getAttribute('y')-0.5)+') scale(.9)');[['fill','#fff'],['stroke','#2b2a22'],['stroke-width','1']].forEach(([a,v])=>st.setAttribute(a,v));g.appendChild(st);}
     }
     const te=document.createElementNS(NS,'text');
     [['x',x0+40],['y',y+10.5],['font-size',11.5],['fill','#1b1409'],['font-family',"'IBM Plex Sans',sans-serif"]].forEach(([a,v])=>te.setAttribute(a,v));
     te.textContent=tx;g.appendChild(te);});
   svg.appendChild(g);
 }
+LEG.forEach((L,i)=>{if([...document.querySelectorAll('#mapsvg path.star')].some(s=>{const p=s.closest('[data-from]');return p&&+p.dataset.from<=i&&i<=+p.dataset.to}))L.push(['star','Acontecimiento destacado (nombre en cursiva)'])});
 show(0);
 </script>
 <script src="quiz/alejandro-helenismo.js"></script>

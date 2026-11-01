@@ -78,6 +78,7 @@
   .fort{fill:#241b12;stroke:#fff;stroke-width:.6;}
   .star{fill:#fff;stroke:#241b12;stroke-width:1;}
   .evlabel{fill:#1b1409;font-weight:700;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.9);stroke-width:2.4px;}
+  g:has(> path.star) > .evlabel{font-weight:600;font-style:italic;font-family:'Fraunces',Georgia,serif;}
   .reg{fill:#2b2316;font-weight:600;font-style:italic;letter-spacing:1.5px;font-family:'IBM Plex Sans',sans-serif;paint-order:stroke;stroke:rgba(236,228,210,.65);stroke-width:2.5px;}
   .sea-label{fill:#d7e4ee;font-weight:600;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;opacity:.85;}
   .cdot{fill:#241b12;stroke:#ECE4D2;stroke-width:.9;}
@@ -194,8 +195,8 @@
 <g class="city ev" data-from="1" data-to="1"><path class="star" d="M370.7,422.3 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="360.7" y="436.3" text-anchor="end" font-size="9">Poitiers (732)</text></g>
 <g class="city ev" data-from="3" data-to="3"><path class="star" d="M585.7,480.0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="595.7" y="470.0" text-anchor="start" font-size="9">Pavía (774)</text></g>
 <g class="city ev" data-from="3" data-to="3"><path class="star" d="M316.1,544.1 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="306.1" y="558.1" text-anchor="end" font-size="9">Roncesvalles (778)</text></g>
-<g class="city ev" data-from="3" data-to="3"><path class="star" d="M675.6,593.5 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="685.6" y="611.5" text-anchor="start" font-size="9">Coronación imperial (800)</text></g>
-<g class="city ev" data-from="4" data-to="4"><path class="star" d="M496.1,338.5 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="506.1" y="332.5" text-anchor="start" font-size="9">Tratado de Verdún (843)</text></g>
+<g class="city ev" data-from="3" data-to="3"><path class="star" d="M675.6,593.5 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="626.1" y="634.6" text-anchor="start" font-size="9">Coronación imperial (800)</text></g>
+<g class="city ev" data-from="4" data-to="4"><path class="star" d="M496.1,338.5 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="392.3" y="340.9" text-anchor="start" font-size="9">Tratado de Verdún (843)</text></g>
 <g class="city ev" data-from="2" data-to="2"><path class="star" d="M443.7,327.5 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z" transform="translate(0,-8)"/><text class="evlabel" x="433.7" y="313.5" text-anchor="end" font-size="9">Carlomagno, rey (768)</text></g>
 </g>
 </svg>
@@ -251,13 +252,14 @@ function drawLegend(i){
     const sw=document.createElementNS(NS,'rect');
     [['x',x0+10],['y',y],['width',22],['height',13],['stroke','#241b12'],['stroke-width','.5']].forEach(([a,v])=>sw.setAttribute(a,v));
     const fills={hat14:'url(#hat14)',hatgr:'url(#hatgr)',hatlim:'url(#hatlim)',hatge:'url(#hatge)',hatav:'url(#hatav)',hateph:'url(#hateph)'};
-    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);
+    sw.setAttribute('fill',fills[c]||(c==='sq'?'#241b12':c));g.appendChild(sw);if(c==='star'){sw.remove();const st=document.createElementNS(NS,'path');st.setAttribute('d','M0,0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z');st.setAttribute('transform','translate('+(+sw.getAttribute('x')+11)+','+(+sw.getAttribute('y')-0.5)+') scale(.9)');[['fill','#fff'],['stroke','#2b2a22'],['stroke-width','1']].forEach(([a,v])=>st.setAttribute(a,v));g.appendChild(st);}
     }
     const te=document.createElementNS(NS,'text');
     [['x',x0+40],['y',y+10.5],['font-size',11.5],['fill','#1b1409'],['font-family',"'IBM Plex Sans',sans-serif"]].forEach(([a,v])=>te.setAttribute(a,v));
     te.textContent=tx;g.appendChild(te);});
   svg.appendChild(g);
 }
+LEG.forEach((L,i)=>{if([...document.querySelectorAll('#mapsvg path.star')].some(s=>{const p=s.closest('[data-from]');return p&&+p.dataset.from<=i&&i<=+p.dataset.to}))L.push(['star','Acontecimiento destacado (nombre en cursiva)'])});
 show(0);
 </script>
 <script src="quiz/carolingio.js"></script><script src="practicar.js"></script><script src="declutter-hist.js"></script>
