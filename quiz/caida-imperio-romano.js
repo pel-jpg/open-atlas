@@ -11,7 +11,7 @@ cards:[
 {f:"¿Quién frenó a Atila y dónde?",b:"Fue frenado en los Campos Cataláunicos (451), en la Galia."},
 {f:"¿Cuándo termina el Imperio romano de Occidente y quién fue el último emperador?",b:"En el 476, cuando Odoacro depuso a Rómulo Augústulo en Rávena."},
 {f:"¿Por qué se toma el 476 como fin de la Edad Antigua?",b:"Porque marca la caída del imperio de Occidente; el de Oriente siguió en pie."},
-{f:"¿Qué ocurrió en Vouillé (507)?",b:"Clodoveo, rey de los francos, venció a los visigodos, que se concentraron en Hispania con capital en Toledo."},
+{f:"¿Qué ocurrió en Vouillé (507)?",b:"Clodoveo, rey de los francos, venció a los visigodos, que se concentraron en Hispania (su capital acabaría siendo Toledo, hacia mediados del siglo VI)."},
 {f:"¿Qué quería lograr Justiniano?",b:"Recuperar el Mediterráneo occidental: destruyó el reino vándalo (534) y conquistó Italia a los ostrogodos (535–554)."},
 {f:"¿Qué ocurrió en Italia en el 568?",b:"Los lombardos invadieron la península y los bizantinos perdieron gran parte de ella."}
 ],

@@ -2,7 +2,7 @@ window.QUIZ={kmu:5.23,
 cards:[
 {f:"¿Hasta dónde llegaba el dominio de Roma hacia el 264 a. C.?",b:"A toda la península italiana al sur de la línea Pisa–Rímini."},
 {f:"¿Con qué potencia chocó Roma tras dominar Italia?",b:"Con Cartago, en las guerras púnicas."},
-{f:"¿Qué conquistó Roma hacia el 133 a. C.?",b:"Sicilia, Cerdeña y Córcega, Hispania y la costa de la Galia (Narbonense). Además destruyó Corinto y Cartago (146 a. C.) y recibió el reino de Pérgamo."},
+{f:"¿Qué conquistó Roma hacia el 133 a. C.?",b:"Sicilia, Cerdeña y Córcega, Hispania. Además destruyó Corinto y Cartago (146 a. C.) y recibió el reino de Pérgamo."},
 {f:"¿Qué significa Mare Nostrum?",b:"«Nuestro mar»: el nombre romano del Mediterráneo, rodeado por el imperio en tiempos de Augusto."},
 {f:"¿Qué territorios ocupaba el imperio a la muerte de Augusto (14 d. C.)?",b:"Todo el Mediterráneo, la Galia entera, Egipto, el Danubio y la orilla izquierda del Rin."},
 {f:"¿Qué eran los reinos clientes?",b:"Reinos vecinos del imperio, aliados de Roma, que formaban una franja protectora alrededor de las fronteras."},
