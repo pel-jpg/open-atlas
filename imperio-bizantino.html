@@ -217,6 +217,6 @@ function drawLegend(i){
 LEG.forEach((L,i)=>{if([...document.querySelectorAll('#mapsvg path.star')].some(s=>{const p=s.closest('[data-from]');return p&&+p.dataset.from<=i&&i<=+p.dataset.to}))L.push(['star','Acontecimiento destacado (nombre en cursiva)'])});
 show(0);
 </script>
-<script src="quiz/imperio-bizantino.js"></script><script src="practicar.js"></script><script src="declutter-hist.js"></script>
+<script src="quiz/imperio-bizantino.js"></script><script src="practicar.js"></script><script src="declutter-hist.js"></script><script src="lugares/imperio-bizantino.js"></script><script src="lugares.js"></script>
 </body>
 </html>
