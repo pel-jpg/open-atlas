@@ -1,0 +1,33 @@
+window.QUIZ={kmu:2.15,
+cards:[
+{f:"¿Qué fue la Revolución Industrial?",b:"El paso de una economía agraria y artesanal a otra basada en máquinas, fábricas y nuevas fuentes de energía, que empezó en Gran Bretaña hacia 1760."},
+{f:"¿Por qué empezó en Gran Bretaña?",b:"Tenía carbón y hierro, una revolución agrícola que liberó mano de obra, capital de comerciantes y bancos, un imperio colonial que daba materias primas y mercados, y estabilidad política."},
+{f:"¿Qué industria se mecanizó primero?",b:"La textil, con la hiladora «spinning jenny» (hacia 1764), la «water frame» de Arkwright (1769) y el telar mecánico (1785)."},
+{f:"¿Qué aportó James Watt?",b:"Mejoró la máquina de vapor (patente de 1769), que permitió mover máquinas y fábricas en cualquier lugar con carbón, sin depender de los ríos."},
+{f:"¿Por qué fue tan importante el carbón?",b:"Era la fuente de energía de las máquinas de vapor y servía, en forma de coque, para fundir el hierro."},
+{f:"¿Qué fue el Iron Bridge (1779)?",b:"El primer puente de hierro del mundo, en Coalbrookdale (Inglaterra), símbolo de la nueva industria del hierro."},
+{f:"¿Qué fueron los primeros ferrocarriles?",b:"La línea Stockton-Darlington (1825), el primer ferrocarril público de vapor, y la de Liverpool a Manchester (1830), la primera con servicio regular de pasajeros entre dos grandes ciudades."},
+{f:"¿Qué fue el ludismo?",b:"Un movimiento de obreros que, en 1811-1812, destruyeron máquinas porque creían que les quitaban el trabajo."},
+{f:"¿Qué ocurrió en Peterloo (1819)?",b:"La caballería cargó contra una manifestación pacífica en Manchester que pedía una reforma del Parlamento."},
+{f:"¿Qué fue el Zollverein (1834)?",b:"Una unión aduanera de los estados alemanes, dirigida por Prusia, que creó un gran mercado común y favoreció la industria y el ferrocarril."},
+{f:"¿Qué mostró la Exposición Universal de Londres (1851)?",b:"El poderío industrial británico, el «taller del mundo», con grandes máquinas expuestas en el Palacio de Cristal."},
+{f:"¿Qué fue la Segunda Revolución Industrial (1870-1914)?",b:"La etapa de la electricidad, el petróleo, el acero barato y la química, con grandes empresas y bancos industriales."},
+{f:"¿Qué país superó a Gran Bretaña en producción de acero?",b:"Alemania, a finales del siglo XIX, gracias al carbón del Ruhr y al hierro de Lorena."},
+{f:"¿Quiénes eran la burguesía y el proletariado?",b:"La burguesía era la clase propietaria de fábricas, bancos y comercios; el proletariado, los obreros que vivían de un salario."},
+{f:"¿Cómo vivían los obreros en el siglo XIX?",b:"Trabajaban de 12 a 16 horas, también mujeres y niños, con salarios bajos, y vivían en barrios hacinados y sin higiene."},
+{f:"¿Qué es el Manifiesto Comunista (1848)?",b:"Un texto de Marx y Engels que explica la historia como una lucha de clases y llama a los proletarios de todos los países a unirse."},
+{f:"¿Qué fue la Primera Internacional (1864)?",b:"Una organización de trabajadores de varios países, fundada en Londres."},
+{f:"¿Qué fue la Comuna de París (1871)?",b:"Una rebelión de obreros y ciudadanos que gobernó París durante dos meses y fue aplastada por el ejército."}
+],
+pins:[
+{q:"¿Dónde está Manchester, la «Cottonópolis», capital del algodón?",x:345,y:316,r:31,e:"Manchester está en el noroeste de Inglaterra."},
+{q:"¿Dónde está Birmingham, ciudad del hierro y de la máquina de Watt?",x:349,y:368,r:31,e:"Birmingham está en el centro de Inglaterra."},
+{q:"¿Dónde está Londres, capital, sede de la Exposición Universal de 1851?",x:400,y:424,r:31,e:"Londres está en el sureste de Inglaterra, junto al río Támesis."},
+{q:"¿Dónde está Newcastle, región del carbón del noreste de Inglaterra?",x:373,y:241,r:31,e:"Newcastle está en el noreste de Inglaterra."},
+{q:"¿Dónde está Lieja, región de la fábrica Cockerill, en Bélgica?",x:582,y:480,r:31,e:"Lieja está en el este de Bélgica, junto al río Mosa."},
+{q:"¿Dónde está Essen, corazón del Ruhr, con el carbón y el acero de Krupp?",x:629,y:438,r:31,e:"Essen está en el oeste de Alemania, en la cuenca del Ruhr."},
+{q:"¿Dónde está Bilbao, puerto del mineral de hierro y de los Altos Hornos?",x:254,y:837,r:31,e:"Bilbao está en el norte de España, en la costa del mar Cantábrico."},
+{q:"¿Dónde está Barcelona, centro textil de España y primer tren español (1848)?",x:440,y:954,r:31,e:"Barcelona está en el noreste de España, en la costa mediterránea."},
+{q:"¿Dónde está Turín, ciudad del automóvil Fiat (1899)?",x:654,y:768,r:31,e:"Turín está en el noroeste de Italia, al pie de los Alpes."},
+{q:"¿Dónde está Berlín, sede de Siemens y AEG, capital de Alemania?",x:830,y:374,r:31,e:"Berlín está en el noreste de Alemania."}
+]};
