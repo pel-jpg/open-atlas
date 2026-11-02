@@ -89,46 +89,46 @@ window.LUGARES={
 },
 "Filipo II vence en Queronea (338 a. C.)": {
 "k": "Acontecimiento",
-"t": "Filipo II y su hijo Alejandro derrotaron a Atenas y Tebas. Macedonia dominó las ciudades griegas."
+"t": "Filipo reorganizó el ejército macedonio con la falange de sarisas y una caballería muy entrenada. En Queronea, Beocia, se enfrentó a Atenas, Tebas y sus aliados. Alejandro, con 18 años, mandó el ala de caballería que destruyó el Batallón Sagrado de Tebas, formado por 300 soldados. Poco después se creó la Liga de Corinto, que dio a Filipo el mando de una expedición contra Persia."
 },
 "Gránico (334)": {
 "k": "Acontecimiento",
-"t": "Primera gran victoria de Alejandro sobre los sátrapas persas en Asia Menor."
+"t": "Alejandro cruzó el Helesponto con unos 40.000 hombres. Los sátrapas persas, aconsejados por el griego Memnón de Rodas, lo esperaron en la orilla del río Gránico. Alejandro atacó de frente a caballo, estuvo a punto de morir golpeado en el casco y fue salvado por Clito. Venció y envió trofeos a Atenas. La victoria dio acceso a las ciudades griegas de Asia Menor."
 },
 "Issos (333)": {
 "k": "Acontecimiento",
-"t": "Alejandro derrotó a Darío III, que huyó dejando en su poder a su familia."
+"t": "Darío III reunió a su ejército y, tras cortar las comunicaciones de Alejandro, lo atacó en una llanura estrecha entre el mar y las montañas, donde su superioridad numérica no servía. Alejandro cargó contra el centro, donde estaba el rey. Darío huyó dejando su carro, su arco y a su familia. Alejandro trató con respeto a su madre, a su mujer y a sus hijas."
 },
 "Gaugamela (331)": {
 "k": "Acontecimiento",
-"t": "Victoria decisiva sobre Darío III en Mesopotamia. El Imperio persa dejó de tener un ejército capaz de detener a Alejandro."
+"t": "Darío escogió un llano amplio en Mesopotamia para sacar provecho de su caballería, sus carros con hoces y quince elefantes. Alejandro adoptó una formación oblicua, atrajo a la caballería persa hacia un flanco y abrió un hueco en el centro. Se lanzó hacia Darío, que huyó otra vez. El rey persa fue asesinado por uno de sus sátrapas en 330, y Alejandro se proclamó su sucesor."
 },
 "Fundación de Alejandría (331)": {
 "k": "Acontecimiento",
-"t": "Alejandro fundó la primera y más famosa de las ciudades que llevaron su nombre."
+"t": "Después de conquistar Egipto, Alejandro eligió un lugar entre el mar y el lago Mareotis, cerca de la isla de Faros, y trazó el perímetro de la ciudad. Su arquitecto Dinócrates la diseñó con calles en cuadrícula. Bajo los Ptolomeos tuvo el Museo, la Biblioteca y el Faro, de unos 100 metros. Fue la mayor ciudad griega del Mediterráneo, con una gran comunidad judía."
 },
 "Incendio de Persépolis (330)": {
 "k": "Acontecimiento",
-"t": "Tras un banquete, el palacio fue incendiado. La tradición lo presenta como venganza por la destrucción de Atenas por Jerjes."
+"t": "Alejandro entró en Persépolis, donde se guardaba un enorme tesoro. Tras un banquete, y según algunos antiguos por instigación de la cortesana Táis, él mismo prendió fuego al palacio de Jerjes. Se dice que fue una venganza por la destrucción de los templos de Atenas. Otros piensan que fue una decisión política para mostrar que el imperio persa había acabado."
 },
 "Hidaspes (326)": {
 "k": "Acontecimiento",
-"t": "Alejandro venció al rey indio Poro, que contaba con elefantes de guerra. Poco después sus tropas se negaron a seguir más al este."
+"t": "Alejandro cruzó el río Hidaspes de noche y con tormenta, lejos del campamento de Poro. El rey indio tenía unos 200 elefantes y se defendió con gran valor. Alejandro lo derrotó y, admirado, le devolvió su reino. Poco después, en el río Hifasis, sus soldados, cansados tras ocho años de campaña, se negaron a continuar. Regresó por el valle del Indo y el desierto de Gedrosia."
 },
 "Muerte de Alejandro en Babilonia (323)": {
 "k": "Acontecimiento",
-"t": "Murió con 32 años tras una fiebre. Sus generales se disputaron el imperio."
+"t": "Alejandro enfermó tras un banquete y murió el 10 u 11 de junio, con 32 años. Se discute si fue malaria, fiebre tifoidea o envenenamiento. Al preguntarle a quién dejaba el reino, habría respondido «al más fuerte». No dejó heredero adulto: su hijo, Alejandro IV, nació después de su muerte. Sus generales, los diádocos, se repartieron el imperio."
 },
 "Ipsos (301): se reparten el imperio": {
 "k": "Acontecimiento",
-"t": "Seleuco, Lisímaco y sus aliados derrotaron a Antígono el Tuerto. Se consolidaron los grandes reinos helenísticos."
+"t": "Antígono el Tuerto, que dominaba Asia, quiso reunificar el imperio. Contra él se aliaron Casandro, Lisímaco, Ptolomeo y Seleuco. En Ipsos, Frigia, la caballería de Demetrio, hijo de Antígono, persiguió demasiado lejos y dejó la infantería expuesta. Antígono murió a los 81 años. El imperio ya no volvió a unirse. Surgieron los reinos de los Ptolomeos, los Seléucidas y los Antigónidas."
 },
 "Agatocles, rey de Siracusa (304)": {
 "k": "Acontecimiento",
-"t": "El tirano Agatocles tomó el título de rey, siguiendo el ejemplo de los sucesores de Alejandro."
+"t": "Agatocles, hijo de un alfarero, llegó al poder en Siracusa con un golpe. Llevó la guerra a África y sitió Cartago. Tras 304 a. C., imitando a los diádocos, adoptó el título de rey. Es un ejemplo de cómo el modelo monárquico helenístico influyó fuera de Oriente. Hierón II, que reinó en Siracusa después, tuvo también ese título y fue aliado de Roma."
 },
 "Sicilia pasa a Roma (241)": {
 "k": "Acontecimiento",
-"t": "Tras la Primera Guerra Púnica, Cartago cedió Sicilia a Roma, que la convirtió en su primera provincia."
+"t": "Cartago perdió Sicilia al final de la Primera Guerra Púnica, tras 23 años de lucha. Roma convirtió la isla en su primera provincia, y le exigió tributo y el cultivo de trigo. Solo el reino de Siracusa, bajo Hierón II, mantuvo su independencia como aliado. Con la riqueza de Sicilia, Roma tenía una base para sus siguientes guerras en el Mediterráneo occidental."
 }
 };

@@ -77,22 +77,22 @@ window.LUGARES={
 },
 "Unificación del reino por Narmer (c. 3100 a. C.)": {
 "k": "Acontecimiento",
-"t": "Según la tradición, el rey Narmer unió el Alto y el Bajo Egipto. Su paleta conmemora su victoria."
+"t": "Hacia 3100 a. C. un rey del Alto Egipto, llamado Narmer, y a quien algunos identifican con Menes, unificó el valle y el delta. La famosa paleta de Narmer lo muestra con la corona blanca del sur y la roja del norte. Fundó Menfis en el punto de unión de las dos tierras. A partir de entonces los reyes se titularon «Señores de las Dos Tierras»."
 },
 "Pirámide de Keops, en Guiza (c. 2560 a. C.)": {
 "k": "Acontecimiento",
-"t": "La Gran Pirámide fue la mayor construida en Egipto. Alcanzó unos 146 metros de altura."
+"t": "Keops, segundo rey de la dinastía IV, hizo construir la Gran Pirámide con unos 2,3 millones de bloques de piedra, entre ellos algunos de granito traído de Asuán. Fue la construcción más alta del mundo durante casi cuatro mil años. Los obreros, que eran campesinos y artesanos, no esclavos, vivían en un poblado cerca. Cada lado de su base mide unos 230 metros."
 },
 "Mentuhotep II reunifica Egipto (c. 2050 a. C.)": {
 "k": "Acontecimiento",
-"t": "Puso fin al Primer Período Intermedio y reunió el país desde Tebas. Comenzó el Reino Medio."
+"t": "Tras la caída del Reino Antiguo, Egipto se dividió en nomos con jefes locales. Los príncipes de Heracleópolis, en el norte, y de Tebas, en el sur, se enfrentaron. Mentuhotep II, de Tebas, conquistó el norte hacia 2050 a. C. y reunificó el país. Construyó su templo funerario en Deir el-Bahari. Se le considera el fundador del Reino Medio, época de gran literatura."
 },
 "Batalla de Megido (c. 1457 a. C.)": {
 "k": "Acontecimiento",
-"t": "Tutmosis III derrotó a una coalición de ciudades cananeas. Es una de las primeras batallas bien documentadas de la historia."
+"t": "Tras la muerte de Hatshepsut, los príncipes de Canaán y Siria, dirigidos por el rey de Kadesh, se sublevaron. Tutmosis III cruzó con su ejército el paso estrecho de Aruna, por el que sus consejeros no querían ir, y sorprendió a los cananeos. Tras un asedio de siete meses, Megido se rindió. Sus anales, grabados en Karnak, son uno de los primeros relatos de una batalla."
 },
 "Batalla de Kadesh (1274 a. C.)": {
 "k": "Acontecimiento",
-"t": "Ramsés II se enfrentó al rey hitita Muwatalli II. Ambos se proclamaron vencedores."
+"t": "Ramsés II marchó a Siria con cuatro divisiones. Cayó en una trampa: dos espías hititas le hicieron creer que el rey Muwatalli estaba lejos, y los carros hititas atacaron al campamento egipcio. Ramsés resistió hasta la llegada de refuerzos. Cada bando se proclamó vencedor. Hacia 1259 se firmó un tratado, del que se conservan versiones en egipcio y en hitita."
 }
 };

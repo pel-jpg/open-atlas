@@ -93,30 +93,30 @@ window.LUGARES={
 },
 "Aníbal toma Sagunto (219 a. C.)": {
 "k": "Acontecimiento",
-"t": "Tras ocho meses de asedio, Aníbal tomó la ciudad aliada de Roma. Roma declaró la guerra a Cartago."
+"t": "Sagunto, ciudad ibérica situada al sur del Ebro, había hecho un pacto de amistad con Roma. Aníbal, que gobernaba el sur de Hispania en nombre de Cartago, la asedió durante unos ocho meses. Al caer, la ciudad fue saqueada y gran parte de su población muerta. Roma exigió que se entregara a Aníbal y, al no ser atendida, declaró la guerra. Comenzaba la Segunda Guerra Púnica."
 },
 "Desembarco de Roma en Emporion (218 a. C.)": {
 "k": "Acontecimiento",
-"t": "Cneo Cornelio Escipión desembarcó con un ejército para cortar los refuerzos de Aníbal. Comenzó así la presencia militar romana en Hispania."
+"t": "Cneo Cornelio Escipión llegó con unos 20.000 hombres a Emporion, ciudad aliada, para cortar el flujo de refuerzos desde Hispania a Aníbal, que ya estaba en Italia. Derrotó a los cartagineses en Cissa y se estableció en Tarraco. Desde entonces Roma no abandonó la península, que sería el territorio donde más tiempo tuvo que combatir."
 },
 "Escipión toma Cartago Nova (209 a. C.)": {
 "k": "Acontecimiento",
-"t": "Escipión el Africano tomó por sorpresa la capital cartaginesa en Hispania, con sus depósitos de plata y su puerto."
+"t": "Publio Cornelio Escipión, de unos 26 años, supo que la ciudad estaba mal defendida y que la laguna se secaba con la marea baja. Atacó por tierra mientras un grupo vadeaba la laguna y escaló la muralla. Cartago Nova era la capital cartaginesa en Hispania: allí estaban su tesoro, las minas de plata y los rehenes de las tribus ibéricas, que Escipión liberó para ganarse su apoyo."
 },
 "Ilipa: fin del dominio cartaginés (206 a. C.)": {
 "k": "Acontecimiento",
-"t": "Victoria de Escipión sobre los cartagineses cerca de la actual Sevilla. Cartago perdió Hispania."
+"t": "Escipión se enfrentó cerca de Ilipa, en el Guadalquivir, a un ejército cartaginés superior. Colocó a sus mejores tropas en los flancos y a los aliados ibéricos en el centro, al contrario de lo habitual, y los cartagineses fueron rodeados. Tras esta victoria, Cartago perdió Hispania. Gadir se rindió ese mismo año y Escipión regresó a Roma para ser elegido cónsul."
 },
 "Viriato lidera la resistencia lusitana (147–139 a. C.)": {
 "k": "Acontecimiento",
-"t": "El caudillo lusitano derrotó a varios ejércitos romanos con una guerra de guerrillas. Murió asesinado por tres de sus propios hombres, sobornados por Roma."
+"t": "Viriato, un pastor o cazador lusitano, escapó de una matanza traicionera del gobernador Galba y reunió una banda que creció hasta convertirse en un ejército. Con emboscadas derrotó a varios pretores y cónsules. Roma pactó con él, pero rompió el tratado. Finalmente, el cónsul Cepión sobornó a tres lusitanos de su entorno, que lo mataron mientras dormía. Su pueblo se rindió poco después."
 },
 "Caída de Numancia (133 a. C.)": {
 "k": "Acontecimiento",
-"t": "Escipión Emiliano cercó la ciudad con una red de campamentos y la tomó por hambre. Terminaron las guerras celtibéricas."
+"t": "Numancia resistió casi veinte años a los ejércitos romanos. Escipión Emiliano, tras reorganizar un ejército indisciplinado, rodeó la ciudad con un muro de unos nueve kilómetros, siete campamentos y torres. Los numantinos, hambrientos, comieron cadáveres según las fuentes antiguas, y al final muchos se quitaron la vida. La ciudad fue arrasada y su caída puso fin a las guerras celtibéricas."
 },
 "Fin de las guerras cántabras (19 a. C.)": {
 "k": "Acontecimiento",
-"t": "Tras diez años de campañas, Agripa sometió a astures y cántabros. Con ello se completó la conquista romana de la península."
+"t": "Augusto fue en persona a Hispania en 26 a. C. para dirigir la guerra contra cántabros y astures, pueblos de la montaña que practicaban incursiones sobre sus vecinos. La conquista fue lenta, con campañas desde Tarraco, Lancia y Aracelium. Agripa terminó la guerra en 19 a. C., con duras represalias: los cántabros fueron deportados a las llanuras. Con ella Roma obtuvo el oro del noroeste."
 }
 };

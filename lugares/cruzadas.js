@@ -65,38 +65,38 @@ window.LUGARES={
 },
 "Concilio de Clermont (1095)": {
 "k": "Acontecimiento",
-"t": "El papa Urbano II llamó a los cristianos de Occidente a ayudar a Bizancio y liberar Jerusalén. Según la tradición, la multitud respondió «Dios lo quiere»."
+"t": "El papa Urbano II, un francés, habló ante una multitud de caballeros y clérigos. Pidió ayuda para los cristianos de Oriente, que sufrían la expansión selyúcida y a quienes el emperador Alejo I había solicitado tropas. Prometió el perdón de los pecados a quienes fueran. La respuesta, «¡Dios lo quiere!», es tradicional. La primera cruzada partió en 1096, y precedida por una cruzada popular, mal organizada, que fue aniquilada en Anatolia."
 },
 "Toma de Jerusalén (1099)": {
 "k": "Acontecimiento",
-"t": "Los cruzados conquistaron la ciudad tras un asedio y mataron a muchos habitantes. Se creó el reino cristiano de Jerusalén."
+"t": "Los cruzados llegaron a Jerusalén en junio de 1099, tras haber tomado Nicea y Antioquía. Asaltaron las murallas con torres de asedio el 15 de julio. La ciudad fue saqueada y sufrió una matanza de musulmanes y judíos, de la que hablan tanto fuentes cristianas como musulmanas. Godofredo de Bouillon fue nombrado «defensor del Santo Sepulcro». Su hermano Balduino fue el primer rey."
 },
 "Edesa cae en manos de Zengi (1144)": {
 "k": "Acontecimiento",
-"t": "El señor de Mosul conquistó el condado de Edesa. Esto llevó a predicar la Segunda Cruzada."
+"t": "Zengi, gobernador de Mosul y Alepo, aprovechó que el conde Joscelino II había salido de la ciudad y la asedió. Edesa cayó en diciembre de 1144, tras un mes. Fue el primer Estado cruzado en caer. Bernardo de Claraval predicó la Segunda Cruzada, a la que respondieron el rey de Francia, Luis VII, y el emperador alemán, Conrado III. Zengi murió poco después, pero su hijo Nur al-Din continuó su política."
 },
 "Asedio fallido de Damasco (1148)": {
 "k": "Acontecimiento",
-"t": "Los ejércitos de Luis VII y Conrado III no tomaron Damasco. La Segunda Cruzada fracasó."
+"t": "Los cruzados decidieron atacar Damasco, una ciudad musulmana que era aliada del reino de Jerusalén, en vez de Alepo. Acamparon en los huertos del oeste, pero luego se cambiaron al lado este, sin agua ni sombra. Tras cuatro días se retiraron. Las causas del fracaso se atribuyeron a la traición, a las rivalidades y a la falta de un mando unificado. Luis VII y Conrado III regresaron a Europa."
 },
 "Hattin (1187)": {
 "k": "Acontecimiento",
-"t": "Saladino aniquiló al ejército del reino de Jerusalén. Dejó indefensas las ciudades cruzadas."
+"t": "Saladino atrajo al ejército del reino de Jerusalén, dirigido por Guy de Lusignan, a una meseta sin agua cerca del lago Tiberíades, en pleno verano. Los cruzados llegaron agotados y sedientos, y los musulmanes incendiaron la hierba. Casi todos fueron muertos o apresados. Guy fue capturado y se perdió la Vera Cruz, que se llevaba en batalla. Saladino mandó ejecutar a los templarios y hospitalarios prisioneros."
 },
 "Saladino toma Jerusalén (1187)": {
 "k": "Acontecimiento",
-"t": "Tras Hattin, Saladino reconquistó la ciudad. Fue el motivo de la Tercera Cruzada."
+"t": "Tras Hattin, Saladino conquistó Acre, Jaffa y otros lugares, y se acercó a Jerusalén. Tras doce días de asedio, la ciudad se rindió el 2 de octubre. A diferencia de los cruzados en 1099, permitió que los habitantes cristianos se rescataran por dinero y se fueran, aunque no todos pudieron pagar. Los cristianos de rito oriental pudieron quedarse. La noticia causó conmoción en Europa y provocó la Tercera Cruzada."
 },
 "Saqueo de Constantinopla (1204)": {
 "k": "Acontecimiento",
-"t": "La Cuarta Cruzada, desviada de su objetivo, tomó y saqueó la capital cristiana de Bizancio. Se creó el Imperio latino."
+"t": "Los cruzados, que no habían podido pagar a Venecia, aceptaron ayudar a Alejo, un príncipe bizantino que prometía recompensas. Tras no recibirlas, atacaron la ciudad. Fue la mayor ciudad de Europa y su saqueo, durante tres días, destruyó iglesias y reliquias, y se llevó a Venecia los caballos de bronce de San Marcos. El Imperio latino duró hasta 1261 y debilitó a Bizancio."
 },
 "Las Navas de Tolosa (1212)": {
 "k": "Acontecimiento",
-"t": "Los reinos cristianos peninsulares derrotaron a los almohades. El papa apoyó la campaña como cruzada."
+"t": "La derrota de Alfonso VIII en Alarcos (1195) y el avance almohade provocaron una cruzada. Alfonso VIII, Pedro II de Aragón, Sancho VII de Navarra y caballeros extranjeros se reunieron en Toledo. Un pastor mostró un paso por la sierra y atacaron al ejército del califa Muhammad al-Nasir, que se había protegido con una empalizada de cadenas. La victoria cristiana abrió Andalucía."
 },
 "Caída de Acre (1291)": {
 "k": "Acontecimiento",
-"t": "Los mamelucos tomaron la última gran plaza cruzada. Se acabó la presencia cruzada en Tierra Santa."
+"t": "El sultán mameluco al-Ashraf Jalil asedió la ciudad en abril de 1291 con máquinas de asedio. Los defensores eran pocos y estaban desunidos. Acre cayó el 18 de mayo tras seis semanas, y sus habitantes fueron matados o esclavizados. En semanas se rindieron Tiro, Sidón y Beirut. Los cruzados perdieron su último gran punto de apoyo en Tierra Santa, tras casi dos siglos."
 }
 };

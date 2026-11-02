@@ -61,38 +61,38 @@ window.LUGARES={
 },
 "Hégira: Mahoma llega a Medina (622)": {
 "k": "Acontecimiento",
-"t": "La emigración de Mahoma de La Meca a Medina marca el inicio del calendario islámico."
+"t": "Mahoma, perseguido en La Meca por los clanes que rechazaban su predicación, aceptó la invitación de los habitantes de Yatrib y emigró allí con sus seguidores. La ciudad se llamó después Medina, «la ciudad del Profeta». Allí organizó la primera comunidad musulmana, la umma. El califa Umar fijó el comienzo del calendario islámico en este año."
 },
 "Yarmuk (636)": {
 "k": "Acontecimiento",
-"t": "Victoria árabe sobre el ejército bizantino. Permitió la conquista de Siria y Palestina."
+"t": "Los árabes, dirigidos por Jalid ibn al-Walid, se enfrentaron al ejército bizantino de Heraclio en el río Yarmuk, afluente del Jordán, durante unos seis días. Aprovecharon una tormenta de arena y la falta de coordinación bizantina, y los empujaron hacia barrancos. Siria quedó abierta a la conquista, y Damasco, Jerusalén y Antioquía fueron cayendo en pocos años."
 },
 "Qadisiyya (636)": {
 "k": "Acontecimiento",
-"t": "Victoria árabe sobre el ejército sasánida en Irak. Abrió el camino hacia la capital persa. Algunas fuentes la fechan en 636 y otras en 637."
+"t": "El ejército árabe de Saad ibn Abi Waqqas se enfrentó a los persas sasánidas, que contaban con elefantes de guerra, en la llanura de Qadisiyya, cerca de Hira. Tras varios días de combate, murió el general persa Rustam. Los árabes tomaron poco después la capital, Ctesifonte. La victoria dio lugar a la fundación de ciudades como Basora y Kufa."
 },
 "Nihavand (642)": {
 "k": "Acontecimiento",
-"t": "Victoria árabe que acabó con la resistencia sasánida. Persia quedó abierta a la conquista."
+"t": "El último gran ejército sasánida se concentró en Nihavand, en los montes Zagros, para detener la invasión. Los árabes, mandados por Numan ibn Muqarrin, lo derrotaron. Los árabes la llamaron «la victoria de las victorias». El rey Yazdgard III huyó hacia el este y murió asesinado en 651. Persia quedó incorporada al califato, aunque conservó su lengua y su cultura."
 },
 "Guadalete (711)": {
 "k": "Acontecimiento",
-"t": "El ejército de Tariq derrotó al rey visigodo Rodrigo. Comenzó la conquista musulmana de la península ibérica."
+"t": "Tariq ibn Ziyad, un jefe bereber al servicio del gobernador de Ifriquiya, desembarcó cerca de Gibraltar con unos 7.000 hombres. El rey Rodrigo, que combatía a los vascones en el norte, fue a su encuentro. La batalla se libró cerca del río Guadalete. Parte de la nobleza visigoda abandonó a Rodrigo. En pocos años, los musulmanes controlaban casi toda la península."
 },
 "Poitiers (732)": {
 "k": "Acontecimiento",
-"t": "Carlos Martel detuvo una expedición musulmana en el centro de Francia. Marcó el límite del avance islámico por el norte de los Pirineos."
+"t": "Abderramán al-Gafiqi, gobernador de Al-Ándalus, atacó Aquitania, derrotó al duque Eudes y avanzó hacia Tours. Carlos Martel formó a su infantería en una posición elevada y resistió los ataques de la caballería. Abderramán murió en el combate. Los musulmanes se retiraron, aunque siguieron en la costa mediterránea de la Galia durante décadas. Es el límite más al norte que alcanzó su expansión militar."
 },
 "Covadonga (722)": {
 "k": "Acontecimiento",
-"t": "Según la tradición, el caudillo Pelayo derrotó a una fuerza musulmana. Se considera el origen del reino de Asturias, aunque los historiadores discuten la importancia real del combate."
+"t": "Las crónicas asturianas, escritas más de un siglo después, cuentan que un noble llamado Pelayo se rebeló contra los musulmanes y los derrotó en una cueva de los Picos de Europa. Las fuentes árabes casi no mencionan el hecho. Para los historiadores fue probablemente un pequeño choque, pero se convirtió en el símbolo del origen del reino de Asturias."
 },
 "Asedio de Constantinopla (717)": {
 "k": "Acontecimiento",
-"t": "El califa Sulaymán puso cerco a la capital bizantina por tierra y mar. El asedio fracasó y frenó el avance árabe en Anatolia."
+"t": "El califa Sulaymán envió a su hermano Maslama con un ejército y una flota de cientos de barcos para tomar la capital bizantina. León III, un general que acababa de llegar al trono, defendió las murallas teodosianas. Un invierno muy frío, el fuego griego contra las naves y los ataques búlgaros desgastaron a los asediadores. Tras un año, se retiraron con graves pérdidas."
 },
 "Talas (751)": {
 "k": "Acontecimiento",
-"t": "El ejército abasí derrotó a las tropas chinas de la dinastía Tang en Asia central. La tradición dice que prisioneros chinos enseñaron entonces la fabricación de papel."
+"t": "Los abasíes, que acababan de derrocar a los omeyas, y las tropas chinas de los Tang se enfrentaron junto al río Talas, en Asia Central. Los chinos fueron derrotados cuando sus aliados turcos karluk cambiaron de bando. China dejó de expandirse hacia el oeste. Algunas fuentes dicen que prisioneros chinos enseñaron en Samarcanda la fabricación del papel, que luego llegó a Bagdad y a Europa."
 }
 };

@@ -105,22 +105,22 @@ window.LUGARES={
 },
 "Primera escritura cuneiforme (c. 3300 a. C.)": {
 "k": "Acontecimiento",
-"t": "En Uruk se usaron signos grabados en arcilla para llevar cuentas. Es uno de los primeros sistemas de escritura conocidos."
+"t": "En Uruk, los templos necesitaban llevar la cuenta de los cereales, el ganado y los productos. Se empezó con fichas de arcilla y después con signos hechos con una caña sobre tablillas. Al principio eran pictogramas. Con el tiempo, los signos pasaron a representar sonidos y se combinaron para escribir el sumerio, y más tarde el acadio. Se escribió en cuneiforme durante más de tres mil años."
 },
 "Código de Hammurabi (c. 1754 a. C.)": {
 "k": "Acontecimiento",
-"t": "Hammurabi de Babilonia hizo grabar sus leyes en una estela. Incluye la ley del talión y castigos según la clase social."
+"t": "El rey de Babilonia hizo grabar unas 282 leyes en una estela de basalto de unos dos metros, con un relieve que lo muestra ante el dios Shamash. Regulan el comercio, la familia, los salarios y los delitos. Aplican el talión («ojo por ojo») y distinguen entre hombres libres, súbditos del rey y esclavos. La estela, hallada en Susa en 1901, se conserva en el Louvre."
 },
 "Biblioteca de Asurbanipal (siglo VII a. C.)": {
 "k": "Acontecimiento",
-"t": "El rey asirio reunió en Nínive miles de tablillas, entre ellas la Epopeya de Gilgamesh."
+"t": "Asurbanipal, que sabía leer y escribir, reunió en su palacio de Nínive unas 30.000 tablillas, que mandó copiar de textos de Babilonia y de otras ciudades. Contiene textos literarios, médicos, de astronomía y de adivinación, como la Epopeya de Gilgamesh y el «Enuma Elish», el poema de la creación. Fue descubierta en el siglo XIX y se conserva en el Museo Británico."
 },
 "Nabucodonosor destruye Jerusalén (586 a. C.)": {
 "k": "Acontecimiento",
-"t": "El rey de Babilonia tomó la ciudad y deportó a parte de su población. Comenzó el exilio babilónico."
+"t": "Judá se había rebelado contra Babilonia. Nabucodonosor II sitió Jerusalén durante unos dieciocho meses, tomó la ciudad, destruyó el templo de Salomón y deportó a gran parte de la élite a Babilonia. Es el comienzo del exilio babilónico, que marcó la religión judía: se fijó por escrito parte de la Biblia. Los salmos recuerdan el dolor del exilio: «Junto a los ríos de Babilonia…»."
 },
 "Ciro conquista Babilonia (539 a. C.)": {
 "k": "Acontecimiento",
-"t": "Ciro II de Persia tomó Babilonia sin gran resistencia. Permitió a los judíos exiliados regresar a Jerusalén."
+"t": "Ciro II el Grande, rey de Persia, derrotó al ejército babilonio en Opis y entró en Babilonia sin gran resistencia, el 12 de octubre. Mantuvo los templos y las costumbres locales. El Cilindro de Ciro, un texto de arcilla, cuenta que devolvió las estatuas de los dioses a sus santuarios. Según la Biblia, permitió a los judíos volver a Jerusalén y reconstruir el templo."
 }
 };

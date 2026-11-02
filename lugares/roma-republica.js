@@ -57,42 +57,42 @@ window.LUGARES={
 },
 "Fundación de Roma (753 a. C., según la tradición)": {
 "k": "Acontecimiento",
-"t": "La leyenda atribuye la fundación a Rómulo. Los hallazgos arqueológicos muestran poblados en el Palatino desde el siglo VIII a. C."
+"t": "La fecha procede del erudito Varrón, en el siglo I a. C. La leyenda hace a Rómulo y Remo descendientes del troyano Eneas, criados por una loba. Los arqueólogos han hallado cabañas del siglo VIII a. C. en el Palatino. Roma se desarrolló junto a un vado del Tíber, en la ruta de la sal, y fue gobernada por reyes, algunos etruscos, hasta hacia 509 a. C."
 },
 "Samnitas vencen a Roma en las Horcas Caudinas (321 a. C.)": {
 "k": "Acontecimiento",
-"t": "Un ejército consular quedó atrapado en un desfiladero y tuvo que pasar bajo el yugo. Roma rechazó después el tratado y continuó la guerra."
+"t": "Durante la Segunda Guerra Samnita, un ejército consular fue atraído a un desfiladero cerca de Caudio y quedó atrapado sin lucha. Los samnitas lo dejaron marchar tras obligar a los soldados a pasar bajo el yugo, un gesto de humillación, y a firmar un tratado. El Senado lo rechazó, entregó a los jefes y reanudó la guerra, que terminó con la victoria romana."
 },
 "Pirro es vencido en Benevento (275 a. C.)": {
 "k": "Acontecimiento",
-"t": "Tras sus victorias costosas en Italia, el rey Pirro fue derrotado y regresó a Epiro. Roma quedó como dueña del sur de la península."
+"t": "El rey de Epiro había vencido a los romanos en Heraclea y Ascoli con tantas pérdidas que se habla de «victoria pírrica». Después luchó en Sicilia contra los cartagineses sin éxito. En Benevento, el cónsul Curio Dentato le infligió una derrota, y Pirro regresó a Grecia. Tarento cayó en 272 y Roma controló el sur de Italia."
 },
 "Batalla de las Égadas (241 a. C.)": {
 "k": "Acontecimiento",
-"t": "Victoria naval romana que puso fin a la Primera Guerra Púnica. Cartago renunció a Sicilia, que fue la primera provincia romana."
+"t": "Roma construyó una flota de unos 200 quinquerremes con dinero prestado por ciudadanos ricos, tras haber perdido sus escuadras anteriores. El cónsul Lutacio Catulo interceptó cerca de las islas Égadas el convoy cartaginés que llevaba provisiones a Sicilia y lo hundió. Cartago, agotada, firmó la paz: abandonó Sicilia y pagó una gran indemnización."
 },
 "Aníbal destruye Sagunto (219 a. C.)": {
 "k": "Acontecimiento",
-"t": "El asedio de ocho meses a la ciudad aliada de Roma fue el pretexto para la Segunda Guerra Púnica."
+"t": "Aníbal asedió Sagunto durante unos ocho meses, y la ciudad resistió hasta casi el final. Cuando cayó, sus habitantes quemaron sus bienes y muchos se suicidaron. Roma envió embajadores a Cartago para exigir la entrega de Aníbal y, ante la negativa, declaró la guerra. Aníbal ya estaba preparando su marcha a Italia por los Alpes."
 },
 "Cannas (216 a. C.)": {
 "k": "Acontecimiento",
-"t": "Aníbal envolvió y aniquiló al mayor ejército romano reunido hasta entonces. Es una de las derrotas más graves de la historia de Roma."
+"t": "Los romanos reunieron cerca de 80.000 hombres. Aníbal dispuso su centro adelantado y débil, que fue retrocediendo mientras la caballería cartaginesa atacaba por los flancos y la retaguardia. Los romanos quedaron rodeados y murieron decenas de miles. Varios aliados de Roma en el sur de Italia, como Capua, se pasaron a Aníbal, pero Roma no negoció y siguió resistiendo."
 },
 "Trasimeno (217 a. C.)": {
 "k": "Acontecimiento",
-"t": "Aníbal tendió una emboscada junto al lago y destruyó al ejército del cónsul Flaminio, que murió en la batalla."
+"t": "Aníbal ocultó a su ejército en las colinas que bordean el lago, entre la niebla de la mañana. Cuando la columna romana del cónsul Flaminio avanzaba en fila por la orilla, la atacó por todos lados y la empujó al agua. Murieron unos 15.000 romanos, entre ellos el cónsul. Aníbal liberó a los prisioneros aliados para ganarse su apoyo."
 },
 "Zama (202 a. C.)": {
 "k": "Acontecimiento",
-"t": "Escipión derrotó a Aníbal en territorio africano y obligó a Cartago a pedir la paz, con lo que acabó la Segunda Guerra Púnica."
+"t": "Escipión había llevado la guerra a África, donde sus aliados númidas, mandados por Masinisa, le dieron la caballería que no tenía. Aníbal desplegó sus elefantes, pero los romanos abrieron pasillos y los desviaron. La caballería romana volvió y atacó por detrás a la infantería cartaginesa. Cartago perdió su flota, sus posesiones fuera de África y pagó una fuerte indemnización."
 },
 "Cartago destruida (146 a. C.)": {
 "k": "Acontecimiento",
-"t": "Al final de la Tercera Guerra Púnica, Escipión Emiliano tomó y arrasó la ciudad. Su territorio pasó a ser la provincia romana de África."
+"t": "Catón repetía que «Cartago debe ser destruida». Roma declaró la guerra en 149 a. C. con un pretexto. Escipión Emiliano asedió la ciudad durante tres años, la tomó casa por casa y la incendió durante días. Sobrevivieron unos 50.000 habitantes, que fueron vendidos como esclavos. La leyenda de que se sembró sal en el suelo es posterior y no está probada."
 },
 "Corinto destruida (146 a. C.)": {
 "k": "Acontecimiento",
-"t": "Tras la guerra con la Liga Aquea, el cónsul Mummio saqueó y destruyó Corinto. Grecia quedó sometida al dominio romano."
+"t": "La Liga Aquea se rebeló contra Roma y el cónsul Lucio Mummio la derrotó. Corinto, una de las ciudades más ricas de Grecia, fue saqueada, sus hombres muertos y el resto vendido como esclavos. Muchas obras de arte fueron llevadas a Roma. La ciudad estuvo abandonada un siglo, hasta que Julio César la refundó como colonia en 44 a. C."
 }
 };

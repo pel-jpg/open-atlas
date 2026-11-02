@@ -77,46 +77,46 @@ window.LUGARES={
 },
 "Primer gran centro olmeca (1200 a. C.)": {
 "k": "Acontecimiento",
-"t": "Surgió la primera gran cultura de Mesoamérica, con ciudades como San Lorenzo y La Venta."
+"t": "San Lorenzo, en la costa del Golfo, fue el primer gran centro olmeca, con plataformas de tierra, canales y cabezas colosales de basalto traídas de canteras a decenas de kilómetros. Después La Venta tomó el relevo. Los olmecas dejaron un modelo para las culturas posteriores: el juego de pelota, la escritura incipiente y el calendario. Por eso se les llama «cultura madre» de Mesoamérica, aunque esto se discute."
 },
 "Auge de Teotihuacan (siglo V)": {
 "k": "Acontecimiento",
-"t": "La gran ciudad del altiplano mexicano, con las pirámides del Sol y de la Luna, llegó a tener más de cien mil habitantes."
+"t": "Teotihuacan, cerca de la actual Ciudad de México, se organizó con una gran calle central, la Calzada de los Muertos, y las pirámides del Sol y de la Luna. Llegó a tener entre 100.000 y 150.000 habitantes, con barrios de artesanos y de extranjeros. Su influencia llegó a las ciudades mayas. Hacia 550-650 fue incendiada y abandonada, y no se sabe con certeza quién la construyó ni por qué cayó."
 },
 "Abandono de las ciudades mayas del sur (hacia 900)": {
 "k": "Acontecimiento",
-"t": "Muchas ciudades de las tierras bajas del sur dejaron de ser habitadas. Las causas pudieron ser sequías, guerras y crisis políticas."
+"t": "Entre 800 y 900 las grandes ciudades mayas de las tierras bajas del sur, como Tikal, Calakmul y Copán, dejaron de erigir monumentos con fechas y fueron quedando vacías. Se barajan varias causas: sequías prolongadas, guerras entre ciudades, agotamiento del suelo y crisis de los reyes divinos. La población no desapareció: se desplazó hacia el norte de Yucatán y las costas."
 },
 "Auge de Chichén Itzá (siglos X–XII)": {
 "k": "Acontecimiento",
-"t": "Se convirtió en la ciudad más poderosa de Yucatán, con relaciones comerciales por tierra y mar."
+"t": "Chichén Itzá es la principal ciudad de Yucatán tras el abandono de las tierras bajas del sur. Tiene edificios de estilo maya, como El Caracol, y otros con influencia del centro de México, como el Templo de los Guerreros. Sus gobernantes tenían una amplia red comercial con puertos en el Caribe, y se traía cacao, obsidiana y oro. En el siglo XIII perdió poder ante Mayapán."
 },
 "Fundación de Tenochtitlan (1325)": {
 "k": "Acontecimiento",
-"t": "Según la tradición, los mexicas fundaron su ciudad en una isla del lago de Texcoco, donde vieron un águila sobre un nopal."
+"t": "Según la tradición, los mexicas, un pueblo nómada del norte, siguieron una profecía de su dios Huitzilopochtli que les indicaba fundar su ciudad donde vieran un águila posada sobre un nopal. Lo encontraron en un islote del lago de Texcoco. Construyeron chinampas, jardines flotantes, y calzadas. Con la Triple Alianza, de 1428, Tenochtitlan se convirtió en la capital de un imperio tributario."
 },
 "Llegada de Cortés (1519)": {
 "k": "Acontecimiento",
-"t": "Hernán Cortés llegó a Tenochtitlan con sus tropas y sus aliados indígenas. Fue recibido por el emperador Moctezuma II."
+"t": "Cortés desembarcó con unos 500 soldados, caballos y cañones, aliándose con los totonacas y con los tlaxcaltecas, enemigos de los mexicas. Entró en Tenochtitlan el 8 de noviembre de 1519 por la calzada de Iztapalapa. Los españoles quedaron sorprendidos por el tamaño de la ciudad, que tenía unos 200.000 habitantes, más que ninguna ciudad española. Moctezuma II los recibió y los alojó en un palacio."
 },
 "Caída de Tenochtitlan (1521)": {
 "k": "Acontecimiento",
-"t": "Tras un asedio de casi tres meses, los españoles y sus aliados indígenas tomaron la ciudad. El último emperador, Cuauhtémoc, fue capturado."
+"t": "Tras ser expulsados en la «Noche Triste» de 1520, los españoles volvieron con miles de aliados indígenas y con bergantines construidos en Tlaxcala. Cortaron el suministro de agua dulce y de alimentos. Una epidemia de viruela debilitó gravemente a los mexicas. La ciudad cayó el 13 de agosto de 1521 tras un asedio de casi tres meses. Cuauhtémoc fue capturado."
 },
 "Pachacútec inicia la expansión (1438)": {
 "k": "Acontecimiento",
-"t": "Tras vencer a los chancas, Pachacútec empezó la expansión del Tahuantinsuyo, el imperio inca."
+"t": "Los chancas atacaron Cuzco, y el príncipe Pachacútec la defendió mientras su padre huía. Tras la victoria se proclamó Inca. Reorganizó el Estado con una red de caminos de unos 40.000 km, almacenes y el sistema de la mita, un trabajo obligatorio rotativo. Su hijo Túpac Yupanqui y su nieto Huayna Cápac ampliaron las conquistas hasta Ecuador, Chile y el noroeste de Argentina."
 },
 "Prisión de Atahualpa en Cajamarca (1532)": {
 "k": "Acontecimiento",
-"t": "Pizarro capturó al Inca en una emboscada. Aunque se pagó un gran rescate, fue ejecutado en 1533."
+"t": "Atahualpa había vencido a su hermano Huáscar en una guerra civil. Pizarro lo invitó a Cajamarca y, el 16 de noviembre de 1532, sus 168 hombres lo atacaron por sorpresa en la plaza, matando a miles de acompañantes. Atahualpa ofreció llenar de oro una habitación y dos de plata a cambio de su libertad. Cumplió, pero fue juzgado y ejecutado en julio de 1533."
 },
 "Llegada de Pizarro (1532)": {
 "k": "Acontecimiento",
-"t": "Francisco Pizarro desembarcó con unos 170 hombres en la costa del Perú y se dirigió a la sierra."
+"t": "Pizarro había explorado la costa en 1528 y obtenido de Carlos V la capitulación de Toledo para conquistar el Perú. En 1532 desembarcó con unos 170 hombres y cerca de 60 caballos. Se enteró de la guerra civil inca entre Atahualpa y Huáscar y se aprovechó de ella. Subió a la sierra y llegó a Cajamarca el 15 de noviembre, donde se encontraba Atahualpa."
 },
 "Cahokia, la mayor ciudad de la zona (1050–1250)": {
 "k": "Acontecimiento",
-"t": "Gran ciudad de constructores de montículos junto al Misisipi, en el actual Illinois. Es el mayor centro urbano de la América del Norte prehispánica."
+"t": "Cahokia, cerca de la actual St. Louis, tuvo hasta 15.000 o 20.000 habitantes. Su estructura principal, el Monks Mound, tiene unos 30 metros de altura y es la mayor construcción de tierra de América del Norte. Los habitantes cultivaban maíz y comerciaban con regiones lejanas. Fue abandonada hacia 1350, y se discuten las causas: inundaciones, sobreexplotación de recursos o conflictos."
 }
 };

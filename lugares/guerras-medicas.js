@@ -53,38 +53,38 @@ window.LUGARES={
 },
 "Sardes incendiada (498 a. C.)": {
 "k": "Acontecimiento",
-"t": "Jonios y atenienses prendieron fuego a Sardes. Darío tomó el hecho como una ofensa personal y decidió castigar a Atenas."
+"t": "Jonios y atenienses marcharon tierra adentro desde Éfeso y tomaron Sardes por sorpresa, aunque no pudieron conquistar su ciudadela. Un incendio, quizá accidental, destruyó la ciudad baja, formada por casas de caña y adobe, y con ella el templo de Cibeles. Heródoto cuenta que Darío, al enterarse, preguntó quiénes eran los atenienses y ordenó que un criado le repitiera cada día: «Señor, acuérdate de los atenienses»."
 },
 "Lade (494 a. C.)": {
 "k": "Acontecimiento",
-"t": "Batalla naval en la que la flota jonia, debilitada por deserciones, fue derrotada por la persa. Poco después cayó Mileto y terminó la revuelta."
+"t": "La batalla naval se libró frente a Mileto entre unas 350 naves jonias y unas 600 persas. Los jonios, que habían elegido como jefe a un foceo muy exigente en los ejercicios, perdieron la disciplina. Los samios abandonaron la formación en pleno combate y otros contingentes los imitaron. Mileto cayó poco después: sus hombres fueron muertos o deportados cerca del Tigris."
 },
 "Mardonio pierde su flota en el Athos (492 a. C.)": {
 "k": "Acontecimiento",
-"t": "Una tempestad destruyó gran parte de la flota persa al doblar el monte Athos, y Mardonio tuvo que retirarse. Darío preparó otra expedición por mar."
+"t": "Mardonio recuperó el control de Tracia y Macedonia, pero la flota que bordeaba la península calcídica fue sorprendida por un temporal junto al cabo del monte Athos. Según Heródoto se perdieron unas 300 naves y murieron unos 20.000 hombres. Por esa razón Jerjes, años después, hizo excavar un canal a través de la península para que sus barcos no tuvieran que doblar el cabo."
 },
 "Maratón (490 a. C.)": {
 "k": "Acontecimiento",
-"t": "Los atenienses, con ayuda de Platea y bajo el mando de Milcíades, derrotaron al ejército persa de Datis y Artafernes en la llanura de Maratón."
+"t": "Los persas desembarcaron en la bahía de Maratón, a unos 40 km de Atenas, guiados por el antiguo tirano Hipias. Milcíades convenció a los atenienses de atacar y reforzó los flancos de su formación, de modo que los persas, rodeados, huyeron a las naves. Murieron 192 atenienses, enterrados en un túmulo que aún existe, y unos 6.400 persas según Heródoto. La carrera del mensajero hasta Atenas es una leyenda posterior."
 },
 "Termópilas y Artemisio": {
 "k": "Acontecimiento",
-"t": "En 480 a. C. Leónidas, con unos 300 espartanos y varios miles de aliados, defendió el paso durante tres días hasta que los persas lo rodearon. A la vez, la flota griega combatió en Artemisio y se retiró."
+"t": "En el desfiladero entre el monte y el mar, los griegos resistieron dos días de ataques frontales. Un traidor, Efialtes, indicó a los persas el sendero de montaña. Leónidas despidió a casi todos los aliados y se quedó con sus 300 espartanos y unos mil focenses y tespios, que murieron luchando. Al mismo tiempo, en Artemisio, la flota griega combatió con resultado indeciso y se retiró al conocer la derrota."
 },
 "Salamina (480 a. C.)": {
 "k": "Acontecimiento",
-"t": "Victoria naval griega, dirigida por Temístocles, en el estrecho entre Salamina y el Ática. Frustró el plan de Jerjes, que volvió a Asia dejando a Mardonio en Grecia."
+"t": "Temístocles logró, con un mensaje engañoso, que Jerjes atacara a la flota griega en el estrecho, donde los barcos persas, más numerosos, no podían maniobrar. Los trirremes griegos, más ligeros, hundieron o dispersaron gran parte de la flota enemiga. Jerjes presenció la batalla desde un trono sobre la costa. Poco después regresó a Asia y dejó a Mardonio con un ejército en Grecia."
 },
 "Puente de barcas sobre el Helesponto": {
 "k": "Acontecimiento",
-"t": "Para cruzar a Europa, Jerjes hizo tender en 480 a. C. puentes de naves unidas entre Abidos y la orilla europea. Heródoto cuenta que una tormenta destruyó el primero."
+"t": "Jerjes ordenó unir con cables de lino y papiro cientos de naves para formar dos puentes de unos 1.200 metros. Heródoto cuenta que una tempestad destruyó el primer puente y que el rey mandó dar trescientos latigazos al mar y arrojarle grilletes. Los ingenieros fenicios y egipcios construyeron otro, por el que pasó el ejército durante siete días con sus noches."
 },
 "Platea (479 a. C.)": {
 "k": "Acontecimiento",
-"t": "Victoria terrestre de los griegos, mandados por el espartano Pausanias, sobre el ejército de Mardonio, que murió en la batalla. Puso fin a la invasión persa de Grecia."
+"t": "Pausanias reunió el mayor ejército griego hasta entonces, unos 40.000 hombres entre hoplitas y tropas ligeras. Tras días de maniobras y escaramuzas, la retirada griega fue tomada por una huida y los persas la persiguieron en desorden. Los hoplitas espartanos y tegeos resistieron y Mardonio murió. Después los griegos tomaron Tebas y castigaron a los líderes que habían colaborado con los persas."
 },
 "Mícale (479 a. C.)": {
 "k": "Acontecimiento",
-"t": "Victoria griega en la costa de Jonia, atribuida por la tradición al mismo día que Platea. Destruyó la flota persa varada y alentó una nueva sublevación jonia."
+"t": "La flota griega, mandada por el rey espartano Leotíquidas, llegó a Samos y encontró a los persas varados en la costa de Mícale, protegidos por una empalizada. Los griegos desembarcaron, tomaron el campamento y quemaron las naves. Los jonios del ejército persa se pasaron al bando griego. A partir de entonces la iniciativa estratégica pasó a los griegos, que fundaron la Liga de Delos."
 }
 };

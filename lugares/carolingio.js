@@ -69,34 +69,34 @@ window.LUGARES={
 },
 "Clodoveo se bautiza en Reims (496)": {
 "k": "Acontecimiento",
-"t": "El rey franco abrazó el cristianismo católico, con lo que ganó el apoyo de la Iglesia y de la población galorromana. La fecha tradicional es discutida por los historiadores."
+"t": "El rey de los francos se casó con la católica Clotilde y, según Gregorio de Tours, prometió bautizarse si vencía en una batalla contra los alamanes. Fue bautizado por el obispo Remigio. Su conversión al catolicismo, y no al arrianismo como otros reyes germanos, le dio el apoyo de la Iglesia y de la población galorromana. La fecha exacta se discute entre 496 y 508."
 },
 "Vouillé (507)": {
 "k": "Acontecimiento",
-"t": "Clodoveo derrotó a los visigodos y mató a Alarico II. Los francos extendieron su dominio por el suroeste de la Galia."
+"t": "Clodoveo atacó a los visigodos arrianos con el apoyo de los obispos católicos de la Galia. En la batalla, cerca de Poitiers, derrotó a Alarico II. Los francos se quedaron con Aquitania y los visigodos conservaron solo Septimania. La victoria hizo de Clodoveo el monarca más poderoso de Occidente. El emperador de Oriente le concedió el título honorífico de cónsul."
 },
 "Poitiers (732)": {
 "k": "Acontecimiento",
-"t": "Carlos Martel detuvo una expedición musulmana en el centro de Francia. Reforzó su prestigio y el de su familia."
+"t": "Una expedición del gobernador de Al-Ándalus, Abderramán al-Gafiqi, penetró en Aquitania y saqueó el sur de Francia. Carlos Martel, mayordomo de palacio, la derrotó entre Tours y Poitiers con su infantería. Murió Abderramán. La batalla aumentó el prestigio de Carlos Martel, aunque los musulmanes siguieron manteniendo Narbona hasta 759. Los historiadores actuales la ven más como una incursión que como una invasión."
 },
 "Pavía (774)": {
 "k": "Acontecimiento",
-"t": "Carlomagno conquistó el reino lombardo tras un largo asedio y se hizo llamar rey de los francos y de los lombardos."
+"t": "El rey lombardo Desiderio atacaba los territorios del papa Adriano I, que pidió ayuda a Carlomagno. Este cruzó los Alpes y sitió Pavía durante varios meses. Desiderio se rindió y fue enviado a un monasterio. Carlomagno se proclamó rey de los lombardos, conservó sus leyes y confirmó las donaciones al papa. Así los francos controlaron el norte de Italia."
 },
 "Roncesvalles (778)": {
 "k": "Acontecimiento",
-"t": "La retaguardia del ejército de Carlomagno fue emboscada en los Pirineos por los vascones. La leyenda, recogida en el «Cantar de Roldán», la convirtió en una lucha contra los musulmanes."
+"t": "Carlomagno había cruzado los Pirineos para ayudar a los gobernadores musulmanes rebeldes de Zaragoza, pero no consiguió tomar la ciudad. En el regreso, la retaguardia de su ejército fue atacada en el paso de Roncesvalles por los vascones, que se llevaron el botín. Murió Roldán, prefecto de la Marca de Bretaña. De esos hechos, muy poco importantes, nació siglos después el «Cantar de Roldán»."
 },
 "Coronación imperial (800)": {
 "k": "Acontecimiento",
-"t": "El papa León III coronó emperador a Carlomagno en San Pedro de Roma. Se restableció en Occidente el título imperial."
+"t": "Carlomagno estaba en Roma para defender al papa León III de acusaciones de sus enemigos. El día de Navidad, mientras rezaba en San Pedro, el papa le puso una corona y el pueblo lo aclamó como emperador. Según su biógrafo Eginardo, Carlomagno no quería recibir el título así, porque implicaba que el papa lo concedía. El hecho creó un nuevo imperio en Occidente."
 },
 "Tratado de Verdún (843)": {
 "k": "Acontecimiento",
-"t": "Los nietos de Carlomagno se repartieron el Imperio: Carlos el Calvo recibió la parte occidental, Luis el Germánico la oriental y Lotario una franja central con Italia."
+"t": "Tras la muerte de Luis el Piadoso, sus hijos lucharon por la herencia. Luis el Germánico y Carlos el Calvo se aliaron contra Lotario con los Juramentos de Estrasburgo (842), escritos en lengua romance y germánica. En Verdún, Carlos recibió la Francia occidental, Luis la oriental, y Lotario la franja central, con las ciudades imperiales de Aquisgrán y Roma. Esa división está en el origen de Francia y Alemania."
 },
 "Carlomagno, rey (768)": {
 "k": "Acontecimiento",
-"t": "Tras la muerte de Pipino el Breve, Carlomagno heredó el reino con su hermano Carlomán. Desde 771 gobernó solo."
+"t": "Pipino el Breve, que había sido el primer rey carolingio, dividió el reino entre sus hijos Carlos y Carlomán. Los dos hermanos se llevaron mal. Cuando Carlomán murió en 771, Carlos se hizo con todo el reino ignorando a los hijos de su hermano. Gobernó como rey de los francos hasta el año 800 y expandió sus dominios por Italia, Sajonia y la Marca Hispánica."
 }
 };
