@@ -1,43 +1,43 @@
 window.LUGARES={
 "Berlín": {
 "k": "Ciudad",
-"t": "Ciudad dividida en cuatro sectores en 1945 y en dos mitades desde 1949. El Muro (1961-1989) la convirtió en símbolo de la Guerra Fría."
+"t": "Ciudad dividida en cuatro sectores en 1945, y en 1949, con la creación de las dos Alemanias, en Berlín Este y Berlín Oeste. En 1948-49 hubo un bloqueo soviético, con puente aéreo. El Muro, de 155 km, se levantó en agosto de 1961, para frenar la huida a Occidente, y cayó el 9 de noviembre de 1989. Fue el símbolo de la división del mundo."
 },
 "Londres": {
 "k": "Ciudad",
-"t": "Capital de una potencia que perdió su imperio colonial tras la guerra. Fue uno de los principales aliados de Estados Unidos en la OTAN."
+"t": "Capital de una potencia que, aunque vencedora, salió muy debilitada de la guerra y perdió su imperio: la India en 1947, Palestina en 1948, Suez en 1956. Churchill habló del «telón de acero» en 1946. Fue uno de los fundadores de la OTAN, en 1949, y aliado de EE. UU. Consiguió su bomba atómica en 1952."
 },
 "París": {
 "k": "Ciudad",
-"t": "Capital de Francia, potencia colonial que se enfrentó a la descolonización en Indochina y Argelia. En 1966 De Gaulle retiró al país del mando militar de la OTAN."
+"t": "Capital de una potencia colonial que sufrió la derrota de Dien Bien Phu (1954) en Indochina y una guerra en Argelia (1954-1962), que acabó con la Cuarta República. Con De Gaulle, Francia desarrolló su bomba atómica (1960) y en 1966 se retiró del mando militar integrado de la OTAN, aunque siguió siendo miembro. Impulsó la integración europea."
 },
 "La Habana": {
 "k": "Ciudad",
-"t": "Capital de Cuba. Tras la revolución de 1959 el país se alió con la URSS y fue escenario de la crisis de los misiles."
+"t": "Capital de Cuba, donde triunfó la revolución de Fidel Castro en enero de 1959. Tras la nacionalización de empresas estadounidenses y el embargo, se acercó a la URSS. EE. UU. fracasó en la invasión de Bahía de Cochinos (1961). En octubre de 1962, el despliegue de misiles soviéticos provocó la crisis de los misiles, el momento de mayor riesgo de guerra nuclear."
 },
 "Hanói": {
 "k": "Ciudad",
-"t": "Capital de Vietnam del Norte, dirigido por Ho Chi Minh. Fue centro de la guerra contra Francia y después contra Estados Unidos."
+"t": "Capital de la República Democrática de Vietnam, proclamada por Ho Chi Minh en 1945. Tras ganar a Francia en Dien Bien Phu (1954), Vietnam se dividió en norte comunista y sur apoyado por EE. UU. La guerra de Vietnam (1955-1975) incluyó el bombardeo de Hanói en 1972. Con la ofensiva de 1975, el Norte tomó Saigón y reunificó el país."
 },
 "Kabul": {
 "k": "Ciudad",
-"t": "Capital de Afganistán. La invasión soviética de 1979 inició una guerra de diez años."
+"t": "Capital de Afganistán. En 1978 un golpe comunista llevó al poder a un gobierno prosoviético, que provocó una rebelión. En diciembre de 1979, la URSS invadió el país. La guerra con los muyahidines, apoyados por EE. UU., Pakistán y Arabia Saudí, duró hasta 1989 y fue el «Vietnam soviético»: causó más de un millón de muertos afganos y unos 15.000 soviéticos."
 },
 "Nueva Delhi": {
 "k": "Ciudad",
-"t": "Capital de la India independiente. Nehru fue uno de los líderes del movimiento de países no alineados."
+"t": "Capital de la India, independiente desde 1947. Jawaharlal Nehru fue uno de los fundadores del Movimiento de Países No Alineados, con Tito y Nasser, que surgió en la conferencia de Bandung (1955) y se institucionalizó en Belgrado (1961). Quería una vía neutral entre los bloques, aunque la India se acercó a la URSS tras la guerra con China de 1962."
 },
 "Ciudad del Cabo": {
 "k": "Ciudad",
-"t": "Capital legislativa de Sudáfrica, país que mantuvo el apartheid entre 1948 y 1994."
+"t": "Capital legislativa de Sudáfrica, donde en 1948 el Partido Nacional impuso el apartheid: la separación racial, con restricciones a la población negra, que se mantuvo hasta 1994. La ONU lo condenó y hubo sanciones. Nelson Mandela, condenado en 1964, estuvo en la isla Robben, frente a Ciudad del Cabo, hasta 1990, y fue presidente en 1994."
 },
 "Varsovia": {
 "k": "Ciudad",
-"t": "Capital de Polonia. En ella se firmó en 1955 el Pacto de Varsovia, la alianza militar del bloque soviético."
+"t": "Capital de Polonia, donde el 14 de mayo de 1955 se firmó el Pacto de Varsovia, alianza militar de la URSS y siete países de Europa del Este, en respuesta al ingreso de Alemania Occidental en la OTAN. Servía para mantener la hegemonía soviética: se usó en la invasión de Checoslovaquia en 1968. Se disolvió en 1991."
 },
 "Belgrado": {
 "k": "Ciudad",
-"t": "Capital de Yugoslavia, que bajo Tito rompió con Stalin y siguió una vía propia. Fue sede de la primera cumbre de países no alineados."
+"t": "Capital de Yugoslavia, donde Tito rompió con Stalin en 1948 y siguió una vía propia, el «socialismo autogestionario», fuera del Pacto de Varsovia. Fue sede, en septiembre de 1961, de la primera cumbre de los países no alineados, con Nehru, Nasser, Sukarno y Nkrumah. Yugoslavia recibió ayuda de Occidente y equilibró entre ambos bloques."
 },
 "Yalta (feb. 1945)": {
 "k": "Acontecimiento",

@@ -1,35 +1,35 @@
 window.LUGARES={
 "Tokio": {
 "k": "Ciudad",
-"t": "Capital del Imperio japonés. Los bombardeos incendiarios de marzo de 1945 mataron a decenas de miles de personas."
+"t": "Capital del Imperio japonés, de Hirohito. Los bombardeos incendiarios estadounidenses de la noche del 9 al 10 de marzo de 1945 destruyeron buena parte de la ciudad, de casas de madera, y causaron unos 100.000 muertos, el ataque aéreo más mortífero de la guerra. Japón se rindió el 15 de agosto, y la firma fue el 2 de septiembre en la bahía de Tokio."
 },
 "Pekín": {
 "k": "Ciudad",
-"t": "Japón la ocupó en 1937, al inicio de la guerra total con China."
+"t": "Capital china. El 7 de julio de 1937, el incidente del puente Marco Polo, junto a Pekín, dio inicio a la guerra total entre Japón y China. Los japoneses la ocuparon pocos días después y crearon un gobierno títere. Para China, 1937 es el comienzo de la guerra, antes de 1939 en Europa. La guerra causó millones de muertos chinos."
 },
 "Nankín": {
 "k": "Ciudad",
-"t": "Los japoneses tomaron la ciudad en diciembre de 1937 y mataron a cientos de miles de civiles y prisioneros."
+"t": "Capital de la China nacionalista. Los japoneses la tomaron el 13 de diciembre de 1937, y durante unas seis semanas mataron a decenas o cientos de miles de civiles y prisioneros y cometieron violaciones masivas. Las cifras se discuten: el tribunal de Tokio habló de más de 200.000, y China, de 300.000. Es la «matanza de Nankín»."
 },
 "Singapur": {
 "k": "Ciudad",
-"t": "Base naval británica en Asia. Se rindió a Japón en febrero de 1942, la mayor capitulación de la historia británica."
+"t": "Base naval británica, «el Gibraltar de Oriente». Japón desembarcó en Malasia el 8 de diciembre de 1941 y avanzó por la península. El 15 de febrero de 1942, el general Percival se rindió con unos 80.000 soldados, el mayor desastre militar británico. Muchos prisioneros murieron en la construcción del ferrocarril de Birmania."
 },
 "Manila": {
 "k": "Ciudad",
-"t": "Capital de Filipinas, ocupada por Japón en 1942. Su liberación en 1945 la destruyó casi por completo."
+"t": "Capital de Filipinas, colonia de EE. UU. Japón la ocupó en enero de 1942, tras la retirada de MacArthur, y siguió el trágico episodio de las «marchas de la muerte» de Bataán. Entre febrero y marzo de 1945 la batalla de Manila destruyó gran parte de la ciudad y mató a unos 100.000 civiles. MacArthur regresó en octubre de 1944."
 },
 "Batavia": {
 "k": "Ciudad",
-"t": "Capital de las Indias Orientales Neerlandesas. Japón la ocupó en 1942, interesado en su petróleo."
+"t": "Capital de las Indias Orientales Neerlandesas, hoy Yakarta, la colonia con las mayores reservas de petróleo de la región. Japón la ocupó en marzo de 1942 y fue uno de sus objetivos económicos. Los japoneses fomentaron el nacionalismo indonesio, y Sukarno proclamó la independencia en agosto de 1945, con la rendición. La guerra de independencia contra los Países Bajos duró hasta 1949."
 },
 "Rangún": {
 "k": "Ciudad",
-"t": "Capital de Birmania. Japón la ocupó en 1942 y los británicos la recuperaron en 1945."
+"t": "Capital de Birmania, ocupada por Japón en marzo de 1942, que cortó la ruta de abastecimiento a China. Los japoneses crearon un Estado birmano nominal y los nacionalistas, como Aung San, colaboraron al principio y se pasaron a los Aliados en 1945. Los británicos, con el general Slim, la recuperaron en mayo de 1945."
 },
 "Honolulu": {
 "k": "Ciudad",
-"t": "Ciudad de Hawái, base de la flota de Estados Unidos en el Pacífico."
+"t": "Ciudad de Oahu, en Hawái, y base de la flota estadounidense del Pacífico en Pearl Harbor. El 7 de diciembre de 1941 los japoneses atacaron por sorpresa con unos 350 aviones, hundieron o dañaron ocho acorazados y mataron a unas 2.400 personas. Los portaaviones no estaban en el puerto. EE. UU. declaró la guerra a Japón al día siguiente."
 },
 "Pearl Harbor (7 dic. 1941)": {
 "k": "Acontecimiento",
@@ -77,31 +77,31 @@ window.LUGARES={
 },
 "Viena": {
 "k": "Ciudad",
-"t": "Alemania anexionó Austria en 1938. Las tropas soviéticas liberaron la ciudad en abril de 1945."
+"t": "Capital de Austria. El Anschluss, la anexión a Alemania, se produjo en marzo de 1938, con la entrada de tropas alemanas sin resistencia y el entusiasmo de gran parte de la población. Persiguieron a los judíos desde el primer día. El Ejército Rojo tomó Viena en abril de 1945, y Austria se dividió en cuatro zonas hasta 1955."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "Capital de Italia, liberada por los Aliados el 4 de junio de 1944."
+"t": "Capital de Italia y del régimen de Mussolini, aliado de Hitler desde el Pacto de Acero (1939). Fue bombardeada por los Aliados en julio de 1943, y el Gran Consejo Fascista depuso a Mussolini el 25 de julio. Los alemanes la ocuparon en septiembre; el 4 de junio de 1944 los estadounidenses entraron en Roma, dos días antes del desembarco de Normandía."
 },
 "Varsovia": {
 "k": "Ciudad",
-"t": "Alemania invadió Polonia en 1939. La ciudad tuvo el mayor gueto judío y sufrió un levantamiento en 1944."
+"t": "Capital de Polonia, que Alemania invadió el 1 de septiembre de 1939, con la URSS desde el 17 de septiembre. Capituló a finales del mes. Los alemanes crearon un gueto en 1940, donde llegaron a vivir unas 400.000 personas. En agosto de 1944 el Ejército Nacional se alzó contra los alemanes, mientras el Ejército Rojo esperaba al otro lado del río. El levantamiento fracasó y la ciudad fue arrasada."
 },
 "Leningrado": {
 "k": "Ciudad",
-"t": "Segunda ciudad de la URSS, sitiada por los alemanes durante casi novecientos días."
+"t": "Antigua San Petersburgo. El asedio alemán y finlandés duró del 8 de septiembre de 1941 al 27 de enero de 1944, 872 días. Murieron al menos 800.000 civiles, la mayoría por hambre y frío, sobre todo en el invierno de 1941-42, mientras se abastecía por el hielo del lago Ladoga, la «carretera de la vida». La ciudad resistió, y nunca se rindió."
 },
 "Belgrado": {
 "k": "Ciudad",
-"t": "Capital de Yugoslavia, bombardeada y ocupada por Alemania en abril de 1941."
+"t": "Capital de Yugoslavia. Tras el golpe de Estado del 27 de marzo de 1941 contra el gobierno que se había unido al Eje, Hitler invadió el país el 6 de abril y bombardeó Belgrado, con miles de muertos. Yugoslavia se rindió el 17 de abril. Se desató una guerra de resistencia entre los partisanos de Tito y los chetniks."
 },
 "Bucarest": {
 "k": "Ciudad",
-"t": "Capital de Rumanía, aliada de Alemania. En agosto de 1944 un golpe del rey cambió el país de bando."
+"t": "Capital de Rumanía, aliada de Alemania desde 1940 y rica en petróleo, en Ploiești. El mariscal Antonescu gobernaba como dictador y envió tropas a la URSS, con graves pérdidas en Stalingrado. El 23 de agosto de 1944, el rey Miguel I lo destituyó y declaró la guerra a Alemania. El Ejército Rojo entró en Bucarest pocos días después."
 },
 "Atenas": {
 "k": "Ciudad",
-"t": "Alemania la ocupó en 1941. La hambruna del invierno siguiente causó decenas de miles de muertes."
+"t": "Alemania e Italia ocuparon Grecia tras la invasión de abril de 1941; el 27 de abril los alemanes entraron en Atenas e izaron la esvástica en la Acrópolis. El invierno de 1941-42 trajo una terrible hambruna, con decenas de miles de muertos, por la requisa de alimentos y el bloqueo. La liberación fue en octubre de 1944, y después estalló una guerra civil."
 },
 "Anschluss (marzo de 1938)": {
 "k": "Acontecimiento",
@@ -145,59 +145,59 @@ window.LUGARES={
 },
 "Salónica": {
 "k": "Ciudad",
-"t": "Unos 46.000 judíos de la ciudad fueron deportados en 1943, la mayoría a Auschwitz."
+"t": "Ciudad con una de las mayores comunidades judías sefardíes del mundo, descendiente de los expulsados de España en 1492, unas 50.000 personas. Los alemanes la ocuparon en 1941. Entre marzo y agosto de 1943 fueron deportados a Auschwitz-Birkenau unos 46.000, y la mayoría fue asesinada. Esta cultura desapareció de la ciudad."
 },
 "Budapest": {
 "k": "Ciudad",
-"t": "En 1944 se deportaron a Auschwitz a más de cuatrocientos mil judíos de Hungría. La ciudad sufrió después un largo asedio."
+"t": "Capital de Hungría, aliada de Alemania. Los alemanes la ocuparon en marzo de 1944, y entre mayo y julio se deportó a Auschwitz a unos 430.000 judíos de las provincias. Diplomáticos como Raoul Wallenberg salvaron a miles. El Ejército Rojo la rodeó en diciembre y la tomó en febrero de 1945, tras unos 50 días de asedio."
 },
 "Auschwitz-Birkenau": {
 "k": "Yacimiento",
-"t": "Campo de concentración y exterminio en la Polonia ocupada. Murió más de un millón de personas, la mayoría judíos."
+"t": "Complejo de campos cerca de Cracovia. Birkenau, abierto en 1941-42, fue el mayor centro de exterminio: murieron unas 1,1 millones de personas, un 90 % judíos, además de polacos, gitanos y prisioneros soviéticos, en cámaras de gas con Zyklon B. Fue liberado por el Ejército Rojo el 27 de enero de 1945, hoy Día del Recuerdo del Holocausto."
 },
 "Treblinka": {
 "k": "Yacimiento",
-"t": "Campo de exterminio nazi en Polonia. Allí murieron unos 800.000 judíos, muchos del gueto de Varsovia."
+"t": "Campo de exterminio en el este de Polonia, creado en 1942 dentro de la «Operación Reinhard». Entre julio de 1942 y agosto de 1943 murieron unas 800.000 personas, la mayoría judíos de Varsovia y de otras partes. Los prisioneros se alzaron el 2 de agosto de 1943, y los nazis lo desmantelaron. Es el segundo en víctimas tras Auschwitz."
 },
 "Sobibór": {
 "k": "Yacimiento",
-"t": "Campo de exterminio nazi en Polonia. En 1943 hubo una revuelta de prisioneros."
+"t": "Campo de exterminio del este de Polonia, abierto en 1942 como parte de la «Operación Reinhard». Murieron unas 170.000-250.000 personas, casi todas judíos, en cámaras de gas. El 14 de octubre de 1943 los prisioneros, dirigidos por el soldado soviético Aleksandr Pechersky, se alzaron y unos 300 huyeron. Los nazis cerraron y arrasaron el campo."
 },
 "Belzec": {
 "k": "Yacimiento",
-"t": "Campo de exterminio nazi en Polonia, donde murieron cientos de miles de personas. Muy pocas sobrevivieron."
+"t": "Campo de exterminio en el sureste de Polonia, de la «Operación Reinhard», que funcionó de marzo a diciembre de 1942. Se calcula que fueron asesinadas unas 430.000-500.000 personas, casi todos judíos de Galitzia y de Polonia, con monóxido de carbono. Solo sobrevivieron muy pocos, que no llegaron a una docena. Luego los nazis lo borraron."
 },
 "Chelmno": {
 "k": "Yacimiento",
-"t": "Primer campo de exterminio nazi, donde desde 1941 se mató a las víctimas con camiones de gas."
+"t": "Aldea en el Warthegau, anexionada a Alemania, donde se abrió en diciembre de 1941 el primer centro de exterminio con camiones de gas. Murieron unos 150.000-300.000 personas, sobre todo judíos del gueto de Łódź, y gitanos. Fue un campo de la «Solución Final», previo a las cámaras de gas fijas. Los pocos supervivientes dieron testimonio."
 },
 "Majdanek": {
 "k": "Yacimiento",
-"t": "Campo de concentración y exterminio en Lublin, Polonia."
+"t": "Campo de concentración y exterminio en las afueras de Lublin, abierto en 1941. Murieron unas 80.000 personas, 60.000 de ellas judías, por cámaras de gas, fusilamientos y malos tratos. El Ejército Rojo lo liberó en julio de 1944, casi intacto, y fue de los primeros campos conocidos por Occidente, lo que dio a conocer los crímenes nazis."
 },
 "Dachau": {
 "k": "Yacimiento",
-"t": "Primer campo de concentración nazi, abierto en 1933 cerca de Múnich."
+"t": "Primer campo de concentración nazi, abierto el 22 de marzo de 1933 por Himmler, cerca de Múnich, para opositores políticos. Sirvió de modelo para el resto. Pasaron más de 200.000 prisioneros, y murieron unos 41.500. Los estadounidenses lo liberaron el 29 de abril de 1945. Hubo allí españoles republicanos y miles de sacerdotes."
 },
 "Buchenwald": {
 "k": "Yacimiento",
-"t": "Campo de concentración cerca de Weimar, liberado por tropas estadounidenses en abril de 1945."
+"t": "Campo de concentración cerca de Weimar, abierto en 1937. Pasaron unos 280.000 prisioneros y murieron unos 56.000. Tenía una organización de resistencia clandestina de prisioneros. Fue liberado el 11 de abril de 1945 por los estadounidenses, cuando los prisioneros ya se habían sublevado. Entre los internados estuvo Jorge Semprún."
 },
 "Sachsenhausen": {
 "k": "Yacimiento",
-"t": "Campo de concentración cercano a Berlín, usado también como escuela de la SS."
+"t": "Campo de concentración en Oranienburg, al norte de Berlín, abierto en 1936 y modelo de campo para la SS, con la inspección de campos. Pasaron más de 200.000 personas y murieron decenas de miles. En 1945, los prisioneros fueron enviados en «marchas de la muerte». Lo liberaron soviéticos y polacos el 22-23 de abril de 1945."
 },
 "Mauthausen": {
 "k": "Yacimiento",
-"t": "Campo de concentración en Austria. En él fueron internados miles de republicanos españoles, más de la mitad de los cuales murió."
+"t": "Campo de concentración en Austria, abierto en 1938, cerca de una cantera de granito, con la «escalera de la muerte». Fue el principal destino de los republicanos españoles deportados: unos 7.200 pasaron por él y murieron unos 4.800. Los estadounidenses lo liberaron el 5 de mayo de 1945, y las fotos que sacó Francesc Boix sirvieron en Núremberg."
 },
 "Bergen-Belsen": {
 "k": "Yacimiento",
-"t": "Campo de concentración en Alemania, donde murió Ana Frank en 1945. Los británicos lo liberaron en abril."
+"t": "Campo en Baja Sajonia, cerca de Celle, que al final de la guerra recibió a miles de prisioneros de otros campos. Entre 1944 y 1945, el hacinamiento y el tifus causaron unos 50.000 muertos, entre ellos Ana Frank y su hermana Margot, en febrero o marzo de 1945. Las tropas británicas lo liberaron el 15 de abril, y filmaron lo que encontraron."
 },
 "Gueto de Varsovia": {
 "k": "Yacimiento",
-"t": "El mayor gueto judío de la Europa ocupada. En 1943 sus habitantes se sublevaron contra su deportación a los campos de exterminio."
+"t": "Creado en octubre-noviembre de 1940, albergó a unos 400.000 judíos en poco más del 3 % de la ciudad, con hambre y epidemias. Desde julio de 1942, unos 300.000 fueron deportados a Treblinka. El 19 de abril de 1943, la Organización Judía de Combate, con Mordechai Anielewicz, se alzó con pocas armas; resistieron casi un mes, hasta que los alemanes quemaron el gueto."
 },
 "Renania remilitarizada (1936)": {
 "k": "Acontecimiento",

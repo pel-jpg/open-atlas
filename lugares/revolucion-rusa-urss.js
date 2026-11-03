@@ -1,107 +1,107 @@
 window.LUGARES={
 "Kiev": {
 "k": "Ciudad",
-"t": "Capital de Ucrania. El Ejército Rojo la controló definitivamente en 1920. Los alemanes la ocuparon de 1941 a 1943 y en Babi Yar mataron a decenas de miles de judíos."
+"t": "Capital de Ucrania y cuna medieval de la Rus. En la guerra civil cambió de manos unas catorce veces; el Ejército Rojo la tomó definitivamente en diciembre de 1919. En 1941 los alemanes la ocuparon tras un gran cerco; en septiembre, en Babi Yar, asesinaron a más de 33.000 judíos en dos días. La liberaron el 6 de noviembre de 1943."
 },
 "Minsk": {
 "k": "Ciudad",
-"t": "Capital de Bielorrusia soviética. Fue casi destruida durante la ocupación alemana de 1941 a 1944."
+"t": "Capital de Bielorrusia. En 1918 se proclamó aquí la República Popular Bielorrusa, de corta vida, y en 1919 se creó la república soviética. Los alemanes la ocuparon en junio de 1941, la convirtieron en gueto y la destruyeron; murieron cientos de miles. El Ejército Rojo la liberó el 3 de julio de 1944, en la operación Bagration."
 },
 "Varsovia": {
 "k": "Ciudad",
-"t": "Capital de Polonia. En 1920 los soviéticos intentaron tomarla, pero fueron derrotados en la batalla del Vístula."
+"t": "Capital de Polonia, que se independizó en 1918. En 1920 la guerra polaco-soviética llevó al Ejército Rojo de Tujachevski hasta las puertas de la ciudad, con la esperanza de llevar la revolución a Europa. En agosto, el «milagro del Vístula» del mariscal Piłsudski los rechazó. La paz de Riga (1921) fijó la frontera hasta 1939."
 },
 "Berlín": {
 "k": "Ciudad",
-"t": "Capital de Alemania. El Ejército Rojo la tomó en mayo de 1945 y quedó dividida durante la Guerra Fría."
+"t": "Capital alemana. Los bolcheviques esperaban una revolución allí, tras la de 1918-19, que fracasó con la muerte de Rosa Luxemburgo. El Ejército Rojo la tomó en la batalla final entre el 16 de abril y el 2 de mayo de 1945, con unos 80.000 muertos soviéticos, y Hitler se suicidó el 30 de abril. Quedó dividida en 1949 y con el Muro, entre 1961 y 1989."
 },
 "Riga": {
 "k": "Ciudad",
-"t": "Capital de Letonia, independiente desde 1918. La URSS la anexionó en 1940."
+"t": "Capital de Letonia, que se independizó en 1918 y repelió a los bolcheviques. La URSS reconoció su independencia en 1920. En virtud del pacto Mólotov-Ribbentrop de 1939, Moscú ocupó el país en junio de 1940, y lo anexionó en agosto. Letonia recuperó la independencia en 1991, tras la «Revolución cantada» de los países bálticos."
 },
 "Tallin": {
 "k": "Ciudad",
-"t": "Capital de Estonia, independiente desde 1918. La URSS la anexionó en 1940."
+"t": "Capital de Estonia, que se independizó en 1918 y venció al Ejército Rojo en 1919-20, con apoyo finlandés y británico. En 1940, tras el pacto Mólotov-Ribbentrop, fue ocupada por la URSS y anexionada. En 1941-44 la ocuparon los nazis. La deportación de decenas de miles en 1941 y 1949 marcó el país. Recuperó la independencia en 1991."
 },
 "Helsinki": {
 "k": "Ciudad",
-"t": "Capital de Finlandia, independiente desde 1917. En 1939-40 resistió una invasión soviética."
+"t": "Capital de Finlandia, que se separó de Rusia en diciembre de 1917 y vivió una guerra civil en 1918 entre rojos y blancos. En noviembre de 1939 la URSS invadió el país, la «guerra de Invierno». Los finlandeses resistieron cuatro meses, pero cedieron territorio en la paz de Moscú (marzo de 1940). Finlandia conservó la independencia."
 },
 "Tsaritsín": {
 "k": "Ciudad",
-"t": "Ciudad del Volga que Stalin defendió durante la guerra civil, en 1918. Más tarde se llamó Stalingrado."
+"t": "Ciudad del Volga, nudo para el suministro de grano del sur. Durante la guerra civil, en 1918, Stalin fue enviado como comisario y se enfrentó al mando militar, lo que fue el inicio de su relación con Voroshílov y Budionni. Los blancos fracasaron en tomarla. Se llamó Stalingrado en 1925, y el éxito de esta defensa se destacó luego en la propaganda."
 },
 "Stalingrado": {
 "k": "Ciudad",
-"t": "Nombre de la ciudad entre 1925 y 1961. Fue escenario de la gran batalla de 1942-43."
+"t": "Nombre de Tsaritsín entre 1925 y 1961. Del 23 de agosto de 1942 al 2 de febrero de 1943 se libró allí la mayor batalla de la Segunda Guerra Mundial en el frente oriental: el VI Ejército alemán de Paulus fue cercado y capituló, con unas 91.000 personas prisioneras. Fue el giro de la guerra. Murieron cerca de dos millones de personas."
 },
 "Volgogrado": {
 "k": "Ciudad",
-"t": "Nombre actual de la ciudad, adoptado en 1961 durante la desestalinización."
+"t": "Nombre actual de la ciudad desde 1961, durante la desestalinización de Jrushchov, que había denunciado el culto a la personalidad de Stalin en su informe secreto de 1956. La ciudad, reconstruida tras la guerra, tiene el gran monumento «La Patria llama», de 85 metros, en Mamáyev Kurgán, donde se libraron combates muy duros."
 },
 "Ekaterimburgo": {
 "k": "Ciudad",
-"t": "Ciudad de los Urales donde fue ejecutada la familia del zar en julio de 1918."
+"t": "Ciudad de los Urales. En la noche del 16 al 17 de julio de 1918 los bolcheviques fusilaron en la casa Ipátiev al zar Nicolás II, su esposa Alejandra, sus cinco hijos y a los sirvientes, mientras los checoslovacos y los blancos se acercaban. Los restos fueron hallados en 1991 y enterrados en San Petersburgo en 1998. La Iglesia ortodoxa los canonizó en 2000."
 },
 "Sverdlovsk": {
 "k": "Ciudad",
-"t": "Nombre soviético de Ekaterimburgo entre 1924 y 1991."
+"t": "Nombre soviético de Ekaterimburgo desde 1924, por Yákov Sverdlov, dirigente bolchevique que presidió el Comité Ejecutivo Central y que, según la versión más aceptada, estuvo implicado en la decisión de ejecutar a la familia del zar. En la Segunda Guerra Mundial fue un centro industrial de los Urales. En 1960 el avión espía U-2 de Powers fue derribado cerca. Recuperó su nombre en 1991."
 },
 "Omsk": {
 "k": "Ciudad",
-"t": "Capital del gobierno blanco del almirante Kolchak durante la guerra civil."
+"t": "Ciudad de Siberia occidental. En noviembre de 1918, un golpe de las fuerzas blancas llevó al poder al almirante Aleksandr Kolchak, que se proclamó «gobernante supremo» desde Omsk. Su ejército avanzó hasta los Urales en 1919, pero fue derrotado y perdió la ciudad en noviembre. Su régimen, sin base social, fue débil y usó la represión."
 },
 "Novosibirsk": {
 "k": "Ciudad",
-"t": "Ciudad siberiana fundada junto al ferrocarril Transiberiano. Se convirtió en un gran centro industrial y científico."
+"t": "Fundada en 1893 como Nikolaevsk, junto al puente que cruzaba el río Obi para el Transiberiano, creció muy rápido y fue la ciudad más poblada de Siberia. En la industrialización soviética y en la Segunda Guerra Mundial, con la evacuación de fábricas, se convirtió en un gran centro industrial. En 1957 se fundó cerca Akademgorodok, la ciudad de la ciencia."
 },
 "Irkutsk": {
 "k": "Ciudad",
-"t": "Ciudad de Siberia oriental. Allí fue fusilado Kolchak en 1920."
+"t": "Ciudad de Siberia oriental, cerca del lago Baikal, a la que Kolchak, derrotado, llegó prisionero de los checoslovacos. El Centro Político, que lo entregó a los bolcheviques, fue sustituido por un comité revolucionario, que lo fusiló junto a su primer ministro Pepeliáyev, el 7 de febrero de 1920. El cuerpo se echó a un río helado."
 },
 "Vladivostok": {
 "k": "Ciudad",
-"t": "Puerto ruso del Pacífico y final del Transiberiano. Fue ocupado por tropas extranjeras de 1918 a 1922."
+"t": "Puerto ruso del Pacífico y término del Transiberiano, fundado en 1860. En 1918 se desembarcaron allí tropas de Japón, EE. UU., Gran Bretaña y otros países, para apoyar a los checoslovacos y a los blancos y, en parte, por la rivalidad con la revolución. Los estadounidenses se fueron en 1920, y los japoneses, los últimos, en octubre de 1922."
 },
 "Taskent": {
 "k": "Ciudad",
-"t": "Capital de Uzbekistán y la mayor ciudad de Asia Central soviética."
+"t": "Capital de la República Socialista Soviética de Uzbekistán y la mayor ciudad de Asia Central soviética. La tomaron los rusos en 1865. En la Segunda Guerra Mundial recibió a cientos de miles de evacuados y fábricas. En 1966 sufrió un terremoto que la destruyó en gran parte y se reconstruyó con ayuda de toda la URSS. Hoy es la capital de Uzbekistán."
 },
 "Bakú": {
 "k": "Ciudad",
-"t": "Capital de Azerbaiyán, con grandes yacimientos de petróleo. Fue clave para la economía soviética."
+"t": "Capital de Azerbaiyán, sobre el mar Caspio. A principios del siglo XX producía la mitad del petróleo mundial. El Ejército Rojo la ocupó en abril de 1920, tras una breve República Democrática de Azerbaiyán (1918-1920). Durante la Segunda Guerra Mundial suministró casi todo el petróleo soviético, y fue un objetivo de Hitler. Azerbaiyán se independizó en 1991."
 },
 "Tiflis": {
 "k": "Ciudad",
-"t": "Capital de Georgia. El Ejército Rojo la ocupó en 1921, tras un breve período de independencia."
+"t": "Capital de Georgia, que se declaró independiente en 1918, bajo un gobierno menchevique. En febrero de 1921, el Ejército Rojo la invadió y la tomó, en una operación en la que participaron Stalin y Ordzhonikidze, ambos georgianos. Georgia entró en la Federación Transcaucásica. Stalin había nacido en Gori, cerca."
 },
 "Estambul": {
 "k": "Ciudad",
-"t": "Ciudad adonde llegaron en 1920 los refugiados y soldados del ejército blanco de Wrangel."
+"t": "Capital otomana ocupada por los Aliados desde 1918. En noviembre de 1920, el ejército blanco del general Wrangel, derrotado en Crimea, fue evacuado por la flota francesa y llegó a la ciudad, con unas 150.000 personas, civiles y militares. Muchos rusos blancos emigraron luego a París, Berlín, Belgrado y Harbin."
 },
 "Odesa": {
 "k": "Ciudad",
-"t": "Puerto ucraniano del mar Negro. En 1905 hubo allí el motín del acorazado Potemkin."
+"t": "Puerto del mar Negro. En junio de 1905, la tripulación del acorazado Potemkin se amotinó contra la oficialidad, tras ser obligada a comer carne podrida, y fue uno de los episodios de la revolución de 1905. La matanza de civiles en la escalinata de Odesa, mostrada de forma célebre por Eisenstein en la película de 1925, es en gran parte ficción."
 },
 "Budapest": {
 "k": "Ciudad",
-"t": "Capital de Hungría. En 1956 tropas soviéticas aplastaron allí una revolución."
+"t": "Capital de Hungría. El 23 de octubre de 1956 una manifestación de estudiantes derivó en una revolución contra el régimen estalinista. Imre Nagy formó gobierno y anunció la salida del Pacto de Varsovia. El 4 de noviembre, tanques soviéticos entraron y aplastaron la revolución: murieron unos 2.500 húngaros, y unos 200.000 huyeron. Nagy fue ejecutado en 1958."
 },
 "Praga": {
 "k": "Ciudad",
-"t": "Capital de Checoslovaquia. En 1968 las tropas del Pacto de Varsovia acabaron con la Primavera de Praga."
+"t": "Capital de Checoslovaquia. En 1968, con Alexander Dubček, el «socialismo con rostro humano» de la Primavera de Praga suprimió la censura y planeaba reformas. En la noche del 20 al 21 de agosto, tropas del Pacto de Varsovia, con unos 200.000 soldados, invadieron el país. Siguió la «normalización» con Gustáv Husák. Brézhnev justificó la intervención con su doctrina."
 },
 "Almá Atá": {
 "k": "Ciudad",
-"t": "Capital de Kazajistán. En 1991 se firmó aquí la declaración que creó la Comunidad de Estados Independientes."
+"t": "Capital de la RSS de Kazajistán. En diciembre de 1986 hubo protestas de jóvenes kazajos al cambiar a un dirigente local, los primeros disturbios nacionalistas con Gorbachov. El 21 de diciembre de 1991, once repúblicas firmaron aquí la Declaración de Almá Atá, que disolvió la URSS y creó la CEI. Gorbachov dimitió el 25 de diciembre."
 },
 "Kabul": {
 "k": "Ciudad",
-"t": "Capital de Afganistán, adonde llegó el ejército soviético en 1979."
+"t": "Capital de Afganistán. En diciembre de 1979 la URSS envió tropas, que mataron al presidente Amín e instalaron a Babrak Karmal, para sostener a un gobierno comunista frente a la insurgencia. La guerra duró hasta 1989: murieron unos 15.000 soldados soviéticos y más de un millón de afganos. Los muyahidines recibieron armas de EE. UU. y Pakistán."
 },
 "Teherán": {
 "k": "Ciudad",
-"t": "Capital de Irán, ocupado en 1941 por soviéticos y británicos. En 1943 se celebró allí una conferencia de los Aliados."
+"t": "Capital de Irán. En agosto de 1941 la URSS y Gran Bretaña invadieron el país para asegurar el petróleo y la ruta de suministros, y forzaron la abdicación de Reza Shah. Entre el 28 de noviembre y el 1 de diciembre de 1943 se celebró la Conferencia de Teherán, la primera reunión de Stalin, Roosevelt y Churchill, donde se acordó abrir un segundo frente en Francia."
 },
 "Domingo Sangriento (1905)": {
 "k": "Acontecimiento",

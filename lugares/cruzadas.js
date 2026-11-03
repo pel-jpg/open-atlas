@@ -1,67 +1,67 @@
 window.LUGARES={
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital del Imperio bizantino. Su emperador Alejo I pidió ayuda a Occidente. En 1204 los cruzados la saquearon."
+"t": "Capital del Imperio bizantino, con unos 400.000 habitantes. En 1095 Alejo I Comneno pidió ayuda militar a Occidente frente a los selyúcidas, y recibió a los cruzados con desconfianza, y les pidió juramento de devolverle las tierras. En abril de 1204, los cruzados de la Cuarta Cruzada la tomaron y saquearon durante tres días, y crearon el Imperio latino hasta 1261."
 },
 "Jerusalén": {
 "k": "Ciudad",
-"t": "Ciudad santa para cristianos, musulmanes y judíos. Los cruzados la tomaron en 1099 y Saladino la recuperó en 1187."
+"t": "Ciudad santa del judaísmo, cristianismo e islam. Los cruzados la tomaron el 15 de julio de 1099, tras cinco semanas de asedio, con una gran matanza de musulmanes y judíos. Fue la capital del reino de Jerusalén. Saladino la recuperó el 2 de octubre de 1187 tras la victoria de Hattin, y dejó marchar a la mayoría de los cristianos por un rescate."
 },
 "Antioquía": {
 "k": "Ciudad",
-"t": "Ciudad tomada por los cruzados en 1098 tras un largo asedio. Fue capital de un principado cruzado hasta 1268."
+"t": "Gran ciudad de Siria, muy fortificada. Los cruzados la sitiaron durante ocho meses y la tomaron en junio de 1098, por la traición de un jefe armenio llamado Firuz. Inmediatamente fueron sitiados por un ejército de Kerbogha. Bohemundo de Tarento fundó allí un principado, que duró hasta 1268, cuando fue conquistado por el sultán mameluco Baibars."
 },
 "Edesa": {
 "k": "Ciudad",
-"t": "Capital del primer Estado cruzado, fundado en 1098. Su caída en 1144 provocó la Segunda Cruzada."
+"t": "Ciudad de mayoría armenia, en el norte de Mesopotamia, en la que Balduino de Boulogne creó en 1098 el primer Estado cruzado, un condado. Fue el más débil y expuesto. Imad al-Din Zengi la conquistó el 24 de diciembre de 1144 y causó una gran impresión en Europa. Fue el motivo de la Segunda Cruzada, predicada por Bernardo de Claraval."
 },
 "Acre": {
 "k": "Ciudad",
-"t": "Principal puerto del reino cruzado y su capital tras 1191. Su caída en 1291 puso fin a la presencia cruzada en Tierra Santa."
+"t": "Puerto del reino de Jerusalén, tomado en 1104 y reconquistado por Saladino en 1187. Los cruzados de la Tercera Cruzada lo recuperaron en 1191, tras un sitio de dos años, y fue la capital del reino hasta 1291. Era un centro comercial con barrios de genoveses, venecianos y pisanos. Los mamelucos de al-Ashraf Jalil lo tomaron el 18 de mayo de 1291, con lo que acabaron los Estados cruzados."
 },
 "El Cairo": {
 "k": "Ciudad",
-"t": "Capital fatimí y después de Saladino. Egipto fue objetivo de varias cruzadas, como la Quinta."
+"t": "Capital del califato fatimí y, desde 1171, de Saladino, que acabó con los fatimíes y unió Egipto y Siria. Los cruzados de Amalarico I atacaron Egipto en varias ocasiones, como en 1163-1169. En la Quinta Cruzada (1218-1221) tomaron Damieta, pero fracasaron en el avance a El Cairo. Luis IX, en la Séptima Cruzada (1249-1250), también fue derrotado y capturado en Mansura."
 },
 "Damasco": {
 "k": "Ciudad",
-"t": "Ciudad siria desde la cual Nur al-Din y después Saladino unificaron a los musulmanes contra los cruzados."
+"t": "Ciudad de Siria, centro de la resistencia musulmana. Nur al-Din la tomó en 1154 y Saladino, que gobernaba desde 1174, unió Egipto y Siria, y desde allí dirigió la lucha contra los cruzados, con un discurso de yihad. En 1148, durante la Segunda Cruzada, los cruzados fracasaron en su intento de tomar la ciudad, lo que supuso un desastre."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "Sede del papa, que promovió las cruzadas y concedía indulgencias a quienes participaban."
+"t": "Sede del papa. En noviembre de 1095, en el Concilio de Clermont, Urbano II llamó a la guerra santa para liberar Jerusalén y prometió el perdón de los pecados. La Iglesia concedió indulgencias, protección de los bienes y un estatus especial a los cruzados. Los papas convocaron después varias cruzadas, como Inocencio III en 1198, y financiaron con impuestos."
 },
 "París": {
 "k": "Ciudad",
-"t": "Capital de los reyes de Francia, entre ellos Luis VII, Felipe II y Luis IX, que dirigieron cruzadas."
+"t": "Capital del reino de Francia, uno de los países que más participaron. Luis VII dirigió la Segunda Cruzada (1147-1149), Felipe II Augusto la Tercera (1189-1192), con Ricardo Corazón de León, y Luis IX (San Luis) las dos últimas, la Séptima y la Octava (1270), en la que murió en Túnez. Los cruzados franceses eran los más numerosos, y por eso los musulmanes llamaban «francos» a todos."
 },
 "Toledo": {
 "k": "Ciudad",
-"t": "Conquistada por Alfonso VI en 1085, diez años antes de la Primera Cruzada. Su caso era visto como una guerra contra el islam."
+"t": "Conquistada por Alfonso VI de León y Castilla en 1085, diez años antes de Clermont, fue un modelo de lucha contra el islam en la península. La Reconquista y las cruzadas estaban unidas por la idea de guerra santa. El papa concedió indulgencias a quienes luchaban en España, como en la batalla de Las Navas de Tolosa de 1212, con victoria cristiana sobre los almohades."
 },
 "Córdoba": {
 "k": "Ciudad",
-"t": "Fernando III la conquistó en 1236. La Reconquista peninsular se consideraba una forma de cruzada."
+"t": "Capital del califato, con su mezquita, tomada por Fernando III en 1236. La Reconquista se vio como una cruzada, y el papa Inocencio III dio indulgencias para Las Navas de Tolosa (1212). Con Fernando III se conquistó casi todo el valle del Guadalquivir (Córdoba 1236, Jaén 1246, Sevilla 1248). Las órdenes militares españolas, como Calatrava y Santiago, se parecían a las del Temple."
 },
 "Venecia": {
 "k": "Ciudad",
-"t": "La República proporcionó los barcos de la Cuarta Cruzada y el dogo Dandolo desvió la expedición a Constantinopla."
+"t": "Gran potencia marítima, con un gobierno de dogos. En 1201 se comprometió a transportar a los cruzados de la Cuarta Cruzada por 85.000 marcos de plata. Como no pudieron pagarlo, el dogo Enrico Dandolo, ciego y de unos 90 años, los desvió: primero tomaron Zara (1202), una ciudad cristiana, y luego Constantinopla (1204), con los beneficios comerciales de Venecia en el Mediterráneo oriental."
 },
 "Nicea": {
 "k": "Ciudad",
-"t": "Ciudad bizantina tomada por los cruzados y los bizantinos en 1097, al comienzo de la Primera Cruzada."
+"t": "Ciudad de Bitinia, capital del sultanato selyúcida de Rum. Los cruzados, con ayuda de los bizantinos, la sitiaron en mayo de 1097, y se rindió a Alejo I el 19 de junio, para disgusto de los cruzados, que no pudieron saquearla. Tras la caída de Constantinopla en 1204, fue la capital del Imperio de Nicea, que recuperó la capital bizantina en 1261."
 },
 "Bagdad": {
 "k": "Ciudad",
-"t": "Capital del califato abasí, autoridad religiosa de los musulmanes suníes. Los cruzados nunca llegaron a ella."
+"t": "Capital del califato abasí, desde 762, autoridad religiosa para los musulmanes suníes, aunque en esta época con poco poder, frente a los sultanes selyúcidas. Los cruzados no llegaron a ella, que estaba lejos, en Mesopotamia. En 1258 los mongoles de Hulagu la destruyeron y mataron al último califa, al-Mustasim. Los cruzados, en ese momento, trataron de pactar con los mongoles."
 },
 "Aquisgrán": {
 "k": "Ciudad",
-"t": "Ciudad de Carlomagno y de las coronaciones germánicas. Federico Barbarroja hizo canonizar aquí a Carlomagno en 1165 y murió en 1190 de camino a Tierra Santa."
+"t": "Ciudad de Carlomagno y lugar de coronación de los reyes germanos. En 1165, Federico Barbarroja hizo canonizar a Carlomagno, con el antipapa Pascual III, e hizo de él un modelo de cruzado. Barbarroja dirigió la Tercera Cruzada en 1189, con un gran ejército, pero se ahogó en el río Saleph (Göksu), en Cilicia, el 10 de junio de 1190. Su ejército se deshizo."
 },
 "Mesina": {
 "k": "Ciudad",
-"t": "Puerto siciliano donde invernaron Ricardo Corazón de León y Felipe II en 1190-91, de camino a la Tercera Cruzada."
+"t": "Puerto de Sicilia donde, en el invierno de 1190-1191, invernaron Ricardo Corazón de León y Felipe II de Francia camino de Tierra Santa. Hubo tensiones por el trato a la hermana de Ricardo, viuda del rey Guillermo II, y por el compromiso de Ricardo con la hermana de Felipe. Llegaron a Acre en 1191, pero su rivalidad dañó la cruzada."
 },
 "Concilio de Clermont (1095)": {
 "k": "Acontecimiento",

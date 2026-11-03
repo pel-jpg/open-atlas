@@ -1,27 +1,27 @@
 window.LUGARES={
 "Londres": {
 "k": "Ciudad",
-"t": "Capital de Inglaterra. Allí Enrique VIII rompió con Roma y se creó la Iglesia anglicana."
+"t": "Capital de Inglaterra. Enrique VIII, que quería anular su matrimonio con Catalina de Aragón y no lo logró del papa, promovió el Acta de Supremacía de 1534, que le hizo cabeza de la Iglesia de Inglaterra. Disolvió los monasterios y confiscó sus bienes. Con Eduardo VI se acercó al protestantismo, con María I volvió al catolicismo y con Isabel I se estableció el anglicanismo (1559)."
 },
 "París": {
 "k": "Ciudad",
-"t": "Capital de Francia, país donde las guerras de religión enfrentaron a católicos y hugonotes. Escenario de la matanza de San Bartolomé."
+"t": "Capital de Francia. En las guerras de religión (1562-1598) la monarquía y los católicos se enfrentaron a los hugonotes. Del 23 al 24 de agosto de 1572, durante la boda de Enrique de Navarra con Margarita de Valois, comenzó la matanza de San Bartolomé, que mató a miles de hugonotes en París y otras ciudades. Enrique IV acabó con las guerras con el Edicto de Nantes en 1598."
 },
 "Viena": {
 "k": "Ciudad",
-"t": "Capital de los Habsburgo austríacos, defensores de la Contrarreforma católica en el Imperio."
+"t": "Capital de los Habsburgo austríacos, que eran emperadores del Sacro Imperio. Fernando II, educado por jesuitas, impuso la Contrarreforma en sus territorios y en Bohemia después de la Montaña Blanca (1620). En 1529 y 1683 los turcos otomanos sitiaron la ciudad. La paz de Westfalia (1648) debilitó el poder imperial, pero Viena siguió como cabeza del Sacro Imperio."
 },
 "Estocolmo": {
 "k": "Ciudad",
-"t": "Capital de Suecia, que adoptó el luteranismo con Gustavo Vasa. Su rey Gustavo Adolfo intervino en la guerra de los Treinta Años."
+"t": "Capital de Suecia. Gustavo Vasa rompió con Roma en 1527, con el apoyo de la nobleza, que quería los bienes de la Iglesia, y adoptó el luteranismo. Gustavo II Adolfo entró en 1630 en la guerra de los Treinta Años para defender a los protestantes, ayudado por Richelieu, y ganó en Breitenfeld (1631), pero murió en Lützen (1632). Suecia salió de la guerra como gran potencia."
 },
 "Moscú": {
 "k": "Ciudad",
-"t": "Capital de la Rusia ortodoxa, que quedó al margen de la Reforma."
+"t": "Capital de Rusia, en la que predominaba la Iglesia ortodoxa, separada de Roma desde el cisma de 1054. Moscú se veía como la «Tercera Roma», tras la caída de Constantinopla en 1453. La Reforma y la Contrarreforma apenas la tocaron. El metropolitano pasó a ser patriarca en 1589. Las tensiones con Polonia católica llevaron a conflictos en el «Tiempo de los Disturbios»."
 },
 "Praga": {
 "k": "Ciudad",
-"t": "Capital de Bohemia, tierra de Jan Hus y de fuerte tradición reformista. Allí empezó la guerra de los Treinta Años."
+"t": "Capital de Bohemia, donde Jan Hus, rector de la universidad, predicó contra los abusos de la Iglesia y fue quemado en Constanza en 1415, lo que desató las guerras husitas. El 23 de mayo de 1618, nobles protestantes arrojaron por la ventana del castillo a dos gobernadores imperiales, la «defenestración de Praga», que inició la guerra de los Treinta Años."
 },
 "Wittenberg: 95 tesis (1517)": {
 "k": "Acontecimiento",

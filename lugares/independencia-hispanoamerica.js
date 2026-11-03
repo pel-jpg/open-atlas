@@ -1,63 +1,63 @@
 window.LUGARES={
 "Ciudad de México": {
 "k": "Ciudad",
-"t": "Capital del virreinato de Nueva España. Iturbide entró en ella en 1821 al frente del ejército Trigarante."
+"t": "Capital del virreinato de Nueva España, la ciudad más grande de América. La independencia empezó en 1810 con el grito de Dolores del cura Hidalgo, y continuó con Morelos, ambos ejecutados. En 1821, Agustín de Iturbide, un jefe realista, pactó con el insurgente Vicente Guerrero el Plan de Iguala, y entró en México el 27 de septiembre al frente del ejército Trigarante, con la independencia."
 },
 "La Habana": {
 "k": "Ciudad",
-"t": "Capital de Cuba, que siguió bajo dominio español hasta 1898."
+"t": "Capital de Cuba, con un gran puerto fortificado. Cuba, junto con Puerto Rico, siguió siendo española mientras el resto de América se independizaba, porque tenía una élite de plantadores de azúcar, que temía una revolución de esclavos como la de Haití. Hubo una guerra de independencia de 1868 a 1878 y de 1895 a 1898, hasta la intervención de EE. UU."
 },
 "Caracas": {
 "k": "Ciudad",
-"t": "Ciudad natal de Simón Bolívar. Allí se declaró la independencia de Venezuela en 1811."
+"t": "Ciudad natal de Simón Bolívar. El 19 de abril de 1810 el cabildo formó una junta, y el 5 de julio de 1811 el Congreso declaró la independencia de Venezuela, la primera república hispanoamericana. La Primera República cayó en 1812, y un terremoto ayudó a los realistas. Bolívar protagonizó después la «Campaña Admirable» y la guerra a muerte."
 },
 "Bogotá": {
 "k": "Ciudad",
-"t": "Capital del virreinato de Nueva Granada. Bolívar entró en ella en 1819, tras la victoria de Boyacá."
+"t": "Capital del virreinato de Nueva Granada. El 7 de agosto de 1819 Bolívar derrotó a los realistas en Boyacá, tras cruzar los Andes con su ejército, desde los llanos, y entró en Bogotá. Poco después, el Congreso de Angostura creó la Gran Colombia, con Venezuela, Nueva Granada y, después, Quito. Francisco de Paula Santander fue su vicepresidente."
 },
 "Quito": {
 "k": "Ciudad",
-"t": "Ciudad que formó una junta de gobierno en 1809. El mariscal Sucre aseguró su independencia en la batalla de Pichincha (1822)."
+"t": "El 10 de agosto de 1809 formó una de las primeras juntas de gobierno de Hispanoamérica, que fue reprimida, y sus miembros fueron asesinados en 1810. El 24 de mayo de 1822, Antonio José de Sucre, enviado por Bolívar, derrotó a los realistas en la batalla de Pichincha, junto a Quito, y aseguró la independencia de Ecuador, que se unió a la Gran Colombia."
 },
 "Lima": {
 "k": "Ciudad",
-"t": "Capital del virreinato del Perú y gran baluarte realista. San Martín proclamó su independencia en 1821."
+"t": "Capital del virreinato del Perú, el principal baluarte realista, por el control de la élite criolla y la importancia de las minas. José de San Martín desembarcó en Paracas en 1820, y proclamó la independencia el 28 de julio de 1821. Las batallas de Junín y Ayacucho, en 1824, con Bolívar y Sucre, pusieron fin al dominio español en América del Sur."
 },
 "Buenos Aires": {
 "k": "Ciudad",
-"t": "Capital del virreinato del Río de la Plata. En ella estalló la Revolución de Mayo de 1810."
+"t": "Capital del virreinato del Río de la Plata. Tras la invasión napoleónica de España, el 25 de mayo de 1810 el cabildo abierto formó una Primera Junta, que fue la Revolución de Mayo. Las Provincias Unidas declararon la independencia el 9 de julio de 1816, en Tucumán. Desde Buenos Aires partieron expediciones hacia el Alto Perú, Paraguay y Chile."
 },
 "Santiago": {
 "k": "Ciudad",
-"t": "Capital de Chile. Su independencia se consolidó con las victorias de Chacabuco y Maipú."
+"t": "Capital de Chile. Tras la Patria Vieja (1810-1814), que acabó en Rancagua, San Martín y O'Higgins cruzaron los Andes con el Ejército de los Andes y ganaron en Chacabuco (12 de febrero de 1817), y entraron en Santiago. La batalla de Maipú (5 de abril de 1818) aseguró la independencia, declarada el 12 de febrero de 1818. O'Higgins fue Director Supremo."
 },
 "Río de Janeiro": {
 "k": "Ciudad",
-"t": "Capital de Brasil y, desde 1808, sede de la corte portuguesa, que huía de Napoleón."
+"t": "Capital del Brasil portugués, y desde 1808 sede de la corte, cuando el príncipe regente Juan huyó de Lisboa ante las tropas de Napoleón, con unas 15.000 personas, escoltados por la flota británica. En 1815 Brasil fue elevado a reino. Cuando Juan VI volvió a Portugal en 1821, su hijo Pedro proclamó la independencia el 7 de septiembre de 1822, sin guerra civil."
 },
 "Asunción": {
 "k": "Ciudad",
-"t": "Capital de Paraguay, que se separó de España y de Buenos Aires en 1811."
+"t": "Capital de Paraguay. En 1811, los paraguayos rechazaron a la Junta de Buenos Aires, derrotaron a Belgrano, y depusieron al gobernador español, y se declararon independientes de ambos. Después gobernó el dictador José Gaspar Rodríguez de Francia (1814-1840), que aisló el país y evitó las guerras, con un sistema de autarquía y control del Estado."
 },
 "Montevideo": {
 "k": "Ciudad",
-"t": "Plaza fuerte realista y centro del conflicto en la Banda Oriental, donde actuó José Artigas."
+"t": "Plaza fuerte, el principal puerto español en el Río de la Plata, que se mantuvo realista, y sede del virrey Elío en 1810. En la Banda Oriental, José Artigas, jefe de los orientales, dirigió una revolución con ideas federales y agrarias, y derrotó a los españoles en Las Piedras (1811). Los portugueses, de Brasil, invadieron en 1816, y Uruguay fue independiente en 1828."
 },
 "Guatemala": {
 "k": "Ciudad",
-"t": "Capital de la Capitanía General de Guatemala, que proclamó su independencia en 1821."
+"t": "Capital de la Capitanía General de Guatemala, que incluía América Central y Chiapas. La independencia se proclamó el 15 de septiembre de 1821, sin lucha, tras la noticia de la de México. Las élites criollas, a menudo, preferían unirse a México, y Iturbide la anexó en 1822. Tras su caída, en 1823 se formaron las Provincias Unidas de Centroamérica, que duraron hasta 1841."
 },
 "Panamá": {
 "k": "Ciudad",
-"t": "El istmo se declaró independiente de España en 1821 y se unió a la Gran Colombia."
+"t": "El istmo, que había pertenecido al virreinato de Nueva Granada, se declaró independiente de España el 28 de noviembre de 1821, en Los Santos y en la ciudad de Panamá, sin guerra, y se unió voluntariamente a la Gran Colombia. Bolívar convocó allí el Congreso Anfictiónico de 1826 para crear una confederación hispanoamericana. Panamá se separó de Colombia en 1903."
 },
 "La Paz": {
 "k": "Ciudad",
-"t": "Ciudad del Alto Perú donde estalló una rebelión en 1809, una de las primeras de Hispanoamérica."
+"t": "El 16 de julio de 1809, Pedro Domingo Murillo encabezó una rebelión, con una junta de gobierno, la «Junta Tuitiva», y una proclama de «libertad», una de las primeras de América hispana. Los realistas del virrey Abascal la aplastaron en pocos meses, y Murillo fue ahorcado en enero de 1810. Su frase «La tea que dejo encendida nadie la podrá apagar» es famosa."
 },
 "Mendoza": {
 "k": "Ciudad",
-"t": "Base del Ejército de los Andes de San Martín, que cruzó la cordillera en 1817 para liberar Chile."
+"t": "Ciudad de Cuyo, al pie de los Andes, base del Ejército de los Andes de San Martín, gobernador de Cuyo desde 1814. Allí preparó, con ayuda de frailes, mujeres y vecinos, un ejército de unos 5.000 hombres, con armas, mulas y ropa. En enero de 1817 cruzó la cordillera por varios pasos, a unos 4.000 metros, un hecho considerado una proeza militar."
 },
 "Llegada de la corte portuguesa a Río (1808)": {
 "k": "Acontecimiento",

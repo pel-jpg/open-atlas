@@ -1,63 +1,63 @@
 window.LUGARES={
 "Versalles": {
 "k": "Ciudad",
-"t": "Palacio del rey. En 1789 se reunieron allí los Estados Generales y en octubre una multitud de parisinas obligó a la familia real a trasladarse a París."
+"t": "Residencia de la corte desde Luis XIV. El 5 de mayo de 1789 se abrieron allí los Estados Generales; el 20 de junio, los diputados del Tercer Estado juraron en la sala del Juego de Pelota no separarse hasta dar una constitución a Francia. El 5-6 de octubre, miles de parisinas marcharon hasta el palacio y obligaron a la familia real a instalarse en París."
 },
 "Lyon": {
 "k": "Ciudad",
-"t": "Segunda ciudad de Francia. En 1793 se sublevó contra la Convención y fue asediada y castigada con dureza."
+"t": "Segunda ciudad de Francia y centro de la industria de la seda. En 1793 se sublevó contra la Convención jacobina y resistió un asedio de dos meses. Tras rendirse en octubre, la Convención decretó castigarla y hubo cientos de ejecuciones; su nombre se cambió oficialmente por «Ciudad Liberada» («Commune-Affranchie»)."
 },
 "Marsella": {
 "k": "Ciudad",
-"t": "Ciudad cuyos voluntarios popularizaron en 1792 el himno que sería «La Marsellesa»."
+"t": "Puerto mediterráneo. En 1792, un batallón de voluntarios marselleses llegó a París cantando el «Canto de guerra para el Ejército del Rin», compuesto en Estrasburgo, y por eso se llamó «La Marsellesa». En 1795 fue declarado himno nacional. Marsella se alzó también contra la Convención en el verano de 1793."
 },
 "Burdeos": {
 "k": "Ciudad",
-"t": "Gran puerto del comercio colonial. De allí procedían varios diputados girondinos."
+"t": "Gran puerto atlántico, rico por el comercio de azúcar y esclavos con las colonias, sobre todo con Saint-Domingue. Del departamento de la Gironda procedieron varios diputados moderados, como Vergniaud, los «girondinos», que la Convención purgó en junio de 1793; muchos fueron guillotinados en octubre. La ciudad se opuso a los jacobinos."
 },
 "Nantes": {
 "k": "Ciudad",
-"t": "Puerto del Loira. En 1793-94 el representante Carrier ordenó ahogar a miles de prisioneros en el río."
+"t": "Puerto del Loira, importante en el comercio de esclavos. Durante la guerra de la Vandea, entre 1793 y 1794, el representante Jean-Baptiste Carrier hizo ejecutar a miles de prisioneros, muchos sacerdotes y rebeldes, que fueron ahogados en barcazas en el río, los llamados «ahogamientos». Carrier fue juzgado y guillotinado en diciembre de 1794."
 },
 "Estrasburgo": {
 "k": "Ciudad",
-"t": "En esta ciudad compuso Rouget de Lisle en 1792 el canto que luego se llamó «La Marsellesa»."
+"t": "Ciudad fronteriza de Alsacia. En abril de 1792, tras declararse la guerra a Austria, el capitán Claude Joseph Rouget de Lisle compuso aquí el «Canto de guerra para el Ejército del Rin», que más tarde fue «La Marsellesa». La ciudad, de lengua alemana en gran parte, quedó como una plaza clave en el frente contra Austria y Prusia."
 },
 "Bruselas": {
 "k": "Ciudad",
-"t": "Capital de los Países Bajos austríacos, ocupada por los franceses tras Jemappes y anexionada en 1795."
+"t": "Capital de los Países Bajos austríacos. Tras la victoria de Dumouriez en Jemappes (6 de noviembre de 1792), las tropas francesas la ocuparon. La región fue anexionada a Francia en 1795 y se convirtió en departamentos franceses. Permaneció así hasta 1814, y su ocupación, con la apertura del Escalda, tensó las relaciones con Gran Bretaña."
 },
 "Ámsterdam": {
 "k": "Ciudad",
-"t": "Capital de las Provincias Unidas, que en 1795 se convirtieron en la República Bátava, aliada de Francia."
+"t": "Capital de las Provincias Unidas. En el invierno de 1794-95, con los ríos helados, el ejército francés avanzó con la ayuda de los patriotas holandeses. Estalló la revolución, huyó el estatúder Guillermo V y se proclamó la República Bátava, aliada y vasalla de Francia, que tuvo que pagar indemnizaciones y mantener tropas francesas."
 },
 "Madrid": {
 "k": "Ciudad",
-"t": "Capital de la España de Carlos IV. Tras ejecutarse a Luis XVI, España entró en guerra con Francia (1793-95)."
+"t": "Capital de la España de Carlos IV, un Borbón primo de Luis XVI. Tras la ejecución del rey en enero de 1793, España se unió a la primera coalición y entró en guerra con la Convención (guerra del Rosellón o de la Convención). Los franceses ocuparon parte de Cataluña y del País Vasco. La paz de Basilea (1795) llevó a una alianza con Francia."
 },
 "Aviñón (Papa)": {
 "k": "Ciudad",
-"t": "Enclave que pertenecía al papa. Francia lo anexionó en 1791."
+"t": "Enclave pontificio en Francia, donde habían residido los papas en el siglo XIV. Su población se dividió y hubo violencia entre partidarios de la anexión y del papa. La Asamblea Constituyente decretó su anexión a Francia en septiembre de 1791. El Comtat Venaissin, vecino, también se unió. Pío VI condenó la Constitución civil del clero."
 },
 "Turín": {
 "k": "Ciudad",
-"t": "Capital del reino de Piamonte-Cerdeña. Bonaparte lo obligó a pedir un armisticio en 1796."
+"t": "Capital del reino de Piamonte-Cerdeña, cuyo rey Víctor Amadeo III se unió a la coalición contra Francia. En 1796, Bonaparte, al mando del ejército de Italia, ganó varias batallas y obligó a Piamonte a pedir el armisticio de Cherasco en abril, cediendo Saboya y Niza. Esta campaña lo hizo famoso."
 },
 "Milán": {
 "k": "Ciudad",
-"t": "Bonaparte la tomó en 1796. Se convirtió en capital de la República Cisalpina."
+"t": "Capital de la Lombardía austríaca. Bonaparte entró el 15 de mayo de 1796, tras vencer en Lodi. Los franceses crearon la República Cisalpina en 1797, con capital en Milán, y expoliaron obras de arte. Fue el primer Estado «hermano» en Italia, con la bandera tricolor verde, blanca y roja, y la base de futuros cambios."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "En 1798 las tropas francesas proclamaron una república romana y llevaron al papa Pío VI a Francia."
+"t": "Capital de los Estados Pontificios. En febrero de 1798 las tropas del general Berthier entraron en la ciudad, se proclamó la República Romana y Pío VI fue llevado preso a Francia. Murió en Valence en agosto de 1799. Muchas obras de arte fueron enviadas a París. Fue el primer episodio de los conflictos entre Napoleón y la Iglesia."
 },
 "Nápoles": {
 "k": "Ciudad",
-"t": "Capital del reino de las Dos Sicilias. En 1799 se creó en ella la efímera República Partenopea."
+"t": "Capital del reino de las Dos Sicilias, de los Borbones. En enero de 1799, con la llegada de las tropas francesas, jacobinos locales proclamaron la República Partenopea. Duró cinco meses: el cardenal Ruffo, con un ejército campesino, la derrotó en junio, y la represión posterior, con Nelson, fue severa, con la ejecución de intelectuales."
 },
 "Berlín": {
 "k": "Ciudad",
-"t": "Capital de Prusia. Prusia firmó la paz con Francia en Basilea en 1795."
+"t": "Capital de Prusia, que con Austria había iniciado la guerra contra la Francia revolucionaria (Declaración de Pillnitz, 1791). Tras sus derrotas, y por interés en el reparto de Polonia, Prusia firmó la paz de Basilea el 5 de abril de 1795 y cedió la orilla izquierda del Rin. Quedó neutral en el norte de Alemania hasta 1806."
 },
 "Toma de la Bastilla (14 jul. 1789)": {
 "k": "Acontecimiento",

@@ -1,43 +1,43 @@
 window.LUGARES={
 "Roma": {
 "k": "Ciudad",
-"t": "Antigua capital del Imperio. Perdió peso político desde el siglo III y fue saqueada por Alarico en 410 y por los vándalos en 455."
+"t": "Capital del Imperio, con un millón de habitantes en su época de esplendor. Desde el siglo III los emperadores residieron más cerca de las fronteras. En 410 Alarico la saqueó durante tres días, algo que conmocionó al mundo romano y movió a san Agustín a escribir La ciudad de Dios. En 455 la saquearon los vándalos de Genserico durante dos semanas."
 },
 "Rávena": {
 "k": "Ciudad",
-"t": "Capital imperial de Occidente desde 402, bajo el emperador Honorio. Después fue sede de Odoacro, de Teodorico y del exarcado bizantino."
+"t": "Ciudad rodeada de lagunas y pantanos junto al Adriático, fácil de defender. Honorio trasladó allí la capital en 402, huyendo de los godos de Alarico. Con Odoacro y Teodorico, rey de los ostrogodos, siguió siendo capital, y con Justiniano pasó a ser sede del exarca bizantino. Conserva mosaicos bizantinos, como los de San Vital."
 },
 "Milán": {
 "k": "Ciudad",
-"t": "Residencia imperial en Occidente desde la Tetrarquía (286). En 313 Constantino y Licinio proclamaron aquí la tolerancia hacia los cristianos."
+"t": "Mediolanum fue capital imperial desde 286, en tiempos de Maximiano, por su situación estratégica ante los Alpes. En 313 se publicó el edicto de Milán, en el que Constantino y Licinio garantizaron la libertad religiosa a los cristianos. Su obispo, san Ambrosio, fue muy influyente: bautizó a san Agustín en 387 y obligó a Teodosio a hacer penitencia."
 },
 "Tréveris": {
 "k": "Ciudad",
-"t": "Residencia imperial en la Galia durante el siglo IV y capital de la prefectura de las Galias. En el siglo V la administración imperial la abandonó."
+"t": "Augusta Treverorum fue una de las residencias de los emperadores del siglo IV, como Constantino y Valentiniano I, y capital de la prefectura de las Galias. Conserva la Porta Nigra y las termas imperiales. Fue saqueada varias veces por los francos a principios del siglo V, y la administración imperial se trasladó a Arlés."
 },
 "Sirmio": {
 "k": "Ciudad",
-"t": "Ciudad de Panonia junto al Sava, una de las capitales de la Tetrarquía. Varios emperadores del siglo III y IV nacieron o residieron en ella."
+"t": "Ciudad de Panonia, en el Sava, capital de la Tetrarquía de Diocleciano durante un tiempo. En ella nacieron o residieron varios emperadores, como Probo y Graciano, que fueron de origen ilirio y siguieron la carrera militar. Era un nudo estratégico para defender la frontera del Danubio. Los hunos la destruyeron en 441."
 },
 "Nicomedia": {
 "k": "Ciudad",
-"t": "Capital de Diocleciano en Oriente y residencia imperial hasta que Constantino fundó Constantinopla."
+"t": "Ciudad de Bitinia, en el mar de Mármara, capital de Diocleciano y de Oriente en la Tetrarquía desde 286. Allí se publicó en 303 el primer edicto de la gran persecución contra los cristianos. Constantino murió en sus cercanías en 337. Perdió su papel cuando se fundó Constantinopla, a 90 km, y un terremoto destruyó la ciudad en 358."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Fundada por Constantino sobre Bizancio e inaugurada en 330. Fue la capital de la mitad oriental del Imperio, que sobrevivió hasta 1453."
+"t": "Constantino la inauguró el 11 de mayo de 330 sobre la antigua Bizancio, en un lugar excepcional entre Europa y Asia, con un puerto protegido, el Cuerno de Oro, y fácil de defender. Se la dotó de Senado, hipódromo y grandes murallas, las de Teodosio II (413). Capital de la mitad oriental del Imperio, resistió hasta su conquista por los otomanos en 1453."
 },
 "Cartago": {
 "k": "Ciudad",
-"t": "Capital de la rica provincia de África. Los vándalos de Genserico la tomaron en 439 y la convirtieron en capital de su reino."
+"t": "Refundada por César y Augusto, fue la capital de la provincia de África, el granero de Roma. El 19 de octubre de 439, Genserico, rey de los vándalos, la tomó por sorpresa y la convirtió en capital de su reino, con una flota que dominó el Mediterráneo occidental. Justiniano la reconquistó en 533-534, gracias a Belisario."
 },
 "Toledo": {
 "k": "Ciudad",
-"t": "Ciudad de la Carpetania que se convirtió en capital del reino visigodo en el siglo VI."
+"t": "Ciudad de la Carpetania, situada en el centro de la Península. Los visigodos, que habían tenido su corte en Tolosa y Barcelona, la eligieron como capital con Atanagildo, hacia 554, y Leovigildo la consolidó. Allí se celebraron los concilios, sobre todo el III, en 589, donde Recaredo abjuró del arrianismo. Siguió siendo el centro político hasta 711."
 },
 "París": {
 "k": "Ciudad",
-"t": "Clodoveo la eligió como capital de su reino franco hacia 508."
+"t": "Lutecia, antigua ciudad de los parisios, en una isla del Sena. Tras vencer a los visigodos en Vouillé (507), Clodoveo, rey de los francos, estableció allí su capital hacia 508 y se bautizó católico, lo que ganó el apoyo de la población galorromana y de la Iglesia. Fue enterrado en la basílica de los Santos Apóstoles, hoy Santa Genoveva."
 },
 "Adrianópolis (378 d. C.)": {
 "k": "Acontecimiento",

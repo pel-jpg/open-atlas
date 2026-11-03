@@ -1,83 +1,83 @@
 window.LUGARES={
 "Madrid": {
 "k": "Ciudad",
-"t": "Felipe II la hizo capital de la Monarquía en 1561. Hasta entonces la corte había sido itinerante."
+"t": "Hasta 1561 la corte era itinerante, residiendo en Toledo, Valladolid o Sevilla, según el rey. Felipe II la estableció en Madrid, una villa de unos 20.000 habitantes, en el centro de la Península, y sin obispo ni nobleza fuerte. Con él se amplió el Alcázar y se creó el Escorial (1563-1584). Tras un breve paréntesis en Valladolid (1601-1606), Madrid fue capital definitiva."
 },
 "Toledo": {
 "k": "Ciudad",
-"t": "Una de las principales sedes de la corte de Carlos V. Fue uno de los focos de la revuelta de los Comuneros, encabezada por Juan de Padilla."
+"t": "Residencia de la corte de Carlos V y sede de las Cortes de 1538. Fue uno de los focos de la revuelta de los Comuneros (1520-1521), dirigida por Juan de Padilla y su esposa, María Pacheco, que resistió después de la derrota de Villalar (23 de abril de 1521). Con el tiempo, perdió su peso a favor de Madrid, en 1561."
 },
 "Bruselas": {
 "k": "Ciudad",
-"t": "Capital de los Países Bajos de los Habsburgo. En ella abdicó Carlos V en 1555."
+"t": "Capital de los Países Bajos de los Habsburgo y sede del gobierno regional. Carlos V nació en Gante, y se educó en esa zona. El 25 de octubre de 1555, en el palacio de Coudenberg, abdicó de los Países Bajos a favor de su hijo Felipe, y en 1556 de la Corona de España. Se retiró al monasterio de Yuste."
 },
 "Viena": {
 "k": "Ciudad",
-"t": "Capital de los dominios austríacos de los Habsburgo, gobernados por Fernando, hermano de Carlos V. Resistió el asedio otomano de 1529."
+"t": "Capital de los dominios austríacos, que Carlos V encomendó a su hermano Fernando. En 1529, Solimán el Magnífico sitió la ciudad durante unas tres semanas, con unos 120.000 hombres, pero el invierno y la defensa lo obligaron a retirarse. Fue la mayor amenaza otomana en Europa central. Fernando fue elegido rey de Romanos en 1531."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "Sede del papa. En 1527 las tropas imperiales la saquearon. Carlos V recibió la corona imperial del papa en Bolonia en 1530."
+"t": "Sede del papa Clemente VII, que se alió con Francia contra Carlos V en la Liga de Cognac. El 6 de mayo de 1527, tropas imperiales, con muchos mercenarios luteranos sin pagar, saquearon la ciudad (Sacco di Roma) durante unos ocho días, y el papa se refugió en el castillo de Sant'Angelo. Carlos fue coronado emperador por el papa en Bolonia, el 24 de febrero de 1530."
 },
 "París": {
 "k": "Ciudad",
-"t": "Capital de Francia, rival de los Habsburgo. Francisco I y Enrique II lucharon varias guerras contra Carlos V y Felipe II."
+"t": "Capital de Francia, rival de los Habsburgo, que se sentían rodeados por sus territorios. Francisco I fue capturado en Pavía (1525) y las guerras de Italia continuaron con Enrique II, hasta que en 1559 se firmó la paz de Cateau-Cambrésis. Francia, además, se alió en ocasiones con los turcos y con príncipes protestantes alemanes."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital del Imperio otomano de Solimán el Magnífico, que presionaba a los Habsburgo en el Danubio y en el Mediterráneo."
+"t": "Capital del Imperio otomano de Solimán el Magnífico (1520-1566), que conquistó Belgrado (1521), Rodas (1522) y gran parte de Hungría tras Mohács (1526). Su flota, con Barbarroja, dominaba el Mediterráneo. Carlos V y Felipe II lucharon contra los turcos en el Danubio, en Túnez (1535) y en Lepanto (1571), donde se destruyó gran parte de su flota."
 },
 "Lisboa": {
 "k": "Ciudad",
-"t": "Capital de Portugal y de su imperio ultramarino. Pasó a Felipe II en 1580 al heredar la corona portuguesa."
+"t": "Capital de Portugal, con un gran imperio de comercio en África, la India y Brasil. Cuando el rey Sebastián murió en Alcazarquivir (1578) y el cardenal Enrique murió en 1580, Felipe II, nieto de Manuel I, reclamó el trono. Con el duque de Alba tomó la ciudad, y las Cortes de Tomar lo aceptaron en 1581. Fue la Unión Ibérica, hasta 1640."
 },
 "Milán": {
 "k": "Ciudad",
-"t": "Ducado clave para unir las posesiones españolas con Alemania y los Países Bajos. Pasó a la Corona en 1535."
+"t": "Ducado clave del Camino Español, que comunicaba las posesiones españolas del Mediterráneo con Flandes. Carlos V lo ocupó con la derrota de Francisco I y, tras morir sin herederos Francesco Sforza, en 1535 pasó a la Corona. Fue gobernado por un gobernador, y Felipe II lo recibió en 1540, mantenido por España hasta 1706."
 },
 "Nápoles": {
 "k": "Ciudad",
-"t": "Reino del sur de Italia, gobernado por un virrey, perteneciente a la Corona desde Fernando el Católico."
+"t": "Reino del sur de Italia, conquistado por el Gran Capitán para Fernando el Católico en 1503, tras derrotar a los franceses en Ceriñola y Garellano. Estaba gobernado por un virrey, y aportaba hombres y dinero, con unos altos impuestos y revueltas, como la de 1547. Era la ciudad más poblada de la monarquía, con unos 250.000 habitantes en 1600."
 },
 "Palermo": {
 "k": "Ciudad",
-"t": "Capital del reino de Sicilia, también gobernado por un virrey."
+"t": "Capital del reino de Sicilia, gobernado por un virrey desde 1409, y parte de la Corona de Aragón y de la Monarquía hispánica. Sicilia era una base militar para el Mediterráneo, con trigo y puertos. Mantuvo sus Cortes, un Parlamento propio, y sus privilegios. La Inquisición española actuó allí. Carlos V pasó por Palermo tras Túnez, en 1535."
 },
 "Londres": {
 "k": "Ciudad",
-"t": "Capital de Inglaterra. Felipe II se casó con María Tudor en 1554. Con Isabel I el enfrentamiento llevó a la Armada de 1588."
+"t": "Capital de Inglaterra, que con María Tudor se acercó a España. Felipe II se casó con ella en Winchester, el 25 de julio de 1554, sin heredero, y fue rey consorte hasta 1558. Con Isabel I, protestante, Inglaterra apoyó a los rebeldes de los Países Bajos y a los corsarios, como Drake, y Felipe II envió la Armada Invencible en 1588, que fracasó."
 },
 "Augsburgo": {
 "k": "Ciudad",
-"t": "Ciudad de los banqueros Fugger, que prestaron dinero a Carlos V. En ella se firmó en 1555 la paz religiosa del Imperio."
+"t": "Ciudad de Baviera, de los banqueros Fugger y Welser, que prestaron a Carlos V, y le ayudaron a ser elegido emperador en 1519 con unos 850.000 florines. En 1530 se presentó allí la Confesión de Augsburgo luterana. El 25 de septiembre de 1555 se firmó la Paz de Augsburgo, con el principio «cuius regio, eius religio»: la religión del príncipe es la de sus súbditos."
 },
 "Amberes": {
 "k": "Ciudad",
-"t": "Gran centro comercial y financiero de Europa. En 1576 la saquearon tropas españolas amotinadas, en la llamada «furia española»."
+"t": "El mayor centro comercial y financiero de Europa en el siglo XVI, con una bolsa, y un puerto con el comercio de especias, lana y plata. En 1576, tras no recibir la paga, tropas españolas amotinadas, de los tercios, la saquearon durante tres días, la «furia española», con unos 8.000 muertos. Esto unió a las provincias contra España. En 1585 la ciudad se rindió a Parma."
 },
 "Barcelona": {
 "k": "Ciudad",
-"t": "Principal ciudad de Cataluña y de la Corona de Aragón, que conservó sus leyes e instituciones propias."
+"t": "Capital de Cataluña, de la Corona de Aragón, que conservaba sus leyes y sus instituciones: las Cortes, la Generalitat y el Consell de Cent. La Monarquía hispánica era un conjunto de reinos, cada uno con sus fueros, y el rey debía jurarlos. Los catalanes no podían comerciar con América hasta el siglo XVIII. Tuvo un puerto importante en el Mediterráneo."
 },
 "Sevilla": {
 "k": "Ciudad",
-"t": "Puerto con el monopolio del comercio con América. Por él llegaban la plata y el oro americanos."
+"t": "Puerto con el monopolio del comercio con América desde 1503, con la Casa de Contratación. Las flotas de Indias, con convoyes anuales, traían el oro y la plata de México y Potosí. Con ello se financiaron las guerras de los Habsburgo, aunque gran parte iba a los banqueros genoveses y alemanes. Era una ciudad cosmopolita, con unos 150.000 habitantes hacia 1600."
 },
 "Orán": {
 "k": "Ciudad",
-"t": "Plaza del norte de África conquistada en 1509 por una expedición organizada por Cisneros."
+"t": "Plaza de la costa de Argelia, conquistada el 18 de mayo de 1509 por una expedición organizada por el cardenal Cisneros, con Pedro Navarro, para frenar la piratería berberisca. Fue un presidio español, con guarniciones, hasta 1708. La recuperó España de 1732 a 1792, hasta que un terremoto y presión otomana la hicieron abandonar."
 },
 "Melilla": {
 "k": "Ciudad",
-"t": "Plaza del norte de África incorporada a Castilla en 1497."
+"t": "Plaza del norte de África, conquistada en 1497 por Pedro de Estopiñán, con dinero del duque de Medina Sidonia, y que pasó a la Corona de Castilla. Estaba en una península fortificada. Fue parte de los presidios de la costa africana, para controlar la piratería. Sigue siendo española, como ciudad autónoma."
 },
 "La Goleta": {
 "k": "Ciudad",
-"t": "Fortaleza del puerto de Túnez. Carlos V la tomó en 1535. Los turcos la recuperaron en 1574."
+"t": "Fortaleza del puerto de Túnez, que Carlos V tomó el 14 de julio de 1535, con 400 naves y 30.000 hombres, con Andrea Doria, y expulsó a Barbarroja, y repuso al sultán Muley Hasán. Los españoles la mantuvieron, hasta que Uluch Alí y los otomanos la reconquistaron en 1574, y con ella, Túnez, tras un largo asedio, que mostró el fin de la presencia española."
 },
 "Peñón de Vélez": {
 "k": "Ciudad",
-"t": "Plaza fortificada en la costa de Marruecos, conquistada en 1508 y recuperada por los españoles en 1564."
+"t": "Isla fortificada, ahora península, en la costa de Marruecos, usada por piratas. Pedro Navarro la conquistó en 1508 para los Reyes Católicos. Los españoles la perdieron en 1522 y García de Toledo la recuperó en 1564, tras una expedición de unas 100 naves. Sigue siendo española, como plaza de soberanía."
 },
 "Elección imperial de Carlos (1519)": {
 "k": "Acontecimiento",

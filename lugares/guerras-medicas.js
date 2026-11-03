@@ -1,55 +1,55 @@
 window.LUGARES={
 "Atenas": {
 "k": "Ciudad",
-"t": "Polis democrática que encabezó la resistencia griega. Evacuada y saqueada por Jerjes en 480 a. C., su flota, impulsada por Temístocles, fue decisiva en Salamina. Después lideró la Liga de Delos."
+"t": "Polis democrática y mayor potencia naval griega. En 480 a. C. sus habitantes la evacuaron a Salamina y Trecén antes de que Jerjes la incendiara, incluida la Acrópolis. Temístocles había convencido a la asamblea de usar la plata de las minas del Laurion para construir 200 trirremes, decisivos en Salamina. Tras la guerra encabezó la Liga de Delos y reconstruyó la ciudad."
 },
 "Esparta": {
 "k": "Ciudad",
-"t": "Polis militarizada que mandaba la liga del Peloponeso y el mando terrestre griego. Su rey Leónidas murió en las Termópilas y Pausanias dirigió la victoria de Platea."
+"t": "Polis de ciudadanos-soldados que dominaba el Peloponeso y tenía el mando terrestre de los griegos. Su rey Leónidas defendió las Termópilas en 480 a. C. con 300 espartiatas y unos miles de aliados. En 479 a. C. Pausanias, regente de Esparta, dirigió a más de 30.000 hoplitas en la batalla de Platea, que acabó con el ejército persa en Grecia."
 },
 "Tebas": {
 "k": "Ciudad",
-"t": "Principal ciudad de Beocia. Su élite se puso del lado de los persas en 480-479 a. C. y, tras Platea, los griegos la castigaron por ello."
+"t": "Principal ciudad de Beocia. Su oligarquía se sometió a Jerjes y combatió a su lado en Platea, de modo que tras la victoria griega Pausanias sitió Tebas y exigió que le entregaran a los dirigentes propersas, que fueron ejecutados. Quedó desprestigiada en Grecia durante años, hasta recuperar su peso en el siglo IV a. C."
 },
 "Mileto": {
 "k": "Ciudad",
-"t": "Ciudad jonia y centro de la revuelta contra Persia (499 a. C.). Darío la tomó y la destruyó tras la batalla de Lade."
+"t": "Rica ciudad jonia y colonizadora del mar Negro. Su tirano Aristágoras encabezó la revuelta jonia en 499 a. C. Derrotada la flota griega en Lade (494 a. C.), los persas la tomaron, mataron a muchos de sus hombres y deportaron al resto a Mesopotamia. Heródoto cuenta que los atenienses lloraron en el teatro al ver la tragedia de Frínico, «La toma de Mileto»."
 },
 "Éfeso": {
 "k": "Ciudad",
-"t": "Ciudad jonia. Fue el punto de partida de jonios y atenienses en su expedición contra Sardes (498 a. C.), y cerca de ella fueron derrotados al regreso."
+"t": "Gran ciudad jonia con el templo de Artemisa, una de las siete maravillas. En 498 a. C. los atenienses y jonios desembarcaron cerca y marcharon sobre Sardes desde allí. Al regresar fueron alcanzados por los persas y derrotados junto a Éfeso, tras lo cual Atenas retiró su apoyo a la revuelta. Con Persia fue después una importante ciudad costera."
 },
 "Sardes": {
 "k": "Ciudad",
-"t": "Capital de la satrapía persa de Lidia y término de la Ruta Real que llegaba desde Susa. Fue incendiada por jonios y atenienses en 498 a. C."
+"t": "Capital de la antigua Lidia, del rey Creso, y sede del sátrapa persa de la región. Era el extremo occidental de la Ruta Real de 2.500 km que llegaba desde Susa. En 498 a. C. los jonios y atenienses la tomaron y la incendiaron, salvo la acrópolis. Según Heródoto, Darío ordenó que un esclavo le repitiera tres veces al día «Señor, acuérdate de los atenienses»."
 },
 "Eretria": {
 "k": "Ciudad",
-"t": "Ciudad de Eubea que ayudó a los jonios. Los persas la saquearon y deportaron a sus habitantes en 490 a. C., antes de desembarcar en Maratón."
+"t": "Ciudad de Eubea que envió cinco naves a ayudar a los jonios en 498 a. C. Por ello, en 490 a. C. fue la primera ciudad griega atacada por la expedición de Datis y Artafernes: tras seis días de sitio fue traicionada, saqueada, incendiada, y sus habitantes deportados a Persia. Los persas navegaron entonces a la cercana bahía de Maratón."
 },
 "Naxos": {
 "k": "Ciudad",
-"t": "Isla de las Cícladas. El fracaso del ataque contra ella (499 a. C.) empujó a Aristágoras a sublevar Jonia; los persas la conquistaron en 490 a. C."
+"t": "La mayor de las Cícladas y famosa por su vino. En 499 a. C. un ataque persa-jonio fracasó tras cuatro meses de asedio, y Aristágoras, temiendo el castigo, decidió sublevar Jonia. En 490 a. C. Datis la conquistó, incendió su ciudad y esclavizó a parte de sus habitantes, aunque respetó la vecina Delos, la isla sagrada de Apolo."
 },
 "Abidos": {
 "k": "Ciudad",
-"t": "Ciudad asiática del Helesponto, junto a uno de los extremos del puente de barcas con el que Jerjes cruzó a Europa en 480 a. C."
+"t": "Ciudad asiática en la parte más estrecha del Helesponto, de apenas 1.200 metros. En 480 a. C. Jerjes mandó construir dos puentes de barcas, de unos 670 barcos, entre Abidos y la orilla europea. Una tormenta destruyó el primero y Heródoto cuenta que Jerjes mandó azotar el mar. El paso de su ejército, de cientos de miles según los griegos, duró siete días."
 },
 "Sesto": {
 "k": "Ciudad",
-"t": "Ciudad europea del Quersoneso, en la orilla opuesta del puente de Jerjes. Los atenienses la tomaron tras la victoria de Mícale, a finales del 479 a. C."
+"t": "Ciudad del Quersoneso tracio, en la orilla europea del Helesponto frente a Abidos, y llave de la ruta del trigo del mar Negro. En 479 a. C., tras Mícale, la flota griega fue a destruir los puentes de Jerjes y encontró que ya se habían roto. Los atenienses sitiaron Sesto durante el invierno y la tomaron en 478 a. C. Fue su primera conquista fuera del Egeo."
 },
 "Bizancio": {
 "k": "Ciudad",
-"t": "Ciudad del Bósforo, en la ruta entre el Egeo y el mar Negro. Los griegos, con Pausanias, la liberaron de los persas en 478 a. C."
+"t": "Colonia de Mégara fundada hacia 660 a. C. en el Bósforo, con un puerto excelente. Controlaba el paso entre el Egeo y el mar Negro. Los persas la ocuparon, y la flota aliada de Pausanias la liberó en 478 a. C. Después Pausanias, acusado de actuar como un tirano y de pactar con Persia, fue retirado por Esparta, y el mando pasó a Atenas."
 },
 "Delfos": {
 "k": "Ciudad",
-"t": "Santuario de Apolo y sede de su oráculo, consultado por los griegos antes de las guerras. Atenas interpretó su respuesta de las «murallas de madera» como un llamamiento a confiar en la flota."
+"t": "Santuario de Apolo y sede del oráculo de la Pitia, la sacerdotisa que hablaba en su nombre. Los griegos lo consultaban antes de fundar colonias o ir a la guerra. En 480 a. C. el oráculo dijo a los atenienses que se refugiaran tras «un muro de madera», que Temístocles interpretó como la flota. Los persas amenazaron el santuario, pero no lo ocuparon."
 },
 "Samos": {
 "k": "Ciudad",
-"t": "Isla jonia con una importante flota. Los samios se retiraron de Lade, y en 479 a. C. su sublevación animó a la flota griega a atacar en Mícale."
+"t": "Isla jonia con una gran flota y célebre por su templo de Hera y la obra del túnel de Eupalino. Participó en la revuelta jonia, pero sus naves abandonaron la batalla de Lade. En 479 a. C. los samios pidieron a los griegos que fueran a liberarlos, y la flota de Leotíquidas y Jantipo ganó en la cercana Mícale, el mismo día, según la tradición, que Platea."
 },
 "Sardes incendiada (498 a. C.)": {
 "k": "Acontecimiento",

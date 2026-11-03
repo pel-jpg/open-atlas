@@ -1,47 +1,47 @@
 window.LUGARES={
 "Múnich": {
 "k": "Ciudad",
-"t": "Capital del reino de Baviera, el mayor Estado alemán del sur. Luchó junto a Austria en 1866 y junto a Prusia en 1870, y entró en el Imperio en 1871."
+"t": "Capital de Baviera, el segundo gran Estado alemán, gobernado por los Wittelsbach. En 1866 combatió con Austria y fue derrotada, pero Bismarck le impuso una paz suave, con una alianza militar secreta. En 1870 sus tropas lucharon con Prusia contra Francia. En noviembre de 1870 Luis II aceptó ceder prerrogativas y, en una carta redactada por Bismarck, propuso al rey de Prusia como emperador."
 },
 "Dresde": {
 "k": "Ciudad",
-"t": "Capital del reino de Sajonia. Aliado de Austria en 1866, fue ocupado por Prusia y después se integró en la Confederación del Norte de Alemania."
+"t": "Capital del reino de Sajonia, aliado de Austria en 1866. Su ejército se retiró a Bohemia para unirse a los austríacos y combatió en Sadowa. Tras la guerra, Bismarck no la anexionó porque Austria insistió en ello, y Sajonia, con su ejército integrado en el prusiano, pasó a formar parte de la Confederación del Norte con una importante indemnización."
 },
 "Fráncfort": {
 "k": "Ciudad",
-"t": "Sede de la Dieta de la Confederación Germánica y de la Asamblea de 1848. Prusia anexionó esta ciudad libre en 1866; en 1871 se firmó aquí la paz con Francia."
+"t": "Ciudad libre en la que se reunía la Dieta de la Confederación Germánica, bajo presidencia austríaca. En 1848 el Parlamento de la iglesia de San Pablo propuso la unidad en un estado liberal, que el rey de Prusia rechazó. Prusia la anexionó en 1866 y le impuso fuertes contribuciones. El 10 de mayo de 1871, el tratado con Francia puso fin a la guerra."
 },
 "Hamburgo": {
 "k": "Ciudad",
-"t": "Ciudad libre hanseática y gran puerto del norte. Entró en la Confederación del Norte de Alemania en 1867."
+"t": "Ciudad libre y hanseática, la mayor ciudad portuaria de Alemania y puerta del comercio con América. Su burguesía mercantil favorecía el libre comercio y el Zollverein, y entró en la Confederación del Norte en 1867. Conservó, no obstante, su condición de ciudad-Estado y de puerto franco dentro del Imperio hasta 1888."
 },
 "Praga": {
 "k": "Ciudad",
-"t": "Capital de Bohemia, dentro del Imperio austríaco. En ella se firmó la paz que cerró la guerra austro-prusiana en agosto de 1866."
+"t": "Capital de Bohemia, en el Imperio austríaco, y de mayoría checa y minoría alemana. El 23 de agosto de 1866 se firmó allí la paz que puso fin a la guerra austro-prusiana: Austria aceptó disolver la Confederación Germánica, reconocer la Confederación del Norte y pagar una indemnización, aunque no perdió territorio, por consejo de Bismarck."
 },
 "Estrasburgo": {
 "k": "Ciudad",
-"t": "Ciudad de Alsacia sitiada por los alemanes y rendida en septiembre de 1870. Pasó al Imperio alemán en 1871."
+"t": "Principal ciudad de Alsacia, con su catedral gótica y su biblioteca. Tras el sitio del ejército de Baden, con un bombardeo de la ciudad que destruyó la biblioteca y parte de la catedral, la guarnición se rindió el 28 de septiembre de 1870. Alemania la anexionó en 1871 y la hizo capital de Alsacia-Lorena. Pasó de nuevo a Francia en 1918."
 },
 "Metz": {
 "k": "Ciudad",
-"t": "Fortaleza de Lorena donde se encerró el ejército del mariscal Bazaine, que capituló en octubre de 1870. Fue anexionada al Imperio alemán en 1871."
+"t": "Fortaleza en el Mosela, considerada inexpugnable. El ejército del Rin del mariscal Bazaine, con unos 170.000 hombres, quedó cercado tras las batallas de agosto de 1870 (Gravelotte). Tras semanas de sitio y hambre, capituló el 27 de octubre, la mayor rendición francesa antes de la de Sedán. Metz fue anexionada con la Lorena alemana, y devuelta en 1918."
 },
 "Stuttgart": {
 "k": "Ciudad",
-"t": "Capital del reino de Württemberg, Estado del sur que combatió junto a Austria en 1866 y junto a Prusia en 1870. Se integró en el Imperio en 1871."
+"t": "Capital del reino de Württemberg, un Estado del sur con tradición contraria a la hegemonía prusiana. Su ejército se unió a Austria en 1866 y fue vencido; en 1870 luchó con Prusia, y en 1871 firmó los tratados de adhesión al Imperio. Conservó su rey, su ejército y su sistema de correos y ferrocarriles, con ciertos privilegios."
 },
 "Hannover": {
 "k": "Ciudad",
-"t": "Reino aliado de Austria en 1866. Prusia lo derrotó y lo anexionó ese mismo año."
+"t": "Reino cuyo rey Jorge V, de la dinastía británica, se alió con Austria en 1866. Su ejército venció a los prusianos en Langensalza el 27 de junio, pero, rodeado, se rindió dos días después. Prusia anexionó el reino, que unió territorialmente sus provincias orientales y occidentales. Jorge V se exilió en Austria y sus partidarios, los güelfos, siguieron siendo opositores."
 },
 "Kassel": {
 "k": "Ciudad",
-"t": "Capital del Electorado de Hesse-Kassel, que se alineó con Austria en 1866. Prusia lo anexionó tras la guerra."
+"t": "Capital del Electorado de Hesse-Kassel, un pequeño Estado gobernado por el autoritario elector Federico Guillermo, aliado de Austria en 1866. Prusia ocupó el territorio casi sin lucha y lo anexionó. El elector fue detenido en Stettin y destituido. Junto con Hannover, Nassau y Fráncfort, la anexión permitió conectar las dos partes del reino de Prusia."
 },
 "Varsovia": {
 "k": "Ciudad",
-"t": "Capital de la Polonia bajo dominio ruso. El apoyo de Bismarck a Rusia ante el levantamiento polaco de 1863 contribuyó a asegurar la neutralidad rusa."
+"t": "Capital de la Polonia rusa. El levantamiento polaco de 1863 contra el zar fue reprimido con dureza. Bismarck apoyó a Rusia con la convención Alvensleben, para cerrar la frontera a los rebeldes, mientras que Francia y Gran Bretaña protestaron. Esta ayuda aseguró la benevolencia rusa durante las guerras con Dinamarca, Austria y Francia."
 },
 "Congreso de Viena (1814-15)": {
 "k": "Acontecimiento",

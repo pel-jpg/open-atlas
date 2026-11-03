@@ -1,63 +1,63 @@
 window.LUGARES={
 "La Meca": {
 "k": "Ciudad",
-"t": "Ciudad natal de Mahoma y sede de la Kaaba, el santuario hacia el que rezan los musulmanes. Se rindió al Profeta en el año 630."
+"t": "Ciudad natal de Mahoma (hacia 570), en un valle árido. En ella está la Kaaba, que según la tradición construyeron Abraham e Ismael, y que ya era un centro de peregrinación antes del islam. El Profeta salió hacia Medina en 622 y regresó en 630 con 10.000 hombres, y la ciudad se rindió casi sin lucha. Todo musulmán que pueda debe peregrinar una vez en la vida."
 },
 "Medina": {
 "k": "Ciudad",
-"t": "Ciudad a la que Mahoma emigró en 622, año de la Hégira. Fue la capital de los primeros califas."
+"t": "Antigua Yatrib, oasis a 450 km al norte de La Meca. En 622 Mahoma emigró allí con sus seguidores, la Hégira, que marca el inicio del calendario musulmán. Estableció una comunidad (umma) y construyó la primera mezquita. Fue capital de los califas Abu Bakr, Omar y Otmán, hasta que Alí la trasladó a Kufa en 656."
 },
 "Damasco": {
 "k": "Ciudad",
-"t": "Capital del califato omeya (661-750). Allí se construyó la Gran Mezquita."
+"t": "Capital de los omeyas desde 661, con Muawiya, hasta 750. Conquistada por los árabes en 635-636, era una antigua ciudad siria con una población mayoritariamente cristiana. Al-Walid I construyó la Gran Mezquita (706-715), sobre la basílica de san Juan Bautista, con mosaicos de artistas bizantinos. Los abasíes trasladaron el califato a Bagdad."
 },
 "Jerusalén": {
 "k": "Ciudad",
-"t": "Tercera ciudad santa del islam. Fue conquistada por los musulmanes hacia 637-638 y en ella se levantó la Cúpula de la Roca."
+"t": "Ciudad santa para judíos, cristianos y musulmanes. El califa Omar la tomó hacia 637-638 tras un pacto con el patriarca Sofronio. Los musulmanes la veneran como lugar del viaje nocturno de Mahoma. Abd al-Malik construyó la Cúpula de la Roca, terminada en 691, y su hijo, la mezquita de al-Aqsa. Fue la primera quibla, o dirección de la oración."
 },
 "Alejandría": {
 "k": "Ciudad",
-"t": "Gran puerto de Egipto, conquistado por los musulmanes hacia 641-642. Más tarde perdió importancia frente a la nueva capital, Fustat."
+"t": "Gran puerto del Mediterráneo, con su Faro y biblioteca. El general Amr ibn al-As la tomó hacia 641-642 tras un asedio, pues era bizantina. Los árabes, sin embargo, fundaron una nueva capital, Fustat, en el interior, junto al Nilo, y Alejandría quedó como puerto. La leyenda de que Omar quemó la Biblioteca es casi seguro falsa, pues ya estaba en ruinas."
 },
 "Bagdad": {
 "k": "Ciudad",
-"t": "Fundada en 762 por el califa al-Mansur como capital abasí. Fue un gran centro de ciencia y traducción."
+"t": "Fundada en 762 por el califa abasí al-Mansur, en el Tigris, con planta circular, la «Ciudad de la Paz». Fue la capital de un imperio que iba del Atlántico a la India. Allí estaba la Casa de la Sabiduría de Harún al-Rashid y al-Mamún, donde se tradujeron obras griegas, persas y sánscritas. Tuvo cerca de un millón de habitantes. Los mongoles la destruyeron en 1258."
 },
 "Córdoba": {
 "k": "Ciudad",
-"t": "Capital de Al-Ándalus. Fue emirato independiente desde 756 y califato desde 929."
+"t": "Capital del emirato independiente desde 756, con Abderramán I, y del califato desde que Abderramán III lo proclamó en 929. Tenía unos 100.000 habitantes y era la mayor ciudad de Europa occidental, con bibliotecas, la de al-Hakam II con 400.000 volúmenes, y la Gran Mezquita, que fue ampliada varias veces. Medina Azahara era la ciudad palatina."
 },
 "Qayrawan": {
 "k": "Ciudad",
-"t": "Fundada hacia 670 como base para la conquista del Magreb. Su Gran Mezquita fue un importante centro religioso."
+"t": "Fundada hacia 670 por Uqba ibn Nafi como campamento (misr) y base de la conquista del Magreb, a unos 150 km de la costa, entre bereberes y bizantinos. Su Gran Mezquita, del siglo VII, con el minarete más antiguo del islam, fue lugar de peregrinación y centro de la escuela jurídica malikí. Fue la primera capital de Ifriqiya y la cuarta ciudad santa del islam."
 },
 "Samarcanda": {
 "k": "Ciudad",
-"t": "Oasis de Asia central, conquistado hacia 712. Fue un nudo de la Ruta de la Seda y uno de los lugares por donde se difundió el papel."
+"t": "Oasis de Sogdiana, en Asia central, tomado por Qutayba ibn Muslim hacia 712. En la batalla de Talas (751) los árabes derrotaron a los chinos Tang; según la tradición, entre los prisioneros había fabricantes de papel, y así se difundió la técnica por el mundo islámico. Fue un importante centro de la Ruta de la Seda, con los samánidas."
 },
 "El Cairo": {
 "k": "Ciudad",
-"t": "Fundada en 969 por los fatimíes como nueva capital. En ella se construyó la mezquita y universidad de al-Azhar."
+"t": "Fundada en 969 por Yawhar, general del califa fatimí al-Muizz, junto a la antigua Fustat, con el nombre de al-Qahira, «la Victoriosa». Los fatimíes, chiíes ismailíes, eran rivales de los abasíes. Construyeron allí la mezquita de al-Azhar, en 970-972, que se convirtió en universidad, una de las más antiguas del mundo en funcionamiento. Fue capital de Egipto desde entonces."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital bizantina asediada por los musulmanes en 674-678 y en 717-718. Resistió ambos asedios."
+"t": "Los árabes la asediaron por mar y tierra en 674-678, con Muawiya, y en 717-718, con Maslama. Los bizantinos la defendieron con sus murallas y con el «fuego griego», una mezcla inflamable lanzada desde barcos. En el segundo asedio, un invierno muy duro y el apoyo de los búlgaros los obligaron a retirarse. Fue un freno al avance musulmán en Europa oriental."
 },
 "Ctesifonte": {
 "k": "Ciudad",
-"t": "Capital del imperio sasánida, tomada por los árabes tras la victoria de Qadisiyya."
+"t": "Capital del Imperio sasánida, a orillas del Tigris, con el enorme arco del palacio de Cosroes. Tras la batalla de Qadisiyya (hacia 636), en la que los árabes derrotaron a los persas, Saad ibn Abi Waqqas tomó Ctesifonte en 637. El tesoro persa cayó en sus manos. Los árabes fundaron cerca Kufa y Basora, y Bagdad se construyó cerca, en 762."
 },
 "Toledo": {
 "k": "Ciudad",
-"t": "Antigua capital del reino visigodo, tomada por los musulmanes tras la victoria de Guadalete."
+"t": "Capital del reino visigodo. Tras la batalla de Guadalete, en 711, en la que Tarik derrotó a Rodrigo, los musulmanes ocuparon la ciudad en 711-712 casi sin resistencia. Musa ibn Nusayr llegó en 712 con un ejército y completó la conquista. Toledo siguió siendo un centro cristiano, con mozárabes, y se rebeló varias veces contra el emirato. Fue la «ciudad de las tres culturas»."
 },
 "Fez": {
 "k": "Ciudad",
-"t": "Fundada hacia 789-808 por los idrisíes. Allí se creó la mezquita-universidad de al-Qarawiyyin."
+"t": "Fundada por Idris I, hacia 789, y refundada por su hijo Idris II, hacia 808, con el barrio de los andalusíes, expulsados de Córdoba en 818, y el de los kairuaníes. En 859 una mujer, Fátima al-Fihri, fundó la mezquita-universidad de al-Qarawiyyin, que es la más antigua de las universidades en funcionamiento. Fue capital del Magreb en varias dinastías."
 },
 "Merv": {
 "k": "Ciudad",
-"t": "Gran oasis de Jorasán y antigua ciudad sasánida. Los árabes la conquistaron hacia 651 y fue base de su avance hacia Asia central."
+"t": "Gran oasis de Jorasán, en el actual Turkmenistán, en la Ruta de la Seda, capital sasánida del este. Yazdegerd III, último rey, murió cerca en 651 y los árabes la ocuparon. Fue la base del avance hacia Asia central, y desde allí, en 747, Abu Muslim inició la revolución abasí contra los omeyas. Fue una de las ciudades más grandes del mundo, y los mongoles la destruyeron en 1221."
 },
 "Hégira: Mahoma llega a Medina (622)": {
 "k": "Acontecimiento",

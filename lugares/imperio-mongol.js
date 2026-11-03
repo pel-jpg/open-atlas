@@ -1,67 +1,67 @@
 window.LUGARES={
 "Bujará": {
 "k": "Ciudad",
-"t": "Gran ciudad de Transoxiana, tomada y en buena parte incendiada por Gengis Kan en 1220."
+"t": "Gran ciudad de Transoxiana, un centro del islam y de la ciencia (Avicena nació cerca). Gengis Kan la asedió en febrero de 1220, y se rindió tras unos días; los mongoles la incendiaron, saquearon y ejecutaron a muchos habitantes. Gengis Kan, según el historiador Juzjani, entró en la mezquita mayor y dijo a los habitantes que era «el castigo de Dios» por sus pecados."
 },
 "Samarcanda": {
 "k": "Ciudad",
-"t": "Ciudad principal del Joresm, conquistada por los mongoles en 1220. Siglos después fue capital de Tamerlán."
+"t": "Ciudad del imperio de Joresm, con unos 100.000 habitantes, tomada por los mongoles en marzo de 1220. La guarnición turca se rindió, pero fue ejecutada, y los artesanos fueron llevados a Mongolia. Siglos después, Tamerlán (1336-1405) la hizo capital de su imperio y la adornó con monumentos, como la plaza del Registán y su mausoleo, el Gur-Emir."
 },
 "Bagdad": {
 "k": "Ciudad",
-"t": "Capital del califato abasí. Los mongoles de Hulagu la tomaron y destruyeron en 1258."
+"t": "Capital del califato abasí, con unos 800.000 habitantes. Hulagu, nieto de Gengis Kan, la sitió en enero de 1258 con un gran ejército y la tomó el 10 de febrero. Durante una semana, la ciudad fue saqueada y se mataron a muchos habitantes, unas decenas o cientos de miles. Mataron al califa al-Mustasim. Las bibliotecas fueron destruidas. Fue el fin del califato abasí."
 },
 "Moscú": {
 "k": "Ciudad",
-"t": "Ciudad pequeña en el siglo XIII, saqueada por los mongoles en 1238. Más tarde encabezó la unificación de los principados rusos."
+"t": "Ciudad pequeña, fundada en 1147, en el principado de Vladímir-Súzdal. Los mongoles de Batu Kan la quemaron en enero de 1238, durante la invasión de Rusia. Más tarde, sus príncipes, como Iván I «Kalitá» (1325-1340), cobraron los tributos de la Horda de Oro y ganaron poder. Con Dmitri Donskói, en 1380, ganó a los mongoles en Kulikovo, y con Iván III, en 1480, acabó el yugo mongol."
 },
 "Kiev": {
 "k": "Ciudad",
-"t": "Principal ciudad de la Rus. Los mongoles de Batu la destruyeron en 1240."
+"t": "La principal ciudad de la Rus, con unos 50.000 habitantes y la catedral de Santa Sofía. Batu Kan la sitió en el invierno de 1240, con máquinas de asedio, y la tomó el 6 de diciembre, tras una dura resistencia, y se destruyó gran parte. Fue el fin de la Rus de Kiev. El centro político se desplazó hacia el noreste, a Vladímir, y luego Moscú."
 },
 "Kaifeng": {
 "k": "Ciudad",
-"t": "Capital del Imperio Jin, tomada por los mongoles en 1233 tras un largo asedio."
+"t": "Capital de la dinastía Jin (de los yurchen), y antigua capital Song, con grandes palacios. Los mongoles de Subotai y Tolui la sitiaron en 1232-1233, con una de las primeras ocasiones de uso de pólvora, con bombas «truenos» y lanzallamas. Tras un largo asedio, con hambre y epidemias, la ciudad se rindió en 1233, y la dinastía Jin cayó en 1234."
 },
 "Lin'an (Hangzhou)": {
 "k": "Ciudad",
-"t": "Capital de los Song del Sur, una de las mayores ciudades del mundo. Se rindió a los mongoles en 1276."
+"t": "Capital de los Song del Sur, a orillas del lago del Oeste. Marco Polo, que la visitó, la llamó Quinsay, «la ciudad del cielo», y fue una de las mayores del mundo, con más de un millón de habitantes. El general mongol Bayan avanzó con una flota por el Yangtsé, y la ciudad se rindió en 1276, sin lucha. La resistencia song acabó en 1279, en Yamen."
 },
 "El Cairo": {
 "k": "Ciudad",
-"t": "Capital del sultanato mameluco de Egipto, que frenó el avance mongol en 1260."
+"t": "Capital del sultanato mameluco de Egipto. Los mongoles de Hulagu habían tomado Bagdad (1258) y Damasco, y enviaron emisarios al sultán Qutuz, que los mató. El 3 de septiembre de 1260, los mamelucos, con el general Baibars, derrotaron a los mongoles en Ain Yalut, en Palestina, la primera gran derrota de los mongoles, y frenaron su avance hacia Egipto."
 },
 "Damasco": {
 "k": "Ciudad",
-"t": "Ciudad de Siria ocupada por los mongoles en 1260. Poco después los mamelucos la recuperaron."
+"t": "Ciudad de Siria, que se rindió a los mongoles de Hulagu, con sus aliados cristianos, de Armenia y Antioquía, en marzo de 1260. Tras la derrota mongola de Ain Yalut, en septiembre, los mamelucos la recuperaron sin dificultad. Los mongoles volvieron a atacar Siria varias veces, hasta 1303, aunque nunca la ocuparon durante mucho tiempo."
 },
 "Delhi": {
 "k": "Ciudad",
-"t": "Capital del sultanato de Delhi, que resistió varias invasiones mongolas. Tamerlán la saqueó en 1398."
+"t": "Capital del sultanato de Delhi, que resistió las invasiones mongolas de los siglos XIII y XIV, con el sultán Alauddin Khalji, que las derrotó hacia 1299-1306. Tamerlán, que se consideraba heredero de los mongoles, la saqueó en diciembre de 1398, y mató a miles de prisioneros. Se perdió mucha riqueza y prestigio, y el sultanato se debilitó."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital del Imperio bizantino. No fue atacada por los mongoles y mantuvo relaciones diplomáticas con ellos."
+"t": "Capital bizantina. No fue atacada por los mongoles, y los emperadores bizantinos mantuvieron relaciones diplomáticas con la Horda de Oro y los ilkanes, con matrimonios: Miguel VIII dio una hija, María Paleóloga, al ilkán Abaqa. La Horda de Oro y los bizantinos se aliaron en ocasiones contra los búlgaros. Los mongoles hicieron de la región del mar Negro un lugar de comercio."
 },
 "Tabriz": {
 "k": "Ciudad",
-"t": "Importante capital del Ilkanato mongol de Persia y centro comercial."
+"t": "Capital del Ilkanato mongol de Persia, fundado por Hulagu, y centro comercial en el cruce de las rutas de Asia y Europa. Los ilkanes, que se convirtieron al islam con Ghazan en 1295, la ampliaron. El visir Rashid al-Din escribió allí la Yami al-Tawarij, una historia universal. Marco Polo pasó por la ciudad."
 },
 "Sarái": {
 "k": "Ciudad",
-"t": "Capital de la Horda de Oro, junto al Volga. Fue fundada por Batu."
+"t": "Capital de la Horda de Oro, junto al Volga, fundada por Batu hacia 1250, con unas 75.000 personas, con palacios, mezquitas, mercados y artesanos. Desde allí se cobraban tributos a los príncipes rusos, que debían ir a recibir el yarlik, o permiso del kan. Tamerlán la destruyó en 1395, y la Horda de Oro se debilitó."
 },
 "Seúl": {
 "k": "Ciudad",
-"t": "Actual capital de Corea. En el siglo XIII la corte del reino de Goryeo se trasladó a la isla de Ganghwa para resistir a los mongoles."
+"t": "Capital actual de Corea, fundada como capital en 1394 por la dinastía Joseon. En el siglo XIII, durante la invasión mongola, el reino de Goryeo, cuya capital era Kaesong, trasladó su corte a la isla de Ganghwa en 1232, y resistió unos treinta años. Después se sometió, en 1259, y fue vasallo de los Yuan, con un príncipe casado con princesa mongola."
 },
 "Hanói": {
 "k": "Ciudad",
-"t": "Capital del reino de Dai Viet. Los mongoles la ocuparon varias veces, pero fueron expulsados."
+"t": "Capital del reino de Dai Viet, la actual Thang Long. Los mongoles la ocuparon en 1257-1258, 1285 y 1287-1288, durante las invasiones. El general Tran Hung Dao, con una táctica de guerrilla, los expulsó, y destruyó su flota en la batalla del río Bach Dang (1288), con estacas clavadas en el lecho. Dai Viet pagó un tributo simbólico a los Yuan."
 },
 "Nankín": {
 "k": "Ciudad",
-"t": "Ciudad del sur de China que formaba parte del imperio Yuan. Fue después la primera capital de los Ming."
+"t": "Ciudad del sur de China, en el Yangtsé, parte del Imperio Yuan tras la conquista de los Song. Con la rebelión de los Turbantes Rojos, Zhu Yuanzhang tomó la ciudad en 1356 y fue base para expulsar a los mongoles. En 1368 proclamó la dinastía Ming, y Nankín fue su capital hasta que Yongle la trasladó a Pekín en 1421."
 },
 "Kurultai: Temüjin, Gengis Kan (1206)": {
 "k": "Acontecimiento",

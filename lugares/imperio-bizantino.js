@@ -1,39 +1,39 @@
 window.LUGARES={
 "Roma": {
 "k": "Ciudad",
-"t": "Antigua capital del Imperio. Belisario la reconquistó en 536 en nombre de Justiniano, y el papa mantuvo luego relaciones complejas con Constantinopla."
+"t": "Antigua capital del Imperio, tomada por los ostrogodos de Teodorico. Belisario la ocupó en el año 536, en la guerra gótica de Justiniano, y resistió un sitio en 537-538. Después de 20 años de guerra, la ciudad había perdido mucha población. El papa, formalmente súbdito del emperador, tuvo relaciones tensas con Constantinopla, por la autoridad religiosa y por razones teológicas."
 },
 "Rávena": {
 "k": "Ciudad",
-"t": "Capital del exarcado bizantino de Italia desde finales del siglo VI. Los lombardos la conquistaron en 751."
+"t": "Capital del exarcado de Italia, creado hacia 584 por Mauricio, con un exarca, un gobernador militar y civil. Era una región con Venecia, Roma y el sur. Los lombardos conquistaron Rávena en 751, con Astolfo, y puso fin al dominio bizantino en el norte de Italia. Conserva los mosaicos de San Vital, con Justiniano y Teodora."
 },
 "Cartago": {
 "k": "Ciudad",
-"t": "Capital del exarcado de África, recuperada a los vándalos en 534. Los árabes la tomaron en 698."
+"t": "Capital del exarcado de África, creado hacia 590. Belisario la recuperó a los vándalos en 533-534, en una campaña rápida de Justiniano. Fue una región rica en trigo y aceite. Los árabes avanzaron desde Egipto y Qayrawan, y tomaron Cartago en 698, con Hasán ibn al-Numán; los bizantinos la recuperaron brevemente, y la perdieron en 698."
 },
 "Alejandría": {
 "k": "Ciudad",
-"t": "Gran puerto y sede de un patriarcado. Los árabes la conquistaron en 642."
+"t": "Gran puerto y sede de un patriarcado, importante en las disputas cristológicas: el monofisismo, a favor de una sola naturaleza de Cristo, era fuerte en Egipto. Los persas la ocuparon en 619 y Heraclio la recuperó en 629. Los árabes de Amr ibn al-As la tomaron en 642, y con ella, Egipto, el granero del Imperio."
 },
 "Antioquía": {
 "k": "Ciudad",
-"t": "Una de las mayores ciudades de Oriente. Los persas la saquearon en 540 y los árabes la ocuparon en 637."
+"t": "Una de las mayores ciudades del Oriente, con un patriarcado. Los persas de Cosroes I la saquearon y deportaron a sus habitantes en 540, y Justiniano la reconstruyó con el nombre de Theoupolis. Los persas la ocuparon de nuevo en 611. Tras la derrota bizantina en el río Yarmuk (636), los árabes la tomaron en 637. Nicéforo Focas la recuperó en 969."
 },
 "Jerusalén": {
 "k": "Ciudad",
-"t": "Ciudad santa. El emperador Heraclio recuperó allí la Vera Cruz en 630 y los árabes la conquistaron en 638."
+"t": "Ciudad santa del cristianismo, con la basílica del Santo Sepulcro. Los persas la tomaron en 614 y se llevaron la Vera Cruz, la reliquia de la cruz. Heraclio, tras vencer a los persas en Nínive (627), la recuperó, y la devolvió a Jerusalén en 630, con gran ceremonia. Los árabes la conquistaron hacia 638, con Omar, tras un pacto con el patriarca Sofronio."
 },
 "Atenas": {
 "k": "Ciudad",
-"t": "Ciudad famosa por sus escuelas filosóficas. Justiniano cerró la Academia en 529."
+"t": "Ciudad famosa por sus escuelas filosóficas, como la Academia de Platón, que seguía enseñando filosofía neoplatónica pagana. En 529, Justiniano ordenó cerrarlas, como parte de su política religiosa, y varios filósofos emigraron a Persia. Con el Imperio, Atenas fue un lugar secundario, con el Partenón convertido en iglesia cristiana."
 },
 "Tesalónica": {
 "k": "Ciudad",
-"t": "Segunda ciudad del Imperio en los Balcanes. De ella eran los misioneros Cirilo y Metodio."
+"t": "Segunda ciudad de los Balcanes y del Imperio, un puerto importante, con la Vía Egnatia. Su patrón era san Demetrio. De allí eran los hermanos Cirilo y Metodio, misioneros de los eslavos, que crearon el alfabeto glagolítico en el siglo IX. Los eslavos la sitiaron varias veces en el siglo VII, y los sarracenos la saquearon en 904. Los normandos, en 1185."
 },
 "Damasco": {
 "k": "Ciudad",
-"t": "Ciudad de Siria que los árabes conquistaron hacia 635."
+"t": "Ciudad de Siria que los árabes conquistaron hacia 635, tras el sitio de unos seis meses, con Jalid ibn al-Walid. Heraclio acababa de recuperarla de los persas. La conquista tuvo lugar con una capitulación, con los cristianos manteniendo parte de sus iglesias. Poco después, fue la capital de los omeyas, desde 661."
 },
 "Adrianópolis (378)": {
 "k": "Acontecimiento",

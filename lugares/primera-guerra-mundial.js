@@ -1,27 +1,27 @@
 window.LUGARES={
 "Viena": {
 "k": "Ciudad",
-"t": "Capital de Austria-Hungría. Desde allí se envió el ultimátum a Serbia tras el atentado de Sarajevo."
+"t": "Capital del Imperio austrohúngaro, que gobernaba Francisco José desde 1848. Tras el asesinato del heredero Francisco Fernando en Sarajevo el 28 de junio de 1914, y con el «cheque en blanco» alemán, Viena envió el 23 de julio un ultimátum a Serbia, de condiciones muy duras, y el 28 de julio declaró la guerra. Este fue el inicio de la guerra. El imperio se disolvió en 1918."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital del Imperio otomano, que entró en la guerra junto a las Potencias Centrales a finales de 1914."
+"t": "Capital del Imperio otomano. En agosto de 1914 los cruceros alemanes Goeben y Breslau llegaron a la ciudad, y en octubre atacaron puertos rusos, con lo que el Imperio entró en la guerra junto a las Potencias Centrales. En 1915 se perpetraron aquí las primeras detenciones de intelectuales armenios, el inicio del genocidio armenio, que causó cientos de miles de muertos."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "Italia fue neutral al principio y en 1915 se unió a la Entente tras el Tratado de Londres."
+"t": "Capital de Italia, miembro de la Triple Alianza con Alemania y Austria-Hungría pero neutral en 1914, por considerar que la guerra era ofensiva. En el Tratado secreto de Londres (abril de 1915), la Entente le prometió el Trentino, el Tirol del Sur, Trieste e Istria; Italia entró en guerra en mayo. La «victoria mutilada» generó frustración y ayudó al ascenso del fascismo."
 },
 "Belgrado": {
 "k": "Ciudad",
-"t": "Capital de Serbia. Austria-Hungría la atacó en 1914 y los ejércitos de las Potencias Centrales la ocuparon en 1915."
+"t": "Capital de Serbia. Austria-Hungría la bombardeó el 29 de julio de 1914, y sus ofensivas de ese año fracasaron. En octubre de 1915, el ataque combinado de alemanes, austríacos y búlgaros la tomó, y el ejército serbio se retiró por Albania en pleno invierno, con muchos muertos. Serbia perdió una cuarta parte de su población."
 },
 "Bucarest": {
 "k": "Ciudad",
-"t": "Capital de Rumanía, que entró en la guerra en 1916 junto a la Entente. Los alemanes la ocuparon ese mismo año."
+"t": "Capital de Rumanía, neutral hasta que se unió a la Entente en agosto de 1916, atraída por la promesa de Transilvania. El ataque fracasó, y los alemanes de Falkenhayn y Mackensen tomaron Bucarest el 6 de diciembre de 1916 y los campos petrolíferos. Rumanía firmó una paz dura en 1918, pero entró de nuevo en la guerra justo antes del armisticio y logró Transilvania."
 },
 "Bruselas": {
 "k": "Ciudad",
-"t": "Capital de Bélgica, ocupada por Alemania en agosto de 1914 tras invadir el país neutral."
+"t": "Capital de Bélgica, país neutral cuya neutralidad garantizaban las potencias. El plan Schlieffen exigía cruzar Bélgica; Alemania invadió el 4 de agosto de 1914, lo que llevó a Gran Bretaña a declarar la guerra. Bruselas fue ocupada el 20 de agosto. La resistencia belga y las represalias alemanas, con unos 6.000 civiles ejecutados, la «violación de Bélgica», fueron muy utilizadas por la propaganda aliada."
 },
 "Atentado de Sarajevo (28 jun. 1914)": {
 "k": "Acontecimiento",

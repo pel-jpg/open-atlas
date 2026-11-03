@@ -1,55 +1,55 @@
 window.LUGARES={
 "El Cairo": {
 "k": "Ciudad",
-"t": "Capital de Egipto, ocupada por Gran Bretaña desde 1882. Controlaba el acceso al canal de Suez."
+"t": "Capital de Egipto, formalmente otomano y gobernado por jedives. Por las deudas, los europeos controlaron sus finanzas. Tras la revuelta de Urabi, Gran Bretaña bombardeó Alejandría y venció en Tel el-Kebir, y ocupó el país en 1882, hasta 1956. Controlaba el canal de Suez, abierto en 1869, ruta clave a la India."
 },
 "Dakar": {
 "k": "Ciudad",
-"t": "Puerto de Senegal y capital del África Occidental Francesa."
+"t": "Puerto de Senegal, en la península de Cabo Verde, fundado por Francia en 1857. Fue la capital del África Occidental Francesa desde 1902, una federación de ocho colonias. Es el extremo occidental de África y una escala atlántica. Los senegaleses sirvieron en el ejército francés, como los «tiradores senegaleses»."
 },
 "Ciudad del Cabo": {
 "k": "Ciudad",
-"t": "Puerto del extremo sur de África, británico desde comienzos del siglo XIX. Era escala en la ruta hacia la India."
+"t": "Fundada por los holandeses en 1652 como escala para la ruta de la India. Los británicos la tomaron en 1806, durante las guerras napoleónicas. Los bóers, descendientes de los colonos, emprendieron el Gran Trek hacia el interior (1835-1840) para escapar de su dominio, y fundaron Natal, Orange y el Transvaal. Fue la capital de la colonia del Cabo."
 },
 "Johannesburgo": {
 "k": "Ciudad",
-"t": "Fundada en 1886 tras el hallazgo de oro en el Witwatersrand. La riqueza minera fue una causa de la guerra de los bóers."
+"t": "Ciudad fundada en 1886 en el Transvaal, tras el hallazgo de oro en el Witwatersrand. En pocos años tuvo decenas de miles de habitantes, mineros, europeos y africanos. Los «uitlanders» extranjeros, mayoritariamente británicos, pedían derechos políticos al gobierno bóer de Kruger, lo que, con el oro, causó el conflicto con Gran Bretaña y la guerra de los bóers (1899-1902)."
 },
 "Delhi": {
 "k": "Ciudad",
-"t": "Antigua capital mogol. Tras la rebelión de 1857 la Corona británica asumió el gobierno de la India y desde 1911 Delhi fue su capital."
+"t": "Antigua capital del Imperio mogol. Tras la rebelión de los cipayos de 1857, en la que se proclamó emperador al último mogol, Bahadur Shah II, los británicos la reconquistaron con dureza. La Compañía de las Indias Orientales fue disuelta y la Corona asumió el gobierno en 1858. En 1877 Victoria fue proclamada emperatriz de la India en Delhi, y desde 1911 su capital."
 },
 "Batavia": {
 "k": "Ciudad",
-"t": "Actual Yakarta, capital de las Indias Orientales Neerlandesas, las colonias holandesas en Indonesia."
+"t": "Actual Yakarta, fundada por la Compañía holandesa de las Indias Orientales en 1619. Fue la capital de las Indias Orientales Neerlandesas, una colonia con grandes plantaciones de azúcar, café y caucho. Con el «Sistema de Cultivos» (1830) los campesinos javaneses debían dedicar parte de su tierra a cultivos de exportación, lo que dio grandes beneficios a Holanda."
 },
 "Saigón": {
 "k": "Ciudad",
-"t": "Ciudad del sur de Vietnam, tomada por Francia en 1859. Fue capital de la colonia de Cochinchina."
+"t": "Ciudad del sur de Vietnam, tomada por Francia en 1859 tras una expedición anglo-francesa, y capital de la colonia de Cochinchina, de 1862. Después, Francia fue anexionando Camboya (1863), Annam y Tonkín, y creó en 1887 la Unión Indochina. Se la llamó «la perla del Lejano Oriente». La colonia era rica en arroz y caucho."
 },
 "Singapur": {
 "k": "Ciudad",
-"t": "Fundada en 1819 por los británicos, controlaba el estrecho de Malaca, una ruta esencial."
+"t": "Fundada en 1819 por Thomas Stamford Raffles, de la Compañía de las Indias Orientales, como puerto libre en el extremo de la península malaya. Dominaba el estrecho de Malaca, ruta esencial entre la India y China. En pocas décadas se convirtió en uno de los principales puertos del mundo, con una población china, malaya e india. Fue colonia de la Corona desde 1867."
 },
 "Manila": {
 "k": "Ciudad",
-"t": "Capital de las Filipinas españolas hasta 1898, cuando pasaron a Estados Unidos."
+"t": "Capital de las Filipinas españolas desde 1571, sede de la Audiencia y del puerto del galeón de Manila. Tras la derrota española en la guerra de 1898, el Tratado de París cedió el archipiélago a EE. UU. por 20 millones de dólares. Los filipinos, que ya se habían rebelado contra España, con Aguinaldo, siguieron luchando contra los estadounidenses hasta 1902."
 },
 "Shanghái": {
 "k": "Ciudad",
-"t": "Puerto abierto al comercio extranjero tras el tratado de Nankín (1842). Tenía concesiones controladas por potencias europeas."
+"t": "Puerto en el delta del Yangtsé, abierto al comercio exterior por el Tratado de Nankín de 1842, tras la primera guerra del Opio, que Gran Bretaña ganó para imponer la venta de opio. Se crearon concesiones extranjeras, con su propia policía y tribunales, la británica, la francesa y la internacional. Se convirtió en la mayor ciudad comercial de China."
 },
 "Tokio": {
 "k": "Ciudad",
-"t": "Capital de Japón. Desde 1868 el país se modernizó y se convirtió en potencia imperial."
+"t": "Capital de Japón, antes Edo, sede del shogunato. Tras la llegada del comodoro Perry (1853-1854), que forzó la apertura del país, la Restauración Meiji (1868) devolvió el poder al emperador y modernizó el Estado: ejército, industria, educación. Japón venció a China (1894-1895) y Rusia (1904-1905), y se convirtió en la única potencia imperial no occidental."
 },
 "Vladivostok": {
 "k": "Ciudad",
-"t": "Puerto ruso del Pacífico, fundado en 1860. Es la terminal del ferrocarril Transiberiano."
+"t": "Fundada en 1860 por Rusia, tras obtener de China la región del Ussuri por el Tratado de Pekín, con el nombre de «Señor del Oriente». Es un puerto en el Pacífico y la terminal del ferrocarril Transiberiano, empezado en 1891 y acabado hacia 1916. Impulsó la presencia rusa en Manchuria y Corea, lo que llevó a la guerra con Japón."
 },
 "Bagdad": {
 "k": "Ciudad",
-"t": "Ciudad otomana donde Alemania proyectó el ferrocarril de Berlín a Bagdad, que alarmó a Gran Bretaña."
+"t": "Ciudad otomana donde el Reich alemán, con la concesión de 1899, planeó el ferrocarril Berlín-Bagdad, que uniría Europa con el golfo Pérsico y daría a Alemania una vía de influencia en el Imperio otomano. Alarmó a Gran Bretaña, que veía en peligro su ruta a la India y a Rusia. Fue uno de los factores de tensión que llevaron a la Primera Guerra Mundial."
 },
 "Conquista de Argelia (1830)": {
 "k": "Acontecimiento",

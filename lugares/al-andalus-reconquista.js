@@ -1,83 +1,83 @@
 window.LUGARES={
 "Oviedo": {
 "k": "Ciudad",
-"t": "Capital del reino de Asturias desde finales del siglo VIII, con Alfonso II. Fue el núcleo político del primer reino cristiano que resistió a Al-Ándalus."
+"t": "Capital del reino de Asturias desde Alfonso II el Casto (791-842), que construyó el palacio, la basílica del Salvador y la Cámara Santa. El reino, nacido tras la victoria de Pelayo en Covadonga hacia 722, fue el primer núcleo cristiano independiente frente a Al-Ándalus. En 910 la corte se trasladó a León, y Oviedo conservó su importancia religiosa."
 },
 "León": {
 "k": "Ciudad",
-"t": "Capital del reino de León desde 910, cuando la corte se trasladó desde Oviedo. Fue la principal ciudad cristiana del noroeste peninsular."
+"t": "Capital del reino desde que García I trasladó allí la corte en 910, cuando el reino astur-leonés se expandió hasta el Duero. Almanzor la saqueó en 988. En 1188, Alfonso IX convocó las Cortes con representantes de las ciudades, las primeras de Europa con esa composición. Tuvo importancia como etapa del Camino de Santiago."
 },
 "Santiago": {
 "k": "Ciudad",
-"t": "Lugar donde, según la tradición, se encontró el sepulcro del apóstol en el siglo IX. Se convirtió en un gran centro de peregrinación. Almanzor la saqueó en 997."
+"t": "Según la tradición, el eremita Pelayo descubrió hacia 813 la tumba del apóstol Santiago, con Alfonso II. Se levantó una iglesia y creció la ciudad, y se convirtió en meta de peregrinaje, el Camino de Santiago, con el Códice Calixtino en el siglo XII. Almanzor la saqueó en 997 y se llevó las campanas a Córdoba, aunque respetó el sepulcro."
 },
 "Burgos": {
 "k": "Ciudad",
-"t": "Fundada en 884 por el conde Diego Rodríguez Porcelos. Fue la ciudad más importante de Castilla."
+"t": "Fundada en 884 por el conde Diego Rodríguez Porcelos para defender el territorio de Castilla frente a los musulmanes. Se convirtió en la capital de Castilla y en centro comercial de la lana, camino de Santiago. Fernando III inició su catedral gótica en 1221. El Cid, Rodrigo Díaz de Vivar, nació cerca de ella, en Vivar."
 },
 "Pamplona": {
 "k": "Ciudad",
-"t": "Capital del reino de Pamplona, origen de Navarra. Alcanzó su mayor poder bajo Sancho III el Mayor (1004-1035)."
+"t": "Capital del reino de Pamplona, que surgió en el siglo IX con Íñigo Arista, y que se llamó después Navarra. Alcanzó su máximo con Sancho III el Mayor (1004-1035), que dominó casi todos los reinos cristianos y repartió sus territorios entre sus hijos: Navarra, Castilla, Aragón y Ribagorza. Fue otro lugar clave del Camino de Santiago."
 },
 "Barcelona": {
 "k": "Ciudad",
-"t": "Capital del condado de Barcelona, núcleo de la Marca Hispánica. Almanzor la saqueó en 985. En 1137 el conde se unió a la Corona de Aragón."
+"t": "Capital del condado de Barcelona, el principal de la Marca Hispánica, con Wifredo el Velloso a finales del siglo IX. Almanzor la saqueó en 985, y los condes dejaron de reconocer a los reyes francos. En 1137, Ramón Berenguer IV se casó con Petronila, heredera de Aragón, y se formó la Corona de Aragón, que unía Aragón y Cataluña."
 },
 "Zaragoza": {
 "k": "Ciudad",
-"t": "Capital de una taifa importante. Alfonso I el Batallador de Aragón la conquistó en 1118."
+"t": "Capital de una de las taifas más ricas, la de los Banu Hud, en el valle del Ebro, famosa por la Aljafería. Alfonso I el Batallador la conquistó en 1118, tras un largo asedio, con ayuda de cruzados franceses. Se convirtió en capital del reino de Aragón y dejó a muchos mudéjares en la ciudad. Alfonso murió en 1134 sin hijos."
 },
 "Toledo": {
 "k": "Ciudad",
-"t": "Antigua capital visigoda y taifa musulmana. Alfonso VI la conquistó en 1085, lo que llevó la frontera cristiana al Tajo."
+"t": "Capital visigoda, y taifa de los Banu Di-l-Nun, con una población en parte mozárabe. Alfonso VI la conquistó sin lucha en mayo de 1085, tras años de presión y cobro de parias, y pactó la capitulación con respeto a la mezquita y a los musulmanes. Llevó la frontera al Tajo. Los almorávides, llamados por las taifas, derrotaron a Alfonso en Sagrajas (1086)."
 },
 "Córdoba": {
 "k": "Ciudad",
-"t": "Capital de Al-Ándalus y sede del califato desde 929. Fernando III la conquistó en 1236."
+"t": "Capital del califato desde 929, con unos 100.000 habitantes, y centro cultural y político de Al-Ándalus. El califato se disolvió en 1031 tras una guerra civil, y la ciudad perdió su importancia. Fernando III de Castilla la conquistó el 29 de junio de 1236 y la gran mezquita se consagró como catedral. Con ella cayó el valle del Guadalquivir."
 },
 "Sevilla": {
 "k": "Ciudad",
-"t": "Capital almohade en la península. Fernando III la tomó en 1248 después de un cerco de unos quince meses."
+"t": "Capital de los almohades en la península, con la Giralda como minarete de su mezquita mayor (1184-1198). Fernando III la sitió durante unos quince meses, con ayuda de una flota cantábrica que rompió el puente de barcas sobre el Guadalquivir, y la tomó el 23 de noviembre de 1248. Gran parte de la población musulmana se marchó. Se convirtió en una gran ciudad castellana."
 },
 "Granada": {
 "k": "Ciudad",
-"t": "Capital del reino nazarí (1238-1492), último estado musulmán de la península. En ella se levantó la Alhambra."
+"t": "Capital del reino nazarí, fundado por Muhammad I (Ibn al-Ahmar) en 1238. Con tributos a Castilla y comercio, sobrevivió durante más de dos siglos y medio. En ella se construyó la Alhambra, sobre todo en los siglos XIII y XIV. Los Reyes Católicos la conquistaron el 2 de enero de 1492 tras una guerra de diez años, y Boabdil entregó las llaves."
 },
 "Valencia": {
 "k": "Ciudad",
-"t": "El Cid la conquistó en 1094 y gobernó la ciudad hasta su muerte en 1099. Jaime I de Aragón la tomó en 1238."
+"t": "Taifa musulmana, que el Cid conquistó en 1094 tras un largo cerco y gobernó hasta su muerte en 1099. Su viuda, Jimena, resistió hasta 1102, cuando los almorávides retomaron la ciudad. Jaime I el Conquistador la tomó definitivamente el 9 de octubre de 1238, y creó el reino de Valencia, con sus propios fueros, y se repobló con catalanes y aragoneses."
 },
 "Lisboa": {
 "k": "Ciudad",
-"t": "Alfonso I de Portugal la conquistó en 1147 con ayuda de cruzados extranjeros."
+"t": "Alfonso I Enríquez, primer rey de Portugal, la conquistó el 24 de octubre de 1147, tras un cerco de cuatro meses, con la ayuda de cruzados ingleses, flamencos y alemanes que iban a Tierra Santa. Era entonces la ciudad musulmana más grande del oeste peninsular. Fue la capital de Portugal desde 1255, con Alfonso III, en lugar de Coímbra."
 },
 "Coímbra": {
 "k": "Ciudad",
-"t": "Ciudad tomada por Fernando I de León en 1064. Fue capital de Portugal durante buena parte de los siglos XII y XIII."
+"t": "Fernando I de León y Castilla la conquistó en 1064 tras seis meses de asedio, y la encomendó al mozárabe Sisnando Davídiz. Fue capital del condado portucalense y del reino de Portugal con Alfonso I y sus sucesores hasta 1255. Allí se fundó, en 1290, la primera universidad portuguesa, trasladada desde Lisboa."
 },
 "Salamanca": {
 "k": "Ciudad",
-"t": "Ciudad de la frontera del Duero, repoblada a finales del siglo XI. Su universidad se fundó a comienzos del siglo XIII."
+"t": "Ciudad junto al Tormes, repoblada hacia 1085-1102 por el conde Raimundo de Borgoña, tras la conquista de Toledo, para defender la frontera del Duero. Su universidad nació de las escuelas catedralicias; Alfonso IX de León la impulsó hacia 1218-1219 y Alfonso X le dio las Partidas y un estatuto, en 1254. Es una de las más antiguas de Europa."
 },
 "Palma": {
 "k": "Ciudad",
-"t": "Capital de Mallorca. Jaime I de Aragón conquistó la isla en 1229."
+"t": "Madina Mayurqa, capital musulmana de Mallorca. Jaime I de Aragón, con nobles catalanes y de Marsella, desembarcó en Santa Ponça el 8 de septiembre de 1229 y tomó Palma el 31 de diciembre, tras tres meses de asedio. Creó el reino de Mallorca, y repobló con catalanes. Los musulmanes fueron esclavizados o expulsados, y la isla se catalanizó."
 },
 "Murcia": {
 "k": "Ciudad",
-"t": "Capital de un reino taifa. Pasó a ser protectorado castellano en 1243 y fue conquistada en 1266."
+"t": "Capital de un reino taifa. En 1243, por el pacto de Alcaraz, el emir Ibn Hud aceptó el protectorado castellano, el infante Alfonso (futuro Alfonso X) ocupó los alcázares. Los mudéjares se sublevaron en 1264, y Jaime I de Aragón, suegro de Alfonso X, ayudó a sofocarlo en 1266, y entregó la ciudad a Castilla. Se repobló con castellanos."
 },
 "Badajoz": {
 "k": "Ciudad",
-"t": "Capital de una taifa. Alfonso IX de León la conquistó en 1230."
+"t": "Capital de la taifa de los Aftasíes, una de las más importantes, y después ciudad almohade. Alfonso IX de León la conquistó definitivamente en 1230, tras un largo ciclo de conquistas por Extremadura. Ya había sido tomada por Gerardo Sempavor en 1169 y recuperada. Con ella se avanzó por el valle del Guadiana, en la frontera con Portugal."
 },
 "Málaga": {
 "k": "Ciudad",
-"t": "Principal puerto del reino nazarí. Los Reyes Católicos la conquistaron en 1487."
+"t": "Principal puerto del reino nazarí, desde donde se exportaban frutos secos y seda. Los Reyes Católicos la sitiaron durante tres meses, en 1487, con artillería, y tomaron la ciudad el 18 de agosto, tras un duro asedio. Muchos habitantes fueron esclavizados. Su caída aisló la parte oriental del reino de Granada."
 },
 "Almería": {
 "k": "Ciudad",
-"t": "Gran puerto y centro comercial de Al-Ándalus. Quedó en el reino nazarí hasta que los Reyes Católicos la tomaron en 1489."
+"t": "Gran puerto y centro comercial de Al-Ándalus, con industria de seda, y sede de un reino taifa. Entre 1147 y 1157 la ocuparon los cristianos. Pasó a ser nazarí. Los Reyes Católicos, tras tomar Baza, recibieron la rendición de Almería en diciembre de 1489, de la mano de El Zagal, que había gobernado el reino."
 },
 "Guadalete (711)": {
 "k": "Acontecimiento",

@@ -1,79 +1,79 @@
 window.LUGARES={
 "La Venta": {
 "k": "Yacimiento",
-"t": "Centro olmeca de Tabasco (1200-400 a. C.), famoso por sus cabezas colosales de piedra."
+"t": "Centro olmeca de Tabasco, el principal entre 900 y 400 a. C., con una gran pirámide de arcilla de unos 30 metros y ofrendas de jade. De allí proceden cuatro cabezas colosales de basalto, hasta de 20 toneladas, traídas desde los montes Tuxtlas. Los olmecas, la «cultura madre» de Mesoamérica, tenían una escritura incipiente y un calendario."
 },
 "Monte Albán": {
 "k": "Ciudad",
-"t": "Capital zapoteca de Oaxaca desde hacia 500 a. C., edificada sobre una colina aplanada."
+"t": "Capital zapoteca, fundada hacia 500 a. C. sobre una colina nivelada, a 400 metros sobre el valle de Oaxaca. Tuvo plazas, pirámides, un observatorio y el conjunto de los «danzantes», relieves con escritura y calendario. Llegó a tener unos 25.000 habitantes. Fue abandonada hacia 800 d. C., y los mixtecos usaron sus tumbas. Es Patrimonio de la Humanidad."
 },
 "Chavín de Huántar": {
 "k": "Yacimiento",
-"t": "Centro religioso de los Andes del norte de Perú (1200-200 a. C.), con galerías subterráneas y esculturas de felinos."
+"t": "Centro ceremonial andino en la sierra norte del Perú, activo entre 1200 y 200 a. C. Tiene un templo con galerías subterráneas, un monolito, el Lanzón, de unos cuatro metros, y relieves de felinos, serpientes y aves. Las galerías tenían un sistema de ventilación y acústica, y se usaban en rituales con alucinógenos como el cactus San Pedro."
 },
 "Tiwanaku": {
 "k": "Yacimiento",
-"t": "Gran centro ceremonial cerca del lago Titicaca, en Bolivia (500-1000). Conserva la Puerta del Sol."
+"t": "Ciudad y centro ceremonial a 3.800 metros, junto al Titicaca, que dominó el altiplano de unos 500 a 1000 d. C. Su Puerta del Sol, tallada de un solo bloque, el templo semisubterráneo y los monolitos, como el de Ponce, muestran su arquitectura. Practicaba una agricultura en camellones. Su declive, por la sequía, hacia el año 1000, precedió al auge inca."
 },
 "Calakmul": {
 "k": "Ciudad",
-"t": "Gran ciudad maya de Campeche, rival de Tikal durante el período clásico."
+"t": "Gran ciudad maya en la selva de Campeche, con una de las pirámides más altas (unos 45 metros). Fue la capital del reino de la «Serpiente» (Kaan), rival de Tikal en una larga guerra por la hegemonía en el período clásico, entre los siglos VI y VIII. Tikal la derrotó en 695. Es Patrimonio de la Humanidad."
 },
 "Palenque": {
 "k": "Ciudad",
-"t": "Ciudad maya de Chiapas. Su rey Pakal (615-683) fue enterrado en el Templo de las Inscripciones."
+"t": "Ciudad maya de Chiapas, al pie de la sierra, célebre por su arquitectura elegante y sus estucos. K'inich Janaab' Pakal gobernó 68 años (615-683). En su tumba, bajo el Templo de las Inscripciones, se halló un sarcófago con una lápida con la imagen del rey. La ciudad fue abandonada hacia 800 y se redescubrió en el siglo XVIII."
 },
 "Copán": {
 "k": "Ciudad",
-"t": "Ciudad maya del actual Honduras, famosa por su escalinata con una larga inscripción jeroglífica."
+"t": "Ciudad maya en el oeste de Honduras, famosa por su escultura, con estelas y altares tallados. La Escalinata Jeroglífica, con unos 2.200 glifos, es la inscripción maya más larga conocida, y narra la historia de la dinastía fundada por Yax K'uk' Mo' en 426. Su declive empezó en el siglo IX, en parte por la presión sobre los recursos."
 },
 "Uxmal": {
 "k": "Ciudad",
-"t": "Ciudad maya de Yucatán, con edificios de estilo Puuc como la Pirámide del Adivino."
+"t": "Ciudad maya de Yucatán, en la región Puuc, de estilo con fachadas de mosaicos de piedra, con la Pirámide del Adivino, de planta ovalada, el Cuadrángulo de las Monjas y el Palacio del Gobernador. Floreció entre 700 y 1000 d. C. En una región sin ríos dependía de cisternas (chultunes), pues el agua se recogía de la lluvia."
 },
 "Chichén Itzá": {
 "k": "Ciudad",
-"t": "Gran ciudad maya de Yucatán, con influencias del centro de México. Su pirámide, «El Castillo», alude al calendario."
+"t": "Gran ciudad de Yucatán, que alcanzó su apogeo entre 800 y 1100, con edificios mayas y toltecas, como el Templo de los Guerreros y un gran juego de pelota. En la pirámide de Kukulkán, «El Castillo», con 365 escalones, las sombras del equinoccio forman una serpiente. Tiene un cenote sagrado, donde se hacían ofrendas. Es una de las nuevas siete maravillas."
 },
 "Mayapán": {
 "k": "Ciudad",
-"t": "Capital maya del posclásico en Yucatán, que dominó la región entre los siglos XIII y XV."
+"t": "Capital del posclásico en Yucatán, una ciudad amurallada con unos 12.000 habitantes. Gobernó la región entre 1220 y 1440, cuando fue destruida, durante una revuelta contra los Cocom, con un sistema de liga, la mayapán. Tenía una réplica del Castillo de Chichén Itzá. Luego, la región se fragmentó en pequeños reinos, los cuchcabales."
 },
 "Tulum": {
 "k": "Ciudad",
-"t": "Ciudad maya amurallada en la costa del Caribe. Estaba habitada cuando llegaron los españoles."
+"t": "Ciudad amurallada en un acantilado sobre el Caribe, un puerto de comercio marítimo de los mayas, de los siglos XIII al XVI. Sus murallas y su faro natural eran notables. Los españoles de la expedición de Juan de Grijalva la vieron en 1518 y se asombraron de su extensión. Fue abandonada en el siglo XVII, tras las epidemias."
 },
 "Texcoco": {
 "k": "Ciudad",
-"t": "Ciudad de la orilla del lago, miembro de la Triple Alianza con Tenochtitlan y Tlacopan. Su rey Nezahualcóyotl fue también poeta."
+"t": "Ciudad a orillas del lago de Texcoco, capital de los acolhuas y una de las tres partes de la Triple Alianza (1428) con Tenochtitlan y Tlacopan. Su rey Nezahualcóyotl (1402-1472), poeta, legislador e ingeniero, construyó un acueducto y un dique. Fue un gran centro cultural, con una biblioteca de códices. Cortés usó Texcoco como base para sitiar Tenochtitlan."
 },
 "Cholula": {
 "k": "Ciudad",
-"t": "Importante centro religioso con la pirámide más grande del mundo por volumen. Cortés ordenó una matanza allí en 1519."
+"t": "Ciudad santa del valle de Puebla, con la Gran Pirámide de Tepanapa, la de mayor volumen del mundo, de unos 400 metros de lado, y consagrada a Quetzalcóatl. Era un gran centro de peregrinación y comercio. En octubre de 1519, los españoles y sus aliados tlaxcaltecas mataron a miles de cholultecas, y Cortés lo justificó por una supuesta conspiración."
 },
 "Veracruz": {
 "k": "Ciudad",
-"t": "Región de la costa del Golfo, tierra de los olmecas y de los totonacas. Cortés desembarcó cerca en 1519 y fundó la Villa Rica de la Vera Cruz."
+"t": "Región de la costa del Golfo, cuna de los olmecas y de los totonacas, con ciudades como El Tajín. Hernán Cortés desembarcó en abril de 1519, fundó la Villa Rica de la Vera Cruz y creó un cabildo para legitimar su actuación, independiente del gobernador de Cuba. Allí quemó (o hundió) sus naves, para evitar el regreso, según la tradición."
 },
 "Tzintzuntzan": {
 "k": "Ciudad",
-"t": "Capital del estado tarasco o purépecha, en Michoacán, que resistió la expansión mexica."
+"t": "Capital del estado purépecha o tarasco, junto al lago de Pátzcuaro, en Michoacán. Era un estado centralizado con una lengua propia, que trabajaba el cobre y el bronce. Resistió a los mexicas, a los que derrotó hacia 1478 con un gran ejército. Su rey, Tangáxoan II, se sometió a los españoles en 1522 y fue ejecutado por Nuño de Guzmán en 1530."
 },
 "Quito": {
 "k": "Ciudad",
-"t": "Ciudad del norte del imperio inca. Fue importante en la guerra civil entre Huáscar y Atahualpa."
+"t": "Ciudad del norte del Tahuantinsuyo, conquistada por Huayna Cápac, que pasó allí sus últimos años. Atahualpa, su hijo, gobernó esta parte, y Huáscar, en el Cuzco. Tras la muerte de Huayna Cápac, hacia 1527, estalló la guerra civil. Atahualpa ganó, con sus generales Quisquis y Chalcuchímac. Después, Rumiñahui, en 1534, quemó Quito antes de que llegaran los españoles."
 },
 "Cajamarca": {
 "k": "Ciudad",
-"t": "Ciudad inca de la sierra norte de Perú, donde Pizarro capturó a Atahualpa en 1532."
+"t": "Ciudad inca en la sierra norte del Perú, con baños termales. El 16 de noviembre de 1532, Francisco Pizarro, con unos 170 hombres, capturó por sorpresa a Atahualpa en la plaza, mientras se mataba a miles de sus acompañantes. Atahualpa ofreció un rescate de una habitación llena de oro y dos de plata, pero fue ejecutado el 26 de julio de 1533."
 },
 "Tumbes": {
 "k": "Ciudad",
-"t": "Ciudad de la costa norte del actual Perú. Pizarro desembarcó cerca en 1528 y en 1532, al comienzo de la conquista."
+"t": "Ciudad inca de la costa norte, la primera que conocieron los españoles. Pizarro llegó allí en 1528, en su segundo viaje, y vio un templo con adornos de oro y plata, lo que lo animó a regresar con un permiso del rey. En 1532, durante la conquista, la encontró destruida por las guerras entre los incas. Fundó cerca San Miguel de Piura."
 },
 "Lago Titicaca": {
 "k": "Yacimiento",
-"t": "Lago sagrado de los Andes, a unos 3.800 metros de altura. Según el mito, de él salió el primer Inca."
+"t": "Lago a 3.812 metros sobre el nivel del mar, el más alto navegable del mundo, entre Perú y Bolivia. Según la leyenda, de él salió Manco Cápac, el primer Inca, con su hermana y esposa Mama Ocllo, enviados por el Sol, para fundar el Cuzco. Tiene islas sagradas del Sol y de la Luna, y barcos de totora. Tiwanaku se levantó en su orilla."
 },
 "Primer gran centro olmeca (1200 a. C.)": {
 "k": "Acontecimiento",

@@ -1,59 +1,59 @@
 window.LUGARES={
 "París": {
 "k": "Ciudad",
-"t": "Capital de Francia y del Imperio de Napoleón, que se coronó emperador en Notre-Dame en 1804."
+"t": "Capital de Francia y del Imperio. Napoleón se hizo coronar emperador en Notre-Dame el 2 de diciembre de 1804, con el papa Pío VII presente, y se puso él mismo la corona. Ordenó construir el Arco de Triunfo y las grandes avenidas. Los aliados entraron en la ciudad el 31 de marzo de 1814. Napoleón abdicó en Fontainebleau."
 },
 "Londres": {
 "k": "Ciudad",
-"t": "Capital del principal enemigo de Napoleón, que financió las coaliciones contra Francia. Napoleón intentó arruinar su economía con el bloqueo continental."
+"t": "Capital del principal enemigo de Napoleón, que financió las coaliciones. Tras Trafalgar (1805), donde Nelson destruyó la flota franco-española, Napoleón no pudo invadir, e intentó arruinar su economía con el bloqueo continental (1806), que prohibía comerciar con Gran Bretaña. Fue un fracaso y provocó la invasión de Portugal y de Rusia."
 },
 "Madrid": {
 "k": "Ciudad",
-"t": "Capital de España, ocupada por tropas francesas en 1808. Allí estalló el levantamiento del 2 de mayo."
+"t": "Capital de España, ocupada por tropas francesas en 1808, tras las abdicaciones de Bayona, con José Bonaparte como rey. El 2 de mayo, el pueblo se sublevó y Murat reprimió, con fusilamientos el 3 de mayo, que Goya inmortalizó. Fue el inicio de la guerra de la Independencia (1808-1814), una guerra de guerrillas, que desgastó al ejército francés."
 },
 "Lisboa": {
 "k": "Ciudad",
-"t": "Capital de Portugal, ocupada por los franceses en 1807. Wellington la defendió con las líneas de Torres Vedras."
+"t": "Capital de Portugal, ocupada por Junot en noviembre de 1807, que tenía como objetivo cerrar el comercio con Gran Bretaña. La corte huyó a Brasil. Wellington defendió el país con las líneas de Torres Vedras, de 1810, y obligó a Masséna a retirarse en 1811. Fue base para las campañas británicas en la Península."
 },
 "Viena": {
 "k": "Ciudad",
-"t": "Capital de Austria, ocupada por Napoleón en 1805 y 1809. En 1814-15 acogió el Congreso que reorganizó Europa."
+"t": "Capital de Austria, ocupada por los franceses en noviembre de 1805, tras Ulm, y en 1809. En 1814-1815 reunió el Congreso de Viena, con el canciller Metternich, y los representantes de las potencias, con Talleyrand por Francia. Se redibujó el mapa de Europa con los principios de legitimidad, equilibrio y restauración de las monarquías."
 },
 "Berlín": {
 "k": "Ciudad",
-"t": "Capital de Prusia. Napoleón entró en ella en 1806, tras derrotar a los prusianos."
+"t": "Capital de Prusia. Napoleón la ocupó el 27 de octubre de 1806, tras vencer a los prusianos en Jena y Auerstedt, y desde allí decretó el bloqueo continental. Prusia perdió la mitad de su territorio en la paz de Tilsit (1807). Pero con reformas (Stein, Hardenberg, Scharnhorst) se recuperó y luchó contra Napoleón en 1813."
 },
 "Moscú": {
 "k": "Ciudad",
-"t": "Napoleón la ocupó en septiembre de 1812. La ciudad ardió y el ejército francés tuvo que retirarse."
+"t": "Napoleón entró en Moscú el 14 de septiembre de 1812, tras la batalla de Borodinó, con la Grande Armée, con unos 100.000 hombres, tras salir de Alemania con más de 600.000. La ciudad fue incendiada, y el zar Alejandro I no negoció. Napoleón se retiró en octubre, con el frío y el hambre, y solo unos 30.000 salieron de Rusia."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "Napoleón la anexionó al Imperio en 1809 y tomó preso al papa Pío VII."
+"t": "Napoleón anexionó los Estados Pontificios en mayo de 1809 y el papa Pío VII lo excomulgó; en julio de 1809 fue detenido y llevado a Savona y luego a Fontainebleau. Napoleón nombró a su hijo «rey de Roma». Tras Waterloo, el Congreso de Viena restableció los Estados Pontificios, y el papa volvió a Roma en 1814."
 },
 "Nápoles": {
 "k": "Ciudad",
-"t": "Reino gobernado por José Bonaparte y, desde 1808, por Joaquín Murat, cuñado de Napoleón."
+"t": "Reino gobernado por José Bonaparte, hermano de Napoleón, desde 1806 y, desde 1808, por Joaquín Murat, cuñado de Napoleón, cuando José pasó a ser rey de España. Murat, mariscal, intentó mantenerse tras la caída de Napoleón, y se unió a Austria en 1814, pero fue derrotado en 1815. Fue fusilado en Pizzo, en octubre. Volvieron los Borbones."
 },
 "Milán": {
 "k": "Ciudad",
-"t": "Capital del Reino de Italia, del que Napoleón fue rey desde 1805."
+"t": "Capital del Reino de Italia, en el norte, creado por Napoleón. Se coronó rey de Italia en la catedral de Milán el 26 de mayo de 1805 con la Corona de Hierro de los lombardos. Su virrey era su hijastro Eugenio de Beauharnais. Tras 1815, Milán y Lombardía-Venecia volvieron a Austria."
 },
 "Varsovia": {
 "k": "Ciudad",
-"t": "Capital del Gran Ducado de Varsovia, creado por Napoleón en 1807 con territorios polacos."
+"t": "Capital del Gran Ducado de Varsovia, creado por Napoleón en 1807 en la paz de Tilsit, con territorios polacos de Prusia. Los polacos de Poniatowski le apoyaron con la esperanza de reconstruir Polonia. El Gran Ducado tuvo un Código Napoleónico y Constitución. En 1815, el Congreso de Viena lo repartió entre Rusia, Prusia y Austria."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital del Imperio otomano. Napoleón había intervenido ya en Oriente con la expedición a Egipto (1798)."
+"t": "Capital del Imperio otomano. Napoleón, que en 1798 había invadido Egipto, otomano, para cortar la ruta británica hacia la India, quiso ganar el apoyo de Turquía. La expedición, con los científicos y la Piedra de Rosetta, fue una derrota militar tras Abukir y San Juan de Acre, pero tuvo un enorme impacto científico. Napoleón volvió a Francia en 1799."
 },
 "Ámsterdam": {
 "k": "Ciudad",
-"t": "Capital del reino de Holanda, dado al hermano de Napoleón, Luis. Fue anexionado al Imperio en 1810."
+"t": "Capital del reino de Holanda, creado por Napoleón en 1806 y dado a su hermano Luis. Luis, que se tomó en serio su papel y defendió a los holandeses, no cumplió el bloqueo continental, y Napoleón lo obligó a abdicar. En 1810 anexionó Holanda al Imperio. En 1815, el Congreso de Viena creó el reino de los Países Bajos, con Guillermo I."
 },
 "Bruselas": {
 "k": "Ciudad",
-"t": "Ciudad de la actual Bélgica, entonces parte de Francia. Cerca de ella tuvo lugar la batalla de Waterloo."
+"t": "Ciudad de la actual Bélgica, anexionada por Francia en 1795. Al sur de Bruselas, en Waterloo, el 18 de junio de 1815, Wellington y Blücher derrotaron a Napoleón, durante los Cien Días, con unos 190.000 hombres en total. Fue la derrota final, y Napoleón fue enviado a Santa Elena, donde murió en 1821."
 },
 "Golpe de Brumario (1799)": {
 "k": "Acontecimiento",

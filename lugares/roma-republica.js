@@ -1,59 +1,59 @@
 window.LUGARES={
 "Roma": {
 "k": "Ciudad",
-"t": "Capital del Estado romano. Según la tradición se fundó en 753 a. C.; hacia 509 a. C. los romanos expulsaron a los reyes y se formó la república, con cónsules, Senado y asambleas."
+"t": "Ciudad a orillas del Tíber, fundada según la tradición el 21 de abril de 753 a. C. por Rómulo. Hacia 509 a. C. se expulsó al último rey, Tarquinio el Soberbio, y se creó la República: dos cónsules anuales, el Senado y las asambleas del pueblo. Con la lucha de patricios y plebeyos se creó el tribunado de la plebe. Desde allí Roma dominó Italia y el Mediterráneo."
 },
 "Veyes": {
 "k": "Ciudad",
-"t": "Ciudad etrusca a unos 16 km de Roma. Su conquista en 396 a. C., tras un largo asedio, fue la primera gran expansión territorial romana."
+"t": "Poderosa ciudad etrusca a unos 16 km al norte de Roma, rival por el control de las salinas del Tíber. Tras diez años de asedio, según la tradición, el dictador Camilo la tomó en 396 a. C., excavando un túnel bajo sus murallas. Roma duplicó su territorio, y fue su primera gran conquista. Esta expansión se vio interrumpida pocos años después por el saqueo de los galos en 390 a. C."
 },
 "Capua": {
 "k": "Ciudad",
-"t": "Gran ciudad de la Campania. Se pasó a Aníbal tras Cannas (216 a. C.) y Roma la recuperó en 211 a. C. con un castigo severo."
+"t": "Segunda ciudad de Italia, rica por la fertilidad de la Campania, con una élite aristocrática y una famosa escuela de gladiadores. Tras Cannas (216 a. C.) abrió sus puertas a Aníbal, que invernó allí. Roma la sitió y la tomó en 211 a. C.: ejecutó a los senadores, vendió como esclavos a muchos habitantes y le quitó su autogobierno."
 },
 "Tarento": {
 "k": "Ciudad",
-"t": "Colonia griega del sur de Italia. Pidió ayuda al rey Pirro de Epiro contra Roma (280 a. C.) y fue conquistada por los romanos en 272 a. C."
+"t": "Colonia espartana de Magna Grecia, con un excelente puerto. En 282 a. C. los tarentinos atacaron naves romanas y pidieron ayuda al rey Pirro de Epiro, que llegó en 280 a. C. con elefantes. Pirro ganó en Heraclea y Ascoli, pero con pérdidas tan altas que nació la expresión «victoria pírrica». Se marchó en 275 a. C. y Roma tomó Tarento en 272 a. C."
 },
 "Siracusa": {
 "k": "Ciudad",
-"t": "Principal ciudad griega de Sicilia. Aliada de Roma bajo Hierón II, pasó después al bando cartaginés; fue asediada en 213-212 a. C. y en el asalto murió Arquímedes."
+"t": "La mayor ciudad griega de Sicilia, famosa por sus murallas y su puerto. Con Hierón II fue aliada de Roma durante casi medio siglo, pero tras su muerte se pasó a Cartago. Marcelo la asedió en 213-212 a. C. Arquímedes organizó su defensa con catapultas y espejos, según la leyenda. Cayó por traición, y un soldado mató a Arquímedes mientras estudiaba unas figuras en la arena."
 },
 "Cartago": {
 "k": "Ciudad",
-"t": "Gran potencia marítima del norte de África y rival de Roma en las guerras púnicas. Fue destruida en 146 a. C. y más tarde refundada como colonia romana."
+"t": "Fundada por fenicios de Tiro, según la tradición en 814 a. C., fue una gran potencia comercial y naval, gobernada por una oligarquía. Se enfrentó a Roma en tres guerras (264-146 a. C.). Tras un asedio de tres años en la Tercera Guerra Púnica, Escipión Emiliano la tomó e incendió en 146 a. C. Más tarde, César y Augusto la refundaron como colonia romana."
 },
 "Mediolanum": {
 "k": "Ciudad",
-"t": "La actual Milán. Capital de los insubres, fue conquistada por Roma en 222 a. C. durante la conquista de la Galia Cisalpina."
+"t": "La actual Milán, fundada por los galos insubres y conquistada por los romanos en 222 a. C. Con la conquista de la Galia Cisalpina, la llanura del Po quedó abierta a la colonización romana. Su posición, en un cruce de caminos hacia los Alpes, la haría capital imperial de Occidente en tiempos de Maximiano (286 d. C.), y de ahí el edicto de 313 d. C."
 },
 "Marsella": {
 "k": "Ciudad",
-"t": "Colonia griega (Massalia) fundada hacia 600 a. C. y fiel aliada de Roma. Su petición de ayuda llevó a los romanos a intervenir en el sur de la Galia (125-121 a. C.)."
+"t": "Massalia, colonia fundada por griegos de Focea hacia 600 a. C., con un gran puerto y una rica actividad comercial en la costa de la Galia. Fue aliada fiel de Roma desde los tiempos de la guerra contra Aníbal. En 125 a. C. pidió ayuda contra los salios, y las campañas romanas acabaron en la creación de la provincia de la Galia Transalpina (Narbonense), hacia el 121 a. C."
 },
 "Sagunto": {
 "k": "Ciudad",
-"t": "Ciudad ibera aliada de Roma al sur del Ebro. Su destrucción por Aníbal en 219 a. C. desencadenó la Segunda Guerra Púnica."
+"t": "Ciudad ibera, entonces llamada Arse o Saguntum, situada al sur del Ebro, cuya frontera con Cartago fijó el tratado de Asdrúbal (226 a. C.). Aníbal la sitió ocho meses y la tomó en 219 a. C.; según la tradición muchos habitantes prefirieron morir antes que rendirse. Roma consideró el ataque un casus belli y declaró la Segunda Guerra Púnica."
 },
 "Cartagena": {
 "k": "Ciudad",
-"t": "Fundada por los cartagineses hacia 227 a. C. como capital de su dominio en Hispania (Cartago Nova). Escipión la tomó en 209 a. C."
+"t": "Cartago Nova fue fundada por Asdrúbal hacia 227 a. C. como capital cartaginesa en Hispania, con un puerto excelente y cerca de las minas de plata. Publio Cornelio Escipión la tomó en 209 a. C. por sorpresa, aprovechando una laguna poco profunda que rodeaba la ciudad. Allí obtuvo el control de las minas, rehenes y arsenales, y cambió el curso de la guerra en Hispania."
 },
 "Emporion": {
 "k": "Ciudad",
-"t": "Colonia griega de la costa catalana (Ampurias). Escipión desembarcó aquí en 218 a. C. y la convirtió en base de las operaciones romanas en Hispania."
+"t": "Ampurias, fundada por colonos griegos de Focea hacia 575 a. C., tenía una ciudad griega junto al mar y un barrio íbero. Fue aliada de Roma. En 218 a. C. Cneo Escipión desembarcó allí con unos 20.000 hombres para cortar los refuerzos de Aníbal, y fue el comienzo de la presencia romana en Hispania, que duraría más de seis siglos."
 },
 "Lilibeo": {
 "k": "Ciudad",
-"t": "Último gran bastión cartaginés en Sicilia, asediado durante años por Roma. Pasó a los romanos tras la derrota naval de las Égadas, en 241 a. C."
+"t": "Actual Marsala, en el extremo occidental de Sicilia, fundada por cartagineses en el 397 a. C. y su principal base en la isla durante la Primera Guerra Púnica. Roma la sitió sin éxito durante años. La victoria naval romana de las islas Égadas, en 241 a. C., cortó sus suministros, y Cartago aceptó entregar Sicilia, que se convirtió en la primera provincia romana."
 },
 "Utica": {
 "k": "Ciudad",
-"t": "Ciudad fenicia próxima a Cartago. Escipión la asedió en 204 a. C. al desembarcar en África y, más tarde, fue capital de la provincia romana de África."
+"t": "Colonia fenicia más antigua que Cartago, a unos 30 km. Fue aliada de Cartago, aunque con cierta autonomía. En 204 a. C. Escipión desembarcó cerca y la sitió sin éxito, pero el campamento de invierno le permitió negociar. Tras la destrucción de Cartago, en 146 a. C., Útica se pasó a Roma y fue capital de la provincia de África hasta que se refundó Cartago."
 },
 "Caralis": {
 "k": "Ciudad",
-"t": "La actual Cagliari, en Cerdeña. Roma se apoderó de la isla en 238 a. C., aprovechando las dificultades de Cartago tras su primera derrota."
+"t": "Actual Cagliari, fundada por fenicios en el sur de Cerdeña y luego conquistada por Cartago. Tras la Primera Guerra Púnica, Cartago, debilitada por una rebelión de mercenarios, perdió Cerdeña: Roma la ocupó en 238 a. C. y, con Córcega, formó una provincia en 227 a. C. Fue una de las principales ciudades romanas de la isla."
 },
 "Fundación de Roma (753 a. C., según la tradición)": {
 "k": "Acontecimiento",

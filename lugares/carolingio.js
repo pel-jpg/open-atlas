@@ -1,71 +1,71 @@
 window.LUGARES={
 "París": {
 "k": "Ciudad",
-"t": "Clodoveo la hizo capital de los francos hacia 508. En época carolingia perdió peso político, pero siguió siendo una ciudad importante."
+"t": "Capital de Clodoveo hacia 508, en la isla de la Cité. Los carolingios, que tenían sus centros en el Rin y el Mosa, no la prefirieron, aunque su abadía de Saint-Denis fue un lugar de enterramiento. Los normandos la atacaron en 845 y la sitiaron en 885-886, defendida por el conde Eudes, que fue elegido rey en 888, y su familia, los capetos, la hizo capital."
 },
 "Aquisgrán": {
 "k": "Ciudad",
-"t": "Residencia favorita y capital de Carlomagno. Allí se alzó la capilla palatina y allí murió en 814."
+"t": "Aachen, donde Carlomagno construyó desde 794 un palacio y una capilla octogonal inspirada en San Vital de Rávena, y, a partir de 800, residió sobre todo allí, por sus aguas termales. Había una escuela palatina, con Alcuino. Murió en 814 y fue enterrado en la capilla. Hasta 1531 fue el lugar de coronación de los reyes alemanes."
 },
 "Reims": {
 "k": "Ciudad",
-"t": "Ciudad donde Clodoveo fue bautizado. Más tarde se coronó en ella a muchos reyes de Francia."
+"t": "Ciudad donde san Remigio bautizó a Clodoveo hacia 496-508, según la tradición con la santa ampolla. Luis el Piadoso fue coronado de nuevo allí por el papa Esteban IV en 816. Su arzobispo Hincmaro fue una figura clave del siglo IX. Con el tiempo, la catedral se convirtió en el lugar de coronación de los reyes de Francia."
 },
 "Roma": {
 "k": "Ciudad",
-"t": "Sede del papa. Allí León III coronó emperador a Carlomagno en la Navidad del año 800."
+"t": "Sede del papa y de la antigua capital imperial. El día de Navidad del año 800, en San Pedro, León III coronó a Carlomagno emperador. Las crónicas dicen que el rey no lo esperaba, aunque era un plan conjunto. Estableció una alianza de la monarquía franca con el papado, que había buscado su protección frente a los lombardos y bizantinos."
 },
 "Pavía": {
 "k": "Ciudad",
-"t": "Capital del reino lombardo. Carlomagno la conquistó en 774 y se proclamó rey de los lombardos."
+"t": "Capital del reino lombardo, desde donde Desiderio amenazaba al papa. Carlomagno la sitió durante unos nueve meses, y la tomó en junio de 774, con lo que puso fin al reino lombardo y se hizo llamar «rey de los francos y de los lombardos». Desiderio fue enviado a un monasterio en Francia. Siguió siendo la capital del regnum Italiae."
 },
 "Ravena": {
 "k": "Ciudad",
-"t": "Antigua capital del exarcado bizantino de Italia. Los lombardos la tomaron en 751 y Pipino la entregó al papa."
+"t": "Capital del exarcado bizantino de Italia, tomada por los lombardos de Astolfo en 751. Pipino el Breve los derrotó, en 754 y 756, y entregó al papa Esteban II las tierras de Ravena y la Pentápolis, la llamada «Donación de Pipino», origen de los Estados Pontificios. Carlomagno admiró sus edificios y se llevó columnas y mármoles para su capilla de Aquisgrán."
 },
 "Constantinopla": {
 "k": "Ciudad",
-"t": "Capital del Imperio bizantino, que veía con recelo el título imperial de Carlomagno. Lo reconoció en 812."
+"t": "Capital del Imperio bizantino. Tras la coronación del año 800, Bizancio, que se consideraba el único Imperio romano, lo vio como una usurpación. Carlomagno negoció durante años; en 812, el emperador Miguel I Rangabé reconoció su título, a cambio de la renuncia a Venecia y Dalmacia. Fue la «cuestión de los dos emperadores»."
 },
 "Córdoba": {
 "k": "Ciudad",
-"t": "Capital del emirato independiente de Al-Ándalus desde 756, bajo Abderramán I. Estaba al otro lado de la frontera con la Marca Hispánica."
+"t": "Capital del emirato omeya, fundado en 756 por Abderramán I, superviviente de la matanza de su familia en Damasco, y por tanto independiente del califato abasí. Estaba al otro lado de la frontera de la Marca Hispánica. Carlomagno había intentado conquistar Zaragoza en 778, y fracasó, y su retaguardia fue atacada en Roncesvalles."
 },
 "Oviedo": {
 "k": "Ciudad",
-"t": "Capital del reino de Asturias, único reino cristiano peninsular independiente del Imperio carolingio."
+"t": "Capital del reino de Asturias desde Alfonso II el Casto (791-842), que construyó el palacio y San Tirso, la catedral, en el lugar. El reino, fundado por Pelayo hacia 722, se mantuvo independiente frente al emirato. Alfonso II mantuvo contactos con Carlomagno, a quien envió regalos tras una expedición a Lisboa en 798. Es un reino cristiano al margen del Imperio."
 },
 "Toledo": {
 "k": "Ciudad",
-"t": "Antigua capital visigoda, bajo dominio musulmán desde 711."
+"t": "Antigua capital visigoda, conquistada por los musulmanes tras Guadalete, en 711-712. En el siglo VIII y IX fue una ciudad semiindependiente, con frecuentes rebeliones contra Córdoba, como la «jornada del foso» de 797 y la de 806, y tenía una importante población mozárabe. Es la sede primada de la Iglesia hispana."
 },
 "Toulouse": {
 "k": "Ciudad",
-"t": "Capital del reino de Aquitania, creado por Carlomagno para su hijo Luis. Fue base de la defensa frente a Al-Ándalus."
+"t": "Capital del reino de Aquitania, creado en 781 por Carlomagno para su hijo Luis, que tenía tres años, y que luego sería Luis el Piadoso. Aquitania tenía autonomía y era una frontera con el emirato. Desde Toulouse, Luis dirigió expediciones a Cataluña, y tomó Gerona en 785 y Barcelona en 801. Toulouse tenía el sepulcro de san Saturnino."
 },
 "Barcelona": {
 "k": "Ciudad",
-"t": "Luis el Piadoso la conquistó en 801. Se convirtió en uno de los principales centros de la Marca Hispánica."
+"t": "Luis el Piadoso, rey de Aquitania, la tomó en 801 tras un sitio de dos años, y fue la capital de la Marca Hispánica, bajo un conde, como Berà. Con Wifredo el Velloso, a finales del siglo IX, los condados fueron de facto independientes. En 985, Almanzor la saqueó y los condes dejaron de rendir vasallaje al rey franco."
 },
 "Paderborn": {
 "k": "Ciudad",
-"t": "Carlomagno celebró aquí asambleas durante la conquista de Sajonia. En 799 se reunió con el papa León III."
+"t": "Lugar de asambleas de Carlomagno durante las guerras sajonas. En 777 celebró allí la primera asamblea con los sajones, y en 799 recibió al papa León III, que huía de Roma, tras un atentado, y planearon la coronación imperial. Era el centro de la Sajonia cristianizada a la fuerza, y allí se fundó un obispado hacia 799."
 },
 "Ratisbona": {
 "k": "Ciudad",
-"t": "Capital de Baviera. Carlomagno depuso a su duque Tasilón III en 788 y anexionó el ducado."
+"t": "Regensburg, capital del ducado de Baviera, en el Danubio. En 788, Carlomagno depuso a su primo Tasilón III, que se había aliado con los ávaros, lo acusó de traición y lo envió a un monasterio. Baviera quedó bajo gobierno de un conde franco, y se creó una base para combatir a los ávaros, que fueron derrotados en 791-796."
 },
 "Verdún": {
 "k": "Ciudad",
-"t": "En esta ciudad se firmó en 843 el tratado que repartió el Imperio entre los nietos de Carlomagno."
+"t": "En agosto de 843, los tres nietos de Carlomagno, Lotario, Luis el Germánico y Carlos el Calvo, firmaron el Tratado de Verdún, tras tres años de guerra civil. Lotario recibió la franja central con Italia y el título imperial; Luis, la parte oriental, y Carlos, la occidental. Fue el inicio de Francia y Alemania como reinos diferentes."
 },
 "Tours": {
 "k": "Ciudad",
-"t": "Importante centro religioso con el santuario de san Martín. Su abad Alcuino de York fue consejero de Carlomagno."
+"t": "Centro religioso con la abadía de san Martín, y un escritorio donde se desarrolló la letra carolina. Alcuino de York, consejero de Carlomagno y director de su escuela palatina, fue abad de San Martín de Tours desde 796 hasta su muerte en 804. Allí se hizo una Biblia, la de Alcuino, y se perfeccionó una escritura clara, base de la minúscula actual."
 },
 "Lyon": {
 "k": "Ciudad",
-"t": "Ciudad del Ródano que, tras el reparto de Verdún, quedó en el reino de Lotario."
+"t": "Ciudad del Ródano, sede de un arzobispo muy influyente, el de Lyon, que era primado de las Galias. Tras el reparto de Verdún, en 843, quedó dentro del reino de Lotario, la Francia media, y más tarde fue parte del reino de Borgoña. Era un centro de comunicaciones por el Ródano y el Saona, y tenía una escuela catedralicia."
 },
 "Clodoveo se bautiza en Reims (496)": {
 "k": "Acontecimiento",

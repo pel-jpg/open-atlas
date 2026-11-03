@@ -1,43 +1,43 @@
 window.LUGARES={
 "Valencia": {
 "k": "Ciudad",
-"t": "Capital de la República desde noviembre de 1936. El gobierno se trasladó a Barcelona en octubre de 1937."
+"t": "Capital de la República desde el 6 de noviembre de 1936, cuando el gobierno de Largo Caballero salió de Madrid, ante el avance franquista. Allí residieron los ministerios y se celebró el Congreso de Intelectuales Antifascistas, en 1937. En octubre de 1937, ante la cercanía del frente, el gobierno se trasladó a Barcelona. Valencia resistió hasta marzo de 1939."
 },
 "Sevilla": {
 "k": "Ciudad",
-"t": "Ciudad tomada en julio de 1936 por el general Queipo de Llano con pocas tropas. Quedó en poder de los sublevados."
+"t": "El general Gonzalo Queipo de Llano, con solo unos cientos de hombres, y mediante un golpe de audacia, el 18 de julio de 1936 se hizo con la ciudad. Después, con arengas por la radio, se aseguró el control del suroeste. La represión de los barrios obreros fue muy dura. Sevilla fue la base para recibir al Ejército de África."
 },
 "Burgos": {
 "k": "Ciudad",
-"t": "Sede de la Junta de Defensa Nacional y capital política del bando sublevado durante buena parte de la guerra."
+"t": "Sede de la Junta de Defensa Nacional, creada en julio de 1936 por el general Cabanellas, y capital política del bando sublevado. El 1 de octubre de 1936 Franco fue proclamado Jefe del Estado, en Burgos. Allí tuvo su sede el gobierno de 1938, la Junta Técnica del Estado, y fue el centro de la propaganda y de los servicios del Nuevo Estado."
 },
 "Salamanca": {
 "k": "Ciudad",
-"t": "Cuartel general de Franco. En octubre de 1936 se produjo allí el enfrentamiento entre Millán Astray y Unamuno."
+"t": "Cuartel general de Franco desde octubre de 1936, en el palacio episcopal. El 12 de octubre, en el paraninfo de la Universidad, el general Millán Astray gritó «¡Viva la muerte!» y Unamuno, rector, le respondió con un discurso en el que dijo «Venceréis, pero no convenceréis». Fue destituido y murió en diciembre."
 },
 "Zaragoza": {
 "k": "Ciudad",
-"t": "Ciudad dominada por los sublevados desde el comienzo, tras el golpe. Quedó cerca del frente de Aragón."
+"t": "El general Cabanellas, el 19 de julio de 1936, controló la ciudad, y la reacción de los sindicatos, con la CNT, fue reprimida. Se ejecutó a miles de personas en el valle del Ebro. Quedó cerca del frente de Aragón, de donde los anarquistas de Durruti salieron desde Cataluña. La ciudad permaneció en poder franquista toda la guerra."
 },
 "Bilbao": {
 "k": "Ciudad",
-"t": "Capital de la zona republicana del norte. Cayó en junio de 1937 tras romper los sublevados el «cinturón de hierro»."
+"t": "Capital de la zona republicana del norte, con su industria. El 31 de marzo de 1937 comenzó la ofensiva franquista; el «cinturón de hierro», una línea defensiva de hormigón, fue traicionado por el ingeniero Goicoechea, que dio los planos, y rota en junio. Bilbao cayó el 19 de junio de 1937, con la industria intacta. Aportó mucho al esfuerzo bélico franquista."
 },
 "Málaga": {
 "k": "Ciudad",
-"t": "Ciudad republicana tomada por los sublevados en febrero de 1937, con ayuda italiana. Sufrió una dura represión."
+"t": "Ciudad republicana, tomada el 8 de febrero de 1937 por tropas franquistas con la ayuda del Corpo Truppe Volontarie italiano, con casi nulas defensas. Miles de personas huyeron por la carretera de Almería, y fueron bombardeadas por aviones y barcos, la «Desbandá». La represión posterior fue muy dura, con miles de fusilados."
 },
 "Cartagena": {
 "k": "Ciudad",
-"t": "Principal base naval de la República. Su flota se mantuvo fiel al gobierno."
+"t": "Principal base naval de la República, con el arsenal. La flota de Cartagena, tras fracasar la sublevación de parte de la marina, se mantuvo mayoritariamente fiel al gobierno, tras los marineros que mataron a sus oficiales. En marzo de 1939, unos oficiales golpistas la sublevaron en el golpe de Casado, y la flota salió a Bizerta, en Túnez."
 },
 "Ceuta": {
 "k": "Ciudad",
-"t": "Ciudad del norte de África donde los sublevados lograron pasar el Ejército de África a la península con ayuda de aviones alemanes e italianos."
+"t": "Ciudad del norte de África, desde donde en julio y agosto de 1936 el ejército sublevado, con el Ejército de África, cruzó el Estrecho. Como la flota republicana lo impedía, Franco obtuvo aviones alemanes e italianos para un puente aéreo, el primero de la historia, con unos 14.000 hombres en pocas semanas. En septiembre se pasó un convoy marítimo."
 },
 "Melilla": {
 "k": "Ciudad",
-"t": "Ciudad del norte de África donde comenzó el golpe de Estado en julio de 1936."
+"t": "Ciudad del norte de África donde el 17 de julio de 1936 comenzó el alzamiento, un día antes de lo previsto en la Península, bajo el coronel Solans y el general Romerales, al descubrirse la conspiración. Los sublevados fusilaron a las autoridades, y el golpe se extendió a Ceuta, Tetuán y Larache, con el protectorado de Marruecos."
 },
 "Melilla: comienza el golpe (17 jul. 1936)": {
 "k": "Acontecimiento",
