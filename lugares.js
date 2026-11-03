@@ -12,7 +12,7 @@
   document.head.appendChild(css);
   var NS='http://www.w3.org/2000/svg', STAR='M0,0 l2.4,5 5.4,.8 -3.9,3.8 .9,5.4 -4.8,-2.6 -4.8,2.6 .9,-5.4 -3.9,-3.8 5.4,-.8z';
   var css2=document.createElement('style');
-  css2.textContent='.lg-hint{display:flex;align-items:center;gap:10px;margin:0 0 10px;padding:9px 16px;background:#FFF6D6;border:1.5px solid #B8862B;border-radius:999px;font-family:"IBM Plex Sans",sans-serif;font-size:15px;font-weight:600;color:#3a2a08;line-height:1.35}'
+  css2.textContent='.lg-hint{display:flex;align-items:center;gap:10px;margin:22px 0 0;padding:9px 16px;background:#FFF6D6;border:1.5px solid #B8862B;border-bottom:0;border-radius:14px 14px 0 0;font-family:"IBM Plex Sans",sans-serif;font-size:15px;font-weight:600;color:#3a2a08;line-height:1.35}'
    +'.lg-hint svg{flex:none}.lg-hint span{font-weight:400}'
    +'#mapsvg .star.cstar{fill:#241b12;stroke:#ECE4D2;stroke-width:.7;vector-effect:non-scaling-stroke}#mapsvg .star.cstar.cap{fill:#fff;stroke:#241b12;stroke-width:1.3}'
    +'#mapsvg g:has(> path.cstar) > .evlabel{font-family:"IBM Plex Sans",sans-serif!important;font-style:normal!important;font-weight:700!important}'
@@ -21,7 +21,7 @@
   var fr=document.getElementById('frame');
   if(fr){var h=document.createElement('p');h.className='lg-hint';
     h.innerHTML='<svg width="22" height="22" viewBox="-9 -1 18 17" aria-hidden="true"><path d="'+STAR+'" fill="#fff" stroke="#241b12" stroke-width="1.2"/></svg><b>Pulsa cualquier estrella del mapa</b><span>para leer su ficha con más información.</span>';
-    fr.parentNode.insertBefore(h,fr);}
+    fr.parentNode.insertBefore(h,fr); fr.style.marginTop='0';}
   /* Todo punto clicable se dibuja como estrella */
   function star(cx,cy,k,cls){var p=document.createElementNS(NS,'path');p.setAttribute('d',STAR);p.setAttribute('class',cls);p.setAttribute('transform','translate('+cx+','+cy+') scale('+k+') translate(0,-8)');return p;}
   [].forEach.call(svg.querySelectorAll('g.city'),function(g){
