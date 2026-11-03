@@ -126,5 +126,49 @@ window.LUGARES={
 "Croacia, Bosnia y Voivodina → Yugoslavia": {
 "k": "Cambio territorial",
 "t": "El 1 de diciembre de 1918 se proclamó el Reino de los serbios, croatas y eslovenos, bajo la dinastía serbia de los Karađorđević. Reunió a pueblos con distintas religiones, historias y alfabetos. Los croatas pedían una estructura federal, pero la Constitución de 1921 fue centralista. En 1929 el rey Alejandro lo renombró Yugoslavia. La tensión entre serbios y croatas fue persistente."
+},
+"Plan Schlieffen (1914)": {
+"k": "Acontecimiento",
+"t": "Diseñado por el general Schlieffen, preveía vencer a Francia en seis semanas pasando por Bélgica neutral, con un gran ala derecha que rodearía París, antes de volver contra Rusia. En agosto de 1914 los alemanes tomaron Lieja y Bruselas, pero la resistencia belga, las distancias y la falta de reservas debilitaron el avance. Fracasó en el Marne. La violación de Bélgica hizo entrar a Gran Bretaña en la guerra."
+},
+"Gorlice-Tarnów (1915)": {
+"k": "Acontecimiento",
+"t": "El 2 de mayo de 1915, tras un bombardeo de cuatro horas con unas 700.000 granadas, los alemanes de Mackensen y los austríacos atacaron entre Gorlice y Tarnów, en Galitzia. El frente ruso se hundió y en meses perdió Polonia, Lituania y parte de Bielorrusia. Los rusos perdieron más de un millón de soldados y tuvieron escasez de armamento. Fue la mayor victoria de los Imperios Centrales en el Este."
+},
+"Conquista de Serbia (1915)": {
+"k": "Acontecimiento",
+"t": "En octubre de 1915, con Bulgaria ya aliada de Alemania, ejércitos alemanes, austrohúngaros y búlgaros atacaron Serbia desde el norte y el este. Belgrado cayó el día 9. El ejército serbio, con el rey Pedro y miles de civiles, se retiró en pleno invierno por las montañas de Albania y Montenegro hasta la costa; murieron decenas de miles. Los aliados los evacuaron a Corfú, y Serbia quedó ocupada."
+},
+"Ofensiva Brusílov (1916)": {
+"k": "Acontecimiento",
+"t": "Entre junio y septiembre de 1916, el general ruso Brusílov atacó en Galitzia y Volinia con varios ejércitos a la vez, y rompió el frente austrohúngaro. Capturó unos 400.000 prisioneros y obligó a Alemania a trasladar tropas desde Verdún. Fue la ofensiva más exitosa de los aliados en la guerra, pero costó más de un millón de bajas rusas y agotó al ejército, y animó a Rumanía a entrar en la guerra."
+},
+"Derrota de Rumanía (1916)": {
+"k": "Acontecimiento",
+"t": "Rumanía entró en la guerra el 27 de agosto de 1916 y atacó Transilvania, con la esperanza de recibirla. Alemanes, austrohúngaros y búlgaros contraatacaron, y Bucarest cayó el 6 de diciembre. Los rumanos se retiraron a Moldavia, con ayuda rusa, y los Imperios Centrales ocuparon dos tercios del país, con sus campos de petróleo y trigo. Rumanía volvió a la guerra en noviembre de 1918, y recibió Transilvania en 1920."
+},
+"Mesopotamia (1917)": {
+"k": "Acontecimiento",
+"t": "En Mesopotamia, un ejército británico-indio, para proteger los pozos de petróleo del Golfo, fue sitiado y rendido en Kut en 1916. Reorganizado, el general Maude tomó Bagdad el 11 de marzo de 1917 y, en 1918, avanzó hacia Mosul. La región, antes otomana, pasó después a ser un mandato británico: el actual Irak. El petróleo fue una de las causas del interés británico."
+},
+"Palestina (1917)": {
+"k": "Acontecimiento",
+"t": "Los británicos del general Allenby tomaron Gaza y Beerseba en otoño de 1917 y entraron en Jerusalén el 9 de diciembre, cuando él entró a pie por respeto a la ciudad santa. Un mes antes, la Declaración Balfour había apoyado un «hogar nacional» judío en Palestina. A la vez, los británicos pactaban en secreto con los franceses el reparto de la región (acuerdo Sykes-Picot) y habían prometido el apoyo a la revuelta árabe."
+},
+"Ofensiva alemana de primavera": {
+"k": "Acontecimiento",
+"t": "Entre marzo y julio de 1918, con tropas liberadas del frente ruso tras Brest-Litovsk, Alemania lanzó cinco grandes ataques contra los aliados. El primero, la operación Michael (21 de marzo), avanzó 60 km cerca de Saint-Quentin. Era la última oportunidad antes de que llegaran los estadounidenses. Los alemanes llegaron de nuevo al Marne, pero sin reservas, no lograron la ruptura. Perdieron casi un millón de hombres."
+},
+"Cien Días aliados": {
+"k": "Acontecimiento",
+"t": "El 8 de agosto de 1918, la batalla de Amiens, con unos 500 carros y apoyo aéreo, rompió las líneas alemanas; Ludendorff lo llamó «el día negro del ejército alemán». Los aliados, con mando único de Foch, avanzaron durante cien días sin pausa, rompieron la línea Hindenburg a finales de septiembre y llegaron a la frontera belga. Alemania pidió el armisticio, firmado el 11 de noviembre."
+},
+"Damasco y Alepo (1918)": {
+"k": "Acontecimiento",
+"t": "En septiembre de 1918, Allenby venció a los otomanos en Megido, con ayuda de la caballería y de la revuelta árabe de Faisal y T. E. Lawrence. Damasco cayó el 1 de octubre y Alepo el 26. Los otomanos pidieron el armisticio el 30 de octubre, en Mudros. Faisal declaró en Damasco un reino árabe, pero Francia ocupó Siria en 1920, según lo pactado con Gran Bretaña."
+},
+"Macedonia (sept. 1918)": {
+"k": "Acontecimiento",
+"t": "El frente de Salónica, con franceses, británicos, serbios, griegos e italianos, estuvo inmóvil tres años. El 15 de septiembre de 1918, el ejército serbio y francés rompió el frente búlgaro en Dobro Pole. Bulgaria pidió el armisticio el 29 de septiembre, y fue el primer país de los Imperios Centrales en rendirse. Se abrió el camino a Serbia y Hungría, y aceleró el fin de la guerra."
 }
 };

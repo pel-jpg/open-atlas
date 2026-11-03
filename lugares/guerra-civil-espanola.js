@@ -138,5 +138,21 @@ window.LUGARES={
 "Figueras: últimas Cortes (feb. 1939)": {
 "k": "Acontecimiento",
 "t": "Tras la caída de Barcelona, el gobierno de la República se reunió en Figueras. El 1 de febrero, las Cortes se reunieron en un sótano del castillo de Sant Ferran, bajo bombardeos, con unos 60 diputados. Negrín presentó tres condiciones de paz: independencia de España, derecho del pueblo a elegir su régimen y ausencia de represalias. Después, el gobierno y el presidente Azaña pasaron a Francia."
+},
+"La Retirada (ene.-feb. 1939)": {
+"k": "Acontecimiento",
+"t": "Tras la caída de Barcelona, unos 450.000 republicanos, civiles y soldados, cruzaron los Pirineos hacia Francia en pocas semanas, en pleno invierno. Fueron internados en campos de arena en las playas, como Argelès-sur-Mer, Saint-Cyprien y Barcarès, con malas condiciones. Fue el mayor éxodo de la historia de España. Muchos acabaron en México, y otros lucharon contra los nazis."
+},
+"Exilio por mar desde Alicante": {
+"k": "Acontecimiento",
+"t": "A finales de marzo de 1939, miles de republicanos se concentraron en el puerto de Alicante esperando barcos que no llegaron, tras el fin de la guerra. El 28 de marzo el carguero Stanbrook salió con unas 2.600 personas rumbo a Orán. Muchos fueron capturados por los franquistas y encerrados en el campo de Los Almendros y en el castillo de Santa Bárbara. Algunos se suicidaron."
+},
+"Campaña del Norte (1937)": {
+"k": "Acontecimiento",
+"t": "Entre marzo y octubre de 1937, Franco atacó la franja republicana del norte, aislada del resto, con ayuda de la Legión Cóndor. Cayeron Vizcaya (Bilbao, 19 de junio), Santander (26 de agosto) y Asturias (Gijón, 21 de octubre). El Norte tenía industria, carbón y hierro, y su pérdida fue un golpe para la República. Fue donde se bombardeó Guernica, el 26 de abril."
+},
+"El Ejército de África cruza el Estrecho": {
+"k": "Acontecimiento",
+"t": "Los militares sublevados, con Franco al frente, tenían el mejor ejército, formado por la Legión y los Regulares. Pero la flota republicana controlaba el Estrecho. Con aviones de transporte alemanes (Junkers Ju 52) e italianos, Franco hizo un puente aéreo desde Tetuán a Sevilla en julio de 1936, y en septiembre la flota pasó un convoy. Fue clave para que no fracasara el golpe."
 }
 };

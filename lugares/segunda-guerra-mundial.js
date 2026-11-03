@@ -198,5 +198,73 @@ window.LUGARES={
 "Gueto de Varsovia": {
 "k": "Yacimiento",
 "t": "El mayor gueto judío de la Europa ocupada. En 1943 sus habitantes se sublevaron contra su deportación a los campos de exterminio."
+},
+"Renania remilitarizada (1936)": {
+"k": "Acontecimiento",
+"t": "El 7 de marzo de 1936, Hitler envió unos 20.000 soldados a la orilla izquierda del Rin, zona desmilitarizada por el Tratado de Versalles y Locarno. Los generales tenían orden de retirarse si Francia reaccionaba, pero ni París ni Londres lo hicieron. El éxito reforzó a Hitler ante el ejército y la opinión alemana, y dejó a Francia sin su frontera de seguridad."
+},
+"Memel (1939)": {
+"k": "Acontecimiento",
+"t": "Memel (Klaipėda) era un puerto báltico separado de Alemania en 1919 y anexionado por Lituania en 1923. En marzo de 1939, con un ultimátum, Hitler obligó a Lituania a devolverlo. Fue su última anexión sin guerra, una semana después de ocupar Praga. El territorio quedó sin defensa porque Gran Bretaña y Francia no intervinieron."
+},
+"Albania (abril de 1939)": {
+"k": "Acontecimiento",
+"t": "El 7 de abril de 1939, Mussolini desembarcó en Durrës y otros puertos con unos 10.000 soldados, para no ser menos que Hitler. El rey Zog huyó y el rey de Italia, Víctor Manuel III, fue proclamado también rey de los albaneses. Albania, que ya era casi un protectorado italiano, sirvió de base para atacar Grecia en octubre de 1940."
+},
+"Pacto Mólotov-Ribbentrop: reparto de Polonia (23 ago. 1939)": {
+"k": "Acontecimiento",
+"t": "El 23 de agosto de 1939, en Moscú, los ministros Mólotov y Ribbentrop firmaron un pacto de no agresión, con Stalin presente. Un protocolo secreto repartía la influencia en Europa oriental: Polonia se dividiría a lo largo de la línea de los ríos Narew, Vístula y San, y la URSS recibiría Finlandia, Estonia y Letonia, y Besarabia. Hitler pudo así atacar sin temer una guerra en dos frentes."
+},
+"Invasión de Polonia (1 sep. 1939)": {
+"k": "Acontecimiento",
+"t": "El 1 de septiembre de 1939, a las 4:45, el acorazado Schleswig-Holstein bombardeó la guarnición polaca de Westerplatte, en Danzig, y 1,5 millones de soldados alemanes cruzaron la frontera. La Luftwaffe y los blindados aplicaron la «guerra relámpago». Gran Bretaña y Francia declararon la guerra el día 3, pero no atacaron. Varsovia resistió hasta el 28 de septiembre; los soviéticos entraron por el este el día 17."
+},
+"Dinamarca y Noruega (abril de 1940)": {
+"k": "Acontecimiento",
+"t": "El 9 de abril de 1940, Alemania ocupó Dinamarca en pocas horas y desembarcó en los principales puertos noruegos, desde Oslo hasta Narvik, para asegurarse el hierro sueco y las bases navales. Una fuerza aliada fracasó en Narvik. El rey Haakon VII y el gobierno marcharon a Londres. La derrota provocó la caída de Chamberlain y la llegada de Churchill al gobierno."
+},
+"Ofensiva en el Oeste (mayo-junio de 1940)": {
+"k": "Acontecimiento",
+"t": "El 10 de mayo de 1940 Alemania atacó los Países Bajos, Bélgica y Francia. Mientras los aliados avanzaban por Bélgica, los blindados alemanes cruzaron las Ardenas, atravesaron el Mosa en Sedán y llegaron al Canal de la Mancha el día 20, aislando a los ejércitos aliados del norte. Tras Dunkerque, París cayó el 14 de junio. En seis semanas, la potencia militar de Francia se derrumbó."
+},
+"Balcanes (abril de 1941)": {
+"k": "Acontecimiento",
+"t": "El 6 de abril de 1941, tras un golpe antialemán en Belgrado, Alemania invadió Yugoslavia y Grecia, con apoyo de Italia, Hungría y Bulgaria. Belgrado fue bombardeada, Yugoslavia capituló el día 17 y Grecia, pese a la ayuda británica, a finales de abril. Los paracaidistas alemanes tomaron Creta en mayo. La campaña retrasó Barbarroja varias semanas y dio inicio a una dura ocupación y a la resistencia partisana."
+},
+"Afrika Korps (1941)": {
+"k": "Acontecimiento",
+"t": "En febrero de 1941, Hitler envió a Libia, en ayuda de los italianos, un cuerpo blindado alemán dirigido por Erwin Rommel. Llegaron a Trípoli y, en pocas semanas, empujaron a los británicos hasta la frontera con Egipto, y sitiaron Tobruk. Rommel ganó fama por sus maniobras en el desierto. Pero sus problemas de abastecimiento por el Mediterráneo limitaron siempre sus avances."
+},
+"Operación Torch (nov. 1942)": {
+"k": "Acontecimiento",
+"t": "El 8 de noviembre de 1942, unos 100.000 soldados estadounidenses y británicos desembarcaron en Casablanca, Orán y Argel, bajo mando de Eisenhower. Eran colonias de la Francia de Vichy, cuyas tropas resistieron unos días antes de cambiar de bando. Los aliados atenazaron a las fuerzas del Eje en Túnez, que se rindieron en mayo de 1943, con unos 250.000 prisioneros. Alemania ocupó entonces el sur de Francia."
+},
+"Sicilia y avance en Italia": {
+"k": "Acontecimiento",
+"t": "El 10 de julio de 1943, la operación Husky desembarcó 160.000 soldados aliados en Sicilia, y la isla se conquistó en cinco semanas. La caída de Mussolini (25 de julio) llevó al armisticio de Italia en septiembre, cuando se desembarcó en la península. Los alemanes resistieron en la línea Gustav, y Montecassino, y no se tomó Roma hasta el 4 de junio de 1944. La lucha en Italia continuó hasta 1945."
+},
+"Hong Kong (dic. 1941)": {
+"k": "Acontecimiento",
+"t": "Japón atacó la colonia británica el 8 de diciembre de 1941, pocas horas después de Pearl Harbor, desde el territorio chino vecino. Los defensores, británicos, canadienses e indios, se retiraron a la isla y resistieron 18 días. La rendición fue el 25 de diciembre, el llamado «Black Christmas». Japón ocupó la ciudad hasta 1945, con hambre y represión."
+},
+"Caída de Singapur (feb. 1942)": {
+"k": "Acontecimiento",
+"t": "Singapur era la gran base británica de Asia, pero sus cañones miraban al mar. Los japoneses de Yamashita, tras avanzar en diez semanas por la península malaya, cruzaron el estrecho de Johor y, el 15 de febrero de 1942, 85.000 soldados aliados se rindieron: la mayor capitulación de la historia británica. Churchill la llamó «el peor desastre». Siguieron masacres de civiles chinos."
+},
+"Mar del Coral (mayo 1942)": {
+"k": "Acontecimiento",
+"t": "Entre el 4 y el 8 de mayo de 1942, portaaviones estadounidenses y japoneses se enfrentaron sin verse los barcos, solo con aviones. EE. UU. perdió el Lexington y Japón el Shōhō, pero la flota japonesa tuvo que abandonar su plan de invadir Port Moresby por mar. Fue la primera batalla naval aeronaval de la historia y el primer freno al avance japonés."
+},
+"Bombardeo de Darwin": {
+"k": "Acontecimiento",
+"t": "El 19 de febrero de 1942, 188 aviones japoneses, de los mismos portaaviones de Pearl Harbor, atacaron Darwin, en el norte de Australia. Hundieron una decena de barcos y murieron unas 240 personas. Fue el mayor ataque a Australia, y hubo más de 60 incursiones en total hasta 1943. Tuvo gran impacto y el gobierno australiano pidió que sus tropas volvieran del Mediterráneo."
+},
+"Matanza de Nankín (1937)": {
+"k": "Acontecimiento",
+"t": "El 13 de diciembre de 1937, el ejército japonés tomó Nankín, la capital china. En seis semanas mataron a decenas de miles de soldados desarmados y de civiles, y violaron a miles de mujeres. Las estimaciones chinas hablan de 300.000 muertos, y las de historiadores japoneses y occidentales, de entre 40.000 y 200.000. Un grupo de extranjeros creó una zona de refugio. Sigue siendo una cuestión sensible entre China y Japón."
+},
+"Ataque soviético (ago. 1945)": {
+"k": "Acontecimiento",
+"t": "El 8 de agosto de 1945, cumpliendo lo acordado en Yalta, la URSS declaró la guerra a Japón y, el 9, atacó Manchuria con 1,5 millones de soldados. En pocos días destruyó al ejército japonés de Kwantung, ocupó Manchuria, el norte de Corea, Sajalín y las Kuriles. Junto con las bombas atómicas, fue decisiva para la rendición. Las islas Kuriles siguen en disputa."
 }
 };

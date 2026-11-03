@@ -170,5 +170,13 @@ window.LUGARES={
 "Paz de Westfalia (1648)": {
 "k": "Acontecimiento",
 "t": "Los tratados de Münster y Osnabrück pusieron fin a la guerra de los Treinta Años, que había causado la muerte de entre un cuarto y un tercio de la población en algunas zonas de Alemania. Francia recibió Alsacia, Suecia obtuvo Pomerania, los calvinistas fueron reconocidos y los príncipes alemanes ganaron autonomía. España reconoció la independencia de las Provincias Unidas. Se considera el inicio del sistema europeo de Estados soberanos."
+},
+"Armada Invencible (1588)": {
+"k": "Acontecimiento",
+"t": "Felipe II envió desde Lisboa, en mayo de 1588, unos 130 barcos y 30.000 hombres, al mando del duque de Medina Sidonia, para unirse al ejército de Parma en Flandes e invadir Inglaterra. Los ingleses de Drake y Howard los hostigaron en el Canal y los dispersaron con brulotes en Gravelinas. Con vientos contrarios, la flota volvió rodeando Escocia e Irlanda, y perdió unos 60 barcos. Isabel I salió reforzada."
+},
+"Camino español (1567)": {
+"k": "Acontecimiento",
+"t": "Para sofocar la revuelta de los Países Bajos, Felipe II envió al duque de Alba con unos 10.000 soldados veteranos de los tercios, desde Italia. Desde Milán subieron por Saboya, el Franco Condado y Lorena, sin pasar por Francia ni por el mar, controlado por los ingleses. Este camino militar fue la ruta de refuerzos durante décadas. Alba creó el Tribunal de los Tumultos («de la Sangre»), que causó miles de procesos."
 }
 };
