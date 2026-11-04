@@ -119,6 +119,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:10.1px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -198,13 +200,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -269,14 +281,18 @@
 <label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Wollaston" checked> Wollaston</label>
 </div>
         <div class="advanced-group">
-          <h4>Cordilleras (6)</h4>
+          <h4>Cordilleras (5)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Apalaches" checked> Apalaches</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta Mexicana" checked> Meseta Mexicana</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Montañas Rocosas" checked> Montañas Rocosas</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sierra Madre Occidental" checked> Sierra Madre Occidental</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sierra Madre Oriental" checked> Sierra Madre Oriental</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sierra Nevada" checked> Sierra Nevada</label>
 </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (2)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="GRAN LLANURA NORTEAMERICANA" checked> Gran Llanura Norteamericana</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta Mexicana" checked> Meseta Mexicana</label>
+        </div>
         <div class="advanced-group">
           <h4>Picos (4)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="peak" data-item-name="Denali" checked> Denali</label>
@@ -526,7 +542,7 @@
 
 <text class="range-label2" data-cat="mountain" data-name="Sierra Nevada" style="font-size:6.6px" x="476" y="500" dy="0.35em" text-anchor="middle" transform="rotate(81 476 500)">SIERRA NEVADA</text>
 
-<text class="range-label2" data-cat="mountain" data-name="Meseta Mexicana" x="600.2" y="687.1" style="font-size:6.6px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA MEXICANA</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta Mexicana" x="600.2" y="687.1" style="font-size:6.6px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA MEXICANA</text>
 
 <text class="region-label biome-label" data-cat="region" data-name="DESIERTO DE SONORA" x="506.0" y="554.0" style="font-size:7px;">DESIERTO DE SONORA</text>
 <text class="region-label biome-label" data-cat="region" data-name="DESIERTO DE CHIHUAHUA" x="591.0" y="603.0" style="font-size:7px;">DESIERTO DE CHIHUAHUA</text>
@@ -534,7 +550,7 @@
 
 <text class="region-label biome-label" data-cat="region" data-name="SELVA CENTROAMERICANA" x="741.0" y="779.0" style="font-size:6.6px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">SELVA CENTROAMERICANA</text>
 <text class="region-label biome-label" data-cat="region" data-name="CHOCÓ" x="920.0" y="888.0" style="font-size:6.6px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">CHOCÓ</text>
-<text class="region-label" data-cat="region" data-name="GRAN LLANURA NORTEAMERICANA" x="712" y="404" style="font-size:9.4px"><tspan x="684" dy="0">GRAN LLANURA</tspan><tspan x="684" dy="15">NORTEAMERICANA</tspan></text>
+<text class="region-label" data-cat="plain" data-name="GRAN LLANURA NORTEAMERICANA" x="712" y="404" style="font-size:9.4px"><tspan x="684" dy="0">GRAN LLANURA</tspan><tspan x="684" dy="15">NORTEAMERICANA</tspan></text>
 
 
 
@@ -784,10 +800,10 @@
 <script>
 (function() {
   const ALL = {
-    river: ["Misisipi", "Misuri", "Bravo/Grande", "Colorado", "Mackenzie", "San Lorenzo", "Yukón", "Columbia", "Snake", "Fraser", "Arkansas", "Ohio", "Tennessee", "Red (EE. UU.)", "Platte", "Saskatchewan", "Nelson", "Churchill", "Athabasca", "Paz", "Liard", "Back", "Hudson", "Balsas", "Usumacinta", "Kuskokwim"],    lake: ["Superior", "Hurón", "Míchigan", "Erie", "Ontario", "Gran Lago del Oso", "Gran Lago del Esclavo", "Nicaragua", "Winnipeg", "Winnipegosis", "Manitoba", "Athabasca (lago)", "Reindeer", "Nipigon", "Champlain", "Gran Lago Salado", "Okeechobee", "Tahoe", "Mistassini", "Manicouagan", "Dubawnt", "Nettilling", "Iliamna", "Managua", "Chapala", "Wollaston", "Lago de los Bosques"],    mountain: ["Montañas Rocosas", "Sierra Madre Occidental", "Sierra Madre Oriental", "Apalaches", "Sierra Nevada", "Meseta Mexicana"],    peak: ["Denali", "Pico de Orizaba", "Popocatépetl", "Monte Logan"],    feature: ["Cabo Mendocino", "Cabo Cañaveral", "Cabo Gracias a Dios", "Cabo San Lucas", "Cabo Cod", "Golfo de México", "Golfo de Alaska", "Golfo de California", "Golfo de Panamá", "Golfo de Honduras", "Golfo de Darién", "Golfo de Fonseca", "Golfo Dulce", "Bahía de Hudson", "Bahía de Campeche", "Bahía de Chesapeake", "Bahía de San Francisco", "Canal de Panamá", "Paso de los Vientos", "Canal de Yucatán", "Estrecho de Florida", "Canal de la Reina Carlota", "Estrecho de Bering"],    island: ["Cuba", "La Española", "Puerto Rico", "Jamaica", "Trinidad", "Islas Bahamas", "Islas de Barlovento", "Islas de Sotavento", "Isla de Vancouver", "Isla de Baffin", "Groenlandia", "Terranova"],    peninsula: ["Península de Alaska", "Península de Baja California", "Península de Yucatán", "Península de Florida", "Península de Labrador", "Península de Nicoya", "Península de Azuero"]
+    river: ["Misisipi", "Misuri", "Bravo/Grande", "Colorado", "Mackenzie", "San Lorenzo", "Yukón", "Columbia", "Snake", "Fraser", "Arkansas", "Ohio", "Tennessee", "Red (EE. UU.)", "Platte", "Saskatchewan", "Nelson", "Churchill", "Athabasca", "Paz", "Liard", "Back", "Hudson", "Balsas", "Usumacinta", "Kuskokwim"],    lake: ["Superior", "Hurón", "Míchigan", "Erie", "Ontario", "Gran Lago del Oso", "Gran Lago del Esclavo", "Nicaragua", "Winnipeg", "Winnipegosis", "Manitoba", "Athabasca (lago)", "Reindeer", "Nipigon", "Champlain", "Gran Lago Salado", "Okeechobee", "Tahoe", "Mistassini", "Manicouagan", "Dubawnt", "Nettilling", "Iliamna", "Managua", "Chapala", "Wollaston", "Lago de los Bosques"],    mountain: ["Montañas Rocosas", "Sierra Madre Occidental", "Sierra Madre Oriental", "Apalaches", "Sierra Nevada"],    peak: ["Denali", "Pico de Orizaba", "Popocatépetl", "Monte Logan"], plain: ["Meseta Mexicana", "GRAN LLANURA NORTEAMERICANA"],    feature: ["Cabo Mendocino", "Cabo Cañaveral", "Cabo Gracias a Dios", "Cabo San Lucas", "Cabo Cod", "Golfo de México", "Golfo de Alaska", "Golfo de California", "Golfo de Panamá", "Golfo de Honduras", "Golfo de Darién", "Golfo de Fonseca", "Golfo Dulce", "Bahía de Hudson", "Bahía de Campeche", "Bahía de Chesapeake", "Bahía de San Francisco", "Canal de Panamá", "Paso de los Vientos", "Canal de Yucatán", "Estrecho de Florida", "Canal de la Reina Carlota", "Estrecho de Bering"],    island: ["Cuba", "La Española", "Puerto Rico", "Jamaica", "Trinidad", "Islas Bahamas", "Islas de Barlovento", "Islas de Sotavento", "Isla de Vancouver", "Isla de Baffin", "Groenlandia", "Terranova"],    peninsula: ["Península de Alaska", "Península de Baja California", "Península de Yucatán", "Península de Florida", "Península de Labrador", "Península de Nicoya", "Península de Azuero"]
   };
   const DEFAULT = {
-    river: ["Misisipi", "Misuri", "Bravo/Grande", "Colorado", "Mackenzie", "San Lorenzo", "Yukón", "Columbia", "Snake", "Fraser", "Arkansas", "Ohio", "Tennessee", "Red (EE. UU.)", "Platte", "Saskatchewan", "Nelson", "Churchill", "Athabasca", "Paz", "Liard", "Back", "Hudson", "Balsas", "Usumacinta", "Kuskokwim"],    lake: ["Superior", "Hurón", "Míchigan", "Erie", "Ontario", "Gran Lago del Oso", "Gran Lago del Esclavo", "Nicaragua", "Winnipeg", "Winnipegosis", "Manitoba", "Athabasca (lago)", "Reindeer", "Nipigon", "Champlain", "Gran Lago Salado", "Okeechobee", "Tahoe", "Mistassini", "Manicouagan", "Dubawnt", "Nettilling", "Iliamna", "Managua", "Chapala", "Wollaston", "Lago de los Bosques"],    mountain: ["Montañas Rocosas", "Sierra Madre Occidental", "Sierra Madre Oriental", "Apalaches", "Sierra Nevada", "Meseta Mexicana"],    peak: ["Denali", "Pico de Orizaba", "Popocatépetl", "Monte Logan"],    feature: ["Cabo Mendocino", "Cabo Cañaveral", "Cabo Gracias a Dios", "Cabo San Lucas", "Cabo Cod", "Golfo de México", "Golfo de Alaska", "Golfo de California", "Golfo de Panamá", "Golfo de Honduras", "Golfo de Darién", "Golfo de Fonseca", "Golfo Dulce", "Bahía de Hudson", "Bahía de Campeche", "Bahía de Chesapeake", "Bahía de San Francisco", "Canal de Panamá", "Paso de los Vientos", "Canal de Yucatán", "Estrecho de Florida", "Canal de la Reina Carlota", "Estrecho de Bering"],    island: ["Cuba", "La Española", "Puerto Rico", "Jamaica", "Trinidad", "Islas Bahamas", "Islas de Barlovento", "Islas de Sotavento", "Isla de Vancouver", "Isla de Baffin", "Groenlandia", "Terranova"],    peninsula: ["Península de Alaska", "Península de Baja California", "Península de Yucatán", "Península de Florida", "Península de Labrador", "Península de Nicoya", "Península de Azuero"]
+    river: ["Misisipi", "Misuri", "Bravo/Grande", "Colorado", "Mackenzie", "San Lorenzo", "Yukón", "Columbia", "Snake", "Fraser", "Arkansas", "Ohio", "Tennessee", "Red (EE. UU.)", "Platte", "Saskatchewan", "Nelson", "Churchill", "Athabasca", "Paz", "Liard", "Back", "Hudson", "Balsas", "Usumacinta", "Kuskokwim"],    lake: ["Superior", "Hurón", "Míchigan", "Erie", "Ontario", "Gran Lago del Oso", "Gran Lago del Esclavo", "Nicaragua", "Winnipeg", "Winnipegosis", "Manitoba", "Athabasca (lago)", "Reindeer", "Nipigon", "Champlain", "Gran Lago Salado", "Okeechobee", "Tahoe", "Mistassini", "Manicouagan", "Dubawnt", "Nettilling", "Iliamna", "Managua", "Chapala", "Wollaston", "Lago de los Bosques"],    mountain: ["Montañas Rocosas", "Sierra Madre Occidental", "Sierra Madre Oriental", "Apalaches", "Sierra Nevada"],    peak: ["Denali", "Pico de Orizaba", "Popocatépetl", "Monte Logan"], plain: ["Meseta Mexicana", "GRAN LLANURA NORTEAMERICANA"],    feature: ["Cabo Mendocino", "Cabo Cañaveral", "Cabo Gracias a Dios", "Cabo San Lucas", "Cabo Cod", "Golfo de México", "Golfo de Alaska", "Golfo de California", "Golfo de Panamá", "Golfo de Honduras", "Golfo de Darién", "Golfo de Fonseca", "Golfo Dulce", "Bahía de Hudson", "Bahía de Campeche", "Bahía de Chesapeake", "Bahía de San Francisco", "Canal de Panamá", "Paso de los Vientos", "Canal de Yucatán", "Estrecho de Florida", "Canal de la Reina Carlota", "Estrecho de Bering"],    island: ["Cuba", "La Española", "Puerto Rico", "Jamaica", "Trinidad", "Islas Bahamas", "Islas de Barlovento", "Islas de Sotavento", "Isla de Vancouver", "Isla de Baffin", "Groenlandia", "Terranova"],    peninsula: ["Península de Alaska", "Península de Baja California", "Península de Yucatán", "Península de Florida", "Península de Labrador", "Península de Nicoya", "Península de Azuero"]
   };
 
   function setByName(names, visible) {
@@ -817,7 +833,7 @@
   });
 
   function setAllLabels(visible) {
-    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -828,7 +844,7 @@
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    const cats = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const cats = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     if (name === 'mudo') {
       cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
       setCategory_seaRegionHill(true);

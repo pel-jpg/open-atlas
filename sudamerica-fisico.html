@@ -119,6 +119,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:9.4px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -198,13 +200,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -245,12 +257,16 @@
 <label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Titicaca" checked> Titicaca</label>
 </div>
         <div class="advanced-group">
-          <h4>Cordilleras (4)</h4>
-          <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Altiplano" checked> Altiplano</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Andes" checked> Andes</label>
+          <h4>Cordilleras (3)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Andes" checked> Andes</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Macizo Brasileño" checked> Macizo Brasileño</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Macizo de las Guayanas" checked> Macizo de las Guayanas</label>
 </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (2)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Altiplano" checked> Altiplano</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="PAMPA" checked> Pampa</label>
+        </div>
         <div class="advanced-group">
           <h4>Picos (4)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="peak" data-item-name="Aconcagua" checked> Aconcagua</label>
@@ -498,7 +514,7 @@
 <text class="range-label2" data-cat="mountain" data-name="Macizo de las Guayanas" style="font-size:6.1px" x="1123.1" y="952.4" dy="0.35em" text-anchor="middle" transform="rotate(-13.6 1123.1 952.4)">MACIZO DE LAS GUAYANAS</text>
 <text class="range-label2" data-cat="mountain" data-name="Macizo Brasileño" style="font-size:7.6px" x="1244.5" y="1199.2" dy="0.35em" text-anchor="middle" transform="rotate(7.5 1244.5 1199.2)">MACIZO BRASILEÑO</text>
 
-<text class="range-label2" data-cat="mountain" data-name="Altiplano" x="1002.1" y="1202.9" style="font-size:6.1px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">ALTIPLANO</text>
+<text class="range-label2" data-cat="plain" data-name="Altiplano" x="1002.1" y="1202.9" style="font-size:6.1px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">ALTIPLANO</text>
 
 <text class="region-label biome-label" data-cat="region" data-name="DESIERTO DE ATACAMA" x="988.0" y="1275.0" style="font-size:6.5px;">DESIERTO DE ATACAMA</text>
 
@@ -509,7 +525,7 @@
 <text class="region-label biome-label" data-cat="region" data-name="CHOCÓ" x="920.0" y="888.0" style="font-size:6.1px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">CHOCÓ</text>
 
 <text class="region-label" data-cat="region" data-name="AMAZONÍA" x="1074.4" y="1054.9" style="font-size:10.8px">AMAZONÍA</text>
-<text class="region-label" data-cat="region" data-name="PAMPA" x="1048.3" y="1427.9" style="font-size:8.6px">PAMPA</text>
+<text class="region-label" data-cat="plain" data-name="PAMPA" x="1048.3" y="1427.9" style="font-size:8.6px">PAMPA</text>
 <text class="region-label" data-cat="region" data-name="PATAGONIA" x="958" y="1557.9" style="font-size:9.4px">PATAGONIA</text>
 
 
@@ -758,10 +774,10 @@
 <script>
 (function() {
   const ALL = {
-    river: ["Orinoco", "Amazonas", "Madeira", "Negro", "Paraná", "Paraguay", "Uruguay", "San Francisco", "Magdalena", "Ucayali", "Marañón", "Xingu", "Tapajós", "Araguaia", "Tocantins", "Mamoré", "Caquetá", "Pilcomayo", "Salado", "Bío-Bío", "Santa Cruz"],    lake: ["Titicaca", "Maracaibo", "Argentino", "General Carrera", "Llanquihue", "Mar Chiquita", "Laguna Merín", "Sobradinho"],    mountain: ["Andes", "Macizo de las Guayanas", "Macizo Brasileño", "Altiplano"],    peak: ["Aconcagua", "Chimborazo", "Huascarán", "Ojos del Salado"],    feature: ["Cabo de Hornos", "Cabo Frío", "Cabo San Roque", "Punta Gallinas", "Punta Arenas (Patagonia)", "Cabo Deseado", "Punta Lavapié", "Punta Galera", "Punta Parinas", "Golfo de Guayaquil", "Golfo de San Jorge", "Golfo de Venezuela", "Golfo de Darién", "Golfo de Urabá", "Golfo de Paria", "Golfo de Penas", "Golfo Corcovado", "Golfo de Arauco", "Bahía de Todos os Santos", "Bahía de Paracas", "Bahía de Valparaíso", "Bahía de Sechura", "Estrecho de Magallanes", "Estrecho de Le Maire", "Canal Beagle", "Canal de Chacao", "Río de la Plata"],    island: ["Trinidad", "Tierra del Fuego", "Islas de Barlovento", "Islas de Sotavento", "Archipiélago de Chiloé", "Archipiélago de los Chonos", "Isla Marajó", "Islas Malvinas", "Islas Georgias del Sur"],    peninsula: ["Península Valdés", "Península de la Guajira", "Península de Paraguaná", "Península Brunswick", "Península de Taitao"]
+    river: ["Orinoco", "Amazonas", "Madeira", "Negro", "Paraná", "Paraguay", "Uruguay", "San Francisco", "Magdalena", "Ucayali", "Marañón", "Xingu", "Tapajós", "Araguaia", "Tocantins", "Mamoré", "Caquetá", "Pilcomayo", "Salado", "Bío-Bío", "Santa Cruz"],    lake: ["Titicaca", "Maracaibo", "Argentino", "General Carrera", "Llanquihue", "Mar Chiquita", "Laguna Merín", "Sobradinho"],    mountain: ["Andes", "Macizo de las Guayanas", "Macizo Brasileño"],    peak: ["Aconcagua", "Chimborazo", "Huascarán", "Ojos del Salado"], plain: ["Altiplano", "PAMPA"],    feature: ["Cabo de Hornos", "Cabo Frío", "Cabo San Roque", "Punta Gallinas", "Punta Arenas (Patagonia)", "Cabo Deseado", "Punta Lavapié", "Punta Galera", "Punta Parinas", "Golfo de Guayaquil", "Golfo de San Jorge", "Golfo de Venezuela", "Golfo de Darién", "Golfo de Urabá", "Golfo de Paria", "Golfo de Penas", "Golfo Corcovado", "Golfo de Arauco", "Bahía de Todos os Santos", "Bahía de Paracas", "Bahía de Valparaíso", "Bahía de Sechura", "Estrecho de Magallanes", "Estrecho de Le Maire", "Canal Beagle", "Canal de Chacao", "Río de la Plata"],    island: ["Trinidad", "Tierra del Fuego", "Islas de Barlovento", "Islas de Sotavento", "Archipiélago de Chiloé", "Archipiélago de los Chonos", "Isla Marajó", "Islas Malvinas", "Islas Georgias del Sur"],    peninsula: ["Península Valdés", "Península de la Guajira", "Península de Paraguaná", "Península Brunswick", "Península de Taitao"]
   };
   const DEFAULT = {
-    river: ["Orinoco", "Amazonas", "Madeira", "Negro", "Paraná", "Paraguay", "Uruguay", "San Francisco", "Magdalena", "Ucayali", "Marañón", "Xingu", "Tapajós", "Araguaia", "Tocantins", "Mamoré", "Caquetá", "Pilcomayo", "Salado", "Bío-Bío", "Santa Cruz"],    lake: ["Titicaca", "Maracaibo", "Argentino", "General Carrera", "Llanquihue", "Mar Chiquita", "Laguna Merín", "Sobradinho"],    mountain: ["Andes", "Macizo de las Guayanas", "Macizo Brasileño", "Altiplano"],    peak: ["Aconcagua", "Chimborazo", "Huascarán", "Ojos del Salado"],    feature: ["Cabo de Hornos", "Cabo Frío", "Cabo San Roque", "Punta Gallinas", "Punta Arenas (Patagonia)", "Cabo Deseado", "Punta Lavapié", "Punta Galera", "Punta Parinas", "Golfo de Guayaquil", "Golfo de San Jorge", "Golfo de Venezuela", "Golfo de Darién", "Golfo de Urabá", "Golfo de Paria", "Golfo de Penas", "Golfo Corcovado", "Golfo de Arauco", "Bahía de Todos os Santos", "Bahía de Paracas", "Bahía de Valparaíso", "Bahía de Sechura", "Estrecho de Magallanes", "Estrecho de Le Maire", "Canal Beagle", "Canal de Chacao", "Río de la Plata"],    island: ["Trinidad", "Tierra del Fuego", "Islas de Barlovento", "Islas de Sotavento", "Archipiélago de Chiloé", "Archipiélago de los Chonos", "Isla Marajó"],    peninsula: ["Península Valdés", "Península de la Guajira", "Península de Paraguaná", "Península Brunswick", "Península de Taitao"]
+    river: ["Orinoco", "Amazonas", "Madeira", "Negro", "Paraná", "Paraguay", "Uruguay", "San Francisco", "Magdalena", "Ucayali", "Marañón", "Xingu", "Tapajós", "Araguaia", "Tocantins", "Mamoré", "Caquetá", "Pilcomayo", "Salado", "Bío-Bío", "Santa Cruz"],    lake: ["Titicaca", "Maracaibo", "Argentino", "General Carrera", "Llanquihue", "Mar Chiquita", "Laguna Merín", "Sobradinho"],    mountain: ["Andes", "Macizo de las Guayanas", "Macizo Brasileño"],    peak: ["Aconcagua", "Chimborazo", "Huascarán", "Ojos del Salado"], plain: ["Altiplano", "PAMPA"],    feature: ["Cabo de Hornos", "Cabo Frío", "Cabo San Roque", "Punta Gallinas", "Punta Arenas (Patagonia)", "Cabo Deseado", "Punta Lavapié", "Punta Galera", "Punta Parinas", "Golfo de Guayaquil", "Golfo de San Jorge", "Golfo de Venezuela", "Golfo de Darién", "Golfo de Urabá", "Golfo de Paria", "Golfo de Penas", "Golfo Corcovado", "Golfo de Arauco", "Bahía de Todos os Santos", "Bahía de Paracas", "Bahía de Valparaíso", "Bahía de Sechura", "Estrecho de Magallanes", "Estrecho de Le Maire", "Canal Beagle", "Canal de Chacao", "Río de la Plata"],    island: ["Trinidad", "Tierra del Fuego", "Islas de Barlovento", "Islas de Sotavento", "Archipiélago de Chiloé", "Archipiélago de los Chonos", "Isla Marajó"],    peninsula: ["Península Valdés", "Península de la Guajira", "Península de Paraguaná", "Península Brunswick", "Península de Taitao"]
   };
 
   function setByName(names, visible) {
@@ -791,7 +807,7 @@
   });
 
   function setAllLabels(visible) {
-    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -802,7 +818,7 @@
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    const cats = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const cats = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     if (name === 'mudo') {
       cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
       setCategory_seaRegionHill(true);

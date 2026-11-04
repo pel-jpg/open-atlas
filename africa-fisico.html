@@ -119,6 +119,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -198,13 +200,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -286,18 +298,21 @@
 <label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Volta (lago)" checked> Volta (lago)</label>
 </div>
         <div class="advanced-group">
-          <h4>Cordilleras (10)</h4>
+          <h4>Cordilleras (8)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Ahaggar" checked> Ahaggar</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Aïr" checked> Aïr</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Atlas" checked> Atlas</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Drakensberg" checked> Drakensberg</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Fouta Djallon" checked> Fouta Djallon</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta de Katanga" checked> Meseta de Katanga</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Tibesti" checked> Tibesti</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Tierras Altas de Camerún" checked> Tierras Altas de Camerún</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Tierras Altas Etíopes" checked> Tierras Altas Etíopes</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta de Darfur" checked> Meseta de Darfur</label>
 </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (2)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta de Darfur" checked> Meseta de Darfur</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta de Katanga" checked> Meseta de Katanga</label>
+        </div>
         <div class="advanced-group">
           <h4>Picos (9)</h4>
 <label class="item-row"><input type="checkbox" data-item-cat="peak" data-item-name="Monte Camerún" checked> Camerún</label>
@@ -494,8 +509,8 @@
 <text class="range-label2" data-cat="mountain" data-name="Tibesti" style="font-size:9.6px"><textPath href="#spineA5" xlink:href="#spineA5" startOffset="50%" text-anchor="middle">TIBESTI</textPath></text>
 <text class="range-label2" data-cat="mountain" data-name="Aïr" style="font-size:13.3px"><textPath href="#spineA6" xlink:href="#spineA6" startOffset="50%" text-anchor="middle">AÏR</textPath></text>
 <text class="range-label2" data-cat="mountain" data-name="Fouta Djallon" x="229.9" y="577.6" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">FOUTA DJALLON</text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta de Katanga" x="942.1" y="1011.2" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE KATANGA</text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta de Darfur" x="895.2" y="556.6" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE DARFUR</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta de Katanga" x="942.1" y="1011.2" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE KATANGA</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta de Darfur" x="895.2" y="556.6" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE DARFUR</text>
 
 <text class="region-label biome-label" data-cat="region" data-name="SELVA DE GUINEA" x="305.0" y="688.0" style="font-size:8.5px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">SELVA DE GUINEA</text>
 <text class="region-label biome-label" data-cat="region" data-name="SELVA DE MADAGASCAR" x="1309.0" y="1205.0" style="font-size:8.5px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">SELVA DE MADAGASCAR</text>
@@ -668,10 +683,10 @@
 <script>
 (function() {
   const ALL = {
-    river: ["Nilo", "Congo", "Níger", "Zambeze", "Naranja", "Limpopo", "Senegal", "Volta", "Chari", "Ubangui", "Juba", "Nilo Azul", "Rovuma", "Kasai", "Cunene", "Cuango", "Nilo Blanco", "Atbara", "Benue", "Kafue", "Okavango", "Lualaba", "Uele", "Omo", "Awash", "Tekeze", "Ogooué", "Cuanza", "Rufiji", "Gambia", "Sanaga", "Mangoky", "Vaal", "Luangwa", "Sassandra", "Logone", "Shire", "Kagera", "Cuando", "Aruwimi", "Betsiboka", "Lomami"],    lake: ["Victoria", "Tanganica", "Malaui", "Chad", "Turkana", "Alberto", "Eduardo", "Kivu", "Bangweulu", "Mweru", "Nasser", "Kariba", "Cahora Bassa", "Tana", "Kioga", "Rukwa", "Natron", "Abaya", "Mai-Ndombe", "Upemba", "Chew Bahir", "Débo", "Kainji", "Assal", "Tumba", "Manyara", "Abbe", "Volta (lago)"],    mountain: ["Atlas", "Tierras Altas Etíopes", "Drakensberg", "Tierras Altas de Camerún", "Ahaggar", "Tibesti", "Aïr", "Fouta Djallon", "Meseta de Katanga", "Meseta de Darfur"],    peak: ["Kilimanjaro", "Monte Kenia", "Pico Margherita", "Ras Dashen", "Monte Meru", "Toubkal", "Monte Camerún", "Emi Koussi", "Thabana Ntlenyana"],    feature: ["Cabo de Buena Esperanza", "Cabo Verde", "Cabo Guardafui", "Cabo Blanco", "Ras Hafun", "Cabo de las Agujas", "Golfo de Guinea", "Golfo de Adén", "Golfo de Sidra", "Golfo de Tadjoura", "Bahía de Walvis", "Bahía de Delagoa", "Estrecho de Gibraltar", "Bab-el-Mandeb", "Canal de Mozambique", "Golfo de Gabés", "Cabo Bon", "Delta del Nilo", "Canal de Suez"],    island: ["Madagascar", "Zanzíbar", "Santo Tomé y Príncipe", "Islas Comoras"],    peninsula: ["Península del Sinaí", "Cuerno de África"]
+    river: ["Nilo", "Congo", "Níger", "Zambeze", "Naranja", "Limpopo", "Senegal", "Volta", "Chari", "Ubangui", "Juba", "Nilo Azul", "Rovuma", "Kasai", "Cunene", "Cuango", "Nilo Blanco", "Atbara", "Benue", "Kafue", "Okavango", "Lualaba", "Uele", "Omo", "Awash", "Tekeze", "Ogooué", "Cuanza", "Rufiji", "Gambia", "Sanaga", "Mangoky", "Vaal", "Luangwa", "Sassandra", "Logone", "Shire", "Kagera", "Cuando", "Aruwimi", "Betsiboka", "Lomami"],    lake: ["Victoria", "Tanganica", "Malaui", "Chad", "Turkana", "Alberto", "Eduardo", "Kivu", "Bangweulu", "Mweru", "Nasser", "Kariba", "Cahora Bassa", "Tana", "Kioga", "Rukwa", "Natron", "Abaya", "Mai-Ndombe", "Upemba", "Chew Bahir", "Débo", "Kainji", "Assal", "Tumba", "Manyara", "Abbe", "Volta (lago)"],    mountain: ["Atlas", "Tierras Altas Etíopes", "Drakensberg", "Tierras Altas de Camerún", "Ahaggar", "Tibesti", "Aïr", "Fouta Djallon"],    peak: ["Kilimanjaro", "Monte Kenia", "Pico Margherita", "Ras Dashen", "Monte Meru", "Toubkal", "Monte Camerún", "Emi Koussi", "Thabana Ntlenyana"], plain: ["Meseta de Katanga", "Meseta de Darfur"],    feature: ["Cabo de Buena Esperanza", "Cabo Verde", "Cabo Guardafui", "Cabo Blanco", "Ras Hafun", "Cabo de las Agujas", "Golfo de Guinea", "Golfo de Adén", "Golfo de Sidra", "Golfo de Tadjoura", "Bahía de Walvis", "Bahía de Delagoa", "Estrecho de Gibraltar", "Bab-el-Mandeb", "Canal de Mozambique", "Golfo de Gabés", "Cabo Bon", "Delta del Nilo", "Canal de Suez"],    island: ["Madagascar", "Zanzíbar", "Santo Tomé y Príncipe", "Islas Comoras"],    peninsula: ["Península del Sinaí", "Cuerno de África"]
   };
   const DEFAULT = {
-    river: ["Nilo", "Congo", "Níger", "Zambeze", "Naranja", "Limpopo", "Senegal", "Volta", "Chari", "Ubangui", "Juba", "Nilo Azul", "Rovuma", "Kasai", "Cunene", "Cuango", "Nilo Blanco", "Atbara", "Benue", "Kafue", "Okavango", "Lualaba", "Uele", "Omo", "Awash", "Tekeze", "Ogooué", "Cuanza", "Rufiji", "Gambia", "Sanaga", "Mangoky", "Vaal", "Luangwa", "Sassandra", "Logone", "Shire", "Kagera", "Cuando", "Aruwimi", "Betsiboka", "Lomami"],    lake: ["Victoria", "Tanganica", "Malaui", "Chad", "Turkana", "Alberto", "Eduardo", "Kivu", "Bangweulu", "Mweru", "Nasser", "Kariba", "Cahora Bassa", "Tana", "Kioga", "Rukwa", "Natron", "Abaya", "Mai-Ndombe", "Upemba", "Chew Bahir", "Débo", "Kainji", "Assal", "Tumba", "Manyara", "Abbe", "Volta (lago)"],    mountain: ["Atlas", "Tierras Altas Etíopes", "Drakensberg", "Tierras Altas de Camerún", "Ahaggar", "Tibesti", "Aïr", "Fouta Djallon", "Meseta de Katanga", "Meseta de Darfur"],    peak: ["Kilimanjaro", "Monte Kenia", "Pico Margherita", "Ras Dashen", "Monte Meru", "Toubkal", "Monte Camerún", "Emi Koussi", "Thabana Ntlenyana"],    feature: ["Cabo de Buena Esperanza", "Cabo Verde", "Cabo Guardafui", "Cabo Blanco", "Ras Hafun", "Cabo de las Agujas", "Golfo de Guinea", "Golfo de Adén", "Golfo de Sidra", "Golfo de Tadjoura", "Bahía de Walvis", "Bahía de Delagoa", "Estrecho de Gibraltar", "Bab-el-Mandeb", "Canal de Mozambique", "Golfo de Gabés", "Cabo Bon", "Delta del Nilo", "Canal de Suez"],    island: ["Madagascar", "Zanzíbar", "Santo Tomé y Príncipe", "Islas Comoras"],    peninsula: ["Península del Sinaí", "Cuerno de África"]
+    river: ["Nilo", "Congo", "Níger", "Zambeze", "Naranja", "Limpopo", "Senegal", "Volta", "Chari", "Ubangui", "Juba", "Nilo Azul", "Rovuma", "Kasai", "Cunene", "Cuango", "Nilo Blanco", "Atbara", "Benue", "Kafue", "Okavango", "Lualaba", "Uele", "Omo", "Awash", "Tekeze", "Ogooué", "Cuanza", "Rufiji", "Gambia", "Sanaga", "Mangoky", "Vaal", "Luangwa", "Sassandra", "Logone", "Shire", "Kagera", "Cuando", "Aruwimi", "Betsiboka", "Lomami"],    lake: ["Victoria", "Tanganica", "Malaui", "Chad", "Turkana", "Alberto", "Eduardo", "Kivu", "Bangweulu", "Mweru", "Nasser", "Kariba", "Cahora Bassa", "Tana", "Kioga", "Rukwa", "Natron", "Abaya", "Mai-Ndombe", "Upemba", "Chew Bahir", "Débo", "Kainji", "Assal", "Tumba", "Manyara", "Abbe", "Volta (lago)"],    mountain: ["Atlas", "Tierras Altas Etíopes", "Drakensberg", "Tierras Altas de Camerún", "Ahaggar", "Tibesti", "Aïr", "Fouta Djallon"],    peak: ["Kilimanjaro", "Monte Kenia", "Pico Margherita", "Ras Dashen", "Monte Meru", "Toubkal", "Monte Camerún", "Emi Koussi", "Thabana Ntlenyana"], plain: ["Meseta de Katanga", "Meseta de Darfur"],    feature: ["Cabo de Buena Esperanza", "Cabo Verde", "Cabo Guardafui", "Cabo Blanco", "Ras Hafun", "Cabo de las Agujas", "Golfo de Guinea", "Golfo de Adén", "Golfo de Sidra", "Golfo de Tadjoura", "Bahía de Walvis", "Bahía de Delagoa", "Estrecho de Gibraltar", "Bab-el-Mandeb", "Canal de Mozambique", "Golfo de Gabés", "Cabo Bon", "Delta del Nilo", "Canal de Suez"],    island: ["Madagascar", "Zanzíbar", "Santo Tomé y Príncipe", "Islas Comoras"],    peninsula: ["Península del Sinaí", "Cuerno de África"]
   };
   function setByName(names, visible) {
     names.forEach(n => {
@@ -698,7 +713,7 @@
     });
   });
   function setAllLabels(visible) {
-    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -713,7 +728,7 @@
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    const cats = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const cats = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     if (name === 'mudo') {
       cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
       setCategory_seaRegionHill(true);

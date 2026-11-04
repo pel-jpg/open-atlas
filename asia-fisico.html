@@ -119,6 +119,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -198,13 +200,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -290,20 +302,26 @@
 <label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Zaisán" checked> Zaisán</label>
 </div>
         <div class="advanced-group">
-          <h4>Cordilleras (12)</h4>
+          <h4>Cordilleras (8)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Altái" checked> Altái</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Elburz" checked> Elburz</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Himalaya" checked> Himalaya</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Karakórum" checked> Karakórum</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta de Anatolia" checked> Meseta de Anatolia</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta de Decán" checked> Meseta de Decán</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta de Irán" checked> Meseta de Irán</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta de Mongolia" checked> Meseta de Mongolia</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta del Tíbet (borde)" checked> Meseta del Tíbet (borde)</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Montes Urales (oriente)" checked> Urales (oriente)</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Montes Zagros" checked> Zagros</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Tian Shan" checked> Tian Shan</label>
 </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (7)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="LLANURA INDOGANGÉTICA" checked> Llanura Indogangética</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="LLANURA SIBERIANA OCCIDENTAL" checked> Llanura Siberiana Occidental</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta de Anatolia" checked> Meseta de Anatolia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta de Decán" checked> Meseta de Decán</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta de Irán" checked> Meseta de Irán</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta de Mongolia" checked> Meseta de Mongolia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="MESETA DEL TÍBET" checked> Meseta del Tíbet</label>
+        </div>
         <div class="advanced-group">
           <h4>Picos (6)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="peak" data-item-name="Damavand" checked> Damavand</label>
@@ -512,10 +530,10 @@
 <text class="range-label2" data-cat="mountain" data-name="Elburz" style="font-size:11.1px"><textPath href="#spineA5" xlink:href="#spineA5" startOffset="50%" text-anchor="middle">ELBURZ</textPath></text>
 <text class="range-label2" data-cat="mountain" data-name="Meseta del Tíbet (borde)" style="font-size:10.2px"><textPath href="#spineA6" xlink:href="#spineA6" startOffset="50%" text-anchor="middle">MESETA DEL TÍBET (BORDE)</textPath></text>
 <text class="range-label2" data-cat="mountain" data-name="Montes Urales (oriente)" style="font-size:15px"><textPath href="#spineA7" xlink:href="#spineA7" startOffset="50%" text-anchor="middle">MONTES URALES (ORIENTE)</textPath></text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta de Anatolia" x="431.7" y="401.3" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE ANATOLIA</text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta de Irán" x="585" y="599.6" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE IRÁN</text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta de Decán" x="753.2" y="845.3" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE DECÁN</text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta de Mongolia" x="1051.5" y="518.5" style="font-size:8.7px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE MONGOLIA</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta de Anatolia" x="431.7" y="401.3" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE ANATOLIA</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta de Irán" x="585" y="599.6" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE IRÁN</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta de Decán" x="753.2" y="845.3" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE DECÁN</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta de Mongolia" x="1051.5" y="518.5" style="font-size:8.7px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA DE MONGOLIA</text>
 <text class="region-label biome-label" data-cat="region" data-name="DESIERTO DE TAKLAMAKÁN" x="861.0" y="576.0" style="font-size:9px;">DESIERTO DE TAKLAMAKÁN</text>
 <text class="region-label biome-label" data-cat="region" data-name="DESIERTO DE KARAKUM" x="666.0" y="519.0" style="font-size:9px;">DESIERTO DE KARAKUM</text>
 <text class="region-label biome-label" data-cat="region" data-name="DESIERTO DE THAR" x="723.0" y="699.0" style="font-size:9px;">DESIERTO DE THAR</text>
@@ -526,11 +544,11 @@
 <text class="region-label biome-label" data-cat="region" data-name="SELVA DE INDOCHINA" x="964.0" y="761.0" style="font-size:8.5px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">SELVA DE INDOCHINA</text>
 <text class="region-label biome-label" data-cat="region" data-name="SELVA DE FILIPINAS" x="1286.0" y="835.0" style="font-size:8.5px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">SELVA DE FILIPINAS</text>
 <text class="region-label biome-label" data-cat="region" data-name="SELVA DE SULAWESI" x="1316.0" y="1083.0" style="font-size:8.5px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2px;stroke-linejoin:round">SELVA DE SULAWESI</text>
-<text class="region-label" data-cat="region" data-name="MESETA DEL TÍBET" x="912.7" y="658.3" style="font-size:14px">MESETA DEL TÍBET</text>
-<text class="region-label" data-cat="region" data-name="LLANURA SIBERIANA OCCIDENTAL" x="865.3" y="273.5" style="font-size:12px">LLANURA SIBERIANA OCCIDENTAL</text>
+<text class="region-label" data-cat="plain" data-name="MESETA DEL TÍBET" x="912.7" y="658.3" style="font-size:14px">MESETA DEL TÍBET</text>
+<text class="region-label" data-cat="plain" data-name="LLANURA SIBERIANA OCCIDENTAL" x="865.3" y="273.5" style="font-size:12px">LLANURA SIBERIANA OCCIDENTAL</text>
 <text class="region-label" data-cat="region" data-name="DESIERTO DE GOBI" x="1060.9" y="536.5" style="font-size:13px">DESIERTO DE GOBI</text>
 <text class="region-label" data-cat="region" data-name="DESIERTO DE ARABIA" x="436.6" y="669.5" style="font-size:12px">DESIERTO DE ARABIA</text>
-<text class="region-label" data-cat="region" data-name="LLANURA INDOGANGÉTICA" x="817.6" y="730" style="font-size:11px">LLANURA INDOGANGÉTICA</text>
+<text class="region-label" data-cat="plain" data-name="LLANURA INDOGANGÉTICA" x="817.6" y="730" style="font-size:11px">LLANURA INDOGANGÉTICA</text>
 
 
 <text class="region-label" data-cat="region" data-name="SIBERIA ORIENTAL" x="1231.8" y="251.2" style="font-size:12px">SIBERIA ORIENTAL</text>
@@ -718,10 +736,10 @@
 <script>
 (function() {
   const ALL = {
-    river: ["Obi", "Yeniséi", "Lena", "Amur", "Huang He (Amarillo)", "Yangtsé", "Mekong", "Ganges", "Indo", "Brahmaputra", "Tigris", "Éufrates", "Amu Daria", "Sir Daria", "Irtish", "Angará", "Tunguska Inferior", "Viliui", "Aldán", "Kolimá", "Olenek", "Indiguirka", "Selenga", "Irauadi", "Salween", "Godavari", "Krishna", "Narmada", "Yamuna", "Sutlej", "Tarim", "Tobol", "Ural", "Songhua", "Mahanadi", "Helmand", "Kura", "Chao Phraya", "Zeya", "Río de las Perlas", "Chindwin", "Jordán"],    lake: ["Baikal", "Balkash", "Aral (histórico)", "Van", "Urmía", "Issyk-Kul", "Qinghai", "Zaisán", "Alakol", "Janka", "Uvs", "Khövsgöl", "Hulun", "Bosten", "Poyang", "Tai", "Dongting", "Hongze", "Toba", "Tonlé Sap", "Mar Muerto", "Mar de Galilea", "Sevan", "Namtso", "Manasarovar", "Sarygamysh", "Tuz", "Taimyr", "Chany", "Tharthar", "Aral (actual)", "Khyargas"],    mountain: ["Himalaya", "Karakórum", "Tian Shan", "Altái", "Montes Zagros", "Elburz", "Meseta del Tíbet (borde)", "Montes Urales (oriente)", "Meseta de Anatolia", "Meseta de Irán", "Meseta de Decán", "Meseta de Mongolia"],    peak: ["Everest", "K2", "Kanchenjunga", "Elbrús (Cáucaso)", "Damavand", "Pico Pobeda (Tian Shan)"],    feature: ["Cabo Comorín", "Cabo Sur (Corea)", "Golfo Pérsico", "Golfo de Adén", "Golfo de Omán", "Golfo de Bengala", "Golfo de Tailandia", "Golfo de Tonkín", "Golfo Arábigo (Kutch)", "Estrecho de Ormuz", "Bab-el-Mandeb", "Estrecho de Malaca", "Estrecho de Taiwán", "Estrecho de Corea", "Estrecho de Bering"],    island: ["Sri Lanka", "Taiwán", "Borneo", "Sumatra", "Java", "Honshu", "Hokkaido", "Filipinas (Luzón)", "Hainan", "Sajalín", "Islas Kuriles", "Célebes"],    peninsula: ["Península Arábiga", "Península de Anatolia", "Península de Corea", "Península de Indochina", "Península de Malaca", "Península del Sinaí", "Península de Kamchatka"]
+    river: ["Obi", "Yeniséi", "Lena", "Amur", "Huang He (Amarillo)", "Yangtsé", "Mekong", "Ganges", "Indo", "Brahmaputra", "Tigris", "Éufrates", "Amu Daria", "Sir Daria", "Irtish", "Angará", "Tunguska Inferior", "Viliui", "Aldán", "Kolimá", "Olenek", "Indiguirka", "Selenga", "Irauadi", "Salween", "Godavari", "Krishna", "Narmada", "Yamuna", "Sutlej", "Tarim", "Tobol", "Ural", "Songhua", "Mahanadi", "Helmand", "Kura", "Chao Phraya", "Zeya", "Río de las Perlas", "Chindwin", "Jordán"],    lake: ["Baikal", "Balkash", "Aral (histórico)", "Van", "Urmía", "Issyk-Kul", "Qinghai", "Zaisán", "Alakol", "Janka", "Uvs", "Khövsgöl", "Hulun", "Bosten", "Poyang", "Tai", "Dongting", "Hongze", "Toba", "Tonlé Sap", "Mar Muerto", "Mar de Galilea", "Sevan", "Namtso", "Manasarovar", "Sarygamysh", "Tuz", "Taimyr", "Chany", "Tharthar", "Aral (actual)", "Khyargas"],    mountain: ["Himalaya", "Karakórum", "Tian Shan", "Altái", "Montes Zagros", "Elburz", "Meseta del Tíbet (borde)", "Montes Urales (oriente)"],    peak: ["Everest", "K2", "Kanchenjunga", "Elbrús (Cáucaso)", "Damavand", "Pico Pobeda (Tian Shan)"], plain: ["Meseta de Anatolia", "Meseta de Irán", "Meseta de Decán", "Meseta de Mongolia", "MESETA DEL TÍBET", "LLANURA SIBERIANA OCCIDENTAL", "LLANURA INDOGANGÉTICA"],    feature: ["Cabo Comorín", "Cabo Sur (Corea)", "Golfo Pérsico", "Golfo de Adén", "Golfo de Omán", "Golfo de Bengala", "Golfo de Tailandia", "Golfo de Tonkín", "Golfo Arábigo (Kutch)", "Estrecho de Ormuz", "Bab-el-Mandeb", "Estrecho de Malaca", "Estrecho de Taiwán", "Estrecho de Corea", "Estrecho de Bering"],    island: ["Sri Lanka", "Taiwán", "Borneo", "Sumatra", "Java", "Honshu", "Hokkaido", "Filipinas (Luzón)", "Hainan", "Sajalín", "Islas Kuriles", "Célebes"],    peninsula: ["Península Arábiga", "Península de Anatolia", "Península de Corea", "Península de Indochina", "Península de Malaca", "Península del Sinaí", "Península de Kamchatka"]
   };
   const DEFAULT = {
-    river: ["Obi", "Yeniséi", "Lena", "Amur", "Huang He (Amarillo)", "Yangtsé", "Mekong", "Ganges", "Indo", "Brahmaputra", "Tigris", "Éufrates", "Amu Daria", "Sir Daria", "Irtish", "Angará", "Tunguska Inferior", "Viliui", "Aldán", "Kolimá", "Olenek", "Indiguirka", "Selenga", "Irauadi", "Salween", "Godavari", "Krishna", "Narmada", "Yamuna", "Sutlej", "Tarim", "Tobol", "Ural", "Songhua", "Mahanadi", "Helmand", "Kura", "Chao Phraya", "Zeya", "Río de las Perlas", "Chindwin", "Jordán"],    lake: ["Baikal", "Balkash", "Aral (histórico)", "Van", "Urmía", "Issyk-Kul", "Qinghai", "Zaisán", "Alakol", "Janka", "Uvs", "Khövsgöl", "Hulun", "Bosten", "Poyang", "Tai", "Dongting", "Hongze", "Toba", "Tonlé Sap", "Mar Muerto", "Mar de Galilea", "Sevan", "Namtso", "Manasarovar", "Sarygamysh", "Tuz", "Taimyr", "Chany", "Tharthar", "Aral (actual)", "Khyargas"],    mountain: ["Himalaya", "Karakórum", "Tian Shan", "Altái", "Montes Zagros", "Elburz", "Meseta del Tíbet (borde)", "Montes Urales (oriente)", "Meseta de Anatolia", "Meseta de Irán", "Meseta de Decán", "Meseta de Mongolia"],    peak: ["Everest", "K2", "Kanchenjunga", "Elbrús (Cáucaso)", "Damavand", "Pico Pobeda (Tian Shan)"],    feature: ["Cabo Comorín", "Cabo Sur (Corea)", "Golfo Pérsico", "Golfo de Adén", "Golfo de Omán", "Golfo de Bengala", "Golfo de Tailandia", "Golfo de Tonkín", "Golfo Arábigo (Kutch)", "Estrecho de Ormuz", "Bab-el-Mandeb", "Estrecho de Malaca", "Estrecho de Taiwán", "Estrecho de Corea", "Estrecho de Bering"],    island: ["Sri Lanka", "Taiwán", "Borneo", "Sumatra", "Java", "Honshu", "Hokkaido", "Filipinas (Luzón)", "Hainan", "Sajalín", "Islas Kuriles", "Célebes"],    peninsula: ["Península Arábiga", "Península de Anatolia", "Península de Corea", "Península de Indochina", "Península de Malaca", "Península del Sinaí", "Península de Kamchatka"]
+    river: ["Obi", "Yeniséi", "Lena", "Amur", "Huang He (Amarillo)", "Yangtsé", "Mekong", "Ganges", "Indo", "Brahmaputra", "Tigris", "Éufrates", "Amu Daria", "Sir Daria", "Irtish", "Angará", "Tunguska Inferior", "Viliui", "Aldán", "Kolimá", "Olenek", "Indiguirka", "Selenga", "Irauadi", "Salween", "Godavari", "Krishna", "Narmada", "Yamuna", "Sutlej", "Tarim", "Tobol", "Ural", "Songhua", "Mahanadi", "Helmand", "Kura", "Chao Phraya", "Zeya", "Río de las Perlas", "Chindwin", "Jordán"],    lake: ["Baikal", "Balkash", "Aral (histórico)", "Van", "Urmía", "Issyk-Kul", "Qinghai", "Zaisán", "Alakol", "Janka", "Uvs", "Khövsgöl", "Hulun", "Bosten", "Poyang", "Tai", "Dongting", "Hongze", "Toba", "Tonlé Sap", "Mar Muerto", "Mar de Galilea", "Sevan", "Namtso", "Manasarovar", "Sarygamysh", "Tuz", "Taimyr", "Chany", "Tharthar", "Aral (actual)", "Khyargas"],    mountain: ["Himalaya", "Karakórum", "Tian Shan", "Altái", "Montes Zagros", "Elburz", "Meseta del Tíbet (borde)", "Montes Urales (oriente)"],    peak: ["Everest", "K2", "Kanchenjunga", "Elbrús (Cáucaso)", "Damavand", "Pico Pobeda (Tian Shan)"], plain: ["Meseta de Anatolia", "Meseta de Irán", "Meseta de Decán", "Meseta de Mongolia", "MESETA DEL TÍBET", "LLANURA SIBERIANA OCCIDENTAL", "LLANURA INDOGANGÉTICA"],    feature: ["Cabo Comorín", "Cabo Sur (Corea)", "Golfo Pérsico", "Golfo de Adén", "Golfo de Omán", "Golfo de Bengala", "Golfo de Tailandia", "Golfo de Tonkín", "Golfo Arábigo (Kutch)", "Estrecho de Ormuz", "Bab-el-Mandeb", "Estrecho de Malaca", "Estrecho de Taiwán", "Estrecho de Corea", "Estrecho de Bering"],    island: ["Sri Lanka", "Taiwán", "Borneo", "Sumatra", "Java", "Honshu", "Hokkaido", "Filipinas (Luzón)", "Hainan", "Sajalín", "Islas Kuriles", "Célebes"],    peninsula: ["Península Arábiga", "Península de Anatolia", "Península de Corea", "Península de Indochina", "Península de Malaca", "Península del Sinaí", "Península de Kamchatka"]
   };
   function setByName(names, visible) {
     names.forEach(n => {
@@ -748,7 +766,7 @@
     });
   });
   function setAllLabels(visible) {
-    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -763,7 +781,7 @@
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    const cats = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const cats = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     if (name === 'mudo') {
       cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
       setCategory_seaRegionHill(true);

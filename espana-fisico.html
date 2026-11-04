@@ -120,6 +120,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -194,13 +196,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -290,6 +302,13 @@
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sistema Penibético" checked> Sistema Penibético</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sistema Subbético" checked> Sistema Subbético</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sierra Nevada" checked> Sierra Nevada</label>
+        </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (4)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="DEPRESIÓN DEL EBRO" checked> Depresión del Ebro</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="DEPRESIÓN DEL GUADALQUIVIR" checked> Depresión del Guadalquivir</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="SUBMESETA NORTE" checked> Submeseta Norte</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="SUBMESETA SUR" checked> Submeseta Sur</label>
         </div>
         <div class="advanced-group">
           <h4>Picos (17)</h4>
@@ -708,10 +727,10 @@
 <text class="range-label2" data-cat="mountain" data-name="Sierra Nevada" style="font-size:8.5px" x="656.9" y="898.1" text-anchor="middle" transform="rotate(-9.0 656.9 898.1)">SIERRA NEVADA</text>
 <text class="range-label2" data-cat="mountain" data-name="Sierra de la Estrella" style="font-size:8.5px" x="301.2" y="516.8" text-anchor="middle" transform="rotate(14.7 301.2 516.8)">SERRA DA ESTRELA</text>
 <text class="range-label2" data-cat="mountain" data-name="Montes de León" style="font-size:8.5px" x="325.4" y="179.1" text-anchor="middle" transform="rotate(0.0 325.4 179.1)">MONTES DE LEÓN</text>
-<text class="region-label" data-cat="region" data-name="DEPRESIÓN DEL EBRO" x="850.8" y="280.7" style="font-size:10px">DEPRESIÓN DEL EBRO</text>
-<text class="region-label" data-cat="region" data-name="DEPRESIÓN DEL GUADALQUIVIR" x="413.0" y="788.8" style="font-size:10px">DEPRESIÓN DEL GUADALQUIVIR</text>
-<text class="region-label" data-cat="region" data-name="SUBMESETA NORTE" x="504.7" y="312.7" style="font-size:10px;text-anchor:middle">SUBMESETA NORTE</text>
-<text class="region-label" data-cat="region" data-name="SUBMESETA SUR" x="602.7" y="604.7" style="font-size:10px;text-anchor:middle">SUBMESETA SUR</text>
+<text class="region-label" data-cat="plain" data-name="DEPRESIÓN DEL EBRO" x="850.8" y="280.7" style="font-size:10px">DEPRESIÓN DEL EBRO</text>
+<text class="region-label" data-cat="plain" data-name="DEPRESIÓN DEL GUADALQUIVIR" x="413.0" y="788.8" style="font-size:10px">DEPRESIÓN DEL GUADALQUIVIR</text>
+<text class="region-label" data-cat="plain" data-name="SUBMESETA NORTE" x="504.7" y="312.7" style="font-size:10px;text-anchor:middle">SUBMESETA NORTE</text>
+<text class="region-label" data-cat="plain" data-name="SUBMESETA SUR" x="602.7" y="604.7" style="font-size:10px;text-anchor:middle">SUBMESETA SUR</text>
 <text class="sea-label2" data-cat="sea" data-name="MAR MEDITERRÁNEO" x="1191.4" y="636.4" style="font-size:13px">MAR MEDITERRÁNEO</text>
 <text class="sea-label2" data-cat="sea" data-name="MAR CANTÁBRICO" x="401.8" y="10.4" style="font-size:13px;text-anchor:middle;letter-spacing:0px">MAR CANTÁBRICO</text>
 <text class="sea-label2" data-cat="sea" data-name="OCÉANO ATLÁNTICO" x="50.0" y="312.0" style="font-size:13px;text-anchor:middle;letter-spacing:3px" transform="rotate(-90 50.0 312.0)">OCÉANO ATLÁNTICO</text>
@@ -885,10 +904,10 @@
 <script>
 (function() {
   const ALL = {
-    river: ["Tajo", "Duero", "Ebro", "Guadalquivir", "Guadiana", "Miño", "Júcar", "Segura", "Turia", "Tormes", "Sil", "Navia", "Bidasoa", "Llobregat", "Ter", "Guadalhorce", "Mondego", "Vouga", "Sado", "Nalón", "Narcea", "Ulla", "Esla", "Carrión", "Pisuerga", "Eresma", "Huebra", "Águeda", "Alagón", "Tiétar", "Alberche", "Jarama", "Henares", "Tajuña", "Almonte", "Cigüela", "Jabalón", "Zújar", "Genil", "Guadalimar", "Guadalete", "Viar", "Tinto", "Odiel", "Aragón", "Arga", "Gállego", "Cinca", "Segre", "Jalón", "Guadalope", "Mijares", "Palancia", "Cabriel", "Mundo", "Almanzora", "Francolí", "Fluviá", "Adaja"],    lake: ["Sanabria"],    mountain: ["Pirineos", "Cordillera Cantábrica", "Sistema Central", "Sistema Ibérico", "Sierra Morena", "Sierra Nevada", "Macizo Galaico", "Sierra de la Estrella", "Montes de León", "Sierras de Cazorla y Segura", "Montes de Toledo", "Serranía de Cuenca", "Montes Vascos", "Cordillera Costero-Catalana", "Sistema Penibético", "Sistema Subbético"],    peak: ["Mulhacén", "Aneto", "Veleta", "Moncayo", "Torre Cerredo (Picos de Europa)", "Almanzor (Gredos)", "Torre (Sierra de la Estrella)", "Monte Perdido", "Puigmal", "Peñalara", "Teleno", "Peña Ubiña", "Peñarroya", "La Sagra", "Peñagolosa", "Rocigalgo", "Puig Mayor"],    feature: ["Cabo Finisterre", "Cabo de Creus", "Cabo de Gata", "Cabo Trafalgar", "Cabo de Palos", "Cabo Machichaco", "Cabo Peñas", "Cabo da Roca*", "Cabo de San Vicente*", "Cabo Espichel*", "Cabo Carvoeiro*", "Golfo de Cádiz", "Golfo de Valencia", "Golfo de Almería", "Ría de Arosa", "Ría de Vigo", "Ría de Aveiro", "Estrecho de Gibraltar", "Estaca de Bares", "Cabo Ortegal", "Cabo de Tortosa", "Cabo de la Nao", "Cabo de San Antonio", "Cabo de Formentor", "Delta del Ebro", "Isla de Alborán", "Punta de Tarifa"],    island: ["Mallorca", "Menorca", "Ibiza", "Formentera"],    peninsula: ["Península Ibérica"]
+    river: ["Tajo", "Duero", "Ebro", "Guadalquivir", "Guadiana", "Miño", "Júcar", "Segura", "Turia", "Tormes", "Sil", "Navia", "Bidasoa", "Llobregat", "Ter", "Guadalhorce", "Mondego", "Vouga", "Sado", "Nalón", "Narcea", "Ulla", "Esla", "Carrión", "Pisuerga", "Eresma", "Huebra", "Águeda", "Alagón", "Tiétar", "Alberche", "Jarama", "Henares", "Tajuña", "Almonte", "Cigüela", "Jabalón", "Zújar", "Genil", "Guadalimar", "Guadalete", "Viar", "Tinto", "Odiel", "Aragón", "Arga", "Gállego", "Cinca", "Segre", "Jalón", "Guadalope", "Mijares", "Palancia", "Cabriel", "Mundo", "Almanzora", "Francolí", "Fluviá", "Adaja"],    lake: ["Sanabria"],    mountain: ["Pirineos", "Cordillera Cantábrica", "Sistema Central", "Sistema Ibérico", "Sierra Morena", "Sierra Nevada", "Macizo Galaico", "Sierra de la Estrella", "Montes de León", "Sierras de Cazorla y Segura", "Montes de Toledo", "Serranía de Cuenca", "Montes Vascos", "Cordillera Costero-Catalana", "Sistema Penibético", "Sistema Subbético"],    peak: ["Mulhacén", "Aneto", "Veleta", "Moncayo", "Torre Cerredo (Picos de Europa)", "Almanzor (Gredos)", "Torre (Sierra de la Estrella)", "Monte Perdido", "Puigmal", "Peñalara", "Teleno", "Peña Ubiña", "Peñarroya", "La Sagra", "Peñagolosa", "Rocigalgo", "Puig Mayor"], plain: ["DEPRESIÓN DEL EBRO", "DEPRESIÓN DEL GUADALQUIVIR", "SUBMESETA NORTE", "SUBMESETA SUR"],    feature: ["Cabo Finisterre", "Cabo de Creus", "Cabo de Gata", "Cabo Trafalgar", "Cabo de Palos", "Cabo Machichaco", "Cabo Peñas", "Cabo da Roca*", "Cabo de San Vicente*", "Cabo Espichel*", "Cabo Carvoeiro*", "Golfo de Cádiz", "Golfo de Valencia", "Golfo de Almería", "Ría de Arosa", "Ría de Vigo", "Ría de Aveiro", "Estrecho de Gibraltar", "Estaca de Bares", "Cabo Ortegal", "Cabo de Tortosa", "Cabo de la Nao", "Cabo de San Antonio", "Cabo de Formentor", "Delta del Ebro", "Isla de Alborán", "Punta de Tarifa"],    island: ["Mallorca", "Menorca", "Ibiza", "Formentera"],    peninsula: ["Península Ibérica"]
   };
   const DEFAULT = {
-    river: ["Tajo", "Duero", "Ebro", "Guadalquivir", "Guadiana", "Miño", "Júcar", "Segura", "Turia", "Tormes", "Sil", "Navia", "Bidasoa", "Llobregat", "Ter", "Guadalhorce", "Mondego", "Vouga", "Sado", "Nalón", "Narcea", "Ulla", "Esla", "Carrión", "Pisuerga", "Eresma", "Huebra", "Águeda", "Alagón", "Tiétar", "Alberche", "Jarama", "Henares", "Tajuña", "Almonte", "Cigüela", "Jabalón", "Zújar", "Genil", "Guadalimar", "Guadalete", "Viar", "Tinto", "Odiel", "Aragón", "Arga", "Gállego", "Cinca", "Segre", "Jalón", "Guadalope", "Mijares", "Palancia", "Cabriel", "Mundo", "Almanzora", "Francolí", "Fluviá", "Adaja"],    lake: ["Sanabria"],    mountain: ["Pirineos", "Cordillera Cantábrica", "Sistema Central", "Sistema Ibérico", "Sierra Morena", "Sierra Nevada", "Macizo Galaico", "Sierra de la Estrella", "Montes de León", "Sierras de Cazorla y Segura", "Montes de Toledo", "Serranía de Cuenca", "Montes Vascos", "Cordillera Costero-Catalana", "Sistema Penibético", "Sistema Subbético"],    peak: ["Mulhacén", "Aneto", "Veleta", "Moncayo", "Torre Cerredo (Picos de Europa)", "Almanzor (Gredos)", "Torre (Sierra de la Estrella)", "Monte Perdido", "Puigmal", "Peñalara", "Teleno", "Peña Ubiña", "Peñarroya", "La Sagra", "Peñagolosa", "Rocigalgo", "Puig Mayor"],    feature: ["Cabo Finisterre", "Cabo de Creus", "Cabo de Gata", "Cabo Trafalgar", "Cabo de Palos", "Cabo Machichaco", "Cabo Peñas", "Cabo da Roca*", "Cabo de San Vicente*", "Cabo Espichel*", "Cabo Carvoeiro*", "Golfo de Cádiz", "Golfo de Valencia", "Golfo de Almería", "Ría de Arosa", "Ría de Vigo", "Ría de Aveiro", "Estrecho de Gibraltar", "Estaca de Bares", "Cabo Ortegal", "Cabo de Tortosa", "Cabo de la Nao", "Cabo de San Antonio", "Cabo de Formentor", "Delta del Ebro", "Isla de Alborán", "Punta de Tarifa"],    island: ["Mallorca", "Menorca", "Ibiza", "Formentera"],    peninsula: ["Península Ibérica"]
+    river: ["Tajo", "Duero", "Ebro", "Guadalquivir", "Guadiana", "Miño", "Júcar", "Segura", "Turia", "Tormes", "Sil", "Navia", "Bidasoa", "Llobregat", "Ter", "Guadalhorce", "Mondego", "Vouga", "Sado", "Nalón", "Narcea", "Ulla", "Esla", "Carrión", "Pisuerga", "Eresma", "Huebra", "Águeda", "Alagón", "Tiétar", "Alberche", "Jarama", "Henares", "Tajuña", "Almonte", "Cigüela", "Jabalón", "Zújar", "Genil", "Guadalimar", "Guadalete", "Viar", "Tinto", "Odiel", "Aragón", "Arga", "Gállego", "Cinca", "Segre", "Jalón", "Guadalope", "Mijares", "Palancia", "Cabriel", "Mundo", "Almanzora", "Francolí", "Fluviá", "Adaja"],    lake: ["Sanabria"],    mountain: ["Pirineos", "Cordillera Cantábrica", "Sistema Central", "Sistema Ibérico", "Sierra Morena", "Sierra Nevada", "Macizo Galaico", "Sierra de la Estrella", "Montes de León", "Sierras de Cazorla y Segura", "Montes de Toledo", "Serranía de Cuenca", "Montes Vascos", "Cordillera Costero-Catalana", "Sistema Penibético", "Sistema Subbético"],    peak: ["Mulhacén", "Aneto", "Veleta", "Moncayo", "Torre Cerredo (Picos de Europa)", "Almanzor (Gredos)", "Torre (Sierra de la Estrella)", "Monte Perdido", "Puigmal", "Peñalara", "Teleno", "Peña Ubiña", "Peñarroya", "La Sagra", "Peñagolosa", "Rocigalgo", "Puig Mayor"], plain: ["DEPRESIÓN DEL EBRO", "DEPRESIÓN DEL GUADALQUIVIR", "SUBMESETA NORTE", "SUBMESETA SUR"],    feature: ["Cabo Finisterre", "Cabo de Creus", "Cabo de Gata", "Cabo Trafalgar", "Cabo de Palos", "Cabo Machichaco", "Cabo Peñas", "Cabo da Roca*", "Cabo de San Vicente*", "Cabo Espichel*", "Cabo Carvoeiro*", "Golfo de Cádiz", "Golfo de Valencia", "Golfo de Almería", "Ría de Arosa", "Ría de Vigo", "Ría de Aveiro", "Estrecho de Gibraltar", "Estaca de Bares", "Cabo Ortegal", "Cabo de Tortosa", "Cabo de la Nao", "Cabo de San Antonio", "Cabo de Formentor", "Delta del Ebro", "Isla de Alborán", "Punta de Tarifa"],    island: ["Mallorca", "Menorca", "Ibiza", "Formentera"],    peninsula: ["Península Ibérica"]
   };
   function setByName(names, visible) {
     names.forEach(n => {
@@ -915,7 +934,7 @@
     });
   });
   function setAllLabels(visible) {
-    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -930,7 +949,7 @@
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    const cats = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const cats = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     if (name === 'mudo') {
       cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
       setCategory_seaRegionHill(true);

@@ -120,6 +120,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -193,13 +195,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -283,7 +295,7 @@
 <label class="item-row"><input type="checkbox" data-item-cat="lake" data-item-name="Vättern" > Vättern</label>
         </div>
         <div class="advanced-group">
-          <h4>Cordilleras (15)</h4>
+          <h4>Cordilleras (14)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Alpes" checked> Alpes</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Alpes de Transilvania" checked> Alpes de Transilvania</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Apeninos" checked> Apeninos</label>
@@ -299,10 +311,20 @@
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Sistema Central" checked> Sistema Central</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Urales" checked> Urales</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Colinas Valdai" checked> Valdai</label>
-<label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Meseta Ibérica" checked> Ibérica</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Macizo Central" checked> Macizo Central</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Selva Negra" checked> Selva Negra</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Macizo de Bohemia" checked> Bohemia</label>
+        </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (8)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="DEPRESIÓN DEL CASPIO" checked> Depresión del Caspio</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="GRAN LLANURA EUROPEA" checked> Gran Llanura Europea</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="LLANURA DE EUROPA ORIENTAL" checked> Llanura de Europa Oriental</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="LLANURA DEL MAR BÁLTICO" checked> Llanura del Mar Báltico</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="LLANURA HÚNGARA" checked> Llanura Húngara</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="MESETA DE PODOLIA" checked> Meseta de Podolia</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="MESETA DE USTIURT" checked> Meseta de Ustiurt</label>
+<label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="Meseta Ibérica" checked> Meseta Ibérica</label>
         </div>
         <div class="advanced-group">
           <h4>Picos (9)</h4>
@@ -317,7 +339,7 @@
 <label class="item-row"><input type="checkbox" data-item-cat="peak" data-item-name="Olimpo" checked> Olimpo</label>
         </div>
         <div class="advanced-group">
-          <h4>Estrechos / cabos / golfos (31)</h4>
+          <h4>Cabos, golfos y estrechos (31)</h4>
           <label class="item-row"><input type="checkbox" data-item-cat="feature" data-item-name="Cabo de Creus" > Cabo de Creus</label>
 <label class="item-row"><input type="checkbox" data-item-cat="feature" data-item-name="Cabo de Gata" > Cabo de Gata</label>
 <label class="item-row"><input type="checkbox" data-item-cat="feature" data-item-name="Cabo Espichel" > Cabo Espichel</label>
@@ -809,21 +831,21 @@
 <text class="range-label2" data-cat="mountain" data-name="Montes Grampianos" style="font-size:9px"><textPath href="#spine8" xlink:href="#spine8" startOffset="50%" text-anchor="middle">MONTES GRAMPIANOS</textPath></text>
 <text class="range-label2" data-cat="mountain" data-name="Montes Peninos" x="586.3" y="618.6" style="font-size:9px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MONTES PENINOS</text>
 <text class="range-label2" data-cat="mountain" data-name="Colinas Valdai" x="1160.9" y="525.2" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">COLINAS VALDAI</text>
-<text class="range-label2" data-cat="mountain" data-name="Meseta Ibérica" x="382" y="985" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA IBÉRICA</text>
+<text class="range-label2" data-cat="plain" data-name="Meseta Ibérica" x="382" y="985" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MESETA IBÉRICA</text>
 <text class="range-label2" data-cat="mountain" data-name="Macizo Central" x="587" y="886" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MACIZO CENTRAL</text>
 <text class="range-label2" data-cat="mountain" data-name="Selva Negra" x="726" y="804" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">SELVA NEGRA</text>
 <text class="range-label2" data-cat="mountain" data-name="Macizo de Bohemia" x="814" y="776" style="font-size:8.5px;text-anchor:middle;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MACIZO DE BOHEMIA</text>
 <text class="range-label2" data-cat="mountain" data-name="Montes Pindo" x="987.8" y="1079.6" transform="rotate(59.5 987.8 1079.6)" style="font-size:8.5px;text-anchor:middle;word-spacing:5px;paint-order:stroke;stroke:#ece4d2;stroke-opacity:.85;stroke-width:2.2px;stroke-linejoin:round">MONTES PINDO</text>
 <text class="range-label2" data-cat="mountain" data-name="Urales" style="font-size:15px"><textPath href="#spine9" xlink:href="#spine9" startOffset="50%" text-anchor="middle" dy="0.35em">URALES</textPath></text>
 <text class="range-label2" data-cat="mountain" data-name="Cáucaso" style="font-size:15px" x="1487" y="889.6" text-anchor="middle" transform="rotate(5.9 1487 889.6)">CÁUCASO</text>
-<text class="region-label" data-cat="region" data-name="GRAN LLANURA EUROPEA" x="1020.1" y="655" style="font-size:15px">GRAN LLANURA EUROPEA</text>
+<text class="region-label" data-cat="plain" data-name="GRAN LLANURA EUROPEA" x="1020.1" y="655" style="font-size:15px">GRAN LLANURA EUROPEA</text>
 <text class="region-label" data-cat="region" data-name="REGIÓN DE LOS LAGOS" x="1048.2" y="382.6" style="font-size:11px">REGIÓN DE LOS LAGOS</text>
-<text class="region-label" data-cat="region" data-name="LLANURA HÚNGARA" x="943.1" y="858.7" style="font-size:10.5px">LLANURA HÚNGARA</text>
-<text class="region-label" data-cat="region" data-name="LLANURA DEL MAR BÁLTICO" x="871.1" y="647.9" style="font-size:9px">LLANURA DEL MAR BÁLTICO</text>
-<text class="region-label" data-cat="region" data-name="LLANURA DE EUROPA ORIENTAL" x="1288.2" y="558.2" style="font-size:11px">LLANURA DE EUROPA ORIENTAL</text>
-<text class="region-label" data-cat="region" data-name="DEPRESIÓN DEL CASPIO" x="1526.1" y="684.6" style="font-size:10px">DEPRESIÓN DEL CASPIO</text>
-<text class="region-label" data-cat="region" data-name="MESETA DE USTIURT" x="1709.1" y="743.8" style="font-size:10px">MESETA DE USTIURT</text>
-<text class="region-label" data-cat="region" data-name="MESETA DE PODOLIA" x="1109.4" y="782.3" style="font-size:10px">MESETA DE PODOLIA</text>
+<text class="region-label" data-cat="plain" data-name="LLANURA HÚNGARA" x="943.1" y="858.7" style="font-size:10.5px">LLANURA HÚNGARA</text>
+<text class="region-label" data-cat="plain" data-name="LLANURA DEL MAR BÁLTICO" x="871.1" y="647.9" style="font-size:9px">LLANURA DEL MAR BÁLTICO</text>
+<text class="region-label" data-cat="plain" data-name="LLANURA DE EUROPA ORIENTAL" x="1288.2" y="558.2" style="font-size:11px">LLANURA DE EUROPA ORIENTAL</text>
+<text class="region-label" data-cat="plain" data-name="DEPRESIÓN DEL CASPIO" x="1526.1" y="684.6" style="font-size:10px">DEPRESIÓN DEL CASPIO</text>
+<text class="region-label" data-cat="plain" data-name="MESETA DE USTIURT" x="1709.1" y="743.8" style="font-size:10px">MESETA DE USTIURT</text>
+<text class="region-label" data-cat="plain" data-name="MESETA DE PODOLIA" x="1109.4" y="782.3" style="font-size:10px">MESETA DE PODOLIA</text>
 <text class="feature-label" data-cat="feature" data-name="Golfo de Vizcaya" x="462.9" y="849" text-anchor="start" style="font-size:12px">Golfo de Vizcaya</text>
 <text class="feature-label" data-cat="feature" data-name="Golfo de Cádiz" x="307.8" y="1068.4" text-anchor="start" style="font-size:10.5px">Golfo de Cádiz</text>
 <text class="feature-label" data-cat="feature" data-name="Golfo de León" x="607.3" y="949.1" text-anchor="start" style="font-size:10.5px;display:none">Golfo de León</text>
@@ -886,7 +908,7 @@
 <text class="island-label" data-cat="island" data-name="Rodas" x="1172.9" y="1179.7" text-anchor="start" style="display:none;font-size:10px">Rodas</text>
 <text class="island-label" data-cat="island" data-name="Islas Esporadas" x="1057.9" y="1075" text-anchor="start" style="display:none;font-size:9px">Islas Esporadas</text>
 <text class="region-label" data-cat="peninsula" data-name="Península de Kanin" x="1226.7" y="168.6" text-anchor="middle" style="display:none;font-size:10px">PENÍNSULA DE KANIN</text>
-<text class="region-label" data-cat="region" data-name="ÁFRICA" x="501.2" y="1200.9" style="font-size:12px">ÁFRICA</text>
+<text class="region-label" data-name="ÁFRICA" x="501.2" y="1200.9" style="font-size:12px">ÁFRICA</text>
 <text class="sea-label2" data-cat="sea" data-name="OCÉANO ATLÁNTICO" x="231.8" y="680" style="font-size:16px">OCÉANO ATLÁNTICO</text>
 <text class="sea-label2" data-cat="sea" data-name="MAR DEL NORTE" x="672.5" y="531.9" style="font-size:13px">MAR DEL NORTE</text>
 <text class="sea-label2" data-cat="sea" data-name="MAR DE NORUEGA" x="709.8" y="242.7" style="font-size:13px">MAR DE NORUEGA</text>
@@ -984,7 +1006,8 @@
   const ISLAND_ALL = ["Islandia", "Islas Brit\u00e1nicas", "C\u00f3rcega", "Cerde\u00f1a", "Sicilia", "Islas Baleares", "Creta", "Malta", "Chipre", "Islas J\u00f3nicas", "C\u00edcladas", "Islas H\u00e9bridas", "Islas Orcadas", "Islas Shetland", "Islas Feroe", "Islas Lofoten", "Gotland", "\u00d6land", "Rodas", "Islas Esporadas"];
   const PENINSULA_DEFAULT = ["Pen\u00ednsula Ib\u00e9rica", "Pen\u00ednsula It\u00e1lica", "Pen\u00ednsula Balc\u00e1nica", "Pen\u00ednsula Escandinava"];
   const PENINSULA_ALL = ["Pen\u00ednsula Ib\u00e9rica", "Pen\u00ednsula It\u00e1lica", "Pen\u00ednsula Balc\u00e1nica", "Pen\u00ednsula Escandinava", "Pen\u00ednsula de Jutlandia", "Pen\u00ednsula de Kola", "Pen\u00ednsula de Breta\u00f1a", "Pen\u00ednsula de Crimea", "Pen\u00ednsula del Peloponeso", "Pen\u00ednsula de Anatolia", "Pen\u00ednsula de Kanin"];
-  const mountainAllNames = ["Alpes", "Alpes de Transilvania", "Pirineos", "Montes Balcanes", "Din\u00e1ricos", "C\u00e1rpatos", "Apeninos", "Sistema Central", "Montes Escandinavos", "Montes Grampianos", "Montes Peninos", "Urales", "C\u00e1ucaso", "Alpes de Transilvania", "Montes Pindo", "Colinas Valdai", "Meseta Ibérica", "Macizo Central", "Selva Negra", "Macizo de Bohemia"];
+  const mountainAllNames = ["Alpes", "Alpes de Transilvania", "Pirineos", "Montes Balcanes", "Din\u00e1ricos", "C\u00e1rpatos", "Apeninos", "Sistema Central", "Montes Escandinavos", "Montes Grampianos", "Montes Peninos", "Urales", "C\u00e1ucaso", "Alpes de Transilvania", "Montes Pindo", "Colinas Valdai", "Macizo Central", "Selva Negra", "Macizo de Bohemia"];
+  const PLAIN_ALL = ["Meseta Ib\u00e9rica", "GRAN LLANURA EUROPEA", "LLANURA H\u00daNGARA", "LLANURA DEL MAR B\u00c1LTICO", "LLANURA DE EUROPA ORIENTAL", "DEPRESI\u00d3N DEL CASPIO", "MESETA DE USTIURT", "MESETA DE PODOLIA"];
   const peakAllNames = ["Mont Blanc", "Cervino", "Aneto", "Musala", "Olimpo", "Etna", "Moldoveanu", "Mulhac\u00e9n", "Elbr\u00fas"];
 
   function setByName(catName, names, visible) {
@@ -1032,7 +1055,7 @@
     // "mudo": oculta todo el texto sin excepción. En cambio, al REACTIVAR (estándar/completo)
     // no tocamos las categorías con casilla individual (río/lago/accidente/isla/península),
     // porque su visibilidad ya se decidió arriba y esto la pisaría por encima.
-    const INDIVIDUAL = ['river', 'lake', 'feature', 'island', 'peninsula', 'mountain', 'peak'];
+    const INDIVIDUAL = ['river', 'lake', 'feature', 'island', 'peninsula', 'mountain', 'peak', 'plain'];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -1050,6 +1073,7 @@
       ['peninsula', PENINSULA_ALL, PENINSULA_DEFAULT],
       ['mountain', mountainAllNames, mountainAllNames],
       ['peak', peakAllNames, peakAllNames],
+      ['plain', PLAIN_ALL, PLAIN_ALL],
     ];
     if (name === 'mudo') {
       groups.forEach(([cat, all]) => { setByName(cat, all, true); syncItemCheckboxes(cat, all); setCatMaster(cat, true); });

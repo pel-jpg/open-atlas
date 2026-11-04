@@ -119,6 +119,8 @@
   /* personalización: categorías como chips con lista desplegable propia */
   .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
   .cat-toggles.enhanced{gap:10px;}
+  .cat-fam{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);align-self:center;}
+  .cat-famgroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-right:12px;}
   .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
   .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
   .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
@@ -208,13 +210,23 @@
       </div>
     </div>
     <div class="cat-toggles">
-      <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
-      <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
-      <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
-      <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
-      <label><input type="checkbox" data-cat-master="feature" checked> Accidentes costeros</label>
-      <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
-      <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Relieve</span>
+        <label><input type="checkbox" data-cat-master="mountain" checked> Cordilleras</label>
+        <label><input type="checkbox" data-cat-master="peak" checked> Picos</label>
+        <label><input type="checkbox" data-cat-master="plain" checked> Llanuras, mesetas y depresiones</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Hidrografía</span>
+        <label><input type="checkbox" data-cat-master="river" checked> Ríos</label>
+        <label><input type="checkbox" data-cat-master="lake" checked> Lagos</label>
+      </span>
+      <span class="cat-famgroup">
+        <span class="cat-fam">Accidentes costeros</span>
+        <label><input type="checkbox" data-cat-master="feature" checked> Cabos, golfos y estrechos</label>
+        <label><input type="checkbox" data-cat-master="island" checked> Islas</label>
+        <label><input type="checkbox" data-cat-master="peninsula" checked> Penínsulas</label>
+      </span>
     </div>
     <details class="advanced-block">
       <summary>Elegir ríos, lagos, cordilleras, picos, accidentes costeros, islas y penínsulas uno a uno →</summary>
@@ -259,6 +271,10 @@
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Montes MacDonnell" checked> Montes MacDonnell</label>
 <label class="item-row"><input type="checkbox" data-item-cat="mountain" data-item-name="Vanuatu" checked> Vanuatu</label>
 </div>
+        <div class="advanced-group">
+          <h4>Llanuras, mesetas y depresiones (1)</h4>
+          <label class="item-row"><input type="checkbox" data-item-cat="plain" data-item-name="LLANURA DE NULLARBOR" checked> Llanura de Nullarbor</label>
+        </div>
         <div class="advanced-group">
           <h4>Picos (8)</h4>
 <label class="item-row"><input type="checkbox" data-item-cat="peak" data-item-name="Aoraki / Monte Cook" checked> Aoraki / Monte Cook</label>
@@ -381,7 +397,7 @@
 <text class="region-label" data-cat="region" data-name="GRAN DESIERTO ARENOSO" x="260.2" y="670.2" style="font-size:10.5px">GRAN DESIERTO ARENOSO</text>
 <text class="region-label" data-cat="region" data-name="DESIERTO DE GIBSON" x="277.6" y="735.4" style="font-size:10px">DESIERTO DE GIBSON</text>
 <text class="region-label" data-cat="region" data-name="GRAN DESIERTO DE VICTORIA" x="358" y="784.8" style="font-size:10.5px">GRAN DESIERTO DE VICTORIA</text>
-<text class="region-label" data-cat="region" data-name="LLANURA DE NULLARBOR" x="337.6" y="832.5" style="font-size:9.5px">LLANURA DE NULLARBOR</text>
+<text class="region-label" data-cat="plain" data-name="LLANURA DE NULLARBOR" x="337.6" y="832.5" style="font-size:9.5px">LLANURA DE NULLARBOR</text>
 <text class="region-label" data-cat="region" data-name="DESIERTO DE SIMPSON" x="483.2" y="710.8" style="font-size:10px">DESIERTO DE SIMPSON</text>
 <text class="region-label" data-cat="region" data-name="CUENCA MURRAY-DARLING" x="564.6" y="812.2" style="font-size:10px">CUENCA MURRAY-DARLING</text>
 <text class="region-label" data-cat="region" data-name="GRAN CUENCA ARTESIANA" x="530.3" y="643.2" style="font-size:10px">GRAN CUENCA ARTESIANA</text>
@@ -541,7 +557,7 @@
     river: ["Murray", "Darling", "Murrumbidgee", "Cooper Creek", "Sepik", "Fly", "Fitzroy", "Waikato", "Clutha"],
     lake: ["Lago Eyre", "Lago Torrens", "Lago Gairdner", "Lago Mackay", "Lago Taupo", "Lago Te Anau", "Lago Wakatipu"],
     mountain: ["Gran Cordillera Divisoria", "Cordillera Central de Nueva Guinea", "Alpes del Sur (Nueva Zelanda)", "Montes MacDonnell", "Montes Hamersley", "Montes Flinders", "Montes Kimberley", "Vanuatu", "Islas Salomón", "Isla Norte", "Colinas de la Isla Sur", "Cordillera Papúa Septentrional", "Cabeza de Pájaro", "Archipiélago Bismarck", "Colinas del Sudoeste australiano"],
-    peak: ["Puncak Jaya", "Monte Wilhelm", "Aoraki / Monte Cook", "Monte Kosciuszko", "Monte Ruapehu", "Monte Taranaki", "Monte Bartle Frere", "Uluru"],
+    peak: ["Puncak Jaya", "Monte Wilhelm", "Aoraki / Monte Cook", "Monte Kosciuszko", "Monte Ruapehu", "Monte Taranaki", "Monte Bartle Frere", "Uluru"], plain: ["LLANURA DE NULLARBOR"],
     feature: ["Golfo de Carpentaria", "Gran Bahía Australiana", "Estrecho de Torres", "Estrecho de Bass", "Estrecho de Cook", "Golfo de Spencer", "Golfo de Papúa", "Bahía Shark", "Gran Barrera de Coral", "Cabo York", "Cabo Leeuwin", "Cabo Byron", "Cabo Reinga"],
     island: ["Nueva Guinea", "Tasmania", "Isla Norte (N. Zelanda)", "Isla Sur (N. Zelanda)", "Nueva Caledonia", "Viti Levu (Fiyi)", "Nueva Bretaña", "Bougainville", "Guadalcanal", "Espíritu Santo", "Isla Stewart", "Upolu (Samoa)"],
     peninsula: ["Península del Cabo York", "Península de Eyre", "Península de Northland", "Península de Cabeza de Pájaro", "Península de Coromandel"]
@@ -572,7 +588,7 @@
     });
   });
   function setAllLabels(visible) {
-    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const INDIVIDUAL = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     document.querySelectorAll('svg text, svg .leader2').forEach(el => {
       if (el.closest('.legend-block') || el.closest('.scale-bar')) return;
       if (visible && INDIVIDUAL.includes(el.dataset.cat)) return;
@@ -587,7 +603,7 @@
   const presetBtns = document.querySelectorAll('.preset-btns button');
   function applyPreset(name) {
     presetBtns.forEach(b => b.classList.toggle('active', b.dataset.preset === name));
-    const cats = ["river", "lake", "mountain", "peak", "feature", "island", "peninsula"];
+    const cats = ["river", "lake", "mountain", "peak", "plain", "feature", "island", "peninsula"];
     if (name === 'mudo') {
       cats.forEach(cat => { setByName(ALL[cat], true); syncItemCheckboxes(cat, ALL[cat]); setCatMaster(cat, true); });
       setCategory_seaRegionHill(true);

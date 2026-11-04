@@ -22,8 +22,9 @@
     capprov:{pl:'capitales de provincia',q:function(n){return n+' (capital)';},kind:'point'},
     peak:{pl:'picos',q:function(n){return 'el pico '+n;},kind:'point'},
     mountain:{pl:'cordilleras y montañas',q:function(n){return n;},kind:'box',tol:[8,24,42]},
+    plain:{pl:'llanuras, mesetas y depresiones',q:function(n){return /^(gran )?(llanura|meseta|submeseta|depresión|pampa)/i.test(n)?'la '+n:/^altiplano/i.test(n)?'el '+n:n;},kind:'box',tol:[30,70,120]},
     region:{pl:'regiones naturales',q:function(n){return n;},kind:'box',tol:[30,70,120]},
-    feature:{pl:'accidentes costeros',q:function(n){return n;},kind:'point'},
+    feature:{pl:'cabos, golfos y estrechos',q:function(n){return n;},kind:'point'},
     cape:{pl:'cabos',q:function(n){return n;},kind:'point'},
     gulf:{pl:'golfos y bahías',q:function(n){return n;},kind:'box',tol:[16,40,70]},
     strait:{pl:'estrechos y canales',q:function(n){return n;},kind:'box',tol:[14,34,56]},
@@ -35,12 +36,23 @@
     quake:{pl:'grandes terremotos',q:function(n){return 'el terremoto de '+n;},kind:'point'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
+  /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
+  var GROUPS=[
+    {id:'g-hidro',t:'Hidrografía',cats:['river','lake']},
+    {id:'g-relieve',t:'Relieve',cats:['peak','mountain','plain','region'],mix:['peak','mountain','plain'],mixl:'Todo el relieve'},
+    {id:'g-costa',t:'Accidentes costeros',cats:['feature','cape','gulf','strait','island','peninsula'],mix:['feature','cape','gulf','strait','island','peninsula'],mixl:'Todos los accidentes costeros'},
+    {id:'g-politico',t:'Político',cats:['country','capital','ccaa','capccaa','prov','capprov']},
+    {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']}
+  ];
+  /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
+  var NOREL=/(costeros|hidrografia)/.test(location.pathname);
 
   /* ---------- objetivos jugables ---------- */
   var T={},present=[];
   ORDER.forEach(function(c){
+    if(NOREL&&(c==='plain'||c==='region'))return;
     var map={},order=[];
     [].slice.call(svg.querySelectorAll('[data-cat="'+c+'"]')).forEach(function(e){
       if(!SHAPE[e.tagName.toLowerCase()])return;var n=e.getAttribute('data-name');if(!n)return;
@@ -53,9 +65,15 @@
       });
       if(order.length)kind='box';
     } else if(kind==='box'){kind='point';}
-    if(order.length){T[c]={kind:kind,list:order.map(function(n){return map[n];}),by:map};present.push(c);}
+    if(order.length){T[c]={kind:kind,list:order.map(function(n){var it=map[n];it.cat=c;it.kind=kind;return it;}),by:map};present.push(c);}
   });
   if(!present.length)return;
+  /* conjuntos «todo el relieve» / «todos los accidentes costeros»: reúnen varias categorías */
+  GROUPS.forEach(function(g){
+    if(!g.mix)return;var cs=g.mix.filter(function(c){return T[c];});if(cs.length<2)return;
+    var list=[];cs.forEach(function(c){list=list.concat(T[c].list);});
+    T[g.id]={kind:'mixed',list:list,mix:cs};CATS[g.id]={pl:g.mixl.toLowerCase()};
+  });
 
   var css=document.createElement('style');css.textContent=
   '.game-start{font-family:"IBM Plex Mono",monospace;font-size:11.5px;background:#9a6a12;color:#fff;border:1px solid #9a6a12;padding:6px 14px;border-radius:999px;cursor:pointer;font-weight:600;margin-left:8px}'+
@@ -117,14 +135,25 @@
     clearTimeout(S.at);
     var cp=document.querySelector('.preset-btns [data-preset="completo"]');var act=document.querySelector('.preset-btns .active');if(cp&&((act&&act.dataset.preset==='mudo')||(document.querySelector('[data-item-cat]')&&!document.querySelector('[data-item-cat]:checked'))))cp.click();
     clearMarks();showTips();document.body.classList.remove('juego-on');S.on=false;bar.hidden=false;
-    var opts='',first=true;
-    present.forEach(function(c){
-      refresh(c);var k=CATS[c],n=T[c].list.filter(function(t){return t.ok;}).length;if(!n)return;
-      if(k.top&&n>k.top){opts+='<label><input type="radio" name="g-what" value="'+c+':top"'+(first?' checked':'')+'> '+cap(k.pl)+' principales ('+k.top+')</label>';first=false;}
-      opts+='<label><input type="radio" name="g-what" value="'+c+':all"'+(first?' checked':'')+'> '+(k.top?'Todos los '+k.pl:cap(k.pl))+' ('+n+')</label>';first=false;
+    var first=true,rows=[];
+    function radio(v,t){var h='<label><input type="radio" name="g-what" value="'+v+'"'+(first?' checked':'')+'> '+t+'</label>';first=false;return h;}
+    /* los mares van con las costas si el mapa muestra accidentes costeros; si no (mapas de hidrografía), con ríos y lagos */
+    var costaHas=GROUPS[2].cats.some(function(c){if(!T[c])return false;refresh(c);return T[c].list.some(function(t){return t.ok;});});
+    GROUPS.forEach(function(g){
+      var h='',mixn=0,cs=g.cats.slice();
+      if(g.id==='g-hidro'&&!costaHas)cs.push('sea');if(g.id==='g-costa'&&costaHas)cs.push('sea');
+      if(T[g.id]){T[g.id].mix.forEach(function(c){refresh(c);});mixn=T[g.id].list.filter(function(t){return t.ok;}).length;}
+      if(mixn)h+=radio(g.id+':all',g.mixl+' ('+mixn+')');
+      cs.forEach(function(c){
+        if(!T[c])return;refresh(c);var k=CATS[c],n=T[c].list.filter(function(t){return t.ok;}).length;if(!n)return;
+        if(k.top&&n>k.top)h+=radio(c+':top',cap(k.pl)+' principales ('+k.top+')');
+        h+=radio(c+':all',(k.top?'Todos los '+k.pl:cap(k.pl))+' ('+n+')');
+      });
+      if(h)rows.push({t:g.t,h:h});
     });
+    var opts=rows.map(function(r){return '<div class="game-row"><b>'+(rows.length>1?r.t:'Qué')+'</b>'+r.h+'</div>';}).join('');
     bar.innerHTML='<h3>Modo juego: localiza en el mapa</h3><p>Te preguntaré por un elemento y tú lo señalas con un clic o un toque. Los nombres del mapa se ocultan mientras juegas.</p>'+
-      '<div class="game-row"><b>Qué</b>'+opts+'</div>'+
+      opts+
       '<div class="game-row"><b>Preguntas</b><label><input type="radio" name="g-n" value="10" checked> 10</label><label><input type="radio" name="g-n" value="20"> 20</label><label><input type="radio" name="g-n" value="0"> Todas</label>'+
       '<b>Intentos</b><label><input type="radio" name="g-a" value="2" checked> 2 por pregunta</label><label><input type="radio" name="g-a" value="1"> 1</label></div>'+
       '<div class="game-row"><button type="button" class="game-btn" id="g-go">Empezar</button><button type="button" class="game-btn sec" id="g-exit">Cancelar</button></div>';
@@ -133,9 +162,9 @@
   function val(n){var e=bar.querySelector('input[name="'+n+'"]:checked');return e?e.value:null;}
   function start(){
     var spec=(val('g-what')||(present[0]+':all')).split(':'),c=spec[0],n=parseInt(val('g-n')||'10',10);S.max=parseInt(val('g-a')||'2',10);
-    S.cat=c;refresh(c);
+    S.cat=c;if(T[c].mix)T[c].mix.forEach(refresh);else refresh(c);
     var list=T[c].list.filter(function(t){return t.ok!==false;});
-    var avail=list.filter(function(t){return checked(c,t.n);});if(!avail.length)avail=list;
+    var avail=list.filter(function(t){return checked(t.cat,t.n);});if(!avail.length)avail=list;
     if(spec[1]==='top')avail=avail.slice(0,CATS[c].top);
     var p=shuffle(avail);if(n&&p.length>n)p=p.slice(0,n);
     begin(p);
@@ -166,13 +195,13 @@
   function addRing(x,y,r){var c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);c.setAttribute('fill','none');c.setAttribute('stroke','#d9480f');c.setAttribute('stroke-width','2.6');c.setAttribute('stroke-dasharray','5 3');c.setAttribute('pointer-events','none');svg.appendChild(c);S.rings.push(c);}
   function addRect(b){var r=document.createElementNS(NS,'rect');r.setAttribute('x',b.x-6);r.setAttribute('y',b.y-5);r.setAttribute('width',b.w+12);r.setAttribute('height',b.h+10);r.setAttribute('rx',6);r.setAttribute('fill','none');r.setAttribute('stroke','#d9480f');r.setAttribute('stroke-width','2.6');r.setAttribute('stroke-dasharray','5 3');r.setAttribute('pointer-events','none');svg.appendChild(r);S.rings.push(r);}
   function mark(t,cls){
-    var k=T[S.cat].kind;
+    var k=t.kind;
     t.els.forEach(function(e){
       e.classList.add(cls);if(k==='fill')e.classList.add('g-fill');
       if(k==='point'||(k==='fill'&&e.getBBox().width<30&&e.getBBox().height<30)){var b=toSvg(e.getBoundingClientRect());if(b)addRing(b.x+b.w/2,b.y+b.h/2,Math.max(13,Math.min(Math.max(b.w,b.h)/2+9,38)));}
     });
     if(k==='box')t.boxes.forEach(addRect);
-    labels(S.cat,t.n).forEach(function(l){l.classList.add('reveal');});
+    labels(t.cat,t.n).forEach(function(l){l.classList.add('reveal');});
     var f=t.els[0]||(t.boxes&&t.boxes[0]);
     if(f){var rr=t.els[0]?t.els[0].getBoundingClientRect():null;if(!rr&&t.texts&&t.texts[0])rr=t.texts[0].getBoundingClientRect();
       if(rr){var top=bar.getBoundingClientRect().bottom+30,cy=rr.top+rr.height/2;if(cy<top||cy>innerHeight-30)window.scrollBy({top:cy-(top+innerHeight)/2,behavior:'smooth'});}}
@@ -181,7 +210,7 @@
     clearMarks();S.cur=S.q[S.i];S.att=0;S.done=false;
     var q=S.cur;
     bar.innerHTML='<div class="game-top"><div><div class="game-meta">Pregunta '+(S.i+1)+' de '+S.q.length+' · Aciertos: '+(S.sc.first+S.sc.second)+'</div>'+
-      '<div class="game-q">¿Dónde está <span style="color:#9a6a12">'+esc(CATS[S.cat].q(nice(q.n)))+'</span>?</div></div>'+
+      '<div class="game-q">¿Dónde está <span style="color:#9a6a12">'+esc(CATS[q.cat].q(nice(q.n)))+'</span>?</div></div>'+
       '<div class="game-actions"><button type="button" class="game-btn" id="g-next" hidden>Siguiente ▶</button><button type="button" class="game-btn sec" id="g-skip">Saltar</button><button type="button" class="game-btn sec" id="g-exit">Salir</button></div></div>'+
       '<div class="game-msg" id="g-msg">Haz clic (o toca) sobre el mapa.'+(S.max>1?' Tienes '+S.max+' intentos.':'')+'</div>';
     bar.querySelector('#g-next').onclick=next;bar.querySelector('#g-skip').onclick=function(){miss(true);};bar.querySelector('#g-exit').onclick=exit;
@@ -205,7 +234,7 @@
     try{ok=e.isPointInStroke(pt);}catch(x){}e.style.strokeWidth=old;return ok;
   }
   function level(t,ev,coarse){
-    var kind=T[S.cat].kind;
+    var kind=t.kind;
     if(kind==='stroke'){
       var W=coarse?[8,18,30]:[5,11,19];
       for(var k=0;k<3;k++){if(t.els.some(function(e){return shown(e)&&strokeHit(e,ev,W[k]);}))return k;}return 9;
@@ -226,7 +255,7 @@
     }
     /* box */
     var m=svg.getScreenCTM();if(!m)return 9;var p=svg.createSVGPoint();p.x=ev.clientX;p.y=ev.clientY;p=p.matrixTransform(m.inverse());
-    var tol=(CATS[S.cat].tol||[14,34,56]).slice();if(coarse)tol=tol.map(function(x){return x*1.3;});
+    var tol=(CATS[t.cat].tol||[14,34,56]).slice();if(coarse)tol=tol.map(function(x){return x*1.3;});
     var d=1e9;t.boxes.forEach(function(b){var dx=Math.max(b.x-p.x,0,p.x-(b.x+b.w)),dy=Math.max(b.y-p.y,0,p.y-(b.y+b.h));d=Math.min(d,Math.hypot(dx,dy));});
     for(var q=0;q<3;q++)if(d<=tol[q])return q;return 9;
   }
@@ -250,7 +279,7 @@
     }
     var left=S.max-S.att,what=r.what?'Has señalado <b>'+esc(nice(r.what.n))+'</b>.':'Ahí no hay nada de lo que se pregunta.';
     if(left>0){
-      if(r.what){r.what.els.forEach(function(e){e.classList.add('g-bad');if(T[S.cat].kind==='fill')e.classList.add('g-fill');});clearTimeout(S.tm);S.tm=setTimeout(function(){svg.querySelectorAll('.g-bad').forEach(function(e){e.classList.remove('g-bad','g-fill');});},1100);}
+      if(r.what){r.what.els.forEach(function(e){e.classList.add('g-bad');if(r.what.kind==='fill')e.classList.add('g-fill');});clearTimeout(S.tm);S.tm=setTimeout(function(){svg.querySelectorAll('.g-bad').forEach(function(e){e.classList.remove('g-bad','g-fill');});},1100);}
       msg('No es ahí. '+what+' Te queda '+left+' intento'+(left>1?'s':'')+'.','bad');
     } else {
       S.fails.push(q);mark(q,'g-miss');msg('No era ahí. '+what+' Era <b>'+esc(nice(q.n))+'</b>, marcado en naranja.','bad');finishQ();
