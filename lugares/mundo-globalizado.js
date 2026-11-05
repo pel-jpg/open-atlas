@@ -45,7 +45,7 @@ window.LUGARES={
 },
 "Nace la OMC (1995)": {
 "k": "Acontecimiento",
-"t": "El 1 de enero de 1995 el antiguo GATT se convirtió en la Organización Mundial del Comercio, con sede en Ginebra, que fija las reglas del comercio entre países y resuelve sus disputas. Tiene hoy unos 165 miembros."
+"t": "El 1 de enero de 1995 el antiguo GATT se convirtió en la Organización Mundial del Comercio, con sede en Ginebra, que fija las reglas del comercio entre países y resuelve sus disputas. Tiene hoy 166 miembros."
 },
 "TLCAN (1994)": {
 "k": "Acontecimiento",
@@ -61,7 +61,7 @@ window.LUGARES={
 },
 "ASEAN llega a diez miembros (1999)": {
 "k": "Acontecimiento",
-"t": "La Asociación de Naciones del Sudeste Asiático, fundada en 1967 por cinco países, fue sumando miembros tras la Guerra Fría: Brunéi (1984), Vietnam (1995), Laos y Birmania (1997) y Camboya (1999). Su secretaría está en Yakarta."
+"t": "La Asociación de Naciones del Sudeste Asiático, fundada en 1967 por cinco países, fue sumando miembros tras la Guerra Fría: Brunéi (1984), Vietnam (1995), Laos y Birmania (1997) y Camboya (1999). En 2025 se incorporó Timor Oriental como undécimo miembro. Su secretaría está en Yakarta."
 },
 "China entra en la OMC (2001)": {
 "k": "Acontecimiento",
@@ -73,7 +73,7 @@ window.LUGARES={
 },
 "Rumanía y Bulgaria entran en la UE (2007)": {
 "k": "Acontecimiento",
-"t": "El 1 de enero de 2007 la UE pasó a 27 miembros con la entrada de Bulgaria y Rumanía, dos de los países más pobres del club. Siguen bajo supervisión especial en justicia y lucha contra la corrupción."
+"t": "El 1 de enero de 2007 la UE pasó a 27 miembros con la entrada de Bulgaria y Rumanía, dos de los países más pobres del club. Estuvieron bajo un mecanismo especial de vigilancia en justicia y lucha contra la corrupción hasta 2023."
 },
 "Croacia, país 28 de la UE (2013)": {
 "k": "Acontecimiento",
@@ -113,7 +113,7 @@ window.LUGARES={
 },
 "Atentados del 11-M en Madrid (2004)": {
 "k": "Acontecimiento",
-"t": "El 11 de marzo de 2004 diez bombas estallaron en cuatro trenes de cercanías en Madrid, tres días antes de las elecciones generales. Murieron 193 personas. Es el mayor atentado terrorista cometido en Europa occidental."
+"t": "El 11 de marzo de 2004 diez bombas estallaron en cuatro trenes de cercanías en Madrid, tres días antes de las elecciones generales. Murieron 193 personas y unas 2 000 resultaron heridas. Es el atentado más mortífero de la historia de España."
 },
 "Atentados de Londres (2005)": {
 "k": "Acontecimiento",
@@ -165,7 +165,7 @@ window.LUGARES={
 },
 "Zona de Libre Comercio africana (2018)": {
 "k": "Acontecimiento",
-"t": "En marzo de 2018, en Kigali, los países africanos firmaron el acuerdo para crear la mayor zona de libre comercio del mundo por número de países. Hoy la han firmado 54 de los 55 estados de la Unión Africana (todos menos Eritrea). Su objetivo es multiplicar el comercio dentro del continente."
+"t": "En marzo de 2018, en Kigali, 44 países africanos firmaron el acuerdo para crear la mayor zona de libre comercio del mundo por número de países. Hoy lo han firmado casi todos los estados de la Unión Africana. Su objetivo es multiplicar el comercio dentro del continente."
 },
 "COVID-19: primeros casos en Wuhan (2019–20)": {
 "k": "Acontecimiento",
@@ -173,11 +173,11 @@ window.LUGARES={
 },
 "Next Generation EU (2020)": {
 "k": "Acontecimiento",
-"t": "Para superar la crisis de la pandemia, la UE aprobó en 2020 un fondo de recuperación de 750 000 millones de euros, financiado por primera vez con deuda común. Se reparte entre los países en forma de ayudas y préstamos."
+"t": "Para superar la crisis de la pandemia, la UE aprobó en 2020 un fondo de recuperación de 750 000 millones de euros, financiado con deuda común que emite la Comisión Europea, algo inédito a esa escala. Se reparte entre los países en forma de ayudas y préstamos."
 },
 "RCEP, el mayor acuerdo comercial (2020–22)": {
 "k": "Acontecimiento",
-"t": "El Acuerdo Integral y Progresista de Asociación Económica Regional se firmó en 2020 y entró en vigor en 2022. Reúne a los diez países de la ASEAN, China, Japón, Corea del Sur, Australia y Nueva Zelanda: casi un tercio del comercio y de la población mundial. India no participa."
+"t": "El Acuerdo Integral y Progresista de Asociación Económica Regional se firmó en 2020 y entró en vigor en 2022. Reúne a los diez países de la ASEAN, China, Japón, Corea del Sur, Australia y Nueva Zelanda: casi un tercio de la población y del PIB mundiales. India no participa."
 },
 "Invasión rusa de Ucrania (2022)": {
 "k": "Acontecimiento",

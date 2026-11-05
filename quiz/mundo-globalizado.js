@@ -12,7 +12,7 @@ cards:[
 {f:"¿Qué fue la Primavera Árabe?",b:"La ola de protestas de 2010–2011 que derribó a los presidentes de Túnez y Egipto y desembocó en guerras en Libia y Siria."},
 {f:"¿Qué son los BRICS?",b:"Un grupo de economías emergentes: Brasil, Rusia, India, China y, desde 2010, Sudáfrica."},
 {f:"¿Qué es el Brexit?",b:"La salida del Reino Unido de la UE, votada en referéndum en 2016 y completada el 31 de enero de 2020."},
-{f:"¿Qué es el RCEP?",b:"El mayor acuerdo comercial del mundo por población, en vigor desde 2022, que reúne a la ASEAN, China, Japón, Corea del Sur, Australia y Nueva Zelanda."}
+{f:"¿Qué es el RCEP?",b:"Uno de los mayores acuerdos comerciales del mundo (casi un tercio de la población y del PIB mundiales), en vigor desde 2022, que reúne a la ASEAN, China, Japón, Corea del Sur, Australia y Nueva Zelanda."}
 ],
 pins:[
 {q:"¿Dónde está Washington, capital de la única superpotencia tras 1991?",x:193,y:112,r:26,e:"Washington está en la costa este de Estados Unidos."},
