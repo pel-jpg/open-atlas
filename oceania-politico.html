@@ -142,7 +142,18 @@
   @media print{.custom-panel{display:none !important;}}
 .grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
   .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
-  </style>
+  
+  /* jerarquía de rótulos: países con serifa, capitales en versalitas pequeñas, mares en cursiva */
+  .label,.country-name-label{font-size:13px;opacity:1;font-family:'Fraunces',Georgia,serif;font-weight:600;fill:#2e2617;letter-spacing:.01em;}
+  .capital-label{font-size:9.5px;font-weight:600;fill:#14110b;text-transform:uppercase;letter-spacing:.04em;}
+  .capital-dot{fill:#14110b;}
+  .sea-label{font-style:italic;font-weight:400;letter-spacing:.08em;}
+  /* en Oceanía casi todos los rótulos caen sobre el mar: van en claro, salvo los de Australia y Nueva Zelanda */
+  .country-name-label,.capital-label{fill:#EDE6D3;}
+  .capital-dot{fill:#EDE6D3;stroke:#14110b;}
+  .country-name-label[data-name="Australia"],.country-name-label[data-name="Nueva Zelanda"],.capital-label[data-name="Canberra"],.capital-label[data-name="Wellington"]{fill:#14110b;}
+  .capital-dot[data-name="Canberra"],.capital-dot[data-name="Wellington"]{fill:#14110b;stroke:#ECE4D2;}
+</style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
@@ -266,33 +277,33 @@
 
     
 <text class="capital-label" data-cat="capital" data-name="Canberra" x="649.4" y="845.6">Canberra</text>
-<text class="country-name-label" data-cat="country" data-name="Australia" x="646.5" y="866.2" text-anchor="middle">AUSTRALIA</text>
+<text class="country-name-label" data-cat="country" data-name="Australia" x="646.5" y="866.2" text-anchor="middle">Australia</text>
 <text class="capital-label" data-cat="capital" data-name="Wellington" x="991.9" y="953.1">Wellington</text>
-<text class="country-name-label" data-cat="country" data-name="Nueva Zelanda" x="985.6" y="973.6" text-anchor="middle">NUEVA ZELANDA</text>
+<text class="country-name-label" data-cat="country" data-name="Nueva Zelanda" x="985.6" y="973.6" text-anchor="middle">Nueva Zelanda</text>
 <text class="capital-label" data-cat="capital" data-name="Port Moresby" x="586.3" y="420.7">Port Moresby</text>
-<text class="country-name-label" data-cat="country" data-name="Papúa Nueva Guinea" x="582.8" y="441.5" text-anchor="middle">PAPÚA NUEVA GUINEA</text>
+<text class="country-name-label" data-cat="country" data-name="Papúa Nueva Guinea" x="582.8" y="441.5" text-anchor="middle">Papúa Nueva Guinea</text>
 <text class="capital-label" data-cat="capital" data-name="Suva" x="1088.6" y="575.6">Suva</text>
-<text class="country-name-label" data-cat="country" data-name="Fiyi" x="1081.1" y="594.7" text-anchor="middle">FIYI</text>
+<text class="country-name-label" data-cat="country" data-name="Fiyi" x="1081.1" y="594.7" text-anchor="middle">Fiyi</text>
 <text class="capital-label" data-cat="capital" data-name="Honiara" x="799.3" y="411.6">Honiara</text>
-<text class="country-name-label" data-cat="country" data-name="Islas Salomón" x="793.9" y="431.9" text-anchor="middle">ISLAS SALOMÓN</text>
+<text class="country-name-label" data-cat="country" data-name="Islas Salomón" x="793.9" y="431.9" text-anchor="middle">Islas Salomón</text>
 <text class="capital-label" data-cat="capital" data-name="Port Vila" x="930.7" y="554.2">Port Vila</text>
-<text class="country-name-label" data-cat="country" data-name="Vanuatu" x="924.5" y="573.8" text-anchor="middle">VANUATU</text>
+<text class="country-name-label" data-cat="country" data-name="Vanuatu" x="924.5" y="573.8" text-anchor="middle">Vanuatu</text>
 <text class="capital-label" data-cat="capital" data-name="Apia" x="1254.4" y="530.2">Apia</text>
-<text class="country-name-label" data-cat="country" data-name="Samoa" x="1245.4" y="548.9" text-anchor="middle">SAMOA</text>
+<text class="country-name-label" data-cat="country" data-name="Samoa" x="1245.4" y="548.9" text-anchor="middle">Samoa</text>
 <text class="capital-label" data-cat="capital" data-name="Nuku&#x27;alofa" x="1178.9" y="639.1">Nuku'alofa</text>
-<text class="country-name-label" data-cat="country" data-name="Tonga" x="1170.7" y="657.9" text-anchor="middle">TONGA</text>
+<text class="country-name-label" data-cat="country" data-name="Tonga" x="1170.7" y="657.9" text-anchor="middle">Tonga</text>
 <text class="capital-label" data-cat="capital" data-name="Tarawa Sur" x="1033.2" y="235.2">Tarawa Sur</text>
-<text class="country-name-label" data-cat="country" data-name="Kiribati" x="1025.6" y="256.2" text-anchor="middle">KIRIBATI</text>
+<text class="country-name-label" data-cat="country" data-name="Kiribati" x="1025.6" y="256.2" text-anchor="middle">Kiribati</text>
 <text class="capital-label" data-cat="capital" data-name="Palikir" x="766.4" y="122">Palikir</text>
-<text class="country-name-label" data-cat="country" data-name="Micronesia" x="760.6" y="144.6" text-anchor="middle">MICRONESIA</text>
+<text class="country-name-label" data-cat="country" data-name="Micronesia" x="760.6" y="144.6" text-anchor="middle">Micronesia</text>
 <text class="capital-label" data-cat="capital" data-name="Majuro" x="1009.4" y="126.6">Majuro</text>
-<text class="country-name-label" data-cat="country" data-name="Islas Marshall" x="1001.7" y="148.7" text-anchor="middle">ISLAS MARSHALL</text>
+<text class="country-name-label" data-cat="country" data-name="Islas Marshall" x="1001.7" y="148.7" text-anchor="middle">Islas Marshall</text>
 <text class="capital-label" data-cat="capital" data-name="Ngerulmud" x="327.6" y="150.7">Ngerulmud</text>
-<text class="country-name-label" data-cat="country" data-name="Palaos" x="325.6" y="174.1" text-anchor="middle">PALAOS</text>
+<text class="country-name-label" data-cat="country" data-name="Palaos" x="325.6" y="174.1" text-anchor="middle">Palaos</text>
 <text class="capital-label" data-cat="capital" data-name="Yaren" x="923.2" y="261.2">Yaren</text>
-<text class="country-name-label" data-cat="country" data-name="Nauru" x="916.6" y="282.2" text-anchor="middle">NAURU</text>
+<text class="country-name-label" data-cat="country" data-name="Nauru" x="916.6" y="282.2" text-anchor="middle">Nauru</text>
 <text class="capital-label" data-cat="capital" data-name="Funafuti" x="1121.6" y="417.9">Funafuti</text>
-<text class="country-name-label" data-cat="country" data-name="Tuvalu" x="1113.6" y="437.5" text-anchor="middle">TUVALU</text>
+<text class="country-name-label" data-cat="country" data-name="Tuvalu" x="1113.6" y="437.5" text-anchor="middle">Tuvalu</text>
 <text class="grat-label" x="208.3" y="27.6">130°E</text>
 <text class="grat-label" x="407.4" y="24.6">140°E</text>
 <text class="grat-label" x="603.7" y="28.9">150°E</text>

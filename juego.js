@@ -49,6 +49,25 @@
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   var NOREL=/(costeros|hidrografia)/.test(location.pathname);
 
+  /* capital → país, para decir «Nicosia, capital de Chipre» al responder */
+  var CAPDE={'Abuya':'Nigeria','Conakry':'Guinea','Kinsasa':'R.D. Congo','Lilongwe':'Malaui','Mbabane':'Esuatini','Porto-Novo':'Benín','Pretoria':'Sudáfrica',
+    'Belmopán':'Belice','Nasáu':'Bahamas','Panamá':'Panamá','San Jorge':'Granada','San Juan de Antigua':'Antigua y Barbuda','Washington D.C.':'Estados Unidos',
+    'Ammán':'Jordania','Ashgabat':'Turkmenistán','Dhaka':'Bangladés','Duchambé':'Tayikistán','Phnom Penh':'Camboya','Taipéi':'Taiwán',
+    'Andorra la Vella':'Andorra','Pristina':'Kosovo','Valeta':'Malta',"Nuku'alofa":'Tonga'};
+  var CAPTXT={'La Paz':'sede del gobierno de Bolivia'};
+  (function(){
+    var me=document.querySelector('script[data-paises]'),url=(me&&me.getAttribute('data-paises'))||'datos-paises.json';
+    if(!svg.querySelector('[data-cat="capital"]')||!window.fetch)return;
+    fetch(url).then(function(r){return r.json();}).then(function(d){
+      Object.keys(d).forEach(function(p){(d[p].cap||[]).forEach(function(c){if(!CAPDE[c])CAPDE[c]=p;});});
+    }).catch(function(){});
+  })();
+  function full(it){
+    var s='<b>'+esc(nice(it.n))+'</b>';
+    if(it.cat!=='capital')return s;
+    if(CAPTXT[it.n])return s+', '+CAPTXT[it.n];
+    return CAPDE[it.n]?s+', capital de '+esc(CAPDE[it.n]):s;
+  }
   /* ---------- objetivos jugables ---------- */
   var T={},present=[];
   ORDER.forEach(function(c){
@@ -223,7 +242,7 @@
   }
   function miss(skipped){
     var q=S.cur;S.fails.push(q);mark(q,'g-miss');
-    msg((skipped?'Saltada. ':'No era ahí. ')+'Era <b>'+esc(nice(q.n))+'</b>, marcado en naranja.','bad');finishQ();
+    msg((skipped?'Saltada. ':'No era ahí. ')+'Era '+full(q)+', marcado en naranja.','bad');finishQ();
   }
   function next(){clearTimeout(S.at);S.i++;if(S.i>=S.q.length)end();else ask();}
 
@@ -273,16 +292,16 @@
     var r=judge(ev),q=S.cur;S.att++;
     if(r.ok){
       if(S.att===1)S.sc.first++;else S.sc.second++;
-      mark(q,'g-ok');msg('¡Correcto! Es <b>'+esc(nice(q.n))+'</b>.'+(S.att>1?' (a la segunda)':''),'ok');
+      mark(q,'g-ok');msg('¡Correcto! Es '+full(q)+'.'+(S.att>1?' (a la segunda)':''),'ok');
       var m=bar.querySelector('.game-meta');if(m)m.textContent='Pregunta '+(S.i+1)+' de '+S.q.length+' · Aciertos: '+(S.sc.first+S.sc.second);
       finishQ(true);return;
     }
-    var left=S.max-S.att,what=r.what?'Has señalado <b>'+esc(nice(r.what.n))+'</b>.':'Ahí no hay nada de lo que se pregunta.';
+    var left=S.max-S.att,what=r.what?'Has señalado '+full(r.what)+'.':'Ahí no hay nada de lo que se pregunta.';
     if(left>0){
       if(r.what){r.what.els.forEach(function(e){e.classList.add('g-bad');if(r.what.kind==='fill')e.classList.add('g-fill');});clearTimeout(S.tm);S.tm=setTimeout(function(){svg.querySelectorAll('.g-bad').forEach(function(e){e.classList.remove('g-bad','g-fill');});},1100);}
       msg('No es ahí. '+what+' Te queda '+left+' intento'+(left>1?'s':'')+'.','bad');
     } else {
-      S.fails.push(q);mark(q,'g-miss');msg('No era ahí. '+what+' Era <b>'+esc(nice(q.n))+'</b>, marcado en naranja.','bad');finishQ();
+      S.fails.push(q);mark(q,'g-miss');msg('No era ahí. '+what+' Era '+full(q)+', marcado en naranja.','bad');finishQ();
     }
   });
 

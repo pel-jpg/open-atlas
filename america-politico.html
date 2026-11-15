@@ -172,7 +172,14 @@
   @media print{.custom-panel{display:none !important;}}
 .grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
   .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
-  </style>
+  
+  .leader{stroke:#EDE6D3 !important;opacity:.85 !important;}
+  /* jerarquía de rótulos: países con serifa, capitales en versalitas pequeñas, mares en cursiva */
+  .label,.country-name-label{font-family:'Fraunces',Georgia,serif;font-weight:600;fill:#2e2617;letter-spacing:.01em;}
+  .capital-label{font-size:9.5px;font-weight:600;fill:#14110b;text-transform:uppercase;letter-spacing:.04em;}
+  .capital-dot{fill:#14110b;}
+  .sea-label{font-style:italic;font-weight:400;letter-spacing:.08em;}
+</style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
@@ -332,13 +339,13 @@
 <circle class="capital-dot" data-cat="capital" data-name="Santiago" cx="965.9" cy="1403.3" r="2.6"/>
 <circle class="capital-dot" data-cat="capital" data-name="Buenos Aires" cx="1100.6" cy="1417.9" r="2.6"/>
 <circle class="capital-dot" data-cat="capital" data-name="Montevideo" cx="1124.1" cy="1421.8" r="2.6"/>
-<line class="leader" data-cat="capital" data-name="Ciudad de Guatemala" x1="733.1" y1="810.1" x2="736.4" y2="850.2"/>
-<line class="leader" data-cat="capital" data-name="Belmopán" x1="755.5" y1="777.9" x2="761.7" y2="744.2"/>
-<line class="leader" data-cat="capital" data-name="Tegucigalpa" x1="773" y1="818.4" x2="778.5" y2="796.8"/>
-<line class="leader" data-cat="capital" data-name="San Salvador" x1="748.4" y1="822.5" x2="751.1" y2="899.5"/>
-<line class="leader" data-cat="capital" data-name="Managua" x1="784" y1="843" x2="787.7" y2="919.8"/>
-<line class="leader" data-cat="capital" data-name="San José" x1="810.2" y1="871.1" x2="815.9" y2="812.7"/>
-<line class="leader" data-cat="capital" data-name="Panamá" x1="866.7" y1="883.3" x2="871.7" y2="873.9"/>
+<line class="leader" data-cat="capital" data-name="Ciudad de Guatemala" x1="733.1" y1="810.1" x2="730" y2="833"/>
+<line class="leader" data-cat="capital" data-name="Belmopán" x1="755.5" y1="777.9" x2="760" y2="749"/>
+<line class="leader" data-cat="capital" data-name="Tegucigalpa" x1="773" y1="818.4" x2="798" y2="794"/>
+<line class="leader" data-cat="capital" data-name="San Salvador" x1="748.4" y1="822.5" x2="744" y2="850"/>
+<line class="leader" data-cat="capital" data-name="Managua" x1="784" y1="843" x2="770" y2="869"/>
+<line class="leader" data-cat="capital" data-name="San José" x1="810.2" y1="871.1" x2="798" y2="889"/>
+<line class="leader" data-cat="capital" data-name="Panamá" x1="866.7" y1="883.3" x2="864" y2="905"/>
 <line class="leader" data-cat="capital" data-name="Kingston" x1="899.1" y1="770.3" x2="903" y2="724.1"/>
 <line class="leader" data-cat="capital" data-name="Puerto Príncipe" x1="952.5" y1="761.5" x2="957.9" y2="776.5"/>
 <line class="leader" data-cat="capital" data-name="Santo Domingo" x1="980.9" y1="761.9" x2="984.5" y2="740"/>
@@ -432,36 +439,36 @@
 <text class="label" data-cat="country" data-name="Canadá" x="728" y="277.8" text-anchor="middle">Canadá</text>
 <text class="label" data-cat="country" data-name="Chile" x="956.9" y="1429.3" text-anchor="middle">Chile</text>
 <text class="label" data-cat="country" data-name="Colombia" x="949.4" y="943.7" text-anchor="middle">Colombia</text>
-<text class="label" data-cat="country" data-name="Costa Rica" x="808.4" y="874.9" text-anchor="middle">Costa Rica</text>
+<text class="label" data-cat="country"    data-name="Costa Rica" x="803" y="866" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Costa Rica</text>
 <text class="label" data-cat="country" data-name="Cuba" x="866.2" y="726.4" text-anchor="middle">Cuba</text>
 <text class="label" data-cat="country" data-name="República Dominicana" x="977.9" y="758.4" text-anchor="middle">República Dominicana</text>
 <text class="label" data-cat="country" data-name="Ecuador" x="885" y="1018.2" text-anchor="middle">Ecuador</text>
-<text class="label" data-cat="country" data-name="Guatemala" x="737.2" y="795.8" text-anchor="middle">Guatemala</text>
-<text class="label" data-cat="country" data-name="Honduras" x="784.7" y="813.3" text-anchor="middle">Honduras</text>
+<text class="label" data-cat="country"   data-name="Guatemala" x="744.1" y="798.4" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Guatemala</text>
+<text class="label" data-cat="country"   data-name="Honduras" x="780.3" y="811.6" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">Honduras</text>
 <text class="label" data-cat="country" data-name="Haití" x="943" y="743.4" text-anchor="middle">Haití</text>
 <text class="label" data-cat="country" data-name="Jamaica" x="893.6" y="781.9" text-anchor="middle">Jamaica</text>
 <text class="label" data-cat="country" data-name="México" x="608.4" y="688.5" text-anchor="middle">México</text>
-<text class="label" data-cat="country" data-name="Nicaragua" x="794.5" y="834" text-anchor="middle">Nicaragua</text>
-<text class="label" data-cat="country" data-name="Panamá" x="859.5" y="890.4" text-anchor="middle">Panamá</text>
+<text class="label" data-cat="country"   data-name="Nicaragua" x="801.2" y="834.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Nicaragua</text>
+<text class="label" data-cat="country"   data-name="Panamá" x="844" y="891.2" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Panamá</text>
 <text class="label" data-cat="country" data-name="Perú" x="923.8" y="1110.3" text-anchor="middle">Perú</text>
 <text class="label" data-cat="country" data-name="Paraguay" x="1118.4" y="1283.3" text-anchor="middle">Paraguay</text>
 <text class="label" data-cat="country" data-name="Uruguay" x="1133.8" y="1393.5" text-anchor="middle">Uruguay</text>
 <text class="label" data-cat="country" data-name="Venezuela" x="1027.9" y="912.3" text-anchor="middle">Venezuela</text>
 <text class="label" data-cat="country" data-name="Surinam" x="1159.2" y="937.5" text-anchor="middle">Surinam</text>
-<text class="label" data-cat="country" data-name="El Salvador" x="753.6" y="780.9" text-anchor="middle">El Salvador</text>
+<text class="label" data-cat="country"   data-name="El Salvador" x="713.3" y="828" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">El Salvador</text>
 <text class="label" data-cat="country" data-name="Estados Unidos" x="698.6" y="524.7" text-anchor="middle">Estados Unidos</text>
-<text class="label" data-cat="country" data-name="Belice" x="757.7" y="762.1" text-anchor="middle">Belice</text>
-<text class="label" data-cat="country" data-name="Guyana" x="1137.7" y="909.8" text-anchor="middle">Guyana</text>
+<text class="label" data-cat="country"   data-name="Belice" x="771" y="771.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Belice</text>
+<text class="label" data-cat="country"   data-name="Guyana" x="1117.3" y="917.6" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">Guyana</text>
 <text class="capital-label" data-cat="capital" data-name="Ottawa" x="904.4" y="435" text-anchor="start">Ottawa</text>
 <text class="capital-label" data-cat="capital" data-name="Washington D.C." x="894.8" y="514" text-anchor="start">Washington D.C.</text>
 <text class="capital-label" data-cat="capital" data-name="Ciudad de México" x="639.1" y="747.4" text-anchor="start">Ciudad de México</text>
-<text class="capital-label" data-cat="capital" data-name="Ciudad de Guatemala" x="736.4" y="850.2" text-anchor="start">Ciudad de Guatemala</text>
-<text class="capital-label" data-cat="capital" data-name="Belmopán" x="761.7" y="744.2" text-anchor="start">Belmopán</text>
-<text class="capital-label" data-cat="capital" data-name="Tegucigalpa" x="778.5" y="796.8" text-anchor="start">Tegucigalpa</text>
-<text class="capital-label" data-cat="capital" data-name="San Salvador" x="751.1" y="899.5" text-anchor="start">San Salvador</text>
-<text class="capital-label" data-cat="capital" data-name="Managua" x="787.7" y="919.8" text-anchor="start">Managua</text>
-<text class="capital-label" data-cat="capital" data-name="San José" x="815.9" y="812.7" text-anchor="start">San José</text>
-<text class="capital-label" data-cat="capital" data-name="Panamá" x="871.7" y="873.9" text-anchor="start">Panamá</text>
+<text class="capital-label" data-cat="capital" data-name="Ciudad de Guatemala" x="728" y="836" text-anchor="end">Ciudad de Guatemala</text>
+<text class="capital-label" data-cat="capital" data-name="Belmopán" x="762" y="752" text-anchor="start">Belmopán</text>
+<text class="capital-label" data-cat="capital" data-name="Tegucigalpa" x="800" y="797" text-anchor="start">Tegucigalpa</text>
+<text class="capital-label" data-cat="capital" data-name="San Salvador" x="742" y="853" text-anchor="end">San Salvador</text>
+<text class="capital-label" data-cat="capital" data-name="Managua" x="768" y="872" text-anchor="end">Managua</text>
+<text class="capital-label" data-cat="capital" data-name="San José" x="796" y="892" text-anchor="end">San José</text>
+<text class="capital-label" data-cat="capital" data-name="Panamá" x="862" y="908" text-anchor="end">Panamá</text>
 <text class="capital-label" data-cat="capital" data-name="La Habana" x="837.9" y="709.1" text-anchor="start">La Habana</text>
 <text class="capital-label" data-cat="capital" data-name="Kingston" x="903" y="724.1" text-anchor="start">Kingston</text>
 <text class="capital-label" data-cat="capital" data-name="Puerto Príncipe" x="957.9" y="776.5" text-anchor="start">Puerto Príncipe</text>
@@ -660,13 +667,13 @@
 <circle class="capital-dot" data-cat="capital" data-name="Santiago" cx="965.9" cy="1403.3" r="2.6"/>
 <circle class="capital-dot" data-cat="capital" data-name="Buenos Aires" cx="1100.6" cy="1417.9" r="2.6"/>
 <circle class="capital-dot" data-cat="capital" data-name="Montevideo" cx="1124.1" cy="1421.8" r="2.6"/>
-<line class="leader" data-cat="capital" data-name="Ciudad de Guatemala" x1="733.1" y1="810.1" x2="736.4" y2="850.2"/>
-<line class="leader" data-cat="capital" data-name="Belmopán" x1="755.5" y1="777.9" x2="761.7" y2="744.2"/>
-<line class="leader" data-cat="capital" data-name="Tegucigalpa" x1="773" y1="818.4" x2="778.5" y2="796.8"/>
-<line class="leader" data-cat="capital" data-name="San Salvador" x1="748.4" y1="822.5" x2="751.1" y2="899.5"/>
-<line class="leader" data-cat="capital" data-name="Managua" x1="784" y1="843" x2="787.7" y2="919.8"/>
-<line class="leader" data-cat="capital" data-name="San José" x1="810.2" y1="871.1" x2="815.9" y2="812.7"/>
-<line class="leader" data-cat="capital" data-name="Panamá" x1="866.7" y1="883.3" x2="871.7" y2="873.9"/>
+<line class="leader" data-cat="capital" data-name="Ciudad de Guatemala" x1="733.1" y1="810.1" x2="730" y2="833"/>
+<line class="leader" data-cat="capital" data-name="Belmopán" x1="755.5" y1="777.9" x2="760" y2="749"/>
+<line class="leader" data-cat="capital" data-name="Tegucigalpa" x1="773" y1="818.4" x2="798" y2="794"/>
+<line class="leader" data-cat="capital" data-name="San Salvador" x1="748.4" y1="822.5" x2="744" y2="850"/>
+<line class="leader" data-cat="capital" data-name="Managua" x1="784" y1="843" x2="770" y2="869"/>
+<line class="leader" data-cat="capital" data-name="San José" x1="810.2" y1="871.1" x2="798" y2="889"/>
+<line class="leader" data-cat="capital" data-name="Panamá" x1="866.7" y1="883.3" x2="864" y2="905"/>
 <line class="leader" data-cat="capital" data-name="Kingston" x1="899.1" y1="770.3" x2="903" y2="724.1"/>
 <line class="leader" data-cat="capital" data-name="Puerto Príncipe" x1="952.5" y1="761.5" x2="957.9" y2="776.5"/>
 <line class="leader" data-cat="capital" data-name="Santo Domingo" x1="980.9" y1="761.9" x2="984.5" y2="740"/>
@@ -760,36 +767,36 @@
 <text class="label" data-cat="country" data-name="Canadá" x="728" y="277.8" text-anchor="middle">Canadá</text>
 <text class="label" data-cat="country" data-name="Chile" x="956.9" y="1429.3" text-anchor="middle">Chile</text>
 <text class="label" data-cat="country" data-name="Colombia" x="949.4" y="943.7" text-anchor="middle">Colombia</text>
-<text class="label" data-cat="country" data-name="Costa Rica" x="808.4" y="874.9" text-anchor="middle">Costa Rica</text>
+<text class="label" data-cat="country"    data-name="Costa Rica" x="803" y="866" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Costa Rica</text>
 <text class="label" data-cat="country" data-name="Cuba" x="866.2" y="726.4" text-anchor="middle">Cuba</text>
 <text class="label" data-cat="country" data-name="República Dominicana" x="977.9" y="758.4" text-anchor="middle">República Dominicana</text>
 <text class="label" data-cat="country" data-name="Ecuador" x="885" y="1018.2" text-anchor="middle">Ecuador</text>
-<text class="label" data-cat="country" data-name="Guatemala" x="737.2" y="795.8" text-anchor="middle">Guatemala</text>
-<text class="label" data-cat="country" data-name="Honduras" x="784.7" y="813.3" text-anchor="middle">Honduras</text>
+<text class="label" data-cat="country"   data-name="Guatemala" x="744.1" y="798.4" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Guatemala</text>
+<text class="label" data-cat="country"   data-name="Honduras" x="780.3" y="811.6" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">Honduras</text>
 <text class="label" data-cat="country" data-name="Haití" x="943" y="743.4" text-anchor="middle">Haití</text>
 <text class="label" data-cat="country" data-name="Jamaica" x="893.6" y="781.9" text-anchor="middle">Jamaica</text>
 <text class="label" data-cat="country" data-name="México" x="608.4" y="688.5" text-anchor="middle">México</text>
-<text class="label" data-cat="country" data-name="Nicaragua" x="794.5" y="834" text-anchor="middle">Nicaragua</text>
-<text class="label" data-cat="country" data-name="Panamá" x="859.5" y="890.4" text-anchor="middle">Panamá</text>
+<text class="label" data-cat="country"   data-name="Nicaragua" x="801.2" y="834.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Nicaragua</text>
+<text class="label" data-cat="country"   data-name="Panamá" x="844" y="891.2" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Panamá</text>
 <text class="label" data-cat="country" data-name="Perú" x="923.8" y="1110.3" text-anchor="middle">Perú</text>
 <text class="label" data-cat="country" data-name="Paraguay" x="1118.4" y="1283.3" text-anchor="middle">Paraguay</text>
 <text class="label" data-cat="country" data-name="Uruguay" x="1133.8" y="1393.5" text-anchor="middle">Uruguay</text>
 <text class="label" data-cat="country" data-name="Venezuela" x="1027.9" y="912.3" text-anchor="middle">Venezuela</text>
 <text class="label" data-cat="country" data-name="Surinam" x="1159.2" y="937.5" text-anchor="middle">Surinam</text>
-<text class="label" data-cat="country" data-name="El Salvador" x="753.6" y="780.9" text-anchor="middle">El Salvador</text>
+<text class="label" data-cat="country"   data-name="El Salvador" x="713.3" y="828" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">El Salvador</text>
 <text class="label" data-cat="country" data-name="Estados Unidos" x="698.6" y="524.7" text-anchor="middle">Estados Unidos</text>
-<text class="label" data-cat="country" data-name="Belice" x="757.7" y="762.1" text-anchor="middle">Belice</text>
-<text class="label" data-cat="country" data-name="Guyana" x="1137.7" y="909.8" text-anchor="middle">Guyana</text>
+<text class="label" data-cat="country"   data-name="Belice" x="771" y="771.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Belice</text>
+<text class="label" data-cat="country"   data-name="Guyana" x="1117.3" y="917.6" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">Guyana</text>
 <text class="capital-label" data-cat="capital" data-name="Ottawa" x="904.4" y="435" text-anchor="start">Ottawa</text>
 <text class="capital-label" data-cat="capital" data-name="Washington D.C." x="894.8" y="514" text-anchor="start">Washington D.C.</text>
 <text class="capital-label" data-cat="capital" data-name="Ciudad de México" x="639.1" y="747.4" text-anchor="start">Ciudad de México</text>
-<text class="capital-label" data-cat="capital" data-name="Ciudad de Guatemala" x="736.4" y="850.2" text-anchor="start">Ciudad de Guatemala</text>
-<text class="capital-label" data-cat="capital" data-name="Belmopán" x="761.7" y="744.2" text-anchor="start">Belmopán</text>
-<text class="capital-label" data-cat="capital" data-name="Tegucigalpa" x="778.5" y="796.8" text-anchor="start">Tegucigalpa</text>
-<text class="capital-label" data-cat="capital" data-name="San Salvador" x="751.1" y="899.5" text-anchor="start">San Salvador</text>
-<text class="capital-label" data-cat="capital" data-name="Managua" x="787.7" y="919.8" text-anchor="start">Managua</text>
-<text class="capital-label" data-cat="capital" data-name="San José" x="815.9" y="812.7" text-anchor="start">San José</text>
-<text class="capital-label" data-cat="capital" data-name="Panamá" x="871.7" y="873.9" text-anchor="start">Panamá</text>
+<text class="capital-label" data-cat="capital" data-name="Ciudad de Guatemala" x="728" y="836" text-anchor="end">Ciudad de Guatemala</text>
+<text class="capital-label" data-cat="capital" data-name="Belmopán" x="762" y="752" text-anchor="start">Belmopán</text>
+<text class="capital-label" data-cat="capital" data-name="Tegucigalpa" x="800" y="797" text-anchor="start">Tegucigalpa</text>
+<text class="capital-label" data-cat="capital" data-name="San Salvador" x="742" y="853" text-anchor="end">San Salvador</text>
+<text class="capital-label" data-cat="capital" data-name="Managua" x="768" y="872" text-anchor="end">Managua</text>
+<text class="capital-label" data-cat="capital" data-name="San José" x="796" y="892" text-anchor="end">San José</text>
+<text class="capital-label" data-cat="capital" data-name="Panamá" x="862" y="908" text-anchor="end">Panamá</text>
 <text class="capital-label" data-cat="capital" data-name="La Habana" x="837.9" y="709.1" text-anchor="start">La Habana</text>
 <text class="capital-label" data-cat="capital" data-name="Kingston" x="903" y="724.1" text-anchor="start">Kingston</text>
 <text class="capital-label" data-cat="capital" data-name="Puerto Príncipe" x="957.9" y="776.5" text-anchor="start">Puerto Príncipe</text>

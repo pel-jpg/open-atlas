@@ -172,7 +172,13 @@
   @media print{.custom-panel{display:none !important;}}
 .grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
   .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
-  </style>
+  
+  /* jerarquía de rótulos: países con serifa, capitales en versalitas pequeñas, mares en cursiva */
+  .label,.country-name-label{font-family:'Fraunces',Georgia,serif;font-weight:600;fill:#2e2617;letter-spacing:.01em;}
+  .capital-label{font-size:9.5px;font-weight:600;fill:#14110b;text-transform:uppercase;letter-spacing:.04em;}
+  .capital-dot{fill:#14110b;}
+  .sea-label{font-style:italic;font-weight:400;letter-spacing:.08em;}
+</style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
@@ -582,31 +588,31 @@
 <text class="sea-label" data-cat="sea" data-name="MAR NEGRO" x="482.3" y="372.4" text-anchor="middle" style="font-size:10px">MAR NEGRO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR CASPIO" x="595.7" y="457.1" text-anchor="middle" style="font-size:10.5px">MAR CASPIO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR DE ARAL" x="684.6" y="454.5" text-anchor="middle" style="font-size:8px">MAR DE ARAL</text>
-<text class="label" data-cat="country" data-name="Brunéi" x="1226.8" y="1006.6" text-anchor="middle">Brunéi</text>
-<text class="label" data-cat="country" data-name="Bután" x="931.5" y="727.3" text-anchor="middle">Bután</text>
-<text class="label" data-cat="country" data-name="Emiratos Árabes Unidos" x="539.4" y="666.5" text-anchor="middle">Emiratos Árabes Unidos</text>
+<text class="label" data-cat="country"   data-name="Brunéi" x="1200.8" y="1011.1" text-anchor="middle" transform="translate(0,0)" style="font-size:16px">Brunéi</text>
+<text class="label" data-cat="country"   data-name="Bután" x="942.4" y="729.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Bután</text>
+<text class="label" data-cat="country"   data-name="Emiratos Árabes Unidos" x="557.2" y="680.5" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Emiratos Árabes Unidos</text>
 <text class="label" data-cat="country" data-name="Afganistán" x="714.8" y="607.4" text-anchor="middle">Afganistán</text>
-<text class="label" data-cat="country" data-name="Armenia" x="539.9" y="455.5" text-anchor="middle">Armenia</text>
-<text class="label" data-cat="country" data-name="Azerbaiyán" x="550.9" y="488.7" text-anchor="middle">Azerbaiyán</text>
-<text class="label" data-cat="country" data-name="Bangladés" x="926.7" y="772.5" text-anchor="middle">Bangladés</text>
+<text class="label" data-cat="country"   data-name="Armenia" x="541" y="467" text-anchor="middle" transform="translate(0,0)" style="font-size:9.5px">Armenia</text>
+<text class="label" data-cat="country"   data-name="Azerbaiyán" x="571" y="456" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Azerbaiyán</text>
+<text class="label" data-cat="country"   data-name="Bangladés" x="932.4" y="762.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Bangladés</text>
 <text class="label" data-cat="country" data-name="China" x="1074.2" y="617" text-anchor="middle">China</text>
 <text class="label" data-cat="country" data-name="Chipre" x="418.8" y="438.4" text-anchor="middle">Chipre</text>
 <text class="label" data-cat="country" data-name="Kirguistán" x="802.8" y="538.9" text-anchor="middle">Kirguistán</text>
 <text class="label" data-cat="country" data-name="Georgia" x="539.4" y="424" text-anchor="middle">Georgia</text>
 <text class="label" data-cat="country" data-name="Indonesia" x="1225.5" y="1067.2" text-anchor="middle">Indonesia</text>
-<text class="label" data-cat="country" data-name="Israel" x="401.2" y="495.7" text-anchor="middle">Israel</text>
+<text class="label" data-cat="country"   data-name="Israel" x="380.9" y="503.6" text-anchor="middle" transform="translate(0,0)" style="font-size:16px">Israel</text>
 <text class="label" data-cat="country" data-name="India" x="838" y="799.7" text-anchor="middle">India</text>
 <text class="label" data-cat="country" data-name="Irak" x="489" y="522.6" text-anchor="middle">Irak</text>
 <text class="label" data-cat="country" data-name="Irán" x="575.5" y="575.7" text-anchor="middle">Irán</text>
-<text class="label" data-cat="country" data-name="Jordania" x="405.9" y="529.9" text-anchor="middle">Jordania</text>
+<text class="label" data-cat="country"    data-name="Jordania" x="421.3" y="509.1" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Jordania</text>
 <text class="label" data-cat="country" data-name="Malasia" x="1227.6" y="1028.6" text-anchor="middle">Malasia</text>
 <text class="label" data-cat="country" data-name="Camboya" x="1095.6" y="913.8" text-anchor="middle">Camboya</text>
 <text class="label" data-cat="country" data-name="Corea del Norte" x="1287.8" y="544.2" text-anchor="middle">Corea del Norte</text>
 <text class="label" data-cat="country" data-name="Corea del Sur" x="1302.8" y="589.5" text-anchor="middle">Corea del Sur</text>
-<text class="label" data-cat="country" data-name="Kuwait" x="501.6" y="582.4" text-anchor="middle">Kuwait</text>
+<text class="label" data-cat="country"   data-name="Kuwait" x="511" y="597.3" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Kuwait</text>
 <text class="label" data-cat="country" data-name="Kazajistán" x="757.4" y="439.3" text-anchor="middle">Kazajistán</text>
 <text class="label" data-cat="country" data-name="Laos" x="1079.2" y="843.7" text-anchor="middle">Laos</text>
-<text class="label" data-cat="country" data-name="Líbano" x="418.4" y="486" text-anchor="middle">Líbano</text>
+<text class="label" data-cat="country"   data-name="Líbano" x="394.1" y="478.8" text-anchor="middle" transform="translate(0,0)" style="font-size:14px">Líbano</text>
 <text class="label" data-cat="country" data-name="Sri Lanka" x="787.8" y="954" text-anchor="middle">Sri Lanka</text>
 <text class="label" data-cat="country" data-name="Birmania" x="995.3" y="831.1" text-anchor="middle">Birmania</text>
 <text class="label" data-cat="country" data-name="Mongolia" x="1067" y="494.2" text-anchor="middle">Mongolia</text>
@@ -616,12 +622,12 @@
 <text class="label" data-cat="country" data-name="Omán" x="542.7" y="714.5" text-anchor="middle">Omán</text>
 <text class="label" data-cat="country" data-name="Filipinas" x="1296.3" y="851.1" text-anchor="middle">Filipinas</text>
 <text class="label" data-cat="country" data-name="Pakistán" x="707.2" y="648.2" text-anchor="middle">Pakistán</text>
-<text class="label" data-cat="country" data-name="Catar" x="532.2" y="609" text-anchor="middle">Catar</text>
+<text class="label" data-cat="country"   data-name="Catar" x="535" y="638.8" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">Catar</text>
 <text class="label" data-cat="country" data-name="Uzbekistán" x="712.9" y="511.8" text-anchor="middle">Uzbekistán</text>
-<text class="label" data-cat="country" data-name="Vietnam" x="1103.4" y="870.3" text-anchor="middle">Vietnam</text>
-<text class="label" data-cat="country" data-name="Siria" x="457.7" y="482.2" text-anchor="middle">Siria</text>
+<text class="label" data-cat="country"   data-name="Vietnam" x="1086.5" y="800.3" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Vietnam</text>
+<text class="label" data-cat="country"   data-name="Siria" x="451" y="485.3" text-anchor="middle" transform="translate(0,0)" style="font-size:16px">Siria</text>
 <text class="label" data-cat="country" data-name="Tailandia" x="1052.1" y="895.7" text-anchor="middle">Tailandia</text>
-<text class="label" data-cat="country" data-name="Tayikistán" x="763.9" y="559.1" text-anchor="middle">Tayikistán</text>
+<text class="label" data-cat="country"   data-name="Tayikistán" x="767.7" y="559.7" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Tayikistán</text>
 <text class="label" data-cat="country" data-name="Timor Oriental" x="1421.8" y="1163.8" text-anchor="middle">Timor Oriental</text>
 <text class="label" data-cat="country" data-name="Turkmenistán" x="658.9" y="524.4" text-anchor="middle">Turkmenistán</text>
 <text class="label" data-cat="country" data-name="Turquía" x="455.3" y="421.5" text-anchor="middle">Turquía</text>
@@ -1096,31 +1102,31 @@
 <text class="sea-label" data-cat="sea" data-name="MAR NEGRO" x="482.3" y="372.4" text-anchor="middle" style="font-size:10px">MAR NEGRO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR CASPIO" x="595.7" y="457.1" text-anchor="middle" style="font-size:10.5px">MAR CASPIO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR DE ARAL" x="684.6" y="454.5" text-anchor="middle" style="font-size:8px">MAR DE ARAL</text>
-<text class="label" data-cat="country" data-name="Brunéi" x="1226.8" y="1006.6" text-anchor="middle">Brunéi</text>
-<text class="label" data-cat="country" data-name="Bután" x="931.5" y="727.3" text-anchor="middle">Bután</text>
-<text class="label" data-cat="country" data-name="Emiratos Árabes Unidos" x="539.4" y="666.5" text-anchor="middle">Emiratos Árabes Unidos</text>
+<text class="label" data-cat="country"   data-name="Brunéi" x="1200.8" y="1011.1" text-anchor="middle" transform="translate(0,0)" style="font-size:16px">Brunéi</text>
+<text class="label" data-cat="country"   data-name="Bután" x="942.4" y="729.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Bután</text>
+<text class="label" data-cat="country"   data-name="Emiratos Árabes Unidos" x="557.2" y="680.5" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Emiratos Árabes Unidos</text>
 <text class="label" data-cat="country" data-name="Afganistán" x="714.8" y="607.4" text-anchor="middle">Afganistán</text>
-<text class="label" data-cat="country" data-name="Armenia" x="539.9" y="455.5" text-anchor="middle">Armenia</text>
-<text class="label" data-cat="country" data-name="Azerbaiyán" x="550.9" y="488.7" text-anchor="middle">Azerbaiyán</text>
-<text class="label" data-cat="country" data-name="Bangladés" x="926.7" y="772.5" text-anchor="middle">Bangladés</text>
+<text class="label" data-cat="country"   data-name="Armenia" x="541" y="467" text-anchor="middle" transform="translate(0,0)" style="font-size:9.5px">Armenia</text>
+<text class="label" data-cat="country"   data-name="Azerbaiyán" x="571" y="456" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Azerbaiyán</text>
+<text class="label" data-cat="country"   data-name="Bangladés" x="932.4" y="762.6" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Bangladés</text>
 <text class="label" data-cat="country" data-name="China" x="1074.2" y="617" text-anchor="middle">China</text>
 <text class="label" data-cat="country" data-name="Chipre" x="418.8" y="438.4" text-anchor="middle">Chipre</text>
 <text class="label" data-cat="country" data-name="Kirguistán" x="802.8" y="538.9" text-anchor="middle">Kirguistán</text>
 <text class="label" data-cat="country" data-name="Georgia" x="539.4" y="424" text-anchor="middle">Georgia</text>
 <text class="label" data-cat="country" data-name="Indonesia" x="1225.5" y="1067.2" text-anchor="middle">Indonesia</text>
-<text class="label" data-cat="country" data-name="Israel" x="401.2" y="495.7" text-anchor="middle">Israel</text>
+<text class="label" data-cat="country"   data-name="Israel" x="380.9" y="503.6" text-anchor="middle" transform="translate(0,0)" style="font-size:16px">Israel</text>
 <text class="label" data-cat="country" data-name="India" x="838" y="799.7" text-anchor="middle">India</text>
 <text class="label" data-cat="country" data-name="Irak" x="489" y="522.6" text-anchor="middle">Irak</text>
 <text class="label" data-cat="country" data-name="Irán" x="575.5" y="575.7" text-anchor="middle">Irán</text>
-<text class="label" data-cat="country" data-name="Jordania" x="405.9" y="529.9" text-anchor="middle">Jordania</text>
+<text class="label" data-cat="country"    data-name="Jordania" x="421.3" y="509.1" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Jordania</text>
 <text class="label" data-cat="country" data-name="Malasia" x="1227.6" y="1028.6" text-anchor="middle">Malasia</text>
 <text class="label" data-cat="country" data-name="Camboya" x="1095.6" y="913.8" text-anchor="middle">Camboya</text>
 <text class="label" data-cat="country" data-name="Corea del Norte" x="1287.8" y="544.2" text-anchor="middle">Corea del Norte</text>
 <text class="label" data-cat="country" data-name="Corea del Sur" x="1302.8" y="589.5" text-anchor="middle">Corea del Sur</text>
-<text class="label" data-cat="country" data-name="Kuwait" x="501.6" y="582.4" text-anchor="middle">Kuwait</text>
+<text class="label" data-cat="country"   data-name="Kuwait" x="511" y="597.3" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Kuwait</text>
 <text class="label" data-cat="country" data-name="Kazajistán" x="757.4" y="439.3" text-anchor="middle">Kazajistán</text>
 <text class="label" data-cat="country" data-name="Laos" x="1079.2" y="843.7" text-anchor="middle">Laos</text>
-<text class="label" data-cat="country" data-name="Líbano" x="418.4" y="486" text-anchor="middle">Líbano</text>
+<text class="label" data-cat="country"   data-name="Líbano" x="394.1" y="478.8" text-anchor="middle" transform="translate(0,0)" style="font-size:14px">Líbano</text>
 <text class="label" data-cat="country" data-name="Sri Lanka" x="787.8" y="954" text-anchor="middle">Sri Lanka</text>
 <text class="label" data-cat="country" data-name="Birmania" x="995.3" y="831.1" text-anchor="middle">Birmania</text>
 <text class="label" data-cat="country" data-name="Mongolia" x="1067" y="494.2" text-anchor="middle">Mongolia</text>
@@ -1130,12 +1136,12 @@
 <text class="label" data-cat="country" data-name="Omán" x="542.7" y="714.5" text-anchor="middle">Omán</text>
 <text class="label" data-cat="country" data-name="Filipinas" x="1296.3" y="851.1" text-anchor="middle">Filipinas</text>
 <text class="label" data-cat="country" data-name="Pakistán" x="707.2" y="648.2" text-anchor="middle">Pakistán</text>
-<text class="label" data-cat="country" data-name="Catar" x="532.2" y="609" text-anchor="middle">Catar</text>
+<text class="label" data-cat="country"   data-name="Catar" x="535" y="638.8" text-anchor="middle" transform="translate(0,0)" style="font-size:12px">Catar</text>
 <text class="label" data-cat="country" data-name="Uzbekistán" x="712.9" y="511.8" text-anchor="middle">Uzbekistán</text>
-<text class="label" data-cat="country" data-name="Vietnam" x="1103.4" y="870.3" text-anchor="middle">Vietnam</text>
-<text class="label" data-cat="country" data-name="Siria" x="457.7" y="482.2" text-anchor="middle">Siria</text>
+<text class="label" data-cat="country"   data-name="Vietnam" x="1086.5" y="800.3" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Vietnam</text>
+<text class="label" data-cat="country"   data-name="Siria" x="451" y="485.3" text-anchor="middle" transform="translate(0,0)" style="font-size:16px">Siria</text>
 <text class="label" data-cat="country" data-name="Tailandia" x="1052.1" y="895.7" text-anchor="middle">Tailandia</text>
-<text class="label" data-cat="country" data-name="Tayikistán" x="763.9" y="559.1" text-anchor="middle">Tayikistán</text>
+<text class="label" data-cat="country"   data-name="Tayikistán" x="767.7" y="559.7" text-anchor="middle" transform="translate(0,0)" style="font-size:10px">Tayikistán</text>
 <text class="label" data-cat="country" data-name="Timor Oriental" x="1421.8" y="1163.8" text-anchor="middle">Timor Oriental</text>
 <text class="label" data-cat="country" data-name="Turkmenistán" x="658.9" y="524.4" text-anchor="middle">Turkmenistán</text>
 <text class="label" data-cat="country" data-name="Turquía" x="455.3" y="421.5" text-anchor="middle">Turquía</text>
