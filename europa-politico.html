@@ -171,6 +171,12 @@
   /*mf-block*/ .map-frame svg{display:block;}
   @media print{.custom-panel{display:none !important;}}
 .grat-label{fill:#22301F;font-size:8.5px;font-family:monospace;opacity:0.6;}
+
+  /* jerarquía de rótulos: países con serifa, capitales en versalitas pequeñas, mares en cursiva */
+  .label{font-family:'Fraunces',Georgia,serif;font-weight:600;fill:#2e2617;letter-spacing:.01em;}
+  .capital-label{font-size:9.5px;font-weight:600;fill:#14110b;text-transform:uppercase;letter-spacing:.04em;}
+  .capital-dot{fill:#14110b;}
+  .sea-label{font-style:italic;font-weight:400;letter-spacing:.08em;}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
@@ -364,9 +370,6 @@
 <line class="leader" data-cat="capital" data-name="Zagreb" x1="577.9" y1="828.9" x2="597.2" y2="818.4"/>
 <line class="leader" data-cat="capital" data-name="Sarajevo" x1="626.5" y1="885.4" x2="631.5" y2="899.4"/>
 <line class="leader" data-cat="capital" data-name="Belgrado" x1="667.8" y1="858" x2="672.2" y2="849.2"/>
-<line class="leader" data-cat="capital" data-name="Podgorica" x1="644.6" y1="926" x2="650.8" y2="985.9"/>
-<line class="leader" data-cat="capital" data-name="Skopie" x1="691" y1="937" x2="696.7" y2="950.8"/>
-<line class="leader" data-cat="capital" data-name="Tirana" x1="657.3" y1="957.5" x2="663.7" y2="1006"/>
 <line class="leader" data-cat="capital" data-name="Sofía" x1="730" y1="914.6" x2="733.4" y2="894.2"/>
 <line class="leader" data-cat="capital" data-name="Chisináu" x1="827.8" y1="780.2" x2="845.6" y2="773.3"/>
 <line class="leader" data-cat="capital" data-name="Minsk" x1="777.7" y1="589.5" x2="780.5" y2="580.5"/>
@@ -478,9 +481,9 @@
 <text class="sea-label" data-cat="sea" data-name="MAR JÓNICO" x="633.9" y="1045.3" text-anchor="middle" style="font-size:9px">MAR JÓNICO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR EGEO" x="779.7" y="1017.3" text-anchor="middle" style="font-size:9px">MAR EGEO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR NEGRO" x="918.1" y="872" text-anchor="middle" style="font-size:11px">MAR NEGRO</text>
-<text class="label" data-cat="country" data-name="Albania" x="665" y="962.2" text-anchor="middle">Albania</text>
+<text class="label" data-cat="country"  data-name="Albania" x="658" y="977" text-anchor="middle" style="font-size:12px" transform="translate(0,0)">Albania</text>
 <text class="label" data-cat="country" data-name="Austria" x="529" y="773.3" text-anchor="middle">Austria</text>
-<text class="label" data-cat="country" data-name="Bosnia y Herzegovina" x="611.3" y="883.8" text-anchor="middle">Bosnia y Herzegovina</text>
+<text class="label" data-cat="country"  data-name="Bosnia y Herzegovina" x="607" y="866" text-anchor="middle" style="font-size:11.5px" transform="translate(0,0)"><tspan x="607">Bosnia y </tspan><tspan x="607" dy="1.1em">Herzegovina</tspan></text>
 <text class="label" data-cat="country" data-name="Bélgica" x="375.2" y="674.2" text-anchor="middle">Bélgica</text>
 <text class="label" data-cat="country" data-name="Bulgaria" x="775.1" y="909.8" text-anchor="middle">Bulgaria</text>
 <text class="label" data-cat="country" data-name="España" x="159.4" y="934.1" text-anchor="middle">España</text>
@@ -492,9 +495,9 @@
 <text class="label" data-cat="country" data-name="Alemania" x="483.6" y="672.7" text-anchor="middle">Alemania</text>
 <text class="label" data-cat="country" data-name="Dinamarca" x="483.8" y="525.5" text-anchor="middle">Dinamarca</text>
 <text class="label" data-cat="country" data-name="Estonia" x="734.7" y="460.2" text-anchor="middle">Estonia</text>
-<text class="label" data-cat="country" data-name="Grecia" x="736.4" y="1006" text-anchor="middle">Grecia</text>
+<text class="label" data-cat="country"  data-name="Grecia" x="712" y="1032" text-anchor="middle" transform="translate(0,0)">Grecia</text>
 <text class="label" data-cat="country" data-name="Francia" x="303.3" y="769.2" text-anchor="middle">Francia</text>
-<text class="label" data-cat="country" data-name="Croacia" x="586.8" y="859.8" text-anchor="middle">Croacia</text>
+<text class="label" data-cat="country"  data-name="Croacia" x="560" y="851" text-anchor="middle" style="font-size:14px" transform="translate(0,0)">Croacia</text>
 <text class="label" data-cat="country" data-name="Hungría" x="647.1" y="790.9" text-anchor="middle">Hungría</text>
 <text class="label" data-cat="country" data-name="Irlanda" x="179.2" y="547.2" text-anchor="middle">Irlanda</text>
 <text class="label" data-cat="country" data-name="Italia" x="503.5" y="920" text-anchor="middle">Italia</text>
@@ -502,21 +505,21 @@
 <text class="label" data-cat="country" data-name="Luxemburgo" x="401.5" y="698.4" text-anchor="middle">Luxemburgo</text>
 <text class="label" data-cat="country" data-name="Letonia" x="720.9" y="510.5" text-anchor="middle">Letonia</text>
 <text class="label" data-cat="country" data-name="Moldavia" x="817.8" y="782.6" text-anchor="middle">Moldavia</text>
-<text class="label" data-cat="country" data-name="Montenegro" x="647.4" y="918.4" text-anchor="middle">Montenegro</text>
-<text class="label" data-cat="country" data-name="Macedonia del Norte" x="697.7" y="935.4" text-anchor="middle">Macedonia del Norte</text>
-<text class="label" data-cat="country" data-name="Serbia" x="677.8" y="866.9" text-anchor="middle">Serbia</text>
+<text class="label" data-cat="country"    data-name="Montenegro" x="632" y="919" text-anchor="middle" style="font-size:10px" transform="translate(0,0)">Montenegro</text>
+<text class="label" data-cat="country"   data-name="Macedonia del Norte" x="705" y="951" text-anchor="middle" style="font-size:10px" transform="translate(0,0)"><tspan x="705">Macedonia </tspan><tspan x="705" dy="1.1em">del Norte</tspan></text>
+<text class="label" data-cat="country"  data-name="Serbia" x="688" y="886" text-anchor="middle" style="font-size:14px" transform="translate(0,0)">Serbia</text>
 <text class="label" data-cat="country" data-name="Suecia" x="613.1" y="362.1" text-anchor="middle">Suecia</text>
 <text class="label" data-cat="country" data-name="Países Bajos" x="398.4" y="631.9" text-anchor="middle">Países Bajos</text>
-<text class="label" data-cat="country" data-name="Noruega" x="616.9" y="293.1" text-anchor="middle">Noruega</text>
+<text class="label" data-cat="country"  data-name="Noruega" x="505" y="396" text-anchor="middle" style="font-size:15px" transform="translate(0,0)">Noruega</text>
 <text class="label" data-cat="country" data-name="Polonia" x="637.6" y="656" text-anchor="middle">Polonia</text>
 <text class="label" data-cat="country" data-name="Portugal" x="54" y="909.2" text-anchor="middle">Portugal</text>
 <text class="label" data-cat="country" data-name="Rumanía" x="755.9" y="819.4" text-anchor="middle">Rumanía</text>
-<text class="label" data-cat="country" data-name="Eslovenia" x="558.8" y="818.8" text-anchor="middle">Eslovenia</text>
+<text class="label" data-cat="country"  data-name="Eslovenia" x="549" y="813" text-anchor="middle" style="font-size:11px" transform="translate(0,0)">Eslovenia</text>
 <text class="label" data-cat="country" data-name="Eslovaquia" x="650.1" y="747.8" text-anchor="middle">Eslovaquia</text>
 <text class="label" data-cat="country" data-name="Ucrania" x="865.2" y="734.5" text-anchor="middle">Ucrania</text>
-<text class="label" data-cat="country" data-name="Reino Unido" x="282.4" y="541.7" text-anchor="middle">Reino Unido</text>
+<text class="label" data-cat="country"  data-name="Reino Unido" x="276" y="588" text-anchor="middle" transform="translate(0,0)">Reino Unido</text>
 <text class="label" data-cat="country" data-name="Rusia" x="1068.6" y="464.5" text-anchor="middle">Rusia</text>
-<text class="label" data-cat="country" data-name="Kosovo" x="680.8" y="929.1" text-anchor="middle" style="font-size:7px">Kosovo</text>
+<text class="label" data-cat="country"   data-name="Kosovo" x="684" y="910" text-anchor="middle" style="font-size:10.5px" transform="translate(0,0)">Kosovo</text>
 <text class="capital-label" data-cat="capital" data-name="Madrid" x="156.1" y="907.9" text-anchor="start">Madrid</text>
 <text class="capital-label" data-cat="capital" data-name="Lisboa" x="22.2" y="926.5" text-anchor="start">Lisboa</text>
 <text class="capital-label" data-cat="capital" data-name="París" x="331.5" y="715.7" text-anchor="start">París</text>
@@ -541,9 +544,9 @@
 <text class="capital-label" data-cat="capital" data-name="Roma" x="505.3" y="940" text-anchor="start">Roma</text>
 <text class="capital-label" data-cat="capital" data-name="Sarajevo" x="631.5" y="899.4" text-anchor="start">Sarajevo</text>
 <text class="capital-label" data-cat="capital" data-name="Belgrado" x="672.2" y="849.2" text-anchor="start">Belgrado</text>
-<text class="capital-label" data-cat="capital" data-name="Podgorica" x="650.8" y="985.9" text-anchor="start">Podgorica</text>
-<text class="capital-label" data-cat="capital" data-name="Skopie" x="696.7" y="950.8" text-anchor="start">Skopie</text>
-<text class="capital-label" data-cat="capital" data-name="Tirana" x="663.7" y="1006" text-anchor="start">Tirana</text>
+<text class="capital-label" data-cat="capital"  data-name="Podgorica" x="640" y="929" text-anchor="end">Podgorica</text>
+<text class="capital-label" data-cat="capital"  data-name="Skopie" x="695.5" y="939.5" text-anchor="start">Skopie</text>
+<text class="capital-label" data-cat="capital"  data-name="Tirana" x="653" y="960.5" text-anchor="end">Tirana</text>
 <text class="capital-label" data-cat="capital" data-name="Atenas" x="754.6" y="1051.9" text-anchor="start">Atenas</text>
 <text class="capital-label" data-cat="capital" data-name="Sofía" x="733.4" y="894.2" text-anchor="start">Sofía</text>
 <text class="capital-label" data-cat="capital" data-name="Bucarest" x="788" y="862.3" text-anchor="start">Bucarest</text>
@@ -748,9 +751,6 @@
 <line class="leader" data-cat="capital" data-name="Zagreb" x1="577.9" y1="828.9" x2="597.2" y2="818.4"/>
 <line class="leader" data-cat="capital" data-name="Sarajevo" x1="626.5" y1="885.4" x2="631.5" y2="899.4"/>
 <line class="leader" data-cat="capital" data-name="Belgrado" x1="667.8" y1="858" x2="672.2" y2="849.2"/>
-<line class="leader" data-cat="capital" data-name="Podgorica" x1="644.6" y1="926" x2="650.8" y2="985.9"/>
-<line class="leader" data-cat="capital" data-name="Skopie" x1="691" y1="937" x2="696.7" y2="950.8"/>
-<line class="leader" data-cat="capital" data-name="Tirana" x1="657.3" y1="957.5" x2="663.7" y2="1006"/>
 <line class="leader" data-cat="capital" data-name="Sofía" x1="730" y1="914.6" x2="733.4" y2="894.2"/>
 <line class="leader" data-cat="capital" data-name="Chisináu" x1="827.8" y1="780.2" x2="845.6" y2="773.3"/>
 <line class="leader" data-cat="capital" data-name="Minsk" x1="777.7" y1="589.5" x2="780.5" y2="580.5"/>
@@ -862,9 +862,9 @@
 <text class="sea-label" data-cat="sea" data-name="MAR JÓNICO" x="633.9" y="1045.3" text-anchor="middle" style="font-size:9px">MAR JÓNICO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR EGEO" x="779.7" y="1017.3" text-anchor="middle" style="font-size:9px">MAR EGEO</text>
 <text class="sea-label" data-cat="sea" data-name="MAR NEGRO" x="918.1" y="872" text-anchor="middle" style="font-size:11px">MAR NEGRO</text>
-<text class="label" data-cat="country" data-name="Albania" x="665" y="962.2" text-anchor="middle">Albania</text>
+<text class="label" data-cat="country"  data-name="Albania" x="658" y="977" text-anchor="middle" style="font-size:12px" transform="translate(0,0)">Albania</text>
 <text class="label" data-cat="country" data-name="Austria" x="529" y="773.3" text-anchor="middle">Austria</text>
-<text class="label" data-cat="country" data-name="Bosnia y Herzegovina" x="611.3" y="883.8" text-anchor="middle">Bosnia y Herzegovina</text>
+<text class="label" data-cat="country"  data-name="Bosnia y Herzegovina" x="607" y="866" text-anchor="middle" style="font-size:11.5px" transform="translate(0,0)"><tspan x="607">Bosnia y </tspan><tspan x="607" dy="1.1em">Herzegovina</tspan></text>
 <text class="label" data-cat="country" data-name="Bélgica" x="375.2" y="674.2" text-anchor="middle">Bélgica</text>
 <text class="label" data-cat="country" data-name="Bulgaria" x="775.1" y="909.8" text-anchor="middle">Bulgaria</text>
 <text class="label" data-cat="country" data-name="España" x="159.4" y="934.1" text-anchor="middle">España</text>
@@ -876,9 +876,9 @@
 <text class="label" data-cat="country" data-name="Alemania" x="483.6" y="672.7" text-anchor="middle">Alemania</text>
 <text class="label" data-cat="country" data-name="Dinamarca" x="483.8" y="525.5" text-anchor="middle">Dinamarca</text>
 <text class="label" data-cat="country" data-name="Estonia" x="734.7" y="460.2" text-anchor="middle">Estonia</text>
-<text class="label" data-cat="country" data-name="Grecia" x="736.4" y="1006" text-anchor="middle">Grecia</text>
+<text class="label" data-cat="country"  data-name="Grecia" x="712" y="1032" text-anchor="middle" transform="translate(0,0)">Grecia</text>
 <text class="label" data-cat="country" data-name="Francia" x="303.3" y="769.2" text-anchor="middle">Francia</text>
-<text class="label" data-cat="country" data-name="Croacia" x="586.8" y="859.8" text-anchor="middle">Croacia</text>
+<text class="label" data-cat="country"  data-name="Croacia" x="560" y="851" text-anchor="middle" style="font-size:14px" transform="translate(0,0)">Croacia</text>
 <text class="label" data-cat="country" data-name="Hungría" x="647.1" y="790.9" text-anchor="middle">Hungría</text>
 <text class="label" data-cat="country" data-name="Irlanda" x="179.2" y="547.2" text-anchor="middle">Irlanda</text>
 <text class="label" data-cat="country" data-name="Italia" x="503.5" y="920" text-anchor="middle">Italia</text>
@@ -886,21 +886,21 @@
 <text class="label" data-cat="country" data-name="Luxemburgo" x="401.5" y="698.4" text-anchor="middle">Luxemburgo</text>
 <text class="label" data-cat="country" data-name="Letonia" x="720.9" y="510.5" text-anchor="middle">Letonia</text>
 <text class="label" data-cat="country" data-name="Moldavia" x="817.8" y="782.6" text-anchor="middle">Moldavia</text>
-<text class="label" data-cat="country" data-name="Montenegro" x="647.4" y="918.4" text-anchor="middle">Montenegro</text>
-<text class="label" data-cat="country" data-name="Macedonia del Norte" x="697.7" y="935.4" text-anchor="middle">Macedonia del Norte</text>
-<text class="label" data-cat="country" data-name="Serbia" x="677.8" y="866.9" text-anchor="middle">Serbia</text>
+<text class="label" data-cat="country"    data-name="Montenegro" x="632" y="919" text-anchor="middle" style="font-size:10px" transform="translate(0,0)">Montenegro</text>
+<text class="label" data-cat="country"   data-name="Macedonia del Norte" x="705" y="951" text-anchor="middle" style="font-size:10px" transform="translate(0,0)"><tspan x="705">Macedonia </tspan><tspan x="705" dy="1.1em">del Norte</tspan></text>
+<text class="label" data-cat="country"  data-name="Serbia" x="688" y="886" text-anchor="middle" style="font-size:14px" transform="translate(0,0)">Serbia</text>
 <text class="label" data-cat="country" data-name="Suecia" x="613.1" y="362.1" text-anchor="middle">Suecia</text>
 <text class="label" data-cat="country" data-name="Países Bajos" x="398.4" y="631.9" text-anchor="middle">Países Bajos</text>
-<text class="label" data-cat="country" data-name="Noruega" x="616.9" y="293.1" text-anchor="middle">Noruega</text>
+<text class="label" data-cat="country"  data-name="Noruega" x="505" y="396" text-anchor="middle" style="font-size:15px" transform="translate(0,0)">Noruega</text>
 <text class="label" data-cat="country" data-name="Polonia" x="637.6" y="656" text-anchor="middle">Polonia</text>
 <text class="label" data-cat="country" data-name="Portugal" x="54" y="909.2" text-anchor="middle">Portugal</text>
 <text class="label" data-cat="country" data-name="Rumanía" x="755.9" y="819.4" text-anchor="middle">Rumanía</text>
-<text class="label" data-cat="country" data-name="Eslovenia" x="558.8" y="818.8" text-anchor="middle">Eslovenia</text>
+<text class="label" data-cat="country"  data-name="Eslovenia" x="549" y="813" text-anchor="middle" style="font-size:11px" transform="translate(0,0)">Eslovenia</text>
 <text class="label" data-cat="country" data-name="Eslovaquia" x="650.1" y="747.8" text-anchor="middle">Eslovaquia</text>
 <text class="label" data-cat="country" data-name="Ucrania" x="865.2" y="734.5" text-anchor="middle">Ucrania</text>
-<text class="label" data-cat="country" data-name="Reino Unido" x="282.4" y="541.7" text-anchor="middle">Reino Unido</text>
+<text class="label" data-cat="country"  data-name="Reino Unido" x="276" y="588" text-anchor="middle" transform="translate(0,0)">Reino Unido</text>
 <text class="label" data-cat="country" data-name="Rusia" x="1068.6" y="464.5" text-anchor="middle">Rusia</text>
-<text class="label" data-cat="country" data-name="Kosovo" x="680.8" y="929.1" text-anchor="middle" style="font-size:7px">Kosovo</text>
+<text class="label" data-cat="country"   data-name="Kosovo" x="684" y="910" text-anchor="middle" style="font-size:10.5px" transform="translate(0,0)">Kosovo</text>
 <text class="capital-label" data-cat="capital" data-name="Madrid" x="156.1" y="907.9" text-anchor="start">Madrid</text>
 <text class="capital-label" data-cat="capital" data-name="Lisboa" x="22.2" y="926.5" text-anchor="start">Lisboa</text>
 <text class="capital-label" data-cat="capital" data-name="París" x="331.5" y="715.7" text-anchor="start">París</text>
@@ -925,9 +925,9 @@
 <text class="capital-label" data-cat="capital" data-name="Roma" x="505.3" y="940" text-anchor="start">Roma</text>
 <text class="capital-label" data-cat="capital" data-name="Sarajevo" x="631.5" y="899.4" text-anchor="start">Sarajevo</text>
 <text class="capital-label" data-cat="capital" data-name="Belgrado" x="672.2" y="849.2" text-anchor="start">Belgrado</text>
-<text class="capital-label" data-cat="capital" data-name="Podgorica" x="650.8" y="985.9" text-anchor="start">Podgorica</text>
-<text class="capital-label" data-cat="capital" data-name="Skopie" x="696.7" y="950.8" text-anchor="start">Skopie</text>
-<text class="capital-label" data-cat="capital" data-name="Tirana" x="663.7" y="1006" text-anchor="start">Tirana</text>
+<text class="capital-label" data-cat="capital"  data-name="Podgorica" x="640" y="929" text-anchor="end">Podgorica</text>
+<text class="capital-label" data-cat="capital"  data-name="Skopie" x="695.5" y="939.5" text-anchor="start">Skopie</text>
+<text class="capital-label" data-cat="capital"  data-name="Tirana" x="653" y="960.5" text-anchor="end">Tirana</text>
 <text class="capital-label" data-cat="capital" data-name="Atenas" x="754.6" y="1051.9" text-anchor="start">Atenas</text>
 <text class="capital-label" data-cat="capital" data-name="Sofía" x="733.4" y="894.2" text-anchor="start">Sofía</text>
 <text class="capital-label" data-cat="capital" data-name="Bucarest" x="788" y="862.3" text-anchor="start">Bucarest</text>
