@@ -160,7 +160,7 @@
     var costaHas=GROUPS[2].cats.some(function(c){if(!T[c])return false;refresh(c);return T[c].list.some(function(t){return t.ok;});});
     GROUPS.forEach(function(g){
       var h='',mixn=0,cs=g.cats.slice();
-      if(g.id==='g-hidro'&&!costaHas)cs.push('sea');if(g.id==='g-costa'&&costaHas)cs.push('sea');
+      if(!/-politico/.test(location.pathname)){if(g.id==='g-hidro'&&!costaHas)cs.push('sea');if(g.id==='g-costa'&&costaHas)cs.push('sea');}
       if(T[g.id]){T[g.id].mix.forEach(function(c){refresh(c);});mixn=T[g.id].list.filter(function(t){return t.ok;}).length;}
       if(mixn)h+=radio(g.id+':all',g.mixl+' ('+mixn+')');
       cs.forEach(function(c){
