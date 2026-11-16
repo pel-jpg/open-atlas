@@ -265,10 +265,18 @@
         var pt=localPt(e,ev),inside=false;try{inside=e.isPointInFill(pt);}catch(x){}
         if(inside){best=0;return;}
         var W=coarse?[8,18,30]:[4,9,16];for(var k=0;k<3&&k<best;k++){if(strokeHit(e,ev,W[k]))best=k;}
+        /* países o islas diminutos (Mónaco, San Marino…): zona de acierto como la de un punto */
+        var r=e.getBoundingClientRect();
+        if(best>0&&Math.max(r.width,r.height)<28){
+          var dx=Math.max(r.left-ev.clientX,0,ev.clientX-r.right),dy=Math.max(r.top-ev.clientY,0,ev.clientY-r.bottom),d=Math.hypot(dx,dy);
+          var P=coarse?[22,36,54]:[14,24,38];for(var k2=0;k2<3&&k2<best;k2++){if(d<=P[k2])best=k2;}
+        }
       });return best;
     }
     if(kind==='point'){
-      var D=coarse?[20,36,54]:[12,24,38],bd=1e9;
+      var D=coarse?[24,40,58]:[16,30,46],bd=1e9;
+      /* pulsar sobre el nombre de la capital también cuenta */
+      if(labels(t.cat,t.n).some(function(l){if(!shown(l))return false;var r=l.getBoundingClientRect();return r.width>0&&ev.clientX>=r.left-3&&ev.clientX<=r.right+3&&ev.clientY>=r.top-3&&ev.clientY<=r.bottom+3;}))return 0;
       t.els.forEach(function(e){if(!shown(e))return;var r=e.getBoundingClientRect(),dx=ev.clientX-(r.left+r.width/2),dy=ev.clientY-(r.top+r.height/2),d=Math.hypot(dx,dy)-Math.min(Math.max(r.width,r.height)/2,10);if(d<bd)bd=d;});
       for(var j=0;j<3;j++)if(bd<=D[j])return j;return 9;
     }
