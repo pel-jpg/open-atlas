@@ -60,6 +60,11 @@
     if(!svg.querySelector('[data-cat="capital"]')||!window.fetch)return;
     fetch(url).then(function(r){return r.json();}).then(function(d){
       Object.keys(d).forEach(function(p){(d[p].cap||[]).forEach(function(c){if(!CAPDE[c])CAPDE[c]=p;});});
+      svg.querySelectorAll('[data-cat="capital"]').forEach(function(e){
+        var n=e.getAttribute('data-name'),t=CAPTXT[n]?n+', '+CAPTXT[n]:(CAPDE[n]?n+', capital de '+CAPDE[n]:'');
+        if(!t||e.querySelector('title'))return;
+        var ti=document.createElementNS('http://www.w3.org/2000/svg','title');ti.textContent=t;e.appendChild(ti);
+      });
     }).catch(function(){});
   })();
   function full(it){
