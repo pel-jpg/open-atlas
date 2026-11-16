@@ -30,6 +30,17 @@
   bar.appendChild(hint);bar.appendChild(ctl);frame.insertBefore(bar,frame.firstChild);
   var rot=document.createElement('p');rot.className='zoom-rot';rot.textContent='Consejo: gira el móvil en horizontal para ver el mapa más grande.';frame.insertBefore(rot,bar);
   if(window.IntersectionObserver){try{new IntersectionObserver(function(en){ctl.classList.toggle('fuera',!en[0].isIntersecting);},{threshold:.15}).observe(frame);}catch(e){}}
+  /* si el usuario amplía la página con el pellizco del navegador, los botones fijos quedan fuera de pantalla: seguimos la ventana visible */
+  if(window.visualViewport&&window.matchMedia('(pointer:coarse)').matches){
+    var vv=window.visualViewport;ctl.style.transformOrigin='100% 100%';
+    var seguir=function(){
+      var L=document.documentElement,sc=vv.scale||1;
+      if(sc<1.02){ctl.style.transform='';return;}
+      var dx=vv.offsetLeft+vv.width-L.clientWidth,dy=vv.offsetTop+vv.height-window.innerHeight/1;
+      ctl.style.transform='translate('+dx+'px,'+dy+'px) scale('+(1/sc)+')';
+    };
+    vv.addEventListener('resize',seguir);vv.addEventListener('scroll',seguir);window.addEventListener('scroll',seguir,{passive:true});
+  }
   var bIn=ctl.querySelector('[data-z=in]'),bOut=ctl.querySelector('[data-z=out]'),bRs=ctl.querySelector('[data-z=reset]');
   function apply(){
     var z=B.w/V.w;
