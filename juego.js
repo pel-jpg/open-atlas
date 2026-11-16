@@ -70,8 +70,8 @@
   function full(it){
     var s='<b>'+esc(nice(it.n))+'</b>';
     if(it.cat!=='capital')return s;
-    if(CAPTXT[it.n])return s+', '+CAPTXT[it.n];
-    return CAPDE[it.n]?s+', capital de '+esc(CAPDE[it.n]):s;
+    if(CAPTXT[it.n])return s+' ('+CAPTXT[it.n]+')';
+    return CAPDE[it.n]?s+' ('+esc(CAPDE[it.n])+')':s;
   }
   /* ---------- objetivos jugables ---------- */
   var T={},present=[];
