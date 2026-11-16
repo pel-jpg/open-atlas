@@ -121,7 +121,7 @@
   '@media (min-width:700px){.juego-on .map-frame-screen svg,.juego-on .map-frame svg{max-height:calc(100vh - 150px);min-height:340px}}'+
   '.juego-on svg text:not(.reveal){display:none !important}'+
   '.juego-on svg .legend-block text,.juego-on svg .scale-bar text{display:block !important}'+
-  '.juego-on svg text.reveal{display:block !important;font-weight:700;font-style:normal;fill:#0b2d4a;paint-order:stroke;stroke:#fff;stroke-width:5px;font-size:24px}'+
+  '.juego-on svg text.reveal{display:block !important;font-weight:700;font-style:normal;fill:#0b2d4a;stroke:none;font-size:24px}'+
   '.juego-on svg .g-ok{stroke:#17a34a !important;stroke-width:3.4px !important;stroke-opacity:1 !important;filter:none !important}'+
   '.juego-on svg .g-bad,.juego-on svg .g-miss{stroke:#d9480f !important;stroke-width:3.4px !important;stroke-opacity:1 !important;filter:none !important}'+
   '.juego-on svg .g-fill.g-ok,.juego-on svg circle.g-ok{fill:#17a34a !important;fill-opacity:.6 !important}'+
