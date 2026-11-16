@@ -66,7 +66,7 @@
     var s='<b>'+esc(nice(it.n))+'</b>';
     if(it.cat!=='capital')return s;
     if(CAPTXT[it.n])return s+' ('+CAPTXT[it.n]+')';
-    return CAPDE[it.n]?s+' ('+esc(CAPDE[it.n])+')':s;
+    return CAPDE[it.n]&&CAPDE[it.n]!==it.n?s+' ('+esc(CAPDE[it.n])+')':s;
   }
   /* ---------- objetivos jugables ---------- */
   var T={},present=[];
@@ -221,7 +221,7 @@
     });
     if(k==='box')t.boxes.forEach(addRect);
     labels(t.cat,t.n).forEach(function(l){l.classList.add('reveal');
-      if(t.cat==='capital'&&!l.querySelector('tspan.g-pais')){var pa=CAPTXT[t.n]?null:CAPDE[t.n];
+      if(t.cat==='capital'&&!l.querySelector('tspan.g-pais')){var pa=CAPTXT[t.n]||CAPDE[t.n]===t.n?null:CAPDE[t.n];
         if(pa){var ts=document.createElementNS(NS,'tspan');ts.setAttribute('class','g-pais');ts.setAttribute('style','text-transform:none;font-weight:400;letter-spacing:0');ts.textContent=' ('+pa+')';l.appendChild(ts);}}});
     var f=t.els[0]||(t.boxes&&t.boxes[0]);
     if(f){var rr=t.els[0]?t.els[0].getBoundingClientRect():null;if(!rr&&t.texts&&t.texts[0])rr=t.texts[0].getBoundingClientRect();
