@@ -104,7 +104,7 @@
   '.game-bar{margin:14px 0 0;background:var(--paper);border:2px solid #9a6a12;border-radius:4px;padding:12px 18px;font-size:14px;position:sticky;top:6px;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,.18)}'+
   '.game-top{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap}'+
   '.game-actions{display:flex;gap:8px}'+
-  '.juego-on .custom-panel{display:none}'+
+  '.juego-on .custom-panel,.juego-setup .custom-panel{display:none}'+
   '.game-bar[hidden]{display:none}'+
   '.game-bar h3{font-family:"Fraunces",serif;font-size:17px;margin-bottom:6px}'+
   '.game-row{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;margin:10px 0}'+
@@ -153,7 +153,7 @@
   function setup(){
     clearTimeout(S.at);
     var cp=document.querySelector('.preset-btns [data-preset="completo"]');var act=document.querySelector('.preset-btns .active');if(cp&&((act&&act.dataset.preset==='mudo')||(document.querySelector('[data-item-cat]')&&!document.querySelector('[data-item-cat]:checked'))))cp.click();
-    clearMarks();showTips();document.body.classList.remove('juego-on');S.on=false;bar.hidden=false;
+    clearMarks();showTips();document.body.classList.remove('juego-on');document.body.classList.add('juego-setup');S.on=false;bar.hidden=false;
     var first=true,rows=[];
     function radio(v,t){var h='<label><input type="radio" name="g-what" value="'+v+'"'+(first?' checked':'')+'> '+t+'</label>';first=false;return h;}
     /* los mares van con las costas si el mapa muestra accidentes costeros; si no (mapas de hidrografía), con ríos y lagos */
@@ -188,7 +188,7 @@
     var p=shuffle(avail);if(n&&p.length>n)p=p.slice(0,n);
     begin(p);
   }
-  function begin(p){hideTips();S.q=p;S.i=0;S.sc={first:0,second:0};S.fails=[];S.on=true;document.body.classList.add('juego-on');ask();var y=bar.getBoundingClientRect().top+window.pageYOffset-6;window.scrollTo(0,Math.max(0,y));}
+  function begin(p){hideTips();S.q=p;S.i=0;S.sc={first:0,second:0};S.fails=[];S.on=true;document.body.classList.remove('juego-setup');document.body.classList.add('juego-on');ask();var y=bar.getBoundingClientRect().top+window.pageYOffset-6;window.scrollTo(0,Math.max(0,y));}
 
   /* medir las etiquetas (zonas de clic) antes de ocultarlas */
   function toSvg(r){
@@ -326,7 +326,7 @@
     var rep=bar.querySelector('#g-rep');if(rep)rep.onclick=function(){begin(shuffle(S.fails.slice()));};
     bar.querySelector('#g-again').onclick=setup;bar.querySelector('#g-exit').onclick=exit;
   }
-  function exit(){clearTimeout(S.at);clearMarks();showTips();S.on=false;document.body.classList.remove('juego-on');bar.hidden=true;bar.innerHTML='';}
+  function exit(){clearTimeout(S.at);clearMarks();showTips();S.on=false;document.body.classList.remove('juego-on','juego-setup');bar.hidden=true;bar.innerHTML='';}
   btn.addEventListener('click',function(){if(bar.hidden||!S.on&&!bar.querySelector('#g-go'))setup();else bar.scrollIntoView({behavior:'smooth',block:'nearest'});});
   document.addEventListener('keydown',function(e){
     if(e.key==='Escape'&&!bar.hidden)exit();
