@@ -161,14 +161,14 @@
   @media print{.feature-label2.wl,.region-label2.wl2{fill:#000 !important;}}
   
   /* --- rotulos sobre relieve hipsometrico --- */
-  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.66);stroke-width:2.6px;stroke-linejoin:round;}
-  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.6);stroke-width:2.6px;stroke-linejoin:round;opacity:1;}
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.5);stroke-width:1.5px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.45);stroke-width:1.5px;stroke-linejoin:round;opacity:1;}
   svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
   svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
-  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.78);}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
   svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
   .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
-  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.6);stroke-width:2.6px;stroke-linejoin:round;opacity:1;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.45);stroke-width:1.5px;stroke-linejoin:round;opacity:1;}
   svg .country,svg .bg-country{fill:transparent;stroke:none;}
   svg .country:hover{fill:rgba(255,255,255,.16);}
   svg text.biome-label{fill:#2d3a1c;}
@@ -179,6 +179,7 @@ svg text.feature-label2[data-cat="cape"]{fill:#4a2a10;font-style:normal;font-wei
 svg text.feature-label[data-name^="Golfo"],svg text.feature-label[data-name^="Estrecho"],svg text.feature-label[data-name^="Paso"],svg text.feature-label[data-name^="Canal"],
 svg text.feature-label2[data-cat="gulf"],svg text.feature-label2[data-cat="strait"]{fill:#0d2a4a;font-style:italic;font-weight:700;}
 svg circle.feature-dot{r:2.8px;fill:#12283a;stroke:#fff;stroke-width:1.1px;}
+  svg text[style*="stroke-width"]{stroke-width:1.5px !important;stroke-opacity:.5 !important;}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
@@ -701,5 +702,6 @@ if(b&&window.goatcounter&&goatcounter.count){goatcounter.count({path:'imprimir/'
 </script>
 <!-- /goatcounter -->
 <script src="juego.js?v=20261116f" defer></script>
+<script src="zoom.js?v=2" defer></script>
 </body>
 </html>

@@ -20,7 +20,8 @@
    '@media (pointer:coarse){.zoom-hint .pc{display:none}.zoom-hint .tc{display:inline}.zoom-ctl button{width:44px;height:44px;font-size:24px}.zoom-hint{font-size:12px;line-height:1.35}}'+
    '.zoom-rot{display:none;margin:0;padding:6px 10px;font-size:12.5px;background:#fff6d8;color:#5a4a1f;border-bottom:1px solid var(--line-strong,#8a8f7d)}'+
    '@media (max-width:700px) and (orientation:portrait){.zoom-rot{display:block}}'+
-   '@media print{.zoom-bar,.zoom-rot{display:none !important}}';
+   '@media (pointer:coarse){.zoom-ctl{position:fixed;right:12px;bottom:18px;z-index:60;background:rgba(244,239,224,.94);padding:6px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.3);transition:opacity .2s}.zoom-ctl.fuera{opacity:0;pointer-events:none}}'+
+   '@media print{.zoom-bar,.zoom-rot,.zoom-ctl{display:none !important}}';
   document.head.appendChild(css);
   var bar=document.createElement('div');bar.className='zoom-bar';
   var hint=document.createElement('span');hint.className='zoom-hint';hint.innerHTML='<span class="pc">Ctrl + rueda para ampliar · arrastra para mover</span><span class="tc">Pulsa + para ampliar · luego arrastra o pellizca</span>';
@@ -28,6 +29,7 @@
   ctl.innerHTML='<button type="button" data-z="in" aria-label="Ampliar" title="Ampliar">+</button><button type="button" data-z="out" aria-label="Reducir" title="Reducir">−</button><button type="button" data-z="reset" class="zr" aria-label="Vista completa" title="Vista completa">⤢</button>';
   bar.appendChild(hint);bar.appendChild(ctl);frame.insertBefore(bar,frame.firstChild);
   var rot=document.createElement('p');rot.className='zoom-rot';rot.textContent='Consejo: gira el móvil en horizontal para ver el mapa más grande.';frame.insertBefore(rot,bar);
+  if(window.IntersectionObserver){try{new IntersectionObserver(function(en){ctl.classList.toggle('fuera',!en[0].isIntersecting);},{threshold:.15}).observe(frame);}catch(e){}}
   var bIn=ctl.querySelector('[data-z=in]'),bOut=ctl.querySelector('[data-z=out]'),bRs=ctl.querySelector('[data-z=reset]');
   function apply(){
     var z=B.w/V.w;
