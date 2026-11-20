@@ -11,7 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
-  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto'};
+  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
