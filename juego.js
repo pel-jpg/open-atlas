@@ -188,6 +188,7 @@
       '<b>Intentos</b><label><input type="radio" name="g-a" value="2" checked> 2 por pregunta</label><label><input type="radio" name="g-a" value="1"> 1</label></div>'+
       '<div class="game-row"><button type="button" class="game-btn" id="g-go">Empezar</button><button type="button" class="game-btn sec" id="g-exit">Cancelar</button></div>';
     bar.querySelector('#g-go').onclick=start;bar.querySelector('#g-exit').onclick=exit;
+    if(BODY)start(); /* láminas del cuerpo humano: sin pantalla de configuración, todas las estructuras y 2 intentos */
   }
   function val(n){var e=bar.querySelector('input[name="'+n+'"]:checked');return e?e.value:null;}
   function start(){
@@ -242,7 +243,7 @@
     clearMarks();S.cur=S.q[S.i];S.att=0;S.done=false;
     var q=S.cur;
     bar.innerHTML='<div class="game-top"><div><div class="game-meta">Pregunta '+(S.i+1)+' de '+S.q.length+' · Aciertos: '+(S.sc.first+S.sc.second)+'</div>'+
-      '<div class="game-q">¿Dónde está <span style="color:#9a6a12">'+esc(CATS[q.cat].q(nice(q.n)))+'</span>?</div></div>'+
+      '<div class="game-q">'+(/^(las|los) /.test(CATS[q.cat].q(nice(q.n)))?'¿Dónde están ':'¿Dónde está ')+'<span style="color:#9a6a12">'+esc(CATS[q.cat].q(nice(q.n)))+'</span>?</div></div>'+
       '<div class="game-actions"><button type="button" class="game-btn" id="g-next" hidden>Siguiente ▶</button><button type="button" class="game-btn sec" id="g-skip">Saltar</button><button type="button" class="game-btn sec" id="g-exit">Salir</button></div></div>'+
       '<div class="game-msg" id="g-msg">Haz clic (o toca) sobre el mapa.'+(S.max>1?' Tienes '+S.max+' intentos.':'')+'</div>';
     bar.querySelector('#g-next').onclick=next;bar.querySelector('#g-skip').onclick=function(){miss(true);};bar.querySelector('#g-exit').onclick=exit;
