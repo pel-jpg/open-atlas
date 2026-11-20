@@ -11,7 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
-  var ART={'Cerebro':'el cerebro','Laringe':'la laringe','Tiroides':'la glándula tiroides','Tráquea':'la tráquea','Pulmones':'los pulmones','Corazón':'el corazón','Esófago':'el esófago','Hígado':'el hígado','Estómago':'el estómago','Bazo':'el bazo','Vesícula biliar':'la vesícula biliar','Páncreas':'el páncreas','Riñones':'los riñones','Intestino grueso':'el intestino grueso','Intestino delgado':'el intestino delgado','Vejiga':'la vejiga'};
+  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
@@ -35,14 +35,13 @@
     volcano:{pl:'volcanes',q:function(n){return 'el volcán '+n;},kind:'point'},
     tect:{pl:'dorsales, fosas y cordilleras',q:function(n){return n;},kind:'box',tol:[14,34,56]},
     quake:{pl:'grandes terremotos',q:function(n){return 'el terremoto de '+n;},kind:'point'},
-    'o-dig':{pl:'aparato digestivo',q:function(n){return ART[n]||n;},kind:'fill'},
-    'o-res':{pl:'aparato respiratorio',q:function(n){return ART[n]||n;},kind:'fill'},
-    'o-cir':{pl:'circulatorio y linfático',q:function(n){return ART[n]||n;},kind:'fill'},
-    'o-exc':{pl:'aparato excretor',q:function(n){return ART[n]||n;},kind:'fill'},
-    'o-nyo':{pl:'nervioso y endocrino',q:function(n){return ART[n]||n;},kind:'fill'},
+    'd-boca':{pl:'boca y faringe',q:function(n){return ART[n]||n;},kind:'fill'},
+    'd-tubo':{pl:'tubo digestivo',q:function(n){return ART[n]||n;},kind:'fill'},
+    'd-gland':{pl:'glándulas anejas',q:function(n){return ART[n]||n;},kind:'fill'},
+    'd-grueso':{pl:'intestino grueso',q:function(n){return ART[n]||n;},kind:'fill'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','o-dig','o-res','o-cir','o-exc','o-nyo'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
   /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
   var GROUPS=[
@@ -51,7 +50,7 @@
     {id:'g-costa',t:'Accidentes costeros',cats:['feature','cape','gulf','strait','island','peninsula'],mix:['feature','cape','gulf','strait','island','peninsula'],mixl:'Todos los accidentes costeros'},
     {id:'g-politico',t:'Político',cats:['country','capital','ccaa','capccaa','prov','capprov']},
     {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']},
-    {id:'g-cuerpo',t:'Órganos',cats:['o-dig','o-res','o-cir','o-exc','o-nyo'],mix:['o-dig','o-res','o-cir','o-exc','o-nyo'],mixl:'Todos los órganos'}
+    {id:'g-cuerpo',t:'Aparato digestivo',cats:['d-boca','d-tubo','d-gland','d-grueso'],mix:['d-boca','d-tubo','d-gland','d-grueso'],mixl:'Todo el aparato digestivo'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   var NOREL=/(costeros|hidrografia)/.test(location.pathname);
@@ -126,7 +125,7 @@
   '.game-fails{font-size:13.5px;color:var(--ink-soft);margin:6px 0 10px}'+
   '.juego-on .map-frame-screen svg,.juego-on .map-frame svg{cursor:crosshair}'+
   '@media (min-width:700px){.juego-on .map-frame-screen svg,.juego-on .map-frame svg{max-height:calc(100vh - 150px);min-height:340px}}'+
-  '.juego-on svg text:not(.reveal){display:none !important}.juego-on svg .leader{display:none}'+
+  '.juego-on svg text:not(.reveal){display:none !important}.juego-on svg .leader{display:none}.juego-on svg .leader-on{display:block !important}'+
   '.juego-on svg .legend-block text,.juego-on svg .scale-bar text{display:block !important}'+
   '.juego-on svg text.reveal{display:block !important;font-weight:700;font-style:normal;fill:#0b2d4a;stroke:none;font-size:24px}'+
   '.juego-on svg .g-ok{stroke:#17a34a !important;stroke-width:3.4px !important;stroke-opacity:1 !important;filter:none !important}'+
@@ -215,7 +214,7 @@
   function labels(c,n){return [].slice.call(svg.querySelectorAll('text')).filter(function(t){var tc=t.getAttribute('data-cat');return t.getAttribute('data-name')===n&&(!tc||tc===c)&&!t.closest('.legend-block');});}
   function clearMarks(){
     svg.querySelectorAll('.g-ok,.g-bad,.g-miss,.g-fill').forEach(function(e){e.classList.remove('g-ok','g-bad','g-miss','g-fill');});
-    svg.querySelectorAll('text.reveal').forEach(function(e){e.classList.remove('reveal');});
+    svg.querySelectorAll('text.reveal').forEach(function(e){e.classList.remove('reveal');});svg.querySelectorAll('.leader-on').forEach(function(e){e.classList.remove('leader-on');});
     S.rings.forEach(function(r){r.remove();});S.rings=[];clearTimeout(S.tm);
   }
   function addRing(x,y,r,col){var c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);c.setAttribute('fill','none');c.setAttribute('stroke',col||'#d9480f');c.setAttribute('stroke-width','2.6');c.setAttribute('stroke-dasharray','5 3');c.setAttribute('pointer-events','none');svg.appendChild(c);S.rings.push(c);}
@@ -227,7 +226,7 @@
       if(k==='point'||(k==='fill'&&e.getBBox().width<30&&e.getBBox().height<30)){var b=toSvg(e.getBoundingClientRect());if(b)addRing(b.x+b.w/2,b.y+b.h/2,Math.max(13,Math.min(Math.max(b.w,b.h)/2+9,38)),cls==='g-ok'?'#17a34a':null);}
     });
     if(k==='box')t.boxes.forEach(function(b){addRect(b,cls==='g-ok'?'#17a34a':null);});
-    labels(t.cat,t.n).forEach(function(l){l.classList.add('reveal');
+    labels(t.cat,t.n).forEach(function(l){l.classList.add('reveal');var p1=l.previousElementSibling,p2=p1&&p1.previousElementSibling;[p1,p2].forEach(function(q){if(q&&(q.classList.contains('leader')||q.classList.contains('leader-dot')))q.classList.add('leader-on');});
       if(t.cat==='capital'&&!l.querySelector('tspan.g-pais')){var pa=CAPTXT[t.n]||CAPDE[t.n]===t.n?null:CAPDE[t.n];
         if(pa){var ts=document.createElementNS(NS,'tspan');ts.setAttribute('class','g-pais');ts.setAttribute('style','text-transform:none;font-weight:400;letter-spacing:0');ts.textContent=' ('+pa+')';l.appendChild(ts);}}});
     var f=t.els[0]||(t.boxes&&t.boxes[0]);
