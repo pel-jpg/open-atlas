@@ -11,7 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
-  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto'};
+  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
@@ -39,9 +39,11 @@
     'd-tubo':{pl:'tubo digestivo',q:function(n){return ART[n]||n;},kind:'fill'},
     'd-gland':{pl:'glándulas anejas',q:function(n){return ART[n]||n;},kind:'fill'},
     'd-grueso':{pl:'intestino grueso',q:function(n){return ART[n]||n;},kind:'fill'},
+    'r-vias':{pl:'vías respiratorias',q:function(n){return ART[n]||n;},kind:'fill'},
+    'r-pulm':{pl:'pulmones y diafragma',q:function(n){return ART[n]||n;},kind:'fill'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
   /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
   var GROUPS=[
@@ -50,7 +52,8 @@
     {id:'g-costa',t:'Accidentes costeros',cats:['feature','cape','gulf','strait','island','peninsula'],mix:['feature','cape','gulf','strait','island','peninsula'],mixl:'Todos los accidentes costeros'},
     {id:'g-politico',t:'Político',cats:['country','capital','ccaa','capccaa','prov','capprov']},
     {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']},
-    {id:'g-cuerpo',t:'Aparato digestivo',cats:['d-boca','d-tubo','d-gland','d-grueso'],mix:['d-boca','d-tubo','d-gland','d-grueso'],mixl:'Todo el aparato digestivo'}
+    {id:'g-cuerpo',t:'Aparato digestivo',cats:['d-boca','d-tubo','d-gland','d-grueso'],mix:['d-boca','d-tubo','d-gland','d-grueso'],mixl:'Todo el aparato digestivo'},
+    {id:'g-resp',t:'Aparato respiratorio',cats:['r-vias','r-pulm'],mix:['r-vias','r-pulm'],mixl:'Todo el aparato respiratorio'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   var NOREL=/(costeros|hidrografia)/.test(location.pathname);
