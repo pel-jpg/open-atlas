@@ -11,6 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
+  var ART={'Cerebro':'el cerebro','Laringe':'la laringe','Tiroides':'la glándula tiroides','Tráquea':'la tráquea','Pulmones':'los pulmones','Corazón':'el corazón','Esófago':'el esófago','Hígado':'el hígado','Estómago':'el estómago','Bazo':'el bazo','Vesícula biliar':'la vesícula biliar','Páncreas':'el páncreas','Riñones':'los riñones','Intestino grueso':'el intestino grueso','Intestino delgado':'el intestino delgado','Vejiga':'la vejiga'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
@@ -34,9 +35,14 @@
     volcano:{pl:'volcanes',q:function(n){return 'el volcán '+n;},kind:'point'},
     tect:{pl:'dorsales, fosas y cordilleras',q:function(n){return n;},kind:'box',tol:[14,34,56]},
     quake:{pl:'grandes terremotos',q:function(n){return 'el terremoto de '+n;},kind:'point'},
+    'o-dig':{pl:'aparato digestivo',q:function(n){return ART[n]||n;},kind:'fill'},
+    'o-res':{pl:'aparato respiratorio',q:function(n){return ART[n]||n;},kind:'fill'},
+    'o-cir':{pl:'circulatorio y linfático',q:function(n){return ART[n]||n;},kind:'fill'},
+    'o-exc':{pl:'aparato excretor',q:function(n){return ART[n]||n;},kind:'fill'},
+    'o-nyo':{pl:'nervioso y endocrino',q:function(n){return ART[n]||n;},kind:'fill'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','o-dig','o-res','o-cir','o-exc','o-nyo'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
   /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
   var GROUPS=[
@@ -44,7 +50,8 @@
     {id:'g-relieve',t:'Relieve',cats:['peak','mountain','plain','region'],mix:['peak','mountain','plain'],mixl:'Todo el relieve'},
     {id:'g-costa',t:'Accidentes costeros',cats:['feature','cape','gulf','strait','island','peninsula'],mix:['feature','cape','gulf','strait','island','peninsula'],mixl:'Todos los accidentes costeros'},
     {id:'g-politico',t:'Político',cats:['country','capital','ccaa','capccaa','prov','capprov']},
-    {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']}
+    {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']},
+    {id:'g-cuerpo',t:'Órganos',cats:['o-dig','o-res','o-cir','o-exc','o-nyo'],mix:['o-dig','o-res','o-cir','o-exc','o-nyo'],mixl:'Todos los órganos'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   var NOREL=/(costeros|hidrografia)/.test(location.pathname);
@@ -119,7 +126,7 @@
   '.game-fails{font-size:13.5px;color:var(--ink-soft);margin:6px 0 10px}'+
   '.juego-on .map-frame-screen svg,.juego-on .map-frame svg{cursor:crosshair}'+
   '@media (min-width:700px){.juego-on .map-frame-screen svg,.juego-on .map-frame svg{max-height:calc(100vh - 150px);min-height:340px}}'+
-  '.juego-on svg text:not(.reveal){display:none !important}'+
+  '.juego-on svg text:not(.reveal){display:none !important}.juego-on svg .leader{display:none}'+
   '.juego-on svg .legend-block text,.juego-on svg .scale-bar text{display:block !important}'+
   '.juego-on svg text.reveal{display:block !important;font-weight:700;font-style:normal;fill:#0b2d4a;stroke:none;font-size:24px}'+
   '.juego-on svg .g-ok{stroke:#17a34a !important;stroke-width:3.4px !important;stroke-opacity:1 !important;filter:none !important}'+
