@@ -184,6 +184,7 @@
   .juego-on .leader-dot{display:none;}
   .juego-on svg text.reveal.olabel{font-size:17px !important;}
   .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen{.map-frame svg#mapa{width:auto !important;height:min(80vh,780px) !important;max-width:100% !important;aspect-ratio:900/880;margin:0 auto;display:block}}
   </style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
@@ -214,10 +215,9 @@
     <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa <strong>Jugar</strong> para localizar los órganos señalándolos.</p>
     <div class="cat-toggles"><label><input type="checkbox" data-layer="nombres" checked> Nombres</label></div>
   </div>
-  </div>
 
   <div class="map-frame">
-<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="-150 0 880 880" width="880" height="880" role="img" aria-label="Aparato digestivo humano"><defs id="defs29159">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="-110 0 900 880" width="900" height="880" role="img" aria-label="Aparato digestivo humano"><defs id="defs29159">
     <marker style="overflow:visible" id="marker7651" refX="0" refY="0" orient="auto">
       <path transform="matrix(0.4,0,0,0.4,2.96,0.4)" style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1" d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z" id="path7653"/>
     </marker>
@@ -352,7 +352,7 @@
     <linearGradient y2="163.64098" x2="128.38675" y1="153.32146" x1="120.57202" gradientTransform="matrix(0.67207627,0,0,0.67207627,461.9017,24.36388)" gradientUnits="userSpaceOnUse" id="linearGradient5168" xlink:href="#linearGradient5128"/>
     <linearGradient gradientTransform="matrix(0.94760496,-0.01496359,0.01412178,0.97366428,317.23734,-10.872048)" y2="864.57129" x2="353.1377" y1="557.77557" x1="452.44589" gradientUnits="userSpaceOnUse" id="linearGradient10163" xlink:href="#XMLID_8_"/>
   </defs>
-  <rect x="-150" y="0" width="880" height="880" fill="#F5EFE4"/><g id="dibujo" transform="scale(1.0666415)"><g style="display:inline" transform="translate(-9.5,-11.862187)" id="layer1">
+  <rect x="-110" y="0" width="900" height="880" fill="#F5EFE4"/><g id="dibujo" transform="scale(1.0666415)"><g style="display:inline" transform="translate(-9.5,-11.862187)" id="layer1">
     <g id="g5461" style="display:inline" transform="translate(0.9945865,-5.1502486)">
       <path style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#eab6a2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.59230006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 300.78633,207.89143 10.15689,-10.28138 c 0.79938,6.31831 2.98781,13.46761 3.30911,21.99026 0.78338,20.77971 -0.10359,53.86479 -3.36736,81.9743 -0.41586,3.58164 -0.27856,12.24857 0.0984,15.84723 6.32367,60.36964 9.55229,106.68853 9.88949,115.75434 -5.58931,-0.27022 -10.45492,0.54509 -16.76792,-0.81067 -6.44873,-25.40914 -11.80958,-68.67098 -6.01658,-115.77883 0.42757,-3.47696 1.23528,-10.59348 0.57233,-13.97205 -8.16935,-41.63308 4.19128,-88.7211 5.39662,-91.94061 -0.20287,-1.4231 -1.9273,-3.12979 -3.27096,-2.78259 z" id="rect4987"/>
       <g style="display:inline" id="g9404" transform="translate(-391.9025,23.798341)">
@@ -582,7 +582,7 @@
 })();
 </script>
 <script src="zoom.js?v=3" defer></script>
-<script src="juego.js?v=20261120c" defer></script>
+<script src="juego.js?v=20261120f" defer></script>
 <!-- goatcounter -->
 <script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>
