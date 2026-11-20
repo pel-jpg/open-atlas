@@ -56,6 +56,8 @@
     {id:'g-resp',t:'Aparato respiratorio',cats:['r-vias','r-pulm'],mix:['r-vias','r-pulm'],mixl:'Todo el aparato respiratorio'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
+  /* láminas del cuerpo humano: pocas estructuras, se preguntan todas */
+  var BODY=/aparato-/.test(location.pathname);
   var NOREL=/(costeros|hidrografia)/.test(location.pathname);
 
   /* capital → país, para decir «Nicosia, capital de Chipre» al responder */
@@ -182,14 +184,14 @@
     var opts=rows.map(function(r){return '<div class="game-row"><b>'+(rows.length>1?r.t:'Qué')+'</b>'+r.h+'</div>';}).join('');
     bar.innerHTML='<h3>Modo juego: localiza en el mapa</h3><p>Te preguntaré por un elemento y tú lo señalas con un clic o un toque. Los nombres del mapa se ocultan mientras juegas.</p>'+
       opts+
-      '<div class="game-row"><b>Preguntas</b><label><input type="radio" name="g-n" value="10" checked> 10</label><label><input type="radio" name="g-n" value="20"> 20</label><label><input type="radio" name="g-n" value="0"> Todas</label>'+
+      '<div class="game-row">'+(BODY?'':'<b>Preguntas</b><label><input type="radio" name="g-n" value="10" checked> 10</label><label><input type="radio" name="g-n" value="20"> 20</label><label><input type="radio" name="g-n" value="0"> Todas</label>')+
       '<b>Intentos</b><label><input type="radio" name="g-a" value="2" checked> 2 por pregunta</label><label><input type="radio" name="g-a" value="1"> 1</label></div>'+
       '<div class="game-row"><button type="button" class="game-btn" id="g-go">Empezar</button><button type="button" class="game-btn sec" id="g-exit">Cancelar</button></div>';
     bar.querySelector('#g-go').onclick=start;bar.querySelector('#g-exit').onclick=exit;
   }
   function val(n){var e=bar.querySelector('input[name="'+n+'"]:checked');return e?e.value:null;}
   function start(){
-    var spec=(val('g-what')||(present[0]+':all')).split(':'),c=spec[0],n=parseInt(val('g-n')||'10',10);S.max=parseInt(val('g-a')||'2',10);
+    var spec=(val('g-what')||(present[0]+':all')).split(':'),c=spec[0],n=BODY?0:parseInt(val('g-n')||'10',10);S.max=parseInt(val('g-a')||'2',10);
     S.cat=c;if(T[c].mix)T[c].mix.forEach(refresh);else refresh(c);
     var list=T[c].list.filter(function(t){return t.ok!==false;});
     var avail=list.filter(function(t){return checked(t.cat,t.n);});if(!avail.length)avail=list;
