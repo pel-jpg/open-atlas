@@ -184,7 +184,8 @@
   .juego-on .leader-dot{display:none;}
   .juego-on svg text.reveal.olabel{font-size:17px !important;}
   .juego-on svg .leader-on.leader-dot{display:block !important;}
-  @media screen{.map-frame svg#mapa{width:auto !important;height:min(92vh,1000px) !important;max-width:100% !important;aspect-ratio:915/775;margin:0 auto;display:block}}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:auto !important;height:min(92vh,1000px) !important;max-width:100% !important;aspect-ratio:915/775;margin:0 auto;display:block}}
   </style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
@@ -220,7 +221,7 @@
   </div>
       <div class="meta-row">
       <span class="tag category">BIOLOGÍA</span>
-      <span class="tag license">CC BY 4.0 — Derivado de LadyofHats (dominio público)</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original de Atlas Abierto</span>
       <span class="tag">Nivel: ESO</span>
       <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
     </div>
