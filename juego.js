@@ -11,7 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
-  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma'};
+  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma','Corazón':'el corazón','Aorta':'la aorta','Vena cava superior':'la vena cava superior','Vena cava inferior':'la vena cava inferior','Vasos pulmonares':'los vasos pulmonares','Arterias carótidas':'las arterias carótidas','Venas yugulares':'las venas yugulares','Vasos braquiales':'los vasos braquiales','Vasos ilíacos':'los vasos ilíacos','Vasos femorales':'los vasos femorales'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
@@ -40,10 +40,12 @@
     'd-gland':{pl:'glándulas anejas',q:function(n){return ART[n]||n;},kind:'fill'},
     'd-grueso':{pl:'intestino grueso',q:function(n){return ART[n]||n;},kind:'fill'},
     'r-vias':{pl:'vías respiratorias',q:function(n){return ART[n]||n;},kind:'fill'},
+    'c-central':{pl:'corazón y grandes vasos',q:function(n){return ART[n]||n;},kind:'fill'},
+    'c-vasos':{pl:'vasos de cabeza, brazos y piernas',q:function(n){return ART[n]||n;},kind:'fill'},
     'r-pulm':{pl:'pulmones y diafragma',q:function(n){return ART[n]||n;},kind:'fill'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm','c-central','c-vasos'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
   /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
   var GROUPS=[
@@ -53,7 +55,8 @@
     {id:'g-politico',t:'Político',cats:['country','capital','ccaa','capccaa','prov','capprov']},
     {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']},
     {id:'g-cuerpo',t:'Aparato digestivo',cats:['d-boca','d-tubo','d-gland','d-grueso'],mix:['d-boca','d-tubo','d-gland','d-grueso'],mixl:'Todo el aparato digestivo'},
-    {id:'g-resp',t:'Aparato respiratorio',cats:['r-vias','r-pulm'],mix:['r-vias','r-pulm'],mixl:'Todo el aparato respiratorio'}
+    {id:'g-resp',t:'Aparato respiratorio',cats:['r-vias','r-pulm'],mix:['r-vias','r-pulm'],mixl:'Todo el aparato respiratorio'},
+    {id:'g-circ',t:'Aparato circulatorio',cats:['c-central','c-vasos'],mix:['c-central','c-vasos'],mixl:'Todo el aparato circulatorio'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   /* láminas del cuerpo humano: pocas estructuras, se preguntan todas */
@@ -261,6 +264,15 @@
   function next(){clearTimeout(S.at);S.i++;if(S.i>=S.q.length)end();else ask();}
 
   /* ---------- detección de clics ---------- */
+  /* zonas recortadas (clip-path con polígonos): isPointInFill no las respeta, así que se comprueban a mano */
+  function clipPolys(e){
+    var m=/url\(#([^)]+)\)/.exec(e.getAttribute('clip-path')||'');if(!m)return null;
+    var cp=svg.querySelector('#'+m[1]);if(!cp)return null;
+    if(!cp.__polys){cp.__polys=[].slice.call(cp.querySelectorAll('polygon')).map(function(pg){var n=(pg.getAttribute('points')||'').trim().split(/[\s,]+/).map(parseFloat),a=[];for(var i=0;i+1<n.length;i+=2)a.push([n[i],n[i+1]]);return a;});}
+    return cp.__polys;
+  }
+  function inPoly(p,pt){var c=false;for(var i=0,j=p.length-1;i<p.length;j=i++){if(((p[i][1]>pt.y)!==(p[j][1]>pt.y))&&(pt.x<(p[j][0]-p[i][0])*(pt.y-p[i][1])/(p[j][1]-p[i][1])+p[i][0]))c=!c;}return c;}
+  function inClip(polys,pt){return polys.some(function(p){return inPoly(p,pt);});}
   function localPt(e,ev){var p=svg.createSVGPoint();p.x=ev.clientX;p.y=ev.clientY;var m=e.getScreenCTM();return m?p.matrixTransform(m.inverse()):p;}
   function strokeHit(e,ev,w){
     var old=e.style.strokeWidth,pt=localPt(e,ev),ok=false;e.style.strokeWidth=w+'px';
@@ -277,8 +289,9 @@
       t.els.forEach(function(e){
         if(!shown(e))return;
         var pt=localPt(e,ev),inside=false;try{inside=e.isPointInFill(pt);}catch(x){}
+        var cl=clipPolys(e);if(cl&&!inClip(cl,pt))inside=false;
         if(inside){best=0;return;}
-        var W=coarse?[8,18,30]:[4,9,16];for(var k=0;k<3&&k<best;k++){if(strokeHit(e,ev,W[k]))best=k;}
+        var W=coarse?[8,18,30]:[4,9,16];if(!cl)for(var k=0;k<3&&k<best;k++){if(strokeHit(e,ev,W[k]))best=k;}
         /* países o islas diminutos (Mónaco, San Marino…): zona de acierto como la de un punto */
         var r=e.getBoundingClientRect();
         if(best>0&&Math.max(r.width,r.height)<28){
