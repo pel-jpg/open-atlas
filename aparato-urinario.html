@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aparato urinario — Riñones, vejiga y vías urinarias · Atlas Abierto</title>
+<meta name="description" content="Aparato urinario humano para ESO: riñones, uréteres, vejiga, uretra, vasos renales y corte del riñón (corteza, médula y pelvis). Con modo juego para localizar las estructuras, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<link rel="canonical" href="https://atlasabierto.org/aparato-urinario.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Aparato urinario — Riñones, vejiga y vías urinarias · Atlas Abierto">
+<meta property="og:description" content="Aparato urinario humano para ESO: riñones, uréteres, vejiga, uretra, vasos renales y corte del riñón (corteza, médula y pelvis). Con modo juego para localizar las estructuras, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<meta property="og:url" content="https://atlasabierto.org/aparato-urinario.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 297mm 210mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:281mm; height:194mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:281mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:281mm !important; height:179mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:171.87mm; height:179.0mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .olabel{fill:#2e2014;font-size:21px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:17px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen{.map-frame svg#mapa{width:auto !important;height:min(80vh,780px) !important;max-width:100% !important;aspect-ratio:1060/880;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Aparato urinario — Riñones, vejiga y vías urinarias","description":"Aparato urinario humano para ESO: riñones, uréteres, vejiga, uretra, vasos renales y corte del riñón (corteza, médula y pelvis). Con modo juego para localizar las estructuras, versión muda y listo para imprimir. Licencia CC BY 4.0.","url":"https://atlasabierto.org/aparato-urinario.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Biología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Cuerpo humano","item":"https://atlasabierto.org/#cuerpo-humano"},{"@type":"ListItem","position":3,"name":"Aparato urinario — Riñones, vejiga y vías urinarias","item":"https://atlasabierto.org/aparato-urinario.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / Cuerpo humano / Aparato urinario</div>
+    <h1>Aparato urinario — Riñones, vejiga y vías urinarias</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa <strong>Jugar</strong> para localizar los órganos señalándolos.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 880" width="1060" height="880" role="img" aria-label="Aparato urinario humano"><defs></defs><rect x="0" y="0" width="1060" height="880" fill="#F5EFE4"/><g id="dibujo"><path d="M 290 100 C 280 200 292 300 300 400 C 305 480 270 560 268 640 C 268 720 300 790 330 850 L 570 850 C 600 790 632 720 632 640 C 630 560 595 480 600 400 C 608 300 620 200 610 100 Z" fill="#e6dccb" stroke="#a89880" stroke-width="2.2" stroke-linejoin="round"/><rect x="428" y="108" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="166" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="224" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="282" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="340" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="398" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="456" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="514" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><rect x="428" y="572" width="44" height="46" rx="12" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><path d="M 418 612 C 418 640 430 690 450 722 C 470 690 482 640 482 612 C 470 604 430 604 418 612 Z" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><path d="M 410 596 C 380 570 330 560 300 580 C 280 596 282 640 296 690 C 306 724 330 750 372 770 C 386 776 396 770 394 756 C 390 720 384 690 392 660 C 398 636 410 618 410 596 Z" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><path d="M 410 596 C 380 570 330 560 300 580 C 280 596 282 640 296 690 C 306 724 330 750 372 770 C 386 776 396 770 394 756 C 390 720 384 690 392 660 C 398 636 410 618 410 596 Z" transform="translate(900 0) scale(-1 1)" fill="#e6d9b8" stroke="#c9b98f" stroke-width="1.4"/><path d="M 394 770 C 410 800 430 812 450 812 C 470 812 490 800 506 770" fill="none" stroke="#c9b98f" stroke-width="2.2"/><path d="M 292 104 L 470 104 C 462 150 440 200 398 214 C 350 226 306 214 294 176 Z" fill="#cfa58e" stroke="#1f3a52" stroke-width="1.5" opacity=".85"/><path d="M 556 112 C 592 118 604 168 592 206 C 580 236 556 234 548 208 C 540 178 540 130 556 112 Z" fill="#b98a8f" stroke="#1f3a52" stroke-width="1.5" opacity=".85"/><path d="M 468 304 L 438 308 L 412 320" fill="none" stroke="#1f3a52" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M 468 304 L 438 308 L 412 320" fill="none" stroke="#b4473f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M 472 122 L 472 598" fill="none" stroke="#1f3a52" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path d="M 472 122 L 472 598" fill="none" stroke="#b4473f" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M 472 596 L 518 690" fill="none" stroke="#1f3a52" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M 472 596 L 518 690" fill="none" stroke="#b4473f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 472 596 L 428 690" fill="none" stroke="#1f3a52" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M 472 596 L 428 690" fill="none" stroke="#b4473f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 476 300 L 500 300" fill="none" stroke="#1f3a52" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M 476 300 L 500 300" fill="none" stroke="#b4473f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M 434 122 L 434 604" fill="none" stroke="#1f3a52" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/><path d="M 434 122 L 434 604" fill="none" stroke="#33699f" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M 434 604 L 398 690" fill="none" stroke="#1f3a52" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M 434 604 L 398 690" fill="none" stroke="#33699f" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M 434 604 L 470 696" fill="none" stroke="#1f3a52" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M 434 604 L 470 696" fill="none" stroke="#33699f" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M 432 292 L 410 310" fill="none" stroke="#1f3a52" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 432 292 L 410 310" fill="none" stroke="#33699f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M 436 280 L 482 280 L 500 292" fill="none" stroke="#1f3a52" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 436 280 L 482 280 L 500 292" fill="none" stroke="#33699f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M 388 228 C 396 214 414 214 424 226 C 410 224 396 228 388 240 Z" fill="#d8b25a" stroke="#1f3a52" stroke-width="1.4"/><path d="M 512 208 C 504 196 486 196 478 208 C 490 206 504 210 512 222 Z" fill="#d8b25a" stroke="#1f3a52" stroke-width="1.4"/><path d="M 0 -56 C 28 -56 44 -34 44 -4 C 44 28 30 54 2 56 C -22 58 -34 38 -30 18 C -26 6 -20 2 -20 -4 C -20 -10 -26 -16 -30 -24 C -32 -42 -18 -56 0 -56 Z" transform="translate(372 318) rotate(10) scale(-1.25 1.25)" fill="#b5584f" stroke="#1f3a52" stroke-width="1.8" stroke-linejoin="round"/><path d="M -14 -44 C 4 -48 22 -36 26 -12" transform="translate(372 318) rotate(10) scale(-1.25 1.25)" fill="none" stroke="#d98b80" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M 0 -56 C 28 -56 44 -34 44 -4 C 44 28 30 54 2 56 C -22 58 -34 38 -30 18 C -26 6 -20 2 -20 -4 C -20 -10 -26 -16 -30 -24 C -32 -42 -18 -56 0 -56 Z" transform="translate(528 292) rotate(-10) scale(1.25 1.25)" fill="#b5584f" stroke="#1f3a52" stroke-width="1.8" stroke-linejoin="round"/><path d="M -14 -44 C 4 -48 22 -36 26 -12" transform="translate(528 292) rotate(-10) scale(1.25 1.25)" fill="none" stroke="#d98b80" stroke-width="3" stroke-linecap="round" opacity=".55"/><path d="M 402 342 C 408 390 398 440 402 500 C 406 560 402 620 412 670 C 416 688 422 700 430 708" fill="none" stroke="#1f3a52" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M 402 342 C 408 390 398 440 402 500 C 406 560 402 620 412 670 C 416 688 422 700 430 708" fill="none" stroke="#e3b650" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 497 322 C 492 370 502 430 498 500 C 494 560 498 620 488 670 C 484 688 478 700 470 708" fill="none" stroke="#1f3a52" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M 497 322 C 492 370 502 430 498 500 C 494 560 498 620 488 670 C 484 688 478 700 470 708" fill="none" stroke="#e3b650" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 450 784 L 450 846" fill="none" stroke="#1f3a52" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M 450 784 L 450 846" fill="none" stroke="#d9a84a" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M 400 716 C 400 690 425 682 450 682 C 475 682 500 690 500 716 C 504 748 480 786 450 788 C 420 786 396 748 400 716 Z" fill="#e3b650" stroke="#1f3a52" stroke-width="1.8" stroke-linejoin="round"/><path d="M 414 706 C 420 696 436 692 450 692" fill="none" stroke="#f6e3a8" stroke-width="3" stroke-linecap="round" opacity=".8"/><rect x="655" y="566" width="235" height="285" rx="10" fill="#efe6d3" stroke="#1f3a52" stroke-width="1.6"/><g transform="translate(770 690) scale(2)"><path d="M 0 -56 C 28 -56 44 -34 44 -4 C 44 28 30 54 2 56 C -22 58 -34 38 -30 18 C -26 6 -20 2 -20 -4 C -20 -10 -26 -16 -30 -24 C -32 -42 -18 -56 0 -56 Z" fill="#c9645c" stroke="#1f3a52" stroke-width="0.90" stroke-linejoin="round"/><path d="M 7.9 -13.9 L -1.0 -44.1 Q 12.8 -48.2 24.9 -40.5 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M 14.6 -11.0 L 20.1 -36.8 Q 32.7 -34.2 38.3 -22.6 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M 19.0 -5.2 L 32.6 -21.5 Q 41.4 -14.3 40.1 -3.0 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M 19.9 1.9 L 38.8 -5.2 Q 42.8 5.2 36.1 14.0 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M 17.0 8.6 L 40.2 13.1 Q 38.0 25.0 27.0 30.0 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M 11.2 13.0 L 32.9 33.2 Q 23.5 43.3 9.7 42.6 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M 4.1 13.9 L 13.0 44.1 Q -0.8 48.2 -12.9 40.5 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M -3.0 10.7 L -9.2 35.9 Q -21.6 32.9 -26.7 21.2 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M -3.0 -10.7 L -26.7 -21.2 Q -21.6 -32.9 -9.2 -35.9 Z" fill="#9c3f45" stroke="#6e2c33" stroke-width="0.48" stroke-linejoin="round"/><path d="M -34 2 L 2 0" fill="none" stroke="#f0d9a0" stroke-width="9" stroke-linecap="round"/><path d="M 6 0 L 7.9 -13.9" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L 14.6 -11.0" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L 19.0 -5.2" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L 19.9 1.9" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L 17.0 8.6" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L 11.2 13.0" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L 4.1 13.9" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L -3.0 10.7" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 0 L -3.0 -10.7" fill="none" stroke="#f0d9a0" stroke-width="4.5" stroke-linecap="round"/><path d="M 6 -10 C 14 -10 18 -4 18 0 C 18 6 12 10 6 10 C 0 10 -4 5 -4 0 C -4 -5 0 -10 6 -10 Z" fill="#f0d9a0"/><path d="M -34 2 L -52 18 C -58 28 -56 46 -50 60" fill="none" stroke="#e3b650" stroke-width="6" stroke-linecap="round"/></g></g><g id="hitzones"><path class="organo" data-cat="u-rinon" data-name="Vena renal" d="M 432 292 L 410 310" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="14" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Vena renal" d="M 436 280 L 482 280 L 500 292" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="14" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Arteria renal" d="M 468 304 L 438 308 L 412 320" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="12" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Arteria renal" d="M 476 300 L 500 300" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="12" stroke-linecap="round"/><path class="organo" data-cat="u-organos" data-name="Riñón derecho" d="M 0 -56 C 28 -56 44 -34 44 -4 C 44 28 30 54 2 56 C -22 58 -34 38 -30 18 C -26 6 -20 2 -20 -4 C -20 -10 -26 -16 -30 -24 C -32 -42 -18 -56 0 -56 Z" transform="translate(372 318) rotate(10) scale(-1.25 1.25)" fill="transparent"/><path class="organo" data-cat="u-organos" data-name="Riñón izquierdo" d="M 0 -56 C 28 -56 44 -34 44 -4 C 44 28 30 54 2 56 C -22 58 -34 38 -30 18 C -26 6 -20 2 -20 -4 C -20 -10 -26 -16 -30 -24 C -32 -42 -18 -56 0 -56 Z" transform="translate(528 292) rotate(-10) scale(1.25 1.25)" fill="transparent"/><path class="organo" data-cat="u-organos" data-name="Uréteres" d="M 401 404 C 402 440 398 460 402 500 C 406 560 402 620 412 662" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="14" stroke-linecap="round"/><path class="organo" data-cat="u-organos" data-name="Uréteres" d="M 496 384 C 496 410 502 450 498 500 C 494 560 498 620 488 662" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="14" stroke-linecap="round"/><path class="organo" data-cat="u-organos" data-name="Vejiga urinaria" d="M 400 716 C 400 690 425 682 450 682 C 475 682 500 690 500 716 C 504 748 480 786 450 788 C 420 786 396 748 400 716 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-organos" data-name="Uretra" d="M 450 806 L 450 846" transform="matrix(1,0,0,1,0,0)" fill="transparent" stroke="transparent" stroke-width="16" stroke-linecap="round"/><g transform="translate(770 690) scale(2)"><path class="organo" data-cat="u-rinon" data-name="Corteza renal" d="M 0 -56 C 28 -56 44 -34 44 -4 C 44 28 30 54 2 56 C -22 58 -34 38 -30 18 C -26 6 -20 2 -20 -4 C -20 -10 -26 -16 -30 -24 C -32 -42 -18 -56 0 -56 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 7.9 -13.9 L -1.0 -44.1 Q 12.8 -48.2 24.9 -40.5 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 14.6 -11.0 L 20.1 -36.8 Q 32.7 -34.2 38.3 -22.6 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 19.0 -5.2 L 32.6 -21.5 Q 41.4 -14.3 40.1 -3.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 19.9 1.9 L 38.8 -5.2 Q 42.8 5.2 36.1 14.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 17.0 8.6 L 40.2 13.1 Q 38.0 25.0 27.0 30.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 11.2 13.0 L 32.9 33.2 Q 23.5 43.3 9.7 42.6 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M 4.1 13.9 L 13.0 44.1 Q -0.8 48.2 -12.9 40.5 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M -3.0 10.7 L -9.2 35.9 Q -21.6 32.9 -26.7 21.2 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Médula renal" d="M -3.0 -10.7 L -26.7 -21.2 Q -21.6 -32.9 -9.2 -35.9 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M -34 2 L 2 0" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="9" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 7.9 -13.9" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 14.6 -11.0" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 19.0 -5.2" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 19.9 1.9" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 17.0 8.6" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 11.2 13.0" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L 4.1 13.9" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L -3.0 10.7" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 0 L -3.0 -10.7" transform="matrix(1,0,0,1,0,0)" fill="none" stroke="transparent" stroke-width="7" stroke-linecap="round"/><path class="organo" data-cat="u-rinon" data-name="Pelvis renal" d="M 6 -10 C 14 -10 18 -4 18 0 C 18 6 12 10 6 10 C 0 10 -4 5 -4 0 C -4 -5 0 -10 6 -10 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent"/></g></g><g id="nombres"><line class="leader" x1="258" y1="294" x2="360.0" y2="330.0"/><circle class="leader-dot" cx="360.0" cy="330.0" r="2.6"/><text class="olabel" data-cat="u-organos" data-name="Riñón derecho" x="250" y="300" text-anchor="end">Riñón derecho</text><line class="leader" x1="258" y1="494" x2="402.0" y2="500.0"/><circle class="leader-dot" cx="402.0" cy="500.0" r="2.6"/><text class="olabel" data-cat="u-organos" data-name="Uréteres" x="250" y="500" text-anchor="end">Uréteres</text><line class="leader" x1="258" y1="729" x2="424.0" y2="738.0"/><circle class="leader-dot" cx="424.0" cy="738.0" r="2.6"/><text class="olabel" data-cat="u-organos" data-name="Vejiga urinaria" x="250" y="735" text-anchor="end">Vejiga urinaria</text><line class="leader" x1="258" y1="824" x2="450.0" y2="822.0"/><circle class="leader-dot" cx="450.0" cy="822.0" r="2.6"/><text class="olabel" data-cat="u-organos" data-name="Uretra" x="250" y="830" text-anchor="end">Uretra</text><line class="leader" x1="637" y1="229" x2="540.0" y2="270.0"/><circle class="leader-dot" cx="540.0" cy="270.0" r="2.6"/><text class="olabel" data-cat="u-organos" data-name="Riñón izquierdo" x="645" y="235" text-anchor="start">Riñón izquierdo</text><line class="leader" x1="637" y1="294" x2="458.0" y2="280.0"/><circle class="leader-dot" cx="458.0" cy="280.0" r="2.6"/><text class="olabel" data-cat="u-rinon" data-name="Vena renal" x="645" y="300" text-anchor="start">Vena renal</text><line class="leader" x1="637" y1="359" x2="485.0" y2="300.0"/><circle class="leader-dot" cx="485.0" cy="300.0" r="2.6"/><text class="olabel" data-cat="u-rinon" data-name="Arteria renal" x="645" y="365" text-anchor="start">Arteria renal</text><line class="leader" x1="892" y1="604" x2="786.0" y2="590.0"/><circle class="leader-dot" cx="786.0" cy="590.0" r="2.6"/><text class="olabel" data-cat="u-rinon" data-name="Corteza renal" x="900" y="610" text-anchor="start">Corteza renal</text><line class="leader" x1="892" y1="694" x2="782.0" y2="690.0"/><circle class="leader-dot" cx="782.0" cy="690.0" r="2.6"/><text class="olabel" data-cat="u-rinon" data-name="Pelvis renal" x="900" y="700" text-anchor="start">Pelvis renal</text><line class="leader" x1="892" y1="784" x2="800.0" y2="738.0"/><circle class="leader-dot" cx="800.0" cy="738.0" r="2.6"/><text class="olabel" data-cat="u-rinon" data-name="Médula renal" x="900" y="790" text-anchor="start">Médula renal</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">BIOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Derivado de LadyofHats (dominio público)</span>
+      <span class="tag">Nivel: ESO</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>El aparato urinario con <strong>10 estructuras</strong> señaladas en español: los riñones, los uréteres, la vejiga y la uretra, los vasos renales y, en un recuadro aparte, un corte del riñón con su corteza, su médula y su pelvis. Las <strong>arterias van en rojo</strong>, las <strong>venas en azul</strong> y las vías urinarias en <strong>amarillo</strong>.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Izquierda y derecha</strong> son las de la persona dibujada, que se ve de frente: su lado derecho queda a la izquierda del dibujo. El riñón derecho está algo más bajo por la presión del hígado.</li>
+        <li><strong>Los riñones</strong> filtran la sangre y fabrican la orina. La sangre llega por la arteria renal y sale limpia por la vena renal.</li>
+        <li><strong>Los uréteres</strong> llevan la orina de cada riñón a la vejiga; la vejiga la almacena y la <strong>uretra</strong> la expulsa al exterior.</li>
+        <li><strong>En el interior del riñón</strong>, la corteza es la capa externa, la médula forma las pirámides y la pelvis renal recoge la orina y la envía al uréter.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres y siga el camino de la orina, del riñón a la uretra.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar todas las estructuras.</li>
+        <li>Distinguir las partes del riñón en el recuadro y explicar qué hace cada una.</li>
+        <li>Comparar qué entra y qué sale del riñón por los vasos renales.</li>
+      </ul>
+      <h2>Fuente y licencia</h2>
+      <p>Dibujo original de Atlas Abierto, hecho a partir de las proporciones habituales de los textos de anatomía. Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">CUERPO HUMANO: APARATO URINARIO</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">10 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Dibujo base</span><span class="info-val">Original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="juego.js?v=20261121c" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>

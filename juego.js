@@ -11,7 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
-  var ART={'Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma','Corazón':'el corazón','Aorta':'la aorta','Vena cava superior':'la vena cava superior','Vena cava inferior':'la vena cava inferior','Vasos pulmonares':'los vasos pulmonares','Arterias carótidas':'las arterias carótidas','Venas yugulares':'las venas yugulares','Vasos braquiales':'los vasos braquiales','Vasos ilíacos':'los vasos ilíacos','Vasos femorales':'los vasos femorales'};
+  var ART={'Riñón derecho':'el riñón derecho','Riñón izquierdo':'el riñón izquierdo','Uréteres':'los uréteres','Vejiga urinaria':'la vejiga urinaria','Uretra':'la uretra','Arteria renal':'la arteria renal','Vena renal':'la vena renal','Corteza renal':'la corteza renal','Médula renal':'la médula renal','Pelvis renal':'la pelvis renal','Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma','Corazón':'el corazón','Aorta':'la aorta','Vena cava superior':'la vena cava superior','Vena cava inferior':'la vena cava inferior','Vasos pulmonares':'los vasos pulmonares','Arterias carótidas':'las arterias carótidas','Venas yugulares':'las venas yugulares','Vasos braquiales':'los vasos braquiales','Vasos ilíacos':'los vasos ilíacos','Vasos femorales':'los vasos femorales'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
@@ -43,9 +43,11 @@
     'c-central':{pl:'corazón y grandes vasos',q:function(n){return ART[n]||n;},kind:'fill'},
     'c-vasos':{pl:'vasos de cabeza, brazos y piernas',q:function(n){return ART[n]||n;},kind:'fill'},
     'r-pulm':{pl:'pulmones y diafragma',q:function(n){return ART[n]||n;},kind:'fill'},
+    'u-organos':{pl:'órganos urinarios',q:function(n){return ART[n]||n;},kind:'fill'},
+    'u-rinon':{pl:'dentro del riñón y vasos renales',q:function(n){return ART[n]||n;},kind:'fill'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm','c-central','c-vasos'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm','c-central','c-vasos','u-organos','u-rinon'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
   /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
   var GROUPS=[
@@ -56,7 +58,8 @@
     {id:'g-geo',t:'Geológico',cats:['plate','volcano','tect','quake']},
     {id:'g-cuerpo',t:'Aparato digestivo',cats:['d-boca','d-tubo','d-gland','d-grueso'],mix:['d-boca','d-tubo','d-gland','d-grueso'],mixl:'Todo el aparato digestivo'},
     {id:'g-resp',t:'Aparato respiratorio',cats:['r-vias','r-pulm'],mix:['r-vias','r-pulm'],mixl:'Todo el aparato respiratorio'},
-    {id:'g-circ',t:'Aparato circulatorio',cats:['c-central','c-vasos'],mix:['c-central','c-vasos'],mixl:'Todo el aparato circulatorio'}
+    {id:'g-circ',t:'Aparato circulatorio',cats:['c-central','c-vasos'],mix:['c-central','c-vasos'],mixl:'Todo el aparato circulatorio'},
+    {id:'g-uri',t:'Aparato urinario',cats:['u-organos','u-rinon'],mix:['u-organos','u-rinon'],mixl:'Todo el aparato urinario'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   /* láminas del cuerpo humano: pocas estructuras, se preguntan todas */
