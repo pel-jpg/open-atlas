@@ -38,7 +38,7 @@
   svg.addEventListener('click',function(e){
     var b=document.body.classList;if(b.contains('juego-on')||b.contains('juego-setup')||b.contains('mudo'))return;
     if(down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])>8)return;
-    var els=document.elementsFromPoint(e.clientX,e.clientY);
+    var els=document.elementsFromPoint(e.clientX,e.clientY);if(e.target&&e.target!==svg)els.unshift(e.target);
     for(var i=0;i<els.length;i++){var el=els[i];if(el.classList&&(el.classList.contains('organo')||el.classList.contains('olabel'))){var n=el.getAttribute('data-name');if(data[n]){open(n);return;}}}
   });
 })();
