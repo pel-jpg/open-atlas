@@ -11,7 +11,7 @@
     return n;
   }
   /* categorías conocidas: nombre plural, cómo se formula la pregunta y tipo de zona de clic */
-  var ART={'Riñón derecho':'el riñón derecho','Riñón izquierdo':'el riñón izquierdo','Uréteres':'los uréteres','Vejiga urinaria':'la vejiga urinaria','Uretra':'la uretra','Arteria renal':'la arteria renal','Vena renal':'la vena renal','Corteza renal':'la corteza renal','Médula renal':'la médula renal','Pelvis renal':'la pelvis renal','Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma','Corazón':'el corazón','Aorta':'la aorta','Vena cava superior':'la vena cava superior','Vena cava inferior':'la vena cava inferior','Vasos pulmonares':'los vasos pulmonares','Arterias carótidas':'las arterias carótidas','Venas yugulares':'las venas yugulares','Vasos braquiales':'los vasos braquiales','Vasos ilíacos':'los vasos ilíacos','Vasos femorales':'los vasos femorales'};
+  var ART={'Lóbulo frontal':'el lóbulo frontal','Lóbulo parietal':'el lóbulo parietal','Lóbulo temporal':'el lóbulo temporal','Lóbulo occipital':'el lóbulo occipital','Cerebelo':'el cerebelo','Tronco encefálico':'el tronco encefálico','Médula espinal':'la médula espinal','Plexo braquial':'el plexo braquial','Nervios del brazo':'los nervios del brazo','Nervios intercostales':'los nervios intercostales','Plexo lumbosacro':'el plexo lumbosacro','Nervio femoral':'el nervio femoral','Nervio ciático':'el nervio ciático','Riñón derecho':'el riñón derecho','Riñón izquierdo':'el riñón izquierdo','Uréteres':'los uréteres','Vejiga urinaria':'la vejiga urinaria','Uretra':'la uretra','Arteria renal':'la arteria renal','Vena renal':'la vena renal','Corteza renal':'la corteza renal','Médula renal':'la médula renal','Pelvis renal':'la pelvis renal','Lengua':'la lengua','Glándulas salivales':'las glándulas salivales','Faringe':'la faringe','Esófago':'el esófago','Hígado':'el hígado','Vesícula biliar':'la vesícula biliar','Estómago':'el estómago','Páncreas':'el páncreas','Duodeno':'el duodeno','Intestino delgado':'el intestino delgado','Ciego':'el ciego','Apéndice':'el apéndice','Colon ascendente':'el colon ascendente','Colon transverso':'el colon transverso','Colon descendente':'el colon descendente','Colon sigmoide':'el colon sigmoide','Recto':'el recto','Fosas nasales':'las fosas nasales','Laringe':'la laringe','Tráquea':'la tráquea','Bronquios':'los bronquios','Bronquiolos':'los bronquiolos','Pulmón derecho':'el pulmón derecho','Pulmón izquierdo':'el pulmón izquierdo','Alvéolos':'los alvéolos','Diafragma':'el diafragma','Corazón':'el corazón','Aorta':'la aorta','Vena cava superior':'la vena cava superior','Vena cava inferior':'la vena cava inferior','Vasos pulmonares':'los vasos pulmonares','Arterias carótidas':'las arterias carótidas','Venas yugulares':'las venas yugulares','Vasos braquiales':'los vasos braquiales','Vasos ilíacos':'los vasos ilíacos','Vasos femorales':'los vasos femorales'};
   var CATS={
     river:{pl:'ríos',q:function(n){return 'el río '+n;},top:12,kind:'stroke'},
     lake:{pl:'lagos',q:function(n){return 'el lago '+n;},kind:'fill'},
@@ -45,9 +45,11 @@
     'r-pulm':{pl:'pulmones y diafragma',q:function(n){return ART[n]||n;},kind:'fill'},
     'u-organos':{pl:'órganos urinarios',q:function(n){return ART[n]||n;},kind:'fill'},
     'u-rinon':{pl:'dentro del riñón y vasos renales',q:function(n){return ART[n]||n;},kind:'fill'},
+    'n-encefalo':{pl:'partes del encéfalo',q:function(n){return ART[n]||n;},kind:'fill'},
+    'n-nervios':{pl:'médula espinal y nervios',q:function(n){return ART[n]||n;},kind:'fill'},
     sea:{pl:'mares y océanos',q:function(n){return n;},kind:'box',tol:[30,70,120]}
   };
-  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm','c-central','c-vasos','u-organos','u-rinon'];
+  var ORDER=['river','lake','country','capital','ccaa','capccaa','prov','capprov','peak','mountain','plain','region','feature','cape','gulf','strait','island','peninsula','sea','plate','volcano','tect','quake','d-boca','d-tubo','d-gland','d-grueso','r-vias','r-pulm','c-central','c-vasos','u-organos','u-rinon','n-encefalo','n-nervios'];
   var SHAPE={path:1,circle:1,polygon:1,polyline:1,ellipse:1,rect:1};
   /* grupos de preguntas; «mix» = categorías que también se pueden preguntar todas juntas */
   var GROUPS=[
@@ -59,11 +61,12 @@
     {id:'g-cuerpo',t:'Aparato digestivo',cats:['d-boca','d-tubo','d-gland','d-grueso'],mix:['d-boca','d-tubo','d-gland','d-grueso'],mixl:'Todo el aparato digestivo'},
     {id:'g-resp',t:'Aparato respiratorio',cats:['r-vias','r-pulm'],mix:['r-vias','r-pulm'],mixl:'Todo el aparato respiratorio'},
     {id:'g-circ',t:'Aparato circulatorio',cats:['c-central','c-vasos'],mix:['c-central','c-vasos'],mixl:'Todo el aparato circulatorio'},
-    {id:'g-uri',t:'Aparato urinario',cats:['u-organos','u-rinon'],mix:['u-organos','u-rinon'],mixl:'Todo el aparato urinario'}
+    {id:'g-uri',t:'Aparato urinario',cats:['u-organos','u-rinon'],mix:['u-organos','u-rinon'],mixl:'Todo el aparato urinario'},
+    {id:'g-nerv',t:'Sistema nervioso',cats:['n-encefalo','n-nervios'],mix:['n-encefalo','n-nervios'],mixl:'Todo el sistema nervioso'}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   /* láminas del cuerpo humano: pocas estructuras, se preguntan todas */
-  var BODY=/aparato-/.test(location.pathname);
+  var BODY=/(aparato|sistema)-/.test(location.pathname);
   var NOREL=/(costeros|hidrografia)/.test(location.pathname);
 
   /* capital → país, para decir «Nicosia, capital de Chipre» al responder */
@@ -151,7 +154,7 @@
   var grp=document.createElement('div');grp.className='panel-actions';var pb=head.querySelector('.preset-btns');
   if(pb){head.appendChild(grp);var cb=pb.querySelector('[data-preset=completo]'),mb=pb.querySelector('[data-preset=mudo]');if(cb&&mb)pb.insertBefore(cb,mb);
     var r1=document.createElement('div');r1.className='panel-row';r1.appendChild(pb);r1.appendChild(btn);grp.appendChild(r1);
-    var pr=document.querySelector('.print-btn');if(pr){pr.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>Imprimir en '+(/aparato-(digestivo|respiratorio|circulatorio)/.test(location.pathname)?'A4 vertical':'A4 horizontal')+'';var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
+    var pr=document.querySelector('.print-btn');if(pr){pr.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>Imprimir en '+(/(aparato-(digestivo|respiratorio|circulatorio)|sistema-nervioso)/.test(location.pathname)?'A4 vertical':'A4 horizontal')+'';var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
   var bar=document.createElement('div');bar.className='game-bar';bar.hidden=true;bar.setAttribute('aria-live','polite');
   panel.after(bar);
 
