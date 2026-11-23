@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema endocrino — Glándulas y hormonas · Atlas Abierto</title>
+<meta name="description" content="Sistema endocrino humano para ESO: hipotálamo, hipófisis, epífisis, tiroides, paratiroides, timo, suprarrenales, páncreas, testículos y ovarios. Con modo juego para localizar las glándulas, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<link rel="canonical" href="https://atlasabierto.org/sistema-endocrino.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Sistema endocrino — Glándulas y hormonas · Atlas Abierto">
+<meta property="og:description" content="Sistema endocrino humano para ESO: hipotálamo, hipófisis, epífisis, tiroides, paratiroides, timo, suprarrenales, páncreas, testículos y ovarios. Con modo juego para localizar las glándulas, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<meta property="og:url" content="https://atlasabierto.org/sistema-endocrino.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .cap{fill:#7a6a58;font-size:34px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:36px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:17px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:60px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:2290/2338;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Sistema endocrino — Glándulas y hormonas","description":"Sistema endocrino humano para ESO: hipotálamo, hipófisis, epífisis, tiroides, paratiroides, timo, suprarrenales, páncreas, testículos y ovarios. Con modo juego para localizar las glándulas, versión muda y listo para imprimir. Licencia CC BY 4.0.","url":"https://atlasabierto.org/sistema-endocrino.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Biología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Cuerpo humano","item":"https://atlasabierto.org/#cuerpo-humano"},{"@type":"ListItem","position":3,"name":"Sistema endocrino — Glándulas y hormonas","item":"https://atlasabierto.org/sistema-endocrino.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / Cuerpo humano / Sistema endocrino</div>
+    <h1>Sistema endocrino — Glándulas y hormonas</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar los órganos señalándolos.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="-420 0 2290 2338" width="2290" height="2338" role="img" aria-label="Sistema endocrino humano"><defs><linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efdac6"/><stop offset="1" stop-color="#e4c8ae"/></linearGradient>
+<linearGradient id="fg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="2338"><stop offset="0" stop-color="#000"/><stop offset=".015" stop-color="#fff"/><stop offset=".985" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<mask id="fade" maskUnits="userSpaceOnUse" x="-400" y="0" width="2800" height="2338"><rect x="-400" width="2800" height="2338" fill="url(#fg)"/></mask></defs><rect x="-420" y="0" width="2290" height="2338" fill="#F5EFE4"/><g id="dibujo" mask="url(#fade)"><path d="M 465 12 L 437 19 L 419 28 L 401 41 L 387 55 L 376 71 L 368 95 L 366 117 L 370 144 L 383 178 L 386 203 L 391 215 L 408 290 L 405 325 L 398 344 L 385 359 L 358 377 L 330 385 L 279 392 L 246 404 L 220 405 L 206 411 L 184 432 L 161 470 L 153 496 L 152 521 L 155 545 L 163 568 L 162 582 L 165 605 L 160 623 L 155 662 L 146 705 L 141 760 L 119 806 L 106 845 L 99 876 L 93 957 L 96 1042 L 93 1090 L 89 1110 L 78 1143 L 74 1167 L 63 1188 L 37 1217 L 33 1233 L 23 1257 L 23 1268 L 18 1279 L 18 1286 L 23 1291 L 28 1290 L 33 1285 L 37 1276 L 45 1269 L 49 1270 L 54 1276 L 54 1306 L 51 1317 L 43 1331 L 42 1340 L 36 1354 L 35 1365 L 42 1372 L 50 1368 L 60 1346 L 71 1335 L 75 1336 L 81 1344 L 78 1376 L 85 1384 L 93 1380 L 101 1358 L 108 1352 L 116 1357 L 121 1367 L 128 1367 L 134 1358 L 137 1338 L 145 1329 L 154 1335 L 160 1350 L 165 1351 L 171 1345 L 172 1326 L 165 1285 L 170 1262 L 167 1225 L 155 1185 L 154 1166 L 161 1128 L 175 1077 L 196 1027 L 216 967 L 224 935 L 230 895 L 230 824 L 225 815 L 225 809 L 235 781 L 240 742 L 249 710 L 257 705 L 266 715 L 279 758 L 279 785 L 284 807 L 286 833 L 294 868 L 300 883 L 307 921 L 305 944 L 291 979 L 287 1011 L 272 1051 L 268 1073 L 265 1171 L 269 1203 L 276 1225 L 279 1245 L 266 1295 L 258 1343 L 255 1409 L 259 1475 L 268 1534 L 286 1609 L 302 1662 L 302 1672 L 296 1697 L 298 1775 L 294 1783 L 300 1805 L 295 1822 L 289 1865 L 287 1926 L 300 2032 L 317 2118 L 318 2169 L 317 2208 L 314 2220 L 315 2258 L 301 2281 L 294 2288 L 285 2292 L 269 2308 L 268 2314 L 274 2319 L 292 2322 L 316 2322 L 323 2320 L 336 2323 L 355 2318 L 378 2320 L 395 2310 L 399 2305 L 400 2290 L 404 2281 L 403 2273 L 413 2253 L 412 2207 L 405 2188 L 399 2135 L 399 2079 L 412 2028 L 413 2009 L 425 1969 L 432 1921 L 430 1870 L 422 1830 L 420 1797 L 431 1774 L 438 1752 L 448 1694 L 452 1587 L 462 1502 L 465 1409 L 461 1256 L 465 1230 L 471 1223 L 476 1222 L 484 1230 L 489 1257 L 484 1411 L 489 1524 L 496 1568 L 501 1687 L 512 1755 L 529 1796 L 527 1829 L 519 1869 L 517 1921 L 525 1973 L 536 2009 L 538 2031 L 551 2083 L 551 2116 L 544 2190 L 538 2203 L 537 2254 L 545 2270 L 550 2305 L 555 2311 L 571 2320 L 595 2318 L 613 2323 L 623 2321 L 656 2322 L 679 2317 L 681 2309 L 664 2292 L 655 2288 L 647 2280 L 633 2255 L 635 2221 L 631 2196 L 632 2119 L 651 2020 L 662 1925 L 661 1876 L 657 1840 L 650 1806 L 650 1798 L 654 1791 L 655 1783 L 651 1774 L 653 1700 L 647 1673 L 647 1663 L 664 1607 L 685 1512 L 693 1437 L 694 1378 L 684 1301 L 671 1248 L 673 1225 L 680 1204 L 685 1163 L 681 1073 L 676 1048 L 665 1019 L 664 997 L 644 943 L 643 919 L 645 902 L 651 877 L 657 863 L 663 834 L 665 807 L 670 786 L 672 755 L 683 719 L 692 709 L 697 710 L 701 714 L 705 723 L 714 781 L 725 811 L 720 822 L 720 903 L 727 942 L 750 1017 L 776 1082 L 790 1135 L 795 1166 L 793 1189 L 786 1207 L 779 1249 L 779 1261 L 784 1276 L 783 1300 L 779 1310 L 777 1327 L 778 1345 L 784 1351 L 789 1350 L 794 1337 L 804 1330 L 812 1338 L 814 1354 L 821 1367 L 828 1367 L 834 1358 L 842 1353 L 847 1357 L 856 1379 L 863 1384 L 869 1380 L 871 1375 L 868 1343 L 874 1335 L 878 1334 L 889 1345 L 899 1368 L 904 1372 L 908 1372 L 914 1366 L 913 1354 L 905 1329 L 896 1310 L 896 1284 L 894 1276 L 899 1269 L 903 1268 L 912 1276 L 921 1290 L 929 1290 L 932 1283 L 927 1272 L 925 1254 L 918 1239 L 913 1219 L 910 1213 L 885 1186 L 875 1167 L 868 1131 L 862 1117 L 854 1078 L 856 962 L 854 909 L 846 856 L 832 811 L 808 760 L 805 717 L 793 657 L 791 631 L 784 606 L 786 568 L 793 550 L 797 529 L 797 504 L 790 475 L 768 436 L 750 416 L 740 409 L 724 404 L 704 404 L 686 399 L 674 393 L 652 388 L 626 386 L 604 381 L 585 373 L 564 358 L 554 348 L 547 335 L 542 315 L 541 291 L 547 260 L 564 199 L 567 175 L 581 138 L 583 112 L 580 91 L 568 63 L 538 33 L 518 21 L 502 15 L 485 12 Z" fill="url(#skin)" stroke="#a98c75" stroke-width="2.4" stroke-linejoin="round"/><image href="sistema-endocrino.webp" x="0" y="0" width="952" height="2338"/><rect x="1048" y="58" width="484" height="385.4" rx="8" fill="#F8F2E7" stroke="#a98c75" stroke-width="1.6"/><image href="endocrino-cabeza.webp" x="1060" y="70" width="460" height="361.4"/><rect x="1088" y="518" width="404" height="459.4" rx="8" fill="#F8F2E7" stroke="#a98c75" stroke-width="1.6"/><image href="endocrino-tiroides.webp" x="1100" y="530" width="380" height="435.4"/><rect x="1048" y="1058" width="484" height="407.3" rx="8" fill="#F8F2E7" stroke="#a98c75" stroke-width="1.6"/><image href="endocrino-ovarios.webp" x="1060" y="1070" width="460" height="383.3"/><text class="cap" x="1290" y="44" text-anchor="middle">Base del encéfalo (corte lateral)</text><text class="cap" x="1290" y="504" text-anchor="middle">Tiroides y paratiroides, vista posterior</text><text class="cap" x="1290" y="1044" text-anchor="middle">Pelvis femenina (esquema)</text></g><g id="hitzones"><path class="organo" data-cat="en-tronco" data-name="Timo" d="M 474.0 421.0 L 471.0 425.0 L 470.0 431.0 L 472.0 453.0 L 470.0 455.0 L 462.0 449.0 L 458.0 449.0 L 455.0 452.0 L 453.0 465.0 L 454.0 469.0 L 449.0 476.0 L 446.0 485.0 L 445.0 501.0 L 438.0 522.0 L 439.0 542.0 L 451.0 574.0 L 465.0 587.0 L 470.0 587.0 L 476.0 581.0 L 479.0 568.0 L 489.0 550.0 L 491.0 543.0 L 494.0 540.0 L 505.0 552.0 L 523.0 553.0 L 544.0 565.0 L 548.0 570.0 L 571.0 570.0 L 572.0 565.0 L 565.0 547.0 L 556.0 531.0 L 546.0 518.0 L 534.0 495.0 L 523.0 483.0 L 520.0 477.0 L 519.0 469.0 L 512.0 458.0 L 510.0 450.0 L 508.0 448.0 L 499.0 450.0 L 479.0 423.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-cuello" data-name="Tiroides" d="M 444.0 346.0 L 437.0 356.0 L 433.0 376.0 L 434.0 394.0 L 439.0 409.0 L 446.0 416.0 L 451.0 416.0 L 457.0 410.0 L 461.0 402.0 L 468.0 405.0 L 482.0 405.0 L 489.0 402.0 L 493.0 410.0 L 499.0 416.0 L 504.0 416.0 L 513.0 405.0 L 517.0 385.0 L 515.0 362.0 L 509.0 349.0 L 503.0 344.0 L 500.0 344.0 L 492.0 352.0 L 487.0 368.0 L 486.0 388.0 L 479.0 386.0 L 464.0 388.0 L 463.0 368.0 L 460.0 356.0 L 450.0 344.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-tronco" data-name="Glándulas suprarrenales" d="M 429.0 743.0 L 420.0 743.0 L 416.0 745.0 L 407.0 754.0 L 393.0 759.0 L 388.0 764.0 L 389.0 769.0 L 395.0 775.0 L 413.0 782.0 L 416.0 793.0 L 416.0 803.0 L 419.0 806.0 L 427.0 801.0 L 435.0 799.0 L 440.0 794.0 L 446.0 779.0 L 446.0 759.0 L 436.0 747.0 Z M 531.0 721.0 L 523.0 719.0 L 513.0 720.0 L 502.0 728.0 L 495.0 750.0 L 500.0 783.0 L 504.0 789.0 L 513.0 788.0 L 522.0 790.0 L 526.0 786.0 L 525.0 776.0 L 527.0 765.0 L 534.0 760.0 L 541.0 758.0 L 550.0 748.0 L 550.0 744.0 L 544.0 734.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-tronco" data-name="Páncreas" d="M 559.0 782.0 L 552.0 778.0 L 525.0 789.0 L 508.0 786.0 L 461.0 798.0 L 445.0 799.0 L 434.0 797.0 L 423.0 801.0 L 410.0 810.0 L 406.0 819.0 L 402.0 849.0 L 404.0 851.0 L 404.0 857.0 L 407.0 860.0 L 407.0 864.0 L 415.0 874.0 L 423.0 879.0 L 441.0 877.0 L 446.0 874.0 L 451.0 874.0 L 455.0 871.0 L 464.0 870.0 L 474.0 866.0 L 483.0 854.0 L 468.0 836.0 L 476.0 831.0 L 479.0 832.0 L 488.0 828.0 L 490.0 829.0 L 501.0 826.0 L 519.0 818.0 L 531.0 810.0 L 546.0 805.0 L 556.0 796.0 L 559.0 788.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-tronco" data-name="Testículos" d="M 505.0 1292.0 L 499.0 1292.0 L 492.0 1298.0 L 491.0 1305.0 L 485.0 1312.0 L 483.0 1319.0 L 484.0 1334.0 L 495.0 1346.0 L 503.0 1346.0 L 507.0 1344.0 L 516.0 1332.0 L 516.0 1315.0 L 511.0 1307.0 L 510.0 1297.0 Z M 441.0 1292.0 L 435.0 1299.0 L 435.0 1306.0 L 430.0 1315.0 L 429.0 1326.0 L 432.0 1336.0 L 443.0 1346.0 L 449.0 1346.0 L 460.0 1337.0 L 463.0 1330.0 L 463.0 1318.0 L 455.0 1304.0 L 454.0 1299.0 L 447.0 1292.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-cuello" data-name="Hipotálamo" d="M 1229.5 187.4 L 1225.2 189.2 L 1218.6 196.2 L 1216.0 211.5 L 1203.3 236.0 L 1202.4 239.1 L 1202.4 243.9 L 1204.1 248.3 L 1211.6 255.8 L 1216.8 257.9 L 1223.8 257.9 L 1225.2 257.1 L 1229.5 259.3 L 1231.7 257.1 L 1233.5 257.9 L 1234.4 257.1 L 1237.9 259.7 L 1241.8 260.6 L 1244.4 263.2 L 1247.9 259.7 L 1252.3 251.4 L 1264.6 240.4 L 1270.3 237.4 L 1277.3 230.3 L 1279.0 225.5 L 1279.0 222.9 L 1276.9 217.2 L 1274.2 213.7 L 1265.9 205.4 L 1259.3 200.1 L 1253.2 196.2 L 1242.7 191.4 L 1239.2 188.7 L 1234.4 187.4 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-cuello" data-name="Hipófisis" d="M 1229.5 247.0 L 1223.4 251.8 L 1218.6 252.2 L 1211.6 255.8 L 1204.1 263.6 L 1201.1 272.4 L 1201.5 280.3 L 1205.9 288.6 L 1213.8 296.1 L 1225.6 300.0 L 1232.6 299.6 L 1239.6 296.1 L 1248.4 286.9 L 1251.4 278.5 L 1251.0 271.1 L 1248.8 266.3 L 1246.6 263.6 L 1246.6 261.9 L 1249.7 256.6 L 1249.7 255.3 L 1246.2 251.8 L 1245.3 252.7 L 1243.6 251.4 L 1242.2 252.2 L 1240.9 250.9 L 1239.2 251.8 L 1238.3 250.9 L 1235.7 251.8 L 1231.7 247.9 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-cuello" data-name="Epífisis" d="M 1326.8 209.3 L 1325.0 213.3 L 1325.0 218.5 L 1327.2 223.3 L 1336.9 232.5 L 1361.0 244.8 L 1369.7 245.2 L 1375.0 242.6 L 1380.2 236.9 L 1381.6 233.0 L 1381.6 229.0 L 1379.8 223.8 L 1376.3 219.0 L 1368.9 211.5 L 1359.7 204.5 L 1349.1 200.6 L 1340.8 200.6 L 1332.9 203.2 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-cuello" data-name="Paratiroides" d="M 1386.6 814.6 L 1379.9 817.4 L 1372.3 825.3 L 1369.2 833.2 L 1368.8 841.5 L 1370.4 847.9 L 1372.3 851.8 L 1379.9 859.7 L 1385.0 862.1 L 1390.9 862.5 L 1397.7 859.7 L 1405.2 851.8 L 1408.4 843.9 L 1408.8 835.6 L 1407.2 829.2 L 1405.2 825.3 L 1397.7 817.4 L 1392.5 815.0 Z M 1188.7 814.6 L 1181.9 817.4 L 1174.4 825.3 L 1171.2 833.2 L 1170.9 841.5 L 1172.4 847.9 L 1174.4 851.8 L 1181.9 859.7 L 1187.1 862.1 L 1193.0 862.5 L 1199.8 859.7 L 1207.3 851.8 L 1210.4 843.9 L 1210.8 835.6 L 1209.2 829.2 L 1207.3 825.3 L 1199.8 817.4 L 1194.6 815.0 Z M 1390.5 699.8 L 1383.8 702.6 L 1376.3 710.5 L 1373.1 718.4 L 1372.7 726.7 L 1374.3 733.1 L 1376.3 737.0 L 1383.8 744.9 L 1389.0 747.3 L 1394.9 747.7 L 1401.6 744.9 L 1409.1 737.0 L 1412.3 729.1 L 1412.7 720.8 L 1411.1 714.5 L 1409.1 710.5 L 1401.6 702.6 L 1396.5 700.2 Z M 1184.7 699.8 L 1178.0 702.6 L 1170.5 710.5 L 1167.3 718.4 L 1166.9 726.7 L 1168.5 733.1 L 1170.5 737.0 L 1178.0 744.9 L 1183.1 747.3 L 1189.1 747.7 L 1195.8 744.9 L 1203.3 737.0 L 1206.5 729.1 L 1206.9 720.8 L 1205.3 714.5 L 1203.3 710.5 L 1195.8 702.6 L 1190.6 700.2 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-cuello" data-name="Tiroides" d="M 1201.7 684.4 L 1194.6 692.7 L 1189.5 702.6 L 1192.2 705.4 L 1195.8 706.9 L 1198.2 709.3 L 1200.9 714.5 L 1202.5 720.8 L 1201.7 730.7 L 1199.0 737.0 L 1195.8 740.6 L 1189.1 743.4 L 1184.7 743.4 L 1181.1 742.2 L 1178.8 744.5 L 1176.8 767.1 L 1177.6 796.8 L 1180.8 819.0 L 1183.1 821.3 L 1188.7 819.0 L 1193.0 819.0 L 1197.8 820.5 L 1202.9 825.3 L 1206.1 833.2 L 1206.5 841.5 L 1204.9 847.9 L 1202.1 853.0 L 1195.8 858.5 L 1198.6 862.9 L 1205.3 869.2 L 1209.6 871.6 L 1215.6 872.4 L 1219.5 871.6 L 1223.9 869.2 L 1230.6 862.9 L 1236.2 855.0 L 1242.1 842.3 L 1246.5 828.9 L 1251.6 832.8 L 1260.7 836.8 L 1272.6 839.5 L 1283.7 840.7 L 1301.1 840.3 L 1313.0 838.4 L 1323.2 835.2 L 1330.0 831.6 L 1333.1 828.9 L 1337.5 842.3 L 1343.4 855.0 L 1349.0 862.9 L 1355.7 869.2 L 1360.1 871.6 L 1366.0 872.4 L 1370.0 871.6 L 1374.3 869.2 L 1381.0 862.9 L 1383.8 858.5 L 1377.5 853.0 L 1374.7 847.9 L 1373.1 841.5 L 1373.9 831.6 L 1377.5 824.1 L 1381.8 820.5 L 1386.6 819.0 L 1390.9 819.0 L 1396.5 821.3 L 1398.9 819.0 L 1401.6 801.1 L 1402.8 783.3 L 1402.4 759.2 L 1400.8 744.5 L 1398.5 742.2 L 1394.9 743.4 L 1390.5 743.4 L 1383.8 740.6 L 1380.6 737.0 L 1377.5 729.1 L 1377.1 720.8 L 1378.7 714.5 L 1381.4 709.3 L 1383.8 706.9 L 1387.4 705.4 L 1390.1 702.6 L 1385.0 692.7 L 1381.0 687.5 L 1374.3 681.2 L 1370.0 678.8 L 1366.0 678.0 L 1360.1 678.8 L 1355.7 681.2 L 1349.0 687.5 L 1345.0 692.7 L 1340.7 700.6 L 1334.3 717.6 L 1331.2 731.1 L 1328.4 749.3 L 1327.2 767.1 L 1327.2 783.3 L 1328.4 801.1 L 1329.2 804.3 L 1328.8 805.5 L 1323.2 802.3 L 1316.1 800.0 L 1307.0 798.0 L 1295.9 796.8 L 1283.7 796.8 L 1272.6 798.0 L 1260.7 800.8 L 1250.8 805.5 L 1250.4 804.3 L 1251.2 801.1 L 1252.4 783.3 L 1252.4 767.1 L 1251.2 749.3 L 1247.6 727.1 L 1241.3 706.1 L 1234.6 692.7 L 1230.6 687.5 L 1223.9 681.2 L 1219.5 678.8 L 1213.6 678.0 L 1209.6 678.8 L 1205.3 681.2 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="en-tronco" data-name="Ovarios" d="M 1361.3 1225.2 L 1359.8 1229.1 L 1359.8 1232.5 L 1361.3 1236.4 L 1367.8 1242.9 L 1376.2 1246.3 L 1384.7 1246.7 L 1393.1 1244.4 L 1397.3 1241.7 L 1401.2 1237.9 L 1403.8 1232.5 L 1403.8 1229.1 L 1401.2 1223.7 L 1395.8 1218.7 L 1387.4 1215.3 L 1378.9 1214.9 L 1372.4 1216.4 L 1366.3 1219.9 Z M 1177.3 1225.2 L 1175.8 1229.1 L 1175.8 1232.5 L 1177.3 1236.4 L 1183.8 1242.9 L 1192.2 1246.3 L 1200.7 1246.7 L 1209.1 1244.4 L 1213.3 1241.7 L 1217.2 1237.9 L 1219.8 1232.5 L 1219.8 1229.1 L 1217.2 1223.7 L 1211.8 1218.7 L 1203.4 1215.3 L 1194.9 1214.9 L 1188.4 1216.4 L 1182.3 1219.9 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="-6.0,372.0 448.0,380.0"/><circle class="leader-dot" cx="448.0" cy="380.0" r="3.5"/><text class="olabel" data-cat="en-cuello" data-name="Tiroides" x="-14" y="380.0" text-anchor="end">Tiroides</text><polyline class="leader" points="-6.0,492.0 486.0,500.0"/><circle class="leader-dot" cx="486.0" cy="500.0" r="3.5"/><text class="olabel" data-cat="en-tronco" data-name="Timo" x="-14" y="500.0" text-anchor="end">Timo</text><polyline class="leader" points="-6.0,734.0 521.0,742.0"/><circle class="leader-dot" cx="521.0" cy="742.0" r="3.5"/><text class="olabel" data-cat="en-tronco" data-name="Glándulas suprarrenales" x="-14" y="742.0" text-anchor="end">Glándulas suprarrenales</text><polyline class="leader" points="-6.0,830.0 436.0,838.0"/><circle class="leader-dot" cx="436.0" cy="838.0" r="3.5"/><text class="olabel" data-cat="en-tronco" data-name="Páncreas" x="-14" y="838.0" text-anchor="end">Páncreas</text><polyline class="leader" points="-6.0,1314.0 446.0,1322.0"/><circle class="leader-dot" cx="446.0" cy="1322.0" r="3.5"/><text class="olabel" data-cat="en-tronco" data-name="Testículos" x="-14" y="1322.0" text-anchor="end">Testículos</text><polyline class="leader" points="1572.0,211.8 1350.9,219.8"/><circle class="leader-dot" cx="1350.9" cy="219.8" r="3.5"/><text class="olabel" data-cat="en-cuello" data-name="Epífisis" x="1580" y="219.8" text-anchor="start">Epífisis</text><polyline class="leader" points="1572.0,273.8 1241.8,223.3"/><circle class="leader-dot" cx="1241.8" cy="223.3" r="3.5"/><text class="olabel" data-cat="en-cuello" data-name="Hipotálamo" x="1580" y="281.8" text-anchor="start">Hipotálamo</text><polyline class="leader" points="1572.0,335.8 1226.9,275.5"/><circle class="leader-dot" cx="1226.9" cy="275.5" r="3.5"/><text class="olabel" data-cat="en-cuello" data-name="Hipófisis" x="1580" y="343.8" text-anchor="start">Hipófisis</text><polyline class="leader" points="1572.0,715.6 1392.5,723.6"/><circle class="leader-dot" cx="1392.5" cy="723.6" r="3.5"/><text class="olabel" data-cat="en-cuello" data-name="Paratiroides" x="1580" y="723.6" text-anchor="start">Paratiroides</text><polyline class="leader" points="1572.0,1222.6 1197.6,1230.6"/><circle class="leader-dot" cx="1197.6" cy="1230.6" r="3.5"/><text class="olabel" data-cat="en-tronco" data-name="Ovarios" x="1580" y="1230.6" text-anchor="start">Ovarios</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">BIOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Basado en BodyParts3D</span>
+      <span class="tag">Nivel: ESO</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>El <strong>sistema endocrino</strong> está formado por las glándulas que fabrican hormonas y las vierten a la sangre, que las reparte por todo el cuerpo. Se señalan <strong>10 glándulas</strong>: cinco de la cabeza y el cuello (hipotálamo, hipófisis, epífisis, tiroides y paratiroides) y cinco del tronco y la pelvis (timo, suprarrenales, páncreas, testículos y ovarios). Las más pequeñas se ven ampliadas en los recuadros de la derecha: la base del encéfalo, el tiroides con las paratiroides por detrás, y una pelvis femenina con los ovarios.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Las hormonas</strong> son mensajeros químicos: cada una actúa solo sobre los órganos que tienen receptores para ella.</li>
+        <li><strong>El hipotálamo y la hipófisis</strong> son el centro de mando: la hipófisis manda sobre otras glándulas, y el hipotálamo, a su vez, sobre la hipófisis.</li>
+        <li><strong>El páncreas</strong> es una glándula mixta: parte de él libera su jugo al intestino (digestivo) y parte, la insulina y el glucagón, a la sangre.</li>
+        <li><strong>Lado izquierdo y derecho</strong> son los de la persona dibujada, que se ve de frente.</li>
+        <li><strong>Los ovarios y el tiroides con las paratiroides</strong> no están en el modelo 3D de base, que es masculino y no los incluye: los ha dibujado Atlas Abierto de forma esquemática para situarlos, no como modelo exacto de su forma.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres y diga qué hormona o hormonas produce cada glándula.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar todas las glándulas.</li>
+        <li>Comparar el sistema endocrino y el nervioso: ambos coordinan el cuerpo, uno con mensajes químicos lentos y duraderos y otro con impulsos rápidos.</li>
+        <li>Buscar qué glándulas son distintas en hombres y mujeres y cuáles son iguales.</li>
+      </ul>
+      <h2>Fuente y licencia</h2>
+      <p>Render anatómico de Atlas Abierto a partir de los modelos 3D de BodyParts3D (© The Database Center for Life Science, licencia Creative Commons Attribution 4.0 International). El tiroides, las paratiroides y los ovarios son esquemas de Atlas Abierto, porque la base de datos no los incluye. Los colores, los nombres en español y las zonas pulsables para el juego también son de Atlas Abierto. Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">CUERPO HUMANO: SISTEMA NERVIOSO</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">10 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Modelo base</span><span class="info-val">BodyParts3D (DBCLS), CC BY 4.0</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Hipotálamo": {"grupo": "Glándulas de la cabeza y el cuello", "img": "ficha/end-hipotalamo.webp", "txt": "Es una pequeña zona en la base del cerebro. Controla la hipófisis y regula el hambre, la sed, el sueño y la temperatura del cuerpo. Es el punto de unión entre el sistema nervioso y el endocrino.", "dato": "Es del tamaño de una almendra."}, "Hipófisis": {"grupo": "Glándulas de la cabeza y el cuello", "img": "ficha/end-hipofisis.webp", "txt": "Glándula del tamaño de un guisante, colgada del hipotálamo y alojada en un hueco del hueso esfenoides. Produce la hormona del crecimiento y otras hormonas que ordenan trabajar al tiroides, a las suprarrenales y a las gónadas (ovarios y testículos).", "dato": "Se la llama «glándula maestra», aunque a ella la manda el hipotálamo."}, "Epífisis": {"grupo": "Glándulas de la cabeza y el cuello", "img": "ficha/end-epifisis.webp", "txt": "También llamada glándula pineal. Está en el centro del cerebro y produce melatonina, una hormona que regula el ciclo del sueño y la vigilia: se produce más de noche, en la oscuridad.", "dato": "Su nombre viene de «piña» (en latín, pinea), por su forma."}, "Tiroides": {"grupo": "Glándulas de la cabeza y el cuello", "img": "ficha/end-tiroides.webp", "txt": "Glándula con forma de mariposa que está en el cuello, delante de la tráquea. Produce las hormonas tiroideas, que regulan el metabolismo: la rapidez con que el cuerpo gasta energía. Necesita yodo para funcionar.", "dato": "Por eso se recomienda la sal yodada. La falta de yodo puede hacer que el tiroides crezca y forme el bocio. Aquí está dibujado de forma esquemática."}, "Paratiroides": {"grupo": "Glándulas de la cabeza y el cuello", "img": "ficha/end-paratiroides.webp", "txt": "Son cuatro glándulas muy pequeñas, como granos de arroz, pegadas a la parte de atrás del tiroides. Producen la parathormona, que mantiene la cantidad de calcio en la sangre y en los huesos. Aquí están dibujadas de forma esquemática.", "dato": "Aunque están junto al tiroides, no tienen relación con él: hacen un trabajo distinto."}, "Timo": {"grupo": "Glándulas del tronco y la pelvis", "img": "ficha/end-timo.webp", "txt": "Está detrás del esternón, entre los pulmones. En él maduran los linfocitos T, células del sistema inmunitario que nos defienden de las infecciones. Es grande en la infancia y se va reduciendo con los años.", "dato": "Es a la vez parte del sistema endocrino y del inmunitario."}, "Glándulas suprarrenales": {"grupo": "Glándulas del tronco y la pelvis", "img": "ficha/end-suprarrenales.webp", "txt": "Son dos, una encima de cada riñón. Por fuera (corteza) producen cortisol y otras hormonas que regulan el agua y las sales; por dentro (médula) producen adrenalina, la hormona de la reacción ante el peligro o el susto.", "dato": "«Suprarrenal» significa «encima del riñón»."}, "Páncreas": {"grupo": "Glándulas del tronco y la pelvis", "img": "ficha/end-pancreas.webp", "txt": "Está detrás del estómago. Es una glándula mixta: produce jugo pancreático para la digestión y, en unos grupos de células llamados islotes de Langerhans, las hormonas insulina y glucagón, que mantienen estable la cantidad de glucosa en la sangre.", "dato": "Cuando falla la insulina aparece la diabetes."}, "Testículos": {"grupo": "Glándulas del tronco y la pelvis", "img": "ficha/end-testiculos.webp", "txt": "Son dos y están en el escroto, fuera del abdomen. Producen espermatozoides y la testosterona, la hormona que da lugar a los caracteres sexuales masculinos en la pubertad.", "dato": "Están fuera del abdomen porque los espermatozoides se forman mejor a una temperatura un poco más baja que la del interior del cuerpo."}, "Ovarios": {"grupo": "Glándulas del tronco y la pelvis", "img": "ficha/end-ovarios.webp", "txt": "Son dos, uno a cada lado del útero, en la pelvis de la mujer. Producen óvulos y las hormonas estrógenos y progesterona, que regulan el ciclo menstrual y los caracteres sexuales femeninos. Están dibujados en un esquema aparte porque el modelo 3D de base es masculino.", "dato": "Cada ciclo suele madurar un óvulo, y los ovarios ya contienen las futuras células reproductoras desde antes del nacimiento."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123d" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
