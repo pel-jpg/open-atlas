@@ -17,17 +17,19 @@
   '.ficha-x{position:absolute;top:8px;right:10px;width:34px;height:34px;border:none;background:rgba(251,247,239,.9);border-radius:50%;font-size:22px;line-height:1;cursor:pointer;color:#2e2014}'+
   '.ficha-x:hover{background:#efe3cb}'+
   '@media (max-width:640px){.ficha{grid-template-columns:1fr}.ficha-img{border-right:none;border-bottom:1px solid #e3d8c4;max-height:46vh}.ficha-img img{max-height:46vh;width:auto;margin:0 auto}.ficha-body{padding:16px 18px 20px}.ficha-body h2{font-size:23px}}'+
+  '.ficha-more{margin:14px 0 0 !important}.ficha-link{display:inline-block;background:#2e2014;color:#fbf7ef !important;text-decoration:none;font-size:14px;padding:9px 14px;border-radius:2px}.ficha-link:hover{background:#4a3722}'+
   '@media print{.ficha-ov{display:none !important}}';
   var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
   document.body.classList.add('fichas-on');
   var ov=document.createElement('div');ov.className='ficha-ov';ov.hidden=true;
-  ov.innerHTML='<div class="ficha" role="dialog" aria-modal="true" aria-labelledby="ficha-t"><button class="ficha-x" aria-label="Cerrar ficha">×</button><div class="ficha-img"><img alt=""></div><div class="ficha-body"><h2 id="ficha-t"></h2><p class="ficha-grp"></p><p class="ficha-txt"></p><p class="ficha-dato"></p></div></div>';
+  ov.innerHTML='<div class="ficha" role="dialog" aria-modal="true" aria-labelledby="ficha-t"><button class="ficha-x" aria-label="Cerrar ficha">×</button><div class="ficha-img"><img alt=""></div><div class="ficha-body"><h2 id="ficha-t"></h2><p class="ficha-grp"></p><p class="ficha-txt"></p><p class="ficha-dato"></p><p class="ficha-more"><a class="ficha-link"></a></p></div></div>';
   document.body.appendChild(ov);
-  var img=ov.querySelector('img'),tt=ov.querySelector('h2'),gp=ov.querySelector('.ficha-grp'),tx=ov.querySelector('.ficha-txt'),dt=ov.querySelector('.ficha-dato'),xb=ov.querySelector('.ficha-x');
+  var img=ov.querySelector('img'),tt=ov.querySelector('h2'),gp=ov.querySelector('.ficha-grp'),tx=ov.querySelector('.ficha-txt'),dt=ov.querySelector('.ficha-dato'),xb=ov.querySelector('.ficha-x'),mr=ov.querySelector('.ficha-more'),lk=ov.querySelector('.ficha-link');
   var back=null;
   function open(n){var f=data[n];if(!f)return;
     img.src=f.img;img.alt='Detalle: '+n.toLowerCase();tt.textContent=n;gp.textContent=f.grupo||'';tx.textContent=f.txt;
     if(f.dato){dt.textContent='Dato: '+f.dato;dt.style.display='';}else dt.style.display='none';
+    if(f.link){lk.href=f.link;lk.textContent=(f.linktxt||'Ver en detalle')+' →';mr.style.display='';}else mr.style.display='none';
     back=document.activeElement;ov.hidden=false;xb.focus();}
   function close(){ov.hidden=true;if(back&&back.focus)try{back.focus();}catch(e){}}
   xb.addEventListener('click',close);
