@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cráneo humano — Huesos del cráneo y de la cara · Atlas Abierto</title>
+<meta name="description" content="Huesos del cráneo humano para ESO: frontal, parietales, temporales, occipital, esfenoides y los huesos de la cara, en vista frontal y lateral. Con modo juego para localizarlos, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<link rel="canonical" href="https://atlasabierto.org/sistema-esqueletico-craneo.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Cráneo humano — Huesos del cráneo y de la cara · Atlas Abierto">
+<meta property="og:description" content="Huesos del cráneo humano para ESO: frontal, parietales, temporales, occipital, esfenoides y los huesos de la cara, en vista frontal y lateral. Con modo juego para localizarlos, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<meta property="og:url" content="https://atlasabierto.org/sistema-esqueletico-craneo.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 297mm 210mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:281mm; height:194mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:281mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:281mm !important; height:179mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:171.87mm; height:179.0mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .olabel{fill:#2e2014;font-size:30px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .cap{fill:#7a6a58;font-size:26px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:17px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:44px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:2130/960;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Cráneo humano — Huesos del cráneo y de la cara","description":"Huesos del cráneo humano para ESO: frontal, parietales, temporales, occipital, esfenoides y los huesos de la cara, en vista frontal y lateral. Con modo juego para localizarlos, versión muda y listo para imprimir. Licencia CC BY 4.0.","url":"https://atlasabierto.org/sistema-esqueletico-craneo.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Biología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Cuerpo humano","item":"https://atlasabierto.org/#cuerpo-humano"},{"@type":"ListItem","position":3,"name":"Cráneo humano — Huesos del cráneo y de la cara","item":"https://atlasabierto.org/sistema-esqueletico-craneo.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / Cuerpo humano / Cráneo humano</div>
+    <h1>Cráneo humano — Huesos del cráneo y de la cara</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar los órganos señalándolos.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2130 960" width="2130" height="960" role="img" aria-label="Huesos del cráneo humano"><rect width="2130" height="960" fill="#F5EFE4"/><g id="dibujo"><image href="craneo-frontal.webp" x="300" y="36" width="561.6" height="885.6"/><image href="craneo-lateral.webp" x="1130" y="36" width="720.0" height="885.6"/><text class="cap" x="581" y="944" text-anchor="middle">Vista frontal</text><text class="cap" x="1490" y="944" text-anchor="middle">Vista lateral izquierda</text></g><g id="hitzones"><path class="organo" data-cat="k-neuro" data-name="Frontal" d="M 418.1 203.0 L 418.8 205.2 L 413.8 210.2 L 407.3 221.0 L 399.4 230.4 L 397.9 237.6 L 392.9 244.8 L 390.7 252.0 L 385.7 257.8 L 377.0 272.2 L 377.0 274.3 L 370.6 288.0 L 369.8 296.6 L 367.7 302.4 L 367.7 308.9 L 365.5 315.4 L 365.5 336.2 L 372.0 363.6 L 389.3 398.2 L 395.0 403.2 L 400.8 412.6 L 402.2 424.1 L 400.1 433.4 L 399.4 447.1 L 402.2 445.0 L 405.1 445.0 L 408.7 448.6 L 412.3 455.0 L 414.5 456.5 L 415.9 455.8 L 421.0 460.8 L 425.3 461.5 L 430.3 468.0 L 438.2 473.0 L 442.6 473.0 L 450.5 468.0 L 457.7 466.6 L 468.5 452.9 L 480.0 447.8 L 489.4 448.6 L 493.7 450.0 L 495.1 451.4 L 490.1 454.3 L 491.5 456.5 L 493.7 456.5 L 498.0 451.4 L 502.3 450.7 L 515.3 450.7 L 523.2 452.2 L 529.0 455.8 L 533.3 461.5 L 533.3 487.4 L 534.7 491.0 L 534.7 475.2 L 536.9 470.9 L 543.4 463.7 L 546.2 463.7 L 549.8 466.6 L 557.8 467.3 L 562.8 463.0 L 570.0 460.1 L 583.7 460.1 L 596.6 467.3 L 615.4 465.8 L 619.7 471.6 L 621.1 476.6 L 622.6 463.0 L 626.9 458.6 L 629.8 460.1 L 639.8 451.4 L 658.6 451.4 L 662.2 449.3 L 667.9 449.3 L 669.4 447.8 L 677.3 447.8 L 688.8 452.9 L 700.3 466.6 L 707.5 468.0 L 712.6 471.6 L 716.9 473.0 L 726.2 466.6 L 732.0 460.8 L 734.9 460.8 L 739.9 455.8 L 743.5 457.9 L 747.8 448.6 L 751.4 445.0 L 754.3 445.0 L 757.9 448.6 L 758.6 447.8 L 758.6 439.9 L 756.5 426.2 L 757.2 418.3 L 760.1 410.4 L 765.8 401.8 L 771.6 396.0 L 784.6 366.5 L 788.2 349.9 L 791.0 329.8 L 791.0 320.4 L 788.9 305.3 L 785.3 295.2 L 778.8 282.2 L 775.9 278.6 L 775.9 275.8 L 763.0 249.1 L 762.2 244.1 L 757.9 236.2 L 755.0 224.6 L 750.7 221.0 L 747.1 213.8 L 741.4 208.8 L 742.1 206.6 L 723.4 186.5 L 708.2 175.7 L 703.2 173.5 L 697.4 167.8 L 692.4 167.0 L 691.0 165.6 L 691.0 162.7 L 688.8 160.6 L 685.9 159.8 L 684.5 158.4 L 685.2 157.0 L 683.0 154.8 L 675.1 151.9 L 672.2 148.3 L 667.2 145.4 L 662.2 144.7 L 660.0 141.8 L 657.1 141.1 L 653.5 138.2 L 633.4 134.6 L 621.1 131.0 L 598.1 128.9 L 566.4 128.9 L 535.4 131.0 L 527.5 133.2 L 521.0 132.5 L 499.4 139.7 L 493.7 145.4 L 482.9 151.2 L 477.8 156.2 L 471.4 158.4 L 466.3 164.2 L 461.3 166.3 L 448.3 177.8 L 441.8 182.2 L 434.6 189.4 L 429.6 192.2 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-cara" data-name="Lagrimal" d="M 621.8 491.8 L 621.8 531.4 L 626.9 541.4 L 635.5 550.1 L 632.6 545.8 L 636.2 540.0 L 626.9 524.2 L 623.3 510.5 Z M 532.6 487.4 L 527.5 493.2 L 523.9 504.0 L 522.5 515.5 L 518.2 526.3 L 517.4 533.5 L 516.0 536.4 L 516.7 541.4 L 522.5 547.9 L 528.2 542.9 L 531.1 538.6 L 534.7 529.2 L 534.7 491.8 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-cara" data-name="Cigomático" d="M 754.3 445.7 L 750.0 446.4 L 743.5 458.6 L 741.4 457.9 L 739.9 455.8 L 739.2 457.9 L 733.4 463.0 L 716.2 473.8 L 711.8 478.1 L 703.9 509.8 L 698.9 514.8 L 696.0 514.8 L 694.6 516.2 L 693.1 533.5 L 694.6 539.3 L 700.3 542.2 L 703.2 545.0 L 703.9 549.4 L 706.1 551.5 L 706.8 554.4 L 709.7 555.8 L 712.6 559.4 L 706.8 566.6 L 701.8 576.0 L 689.5 576.0 L 688.1 577.4 L 689.5 581.8 L 696.7 593.3 L 709.7 602.6 L 715.4 603.4 L 719.0 605.5 L 721.9 616.3 L 721.9 620.6 L 723.4 622.1 L 727.7 622.8 L 729.8 625.0 L 732.0 629.3 L 735.6 632.9 L 736.3 635.8 L 741.4 634.3 L 744.2 631.4 L 754.3 614.9 L 783.8 583.9 L 788.9 581.0 L 793.9 576.0 L 795.4 570.2 L 793.9 563.8 L 788.9 555.1 L 778.8 545.8 L 768.7 543.6 L 765.1 540.0 L 763.7 527.0 L 763.7 513.4 L 760.8 497.5 L 760.8 468.7 L 758.6 458.6 L 758.6 450.7 Z M 402.2 445.7 L 398.6 448.6 L 397.2 452.2 L 397.2 459.4 L 395.0 470.9 L 395.8 491.8 L 392.9 509.8 L 392.9 521.3 L 390.7 540.7 L 387.1 543.6 L 381.4 544.3 L 376.3 546.5 L 368.4 553.7 L 361.9 564.5 L 361.2 573.1 L 362.6 576.7 L 371.3 583.2 L 395.0 607.0 L 407.3 622.1 L 412.3 632.2 L 417.4 635.0 L 417.4 633.6 L 423.1 629.3 L 428.2 622.8 L 433.2 620.6 L 434.6 609.1 L 436.1 605.5 L 438.2 603.4 L 446.2 602.6 L 458.4 594.0 L 465.6 583.2 L 467.8 577.4 L 466.3 576.0 L 454.8 576.0 L 451.9 573.1 L 449.0 565.9 L 443.3 559.4 L 446.2 555.8 L 449.8 553.7 L 451.9 550.1 L 452.6 545.0 L 461.3 539.3 L 462.0 535.7 L 460.6 516.2 L 453.4 512.6 L 449.8 508.3 L 444.0 486.0 L 443.3 478.8 L 439.0 473.8 L 433.9 471.6 L 426.7 463.7 L 422.4 463.0 L 417.4 458.6 L 416.6 456.5 L 414.5 457.2 L 405.1 445.7 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-cara" data-name="Mandíbula" d="M 418.1 635.8 L 419.5 643.0 L 420.2 661.0 L 423.8 679.0 L 433.9 717.1 L 434.6 748.8 L 439.7 761.0 L 449.0 774.0 L 459.1 792.0 L 468.5 802.1 L 485.8 813.6 L 498.0 820.1 L 513.8 826.6 L 530.4 831.6 L 552.7 834.5 L 557.0 835.9 L 568.6 835.2 L 575.8 833.0 L 598.8 835.9 L 622.6 832.3 L 644.2 825.8 L 666.5 815.8 L 690.2 799.9 L 698.9 789.1 L 707.5 773.3 L 714.7 763.9 L 721.2 750.2 L 721.2 744.5 L 722.6 739.4 L 721.9 718.6 L 732.0 680.4 L 735.6 662.4 L 737.8 635.8 L 733.4 638.6 L 729.8 638.6 L 721.9 635.8 L 712.6 636.5 L 711.1 643.7 L 701.0 660.2 L 698.9 670.3 L 696.7 674.6 L 678.0 700.6 L 656.4 724.3 L 652.8 730.1 L 640.6 740.9 L 632.6 745.9 L 626.2 744.5 L 621.8 747.4 L 614.6 747.4 L 610.3 749.5 L 598.1 749.5 L 595.2 751.0 L 580.8 747.4 L 575.8 747.4 L 562.8 751.0 L 557.0 749.5 L 545.5 749.5 L 541.9 747.4 L 534.0 747.4 L 530.4 744.5 L 523.9 745.9 L 515.3 740.9 L 510.2 735.1 L 503.8 730.8 L 500.9 725.8 L 480.0 702.7 L 457.7 671.8 L 454.1 658.1 L 444.7 643.0 L 444.0 636.5 L 433.9 635.8 L 426.7 638.6 L 422.4 638.6 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-cara" data-name="Nasal" d="M 570.0 460.8 L 560.6 465.1 L 556.3 470.9 L 556.3 476.6 L 558.5 481.0 L 559.2 510.5 L 557.0 516.2 L 556.3 526.3 L 554.2 531.4 L 549.8 550.8 L 549.1 561.6 L 554.2 565.9 L 554.2 568.1 L 559.2 564.5 L 562.8 557.3 L 565.0 547.2 L 572.9 537.1 L 574.3 538.6 L 574.3 542.9 L 588.7 558.0 L 593.0 563.8 L 599.5 565.9 L 599.5 563.8 L 602.4 562.3 L 604.6 558.0 L 605.3 543.6 L 598.1 511.9 L 598.1 492.5 L 595.9 486.0 L 595.2 470.2 L 592.3 465.8 L 583.7 460.8 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-cara" data-name="Vómer" d="M 577.2 550.1 L 572.2 554.4 L 568.6 555.1 L 562.8 560.9 L 559.2 572.4 L 555.6 576.7 L 560.6 583.9 L 560.6 606.2 L 562.1 601.9 L 562.8 589.0 L 558.5 578.9 L 559.2 576.7 L 565.0 583.9 L 565.7 609.8 L 567.8 612.0 L 570.0 619.9 L 572.9 622.1 L 575.0 621.4 L 575.0 609.1 L 576.5 607.0 L 577.2 594.7 L 579.4 589.0 L 582.2 585.4 L 587.3 583.2 L 590.2 580.3 L 591.6 576.7 L 593.8 576.7 L 595.9 574.6 L 595.2 567.4 L 590.9 563.0 L 585.8 567.4 L 585.8 573.1 L 584.4 573.8 L 583.0 572.4 L 583.0 555.8 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-cara" data-name="Maxilar" d="M 418.1 633.6 L 418.8 636.5 L 422.4 637.9 L 426.7 637.9 L 433.9 635.0 L 441.1 635.0 L 451.2 637.9 L 461.3 647.3 L 465.6 653.0 L 468.5 658.8 L 468.5 664.6 L 471.4 669.6 L 472.1 676.1 L 473.5 679.0 L 476.4 681.8 L 480.7 682.6 L 485.0 685.4 L 495.1 688.3 L 500.2 688.3 L 504.5 686.9 L 511.0 689.8 L 518.9 688.3 L 526.8 688.3 L 529.0 689.8 L 532.6 689.8 L 542.6 687.6 L 546.2 688.3 L 548.4 691.9 L 552.7 691.9 L 558.5 689.8 L 566.4 689.8 L 570.7 686.9 L 575.8 690.5 L 577.9 689.0 L 580.8 690.5 L 582.2 689.0 L 585.1 689.0 L 588.0 690.5 L 601.7 691.2 L 604.6 692.6 L 607.4 691.9 L 609.6 689.0 L 646.3 689.8 L 650.6 687.6 L 660.7 688.3 L 667.9 685.4 L 670.8 685.4 L 675.1 682.6 L 680.2 681.8 L 683.8 676.8 L 683.8 671.0 L 688.1 663.1 L 688.1 657.4 L 693.1 649.4 L 700.3 641.5 L 706.8 637.2 L 714.7 635.0 L 721.9 635.0 L 729.8 637.9 L 733.4 637.9 L 735.6 636.5 L 734.9 632.9 L 731.3 629.3 L 727.7 623.5 L 723.4 622.8 L 721.2 620.6 L 721.2 616.3 L 718.3 605.5 L 709.7 603.4 L 699.6 596.2 L 694.6 591.1 L 687.4 578.2 L 689.5 575.3 L 701.8 575.3 L 706.1 566.6 L 712.6 558.7 L 710.4 556.6 L 706.1 555.1 L 697.4 567.4 L 693.1 567.4 L 685.9 561.6 L 675.8 560.9 L 667.9 551.5 L 655.7 545.8 L 638.4 533.5 L 634.8 534.2 L 637.0 540.7 L 631.9 547.2 L 626.2 541.4 L 622.6 535.0 L 620.4 527.8 L 621.1 477.4 L 619.0 471.6 L 615.4 466.6 L 609.6 466.6 L 605.3 468.0 L 596.6 468.0 L 593.8 466.6 L 595.9 470.2 L 596.6 486.0 L 598.8 492.5 L 598.8 511.9 L 606.0 543.6 L 605.3 558.0 L 604.6 560.2 L 600.2 563.8 L 600.2 565.2 L 616.8 583.9 L 621.1 591.1 L 621.1 601.9 L 622.6 605.5 L 621.8 615.6 L 617.5 623.5 L 608.9 632.2 L 598.8 637.2 L 588.7 637.2 L 580.8 629.3 L 576.5 629.3 L 565.0 637.9 L 554.2 636.5 L 549.1 633.6 L 537.6 622.1 L 534.0 614.9 L 534.0 604.1 L 535.4 599.8 L 534.7 592.6 L 539.8 583.2 L 547.7 575.3 L 553.4 567.4 L 553.4 565.9 L 548.4 561.6 L 548.4 557.3 L 552.0 537.1 L 556.3 522.7 L 556.3 516.2 L 558.5 510.5 L 557.8 481.0 L 555.6 476.6 L 555.6 470.9 L 557.8 468.0 L 549.8 467.3 L 546.2 464.4 L 541.9 465.1 L 535.4 475.2 L 536.2 524.9 L 534.7 532.1 L 529.0 542.9 L 522.5 548.6 L 519.6 546.5 L 519.6 545.0 L 515.3 539.3 L 508.8 540.0 L 499.4 546.5 L 489.4 550.8 L 480.0 560.9 L 475.7 562.3 L 469.9 562.3 L 462.7 567.4 L 459.1 567.4 L 449.8 555.1 L 446.2 556.6 L 444.0 559.4 L 449.8 565.9 L 452.6 573.1 L 454.8 575.3 L 466.3 575.3 L 468.5 577.4 L 468.5 578.9 L 458.4 594.7 L 446.2 603.4 L 438.2 604.1 L 436.8 605.5 L 435.4 609.1 L 433.9 620.6 L 428.2 623.5 L 424.6 628.6 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-neuro" data-name="Parietal" d="M 1402.9 128.2 L 1403.6 129.6 L 1400.0 131.8 L 1404.3 136.1 L 1410.1 136.1 L 1411.5 137.5 L 1409.4 139.7 L 1407.2 139.7 L 1407.2 141.8 L 1405.8 143.3 L 1400.7 144.7 L 1404.3 148.3 L 1402.9 151.2 L 1398.6 152.6 L 1400.7 156.2 L 1398.6 158.4 L 1392.1 158.4 L 1392.1 162.0 L 1390.6 163.4 L 1383.4 166.3 L 1386.3 169.2 L 1382.7 173.5 L 1382.7 175.0 L 1387.0 175.0 L 1388.5 176.4 L 1385.6 179.3 L 1385.6 180.7 L 1387.0 180.7 L 1389.2 182.9 L 1389.2 185.0 L 1391.4 187.2 L 1389.2 190.1 L 1389.2 193.0 L 1385.6 198.0 L 1385.6 200.2 L 1387.8 202.3 L 1387.0 205.2 L 1384.9 207.4 L 1382.0 207.4 L 1379.1 209.5 L 1379.1 211.0 L 1381.3 211.0 L 1382.7 212.4 L 1382.7 214.6 L 1378.4 218.9 L 1377.7 221.8 L 1381.3 222.5 L 1383.4 224.6 L 1383.4 226.1 L 1375.5 235.4 L 1376.2 243.4 L 1372.6 249.8 L 1375.5 257.0 L 1375.5 260.6 L 1369.0 270.7 L 1369.0 274.3 L 1363.3 278.6 L 1368.3 282.2 L 1369.0 285.8 L 1367.6 293.0 L 1366.2 294.5 L 1366.9 296.6 L 1364.0 299.5 L 1365.4 301.0 L 1364.0 303.1 L 1364.0 306.7 L 1361.1 311.8 L 1361.8 313.9 L 1359.0 319.7 L 1356.8 331.2 L 1356.8 338.4 L 1353.2 343.4 L 1351.0 350.6 L 1353.2 367.2 L 1347.4 371.5 L 1341.7 372.2 L 1335.9 380.2 L 1335.2 385.2 L 1336.6 389.5 L 1341.0 395.3 L 1339.5 400.3 L 1335.2 404.6 L 1335.9 408.2 L 1338.8 409.7 L 1349.6 410.4 L 1354.6 411.8 L 1360.4 414.7 L 1365.4 419.0 L 1367.6 419.0 L 1374.1 414.7 L 1379.1 414.0 L 1388.5 418.3 L 1394.2 419.8 L 1401.4 419.8 L 1410.1 415.4 L 1417.3 408.2 L 1424.5 405.4 L 1425.9 403.2 L 1433.8 402.5 L 1440.3 399.6 L 1442.5 400.3 L 1446.1 397.4 L 1459.8 394.6 L 1461.2 393.1 L 1468.4 393.1 L 1473.4 396.0 L 1477.8 394.6 L 1482.1 399.6 L 1490.0 397.4 L 1495.0 403.2 L 1498.6 403.2 L 1503.0 398.9 L 1505.8 401.0 L 1512.3 401.0 L 1514.5 403.2 L 1515.2 406.8 L 1522.4 406.1 L 1523.8 407.5 L 1524.6 412.6 L 1531.8 411.8 L 1535.4 414.0 L 1535.4 416.2 L 1541.1 416.2 L 1542.6 417.6 L 1542.6 421.9 L 1549.8 429.8 L 1552.6 429.8 L 1556.2 432.7 L 1556.2 439.2 L 1560.6 443.5 L 1559.1 449.3 L 1563.4 455.8 L 1564.9 462.2 L 1563.4 465.1 L 1557.7 470.2 L 1559.1 471.6 L 1567.8 472.3 L 1579.3 476.6 L 1589.4 486.7 L 1600.2 494.6 L 1611.0 500.4 L 1617.4 500.4 L 1620.3 501.8 L 1630.4 501.8 L 1637.6 503.3 L 1653.4 509.0 L 1660.6 509.0 L 1669.3 506.2 L 1682.2 493.2 L 1688.0 485.3 L 1694.5 485.3 L 1701.0 482.4 L 1704.6 483.1 L 1708.9 486.7 L 1713.9 486.7 L 1717.5 485.3 L 1720.4 482.4 L 1724.0 475.2 L 1724.0 471.6 L 1726.2 468.7 L 1726.2 465.1 L 1729.0 463.0 L 1731.2 457.9 L 1733.4 455.8 L 1739.1 455.8 L 1743.4 453.6 L 1754.2 444.2 L 1756.4 444.2 L 1757.8 445.7 L 1758.6 445.0 L 1760.0 436.3 L 1764.3 431.3 L 1765.0 427.7 L 1770.8 422.6 L 1772.2 414.0 L 1773.7 412.6 L 1780.2 413.3 L 1786.6 406.8 L 1787.4 403.2 L 1790.2 401.0 L 1792.4 397.4 L 1795.3 398.2 L 1796.7 396.0 L 1801.0 396.7 L 1802.5 391.7 L 1805.4 389.5 L 1807.5 385.9 L 1810.4 388.1 L 1813.3 385.2 L 1811.1 382.3 L 1815.4 380.2 L 1815.4 369.4 L 1821.9 359.3 L 1821.2 357.8 L 1822.6 356.4 L 1824.1 358.6 L 1825.5 357.8 L 1827.0 359.3 L 1829.1 357.8 L 1827.7 353.5 L 1828.4 342.7 L 1821.9 325.4 L 1821.9 321.8 L 1819.0 316.8 L 1819.0 313.2 L 1815.4 306.0 L 1816.2 303.1 L 1813.3 295.2 L 1810.4 278.6 L 1801.0 259.2 L 1798.9 251.3 L 1785.9 228.2 L 1776.6 216.0 L 1734.1 179.3 L 1713.2 157.0 L 1694.5 143.3 L 1673.6 133.9 L 1666.4 132.5 L 1651.3 126.7 L 1648.4 126.7 L 1644.8 124.6 L 1615.3 116.6 L 1578.6 112.3 L 1568.5 110.2 L 1532.5 107.3 L 1505.1 107.3 L 1475.6 110.2 L 1456.9 113.8 L 1416.6 125.3 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-neuro" data-name="Temporal" d="M 1366.9 420.5 L 1363.3 436.3 L 1367.6 443.5 L 1368.3 454.3 L 1362.6 462.2 L 1362.6 463.7 L 1356.1 468.7 L 1354.6 471.6 L 1353.9 476.6 L 1349.6 486.7 L 1349.6 493.9 L 1356.1 508.3 L 1364.7 521.3 L 1381.3 537.1 L 1392.1 543.6 L 1390.6 545.0 L 1384.9 546.5 L 1361.1 546.5 L 1341.7 543.6 L 1325.8 544.3 L 1324.4 545.8 L 1338.8 557.3 L 1353.2 565.2 L 1356.8 568.8 L 1361.1 570.2 L 1366.2 576.0 L 1370.5 577.4 L 1374.1 576.7 L 1385.6 567.4 L 1401.4 560.9 L 1422.3 559.4 L 1431.7 565.2 L 1437.4 565.9 L 1440.3 556.6 L 1445.4 551.5 L 1451.8 548.6 L 1459.0 548.6 L 1463.4 550.8 L 1468.4 557.3 L 1472.7 560.2 L 1473.4 563.0 L 1472.7 576.7 L 1465.5 598.3 L 1465.5 612.0 L 1467.7 614.2 L 1471.3 614.9 L 1474.2 613.4 L 1480.6 607.0 L 1482.1 608.4 L 1472.7 638.6 L 1472.7 649.4 L 1475.6 652.3 L 1480.6 653.0 L 1487.1 647.3 L 1495.0 630.0 L 1503.7 601.9 L 1509.4 599.0 L 1516.6 591.1 L 1531.0 606.2 L 1539.0 610.6 L 1541.8 609.1 L 1551.9 614.9 L 1558.4 617.0 L 1566.3 616.3 L 1579.3 612.0 L 1595.1 601.2 L 1607.4 596.9 L 1629.0 596.2 L 1633.3 594.0 L 1634.0 590.4 L 1631.8 586.8 L 1631.8 582.5 L 1646.2 566.6 L 1654.2 548.6 L 1655.6 524.9 L 1658.5 518.4 L 1659.2 511.2 L 1657.8 509.8 L 1647.7 508.3 L 1637.6 504.0 L 1611.0 501.1 L 1598.0 493.9 L 1589.4 487.4 L 1582.9 479.5 L 1570.6 473.8 L 1559.1 472.3 L 1557.0 470.2 L 1562.7 465.1 L 1564.2 462.2 L 1562.7 455.0 L 1559.8 452.2 L 1559.8 450.0 L 1558.4 448.6 L 1559.8 446.4 L 1559.1 441.4 L 1555.5 439.2 L 1555.5 432.7 L 1552.6 430.6 L 1549.8 430.6 L 1541.8 421.9 L 1541.1 416.9 L 1536.1 416.9 L 1534.6 415.4 L 1534.6 413.3 L 1531.8 412.6 L 1524.6 413.3 L 1523.1 411.8 L 1523.1 406.8 L 1515.9 407.5 L 1512.3 401.8 L 1505.8 401.8 L 1504.4 399.6 L 1503.0 399.6 L 1497.9 403.9 L 1495.0 403.9 L 1490.0 398.2 L 1482.1 400.3 L 1479.9 398.2 L 1479.2 395.3 L 1473.4 396.7 L 1468.4 393.8 L 1461.2 393.8 L 1459.8 395.3 L 1446.1 398.2 L 1442.5 401.0 L 1440.3 400.3 L 1433.8 403.2 L 1425.9 403.9 L 1423.8 406.1 L 1417.3 409.0 L 1410.1 416.2 L 1401.4 420.5 L 1394.2 420.5 L 1388.5 419.0 L 1379.1 414.7 L 1374.1 415.4 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-neuro" data-name="Occipital" d="M 1814.0 293.8 L 1816.9 303.1 L 1816.2 306.0 L 1819.8 313.2 L 1819.8 316.8 L 1822.6 321.8 L 1822.6 325.4 L 1829.1 342.7 L 1828.4 353.5 L 1829.8 355.7 L 1829.8 357.1 L 1827.0 360.0 L 1824.8 356.4 L 1821.9 356.4 L 1822.6 359.3 L 1816.2 369.4 L 1816.2 380.2 L 1814.7 381.6 L 1811.8 381.6 L 1814.0 385.2 L 1810.4 388.8 L 1808.2 386.6 L 1806.8 386.6 L 1806.8 388.1 L 1803.2 391.7 L 1802.5 396.0 L 1801.0 397.4 L 1798.2 397.4 L 1796.0 396.0 L 1791.7 398.2 L 1790.2 396.7 L 1790.2 400.3 L 1783.8 410.4 L 1780.2 414.0 L 1773.0 414.0 L 1771.5 422.6 L 1766.5 426.2 L 1765.0 431.3 L 1761.4 434.9 L 1759.3 445.0 L 1757.8 446.4 L 1756.4 445.0 L 1754.2 445.0 L 1745.6 452.9 L 1739.1 456.5 L 1733.4 456.5 L 1729.8 463.0 L 1726.9 465.1 L 1725.4 468.0 L 1726.2 470.2 L 1724.7 471.6 L 1724.7 475.2 L 1721.1 482.4 L 1717.5 486.0 L 1713.9 487.4 L 1708.9 487.4 L 1703.1 483.1 L 1694.5 486.0 L 1688.0 486.0 L 1683.0 493.2 L 1667.1 508.3 L 1658.5 509.8 L 1659.9 511.2 L 1659.9 515.5 L 1656.3 524.9 L 1654.9 548.6 L 1647.0 566.6 L 1632.6 582.5 L 1632.6 586.8 L 1634.7 590.4 L 1634.0 594.0 L 1631.8 596.2 L 1629.0 596.9 L 1607.4 597.6 L 1595.1 601.9 L 1579.3 612.7 L 1566.3 617.0 L 1558.4 617.8 L 1551.9 615.6 L 1541.8 609.8 L 1539.0 611.3 L 1531.0 607.0 L 1516.6 591.8 L 1509.4 599.8 L 1504.4 601.2 L 1497.9 622.1 L 1497.9 627.8 L 1501.5 633.6 L 1505.8 637.9 L 1511.6 640.1 L 1517.4 640.1 L 1524.6 642.2 L 1544.7 640.8 L 1558.4 645.8 L 1574.2 636.5 L 1594.4 637.2 L 1598.7 635.8 L 1606.6 635.8 L 1617.4 638.6 L 1627.5 638.6 L 1638.3 635.8 L 1649.1 630.7 L 1670.0 628.6 L 1680.8 625.0 L 1684.4 625.0 L 1693.0 621.4 L 1722.6 600.5 L 1740.6 582.5 L 1742.0 582.5 L 1752.8 574.6 L 1770.1 569.5 L 1775.8 565.2 L 1785.9 548.6 L 1809.7 524.9 L 1819.8 506.9 L 1827.7 482.4 L 1838.5 417.6 L 1839.2 386.6 L 1837.8 373.0 L 1834.2 355.0 L 1826.2 326.9 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="k-neuro" data-name="Esfenoides" d="M 1437.4 566.6 L 1431.7 565.9 L 1422.3 560.2 L 1401.4 561.6 L 1385.6 568.1 L 1372.6 578.2 L 1365.4 576.0 L 1365.4 577.4 L 1362.6 580.3 L 1349.6 584.6 L 1346.7 594.0 L 1346.0 609.1 L 1359.7 619.9 L 1370.5 620.6 L 1384.2 615.6 L 1400.0 606.2 L 1404.3 600.5 L 1404.3 596.2 L 1402.2 593.3 L 1403.6 584.6 L 1410.1 571.7 L 1410.1 564.5 L 1412.2 562.3 L 1433.8 572.4 L 1436.0 571.7 Z M 1335.2 408.2 L 1335.9 424.8 L 1332.3 431.3 L 1323.7 437.8 L 1312.9 448.6 L 1313.6 450.7 L 1310.0 454.3 L 1305.7 450.7 L 1301.4 451.4 L 1293.4 461.5 L 1287.0 460.8 L 1292.0 465.1 L 1295.6 470.2 L 1298.5 470.2 L 1300.6 473.0 L 1302.1 481.7 L 1302.8 504.7 L 1307.1 510.5 L 1307.8 524.2 L 1310.7 526.3 L 1318.6 527.8 L 1324.4 525.6 L 1330.9 521.3 L 1341.0 526.3 L 1345.3 530.6 L 1350.3 537.8 L 1351.8 544.3 L 1353.9 545.0 L 1384.9 545.8 L 1392.1 544.3 L 1381.3 537.8 L 1364.0 521.3 L 1355.4 508.3 L 1348.9 493.9 L 1348.9 486.7 L 1352.5 479.5 L 1353.9 471.6 L 1361.8 463.7 L 1361.8 462.2 L 1367.6 454.3 L 1366.9 443.5 L 1362.6 436.3 L 1365.4 421.9 L 1366.9 419.8 L 1365.4 419.8 L 1360.4 415.4 L 1354.6 412.6 L 1349.6 411.1 L 1338.8 410.4 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="294.0,322.5 685.2,330.5"/><circle class="leader-dot" cx="685.2" cy="330.5" r="3.5"/><text class="olabel" data-cat="k-neuro" data-name="Frontal" x="286" y="330.5" text-anchor="end">Frontal</text><polyline class="leader" points="294.0,521.2 526.1,529.2"/><circle class="leader-dot" cx="526.1" cy="529.2" r="3.5"/><text class="olabel" data-cat="k-cara" data-name="Lagrimal" x="286" y="529.2" text-anchor="end">Lagrimal</text><polyline class="leader" points="294.0,581.2 410.2,571.7"/><circle class="leader-dot" cx="410.2" cy="571.7" r="3.5"/><text class="olabel" data-cat="k-cara" data-name="Cigomático" x="286" y="589.2" text-anchor="end">Cigomático</text><polyline class="leader" points="294.0,781.8 536.9,789.8"/><circle class="leader-dot" cx="536.9" cy="789.8" r="3.5"/><text class="olabel" data-cat="k-cara" data-name="Mandíbula" x="286" y="789.8" text-anchor="end">Mandíbula</text><polyline class="leader" points="1872.0,270.6 1613.1,278.6"/><circle class="leader-dot" cx="1613.1" cy="278.6" r="3.5"/><text class="olabel" data-cat="k-neuro" data-name="Parietal" x="1880" y="278.6" text-anchor="start">Parietal</text><polyline class="leader" points="1872.0,465.8 1465.5,473.8"/><circle class="leader-dot" cx="1465.5" cy="473.8" r="3.5"/><text class="olabel" data-cat="k-neuro" data-name="Temporal" x="1880" y="473.8" text-anchor="start">Temporal</text><polyline class="leader" points="1872.0,525.8 1326.6,473.8"/><circle class="leader-dot" cx="1326.6" cy="473.8" r="3.5"/><text class="olabel" data-cat="k-neuro" data-name="Esfenoides" x="1880" y="533.8" text-anchor="start">Esfenoides</text><polyline class="leader" points="1872.0,585.8 1710.3,540.0"/><circle class="leader-dot" cx="1710.3" cy="540.0" r="3.5"/><text class="olabel" data-cat="k-neuro" data-name="Occipital" x="1880" y="593.8" text-anchor="start">Occipital</text><polyline class="leader" points="882.0,509.7 578.6,517.7"/><circle class="leader-dot" cx="578.6" cy="517.7" r="3.5"/><text class="olabel" data-cat="k-cara" data-name="Nasal" x="890" y="517.7" text-anchor="start">Nasal</text><polyline class="leader" points="882.0,569.7 571.4,573.1"/><circle class="leader-dot" cx="571.4" cy="573.1" r="3.5"/><text class="olabel" data-cat="k-cara" data-name="Vómer" x="890" y="577.7" text-anchor="start">Vómer</text><polyline class="leader" points="882.0,629.7 663.6,619.2"/><circle class="leader-dot" cx="663.6" cy="619.2" r="3.5"/><text class="olabel" data-cat="k-cara" data-name="Maxilar" x="890" y="637.7" text-anchor="start">Maxilar</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">BIOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Basado en BodyParts3D</span>
+      <span class="tag">Nivel: ESO</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>El cráneo humano con <strong>11 huesos</strong> señalados en español, en vista frontal y en vista lateral izquierda. Se dividen en dos grupos: el <strong>neurocráneo</strong>, que protege el encéfalo (frontal, parietales, temporales, occipital y esfenoides), y los <strong>huesos de la cara</strong> (nasales, lagrimales, cigomáticos, maxilares, vómer y mandíbula). Faltan el etmoides y los palatinos, que forman también el cráneo pero quedan ocultos en estas vistas.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Cada hueso tiene un color</strong>, el mismo en las dos vistas, para poder seguirlo de una a otra.</li>
+        <li><strong>Los huesos pares</strong> (parietales, temporales, nasales, lagrimales, cigomáticos y maxilares) se señalan una sola vez, aunque hay uno igual al otro lado.</li>
+        <li><strong>Las suturas</strong> son las uniones fijas entre los huesos del cráneo; en la vista lateral se ven como líneas en zigzag entre colores.</li>
+        <li><strong>La mandíbula</strong> es el único hueso de la cabeza que se mueve.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres y clasifique los huesos en neurocráneo y cara.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar todos los huesos.</li>
+        <li>Buscar cada hueso en la vista frontal y en la lateral y decir en cuál se ve mejor.</li>
+        <li>Contar los huesos del cráneo y de la cara: 8 y 14, es decir, 22 en total.</li>
+      </ul>
+      <h2>Fuente y licencia</h2>
+      <p>Render anatómico de Atlas Abierto a partir de los modelos 3D de BodyParts3D (© The Database Center for Life Science, licencia Creative Commons Attribution 4.0 International). Los colores, los nombres en español y las zonas pulsables para el juego son de Atlas Abierto. Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">CUERPO HUMANO: CRÁNEO HUMANO</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">11 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Modelo base</span><span class="info-val">BodyParts3D (DBCLS), CC BY 4.0</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Frontal": {"grupo": "Neurocráneo", "img": "ficha/hp-frontal.webp", "txt": "Forma la frente y el techo de las cuencas de los ojos. Protege la parte delantera del encéfalo.", "dato": "Al nacer está formado por dos mitades que se sueldan durante los primeros años de vida."}, "Parietal": {"grupo": "Neurocráneo", "img": "ficha/hp-parietal.webp", "txt": "Son dos huesos, uno a cada lado, que forman la parte alta y los lados de la bóveda del cráneo. Protegen el encéfalo.", "dato": "Se unen entre sí por la sutura sagital, en la línea media de la cabeza."}, "Temporal": {"grupo": "Neurocráneo", "img": "ficha/hp-temporal.webp", "txt": "Son dos, uno a cada lado, a la altura de las orejas. Alojan el oído y se articulan con la mandíbula.", "dato": "En su interior están los huesecillos del oído (martillo, yunque y estribo), los más pequeños del cuerpo."}, "Occipital": {"grupo": "Neurocráneo", "img": "ficha/hp-occipital.webp", "txt": "Forma la parte de atrás y de abajo del cráneo. Tiene un gran agujero, el agujero occipital, por donde la médula espinal sale del cráneo.", "dato": "Sobre él se apoya la primera vértebra del cuello, el atlas."}, "Esfenoides": {"grupo": "Neurocráneo", "img": "ficha/hp-esfenoides.webp", "txt": "Tiene forma de mariposa y está en la base del cráneo, entre los demás huesos. En la imagen se ve un trozo en la sien y otro dentro de las cuencas de los ojos.", "dato": "Su nombre viene del griego y significa «con forma de cuña»."}, "Nasal": {"grupo": "Huesos de la cara", "img": "ficha/hp-nasal.webp", "txt": "Son dos huesecillos pequeños que forman el puente de la nariz. El resto de la nariz es de cartílago.", "dato": "Son los huesos de la cara que se rompen con más frecuencia."}, "Lagrimal": {"grupo": "Huesos de la cara", "img": "ficha/hp-lagrimal.webp", "txt": "Son dos huesos muy pequeños, en la parte interna de cada cuenca del ojo. Tienen un surco por el que pasa el conducto que lleva las lágrimas a la nariz.", "dato": "Es el hueso más pequeño y delicado de la cara."}, "Cigomático": {"grupo": "Huesos de la cara", "img": "ficha/hp-cigomatico.webp", "txt": "Son los pómulos. Forman la parte externa de las cuencas de los ojos y dan forma a las mejillas.", "dato": "También se les llama huesos malares."}, "Maxilar": {"grupo": "Huesos de la cara", "img": "ficha/hp-maxilar.webp", "txt": "Son dos huesos que se unen en el centro y forman la mandíbula superior. Sujetan los dientes de arriba y forman parte de la nariz, del paladar y del suelo de las cuencas de los ojos.", "dato": "Con los palatinos forman el paladar, el «techo» de la boca."}, "Mandíbula": {"grupo": "Huesos de la cara", "img": "ficha/hp-mandibula.webp", "txt": "Es el hueso de la mandíbula inferior y el único de la cabeza que se mueve. Sostiene los dientes de abajo y permite masticar y hablar al articularse con los huesos temporales.", "dato": "Es el hueso más grande y más fuerte de la cara."}, "Vómer": {"grupo": "Huesos de la cara", "img": "ficha/hp-vomer.webp", "txt": "Es un hueso fino y plano que forma la parte inferior del tabique de la nariz, el que separa las dos fosas nasales.", "dato": "Su nombre viene del latín y significa «reja de arado», por su forma."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=2" defer></script>
+<script src="ficha.js?v=2" defer></script>
+<script src="juego.js?v=20261123c" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>

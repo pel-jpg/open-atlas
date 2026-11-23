@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mano y pie — Huesos de la mano y del pie · Atlas Abierto</title>
+<meta name="description" content="Huesos de la mano y del pie para ESO: carpianos, metacarpianos y falanges; calcáneo, astrágalo, resto del tarso, metatarsianos y falanges. Con modo juego para localizarlos, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<link rel="canonical" href="https://atlasabierto.org/sistema-esqueletico-mano-pie.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Mano y pie — Huesos de la mano y del pie · Atlas Abierto">
+<meta property="og:description" content="Huesos de la mano y del pie para ESO: carpianos, metacarpianos y falanges; calcáneo, astrágalo, resto del tarso, metatarsianos y falanges. Con modo juego para localizarlos, versión muda y listo para imprimir. Licencia CC BY 4.0.">
+<meta property="og:url" content="https://atlasabierto.org/sistema-esqueletico-mano-pie.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 297mm 210mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:281mm; height:194mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:281mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:281mm !important; height:179mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:171.87mm; height:179.0mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .olabel{fill:#2e2014;font-size:28px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .cap{fill:#7a6a58;font-size:26px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:17px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:40px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:1700/960;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Mano y pie — Huesos de la mano y del pie","description":"Huesos de la mano y del pie para ESO: carpianos, metacarpianos y falanges; calcáneo, astrágalo, resto del tarso, metatarsianos y falanges. Con modo juego para localizarlos, versión muda y listo para imprimir. Licencia CC BY 4.0.","url":"https://atlasabierto.org/sistema-esqueletico-mano-pie.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Biología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Cuerpo humano","item":"https://atlasabierto.org/#cuerpo-humano"},{"@type":"ListItem","position":3,"name":"Mano y pie — Huesos de la mano y del pie","item":"https://atlasabierto.org/sistema-esqueletico-mano-pie.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / Cuerpo humano / Mano y pie</div>
+    <h1>Mano y pie — Huesos de la mano y del pie</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar los órganos señalándolos.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 960" width="1700" height="960" role="img" aria-label="Huesos de la mano y del pie"><rect width="1700" height="960" fill="#F5EFE4"/><g id="dibujo"><image href="mano-palmar.webp" x="330" y="60" width="496.0" height="800.0"/><image href="pie-dorsal.webp" x="1000" y="36" width="396.0" height="864.0"/><text class="cap" x="578" y="944" text-anchor="middle">Mano derecha, vista palmar</text><text class="cap" x="1198" y="944" text-anchor="middle">Pie derecho, vista dorsal</text></g><g id="hitzones"><path class="organo" data-cat="m-mano" data-name="Carpianos" d="M 466.8 244.8 L 466.8 249.6 L 470.0 254.4 L 475.6 257.6 L 490.0 258.4 L 494.8 264.0 L 494.8 266.4 L 503.6 270.4 L 510.8 279.2 L 518.0 271.2 L 522.0 272.8 L 535.6 273.6 L 542.8 271.2 L 550.8 265.6 L 553.2 268.0 L 554.0 272.8 L 557.2 276.8 L 569.2 276.0 L 581.2 269.6 L 598.0 264.0 L 599.6 262.4 L 607.6 263.2 L 610.0 267.2 L 614.0 270.4 L 628.4 266.4 L 634.0 262.4 L 638.0 261.6 L 645.2 257.6 L 649.2 258.4 L 663.6 252.8 L 666.0 247.2 L 666.0 237.6 L 667.6 233.6 L 663.6 223.2 L 666.0 210.4 L 663.6 201.6 L 656.4 189.6 L 646.8 189.6 L 631.6 198.4 L 629.2 196.8 L 636.4 187.2 L 642.0 176.0 L 641.2 170.4 L 637.2 167.2 L 623.6 164.0 L 608.4 163.2 L 594.8 167.2 L 590.0 171.2 L 588.4 171.2 L 582.8 168.0 L 566.0 163.2 L 550.8 164.0 L 537.2 168.0 L 525.2 173.6 L 518.0 182.4 L 510.8 187.2 L 502.0 196.0 L 498.0 203.2 L 497.2 208.0 L 499.6 212.0 L 497.2 214.4 L 485.2 217.6 L 480.4 220.8 L 475.6 225.6 L 472.4 231.2 Z M 538.8 227.2 L 540.4 228.8 L 540.4 233.6 L 542.0 236.0 L 540.4 239.2 L 533.2 233.6 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-mano" data-name="Metacarpianos" d="M 374.0 386.4 L 374.0 392.0 L 376.4 401.6 L 378.0 404.8 L 382.8 408.8 L 397.2 415.2 L 407.6 416.0 L 412.4 418.4 L 425.2 416.0 L 429.2 412.0 L 431.6 406.4 L 431.6 401.6 L 427.6 394.4 L 427.6 385.6 L 430.0 375.2 L 443.6 348.0 L 459.6 324.0 L 472.4 310.4 L 486.8 299.2 L 493.2 296.8 L 495.6 299.2 L 496.4 303.2 L 500.4 309.6 L 502.8 324.0 L 502.8 360.0 L 491.6 461.6 L 487.6 475.2 L 484.4 498.4 L 476.4 506.4 L 474.8 509.6 L 473.2 523.2 L 474.0 528.0 L 477.2 533.6 L 481.2 537.6 L 489.2 542.4 L 497.2 542.4 L 502.8 544.8 L 521.2 545.6 L 526.8 541.6 L 529.2 527.2 L 535.6 514.4 L 532.4 501.6 L 533.2 477.6 L 530.0 452.8 L 530.0 384.8 L 534.0 357.6 L 542.8 328.0 L 544.4 316.8 L 547.6 313.6 L 549.2 315.2 L 550.8 326.4 L 554.0 336.0 L 559.6 375.2 L 558.8 436.0 L 556.4 456.0 L 555.6 478.4 L 550.8 496.0 L 551.6 507.2 L 555.6 517.6 L 559.6 524.0 L 578.8 525.6 L 601.2 524.8 L 604.4 520.0 L 604.4 510.4 L 602.8 502.4 L 609.2 493.6 L 606.8 489.6 L 606.8 485.6 L 603.6 476.0 L 601.2 444.8 L 592.4 398.4 L 588.4 367.2 L 589.2 329.6 L 591.6 320.8 L 597.2 311.2 L 599.6 312.8 L 599.6 315.2 L 609.2 331.2 L 617.2 352.0 L 624.4 411.2 L 625.2 438.4 L 628.4 465.6 L 626.0 472.0 L 626.0 480.8 L 630.0 493.6 L 634.8 500.0 L 674.0 495.2 L 674.0 488.8 L 670.8 479.2 L 672.4 464.8 L 668.4 460.8 L 663.6 445.6 L 659.6 423.2 L 634.8 329.6 L 633.2 312.8 L 634.0 305.6 L 635.6 304.0 L 638.8 307.2 L 651.6 328.0 L 659.6 346.4 L 666.8 367.2 L 670.8 387.2 L 678.0 408.8 L 679.6 419.2 L 685.2 434.4 L 682.0 450.4 L 686.0 460.8 L 694.0 470.4 L 698.0 472.0 L 714.8 465.6 L 728.4 462.4 L 730.8 460.0 L 731.6 456.8 L 730.8 452.8 L 726.8 445.6 L 726.0 432.8 L 718.0 417.6 L 718.0 414.4 L 700.4 368.8 L 687.6 327.2 L 682.0 303.2 L 674.8 281.6 L 666.8 264.0 L 663.6 259.2 L 658.8 256.0 L 649.2 259.2 L 645.2 258.4 L 638.0 262.4 L 634.0 263.2 L 628.4 267.2 L 614.0 271.2 L 609.2 266.4 L 601.2 266.4 L 595.6 268.0 L 594.0 270.4 L 583.6 269.6 L 569.2 276.8 L 557.2 277.6 L 553.2 272.8 L 551.6 264.8 L 543.6 272.0 L 531.6 276.0 L 523.6 276.0 L 518.0 272.0 L 510.8 280.0 L 503.6 271.2 L 495.6 268.0 L 490.0 259.2 L 475.6 258.4 L 470.0 255.2 L 466.8 250.4 L 465.2 250.4 L 453.2 260.0 L 438.8 288.8 L 418.0 318.4 L 395.6 360.0 L 386.8 372.8 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-mano" data-name="Falanges de la mano" d="M 479.6 536.8 L 470.8 538.4 L 467.6 541.6 L 466.0 545.6 L 465.2 555.2 L 466.8 559.2 L 469.2 578.4 L 469.2 604.8 L 466.0 635.2 L 466.0 648.0 L 462.8 663.2 L 456.4 678.4 L 457.2 689.6 L 452.4 692.0 L 448.4 698.4 L 450.8 712.8 L 449.2 742.4 L 445.2 758.4 L 441.2 765.6 L 441.2 775.2 L 436.4 779.2 L 435.6 785.6 L 441.2 800.8 L 441.2 815.2 L 439.6 822.4 L 437.2 824.0 L 434.8 829.6 L 438.0 839.2 L 441.2 843.2 L 455.6 843.2 L 459.6 837.6 L 459.6 808.0 L 464.4 797.6 L 472.4 789.6 L 471.6 783.2 L 474.8 776.0 L 474.0 759.2 L 475.6 750.4 L 484.4 725.6 L 492.4 712.0 L 493.2 704.0 L 491.6 701.6 L 494.8 697.6 L 495.6 689.6 L 498.8 683.2 L 498.8 669.6 L 504.4 644.0 L 506.0 626.4 L 510.8 604.0 L 518.0 580.0 L 526.8 562.4 L 526.8 551.2 L 526.0 548.0 L 523.6 546.4 L 502.8 545.6 L 497.2 543.2 L 489.2 543.2 Z M 558.0 524.8 L 552.4 528.8 L 549.2 539.2 L 550.0 546.4 L 554.0 555.2 L 558.8 576.8 L 561.2 600.8 L 561.2 663.2 L 558.8 673.6 L 554.8 680.0 L 556.4 693.6 L 559.6 699.2 L 554.0 704.8 L 553.2 709.6 L 558.0 720.0 L 559.6 734.4 L 562.0 742.4 L 562.0 760.0 L 563.6 776.0 L 562.0 785.6 L 557.2 795.2 L 560.4 808.8 L 556.4 812.8 L 556.4 818.4 L 564.4 834.4 L 564.4 846.4 L 562.0 850.4 L 561.2 858.4 L 584.4 858.4 L 583.6 844.8 L 585.2 832.0 L 588.4 824.0 L 594.0 816.0 L 593.2 808.8 L 595.6 798.4 L 595.6 792.8 L 594.0 789.6 L 594.8 764.0 L 599.6 722.4 L 602.8 712.8 L 602.8 704.8 L 596.4 700.0 L 598.8 697.6 L 598.8 685.6 L 601.2 678.4 L 601.2 585.6 L 606.0 556.8 L 610.8 545.6 L 610.8 535.2 L 607.6 526.4 L 578.8 526.4 Z M 666.0 496.8 L 654.0 499.2 L 631.6 500.8 L 626.8 506.4 L 626.8 519.2 L 627.6 521.6 L 630.8 524.0 L 632.4 534.4 L 639.6 549.6 L 644.4 575.2 L 647.6 601.6 L 648.4 639.2 L 646.0 645.6 L 646.0 652.8 L 647.6 660.0 L 650.8 664.0 L 646.8 668.0 L 645.2 674.4 L 649.2 678.4 L 649.2 681.6 L 651.6 685.6 L 653.2 702.4 L 658.8 724.0 L 660.4 744.0 L 658.8 751.2 L 655.6 756.0 L 655.6 767.2 L 658.0 770.4 L 659.6 777.6 L 665.2 784.0 L 666.8 788.8 L 666.8 797.6 L 663.6 803.2 L 664.4 809.6 L 667.6 813.6 L 674.0 813.6 L 679.6 811.2 L 682.0 808.0 L 682.8 782.4 L 690.0 770.4 L 690.0 752.8 L 688.4 748.8 L 687.6 726.4 L 689.2 677.6 L 691.6 671.2 L 691.6 666.4 L 690.0 663.2 L 685.2 660.0 L 686.0 641.6 L 684.4 632.8 L 683.6 605.6 L 678.0 552.8 L 678.8 522.4 L 681.2 508.0 L 675.6 496.8 Z M 729.2 462.4 L 721.2 465.6 L 710.0 468.0 L 692.4 475.2 L 690.0 480.0 L 690.0 486.4 L 691.6 492.0 L 696.4 497.6 L 710.0 522.4 L 725.2 566.4 L 727.6 576.8 L 726.8 586.4 L 730.8 597.6 L 734.0 602.4 L 731.6 606.4 L 730.8 611.2 L 739.6 621.6 L 753.2 651.2 L 754.8 660.8 L 751.6 670.4 L 752.4 674.4 L 755.6 679.2 L 753.2 682.4 L 753.2 685.6 L 756.4 689.6 L 762.0 693.6 L 766.0 700.0 L 768.4 712.8 L 766.8 724.8 L 774.0 733.6 L 782.8 732.8 L 786.8 726.4 L 786.0 715.2 L 782.8 704.8 L 781.2 691.2 L 783.6 680.0 L 783.6 676.0 L 782.0 674.4 L 782.8 664.8 L 781.2 658.4 L 778.8 656.0 L 775.6 647.2 L 774.0 628.8 L 771.6 613.6 L 769.2 606.4 L 768.4 596.8 L 765.2 592.8 L 762.8 592.8 L 761.2 591.2 L 758.8 576.0 L 753.2 559.2 L 748.4 530.4 L 742.0 504.0 L 741.2 469.6 L 735.6 463.2 Z M 379.6 407.2 L 377.2 408.0 L 371.6 418.4 L 371.6 445.6 L 366.8 470.4 L 362.8 501.6 L 356.4 519.2 L 356.4 524.0 L 358.8 526.4 L 355.6 530.4 L 358.0 547.2 L 358.0 561.6 L 354.0 585.6 L 347.6 604.0 L 346.8 615.2 L 350.8 620.8 L 356.4 621.6 L 361.2 620.0 L 370.8 604.8 L 373.2 586.4 L 378.8 573.6 L 381.2 564.8 L 385.2 558.4 L 393.2 549.6 L 394.0 541.6 L 390.8 536.8 L 394.8 533.6 L 394.8 530.4 L 397.2 525.6 L 397.2 518.4 L 393.2 512.0 L 393.2 502.4 L 394.8 494.4 L 406.0 465.6 L 413.2 452.0 L 421.2 442.4 L 426.0 432.8 L 424.4 422.4 L 422.0 419.2 L 412.4 419.2 L 407.6 416.8 L 397.2 416.0 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-pie" data-name="Calcáneo" d="M 1154.1 603.4 L 1151.9 609.1 L 1149.8 622.8 L 1149.8 634.3 L 1151.2 638.6 L 1156.2 645.1 L 1173.5 660.2 L 1177.8 666.7 L 1177.1 676.8 L 1180.7 685.4 L 1185.8 692.6 L 1187.9 707.8 L 1187.2 717.8 L 1183.6 729.4 L 1172.8 739.4 L 1157.0 745.2 L 1141.1 753.8 L 1133.9 761.0 L 1130.3 769.7 L 1121.7 776.9 L 1118.1 778.3 L 1112.3 778.3 L 1091.4 772.6 L 1084.2 766.1 L 1078.5 755.3 L 1067.0 751.7 L 1059.8 758.2 L 1050.4 769.7 L 1047.5 776.2 L 1046.1 783.4 L 1044.6 814.3 L 1048.2 821.5 L 1059.0 835.9 L 1070.6 846.0 L 1090.7 856.8 L 1108.7 862.6 L 1121.7 864.0 L 1128.2 866.2 L 1133.9 866.2 L 1137.5 864.0 L 1139.7 859.0 L 1145.4 851.8 L 1152.6 828.0 L 1157.0 818.6 L 1161.3 805.0 L 1169.9 787.7 L 1177.1 767.5 L 1185.0 752.4 L 1186.5 743.8 L 1186.5 734.4 L 1190.1 721.4 L 1200.9 709.2 L 1203.8 704.2 L 1205.2 698.4 L 1203.8 692.6 L 1198.7 684.7 L 1198.7 678.2 L 1202.3 671.8 L 1205.2 658.1 L 1208.1 650.2 L 1208.1 643.0 L 1206.6 640.1 L 1209.5 634.3 L 1208.8 631.4 L 1204.5 630.0 L 1198.0 624.2 L 1190.1 620.6 L 1166.3 614.2 L 1158.4 605.5 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-pie" data-name="Astrágalo" d="M 1097.2 571.7 L 1081.4 576.7 L 1061.2 590.4 L 1046.1 609.1 L 1045.4 612.7 L 1047.5 620.6 L 1053.3 632.2 L 1058.3 637.9 L 1058.3 647.3 L 1052.6 673.9 L 1051.1 677.5 L 1046.1 684.0 L 1043.2 693.4 L 1042.5 707.0 L 1040.3 717.8 L 1044.6 735.8 L 1046.8 740.2 L 1051.1 744.5 L 1057.6 748.1 L 1078.5 754.6 L 1080.6 756.7 L 1085.0 766.1 L 1091.4 771.8 L 1112.3 777.6 L 1118.1 777.6 L 1121.7 776.2 L 1129.6 769.7 L 1133.2 761.0 L 1141.1 753.1 L 1157.0 744.5 L 1172.8 738.7 L 1182.9 729.4 L 1186.5 717.8 L 1187.2 707.8 L 1185.0 692.6 L 1180.0 685.4 L 1176.4 676.8 L 1176.4 665.3 L 1172.8 660.2 L 1152.6 641.5 L 1149.8 637.2 L 1149.0 622.8 L 1151.2 609.1 L 1154.8 599.8 L 1152.6 591.8 L 1146.9 586.1 L 1145.4 586.1 L 1139.0 581.0 L 1121.0 573.1 L 1114.5 571.7 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-pie" data-name="Resto del tarso" d="M 1071.3 454.3 L 1072.7 459.4 L 1068.4 468.0 L 1062.6 474.5 L 1059.8 480.2 L 1058.3 486.7 L 1057.6 499.7 L 1060.5 504.7 L 1061.2 511.9 L 1060.5 514.8 L 1056.2 521.3 L 1056.9 535.0 L 1049.0 543.6 L 1040.3 555.8 L 1040.3 561.6 L 1037.4 565.9 L 1036.7 570.2 L 1037.4 581.8 L 1044.6 590.4 L 1054.0 593.3 L 1063.4 589.0 L 1069.1 583.9 L 1081.4 576.0 L 1092.9 571.7 L 1114.5 571.0 L 1121.0 572.4 L 1133.2 577.4 L 1145.4 585.4 L 1146.9 585.4 L 1153.4 591.8 L 1154.8 594.7 L 1155.5 599.8 L 1154.1 602.6 L 1158.4 604.8 L 1166.3 613.4 L 1190.1 619.9 L 1198.0 623.5 L 1204.5 629.3 L 1208.1 629.3 L 1211.7 622.8 L 1219.6 618.5 L 1223.9 613.4 L 1226.1 607.0 L 1226.8 594.0 L 1240.5 581.0 L 1242.6 576.0 L 1243.4 553.0 L 1239.0 536.4 L 1236.9 533.5 L 1233.3 524.2 L 1228.2 519.1 L 1220.3 515.5 L 1216.7 512.6 L 1221.0 499.0 L 1219.6 493.2 L 1214.6 488.9 L 1210.2 487.4 L 1205.9 483.1 L 1203.8 483.1 L 1194.4 477.4 L 1188.6 477.4 L 1183.6 481.7 L 1179.3 488.2 L 1166.3 476.6 L 1150.5 469.4 L 1144.0 468.7 L 1141.1 463.0 L 1140.4 451.4 L 1137.5 439.2 L 1133.9 436.3 L 1121.0 436.3 L 1105.1 442.1 L 1088.6 445.0 L 1082.1 447.1 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-pie" data-name="Metatarsianos" d="M 1102.2 253.4 L 1088.6 253.4 L 1074.9 257.8 L 1066.2 264.2 L 1064.8 268.6 L 1064.8 283.7 L 1069.1 301.7 L 1069.1 314.6 L 1071.3 331.2 L 1070.6 415.4 L 1065.5 434.9 L 1066.2 440.6 L 1071.3 453.6 L 1082.1 446.4 L 1088.6 444.2 L 1105.1 441.4 L 1118.1 436.3 L 1125.3 434.9 L 1135.4 436.3 L 1138.2 439.2 L 1139.7 446.4 L 1139.7 437.8 L 1136.8 424.8 L 1125.3 393.1 L 1122.4 371.5 L 1122.4 349.2 L 1126.0 326.2 L 1128.9 323.3 L 1132.5 322.6 L 1134.6 320.4 L 1138.2 313.9 L 1139.0 309.6 L 1137.5 295.2 L 1132.5 277.2 L 1132.5 269.3 L 1133.9 266.4 L 1122.4 259.2 L 1114.5 257.8 L 1110.2 254.9 Z M 1159.8 254.2 L 1155.5 262.1 L 1151.9 277.9 L 1153.4 290.9 L 1157.0 293.8 L 1158.4 297.4 L 1158.4 316.1 L 1155.5 364.3 L 1149.8 424.8 L 1146.2 438.5 L 1142.6 446.4 L 1140.4 448.6 L 1143.3 468.7 L 1148.3 468.0 L 1166.3 475.9 L 1172.8 481.0 L 1179.3 488.2 L 1180.0 485.3 L 1188.6 476.6 L 1194.4 476.6 L 1202.3 481.7 L 1205.9 482.4 L 1210.2 486.7 L 1214.6 488.2 L 1220.3 493.2 L 1221.8 499.0 L 1217.4 513.4 L 1226.1 517.0 L 1234.0 524.2 L 1237.6 533.5 L 1239.8 536.4 L 1244.1 553.0 L 1243.4 576.0 L 1241.2 581.0 L 1235.4 587.5 L 1241.2 594.7 L 1247.0 596.2 L 1251.3 595.4 L 1256.3 592.6 L 1262.8 585.4 L 1267.8 575.3 L 1271.4 564.5 L 1272.2 545.0 L 1270.7 538.6 L 1270.7 522.0 L 1275.0 497.5 L 1288.7 451.4 L 1308.9 401.8 L 1314.6 394.6 L 1319.7 391.7 L 1327.6 389.5 L 1329.8 386.6 L 1331.2 378.0 L 1334.1 371.5 L 1334.1 357.8 L 1329.0 347.8 L 1319.0 342.0 L 1310.3 339.8 L 1301.7 339.8 L 1294.5 341.3 L 1290.2 344.9 L 1278.6 361.4 L 1278.6 367.2 L 1280.8 376.6 L 1280.8 385.2 L 1279.4 390.2 L 1259.2 433.4 L 1252.7 452.2 L 1249.1 458.6 L 1247.7 457.2 L 1259.2 409.7 L 1270.0 355.7 L 1275.0 343.4 L 1278.6 338.4 L 1283.0 334.8 L 1283.0 323.3 L 1286.6 313.9 L 1285.1 306.7 L 1283.0 304.6 L 1271.4 298.8 L 1262.8 295.9 L 1254.2 298.8 L 1249.8 308.2 L 1241.2 320.4 L 1239.0 326.9 L 1239.0 334.8 L 1244.8 344.2 L 1245.5 352.1 L 1236.9 393.8 L 1226.8 430.6 L 1223.9 438.5 L 1221.8 439.9 L 1220.3 438.5 L 1219.6 434.2 L 1221.0 421.9 L 1221.8 396.0 L 1225.4 370.1 L 1227.5 333.4 L 1229.0 324.0 L 1231.8 315.4 L 1241.9 301.0 L 1240.5 288.0 L 1243.4 284.4 L 1244.8 275.8 L 1243.4 272.2 L 1236.9 267.8 L 1223.9 265.0 L 1216.0 265.0 L 1213.1 266.4 L 1207.4 275.8 L 1200.9 295.2 L 1201.6 301.7 L 1205.9 306.7 L 1207.4 311.0 L 1207.4 318.2 L 1204.5 339.1 L 1201.6 350.6 L 1199.4 375.8 L 1193.0 418.3 L 1187.9 433.4 L 1185.0 438.5 L 1182.9 439.9 L 1181.4 438.5 L 1178.6 422.6 L 1178.6 377.3 L 1181.4 347.0 L 1182.9 311.0 L 1186.5 299.5 L 1191.5 289.4 L 1195.8 284.4 L 1195.1 277.9 L 1192.2 271.4 L 1195.1 264.2 L 1195.1 259.2 L 1187.9 255.6 L 1172.1 252.7 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="m-pie" data-name="Falanges del pie" d="M 1352.1 211.0 L 1349.2 211.7 L 1347.0 215.3 L 1346.3 229.0 L 1343.4 231.8 L 1337.7 234.7 L 1337.0 236.9 L 1339.8 241.2 L 1334.8 248.4 L 1334.1 253.4 L 1331.2 259.9 L 1331.9 261.4 L 1328.3 265.0 L 1325.4 283.7 L 1319.0 301.7 L 1308.2 321.1 L 1302.4 325.4 L 1297.4 331.2 L 1294.5 340.6 L 1301.7 339.1 L 1310.3 339.1 L 1321.1 342.0 L 1329.8 347.8 L 1333.4 355.0 L 1334.8 355.0 L 1337.0 352.8 L 1339.8 345.6 L 1337.0 324.0 L 1341.3 303.8 L 1347.0 287.3 L 1357.1 273.6 L 1357.8 266.4 L 1356.4 264.2 L 1359.3 260.6 L 1360.7 254.9 L 1360.0 248.4 L 1362.9 247.0 L 1364.3 243.4 L 1362.9 239.0 L 1360.0 235.4 L 1360.0 229.0 L 1363.6 218.2 L 1359.3 212.4 Z M 1320.4 145.4 L 1314.6 146.2 L 1311.8 149.0 L 1308.2 162.7 L 1299.5 170.6 L 1300.2 174.2 L 1302.4 177.1 L 1299.5 181.4 L 1299.5 196.6 L 1296.6 203.8 L 1288.0 213.8 L 1288.0 218.9 L 1289.4 220.3 L 1285.1 226.8 L 1285.8 238.3 L 1282.2 250.6 L 1275.0 267.8 L 1262.1 281.5 L 1258.5 283.0 L 1254.2 288.0 L 1252.0 293.0 L 1252.7 298.1 L 1262.8 295.2 L 1266.4 295.9 L 1283.0 303.8 L 1288.0 308.9 L 1291.6 305.3 L 1294.5 296.6 L 1297.4 268.6 L 1308.9 239.0 L 1312.5 234.7 L 1314.6 229.0 L 1319.0 203.0 L 1324.7 193.7 L 1324.7 190.8 L 1326.2 188.6 L 1325.4 185.8 L 1329.8 182.2 L 1329.8 180.0 L 1326.2 174.2 L 1328.3 165.6 L 1327.6 151.2 L 1322.6 146.2 Z M 1272.9 93.6 L 1269.3 93.6 L 1265.0 96.5 L 1261.4 110.9 L 1258.5 116.6 L 1253.4 121.0 L 1254.2 125.3 L 1250.6 130.3 L 1250.6 152.6 L 1247.7 161.3 L 1239.0 173.5 L 1241.2 177.1 L 1237.6 188.6 L 1237.6 202.3 L 1234.7 216.7 L 1225.4 241.2 L 1217.4 253.4 L 1213.1 257.8 L 1211.7 262.1 L 1211.7 267.8 L 1213.1 265.7 L 1216.0 264.2 L 1223.9 264.2 L 1239.8 268.6 L 1244.8 273.6 L 1244.8 281.5 L 1247.7 279.4 L 1250.6 271.4 L 1250.6 265.7 L 1249.1 262.8 L 1247.7 253.4 L 1247.7 245.5 L 1250.6 224.6 L 1256.3 207.4 L 1267.1 192.2 L 1267.8 185.8 L 1271.4 179.3 L 1271.4 176.4 L 1268.6 168.5 L 1269.3 155.5 L 1277.9 134.6 L 1283.0 131.0 L 1283.0 126.0 L 1277.9 120.2 L 1277.9 113.8 L 1280.8 107.3 L 1280.8 101.5 L 1279.4 98.6 Z M 1156.2 79.9 L 1150.5 78.5 L 1140.4 78.5 L 1133.2 82.8 L 1130.3 86.4 L 1129.6 89.3 L 1131.0 98.6 L 1125.3 108.0 L 1119.5 121.0 L 1113.8 126.7 L 1106.6 127.4 L 1097.9 138.2 L 1097.2 144.7 L 1100.1 150.5 L 1095.0 157.0 L 1095.8 176.4 L 1093.6 184.3 L 1093.6 190.8 L 1091.4 200.9 L 1081.4 223.9 L 1077.0 230.4 L 1071.3 236.2 L 1067.7 242.6 L 1066.2 250.6 L 1066.2 258.5 L 1067.7 262.1 L 1074.9 257.0 L 1088.6 252.7 L 1102.2 252.7 L 1110.2 254.2 L 1114.5 257.0 L 1122.4 258.5 L 1133.2 265.0 L 1134.6 261.4 L 1137.5 258.5 L 1137.5 247.7 L 1135.4 229.7 L 1136.1 219.6 L 1139.7 203.8 L 1144.0 194.4 L 1154.1 180.0 L 1157.7 169.9 L 1157.0 167.0 L 1162.7 162.7 L 1164.9 156.2 L 1164.2 151.9 L 1159.8 146.9 L 1157.0 139.0 L 1157.0 121.0 L 1161.3 107.3 L 1167.0 102.2 L 1168.5 99.4 L 1168.5 92.2 L 1164.9 85.0 Z M 1229.7 73.4 L 1216.0 69.1 L 1211.7 69.1 L 1208.1 74.2 L 1208.8 84.2 L 1207.4 92.2 L 1201.6 98.6 L 1198.7 100.1 L 1197.3 103.0 L 1199.4 107.3 L 1196.6 114.5 L 1196.6 120.2 L 1198.0 125.3 L 1196.6 138.2 L 1191.5 147.6 L 1185.8 152.6 L 1185.0 157.7 L 1181.4 163.4 L 1181.4 167.0 L 1187.9 177.1 L 1187.9 187.9 L 1186.5 194.4 L 1180.0 210.2 L 1167.8 229.0 L 1162.0 234.7 L 1156.2 246.2 L 1156.2 251.3 L 1157.7 253.4 L 1172.1 252.0 L 1185.8 254.2 L 1193.0 257.0 L 1196.6 259.9 L 1199.4 257.8 L 1201.6 222.5 L 1211.7 184.3 L 1217.4 174.2 L 1218.2 166.3 L 1216.0 163.4 L 1218.2 159.8 L 1216.7 151.9 L 1218.2 139.0 L 1223.2 127.4 L 1226.1 123.8 L 1226.8 116.6 L 1225.4 115.2 L 1229.7 110.2 L 1229.7 108.7 L 1225.4 103.0 L 1223.9 97.9 L 1227.5 88.6 L 1233.3 82.8 L 1232.6 77.8 Z" transform="matrix(1,0,0,1,0,0)" fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="324.0,209.6 586.0,217.6"/><circle class="leader-dot" cx="586.0" cy="217.6" r="3.5"/><text class="olabel" data-cat="m-mano" data-name="Carpianos" x="316" y="217.6" text-anchor="end">Carpianos</text><polyline class="leader" points="324.0,508.8 504.4,516.8"/><circle class="leader-dot" cx="504.4" cy="516.8" r="3.5"/><text class="olabel" data-cat="m-mano" data-name="Metacarpianos" x="316" y="516.8" text-anchor="end">Metacarpianos</text><polyline class="leader" points="324.0,568.8 580.4,552.8"/><circle class="leader-dot" cx="580.4" cy="552.8" r="3.5"/><text class="olabel" data-cat="m-mano" data-name="Falanges de la mano" x="316" y="576.8" text-anchor="end">Falanges de la mano</text><polyline class="leader" points="1412.0,158.3 1126.0,166.3"/><circle class="leader-dot" cx="1126.0" cy="166.3" r="3.5"/><text class="olabel" data-cat="m-pie" data-name="Falanges del pie" x="1420" y="166.3" text-anchor="start">Falanges del pie</text><polyline class="leader" points="1412.0,290.8 1103.0,298.8"/><circle class="leader-dot" cx="1103.0" cy="298.8" r="3.5"/><text class="olabel" data-cat="m-pie" data-name="Metatarsianos" x="1420" y="298.8" text-anchor="start">Metatarsianos</text><polyline class="leader" points="1412.0,508.2 1115.9,516.2"/><circle class="leader-dot" cx="1115.9" cy="516.2" r="3.5"/><text class="olabel" data-cat="m-pie" data-name="Resto del tarso" x="1420" y="516.2" text-anchor="start">Resto del tarso</text><polyline class="leader" points="1412.0,686.1 1113.8,694.1"/><circle class="leader-dot" cx="1113.8" cy="694.1" r="3.5"/><text class="olabel" data-cat="m-pie" data-name="Astrágalo" x="1420" y="694.1" text-anchor="start">Astrágalo</text><polyline class="leader" points="1412.0,811.4 1110.2,819.4"/><circle class="leader-dot" cx="1110.2" cy="819.4" r="3.5"/><text class="olabel" data-cat="m-pie" data-name="Calcáneo" x="1420" y="819.4" text-anchor="start">Calcáneo</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">BIOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Basado en BodyParts3D</span>
+      <span class="tag">Nivel: ESO</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 horizontal</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>La <strong>mano derecha</strong> (vista palmar, es decir, por la palma) y el <strong>pie derecho</strong> (vista dorsal, es decir, desde arriba), con <strong>8 estructuras</strong> señaladas en español. La mano tiene 27 huesos y el pie 26. Se agrupan en tres tipos que se corresponden entre mano y pie: los de la muñeca y el tobillo (carpo y tarso), los de la palma y el empeine (metacarpo y metatarso) y los de los dedos (falanges).</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Los colores se repiten</strong> entre mano y pie: amarillo para el carpo y el tarso, verde para los metacarpianos y metatarsianos, azul para las falanges.</li>
+        <li><strong>En el pie</strong> se distinguen aparte el calcáneo (el talón) y el astrágalo (el hueso del tobillo); los otros cinco huesos del tarso se agrupan.</li>
+        <li><strong>El pulgar y el dedo gordo</strong> tienen dos falanges; los demás dedos, tres.</li>
+        <li><strong>Los huesos del carpo y del tarso</strong> se han dibujado juntos y no se señalan uno a uno.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres y compare las partes de la mano con las del pie.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar todas las estructuras.</li>
+        <li>Contar los huesos de cada parte: 8 del carpo, 5 metacarpianos y 14 falanges; 7 del tarso, 5 metatarsianos y 14 falanges.</li>
+        <li>Pensar por qué la mano tiene huesos más pequeños y móviles y el pie otros más grandes y fuertes.</li>
+      </ul>
+      <h2>Fuente y licencia</h2>
+      <p>Render anatómico de Atlas Abierto a partir de los modelos 3D de BodyParts3D (© The Database Center for Life Science, licencia Creative Commons Attribution 4.0 International). Los colores, los nombres en español y las zonas pulsables para el juego son de Atlas Abierto. Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">CUERPO HUMANO: MANO Y PIE</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">8 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Modelo base</span><span class="info-val">BodyParts3D (DBCLS), CC BY 4.0</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Carpianos": {"grupo": "Mano", "img": "ficha/hp-carpianos.webp", "txt": "Son ocho huesos pequeños, en dos filas de cuatro, que forman la muñeca. Permiten mover la mano en varias direcciones.", "dato": "Se llaman escafoides, semilunar, piramidal, pisiforme, trapecio, trapezoide, hueso grande y ganchoso."}, "Metacarpianos": {"grupo": "Mano", "img": "ficha/hp-metacarpianos.webp", "txt": "Son cinco huesos largos que forman la palma de la mano. Se numeran del 1 al 5, empezando por el del pulgar.", "dato": "Los nudillos que se ven al cerrar el puño son los extremos de los metacarpianos."}, "Falanges de la mano": {"grupo": "Mano", "img": "ficha/hp-falanges-mano.webp", "txt": "Son los huesos de los dedos: 14 en cada mano. El pulgar tiene dos y los otros cuatro dedos tienen tres cada uno (falange proximal, media y distal).", "dato": "Son más pequeñas cuanto más lejos están de la palma."}, "Calcáneo": {"grupo": "Pie", "img": "ficha/hp-calcaneo.webp", "txt": "Es el hueso del talón y el más grande del pie. Soporta el peso del cuerpo al caminar y en él se sujeta el tendón de Aquiles. En esta vista queda debajo y se ve poco.", "dato": "Su nombre viene del latín calx, «talón»."}, "Astrágalo": {"grupo": "Pie", "img": "ficha/hp-astragalo.webp", "txt": "Está encima del calcáneo y une el pie con la pierna: se articula con la tibia y el peroné para formar el tobillo.", "dato": "Es el único hueso del tarso al que no se une ningún músculo."}, "Resto del tarso": {"grupo": "Pie", "img": "ficha/hp-resto-tarso.webp", "txt": "Son los otros cinco huesos del tarso: escafoides, cuboides y tres cuneiformes. Junto con el calcáneo y el astrágalo forman los siete huesos del tarso.", "dato": "Los cuneiformes se llaman así por su forma de cuña."}, "Metatarsianos": {"grupo": "Pie", "img": "ficha/hp-metatarsianos.webp", "txt": "Son cinco huesos largos que forman la parte central del pie, el empeine. Se numeran del 1 al 5, empezando por el del dedo gordo.", "dato": "El primero, el del dedo gordo, es el más grueso y el que más peso soporta al empujar al caminar."}, "Falanges del pie": {"grupo": "Pie", "img": "ficha/hp-falanges-pie.webp", "txt": "Son los huesos de los dedos del pie: 14 en cada pie. El dedo gordo tiene dos y los otros cuatro tienen tres cada uno.", "dato": "Son más cortas que las de la mano."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=2" defer></script>
+<script src="ficha.js?v=2" defer></script>
+<script src="juego.js?v=20261123c" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
