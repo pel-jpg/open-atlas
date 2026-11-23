@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atlas Abierto — mapas escolares gratuitos</title>
-<meta name="description" content="Mapas escolares gratuitos de España, Europa, América, África, Asia y Oceanía, un mapamundi de placas tectónicas y mapas de historia. Físicos, políticos, geológicos e históricos, con relieve real, listos para ver en pantalla o imprimir en A4. Licencia abierta CC BY 4.0.">
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Abierto: mapas y láminas gratis para la ESO</title>
+<meta name="description" content="Mapas y láminas gratuitos para la ESO: Geografía, Historia y Biología y Geología. Para ver en pantalla, imprimir en A4 o practicar en modo juego. CC BY 4.0, sin registro.">
 <link rel="canonical" href="https://atlasabierto.org/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Atlas Abierto">
-<meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Atlas Abierto — mapas escolares gratuitos">
-<meta property="og:description" content="Mapas escolares gratuitos de España, Europa, América, África, Asia y Oceanía, un mapamundi de placas tectónicas y mapas de historia. Físicos, políticos, geológicos e históricos, con relieve real, listos para ver en pantalla o imprimir en A4. Licencia abierta CC BY 4.0.">
-<meta property="og:url" content="https://atlasabierto.org/">
-<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Atlas Abierto"><meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Atlas Abierto: mapas y láminas gratis para la ESO"><meta property="og:description" content="Mapas y láminas gratuitos para la ESO: Geografía, Historia y Biología y Geología. Para ver en pantalla, imprimir en A4 o practicar en modo juego. CC BY 4.0, sin registro."><meta property="og:url" content="https://atlasabierto.org/">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg"><meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -57,133 +50,92 @@
   footer p{font-size:12.5px;color:var(--ink-soft);}
   footer a{color:var(--ink-soft);}
   @media (max-width:640px){.hero h1{font-size:36px;}}
+
+.crumb{font-size:13px;color:var(--ink-soft);padding:18px 0 0}
+.crumb a{color:var(--ink-soft)}
+.pagehead{padding:18px 0 6px}
+.pagehead h1{font-family:'Fraunces',serif;font-weight:700;font-size:44px;line-height:1.1;margin-bottom:14px}
+.pagehead p{font-size:16.5px;color:var(--ink-soft);line-height:1.65;max-width:820px;margin-bottom:12px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
+.chips a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:500;text-decoration:none;color:var(--ink);background:var(--paper-2);border:1px solid var(--line-strong);padding:7px 14px;border-radius:999px}
+.chips a:hover{background:var(--paper);border-color:var(--gold)}
+.continent-card{scroll-margin-top:16px}
+.text-block{max-width:820px;margin:8px 0 28px}
+.text-block h2{font-family:'Fraunces',serif;font-size:26px;margin:26px 0 10px}
+.text-block p,.text-block li{font-size:15.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:10px}
+.text-block ul{padding-left:22px}
+.text-block strong{color:var(--ink)}
+.faq details{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:3px;margin-bottom:10px;padding:0}
+.faq summary{cursor:pointer;font-weight:600;font-size:15.5px;padding:14px 18px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;font-family:'IBM Plex Mono',monospace}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 16px;font-size:15px;line-height:1.65;color:var(--ink-soft);margin:0}
+.others{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 40px}
+.others a{font-family:'IBM Plex Mono',monospace;font-size:13px;text-decoration:none;color:var(--ink);background:var(--paper-2);border:1px solid var(--line-strong);padding:10px 16px;border-radius:999px}
+.others a:hover{border-color:var(--gold)}
+.subj{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:34px 0 8px}
+.subj a{display:block;text-decoration:none;color:var(--ink);background:var(--paper-2);border:1px solid var(--line-strong);border-radius:4px;overflow:hidden;transition:.15s}
+.subj a:hover{border-color:var(--gold);transform:translateY(-2px)}
+.subj .im{height:190px;background-size:cover;background-position:center;border-bottom:1px solid var(--line-strong);background-color:#F5EFE4}
+.subj .tx{padding:20px 22px 22px}
+.subj h2{font-family:'Fraunces',serif;font-size:28px;margin-bottom:6px}
+.subj p{font-size:14px;color:var(--ink-soft);line-height:1.55;margin-bottom:14px}
+.subj .meta{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.5px;color:var(--ink-soft);text-transform:uppercase}
+.subj .go{display:inline-block;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--ink);border-bottom:2px solid var(--gold)}
+.new{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.new a{display:block;text-decoration:none;color:var(--ink);background:var(--paper-2);border:1px solid var(--line-strong);border-radius:3px;overflow:hidden}
+.new a:hover{border-color:var(--gold)}
+.new .im{height:130px;background-size:cover;background-position:center top;background-color:#F5EFE4}
+.new .t{padding:10px 12px;font-size:13.5px;font-weight:600}
+.new .t span{display:block;font-weight:400;font-size:11.5px;color:var(--ink-soft);margin-top:2px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:8px}
+.how div{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:14px 16px;font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+.how b{display:block;color:var(--ink);font-family:'Fraunces',serif;font-size:17px;margin-bottom:4px}
+.teach{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:4px;padding:24px 28px;display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:30px 0}
+.teach p{font-size:14.5px;color:var(--ink-soft);max-width:640px;line-height:1.55}
+.teach a{font-family:'IBM Plex Mono',monospace;font-size:13px;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line-strong);padding:10px 16px;border-radius:999px}
+@media(max-width:820px){header{flex-wrap:wrap;gap:8px;padding:14px 16px}nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{margin-left:0}.subj{grid-template-columns:1fr}.pagehead h1{font-size:34px}}
 </style>
 <link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
 <link rel="shortcut icon" href="icono4.ico">
 <link rel="apple-touch-icon" href="icono-apple.png?v=3">
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/","inLanguage":"es","description":"Repositorio gratuito de mapas escolares (geografía, historia y geología) en español, listos para imprimir en A4 y con licencia CC BY 4.0.","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"}},{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png","@context":"https://schema.org","description":"Mapas educativos libres para estudiantes y docentes. Siempre gratis, sin publicidad y sin cookies.","license":"https://creativecommons.org/licenses/by/4.0/"}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Atlas Abierto", "url": "https://atlasabierto.org/", "inLanguage": "es", "description": "Mapas y láminas gratuitos para la ESO: Geografía, Historia y Biología y Geología. Para ver en pantalla, imprimir en A4 o practicar en modo juego. CC BY 4.0, sin registro."}</script>
 </head>
-<body>
+<body data-new-home>
 <header>
   <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Cartografía escolar libre</span></div>
-  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+  <nav><a href="geografia.html">Geografía</a><a href="historia.html">Historia</a><a href="biologia-geologia.html">Biología y Geología</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
 </header>
-
 <div class="wrap">
   <div class="hero">
-    <h1>Mapas escolares personalizables</h1>
-    <p>Un repositorio abierto de mapas físicos, políticos, geológicos e históricos de alta resolución, listos para ver en pantalla o imprimir en A4, con datos geográficos abiertos y reales (Natural Earth, GISCO / Eurostat). Siempre gratis, sin publicidad, sin cookies, sin datos privados.</p>
-    <nav class="hero-nav" aria-label="Secciones"><a href="#geografia">Geografía</a><a href="#historia">Historia</a><a href="#geologia">Geología</a><a href="#cuerpo-humano">Cuerpo humano</a></nav>
+    <h1>Mapas y láminas gratis para la ESO</h1>
+    <p>Para ver en pantalla, imprimir en A4 o practicar en modo juego. Con datos y modelos abiertos, siempre gratis, sin publicidad ni registro.</p>
+    <div class="hero-tags"><span class="tag">81 mapas</span><span class="tag">CC BY 4.0</span><span class="tag">Gratis, sin registro</span></div>
   </div>
-
-  <h3 class="section-label" id="geografia">Geografía</h3>
-  <div class="continents">
-    <div class="continent-card">
-      <h2>España</h2>
-      <p class="continent-desc">Comunidades autónomas, cordilleras, ríos peninsulares e insulares, y accidentes costeros de la Península, Baleares y Canarias</p>
-      <div class="cat-grid">
-        <a href="espana-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Cordilleras, ríos, mares y accidentes costeros juntos</span></a>
-        <a href="espana-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Tajo, Duero, Ebro, Guadalquivir y más</span></a>
-        <a href="espana-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Cabos, golfos, estrecho de Gibraltar, islas</span></a>
-        <a href="espana-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Comunidades autónomas o provincias, con capitales</span></a>
-      </div>
-    </div>
-    
-    <div class="continent-card">
-      <h2>Europa</h2>
-      <p class="continent-desc">44 países y microestados, Turquía y el Cáucaso, más Rusia (occidental, hasta los Urales)</p>
-      <div class="cat-grid"><a href="europa-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Cordilleras, ríos, mares y accidentes costeros juntos</span></a><a href="europa-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos y lagos</span></a><a href="europa-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, islas, penínsulas</span></a><a href="europa-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
-    </div>
-    <div class="continent-card">
-      <h2>América</h2>
-      <p class="continent-desc">35 países, de Canadá a Argentina</p>
-      <div class="cat-grid"><a href="america-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Cordilleras, ríos, mares y accidentes costeros juntos</span></a><a href="america-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos, lagos y mares</span></a><a href="america-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="america-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
-    </div>
-    <div class="continent-card">
-      <h2>América del Norte</h2>
-      <p class="continent-desc">Canadá, Estados Unidos, México, Centroamérica y el Caribe</p>
-      <div class="cat-grid"><a href="norteamerica-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Rocosas, ríos, mares y accidentes costeros juntos</span></a><a href="norteamerica-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos y lagos</span></a><a href="norteamerica-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="norteamerica-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
-    </div>
-    <div class="continent-card">
-      <h2>América del Sur</h2>
-      <p class="continent-desc">12 países y la Guayana Francesa, del Caribe a Tierra del Fuego</p>
-      <div class="cat-grid"><a href="sudamerica-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Andes, ríos, mares y accidentes costeros juntos</span></a><a href="sudamerica-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos y lagos</span></a><a href="sudamerica-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="sudamerica-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
-    </div>
-    <div class="continent-card">
-      <h2>África</h2>
-      <p class="continent-desc">54 países (más Sáhara Occidental)</p>
-      <div class="cat-grid"><a href="africa-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Cordilleras, ríos, mares y accidentes costeros juntos</span></a><a href="africa-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos, lagos y mares</span></a><a href="africa-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="africa-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
-    </div>
-    <div class="continent-card">
-      <h2>Asia</h2>
-      <p class="continent-desc">49 países, más el oriente de Rusia (desde los Urales)</p>
-      <div class="cat-grid"><a href="asia-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Cordilleras, ríos, mares y accidentes costeros juntos</span></a><a href="asia-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos, lagos y mares</span></a><a href="asia-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="asia-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">Fronteras, países y capitales</span></a></div>
-    </div>
-    <div class="continent-card">
-      <h2>Oceanía</h2>
-      <p class="continent-desc">14 países soberanos, de Australia a Kiribati</p>
-      <div class="cat-grid"><a href="oceania-fisico.html" class="cat-link"><span class="cat-name">Físico completo</span><span class="cat-desc">Cordilleras, ríos, mares y accidentes costeros juntos</span></a><a href="oceania-hidrografia.html" class="cat-link"><span class="cat-name">Físico: Hidrografía</span><span class="cat-desc">Ríos, lagos y mares</span></a><a href="oceania-costeros.html" class="cat-link"><span class="cat-name">Físico: Accidentes costeros</span><span class="cat-desc">Golfos, cabos, estrechos, penínsulas, islas</span></a><a href="oceania-politico.html" class="cat-link"><span class="cat-name">Político</span><span class="cat-desc">14 países soberanos y sus capitales</span></a></div>
-    </div>
+  <div class="subj">
+    <a href="geografia.html"><div class="im" style="background-image:url(espana-fisico-relieve.jpg)"></div><div class="tx"><h2>Geografía</h2><p>Mapas físicos, políticos y de relieve de España y los cinco continentes.</p><div class="meta">España · Europa · América · África · Asia · Oceanía</div><span class="go">Ver los mapas →</span></div></a>
+    <a href="historia.html"><div class="im" style="background-image:url(hist-etapas.jpg)"></div><div class="tx"><h2>Historia</h2><p>Mapas con líneas de tiempo, de la Prehistoria a la Edad Contemporánea.</p><div class="meta">Prehistoria · Antigua · Media · Moderna · Contemporánea</div><span class="go">Ver los mapas →</span></div></a>
+    <a href="biologia-geologia.html"><div class="im" style="background-image:url(sistema-esqueletico.webp)"></div><div class="tx"><h2>Biología y Geología</h2><p>Cuerpo humano en 3D con fichas y juego, y mapas de placas y volcanes.</p><div class="meta">Cuerpo humano · Geología</div><span class="go">Ver los mapas →</span></div></a>
   </div>
-
-  <h3 class="section-label" id="historia">Historia</h3>
-  <div class="continents">
-    <div class="continent-card" id="historia-antigua">
-      <h2>Edad Antigua</h2>
-      <p class="continent-desc">De Egipto y Mesopotamia a la caída del Imperio romano. Pulsa una fecha y mira cómo cambian las fronteras</p>
-      <div class="cat-grid"><a href="prehistoria.html" class="cat-link"><span class="cat-name">Prehistoria</span><span class="cat-desc">Del origen africano a la Edad de los Metales</span></a><a href="mesopotamia.html" class="cat-link"><span class="cat-name">Mesopotamia</span><span class="cat-desc">De las ciudades sumerias a la conquista persa (2500–539 a. C.)</span></a><a href="egipto.html" class="cat-link"><span class="cat-name">Egipto faraónico</span><span class="cat-desc">De la unificación a Ramsés II y los hititas (3100–1250 a. C.)</span></a><a href="grecia.html" class="cat-link"><span class="cat-name">Grecia antigua</span><span class="cat-desc">De micénicos y polis a Filipo II de Macedonia (1450–338 a. C.)</span></a><a href="guerras-medicas.html" class="cat-link"><span class="cat-name">Las guerras médicas</span><span class="cat-desc">De la revuelta de Jonia a la Liga de Delos (499–478 a. C.)</span></a><a href="alejandro-helenismo.html" class="cat-link"><span class="cat-name">Alejandro Magno y el helenismo</span><span class="cat-desc">De Filipo II a los reinos helenísticos (336–240 a. C.)</span></a><a href="roma-republica.html" class="cat-link"><span class="cat-name">Roma: de los orígenes a la República</span><span class="cat-desc">De la fundación a Aníbal y la destrucción de Cartago (753–146 a. C.)</span></a><a href="hispania-romana.html" class="cat-link"><span class="cat-name">Hispania: pueblos prerromanos y conquista romana</span><span class="cat-desc">De iberos y celtas a la Hispania de Augusto (600 a. C. – siglo II d. C.)</span></a><a href="imperio-romano.html" class="cat-link"><span class="cat-name">Imperio romano</span><span class="cat-desc">De 264 a. C. a 117 d. C. y la división de 395</span></a><a href="caida-imperio-romano.html" class="cat-link"><span class="cat-name">La caída del Imperio romano</span><span class="cat-desc">De Diocleciano a los reinos germánicos y Justiniano (293–555)</span></a></div>
-    </div>
-    <div class="continent-card" id="historia-media">
-      <h2>Edad Media</h2>
-      <p class="continent-desc">Del islam y los carolingios a las Cruzadas y la Reconquista. Pulsa una fecha y mira cómo cambian las fronteras</p>
-      <div class="cat-grid"><a href="islam.html" class="cat-link"><span class="cat-name">La expansión del islam</span><span class="cat-desc">De la Hégira al Califato omeya y la división en califatos (622–970)</span></a><a href="carolingio.html" class="cat-link"><span class="cat-name">Carlomagno y el Imperio carolingio</span><span class="cat-desc">De Clodoveo al Tratado de Verdún (511–843)</span></a><a href="cruzadas.html" class="cat-link"><span class="cat-name">Europa feudal y las Cruzadas</span><span class="cat-desc">Del año 1000 a la Cuarta Cruzada y el declive de Bizancio (1000–1204)</span></a><a href="imperio-bizantino.html" class="cat-link"><span class="cat-name">El Imperio bizantino</span><span class="cat-desc">De la división del Imperio romano a la caída de Constantinopla (395–1453)</span></a><a href="imperio-mongol.html" class="cat-link"><span class="cat-name">El Imperio mongol</span><span class="cat-desc">De Gengis Kan a los cuatro kanatos y su desintegración (1206–1500)</span></a><a href="al-andalus-reconquista.html" class="cat-link"><span class="cat-name">Al-Ándalus y la Reconquista</span><span class="cat-desc">De la conquista de 711 a la caída de Granada en 1492</span></a></div>
-    </div>
-    <div class="continent-card" id="historia-moderna">
-      <h2>Edad Moderna</h2>
-      <p class="continent-desc">De los descubrimientos al Imperio español. Pulsa una fecha y mira cómo cambian las fronteras</p>
-      <div class="cat-grid"><a href="america-precolombina.html" class="cat-link"><span class="cat-name">La América precolombina</span><span class="cat-desc">Mayas, aztecas e incas hasta 1492</span></a><a href="descubrimientos.html" class="cat-link"><span class="cat-name">Descubrimientos y exploraciones</span><span class="cat-desc">De las rutas de las especias a la vuelta al mundo y el galeón de Manila (1415–1565)</span></a><a href="carlos-v-felipe-ii.html" class="cat-link"><span class="cat-name">Carlos V y Felipe II</span><span class="cat-desc">Los Habsburgo y su imperio en guerra (1516–1598)</span></a><a href="imperio-espanol.html" class="cat-link"><span class="cat-name">El Imperio español</span><span class="cat-desc">De los Reyes Católicos (1492) a 1800, en cuatro continentes</span></a><a href="reforma-guerras-religion.html" class="cat-link"><span class="cat-name">La Reforma protestante y las guerras de religión</span><span class="cat-desc">De Lutero a la Paz de Westfalia (1517–1648)</span></a></div>
-    </div>
-    <div class="continent-card" id="historia-contemporanea">
-      <h2>Edad Contemporánea</h2>
-      <p class="continent-desc">De la Revolución a nuestros días. Pulsa una fecha y mira cómo cambian las fronteras</p>
-      <div class="cat-grid"><a href="revolucion-francesa.html" class="cat-link"><span class="cat-name">La Revolución francesa</span><span class="cat-desc">De la Bastilla al golpe de Brumario: guerra, Terror y repúblicas hermanas (1789–1799)</span></a><a href="napoleon-congreso-viena.html" class="cat-link"><span class="cat-name">Napoleón y el Congreso de Viena</span><span class="cat-desc">Del golpe de Brumario a la Europa de 1815</span></a><a href="revolucion-industrial.html" class="cat-link"><span class="cat-name">La Revolución Industrial</span><span class="cat-desc">Del vapor y el textil británicos a la Segunda Revolución Industrial y el movimiento obrero (1760–1914)</span></a><a href="independencia-hispanoamerica.html" class="cat-link"><span class="cat-name">La independencia de Hispanoamérica</span><span class="cat-desc">De la crisis de 1808 a las nuevas repúblicas (1808–1830)</span></a><a href="unificacion-alemania.html" class="cat-link"><span class="cat-name">La unificación de Alemania</span><span class="cat-desc">De la Confederación Germánica al Imperio de 1871 y la guerra franco-prusiana</span></a><a href="imperialismo-siglo-xix.html" class="cat-link"><span class="cat-name">El imperialismo del siglo XIX</span><span class="cat-desc">El reparto colonial de África y Asia hasta 1914</span></a><a href="primera-guerra-mundial.html" class="cat-link"><span class="cat-name">La Primera Guerra Mundial</span><span class="cat-desc">Alianzas, frentes y la Europa de 1919</span></a><a href="revolucion-rusa-urss.html" class="cat-link"><span class="cat-name">La Revolución Rusa y la URSS</span><span class="cat-desc">Del Imperio ruso a la disolución de la Unión Soviética (1914–1991)</span></a><a href="guerra-civil-espanola.html" class="cat-link"><span class="cat-name">La Guerra Civil española</span><span class="cat-desc">Del golpe de 1936 al final de la guerra en 1939</span></a><a href="segunda-guerra-mundial.html" class="cat-link"><span class="cat-name">La Segunda Guerra Mundial</span><span class="cat-desc">De la expansión nazi al Pacífico y la Europa de 1945</span></a><a href="guerra-fria.html" class="cat-link"><span class="cat-name">La Guerra Fría</span><span class="cat-desc">Dos bloques, descolonización y distensión hasta 1991</span></a><a href="mundo-globalizado.html" class="cat-link"><span class="cat-name">Un mundo globalizado</span><span class="cat-desc">Del Muro de Berlín a la UE, el euro, los bloques comerciales y la pandemia (1989–hoy)</span></a></div>
-    </div>
+  <h3 class="section-label">Cómo funciona</h3>
+  <div class="how">
+    <div><b>Completo</b>El mapa con todos los nombres, para estudiar o proyectar en clase.</div>
+    <div><b>Mudo</b>El mismo mapa sin nombres, para que el alumnado los escriba.</div>
+    <div><b>Jugar</b>El mapa pregunta y hay que señalar la respuesta. Cuenta aciertos y fallos.</div>
+    <div><b>Fichas</b>Al pulsar un elemento se abre su ficha con información.</div>
   </div>
-
-  <h3 class="section-label" id="geologia">Geología</h3>
-  <div class="continents">
-    <div class="continent-card">
-      <h2>Mapas geológicos</h2>
-      <p class="continent-desc">Placas tectónicas, volcanes y terremotos sobre relieve real</p>
-      <div class="cat-grid"><a href="mundo-placas.html" class="cat-link"><span class="cat-name">Mundo</span><span class="cat-desc">Placas tectónicas, 10.503 terremotos, volcanes y el Cinturón de Fuego</span></a><a href="europa-geologico.html" class="cat-link"><span class="cat-name">Europa</span><span class="cat-desc">Islandia, el Mediterráneo, Anatolia y los Alpes</span></a><a href="africa-geologico.html" class="cat-link"><span class="cat-name">África</span><span class="cat-desc">El Gran Valle del Rift y el triángulo de Afar</span></a><a href="america-geologico.html" class="cat-link"><span class="cat-name">América</span><span class="cat-desc">Los Andes, San Andrés y el Cinturón de Fuego</span></a><a href="asia-geologico.html" class="cat-link"><span class="cat-name">Asia</span><span class="cat-desc">El Himalaya, Japón e Indonesia</span></a><a href="oceania-geologico.html" class="cat-link"><span class="cat-name">Oceanía</span><span class="cat-desc">Nueva Zelanda, Tonga y Papúa Nueva Guinea</span></a></div>
-    </div>
-  </div>
-
-  <h3 class="section-label" id="cuerpo-humano">Cuerpo humano</h3>
-  <div class="continents">
-    <div class="continent-card">
-      <h2>Aparatos y sistemas</h2>
-      <p class="continent-desc">Láminas de anatomía para ESO, con modo juego para localizar cada órgano</p>
-      <div class="cat-grid"><a href="aparato-digestivo.html" class="cat-link"><span class="cat-name">Aparato digestivo</span><span class="cat-desc">Boca, esófago, estómago, hígado, páncreas e intestinos: 17 estructuras</span></a><a href="aparato-respiratorio.html" class="cat-link"><span class="cat-name">Aparato respiratorio</span><span class="cat-desc">Fosas nasales, laringe, tráquea, bronquios, pulmones, diafragma y alvéolos: 10 estructuras</span></a><a href="aparato-circulatorio.html" class="cat-link"><span class="cat-name">Aparato circulatorio</span><span class="cat-desc">Corazón, aorta, venas cavas y principales arterias y venas: 10 estructuras</span></a><a href="aparato-urinario.html" class="cat-link"><span class="cat-name">Aparato urinario</span><span class="cat-desc">Riñones, uréteres, vejiga, uretra y corte del riñón: 10 estructuras</span></a><a href="sistema-nervioso.html" class="cat-link"><span class="cat-name">Sistema nervioso</span><span class="cat-desc">Lóbulos del cerebro, cerebelo, tronco, médula espinal y nervios principales: 13 estructuras</span></a><a href="sistema-esqueletico.html" class="cat-link"><span class="cat-name">Sistema esquelético</span><span class="cat-desc">Cráneo, columna, costillas y los huesos de brazos, manos, pelvis, piernas y pies: 20 estructuras</span></a><a href="sistema-esqueletico-craneo.html" class="cat-link"><span class="cat-name">Cráneo humano</span><span class="cat-desc">Huesos del neurocráneo y de la cara, vistas frontal y lateral: 11 estructuras</span></a><a href="sistema-esqueletico-mano-pie.html" class="cat-link"><span class="cat-name">Mano y pie</span><span class="cat-desc">Carpo, metacarpo y falanges; tarso, metatarso y falanges: 8 estructuras</span></a><a href="sistema-muscular.html" class="cat-link"><span class="cat-name">Sistema muscular</span><span class="cat-desc">Músculos de la cabeza, el tronco y los miembros, vistas anterior y posterior: 24 estructuras</span></a><a href="sistema-endocrino.html" class="cat-link"><span class="cat-name">Sistema endocrino</span><span class="cat-desc">Hipotálamo, hipófisis, tiroides, páncreas, suprarrenales y gónadas: 10 estructuras</span></a></div>
-    </div>
-  </div>
-
-  <div class="bottom-tags">
-    <span class="tag">CC BY 4.0 — gratis para siempre</span>
-    <span class="tag">5 continentes, España, Historia, Geología y Cuerpo humano</span>
-    <span class="tag">74 mapas</span>
-    <span class="tag">Personalizables</span>
+  <h3 class="section-label">Novedades</h3>
+  <div class="new"><a href="sistema-endocrino.html"><div class="im" style="background-image:url(sistema-endocrino.webp)"></div><div class="t">Sistema endocrino<span>Biología</span></div></a><a href="sistema-muscular.html"><div class="im" style="background-image:url(musculos-anterior.webp)"></div><div class="t">Sistema muscular<span>Biología</span></div></a><a href="sistema-esqueletico-mano-pie.html"><div class="im" style="background-image:url(mano-palmar.webp);background-size:contain;background-repeat:no-repeat;background-position:center"></div><div class="t">Mano y pie<span>Biología</span></div></a><a href="sistema-esqueletico.html"><div class="im" style="background-image:url(sistema-esqueletico.webp)"></div><div class="t">Sistema esquelético<span>Biología</span></div></a></div>
+  <div class="teach">
+    <p><strong>Para el profesorado.</strong> Todo se publica con licencia CC BY 4.0: puedes imprimir, copiar y adaptar citando la fuente. Hay una guía con el modo de uso en clase.</p>
+    <a href="para-docentes.html">Guía para docentes</a>
+    <a href="licencias.html">Licencias</a>
   </div>
 </div>
-
-<footer>
-  <div class="wrap">
-    <p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.<br>
-    Datos de costas y fronteras: © EuroGeographics / GISCO (Eurostat, Comisión Europea), CC BY 4.0.</p>
-  </div>
-</footer>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos libres, para usar sin fricción en el aula. Licencia CC BY 4.0.<br>Datos de costas y fronteras: © EuroGeographics / GISCO (Eurostat, Comisión Europea), CC BY 4.0.<br><a href="geografia.html">Geografía</a> · <a href="historia.html">Historia</a> · <a href="biologia-geologia.html">Biología y Geología</a> · <a href="ayuda.html">Ayuda</a> · <a href="licencias.html">Licencias</a></p></div></footer>
 <!-- goatcounter -->
 <script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>
@@ -193,3 +145,4 @@ if(b&&window.goatcounter&&goatcounter.count){goatcounter.count({path:'imprimir/'
 <!-- /goatcounter -->
 </body>
 </html>
+</body></html>
