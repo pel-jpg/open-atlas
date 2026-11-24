@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capas de la Tierra — Estructura interna · Atlas Abierto</title>
+<meta name="description" content="Estructura interna de la Tierra para ESO: corteza, manto superior, manto inferior, núcleo externo y núcleo interno, con su profundidad en kilómetros. Con modo juego para localizar las capas, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-capas-tierra.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Capas de la Tierra — Estructura interna · Atlas Abierto">
+<meta property="og:description" content="Estructura interna de la Tierra para ESO: corteza, manto superior, manto inferior, núcleo externo y núcleo interno, con su profundidad en kilómetros. Con modo juego para localizar las capas, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-capas-tierra.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:1540/1080;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Capas de la Tierra — Estructura interna","description":"Estructura interna de la Tierra para ESO: corteza, manto superior, manto inferior, núcleo externo y núcleo interno, con su profundidad en kilómetros. Con modo juego para localizar las capas, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-capas-tierra.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"Capas de la Tierra — Estructura interna","item":"https://atlasabierto.org/geologia-capas-tierra.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / Capas de la Tierra</div>
+    <h1>Capas de la Tierra</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1540 1080" width="1540" height="1080" role="img" aria-label="Lámina: capas de la Tierra"><rect width="1540" height="1080" fill="#F5EFE4"/><defs>
+<radialGradient id="gCor" cx="560" cy="560" r="440" gradientUnits="userSpaceOnUse"><stop offset="0.965" stop-color="#6f5b49"/><stop offset="1" stop-color="#4a3b2d"/></radialGradient>
+<radialGradient id="gMu" cx="560" cy="560" r="440" gradientUnits="userSpaceOnUse"><stop offset="0.89" stop-color="#b9561f"/><stop offset="0.965" stop-color="#d9823a"/></radialGradient>
+<radialGradient id="gMi" cx="560" cy="560" r="440" gradientUnits="userSpaceOnUse"><stop offset="0.52" stop-color="#7a2418"/><stop offset="0.9" stop-color="#b0402a"/></radialGradient>
+<radialGradient id="gOc" cx="560" cy="560" r="440" gradientUnits="userSpaceOnUse"><stop offset="0.18" stop-color="#f0a21f"/><stop offset="0.55" stop-color="#e2711a"/></radialGradient>
+<radialGradient id="gIc" cx="560" cy="560" r="440" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff6c7"/><stop offset="0.2" stop-color="#f9d65a"/></radialGradient>
+<filter id="rock" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 -.18"/></filter>
+<clipPath id="cDisk"><circle cx="560" cy="560" r="440"/></clipPath>
+</defs><g id="dibujo"><rect x="20" y="20" width="1500" height="1040" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="560" y="88" text-anchor="middle">Capas de la Tierra (corte)</text><circle cx="560" cy="560" r="440" fill="url(#gCor)"/><circle cx="560" cy="560" r="426.0" fill="url(#gMu)"/><circle cx="560" cy="560" r="394.4" fill="url(#gMi)"/><circle cx="560" cy="560" r="240.4" fill="url(#gOc)"/><circle cx="560" cy="560" r="84.3" fill="url(#gIc)"/><g clip-path="url(#cDisk)"><rect x="120" y="120" width="880" height="880" filter="url(#rock)" opacity=".5" style="mix-blend-mode:multiply"/></g><circle cx="560" cy="560" r="440.0" fill="none" stroke="#2e2014" stroke-width="2" opacity=".8"/><circle cx="560" cy="560" r="426.0" fill="none" stroke="#2e2014" stroke-width="2" opacity=".8"/><circle cx="560" cy="560" r="394.4" fill="none" stroke="#2e2014" stroke-width="2" opacity=".8"/><circle cx="560" cy="560" r="240.4" fill="none" stroke="#2e2014" stroke-width="2" opacity=".8"/><circle cx="560" cy="560" r="84.3" fill="none" stroke="#2e2014" stroke-width="2" opacity=".8"/><g><line x1="1110" y1="960" x2="1179" y2="960" stroke="#7a6a58" stroke-width="3"/><line x1="1110" y1="948" x2="1110" y2="972" stroke="#7a6a58" stroke-width="3"/><line x1="1179" y1="948" x2="1179" y2="972" stroke="#7a6a58" stroke-width="3"/><text class="sub" x="1193" y="970">1 000 km</text></g><text class="sub" x="770" y="1036" text-anchor="middle">La corteza se ha dibujado más gruesa de lo real; a escala sería una línea casi invisible.</text></g><g id="hitzones"><path class="organo" data-cat="ti-capas" data-name="Corteza" d="M1000.0 560.0 A440.0 440.0 0 1 0 120.0 560.0 A440.0 440.0 0 1 0 1000.0 560.0 Z M986.0 560.0 A426.0 426.0 0 1 0 134.0 560.0 A426.0 426.0 0 1 0 986.0 560.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-capas" data-name="Manto superior" d="M986.0 560.0 A426.0 426.0 0 1 0 134.0 560.0 A426.0 426.0 0 1 0 986.0 560.0 Z M954.4 560.0 A394.4 394.4 0 1 0 165.6 560.0 A394.4 394.4 0 1 0 954.4 560.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-capas" data-name="Manto inferior" d="M954.4 560.0 A394.4 394.4 0 1 0 165.6 560.0 A394.4 394.4 0 1 0 954.4 560.0 Z M800.4 560.0 A240.4 240.4 0 1 0 319.6 560.0 A240.4 240.4 0 1 0 800.4 560.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-capas" data-name="Núcleo externo" d="M800.4 560.0 A240.4 240.4 0 1 0 319.6 560.0 A240.4 240.4 0 1 0 800.4 560.0 Z M644.3 560.0 A84.3 84.3 0 1 0 475.7 560.0 A84.3 84.3 0 1 0 644.3 560.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-capas" data-name="Núcleo interno" d="M644.3 560.0 A84.3 84.3 0 1 0 475.7 560.0 A84.3 84.3 0 1 0 644.3 560.0 Z" fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="1102.0,238.0 789.5,192.8"/><circle class="leader-dot" cx="789.5" cy="192.8" r="5"/><text class="olabel" data-cat="ti-capas" data-name="Corteza" x="1110.0" y="250.0" text-anchor="start">Corteza</text><text class="sub" x="1110.0" y="286.0" data-for="Corteza">0–35 km</text><polyline class="leader" points="1102.0,388.0 900.1,330.6"/><circle class="leader-dot" cx="900.1" cy="330.6" r="5"/><text class="olabel" data-cat="ti-capas" data-name="Manto superior" x="1110.0" y="400.0" text-anchor="start">Manto superior</text><text class="sub" x="1110.0" y="436.0" data-for="Manto superior">35–660 km</text><polyline class="leader" points="1102.0,538.0 874.3,515.8"/><circle class="leader-dot" cx="874.3" cy="515.8" r="5"/><text class="olabel" data-cat="ti-capas" data-name="Manto inferior" x="1110.0" y="550.0" text-anchor="start">Manto inferior</text><text class="sub" x="1110.0" y="586.0" data-for="Manto inferior">660–2 900 km</text><polyline class="leader" points="1102.0,688.0 716.1,604.8"/><circle class="leader-dot" cx="716.1" cy="604.8" r="5"/><text class="olabel" data-cat="ti-capas" data-name="Núcleo externo" x="1110.0" y="700.0" text-anchor="start">Núcleo externo</text><text class="sub" x="1110.0" y="736.0" data-for="Núcleo externo">2 900–5 150 km</text><polyline class="leader" points="1102.0,838.0 589.1,584.4"/><circle class="leader-dot" cx="589.1" cy="584.4" r="5"/><text class="olabel" data-cat="ti-capas" data-name="Núcleo interno" x="1110.0" y="850.0" text-anchor="start">Núcleo interno</text><text class="sub" x="1110.0" y="886.0" data-for="Núcleo interno">5 150–6 371 km</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">GEOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>La <strong>Tierra</strong> no es uniforme: está formada por capas concéntricas que se diferencian por su composición, su estado y su temperatura. Se estudian sobre todo a partir de cómo viajan las ondas sísmicas. Esta lámina muestra un corte con las <strong>5 capas</strong> del modelo geoquímico: la corteza, el manto (superior e inferior) y el núcleo (externo e interno).</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>La corteza</strong> es la capa más fina y externa; la hemos dibujado más gruesa de lo real para que se vea.</li>
+        <li><strong>El manto</strong> es sólido pero muy caliente, y fluye con extrema lentitud: sus corrientes mueven las placas.</li>
+        <li><strong>El núcleo externo</strong> es líquido y genera el campo magnético; <strong>el núcleo interno</strong> es sólido.</li>
+        <li><strong>Las profundidades</strong> son valores medios y aproximados; los límites exactos varían según el lugar.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres de las capas y su profundidad.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar las 5 capas.</li>
+        <li>Comparar el radio de la Tierra (6 371 km) con las profundidades que ha alcanzado un sondeo (unos 12 km) y calcular qué fracción es.</li>
+        <li>Explicar con las ondas sísmicas P y S cómo sabemos que el núcleo externo es líquido.</li>
+        <li>Relacionar con la lámina de la <a href="geologia-litosfera.html" style="color:#8a5a22">corteza y la litosfera</a>, que amplía las capas externas.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto, dibujada con valores medios de los modelos estándar de la estructura de la Tierra (profundidades de las discontinuidades y espesores aproximados). Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">GEOLOGÍA: ESTRUCTURA INTERNA DE LA TIERRA</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">5 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Corteza": {"grupo": "Capas de la Tierra", "img": "ficha/geo-corteza.webp", "txt": "Capa sólida más externa y delgada de la Tierra. Puede ser continental (30–70 km, rocas graníticas) u oceánica (5–10 km, rocas basálticas, más densas). Junto con la parte más rígida del manto superior forma la litosfera.", "dato": "Es menos del 1 % del volumen de la Tierra: en este dibujo se ha engrosado, porque a escala sería una línea casi invisible."}, "Manto superior": {"grupo": "Capas de la Tierra", "img": "ficha/geo-manto-superior.webp", "txt": "Roca caliente y sólida (peridotita) que va desde la base de la corteza hasta unos 660 km de profundidad. Su parte más externa es rígida y forma la litosfera; debajo, la astenosfera es más plástica y fluye muy despacio.", "dato": "Las corrientes de convección del manto arrastran las placas litosféricas unos centímetros al año."}, "Manto inferior": {"grupo": "Capas de la Tierra", "img": "ficha/geo-manto-inferior.webp", "txt": "La parte más profunda del manto, entre unos 660 y 2 900 km. La presión es tan enorme que las rocas, aun muy calientes, son más densas y rígidas, aunque fluyen con extrema lentitud.", "dato": "Ocupa más de la mitad del volumen de la Tierra."}, "Núcleo externo": {"grupo": "Capas de la Tierra", "img": "ficha/geo-nucleo-externo.webp", "txt": "Capa líquida de hierro y níquel fundidos, entre 2 900 y 5 150 km de profundidad, a unos 4 000–5 000 °C. Sus movimientos generan el campo magnético terrestre.", "dato": "Las ondas sísmicas S no lo atraviesan; por eso sabemos que es líquido."}, "Núcleo interno": {"grupo": "Capas de la Tierra", "img": "ficha/geo-nucleo-interno.webp", "txt": "Esfera sólida de hierro y níquel, de unos 1 220 km de radio. Aunque su temperatura supera los 5 000 °C, es sólida por la presión inmensa que soporta.", "dato": "Está casi tan caliente como la superficie del Sol."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>

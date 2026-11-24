@@ -81,6 +81,8 @@ Todos los mapas se pueden usar, copiar y adaptar citando la fuente (Atlas Abiert
 
 ## Geología
 
+- [Capas de la Tierra](https://atlasabierto.org/geologia-capas-tierra.html): Lámina gratuita con corte de la Tierra: corteza, manto superior e inferior, núcleo externo e interno, con profundidades, fichas y modo juego. Licencia CC BY 4.0.
+- [Corteza y litosfera](https://atlasabierto.org/geologia-litosfera.html): Lámina gratuita a escala vertical con corteza continental y oceánica, Moho, litosfera, astenosfera y mesosfera, con fichas y modo juego. Licencia CC BY 4.0.
 - [Mundo — Placas tectónicas, volcanes y terremotos](https://atlasabierto.org/mundo-placas.html): Mapamundi geológico gratuito con las placas tectónicas, sus límites, 10.503 terremotos de magnitud 6 o más y volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
 - [Europa — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/europa-geologico.html): Mapa geológico gratuito de Europa con las placas tectónicas, sus límites, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
 - [África — Geológico: placas, volcanes y terremotos](https://atlasabierto.org/africa-geologico.html): Mapa geológico gratuito de África con las placas tectónicas, el Gran Valle del Rift, los terremotos de magnitud 6 o más y los volcanes, sobre relieve real. Personalizable y listo para imprimir en A4. Licencia CC BY 4.0.
@@ -91,6 +93,6 @@ Todos los mapas se pueden usar, copiar y adaptar citando la fuente (Atlas Abiert
 ## Más información
 
 - [Licencias y fuentes de datos](https://atlasabierto.org/licencias.html)
-- [Para docentes](https://atlasabierto.org/para-docentes.html)
+- [Para docentes](https://atlasabierto.org/ayuda.html)
 - [Ayuda](https://atlasabierto.org/ayuda.html)
 - [Mapa del sitio](https://atlasabierto.org/sitemap.xml)
