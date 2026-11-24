@@ -87,7 +87,11 @@
     {id:'g-musc',t:'Sistema muscular',cats:['ms-tronco','ms-sup','ms-inf'],mix:['ms-tronco','ms-sup','ms-inf'],mixl:'Todos los músculos'},
     {id:'g-endo',t:'Sistema endocrino',cats:['en-cuello','en-tronco'],mix:['en-cuello','en-tronco'],mixl:'Todas las glándulas'},
     {id:'g-rep',t:'Aparato reproductor',cats:['rp-masc','rp-fem'],mix:['rp-masc','rp-fem'],mixl:'Todo el aparato reproductor'},
-    {id:'g-sent',t:'Órganos de los sentidos',cats:['se-vista','se-oido','se-olfato','se-gusto','se-tacto'],mix:['se-vista','se-oido','se-olfato','se-gusto','se-tacto'],mixl:'Todos los sentidos'}
+    {id:'g-vista',t:'Vista: el ojo',cats:['se-vista']},
+    {id:'g-oido',t:'Oído',cats:['se-oido']},
+    {id:'g-olfato',t:'Olfato: la nariz',cats:['se-olfato']},
+    {id:'g-gusto',t:'Gusto: la lengua',cats:['se-gusto']},
+    {id:'g-tacto',t:'Tacto: la piel',cats:['se-tacto']}
   ];
   /* en los mapas de costas y de hidrografía las llanuras y regiones son solo contexto: no se preguntan */
   /* láminas del cuerpo humano: pocas estructuras, se preguntan todas */
@@ -179,7 +183,7 @@
   var grp=document.createElement('div');grp.className='panel-actions';var pb=head.querySelector('.preset-btns');
   if(pb){head.appendChild(grp);var cb=pb.querySelector('[data-preset=completo]'),mb=pb.querySelector('[data-preset=mudo]');if(cb&&mb)pb.insertBefore(cb,mb);
     var r1=document.createElement('div');r1.className='panel-row';r1.appendChild(pb);r1.appendChild(btn);grp.appendChild(r1);
-    var pr=document.querySelector('.print-btn');if(pr){pr.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>Imprimir en '+(/(aparato-(digestivo|respiratorio|circulatorio)|sistema-nervioso|sistema-endocrino|organos-sentidos|sistema-esqueletico\.html)/.test(location.pathname)?'A4 vertical':'A4 horizontal')+'';var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
+    var pr=document.querySelector('.print-btn');if(pr){pr.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>Imprimir en '+(/(aparato-(digestivo|respiratorio|circulatorio)|sistema-nervioso|sistema-endocrino|organos-sistema-esqueletico\.html)/.test(location.pathname)?'A4 vertical':'A4 horizontal')+'';var r2=document.createElement('div');r2.className='panel-row panel-print';r2.appendChild(pr);grp.appendChild(r2);}}else head.appendChild(btn);
   var bar=document.createElement('div');bar.className='game-bar';bar.hidden=true;bar.setAttribute('aria-live','polite');
   panel.after(bar);
 

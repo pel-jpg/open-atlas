@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tacto: la piel — Órganos de los sentidos · Atlas Abierto</title>
+<meta name="description" content="La piel para ESO: epidermis, dermis, hipodermis, folículo piloso, glándulas sebáceas y sudoríparas, corpúsculo de Pacini y vasos sanguíneos, con nombres en español. Con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/organos-tacto.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Tacto: la piel — Órganos de los sentidos · Atlas Abierto">
+<meta property="og:description" content="La piel para ESO: epidermis, dermis, hipodermis, folículo piloso, glándulas sebáceas y sudoríparas, corpúsculo de Pacini y vasos sanguíneos, con nombres en español. Con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/organos-tacto.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:1965/823;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Tacto: la piel — Órganos de los sentidos","description":"La piel para ESO: epidermis, dermis, hipodermis, folículo piloso, glándulas sebáceas y sudoríparas, corpúsculo de Pacini y vasos sanguíneos, con nombres en español. Con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/organos-tacto.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","creditText":"Lámina de OpenStax o Blausen Medical (CC BY), adaptada por Atlas Abierto","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Biología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"Tacto: la piel — Órganos de los sentidos","item":"https://atlasabierto.org/organos-tacto.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / Tacto: la piel</div>
+    <h1>Tacto: la piel</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar los órganos señalándolos.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1965 823" width="1965" height="823" role="img" aria-label="Lámina: Tacto · la piel (corte)"><rect width="1965" height="823" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="1925" height="783" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="982" y="82" text-anchor="middle">Tacto · la piel (corte)</text><image href="sentidos/piel.webp" x="0" y="0" width="867" height="940" transform="translate(687.7 130.0) scale(0.68)" style="mix-blend-mode:multiply"/></g><g id="hitzones"><g transform="translate(687.7 130.0) scale(0.68)"><path class="organo" data-cat="se-tacto" data-name="Dermis" d="M816 289 L653 348 L561 378 L482 418 L470 417 L303 379 L200 394 L34 349 L34 781 L293 801 L492 791 L642 786 L816 706Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Hipodermis" d="M816 704 L640 784 L490 789 L295 799 L34 779 L14 906 L180 937 L181 939 L581 939 L582 937 L701 936 L841 801Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Epidermis" d="M709 214 L710 325 L760 303 L815 291 L816 217Z M238 390 L302 381 L400 396 L481 423 L563 378 L652 353 L691 335 L692 222 L704 219 L705 214 L693 216 L692 214 L597 211 L574 254 L557 295 L551 316 L544 324 L541 324 L536 319 L536 315 L548 277 L576 219 L581 214 L587 214 L587 211 L513 209 L495 249 L492 251 L483 251 L477 246 L477 242 L491 211 L490 208 L361 205 L317 255 L282 304 L261 340 L240 382Z M354 205 L270 203 L259 243 L256 245 L248 245 L239 242 L238 237 L252 202 L239 202 L35 328 L34 361 L145 375 L198 396 L211 395 L248 324 L276 282 L279 281 L283 286 L287 285 L313 250Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Tejido adiposo" d="M124 861 L123 868 L127 874 L154 888 L158 888 L157 883 L149 875Z M196 832 L190 832 L179 839 L155 844 L149 851 L149 858 L172 869 L181 881 L184 882 L184 874 L176 860 L189 858 L201 851 L203 842Z M179 825 L174 825 L162 830 L162 832 L178 829Z M449 821 L447 821 L441 836 L411 863 L408 863 L406 858 L399 853 L381 851 L377 840 L362 830 L366 821 L359 821 L353 827 L337 828 L331 831 L328 837 L314 830 L288 829 L281 835 L281 847 L273 846 L265 850 L249 850 L246 855 L245 867 L231 867 L218 871 L213 876 L212 886 L215 891 L228 899 L240 902 L266 900 L276 907 L287 910 L289 916 L299 915 L304 931 L310 930 L308 912 L313 908 L335 916 L350 917 L364 914 L373 920 L380 921 L380 928 L383 935 L389 934 L387 927 L388 922 L393 922 L401 918 L416 924 L437 924 L443 917 L442 909 L429 897 L429 891 L426 885 L412 877 L411 874 L449 837Z M149 801 L150 808 L154 810 L152 801Z M706 791 L669 791 L663 800 L643 800 L634 797 L632 791 L626 791 L625 795 L611 797 L600 805 L586 804 L584 807 L574 807 L561 818 L556 830 L542 832 L537 837 L536 846 L541 853 L539 857 L526 854 L511 854 L502 857 L493 865 L492 873 L494 879 L482 887 L480 891 L481 901 L477 902 L477 933 L492 931 L500 926 L510 931 L521 933 L533 932 L543 927 L557 932 L571 932 L587 924 L606 927 L626 923 L638 928 L653 928 L665 923 L670 911 L686 922 L701 925 L701 919 L686 914 L680 907 L688 901 L702 901 L706 899 L706 865 L704 865 L704 869 L698 873 L689 886 L688 892 L681 895 L676 903 L666 905 L658 899 L655 892 L657 882 L648 882 L642 875 L641 867 L647 857 L677 831 L679 825 L686 824 L687 821 L698 812 L706 799Z M758 794 L758 796 L774 796 L774 792 L770 787 L764 787Z M20 780 L14 788 L16 798 L25 806 L16 816 L16 825 L22 832 L17 841 L17 847 L21 854 L17 863 L18 873 L32 882 L43 885 L63 885 L77 881 L92 891 L101 892 L112 906 L119 906 L113 894 L124 892 L124 890 L97 877 L92 870 L92 855 L96 854 L105 863 L111 863 L113 849 L100 838 L108 827 L122 838 L125 838 L149 825 L147 821 L149 815 L144 810 L142 802 L169 778 L171 774 L164 774 L143 794 L124 789 L106 789 L94 782 L97 774 L92 774 L88 780 L83 778 L83 774 L52 774 L51 780 L58 787 L66 807 L72 809 L73 813 L69 821 L66 822 L58 814 L52 803 L49 802 L49 819 L52 826 L60 835 L69 838 L77 854 L48 852 L39 855 L31 863 L26 861 L27 855 L35 847 L46 842 L46 839 L39 831 L36 821 L35 803 L38 785 L25 778Z M82 846 L89 849 L87 859 L83 856Z M72 828 L77 815 L93 818 L102 823 L94 835Z M813 736 L802 744 L790 757 L789 762 L784 764 L785 773 L789 773 L790 762 L800 759 L809 748 L814 747Z M357 707 L350 702 L342 715 L318 737 L301 747 L290 750 L286 768 L295 771 L306 771 L318 767 L327 773 L345 776 L355 772 L357 763 L354 755 L359 753 L363 748 L362 736 L364 730 L363 720Z M340 697 L336 698 L329 709 L304 730 L299 737 L316 727 L337 706Z M832 698 L826 694 L814 707 L814 710 L825 706 L833 712 L834 703Z M319 681 L308 676 L292 676 L280 681 L275 688 L265 685 L250 686 L245 691 L245 700 L247 704 L258 713 L255 725 L259 733 L274 745 L281 743 L290 731 L314 712 L323 701 L323 687Z M794 624 L791 624 L794 635 L785 644 L792 667 L792 684 L788 711 L790 711 L808 691 L811 691 L812 687 L820 685 L825 690 L828 690 L832 684 L832 677 L827 671 L832 661 L831 651 L824 645 L814 645 L811 636 L807 633 L798 633Z M768 624 L764 624 L765 664 L763 673 L763 692 L768 714 L764 717 L763 734 L766 734 L772 727 L772 724 L776 722 L781 693 L780 662 L769 661Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Vasos sanguíneos" d="M663 900 L663 902 L669 904 L677 902 L677 900Z M79 844 L84 858 L87 859 L89 848Z M73 823 L73 828 L90 835 L94 835 L101 826 L100 823 L83 817 L76 817Z M28 741 L25 743 L25 749 L38 762 L40 771 L25 772 L25 776 L29 781 L38 786 L36 795 L36 820 L38 829 L45 841 L35 846 L26 857 L26 862 L32 863 L40 855 L55 851 L77 855 L70 840 L62 836 L53 827 L49 819 L50 805 L54 807 L65 822 L68 822 L71 817 L71 813 L65 805 L58 787 L51 779 L52 764 L50 758 L39 744Z M708 671 L702 672 L700 680 L705 679Z M710 669 L710 672 L719 680 L717 670Z M221 636 L219 636 L205 652 L205 659 L208 659 L223 641Z M754 585 L747 613 L750 617 L751 637 L757 657 L760 676 L762 676 L763 655 L751 612 L758 593 L758 587Z M411 580 L388 592 L390 603 L394 604 L393 610 L396 619 L399 618 L405 600 L413 589Z M427 565 L415 575 L418 586 L420 586 L421 580 L425 580 L429 577Z M373 557 L365 563 L364 569 L358 570 L339 589 L313 610 L289 626 L246 650 L205 681 L205 687 L207 687 L218 676 L244 658 L292 631 L326 607 L329 607 L329 621 L333 642 L328 654 L327 686 L321 703 L312 713 L295 725 L287 733 L281 743 L262 752 L245 769 L212 783 L196 807 L190 806 L179 810 L167 799 L167 793 L171 791 L171 789 L158 792 L160 806 L167 813 L165 817 L159 818 L154 814 L148 800 L145 799 L142 801 L142 806 L153 820 L152 823 L125 837 L122 837 L111 827 L108 827 L100 839 L113 850 L111 862 L106 863 L96 853 L93 853 L92 868 L99 878 L124 890 L139 904 L144 906 L157 906 L161 903 L162 898 L171 903 L181 903 L189 900 L190 893 L182 884 L178 874 L171 868 L151 859 L148 856 L150 849 L160 842 L179 839 L187 835 L195 827 L205 810 L213 810 L277 779 L284 771 L291 750 L304 746 L316 739 L345 712 L353 696 L359 668 L363 660 L393 628 L391 619 L388 618 L384 625 L359 648 L351 662 L344 695 L338 704 L334 706 L333 703 L339 692 L341 659 L346 647 L352 640 L376 627 L387 613 L385 599 L382 599 L368 619 L347 630 L342 629 L340 610 L347 590 L365 572 L365 569 L373 564Z M123 863 L127 862 L147 874 L155 881 L158 887 L154 888 L128 874 L123 868Z M178 826 L177 829 L173 831 L170 830 L171 827 L175 825Z M275 756 L276 760 L266 771 L260 773 L259 770 L272 756Z M383 534 L380 534 L375 542 L381 540Z M412 498 L409 498 L394 519 L386 526 L386 530 L391 531 L391 537 L383 541 L377 550 L377 556 L380 556 L391 543 L391 539 L395 538 L413 514 L414 505 L410 504Z M218 483 L216 483 L212 503 L209 548 L211 548 L213 513Z M733 446 L731 474 L732 533 L735 568 L738 577 L740 577 L736 513 L738 447Z M258 394 L249 401 L240 417 L229 444 L220 474 L223 472 L244 415Z M511 436 L501 436 L490 440 L467 437 L466 434 L478 422 L477 419 L474 419 L457 438 L454 438 L450 430 L467 416 L469 411 L459 414 L453 401 L444 395 L439 397 L439 402 L448 411 L452 422 L445 426 L437 416 L434 405 L429 401 L427 403 L427 412 L439 428 L439 431 L413 445 L410 445 L405 437 L406 416 L401 407 L397 405 L391 406 L381 415 L353 418 L342 414 L329 396 L324 392 L320 392 L315 396 L313 407 L304 413 L303 416 L298 416 L290 413 L275 395 L266 396 L261 403 L258 413 L257 435 L263 457 L273 471 L281 474 L301 475 L336 462 L355 458 L375 460 L377 464 L351 482 L318 512 L311 516 L311 519 L263 575 L243 603 L243 606 L248 607 L292 548 L344 495 L384 466 L441 435 L446 438 L449 447 L438 461 L427 481 L424 482 L421 480 L416 490 L419 491 L417 504 L420 503 L427 492 L430 492 L437 498 L444 518 L442 536 L431 558 L433 573 L437 573 L450 566 L462 555 L467 542 L466 523 L456 494 L469 466 L475 460 L490 460 L498 455 L519 456 L519 451 L511 448 L494 448 L486 453 L473 452 L467 454 L465 443 L494 444 L502 440 L511 439Z M453 516 L457 536 L453 547 L448 550 L447 547 L451 533 L450 517Z M444 470 L445 473 L439 486 L434 486 L433 481 L440 470Z M459 461 L459 467 L455 470 L455 462Z M263 413 L266 405 L272 401 L285 416 L296 420 L310 420 L320 413 L321 408 L325 406 L329 412 L329 416 L311 425 L310 431 L312 432 L324 429 L336 422 L346 426 L360 426 L385 423 L393 417 L396 417 L395 439 L400 447 L400 451 L389 457 L366 452 L346 453 L324 459 L301 469 L286 469 L276 464 L270 457 L263 430 L271 430 L282 437 L308 434 L308 430 L295 433 L282 432 L275 425 L266 423 L263 420Z M765 379 L768 430 L772 445 L774 445 L773 404 L776 405 L779 414 L779 492 L776 493 L775 489 L773 489 L772 495 L766 493 L766 501 L770 501 L771 505 L767 530 L766 557 L761 579 L763 579 L765 574 L768 575 L769 636 L776 656 L781 664 L782 680 L791 680 L791 661 L780 629 L776 557 L778 525 L787 493 L786 417 L781 397 L773 380Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Tallo del pelo" d="M814 271 L814 346 L816 346 L816 271Z M698 208 L693 211 L690 217 L691 346 L711 346 L711 217 L709 209Z M741 108 L706 112 L676 122 L643 141 L608 173 L575 217 L554 258 L536 308 L535 321 L539 325 L546 325 L551 320 L561 289 L581 243 L595 220 L596 215 L626 174 L654 147 L682 128 L701 119 L724 112 L741 110Z M512 93 L471 112 L423 140 L385 167 L336 209 L314 231 L275 280 L247 322 L235 346 L261 345 L283 306 L318 257 L378 191 L442 138 L478 114 L512 95Z M750 24 L711 29 L666 42 L625 61 L584 89 L548 123 L520 158 L486 215 L475 241 L476 248 L481 252 L496 251 L520 196 L545 156 L572 122 L610 86 L638 66 L669 49 L709 34 L750 26Z M467 6 L437 13 L395 31 L359 53 L318 88 L292 120 L282 136 L282 141 L278 143 L252 200 L249 203 L236 238 L237 243 L246 246 L266 247 L280 242 L286 234 L285 231 L278 231 L271 243 L268 241 L264 243 L261 242 L273 197 L298 142 L319 109 L343 80 L374 52 L401 34 L429 20 L467 8Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Raíz del pelo" d="M352 700 L352 704 L359 713 L361 720 L365 721 L365 716 L356 701Z M341 695 L335 696 L328 709 L331 711 L335 709 L332 704 L340 698Z M613 691 L610 690 L607 696 L598 702 L591 701 L583 695 L579 695 L565 721 L569 721 L581 701 L591 705 L601 705 L610 699Z M324 682 L310 674 L290 674 L280 678 L274 684 L252 683 L247 685 L242 691 L242 700 L245 706 L254 714 L253 721 L256 721 L261 712 L255 709 L246 699 L246 693 L250 688 L254 686 L265 686 L276 690 L283 681 L289 678 L307 677 L315 680 L321 686 L321 696 L326 697Z M756 668 L756 687 L758 687 L759 673 L758 668Z M769 660 L769 663 L781 662 L780 659Z M794 633 L784 640 L784 647 L795 637Z M539 636 L544 638 L549 637 L558 630 L558 627 L544 625 L539 630Z M549 628 L550 631 L544 634 L543 631Z M392 609 L393 615 L389 616 L392 625 L394 625 L394 621 L397 620 L394 609Z M413 575 L410 581 L413 589 L415 589 L415 585 L418 584 L415 575Z M431 559 L426 563 L428 574 L430 574 L430 570 L433 569Z M566 368 L569 378 L564 394 L562 413 L565 423 L566 454 L575 481 L576 501 L573 512 L557 543 L552 558 L551 573 L558 594 L569 608 L576 611 L585 609 L593 610 L606 618 L610 623 L613 634 L621 645 L620 658 L609 672 L610 685 L613 686 L613 673 L623 661 L625 653 L623 640 L617 632 L613 620 L609 615 L598 608 L592 606 L577 607 L570 604 L559 588 L555 575 L556 559 L564 538 L575 518 L580 500 L578 476 L568 448 L569 426 L566 416 L566 403 L572 382 L572 372 L569 368Z M560 365 L554 366 L550 370 L542 405 L547 448 L546 456 L551 474 L554 478 L556 499 L540 531 L532 557 L531 575 L537 600 L529 604 L522 611 L515 630 L516 642 L523 657 L515 671 L513 696 L516 704 L526 713 L529 721 L533 721 L529 710 L521 704 L516 693 L518 674 L528 657 L519 639 L519 627 L525 614 L535 605 L542 603 L535 579 L536 556 L542 536 L558 505 L560 497 L558 481 L550 458 L549 429 L546 417 L546 402 L550 383 L554 372 L558 369 L562 369Z M814 345 L814 631 L799 630 L798 634 L808 635 L812 641 L812 647 L825 647 L831 654 L831 660 L824 668 L824 671 L828 673 L831 678 L831 683 L824 692 L833 703 L831 714 L834 715 L836 711 L836 701 L831 693 L834 686 L834 676 L830 670 L834 662 L834 652 L828 645 L819 643 L816 637 L816 345Z M711 345 L691 345 L693 556 L689 588 L677 624 L671 650 L671 668 L674 679 L682 692 L693 700 L698 698 L696 689 L698 680 L705 671 L708 671 L710 666 L714 666 L718 669 L721 675 L722 691 L727 691 L739 672 L744 651 L743 627 L727 588 L720 544 L714 453Z M260 345 L234 345 L213 388 L192 436 L173 488 L172 497 L183 505 L193 506 L199 503 L227 417Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Folículo piloso" d="M203 703 L201 703 L200 719 L192 748 L182 764 L162 786 L174 786 L179 783 L191 771 L197 760 L202 737Z M291 705 L287 705 L286 700 L283 699 L282 704 L276 707 L274 712 L290 709Z M293 693 L293 679 L283 680 L278 684 L284 691Z M201 679 L201 699 L203 699 L203 679Z M158 488 L155 494 L153 506 L145 527 L148 528 L150 537 L141 539 L147 549 L145 558 L146 572 L143 577 L141 591 L134 603 L129 629 L132 629 L133 632 L126 641 L123 652 L121 670 L124 670 L125 673 L119 678 L115 702 L103 701 L102 698 L106 697 L109 691 L101 692 L100 699 L94 706 L89 725 L90 732 L88 739 L98 764 L101 764 L107 758 L110 731 L112 729 L118 731 L114 739 L114 753 L123 752 L142 744 L145 745 L144 748 L134 753 L113 760 L102 770 L103 775 L120 786 L152 786 L173 766 L183 753 L188 740 L188 731 L173 694 L173 687 L177 689 L190 721 L193 721 L196 699 L193 687 L188 689 L187 694 L182 692 L181 667 L175 654 L175 637 L179 637 L180 650 L182 650 L183 609 L190 605 L185 594 L191 590 L195 577 L205 571 L207 563 L208 531 L205 531 L205 534 L201 535 L195 527 L209 517 L211 505 L202 500 L191 506 L185 505 L173 496 L171 490Z M121 729 L125 726 L128 727 L127 732 L122 732Z M220 467 L209 467 L209 474 L205 479 L203 488 L214 490Z M167 467 L164 477 L177 481 L181 467Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Músculo erector del pelo" d="M481 461 L444 439 L300 543 L268 575 L268 647 L206 648 L211 673 L248 686 L254 684 L334 618 L472 473Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Glándula sudorípara ecrina" d="M626 712 L624 712 L621 736 L626 736Z M586 417 L589 423 L581 423 L581 425 L589 430 L588 436 L591 435 L594 428 L597 428 L602 433 L602 437 L598 439 L598 441 L607 441 L608 453 L602 483 L601 514 L605 536 L624 595 L626 595 L626 581 L605 515 L605 492 L612 457 L611 437 L620 422 L626 419 L626 414 L617 419 L610 431 L604 430 L596 422Z M554 375 L551 377 L546 398 L545 416 L548 426 L549 458 L558 484 L559 498 L542 533 L537 549 L534 571 L535 584 L532 585 L514 571 L514 575 L530 589 L537 590 L541 598 L540 603 L534 604 L524 613 L519 623 L518 639 L527 657 L518 671 L515 692 L518 702 L523 708 L528 710 L535 725 L544 730 L559 727 L567 719 L580 697 L591 702 L601 702 L605 700 L610 693 L610 672 L622 657 L626 657 L626 639 L618 622 L608 613 L589 602 L568 595 L560 595 L553 580 L551 568 L554 554 L572 517 L577 497 L576 482 L566 451 L566 429 L563 415 L563 404 L568 380 L560 380Z M540 635 L540 630 L547 625 L558 626 L558 629 L549 636 L543 637Z M571 613 L578 618 L584 629 L583 636 L577 641 L570 640 L561 632 L562 629 L570 629 L572 625Z M564 601 L567 600 L581 604 L584 608 L580 610 L568 608Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Plexo vascular cutáneo" d="M823 686 L816 685 L789 709 L791 679 L782 679 L777 719 L766 733 L763 732 L764 701 L762 686 L758 686 L754 726 L754 740 L756 744 L740 758 L734 767 L731 766 L731 755 L727 756 L726 777 L719 787 L716 788 L704 764 L706 756 L717 745 L717 730 L708 700 L711 686 L715 688 L726 727 L728 748 L731 748 L731 731 L722 701 L720 680 L705 681 L704 679 L700 679 L699 685 L703 697 L704 714 L711 738 L697 756 L697 769 L708 787 L708 793 L702 806 L688 821 L688 825 L680 827 L657 847 L642 864 L641 872 L643 878 L647 882 L657 883 L655 892 L659 894 L662 901 L679 900 L679 896 L687 891 L696 878 L698 871 L703 868 L706 861 L727 834 L729 827 L735 824 L770 781 L772 776 L779 771 L809 738 L830 721 L830 709 L820 705 L826 696 L826 691Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="se-tacto" data-name="Glándulas sebáceas" d="M221 557 L218 562 L212 562 L210 564 L208 574 L199 576 L195 586 L192 589 L188 589 L186 594 L193 600 L193 603 L190 604 L187 602 L186 609 L191 612 L198 623 L204 624 L216 620 L219 630 L225 637 L239 640 L240 638 L244 638 L249 625 L246 610 L240 603 L237 603 L236 600 L245 597 L251 590 L253 579 L250 575 L252 574 L253 564 L251 561 L245 560 L244 557Z M220 600 L226 598 L233 599 L234 602 L221 603Z M131 514 L127 514 L123 522 L112 522 L106 525 L91 524 L84 531 L72 529 L66 533 L59 533 L54 538 L54 544 L52 546 L54 557 L60 563 L72 565 L81 583 L86 585 L86 598 L90 605 L88 608 L88 621 L91 621 L92 607 L109 609 L123 601 L125 588 L134 585 L138 580 L138 570 L142 567 L142 552 L149 551 L149 548 L145 542 L137 543 L136 540 L142 536 L151 536 L148 529 L139 531 L128 525 L127 522Z M111 563 L111 567 L106 570 L105 573 L93 575 L93 578 L88 582 L85 581 L78 568 L80 564Z M126 555 L123 559 L117 560 L114 563 L111 562 L112 559 L120 555Z M132 544 L133 547 L127 550 L126 546Z M73 514 L69 514 L67 526 L71 525Z M755 361 L744 361 L737 365 L734 370 L731 388 L720 396 L720 400 L731 398 L732 401 L734 401 L736 394 L740 394 L741 401 L736 408 L722 404 L722 407 L730 412 L724 426 L725 435 L728 440 L736 445 L740 445 L743 441 L742 430 L750 426 L751 415 L749 407 L756 401 L756 393 L752 385 L758 371 L758 365Z M736 411 L744 418 L743 422 L739 420 L736 421 L739 432 L738 438 L735 438 L729 430Z M740 369 L748 366 L753 370 L752 375 L749 376 L745 372 L741 372Z" fill="transparent" fill-rule="evenodd" stroke="transparent" stroke-width="23"/><path class="organo" data-cat="se-tacto" data-name="Corpúsculo de Pacini" d="M464 664 L447 671 L432 688 L426 705 L425 729 L432 752 L447 769 L464 776 L476 776 L492 770 L508 752 L514 735 L515 711 L508 688 L492 670 L481 665Z" fill="transparent" fill-rule="evenodd" stroke="transparent" stroke-width="23"/><path class="organo" data-cat="se-tacto" data-name="Receptor del folículo piloso" d="M97 772 L93 773 L80 791 L84 791 L97 776Z M59 750 L59 770 L64 773 L67 778 L66 782 L59 783 L59 785 L67 785 L67 791 L76 791 L75 783 L78 780 L79 771 L77 771 L75 778 L71 777 L71 771 L66 767 L65 760 L69 759 L72 761 L72 759 L63 756 L61 750Z M100 769 L103 769 L116 758 L145 747 L150 741 L131 750 L114 754 L114 734 L112 734 L108 758 L100 765Z M283 694 L286 704 L295 705 L301 701 L301 699 L291 702 L288 697Z M178 636 L176 636 L177 659 L195 686 L197 710 L194 720 L190 722 L176 688 L172 688 L188 726 L189 740 L180 758 L148 791 L154 791 L175 772 L187 757 L193 743 L199 718 L200 693 L198 683 L181 659Z M137 625 L129 631 L115 649 L101 682 L73 702 L62 713 L59 719 L59 730 L62 729 L66 716 L78 704 L124 674 L144 656 L144 653 L142 653 L123 671 L113 677 L109 676 L119 650 L137 628Z M88 608 L89 646 L97 669 L100 670 L100 659 L108 614 L105 614 L99 653 L96 654 L91 635 L91 609Z M73 566 L81 583 L84 584 L85 580 L76 566Z" fill="transparent" fill-rule="evenodd" stroke="transparent" stroke-width="23"/><path class="organo" data-cat="se-tacto" data-name="Poro del conducto sudoríparo" d="M547 361 L547 393 L579 393 L579 361Z" fill="transparent" fill-rule="evenodd" stroke="transparent" stroke-width="23"/></g></g><g id="nombres"><polyline class="leader" points="661.7,324.0 789.7,334.0"/><circle class="leader-dot" cx="789.7" cy="334.0" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Epidermis" x="653.7" y="334.0" text-anchor="end">Epidermis</text><polyline class="leader" points="661.7,493.9 844.1,509.4"/><circle class="leader-dot" cx="844.1" cy="509.4" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Glándulas sebáceas" x="653.7" y="503.9" text-anchor="end">Glándulas sebáceas</text><polyline class="leader" points="661.7,438.8 922.3,510.1"/><circle class="leader-dot" cx="922.3" cy="510.1" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Músculo erector del pelo" x="653.7" y="448.8" text-anchor="end">Músculo erector del pelo</text><polyline class="leader" points="661.7,549.0 796.7,576.0"/><circle class="leader-dot" cx="796.7" cy="576.0" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Folículo piloso" x="653.7" y="559.0" text-anchor="end">Folículo piloso</text><polyline class="leader" points="661.7,604.1 959.7,606.0"/><circle class="leader-dot" cx="959.7" cy="606.0" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Dermis" x="653.7" y="614.1" text-anchor="end">Dermis</text><polyline class="leader" points="661.7,659.2 764.6,629.8"/><circle class="leader-dot" cx="764.6" cy="629.8" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Receptor del folículo piloso" x="653.7" y="669.2" text-anchor="end">Receptor del folículo piloso</text><polyline class="leader" points="661.7,714.3 778.8,707.3"/><circle class="leader-dot" cx="778.8" cy="707.3" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Vasos sanguíneos" x="653.7" y="724.3" text-anchor="end">Vasos sanguíneos</text><polyline class="leader" points="661.7,769.4 893.6,764.7"/><circle class="leader-dot" cx="893.6" cy="764.7" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Hipodermis" x="653.7" y="779.4" text-anchor="end">Hipodermis</text><polyline class="leader" points="1303.3,264.2 1023.2,274.2"/><circle class="leader-dot" cx="1023.2" cy="274.2" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Tallo del pelo" x="1311.3" y="274.2" text-anchor="start">Tallo del pelo</text><polyline class="leader" points="1303.3,376.4 1070.6,386.4"/><circle class="leader-dot" cx="1070.6" cy="386.4" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Poro del conducto sudoríparo" x="1311.3" y="386.4" text-anchor="start">Poro del conducto sudoríparo</text><polyline class="leader" points="1303.3,478.7 1163.3,490.4"/><circle class="leader-dot" cx="1163.3" cy="490.4" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Raíz del pelo" x="1311.3" y="488.7" text-anchor="start">Raíz del pelo</text><polyline class="leader" points="1303.3,533.8 1072.9,544.9"/><circle class="leader-dot" cx="1072.9" cy="544.9" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Glándula sudorípara ecrina" x="1311.3" y="543.8" text-anchor="start">Glándula sudorípara ecrina</text><polyline class="leader" points="1303.3,604.1 1007.3,619.6"/><circle class="leader-dot" cx="1007.3" cy="619.6" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Corpúsculo de Pacini" x="1311.3" y="614.1" text-anchor="start">Corpúsculo de Pacini</text><polyline class="leader" points="1303.3,659.2 1186.2,665.2"/><circle class="leader-dot" cx="1186.2" cy="665.2" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Plexo vascular cutáneo" x="1311.3" y="669.2" text-anchor="start">Plexo vascular cutáneo</text><polyline class="leader" points="1303.3,714.3 1088.2,723.0"/><circle class="leader-dot" cx="1088.2" cy="723.0" r="4.5"/><text class="olabel" data-cat="se-tacto" data-name="Tejido adiposo" x="1311.3" y="724.3" text-anchor="start">Tejido adiposo</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">BIOLOGÍA</span>
+      <span class="tag license">CC BY — Lámina de OpenStax o Blausen</span>
+      <span class="tag">Nivel: ESO</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>La <strong>piel</strong> es el órgano del tacto. Sus receptores detectan contacto, presión, temperatura y dolor. Además protege el cuerpo, lo aísla y regula la temperatura. Esta lámina muestra un corte de la piel con <strong>15 estructuras</strong> señaladas en español.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Tres capas</strong>: epidermis (la más externa), dermis e hipodermis (con tejido adiposo).</li>
+        <li><strong>Los receptores</strong>, como el corpúsculo de Pacini o los del folículo piloso, detectan presión y contacto.</li>
+        <li><strong>Los anejos</strong> de la piel son el pelo, las glándulas sebáceas y las sudoríparas.</li>
+        <li><strong>Es una lámina ilustrada</strong>: simplifica la anatomía real y no está a escala.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba las capas y las estructuras de la piel.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar las 15 estructuras.</li>
+        <li>Comparar la sensibilidad de las yemas de los dedos y de la espalda.</li>
+        <li>Relacionar con el <a href="sistema-nervioso.html" style="color:#8a5a22">sistema nervioso</a>.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>La lámina es una obra de otros autores con licencia Creative Commons Attribution (CC BY), que Atlas Abierto ha adaptado: se han quitado los rótulos originales en inglés, se ha recortado, y se han añadido los nombres en español, las zonas pulsables para el juego y las fichas.</p><ul><li><strong>Tacto</strong>: «501 Structure of the skin», © OpenStax College, <a href="https://creativecommons.org/licenses/by/3.0/deed.es" style="color:#8a5a22">CC BY 3.0</a>, vía Wikimedia Commons.</li></ul><p>Los textos de las fichas son de Atlas Abierto. Puedes reutilizar la lámina citando a sus autores originales y la licencia.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">CUERPO HUMANO: TACTO</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">15 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">OpenStax o Blausen Medical, adaptada</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 3.0 / 4.0 — citar la fuente original</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Corpúsculo de Pacini": {"grupo": "Tacto: la piel", "img": "ficha/sen-corpusculo-de-pacini.webp", "txt": "Receptor grande y ovalado, con capas como una cebolla, situado en la parte profunda de la dermis y en la hipodermis. Detecta la presión fuerte y las vibraciones.", "dato": "Es el que nota la vibración de un móvil sobre la mesa."}, "Glándula sudorípara ecrina": {"grupo": "Tacto: la piel", "img": "ficha/sen-glandula-sudoripara-ecrina.webp", "txt": "Tubo enrollado en la dermis que fabrica sudor y lo saca al exterior por un poro. Al evaporarse, el sudor refresca el cuerpo.", "dato": "Tenemos millones de glándulas sudoríparas repartidas por la piel."}, "Poro del conducto sudoríparo": {"grupo": "Tacto: la piel", "img": "ficha/sen-poro-del-conducto-sudoriparo.webp", "txt": "Abertura diminuta en la superficie de la piel por la que sale el sudor al exterior.", "dato": "Con una lupa se ven como puntitos en las yemas de los dedos."}, "Glándulas sebáceas": {"grupo": "Tacto: la piel", "img": "ficha/sen-glandulas-sebaceas.webp", "txt": "Producen sebo, una grasa que vierten en el folículo del pelo. Lubrica y protege el pelo y la piel.", "dato": "Cuando se obstruyen, aparecen los granos del acné."}, "Músculo erector del pelo": {"grupo": "Tacto: la piel", "img": "ficha/sen-musculo-erector-del-pelo.webp", "txt": "Músculo diminuto que une el folículo del pelo con la parte alta de la dermis. Al contraerse, por frío o miedo, endereza el pelo y la piel se abulta.", "dato": "Es el responsable de la «piel de gallina»."}, "Tejido adiposo": {"grupo": "Tacto: la piel", "img": "ficha/sen-tejido-adiposo.webp", "txt": "Tejido formado por células llenas de grasa, que forma la hipodermis. Aísla del frío, amortigua los golpes y almacena energía.", "dato": "La grasa es un buen aislante térmico."}, "Plexo vascular cutáneo": {"grupo": "Tacto: la piel", "img": "ficha/sen-plexo-vascular-cutaneo.webp", "txt": "Red de arterias y venas más profunda, entre la dermis y la hipodermis, de la que salen los vasos que riegan la piel.", "dato": "Ayuda a regular la temperatura: con calor lleva más sangre a la superficie."}, "Receptor del folículo piloso": {"grupo": "Tacto: la piel", "img": "ficha/sen-receptor-del-foliculo-piloso.webp", "txt": "Terminaciones nerviosas que rodean el folículo y detectan el movimiento del pelo. Así notamos un roce suave aunque no toquemos la piel.", "dato": "Por eso notamos que algo se acerca cuando roza los pelos."}, "Tallo del pelo": {"grupo": "Tacto: la piel", "img": "ficha/sen-tallo-del-pelo.webp", "txt": "Parte visible del pelo, fuera de la piel. Está formada por células muertas llenas de queratina.", "dato": "Crece algo más de un centímetro al mes."}, "Raíz del pelo": {"grupo": "Tacto: la piel", "img": "ficha/sen-raiz-del-pelo.webp", "txt": "Parte del pelo hundida en la piel, dentro del folículo. En su base, el bulbo piloso, las células se dividen y hacen crecer el pelo.", "dato": "El pelo no duele al cortarlo porque el tallo no tiene nervios."}, "Folículo piloso": {"grupo": "Tacto: la piel", "img": "ficha/sen-foliculo-piloso.webp", "txt": "Estructura en forma de tubo, hundida en la dermis, que rodea la raíz del pelo y de la que este crece. A él se asocian las glándulas sebáceas y el músculo erector del pelo.", "dato": "En las palmas de las manos y las plantas de los pies no hay folículos."}, "Vasos sanguíneos": {"grupo": "Tacto: la piel", "img": "ficha/sen-vasos-sanguineos.webp", "txt": "Arterias (rojas) y venas (azules) que llevan la sangre a la piel. Aportan alimento y oxígeno y ayudan a regular la temperatura del cuerpo.", "dato": "Con calor se dilatan y la piel se enrojece; con frío se contraen."}, "Epidermis": {"grupo": "Tacto: la piel", "img": "ficha/sen-epidermis.webp", "txt": "Capa externa y fina de la piel. Sus células mueren y se desprenden continuamente y se renuevan desde abajo. Protege de los golpes, los microbios y la pérdida de agua.", "dato": "Se renueva por completo más o menos cada mes."}, "Dermis": {"grupo": "Tacto: la piel", "img": "ficha/sen-dermis.webp", "txt": "Capa intermedia, gruesa y elástica. Contiene vasos sanguíneos, nervios, receptores del tacto, glándulas y las raíces de los pelos.", "dato": "El cuero de los animales es su dermis."}, "Hipodermis": {"grupo": "Tacto: la piel", "img": "ficha/sen-hipodermis.webp", "txt": "Capa más profunda, formada sobre todo por grasa. Aísla del frío, amortigua los golpes y almacena energía.", "dato": "Su grosor varía mucho según la zona del cuerpo."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
