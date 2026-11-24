@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El río, de la montaña al mar — Curso alto, medio y bajo · Atlas Abierto</title>
+<meta name="description" content="El río para ESO: nacimiento, curso alto, valle en V, afluente, curso medio, meandro, curso bajo, llanura de inundación, delta y mar, en una vista en perspectiva. Con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-rio.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="El río, de la montaña al mar — Curso alto, medio y bajo · Atlas Abierto">
+<meta property="og:description" content="El río para ESO: nacimiento, curso alto, valle en V, afluente, curso medio, meandro, curso bajo, llanura de inundación, delta y mar, en una vista en perspectiva. Con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-rio.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:2520/1393;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"El río, de la montaña al mar — Curso alto, medio y bajo","description":"El río para ESO: nacimiento, curso alto, valle en V, afluente, curso medio, meandro, curso bajo, llanura de inundación, delta y mar, en una vista en perspectiva. Con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-rio.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"El río, de la montaña al mar — Curso alto, medio y bajo","item":"https://atlasabierto.org/geologia-rio.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / El río</div>
+    <h1>El río</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2520 1393" width="2520" height="1393" role="img" aria-label="Lámina: el río, de la montaña al mar"><rect width="2520" height="1393" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="2480" height="1353" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1260" y="90" text-anchor="middle">El río, de la montaña al mar</text><image href="geologia/rio.webp" x="500" y="150" width="1500" height="1123"/><text class="sub" x="1260" y="1353" text-anchor="middle">Vista en perspectiva de un río ideal: el relieve y la anchura del cauce están exagerados.</text></g><g id="hitzones"><path class="organo" data-cat="ti-rio" data-name="Mar" d="M1531 1155 L1531 1159 L1540 1164 L1541 1168 L1550 1169 L1550 1167 L1546 1163 L1538 1160 L1533 1155Z M1405 1123 L1407 1141 L1405 1147 L1424 1144 L1427 1141 L1435 1138 L1435 1136 L1430 1133 L1423 1132 L1420 1129 L1420 1126 L1416 1123Z M1450 1105 L1450 1109 L1452 1109 L1453 1113 L1455 1113 L1457 1116 L1461 1115 L1462 1117 L1469 1117 L1475 1120 L1476 1123 L1479 1123 L1480 1126 L1483 1127 L1479 1135 L1484 1135 L1485 1137 L1490 1138 L1491 1141 L1494 1142 L1495 1146 L1500 1147 L1502 1150 L1507 1152 L1512 1151 L1513 1153 L1520 1153 L1523 1155 L1527 1154 L1524 1148 L1517 1143 L1516 1139 L1513 1138 L1513 1127 L1497 1126 L1485 1121 L1474 1109 L1469 1109 L1468 1107 L1462 1105Z M500 964 L500 1272 L1999 1272 L1999 969 L1973 969 L1972 971 L1804 973 L1784 971 L1685 971 L1632 973 L1602 976 L1559 976 L1524 979 L1447 980 L1447 982 L1451 983 L1457 988 L1469 988 L1487 994 L1502 996 L1529 995 L1540 998 L1541 1000 L1545 1000 L1547 1003 L1551 1003 L1557 1008 L1562 1009 L1564 1012 L1568 1012 L1569 1015 L1574 1015 L1575 1018 L1590 1026 L1591 1029 L1593 1029 L1604 1038 L1627 1047 L1628 1050 L1633 1051 L1635 1054 L1637 1054 L1640 1058 L1640 1062 L1646 1075 L1648 1075 L1649 1079 L1651 1079 L1653 1082 L1658 1083 L1663 1087 L1677 1090 L1681 1093 L1686 1093 L1687 1095 L1700 1097 L1701 1099 L1709 1099 L1710 1101 L1719 1103 L1720 1105 L1725 1105 L1733 1113 L1736 1112 L1737 1114 L1743 1115 L1745 1118 L1750 1119 L1754 1123 L1757 1122 L1758 1124 L1766 1128 L1768 1133 L1772 1135 L1772 1138 L1776 1138 L1777 1141 L1781 1142 L1782 1149 L1784 1149 L1785 1147 L1787 1149 L1788 1156 L1792 1154 L1793 1160 L1796 1159 L1799 1162 L1800 1167 L1798 1172 L1796 1173 L1795 1179 L1802 1191 L1804 1200 L1806 1200 L1807 1198 L1811 1204 L1811 1211 L1813 1211 L1815 1214 L1810 1219 L1796 1223 L1795 1225 L1789 1226 L1788 1228 L1784 1229 L1783 1233 L1779 1235 L1778 1238 L1776 1238 L1766 1246 L1762 1246 L1759 1249 L1749 1250 L1748 1252 L1739 1254 L1738 1256 L1727 1257 L1726 1259 L1711 1260 L1710 1262 L1691 1263 L1690 1265 L1649 1265 L1648 1261 L1654 1252 L1654 1238 L1659 1232 L1671 1225 L1675 1220 L1675 1217 L1666 1209 L1663 1202 L1661 1202 L1659 1199 L1654 1197 L1643 1188 L1635 1187 L1634 1185 L1625 1185 L1624 1187 L1610 1188 L1609 1190 L1605 1191 L1604 1194 L1592 1194 L1584 1188 L1581 1188 L1580 1190 L1562 1190 L1561 1188 L1553 1188 L1549 1185 L1543 1184 L1524 1185 L1523 1187 L1519 1188 L1516 1196 L1507 1199 L1501 1204 L1494 1204 L1490 1201 L1478 1201 L1463 1210 L1463 1213 L1465 1213 L1466 1216 L1469 1215 L1473 1219 L1486 1220 L1492 1219 L1501 1210 L1511 1210 L1512 1212 L1523 1213 L1524 1215 L1530 1216 L1531 1218 L1534 1217 L1538 1220 L1544 1220 L1543 1216 L1541 1216 L1531 1207 L1533 1204 L1542 1201 L1551 1201 L1559 1204 L1564 1204 L1570 1210 L1565 1213 L1562 1219 L1556 1220 L1556 1228 L1558 1228 L1559 1225 L1560 1231 L1563 1230 L1565 1232 L1565 1234 L1562 1235 L1560 1241 L1525 1237 L1524 1235 L1474 1238 L1473 1240 L1463 1241 L1462 1243 L1454 1244 L1453 1246 L1443 1247 L1442 1249 L1432 1250 L1431 1252 L1423 1252 L1422 1254 L1417 1254 L1416 1256 L1407 1257 L1376 1256 L1375 1254 L1355 1252 L1354 1250 L1322 1250 L1316 1249 L1315 1247 L1304 1246 L1303 1244 L1292 1243 L1290 1241 L1276 1241 L1275 1243 L1258 1244 L1257 1246 L1249 1246 L1245 1249 L1231 1252 L1230 1254 L1222 1254 L1221 1256 L1109 1252 L1108 1250 L1094 1249 L1093 1247 L1083 1243 L1082 1241 L1072 1240 L1071 1238 L1052 1234 L1051 1232 L1032 1223 L1019 1222 L1018 1220 L1013 1220 L1010 1217 L1005 1217 L1002 1214 L986 1211 L983 1208 L978 1208 L973 1204 L968 1204 L967 1202 L937 1201 L936 1199 L926 1198 L922 1196 L919 1191 L916 1190 L913 1183 L912 1175 L910 1174 L911 1169 L908 1162 L908 1157 L914 1147 L925 1141 L934 1132 L934 1125 L921 1117 L926 1111 L934 1108 L962 1106 L962 1103 L960 1101 L948 1097 L943 1093 L943 1091 L949 1084 L952 1078 L952 1074 L963 1061 L1006 1060 L1011 1064 L1013 1069 L1028 1063 L1038 1063 L1043 1061 L1108 1060 L1110 1058 L1111 1052 L1114 1050 L1114 1046 L1117 1044 L1123 1034 L1126 1033 L1126 1031 L1129 1029 L1129 1024 L1132 1022 L1135 1016 L1138 1015 L1138 1006 L1136 1006 L1130 998 L1116 994 L1109 990 L1102 989 L1098 986 L1091 985 L1090 979 L1079 973 L953 975 L900 972 L794 971 L793 969 L739 968 L724 966 L652 963 L565 965Z M891 1089 L893 1085 L900 1083 L906 1086 L911 1086 L908 1091 L898 1091 L897 1093 L894 1093Z M1051 1010 L1057 1006 L1064 1011 L1061 1013 L1053 1013Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Delta" d="M893 1086 L894 1092 L897 1092 L898 1090 L908 1090 L908 1088 L904 1085Z M1053 1009 L1053 1012 L1061 1012 L1061 1010 L1057 1008Z M910 1154 L910 1164 L912 1169 L911 1174 L913 1175 L914 1183 L917 1190 L919 1190 L922 1195 L926 1197 L945 1201 L967 1201 L968 1203 L973 1203 L978 1207 L983 1207 L984 1209 L991 1210 L992 1212 L1002 1213 L1005 1216 L1010 1216 L1011 1218 L1018 1219 L1019 1221 L1032 1222 L1036 1225 L1040 1225 L1051 1231 L1052 1233 L1071 1237 L1072 1239 L1082 1240 L1083 1242 L1088 1243 L1094 1248 L1108 1249 L1109 1251 L1135 1251 L1136 1253 L1192 1253 L1193 1255 L1221 1255 L1222 1253 L1230 1253 L1231 1251 L1236 1251 L1237 1249 L1245 1248 L1249 1245 L1257 1245 L1258 1243 L1275 1242 L1276 1240 L1290 1240 L1292 1242 L1303 1243 L1304 1245 L1315 1246 L1316 1248 L1322 1249 L1354 1249 L1355 1251 L1366 1251 L1367 1253 L1375 1253 L1376 1255 L1407 1256 L1416 1255 L1417 1253 L1422 1253 L1423 1251 L1431 1251 L1432 1249 L1442 1248 L1443 1246 L1453 1245 L1454 1243 L1459 1243 L1463 1240 L1473 1239 L1474 1237 L1524 1234 L1525 1236 L1559 1240 L1564 1232 L1562 1232 L1561 1235 L1559 1234 L1559 1229 L1555 1228 L1555 1220 L1562 1218 L1564 1213 L1567 1212 L1567 1207 L1564 1205 L1559 1205 L1551 1202 L1542 1202 L1533 1205 L1534 1209 L1544 1216 L1546 1220 L1545 1221 L1535 1221 L1523 1215 L1508 1211 L1499 1212 L1492 1220 L1478 1221 L1470 1220 L1462 1213 L1463 1209 L1478 1200 L1490 1200 L1494 1203 L1501 1203 L1507 1198 L1516 1195 L1516 1191 L1519 1187 L1529 1183 L1549 1184 L1550 1186 L1561 1187 L1562 1189 L1580 1189 L1581 1187 L1584 1187 L1592 1193 L1604 1193 L1604 1191 L1609 1189 L1610 1187 L1624 1186 L1625 1184 L1634 1184 L1635 1186 L1641 1186 L1648 1190 L1654 1196 L1663 1201 L1667 1209 L1676 1217 L1676 1220 L1673 1224 L1659 1233 L1655 1238 L1655 1252 L1650 1259 L1649 1264 L1690 1264 L1691 1262 L1710 1261 L1711 1259 L1726 1258 L1727 1256 L1738 1255 L1739 1253 L1743 1253 L1744 1251 L1748 1251 L1749 1249 L1759 1248 L1762 1245 L1766 1245 L1767 1243 L1775 1239 L1784 1228 L1812 1216 L1812 1214 L1810 1213 L1810 1204 L1808 1201 L1803 1201 L1801 1191 L1794 1179 L1796 1170 L1799 1167 L1798 1162 L1795 1161 L1794 1163 L1792 1157 L1787 1156 L1786 1150 L1781 1150 L1780 1143 L1777 1144 L1776 1139 L1774 1139 L1773 1141 L1771 1139 L1771 1136 L1767 1135 L1765 1129 L1762 1130 L1761 1127 L1757 1126 L1757 1124 L1745 1120 L1740 1116 L1734 1115 L1732 1112 L1730 1112 L1726 1108 L1723 1108 L1722 1106 L1708 1102 L1706 1100 L1701 1100 L1674 1091 L1669 1091 L1665 1088 L1653 1084 L1648 1080 L1648 1078 L1645 1077 L1638 1056 L1635 1057 L1634 1053 L1631 1053 L1627 1049 L1622 1048 L1621 1046 L1616 1046 L1615 1043 L1607 1041 L1603 1037 L1598 1036 L1594 1033 L1594 1031 L1591 1031 L1590 1028 L1579 1022 L1574 1017 L1561 1012 L1551 1004 L1547 1004 L1545 1001 L1529 997 L1502 997 L1487 995 L1471 990 L1457 989 L1445 983 L1444 980 L1441 979 L1441 977 L1432 972 L1432 956 L1426 953 L1277 953 L1276 955 L1274 955 L1273 967 L1265 964 L1258 958 L1249 957 L1235 961 L1235 963 L1228 968 L1225 966 L1225 955 L1223 953 L1132 953 L1124 955 L1117 959 L1110 959 L1107 962 L1103 962 L1099 965 L1088 968 L1087 970 L1082 971 L1082 973 L1091 979 L1091 984 L1098 985 L1102 988 L1109 989 L1116 993 L1130 997 L1133 1002 L1139 1006 L1139 1015 L1136 1016 L1136 1018 L1130 1024 L1130 1029 L1126 1034 L1124 1034 L1124 1036 L1115 1046 L1115 1050 L1112 1052 L1112 1056 L1108 1061 L1052 1061 L1038 1064 L1028 1064 L1015 1070 L1010 1070 L1008 1064 L1003 1061 L965 1061 L957 1068 L956 1072 L953 1074 L953 1078 L950 1084 L944 1091 L944 1093 L948 1096 L960 1100 L965 1105 L960 1108 L942 1108 L926 1112 L923 1117 L931 1121 L935 1125 L935 1132 L929 1139 L914 1148 L914 1150Z M1403 1123 L1407 1121 L1414 1121 L1421 1126 L1421 1129 L1423 1131 L1430 1132 L1435 1135 L1436 1138 L1424 1145 L1405 1148 L1404 1144 L1406 1143Z M1448 1105 L1462 1104 L1468 1106 L1469 1108 L1474 1108 L1485 1120 L1497 1125 L1513 1126 L1516 1131 L1514 1133 L1514 1138 L1518 1140 L1518 1143 L1521 1144 L1529 1153 L1533 1154 L1538 1159 L1546 1162 L1551 1167 L1556 1169 L1541 1169 L1537 1166 L1537 1164 L1531 1162 L1530 1159 L1527 1160 L1526 1157 L1522 1155 L1510 1154 L1502 1152 L1501 1150 L1498 1151 L1497 1148 L1494 1147 L1494 1145 L1490 1145 L1490 1142 L1487 1139 L1482 1138 L1478 1135 L1478 1133 L1480 1132 L1479 1127 L1477 1127 L1472 1123 L1472 1121 L1467 1118 L1459 1118 L1456 1115 L1453 1116 L1452 1113 L1449 1112Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Llanura de inundación" d="M1225 687 L1223 687 L1223 691 L1214 696 L1212 699 L1208 699 L1207 701 L1196 703 L1194 705 L1190 705 L1161 716 L1153 717 L1130 726 L1126 731 L1124 731 L1124 733 L1120 737 L1119 746 L1127 755 L1127 757 L1135 760 L1140 768 L1145 771 L1130 776 L1119 782 L1115 782 L1113 785 L1109 785 L1104 791 L1096 797 L1092 798 L1080 809 L1079 817 L1076 819 L1076 825 L1073 826 L1072 835 L1076 845 L1079 849 L1082 850 L1090 861 L1083 864 L1070 875 L1054 885 L1050 890 L1043 893 L1043 896 L1037 902 L1037 909 L1035 917 L1031 923 L1028 945 L1026 949 L1026 952 L1030 955 L1030 964 L1032 965 L1031 970 L1033 972 L1081 971 L1103 961 L1107 961 L1110 958 L1117 958 L1124 954 L1132 952 L1221 952 L1219 944 L1215 942 L1215 938 L1210 934 L1207 926 L1204 925 L1198 915 L1195 914 L1192 910 L1188 896 L1191 892 L1191 888 L1201 878 L1207 876 L1209 872 L1219 868 L1220 866 L1228 864 L1235 859 L1240 858 L1245 853 L1249 853 L1252 850 L1252 847 L1230 837 L1219 836 L1210 833 L1199 833 L1175 826 L1173 824 L1169 824 L1162 816 L1159 815 L1158 809 L1156 808 L1156 803 L1159 801 L1160 796 L1177 784 L1180 784 L1190 778 L1213 772 L1213 770 L1191 764 L1187 761 L1182 760 L1181 758 L1178 758 L1171 752 L1159 749 L1151 743 L1148 743 L1146 737 L1144 736 L1150 727 L1153 727 L1161 721 L1166 721 L1174 718 L1176 715 L1192 710 L1196 707 L1206 705 L1221 697 L1226 692Z M1200 732 L1200 736 L1221 742 L1222 745 L1228 745 L1229 747 L1237 748 L1240 751 L1249 751 L1251 754 L1264 756 L1276 767 L1276 770 L1274 771 L1272 777 L1268 779 L1260 788 L1257 788 L1249 793 L1234 797 L1224 803 L1224 805 L1252 808 L1253 810 L1274 814 L1279 817 L1284 817 L1287 820 L1292 820 L1295 823 L1309 827 L1313 831 L1325 836 L1333 846 L1334 850 L1331 851 L1331 855 L1325 863 L1294 881 L1293 883 L1279 888 L1270 896 L1268 896 L1267 904 L1269 905 L1269 910 L1271 911 L1271 919 L1274 920 L1274 943 L1276 944 L1274 945 L1274 949 L1276 949 L1277 952 L1420 951 L1429 953 L1433 956 L1433 958 L1436 959 L1434 961 L1435 965 L1433 966 L1433 972 L1435 972 L1442 978 L1468 978 L1466 966 L1462 963 L1462 959 L1459 958 L1458 950 L1453 947 L1452 942 L1447 939 L1444 932 L1441 931 L1440 926 L1435 921 L1441 909 L1444 908 L1450 896 L1455 891 L1453 881 L1455 880 L1455 878 L1452 875 L1451 869 L1448 867 L1447 859 L1444 857 L1444 853 L1441 848 L1439 848 L1438 845 L1434 844 L1422 834 L1418 833 L1417 830 L1402 821 L1379 814 L1378 812 L1370 809 L1365 809 L1360 806 L1344 803 L1332 798 L1323 797 L1322 795 L1324 794 L1325 782 L1323 780 L1322 772 L1320 771 L1320 768 L1317 767 L1306 756 L1301 755 L1300 753 L1295 752 L1291 749 L1286 749 L1282 746 L1275 746 L1254 740 L1247 740 L1245 738 L1228 733 L1229 730 L1232 730 L1233 728 L1245 723 L1247 720 L1252 718 L1264 707 L1267 702 L1270 701 L1270 691 L1267 690 L1266 685 L1263 685 L1263 687 L1265 688 L1265 696 L1261 702 L1240 715 L1233 717 L1232 719Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Valle en V" d="M1386 590 L1386 587 L1384 586 L1384 579 L1382 578 L1382 571 L1380 570 L1380 564 L1378 563 L1378 558 L1376 557 L1375 547 L1372 546 L1372 541 L1367 530 L1365 530 L1364 528 L1354 528 L1353 525 L1348 525 L1345 528 L1342 528 L1345 513 L1348 508 L1347 483 L1339 473 L1339 470 L1336 466 L1332 464 L1332 460 L1327 459 L1324 453 L1321 450 L1318 450 L1315 446 L1315 418 L1310 415 L1309 392 L1307 391 L1305 384 L1303 383 L1305 323 L1303 322 L1302 312 L1294 303 L1284 301 L1279 294 L1276 293 L1271 294 L1266 300 L1261 303 L1256 303 L1248 309 L1241 309 L1235 312 L1221 312 L1214 315 L1203 323 L1196 325 L1186 333 L1169 324 L1153 324 L1142 317 L1131 318 L1124 321 L1118 320 L1106 333 L1099 344 L1092 345 L1092 349 L1086 354 L1085 361 L1078 362 L1078 367 L1075 375 L1072 408 L1074 435 L1076 437 L1076 451 L1073 487 L1071 489 L1068 489 L1059 480 L1048 477 L1044 473 L1042 468 L1031 461 L1027 455 L1026 444 L1024 443 L1024 431 L1022 430 L1022 424 L1019 420 L1018 412 L1016 411 L1015 406 L1008 404 L1005 398 L997 391 L989 390 L987 387 L982 386 L963 388 L948 383 L944 384 L931 381 L910 381 L909 379 L904 380 L902 377 L897 375 L896 372 L893 371 L875 374 L874 372 L869 372 L851 358 L830 353 L814 347 L806 342 L802 337 L779 344 L759 342 L744 350 L726 367 L721 379 L719 380 L719 387 L716 388 L716 395 L713 397 L713 401 L709 404 L708 421 L710 431 L712 432 L714 439 L716 440 L719 453 L721 454 L724 463 L726 463 L728 467 L733 470 L734 473 L743 482 L757 485 L763 481 L770 473 L778 469 L797 473 L798 475 L805 476 L809 479 L815 476 L824 475 L831 470 L836 470 L839 473 L862 473 L877 479 L879 483 L884 487 L896 488 L901 491 L907 491 L911 489 L918 491 L919 493 L934 497 L950 509 L959 512 L972 523 L989 525 L999 530 L1004 534 L1019 554 L1027 557 L1029 560 L1032 560 L1046 569 L1045 572 L1047 589 L1049 591 L1049 609 L1051 611 L1052 618 L1067 628 L1085 635 L1108 641 L1132 653 L1140 659 L1157 665 L1162 665 L1169 668 L1187 669 L1187 667 L1181 662 L1180 658 L1175 654 L1174 644 L1146 633 L1135 627 L1132 627 L1128 624 L1117 621 L1106 615 L1103 615 L1075 592 L1077 591 L1081 593 L1087 593 L1098 596 L1102 599 L1110 600 L1115 603 L1118 602 L1121 605 L1145 614 L1149 614 L1151 617 L1168 622 L1187 632 L1192 631 L1198 622 L1198 615 L1200 614 L1200 612 L1195 604 L1195 601 L1193 600 L1192 594 L1190 593 L1191 585 L1189 584 L1188 576 L1186 575 L1186 570 L1184 569 L1181 559 L1183 552 L1185 551 L1187 542 L1189 521 L1183 492 L1183 465 L1186 461 L1187 450 L1194 444 L1200 447 L1198 463 L1196 465 L1196 491 L1198 492 L1200 508 L1202 509 L1202 541 L1200 542 L1198 555 L1199 560 L1201 561 L1203 572 L1206 576 L1206 580 L1208 581 L1209 587 L1214 593 L1214 600 L1216 601 L1220 612 L1224 615 L1222 625 L1214 635 L1211 636 L1210 640 L1206 642 L1205 647 L1203 648 L1206 654 L1212 656 L1214 659 L1224 665 L1238 670 L1265 668 L1286 662 L1309 649 L1331 629 L1351 617 L1353 614Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Nacimiento" d="M1203 443 L1198 441 L1190 441 L1184 446 L1183 457 L1180 461 L1181 474 L1199 473 L1203 455Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Curso alto" d="M1180 465 L1180 496 L1185 520 L1185 530 L1182 547 L1180 548 L1178 555 L1178 565 L1180 566 L1181 573 L1183 574 L1183 579 L1185 580 L1187 597 L1189 598 L1190 604 L1193 606 L1217 604 L1217 589 L1212 583 L1208 569 L1206 568 L1204 557 L1202 556 L1203 546 L1205 545 L1205 505 L1203 504 L1201 488 L1199 487 L1199 466 L1189 467 L1188 465Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Curso medio" d="M1192 598 L1192 608 L1195 611 L1195 618 L1189 627 L1184 631 L1181 631 L1172 641 L1172 658 L1177 662 L1178 666 L1181 669 L1190 673 L1191 675 L1209 682 L1211 685 L1219 690 L1218 701 L1227 702 L1249 709 L1258 709 L1267 703 L1268 700 L1268 684 L1266 683 L1265 679 L1259 674 L1247 668 L1228 662 L1208 649 L1209 646 L1213 644 L1214 640 L1217 639 L1226 627 L1227 611 L1223 608 L1219 597Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Afluente" d="M1071 587 L1072 597 L1074 597 L1099 618 L1102 618 L1113 624 L1124 627 L1128 630 L1131 630 L1163 645 L1167 645 L1171 648 L1180 648 L1189 638 L1192 638 L1192 629 L1172 619 L1155 614 L1153 611 L1140 608 L1136 605 L1125 602 L1122 599 L1116 599 L1114 597 L1106 596 L1102 593 L1085 590 L1079 587Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Meandro" d="M1144 726 L1144 729 L1141 732 L1141 740 L1143 741 L1144 746 L1147 746 L1155 752 L1167 755 L1169 758 L1177 761 L1180 764 L1200 770 L1200 772 L1186 775 L1186 785 L1218 797 L1220 800 L1226 802 L1235 802 L1245 797 L1258 794 L1259 792 L1264 791 L1272 782 L1274 782 L1277 778 L1277 775 L1279 774 L1279 763 L1268 753 L1255 751 L1253 748 L1244 748 L1241 745 L1233 744 L1232 742 L1226 742 L1225 739 L1212 736 L1209 733 L1236 722 L1237 720 L1242 719 L1256 711 L1256 701 L1251 701 L1235 695 L1216 694 L1202 702 L1192 704 L1188 707 L1172 712 L1170 715 L1162 718 L1157 718Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rio" data-name="Curso bajo" d="M1252 970 L1252 978 L1264 979 L1264 970Z M1173 781 L1156 793 L1156 797 L1153 799 L1153 812 L1155 813 L1156 819 L1158 819 L1165 827 L1169 827 L1171 829 L1195 836 L1206 836 L1215 839 L1226 840 L1246 849 L1241 850 L1236 855 L1231 856 L1230 858 L1205 869 L1203 873 L1197 875 L1194 879 L1192 879 L1192 881 L1188 884 L1188 888 L1185 892 L1185 904 L1187 905 L1189 914 L1195 919 L1201 929 L1204 930 L1205 935 L1212 942 L1212 946 L1216 948 L1216 951 L1222 959 L1222 970 L1232 971 L1233 969 L1238 967 L1239 964 L1246 961 L1254 961 L1261 967 L1268 970 L1277 970 L1277 959 L1280 958 L1279 940 L1277 939 L1277 916 L1274 915 L1274 907 L1272 906 L1271 900 L1283 891 L1297 886 L1298 884 L1329 866 L1334 859 L1334 855 L1337 854 L1337 846 L1334 838 L1332 838 L1329 833 L1317 828 L1315 825 L1299 820 L1296 817 L1291 817 L1288 814 L1283 814 L1278 811 L1257 807 L1256 805 L1234 802 L1233 794 L1228 793 L1226 790 L1215 787 L1205 781 L1194 778 L1193 776 L1184 776 L1176 781Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader-halo" points="2030,447 1190,459" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="2030,447 1190,459"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1190" cy="459" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Nacimiento" x="2040" y="459" text-anchor="start">Nacimiento</text><text class="sub" x="2040" y="495" text-anchor="start" data-for="Nacimiento">manantial o deshielo</text><polyline class="leader-halo" points="2030,552 1197,545" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="2030,552 1197,545"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1197" cy="545" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Curso alto" x="2040" y="564" text-anchor="start">Curso alto</text><text class="sub" x="2040" y="600" text-anchor="start" data-for="Curso alto">erosión</text><polyline class="leader-halo" points="470,418 1179,430" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="470,418 1179,430"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1179" cy="430" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Valle en V" x="460" y="430" text-anchor="end">Valle en V</text><text class="sub" x="460" y="466" text-anchor="end" data-for="Valle en V">erosión vertical</text><polyline class="leader-halo" points="2030,657 1198,663" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="2030,657 1198,663"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1198" cy="663" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Curso medio" x="2040" y="669" text-anchor="start">Curso medio</text><text class="sub" x="2040" y="705" text-anchor="start" data-for="Curso medio">transporte</text><polyline class="leader-halo" points="470,608 1119,620" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="470,608 1119,620"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1119" cy="620" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Afluente" x="460" y="620" text-anchor="end">Afluente</text><text class="sub" x="460" y="656" text-anchor="end" data-for="Afluente">aporta caudal</text><polyline class="leader-halo" points="2030,762 1206,751" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="2030,762 1206,751"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1206" cy="751" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Meandro" x="2040" y="774" text-anchor="start">Meandro</text><text class="sub" x="2040" y="810" text-anchor="start" data-for="Meandro">erosión y sedimentación</text><polyline class="leader-halo" points="2030,867 1240,865" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="2030,867 1240,865"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1240" cy="865" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Curso bajo" x="2040" y="879" text-anchor="start">Curso bajo</text><text class="sub" x="2040" y="915" text-anchor="start" data-for="Curso bajo">sedimentación</text><polyline class="leader-halo" points="470,907 1103,919" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="470,907 1103,919"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1103" cy="919" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Llanura de inundación" x="460" y="919" text-anchor="end">Llanura de inundación</text><text class="sub" x="460" y="955" text-anchor="end" data-for="Llanura de inundación">se inunda en las crecidas</text><polyline class="leader-halo" points="2030,1138 1329,1150" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="2030,1138 1329,1150"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1329" cy="1150" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Delta" x="2040" y="1150" text-anchor="start">Delta</text><text class="sub" x="2040" y="1186" text-anchor="start" data-for="Delta">sedimentos en la desembocadura</text><polyline class="leader-halo" points="470,1139 605,1151" style="fill:none;stroke:#fff;stroke-width:6;opacity:.75;stroke-linecap:round"/><polyline class="leader" points="470,1139 605,1151"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="605" cy="1151" r="7"/><text class="olabel" data-cat="ti-rio" data-name="Mar" x="460" y="1151" text-anchor="end">Mar</text><text class="sub" x="460" y="1187" text-anchor="end" data-for="Mar">desembocadura</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">GEOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>Un <strong>río</strong> es una corriente de agua continua que modela el relieve: erosiona, transporta y deposita materiales. Esta lámina recorre su trayecto de la montaña al mar, con <strong>10 partes</strong> señaladas: desde el <strong>nacimiento</strong> y el <strong>curso alto</strong> hasta el <strong>delta</strong>, pasando por el <strong>curso medio</strong>, los <strong>meandros</strong> y la <strong>llanura de inundación</strong>.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>En el curso alto</strong> la pendiente es fuerte y domina la erosión: el río se encaja y forma un valle en V.</li>
+        <li><strong>En el curso medio</strong> el río transporta los materiales y recibe agua de sus afluentes.</li>
+        <li><strong>En el curso bajo</strong> la pendiente es mínima: el río deposita sedimentos, forma meandros y, al desbordarse, inunda la llanura.</li>
+        <li><strong>En la desembocadura</strong> el río puede formar un delta si deposita más sedimentos de los que el mar se lleva.</li>
+        <li><strong>Es un río ideal</strong>: se ha dibujado en perspectiva con el relieve y la anchura del cauce exagerados para que se vean bien todas las partes.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba las partes del río y diga qué proceso domina en cada tramo (erosión, transporte o sedimentación).</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar las 10 partes.</li>
+        <li>Buscar en un mapa un río real (el Ebro, por ejemplo) e identificar su nacimiento, sus afluentes y su desembocadura.</li>
+        <li>Explicar por qué el valle es en V arriba y una llanura abajo.</li>
+        <li>Relacionar con el <a href="geologia-ciclo-rocas.html" style="color:#8a5a22">ciclo de las rocas</a>: los sedimentos que arrastra el río forman las rocas sedimentarias.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: imagen generada por ordenador a partir de un terreno sintético (no representa un río real), con las partes del río que se estudian en la ESO. Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">GEOLOGÍA: EL RELIEVE Y LOS AGENTES GEOLÓGICOS</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">10 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Nacimiento": {"grupo": "El río", "img": "ficha/geo-nacimiento.webp", "txt": "Lugar donde empieza el río. Suele ser un manantial, el agua que sale de un acuífero, o el deshielo de un glaciar o de la nieve de la montaña, o la salida de un lago. Allí el caudal es muy pequeño.", "dato": "El nacimiento de un río suele estar en zonas altas, donde llueve o nieva mucho."}, "Curso alto": {"grupo": "El río", "img": "ficha/geo-curso-alto.webp", "txt": "Primer tramo del río, en la montaña. La pendiente es fuerte, el agua baja rápida y con mucha energía, y forma torrentes, rápidos y cascadas. Predomina la erosión: el río arranca materiales y se encaja en el terreno.", "dato": "Aquí el cauce es estrecho y arrastra piedras y bloques grandes."}, "Valle en V": {"grupo": "El río", "img": "ficha/geo-valle-en-v.webp", "txt": "Forma que adquiere el valle en el curso alto. El río erosiona sobre todo hacia abajo (erosión vertical) y excava un cauce estrecho y profundo, con laderas muy inclinadas que forman una V vista de frente.", "dato": "Cuando el agua baja con mucha pendiente, profundiza más de lo que ensancha."}, "Curso medio": {"grupo": "El río", "img": "ficha/geo-curso-medio.webp", "txt": "Tramo intermedio, donde el río sale de la montaña y la pendiente disminuye. Aumentan el caudal y la anchura del cauce, y el valle se ensancha. El río transporta los materiales que arrancó aguas arriba y empieza a trazar curvas.", "dato": "Aquí se equilibran la erosión y la sedimentación: el río sobre todo transporta."}, "Afluente": {"grupo": "El río", "img": "ficha/geo-afluente.webp", "txt": "Río más pequeño que desemboca en otro mayor y le aporta su agua. Al unirse con el cauce principal aumenta el caudal. El punto donde se juntan se llama confluencia.", "dato": "Todos los afluentes de un río y el propio río forman su red fluvial, y la zona que drenan es su cuenca hidrográfica."}, "Meandro": {"grupo": "El río", "img": "ficha/geo-meandro.webp", "txt": "Curva amplia y sinuosa del cauce, típica de ríos de poca pendiente. El agua va más rápida por la orilla exterior de la curva (cóncava), que erosiona, y más lenta por la interior (convexa), donde deposita sedimentos. Por eso los meandros se desplazan con el tiempo.", "dato": "A veces un meandro se corta y deja una laguna con forma de media luna, llamada meandro abandonado."}, "Curso bajo": {"grupo": "El río", "img": "ficha/geo-curso-bajo.webp", "txt": "Último tramo del río, ya en llanura y cerca de la desembocadura. La pendiente es mínima, el cauce es ancho, el caudal es máximo y el agua va lenta. Predomina la sedimentación: el río deposita arenas, limos y arcillas.", "dato": "Aquí los meandros son más amplios y cambian de forma con facilidad."}, "Llanura de inundación": {"grupo": "El río", "img": "ficha/geo-llanura-de-inundacion.webp", "txt": "Terreno llano a ambos lados del cauce en el curso medio y bajo. Cuando el río crece, desborda su cauce y se inunda; al retirarse, deja una capa de limo muy fértil, por eso suele dedicarse a la agricultura.", "dato": "También se llama llanura aluvial o vega."}, "Delta": {"grupo": "El río", "img": "ficha/geo-delta.webp", "txt": "Terreno bajo, de forma triangular o de abanico, que se forma en la desembocadura cuando el río deposita más sedimentos de los que el mar puede retirar. El cauce se divide en varios brazos llamados distributarios.", "dato": "Su nombre viene de la letra griega Δ (delta), por su forma triangular. Ejemplos: el Nilo y el Ebro."}, "Mar": {"grupo": "El río", "img": "ficha/geo-mar.webp", "txt": "Lugar donde desemboca el río y termina su recorrido. La desembocadura puede ser un delta o un estuario, según cómo actúen las mareas y las olas sobre los sedimentos que llegan.", "dato": "El agua del río es dulce; al mezclarse con la del mar se vuelve salobre."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
