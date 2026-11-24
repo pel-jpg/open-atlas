@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El ciclo de las rocas — Rocas ígneas, sedimentarias y metamórficas · Atlas Abierto</title>
+<meta name="description" content="El ciclo de las rocas para ESO: magma, rocas ígneas intrusivas y extrusivas, sedimentos, rocas sedimentarias y metamórficas, con los procesos que las transforman. Con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-ciclo-rocas.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="El ciclo de las rocas — Rocas ígneas, sedimentarias y metamórficas · Atlas Abierto">
+<meta property="og:description" content="El ciclo de las rocas para ESO: magma, rocas ígneas intrusivas y extrusivas, sedimentos, rocas sedimentarias y metamórficas, con los procesos que las transforman. Con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-ciclo-rocas.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:1900/1240;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"El ciclo de las rocas — Rocas ígneas, sedimentarias y metamórficas","description":"El ciclo de las rocas para ESO: magma, rocas ígneas intrusivas y extrusivas, sedimentos, rocas sedimentarias y metamórficas, con los procesos que las transforman. Con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-ciclo-rocas.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"El ciclo de las rocas — Rocas ígneas, sedimentarias y metamórficas","item":"https://atlasabierto.org/geologia-ciclo-rocas.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / El ciclo de las rocas</div>
+    <h1>El ciclo de las rocas</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1240" width="1900" height="1240" role="img" aria-label="Lámina: el ciclo de las rocas"><rect width="1900" height="1240" fill="#F5EFE4"/><defs>
+<linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe3f0"/><stop offset="1" stop-color="#eef5f8"/></linearGradient>
+<linearGradient id="gWat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8dbad6"/><stop offset="1" stop-color="#4b86ae"/></linearGradient>
+<radialGradient id="gMag" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#ffd24a"/><stop offset=".55" stop-color="#f27a1a"/><stop offset="1" stop-color="#c8341a"/></radialGradient>
+<linearGradient id="gLav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb43a"/><stop offset="1" stop-color="#d9441a"/></linearGradient>
+<pattern id="pGra" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#c9a89c"/><circle cx="6" cy="7" r="3.2" fill="#f2e6df"/><circle cx="20" cy="12" r="3.6" fill="#8d6d66"/><circle cx="12" cy="23" r="3" fill="#e0c9bf"/><circle cx="25" cy="25" r="2.6" fill="#5e4b48"/><circle cx="4" cy="19" r="2" fill="#8d6d66"/></pattern>
+<pattern id="pBas" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#59494a"/><circle cx="5" cy="6" r="2" fill="#3b3031"/><circle cx="17" cy="12" r="2.2" fill="#72605f"/><circle cx="9" cy="19" r="1.6" fill="#2f2627"/><circle cx="20" cy="3" r="1.2" fill="#8a7774"/></pattern>
+<pattern id="pSed" width="28" height="28" patternUnits="userSpaceOnUse"><rect width="28" height="28" fill="#e6d3a2"/><circle cx="5" cy="6" r="1.8" fill="#c9b27a"/><circle cx="19" cy="9" r="2.4" fill="#f2e6c2"/><circle cx="11" cy="20" r="2" fill="#b79f68"/><circle cx="24" cy="22" r="1.6" fill="#d8c18a"/><ellipse cx="14" cy="4" rx="3" ry="2" fill="#a8946a"/></pattern>
+<filter id="rock" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="11" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 -.15"/></filter>
+<clipPath id="cMeta"><path d="M560.0 820.0 C573.3 766.3 606.7 807.0 640.0 808.0 C673.3 809.0 716.7 826.3 760.0 826.0 C803.3 825.7 853.3 807.0 900.0 806.0 C946.7 805.0 990.0 820.0 1040.0 820.0 C1090.0 820.0 1146.7 807.3 1200.0 806.0 C1253.3 804.7 1333.3 758.0 1360.0 812.0 C1386.7 866.0 1493.3 1077.0 1360.0 1130.0 C1226.7 1183.0 693.3 1181.7 560.0 1130.0 C426.7 1078.3 546.7 873.7 560.0 820.0 Z"/></clipPath>
+<clipPath id="cSedim"><path d="M560.0 452.0 C568.3 387.7 586.7 430.0 610.0 430.0 C633.3 430.0 665.0 445.3 700.0 452.0 C735.0 458.7 781.7 462.0 820.0 470.0 C858.3 478.0 895.0 488.3 930.0 500.0 C965.0 511.7 985.0 525.0 1030.0 540.0 C1075.0 555.0 1145.0 579.0 1200.0 590.0 C1255.0 601.0 1333.3 568.3 1360.0 606.0 C1386.7 643.7 1386.7 783.7 1360.0 816.0 C1333.3 848.3 1253.3 800.3 1200.0 800.0 C1146.7 799.7 1090.0 814.0 1040.0 814.0 C990.0 814.0 946.7 798.7 900.0 800.0 C853.3 801.3 803.3 821.0 760.0 822.0 C716.7 823.0 673.3 807.0 640.0 806.0 C606.7 805.0 573.3 875.0 560.0 816.0 C546.7 757.0 551.7 516.3 560.0 452.0 Z"/></clipPath>
+<clipPath id="cAure"><path d="M560.0 760.0 C555.0 730.0 566.7 673.3 580.0 640.0 C593.3 606.7 613.3 580.0 640.0 560.0 C666.7 540.0 705.0 523.3 740.0 520.0 C775.0 516.7 823.3 525.0 850.0 540.0 C876.7 555.0 890.0 580.0 900.0 610.0 C910.0 640.0 913.3 686.7 910.0 720.0 C906.7 753.3 908.3 790.0 880.0 810.0 C851.7 830.0 785.0 838.3 740.0 840.0 C695.0 841.7 640.0 833.3 610.0 820.0 C580.0 806.7 565.0 790.0 560.0 760.0 Z"/></clipPath>
+<clipPath id="cBlk"><rect x="560" y="110" width="800" height="1020"/></clipPath>
+<marker id="ar" markerUnits="userSpaceOnUse" markerWidth="22" markerHeight="22" refX="15" refY="11" orient="auto"><path d="M0 2 L22 11 L0 20 Z" fill="#2e2014"/></marker>
+</defs><g id="dibujo"><rect x="20" y="20" width="1860" height="1200" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="950" y="78" text-anchor="middle">El ciclo de las rocas (corte)</text><g clip-path="url(#cBlk)"><rect x="560" y="110" width="800" height="1020" fill="url(#gSky)"/><path d="M978 480 L1360 480 L1360 570 L1200 556 L1120 538 L1030 508 Z" fill="url(#gWat)" opacity=".95"/><path d="M978 480 L1360 480" stroke="#d8ecf7" stroke-width="3" fill="none" stroke-dasharray="14 12"/><path d="M846 404 C 880 430 930 442 962 462 S 984 476 990 486" fill="none" stroke="#5a9cc4" stroke-width="9" stroke-linecap="round"/><path d="M560.0 820.0 C573.3 766.3 606.7 807.0 640.0 808.0 C673.3 809.0 716.7 826.3 760.0 826.0 C803.3 825.7 853.3 807.0 900.0 806.0 C946.7 805.0 990.0 820.0 1040.0 820.0 C1090.0 820.0 1146.7 807.3 1200.0 806.0 C1253.3 804.7 1333.3 758.0 1360.0 812.0 C1386.7 866.0 1493.3 1077.0 1360.0 1130.0 C1226.7 1183.0 693.3 1181.7 560.0 1130.0 C426.7 1078.3 546.7 873.7 560.0 820.0 Z" fill="#6f7b8c"/><g clip-path="url(#cMeta)"><path d="M560 846 C 700 840, 820 852, 940 846 S 1200 840, 1360 850" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/><path d="M560 868 C 700 860, 820 876, 940 868 S 1200 860, 1360 872" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".55"/><path d="M560 890 C 700 880, 820 900, 940 890 S 1200 880, 1360 894" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/><path d="M560 912 C 700 906, 820 918, 940 912 S 1200 906, 1360 916" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".55"/><path d="M560 934 C 700 926, 820 942, 940 934 S 1200 926, 1360 938" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/><path d="M560 956 C 700 946, 820 966, 940 956 S 1200 946, 1360 960" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".55"/><path d="M560 978 C 700 972, 820 984, 940 978 S 1200 972, 1360 982" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/><path d="M560 1000 C 700 992, 820 1008, 940 1000 S 1200 992, 1360 1004" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".55"/><path d="M560 1022 C 700 1012, 820 1032, 940 1022 S 1200 1012, 1360 1026" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/><path d="M560 1044 C 700 1038, 820 1050, 940 1044 S 1200 1038, 1360 1048" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".55"/><path d="M560 1066 C 700 1058, 820 1074, 940 1066 S 1200 1058, 1360 1070" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/><path d="M560 1088 C 700 1078, 820 1098, 940 1088 S 1200 1078, 1360 1092" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".55"/><path d="M560 1110 C 700 1104, 820 1116, 940 1110 S 1200 1104, 1360 1114" fill="none" stroke="#3d4756" stroke-width="4" opacity=".55"/></g><path d="M560.0 452.0 C568.3 387.7 586.7 430.0 610.0 430.0 C633.3 430.0 665.0 445.3 700.0 452.0 C735.0 458.7 781.7 462.0 820.0 470.0 C858.3 478.0 895.0 488.3 930.0 500.0 C965.0 511.7 985.0 525.0 1030.0 540.0 C1075.0 555.0 1145.0 579.0 1200.0 590.0 C1255.0 601.0 1333.3 568.3 1360.0 606.0 C1386.7 643.7 1386.7 783.7 1360.0 816.0 C1333.3 848.3 1253.3 800.3 1200.0 800.0 C1146.7 799.7 1090.0 814.0 1040.0 814.0 C990.0 814.0 946.7 798.7 900.0 800.0 C853.3 801.3 803.3 821.0 760.0 822.0 C716.7 823.0 673.3 807.0 640.0 806.0 C606.7 805.0 573.3 875.0 560.0 816.0 C546.7 757.0 551.7 516.3 560.0 452.0 Z" fill="#d9bb88"/><g clip-path="url(#cSedim)"><path d="M560 470 C 700 480, 900 462, 1100 490 S 1300 506, 1360 504 L1360 900 L560 900 Z" fill="#e2c898"/><path d="M560 470 C 700 480, 900 462, 1100 490 S 1300 506, 1360 504" fill="none" stroke="#5d4630" stroke-width="2" opacity=".55"/><path d="M560 520 C 700 530, 900 512, 1100 540 S 1300 556, 1360 554 L1360 900 L560 900 Z" fill="#c98d5e"/><path d="M560 520 C 700 530, 900 512, 1100 540 S 1300 556, 1360 554" fill="none" stroke="#5d4630" stroke-width="2" opacity=".55"/><path d="M560 580 C 700 590, 900 572, 1100 600 S 1300 616, 1360 614 L1360 900 L560 900 Z" fill="#b9b9a4"/><path d="M560 580 C 700 590, 900 572, 1100 600 S 1300 616, 1360 614" fill="none" stroke="#5d4630" stroke-width="2" opacity=".55"/><path d="M560 640 C 700 650, 900 632, 1100 660 S 1300 676, 1360 674 L1360 900 L560 900 Z" fill="#dbb98a"/><path d="M560 640 C 700 650, 900 632, 1100 660 S 1300 676, 1360 674" fill="none" stroke="#5d4630" stroke-width="2" opacity=".55"/><path d="M560 700 C 700 710, 900 692, 1100 720 S 1300 736, 1360 734 L1360 900 L560 900 Z" fill="#bf7f56"/><path d="M560 700 C 700 710, 900 692, 1100 720 S 1300 736, 1360 734" fill="none" stroke="#5d4630" stroke-width="2" opacity=".55"/><path d="M560 750 C 700 760, 900 742, 1100 770 S 1300 786, 1360 784 L1360 900 L560 900 Z" fill="#c9c3ab"/><path d="M560 750 C 700 760, 900 742, 1100 770 S 1300 786, 1360 784" fill="none" stroke="#5d4630" stroke-width="2" opacity=".55"/></g><path d="M560.0 760.0 C555.0 730.0 566.7 673.3 580.0 640.0 C593.3 606.7 613.3 580.0 640.0 560.0 C666.7 540.0 705.0 523.3 740.0 520.0 C775.0 516.7 823.3 525.0 850.0 540.0 C876.7 555.0 890.0 580.0 900.0 610.0 C910.0 640.0 913.3 686.7 910.0 720.0 C906.7 753.3 908.3 790.0 880.0 810.0 C851.7 830.0 785.0 838.3 740.0 840.0 C695.0 841.7 640.0 833.3 610.0 820.0 C580.0 806.7 565.0 790.0 560.0 760.0 Z" fill="#6f7b8c"/><g clip-path="url(#cAure)"><path d="M540 510 C 640 498, 780 524, 940 506" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 536 C 640 524, 780 550, 940 532" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 562 C 640 550, 780 576, 940 558" fill="none" stroke="#3d4756" stroke-width="3" opacity=".5"/><path d="M540 588 C 640 576, 780 602, 940 584" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 614 C 640 602, 780 628, 940 610" fill="none" stroke="#3d4756" stroke-width="3" opacity=".5"/><path d="M540 640 C 640 628, 780 654, 940 636" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 666 C 640 654, 780 680, 940 662" fill="none" stroke="#3d4756" stroke-width="3" opacity=".5"/><path d="M540 692 C 640 680, 780 706, 940 688" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 718 C 640 706, 780 732, 940 714" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 744 C 640 732, 780 758, 940 740" fill="none" stroke="#3d4756" stroke-width="3" opacity=".5"/><path d="M540 770 C 640 758, 780 784, 940 766" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/><path d="M540 796 C 640 784, 780 810, 940 792" fill="none" stroke="#3d4756" stroke-width="3" opacity=".5"/><path d="M540 822 C 640 810, 780 836, 940 818" fill="none" stroke="#e4e9ee" stroke-width="3" opacity=".5"/></g><path d="M900.0 452.0 C905.0 445.0 938.3 453.0 960.0 462.0 C981.7 471.0 1003.3 494.0 1030.0 506.0 C1056.7 518.0 1091.7 526.3 1120.0 534.0 C1148.3 541.7 1170.0 547.3 1200.0 552.0 C1230.0 556.7 1273.3 559.7 1300.0 562.0 C1326.7 564.3 1350.0 558.0 1360.0 566.0 C1370.0 574.0 1386.7 605.3 1360.0 610.0 C1333.3 614.7 1255.0 605.0 1200.0 594.0 C1145.0 583.0 1075.0 559.0 1030.0 544.0 C985.0 529.0 951.7 519.3 930.0 504.0 C908.3 488.7 895.0 459.0 900.0 452.0 Z" fill="url(#pSed)"/><path d="M580.0 792.0 C568.3 766.7 578.3 693.7 590.0 660.0 C601.7 626.3 626.7 607.3 650.0 590.0 C673.3 572.7 705.0 561.0 730.0 556.0 C755.0 551.0 780.0 551.0 800.0 560.0 C820.0 569.0 840.0 586.7 850.0 610.0 C860.0 633.3 860.0 670.0 860.0 700.0 C860.0 730.0 863.3 771.3 850.0 790.0 C836.7 808.7 811.7 808.3 780.0 812.0 C748.3 815.7 693.3 815.3 660.0 812.0 C626.7 808.7 591.7 817.3 580.0 792.0 Z" fill="url(#pGra)"/><path d="M560.0 436.0 C567.7 425.0 591.0 421.7 606.0 404.0 C621.0 386.3 637.0 353.7 650.0 330.0 C663.0 306.3 675.3 276.0 684.0 262.0 C692.7 248.0 696.7 246.0 702.0 246.0 C707.3 246.0 711.3 262.0 716.0 262.0 C720.7 262.0 724.7 246.0 730.0 246.0 C735.3 246.0 738.0 246.3 748.0 262.0 C758.0 277.7 774.7 316.7 790.0 340.0 C805.3 363.3 825.0 387.0 840.0 402.0 C855.0 417.0 876.7 421.7 880.0 430.0 C883.3 438.3 870.0 446.7 860.0 452.0 C850.0 457.3 846.7 459.0 820.0 462.0 C793.3 465.0 743.3 468.7 700.0 470.0 C656.7 471.3 583.3 475.7 560.0 470.0 C536.7 464.3 552.3 447.0 560.0 436.0 Z" fill="url(#pBas)"/><path d="M736.0 262.0 C738.7 256.3 747.3 249.7 758.0 262.0 C768.7 274.3 784.3 313.7 800.0 336.0 C815.7 358.3 835.3 380.0 852.0 396.0 C868.7 412.0 887.0 423.3 900.0 432.0 C913.0 440.7 926.0 444.0 930.0 448.0 C934.0 452.0 932.3 456.7 924.0 456.0 C915.7 455.3 895.7 451.0 880.0 444.0 C864.3 437.0 846.7 428.0 830.0 414.0 C813.3 400.0 794.7 379.7 780.0 360.0 C765.3 340.3 749.3 312.3 742.0 296.0 C734.7 279.7 733.3 267.7 736.0 262.0 Z" fill="url(#gLav)"/><path d="M620.0 890.0 C620.0 873.0 640.0 857.0 660.0 848.0 C680.0 839.0 713.3 835.7 740.0 836.0 C766.7 836.3 801.7 839.3 820.0 850.0 C838.3 860.7 850.0 883.3 850.0 900.0 C850.0 916.7 838.3 939.0 820.0 950.0 C801.7 961.0 766.7 966.0 740.0 966.0 C713.3 966.0 680.0 962.7 660.0 950.0 C640.0 937.3 620.0 907.0 620.0 890.0 Z" fill="url(#gMag)"/><path d="M704 846 L722 846 L722 256 L704 256 Z" fill="url(#gMag)"/><path d="M560.0 820.0 C573.3 766.3 606.7 807.0 640.0 808.0 C673.3 809.0 716.7 826.3 760.0 826.0 C803.3 825.7 853.3 807.0 900.0 806.0 C946.7 805.0 990.0 820.0 1040.0 820.0 C1090.0 820.0 1146.7 807.3 1200.0 806.0 C1253.3 804.7 1333.3 758.0 1360.0 812.0 C1386.7 866.0 1493.3 1077.0 1360.0 1130.0 C1226.7 1183.0 693.3 1181.7 560.0 1130.0 C426.7 1078.3 546.7 873.7 560.0 820.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M560.0 760.0 C555.0 730.0 566.7 673.3 580.0 640.0 C593.3 606.7 613.3 580.0 640.0 560.0 C666.7 540.0 705.0 523.3 740.0 520.0 C775.0 516.7 823.3 525.0 850.0 540.0 C876.7 555.0 890.0 580.0 900.0 610.0 C910.0 640.0 913.3 686.7 910.0 720.0 C906.7 753.3 908.3 790.0 880.0 810.0 C851.7 830.0 785.0 838.3 740.0 840.0 C695.0 841.7 640.0 833.3 610.0 820.0 C580.0 806.7 565.0 790.0 560.0 760.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M560.0 452.0 C568.3 387.7 586.7 430.0 610.0 430.0 C633.3 430.0 665.0 445.3 700.0 452.0 C735.0 458.7 781.7 462.0 820.0 470.0 C858.3 478.0 895.0 488.3 930.0 500.0 C965.0 511.7 985.0 525.0 1030.0 540.0 C1075.0 555.0 1145.0 579.0 1200.0 590.0 C1255.0 601.0 1333.3 568.3 1360.0 606.0 C1386.7 643.7 1386.7 783.7 1360.0 816.0 C1333.3 848.3 1253.3 800.3 1200.0 800.0 C1146.7 799.7 1090.0 814.0 1040.0 814.0 C990.0 814.0 946.7 798.7 900.0 800.0 C853.3 801.3 803.3 821.0 760.0 822.0 C716.7 823.0 673.3 807.0 640.0 806.0 C606.7 805.0 573.3 875.0 560.0 816.0 C546.7 757.0 551.7 516.3 560.0 452.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M900.0 452.0 C905.0 445.0 938.3 453.0 960.0 462.0 C981.7 471.0 1003.3 494.0 1030.0 506.0 C1056.7 518.0 1091.7 526.3 1120.0 534.0 C1148.3 541.7 1170.0 547.3 1200.0 552.0 C1230.0 556.7 1273.3 559.7 1300.0 562.0 C1326.7 564.3 1350.0 558.0 1360.0 566.0 C1370.0 574.0 1386.7 605.3 1360.0 610.0 C1333.3 614.7 1255.0 605.0 1200.0 594.0 C1145.0 583.0 1075.0 559.0 1030.0 544.0 C985.0 529.0 951.7 519.3 930.0 504.0 C908.3 488.7 895.0 459.0 900.0 452.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M580.0 792.0 C568.3 766.7 578.3 693.7 590.0 660.0 C601.7 626.3 626.7 607.3 650.0 590.0 C673.3 572.7 705.0 561.0 730.0 556.0 C755.0 551.0 780.0 551.0 800.0 560.0 C820.0 569.0 840.0 586.7 850.0 610.0 C860.0 633.3 860.0 670.0 860.0 700.0 C860.0 730.0 863.3 771.3 850.0 790.0 C836.7 808.7 811.7 808.3 780.0 812.0 C748.3 815.7 693.3 815.3 660.0 812.0 C626.7 808.7 591.7 817.3 580.0 792.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M560.0 436.0 C567.7 425.0 591.0 421.7 606.0 404.0 C621.0 386.3 637.0 353.7 650.0 330.0 C663.0 306.3 675.3 276.0 684.0 262.0 C692.7 248.0 696.7 246.0 702.0 246.0 C707.3 246.0 711.3 262.0 716.0 262.0 C720.7 262.0 724.7 246.0 730.0 246.0 C735.3 246.0 738.0 246.3 748.0 262.0 C758.0 277.7 774.7 316.7 790.0 340.0 C805.3 363.3 825.0 387.0 840.0 402.0 C855.0 417.0 876.7 421.7 880.0 430.0 C883.3 438.3 870.0 446.7 860.0 452.0 C850.0 457.3 846.7 459.0 820.0 462.0 C793.3 465.0 743.3 468.7 700.0 470.0 C656.7 471.3 583.3 475.7 560.0 470.0 C536.7 464.3 552.3 447.0 560.0 436.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M736.0 262.0 C738.7 256.3 747.3 249.7 758.0 262.0 C768.7 274.3 784.3 313.7 800.0 336.0 C815.7 358.3 835.3 380.0 852.0 396.0 C868.7 412.0 887.0 423.3 900.0 432.0 C913.0 440.7 926.0 444.0 930.0 448.0 C934.0 452.0 932.3 456.7 924.0 456.0 C915.7 455.3 895.7 451.0 880.0 444.0 C864.3 437.0 846.7 428.0 830.0 414.0 C813.3 400.0 794.7 379.7 780.0 360.0 C765.3 340.3 749.3 312.3 742.0 296.0 C734.7 279.7 733.3 267.7 736.0 262.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M620.0 890.0 C620.0 873.0 640.0 857.0 660.0 848.0 C680.0 839.0 713.3 835.7 740.0 836.0 C766.7 836.3 801.7 839.3 820.0 850.0 C838.3 860.7 850.0 883.3 850.0 900.0 C850.0 916.7 838.3 939.0 820.0 950.0 C801.7 961.0 766.7 966.0 740.0 966.0 C713.3 966.0 680.0 962.7 660.0 950.0 C640.0 937.3 620.0 907.0 620.0 890.0 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><path d="M704 846 L722 846 L722 256 L704 256 Z" fill="none" stroke="#2e2014" stroke-width="2.4" stroke-linejoin="round"/><g fill="#9aa3ab" opacity=".55"><ellipse cx="796" cy="226" rx="24" ry="14"/><ellipse cx="826" cy="184" rx="34" ry="19"/><ellipse cx="800" cy="146" rx="28" ry="16"/></g><rect x="560" y="110" width="800" height="1020" filter="url(#rock)" opacity=".45" style="mix-blend-mode:multiply"/></g><rect x="560" y="110" width="800" height="1020" fill="none" stroke="#2e2014" stroke-width="2.5"/><path d="M796 360 Q 846 388 892 420" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="830" y="336" text-anchor="start">Meteorización y erosión</text><path d="M932 428 Q 988 424 1056 446" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="1000" y="404" text-anchor="middle">Transporte</text><path d="M1180 488 L1180 548" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="1196" y="520" text-anchor="start">Sedimentación</text><path d="M1150 630 L1150 730" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="1168" y="676" text-anchor="start">Compactación</text><text class="proc" x="1168" y="706" text-anchor="start">y cementación</text><path d="M1000 760 L1000 862" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="1016" y="830" text-anchor="start">Metamorfismo</text><path d="M1000 986 Q 940 970 868 930" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="1010" y="1010" text-anchor="start">Fusión</text><path d="M748 836 L748 700" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="764" y="760" text-anchor="start">Enfriamiento lento</text><path d="M712 236 L712 150" fill="none" stroke="#2e2014" stroke-width="4" stroke-linecap="round" marker-end="url(#ar)"/><text class="proc" x="740" y="206" text-anchor="start">Erupción</text><text class="sub" x="950" y="1192" text-anchor="middle">Esquema del ciclo: las flechas indican los procesos que transforman unas rocas en otras.</text></g><g id="hitzones"><path class="organo" data-cat="ti-rocas" data-name="Roca metamórfica" d="M560.0 820.0 C573.3 766.3 606.7 807.0 640.0 808.0 C673.3 809.0 716.7 826.3 760.0 826.0 C803.3 825.7 853.3 807.0 900.0 806.0 C946.7 805.0 990.0 820.0 1040.0 820.0 C1090.0 820.0 1146.7 807.3 1200.0 806.0 C1253.3 804.7 1333.3 758.0 1360.0 812.0 C1386.7 866.0 1493.3 1077.0 1360.0 1130.0 C1226.7 1183.0 693.3 1181.7 560.0 1130.0 C426.7 1078.3 546.7 873.7 560.0 820.0 Z M560.0 760.0 C555.0 730.0 566.7 673.3 580.0 640.0 C593.3 606.7 613.3 580.0 640.0 560.0 C666.7 540.0 705.0 523.3 740.0 520.0 C775.0 516.7 823.3 525.0 850.0 540.0 C876.7 555.0 890.0 580.0 900.0 610.0 C910.0 640.0 913.3 686.7 910.0 720.0 C906.7 753.3 908.3 790.0 880.0 810.0 C851.7 830.0 785.0 838.3 740.0 840.0 C695.0 841.7 640.0 833.3 610.0 820.0 C580.0 806.7 565.0 790.0 560.0 760.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rocas" data-name="Roca sedimentaria" d="M560.0 452.0 C568.3 387.7 586.7 430.0 610.0 430.0 C633.3 430.0 665.0 445.3 700.0 452.0 C735.0 458.7 781.7 462.0 820.0 470.0 C858.3 478.0 895.0 488.3 930.0 500.0 C965.0 511.7 985.0 525.0 1030.0 540.0 C1075.0 555.0 1145.0 579.0 1200.0 590.0 C1255.0 601.0 1333.3 568.3 1360.0 606.0 C1386.7 643.7 1386.7 783.7 1360.0 816.0 C1333.3 848.3 1253.3 800.3 1200.0 800.0 C1146.7 799.7 1090.0 814.0 1040.0 814.0 C990.0 814.0 946.7 798.7 900.0 800.0 C853.3 801.3 803.3 821.0 760.0 822.0 C716.7 823.0 673.3 807.0 640.0 806.0 C606.7 805.0 573.3 875.0 560.0 816.0 C546.7 757.0 551.7 516.3 560.0 452.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rocas" data-name="Sedimentos" d="M900.0 452.0 C905.0 445.0 938.3 453.0 960.0 462.0 C981.7 471.0 1003.3 494.0 1030.0 506.0 C1056.7 518.0 1091.7 526.3 1120.0 534.0 C1148.3 541.7 1170.0 547.3 1200.0 552.0 C1230.0 556.7 1273.3 559.7 1300.0 562.0 C1326.7 564.3 1350.0 558.0 1360.0 566.0 C1370.0 574.0 1386.7 605.3 1360.0 610.0 C1333.3 614.7 1255.0 605.0 1200.0 594.0 C1145.0 583.0 1075.0 559.0 1030.0 544.0 C985.0 529.0 951.7 519.3 930.0 504.0 C908.3 488.7 895.0 459.0 900.0 452.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rocas" data-name="Roca ígnea intrusiva" d="M580.0 792.0 C568.3 766.7 578.3 693.7 590.0 660.0 C601.7 626.3 626.7 607.3 650.0 590.0 C673.3 572.7 705.0 561.0 730.0 556.0 C755.0 551.0 780.0 551.0 800.0 560.0 C820.0 569.0 840.0 586.7 850.0 610.0 C860.0 633.3 860.0 670.0 860.0 700.0 C860.0 730.0 863.3 771.3 850.0 790.0 C836.7 808.7 811.7 808.3 780.0 812.0 C748.3 815.7 693.3 815.3 660.0 812.0 C626.7 808.7 591.7 817.3 580.0 792.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rocas" data-name="Roca ígnea extrusiva" d="M560.0 436.0 C567.7 425.0 591.0 421.7 606.0 404.0 C621.0 386.3 637.0 353.7 650.0 330.0 C663.0 306.3 675.3 276.0 684.0 262.0 C692.7 248.0 696.7 246.0 702.0 246.0 C707.3 246.0 711.3 262.0 716.0 262.0 C720.7 262.0 724.7 246.0 730.0 246.0 C735.3 246.0 738.0 246.3 748.0 262.0 C758.0 277.7 774.7 316.7 790.0 340.0 C805.3 363.3 825.0 387.0 840.0 402.0 C855.0 417.0 876.7 421.7 880.0 430.0 C883.3 438.3 870.0 446.7 860.0 452.0 C850.0 457.3 846.7 459.0 820.0 462.0 C793.3 465.0 743.3 468.7 700.0 470.0 C656.7 471.3 583.3 475.7 560.0 470.0 C536.7 464.3 552.3 447.0 560.0 436.0 Z M736.0 262.0 C738.7 256.3 747.3 249.7 758.0 262.0 C768.7 274.3 784.3 313.7 800.0 336.0 C815.7 358.3 835.3 380.0 852.0 396.0 C868.7 412.0 887.0 423.3 900.0 432.0 C913.0 440.7 926.0 444.0 930.0 448.0 C934.0 452.0 932.3 456.7 924.0 456.0 C915.7 455.3 895.7 451.0 880.0 444.0 C864.3 437.0 846.7 428.0 830.0 414.0 C813.3 400.0 794.7 379.7 780.0 360.0 C765.3 340.3 749.3 312.3 742.0 296.0 C734.7 279.7 733.3 267.7 736.0 262.0 Z" fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-rocas" data-name="Magma" d="M620.0 890.0 C620.0 873.0 640.0 857.0 660.0 848.0 C680.0 839.0 713.3 835.7 740.0 836.0 C766.7 836.3 801.7 839.3 820.0 850.0 C838.3 860.7 850.0 883.3 850.0 900.0 C850.0 916.7 838.3 939.0 820.0 950.0 C801.7 961.0 766.7 966.0 740.0 966.0 C713.3 966.0 680.0 962.7 660.0 950.0 C640.0 937.3 620.0 907.0 620.0 890.0 Z M704 846 L722 846 L722 256 L704 256 Z" fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="504.0,238.0 660.0,372.0"/><circle class="leader-dot" cx="660.0" cy="372.0" r="5"/><text class="olabel" data-cat="ti-rocas" data-name="Roca ígnea extrusiva" x="492.0" y="250.0" text-anchor="end">Roca ígnea extrusiva</text><text class="sub" x="492.0" y="286.0" text-anchor="end">enfriamiento rápido</text><polyline class="leader" points="504.0,548.0 660.0,680.0"/><circle class="leader-dot" cx="660.0" cy="680.0" r="5"/><text class="olabel" data-cat="ti-rocas" data-name="Roca ígnea intrusiva" x="492.0" y="560.0" text-anchor="end">Roca ígnea intrusiva</text><text class="sub" x="492.0" y="596.0" text-anchor="end">enfriamiento lento</text><polyline class="leader" points="504.0,888.0 660.0,910.0"/><circle class="leader-dot" cx="660.0" cy="910.0" r="5"/><text class="olabel" data-cat="ti-rocas" data-name="Magma" x="492.0" y="900.0" text-anchor="end">Magma</text><text class="sub" x="492.0" y="936.0" text-anchor="end">roca fundida</text><polyline class="leader" points="1416.0,408.0 1250.0,580.0"/><circle class="leader-dot" cx="1250.0" cy="580.0" r="5"/><text class="olabel" data-cat="ti-rocas" data-name="Sedimentos" x="1428.0" y="420.0" text-anchor="start">Sedimentos</text><text class="sub" x="1428.0" y="456.0" text-anchor="start">arenas, gravas y barro</text><polyline class="leader" points="1416.0,648.0 1260.0,640.0"/><circle class="leader-dot" cx="1260.0" cy="640.0" r="5"/><text class="olabel" data-cat="ti-rocas" data-name="Roca sedimentaria" x="1428.0" y="660.0" text-anchor="start">Roca sedimentaria</text><text class="sub" x="1428.0" y="696.0" text-anchor="start">estratos compactados</text><polyline class="leader" points="1416.0,918.0 1260.0,960.0"/><circle class="leader-dot" cx="1260.0" cy="960.0" r="5"/><text class="olabel" data-cat="ti-rocas" data-name="Roca metamórfica" x="1428.0" y="930.0" text-anchor="start">Roca metamórfica</text><text class="sub" x="1428.0" y="966.0" text-anchor="start">calor y presión</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">GEOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>Las rocas no son eternas: se transforman unas en otras en un ciclo que dura millones de años. Esta lámina muestra, en un corte del terreno, las <strong>6 estructuras</strong> del ciclo: el <strong>magma</strong>, las rocas <strong>ígneas</strong> (intrusivas y extrusivas), los <strong>sedimentos</strong> y las rocas <strong>sedimentarias</strong> y <strong>metamórficas</strong>. Las flechas rotuladas indican los procesos que llevan de una a otra.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Rocas ígneas</strong>: nacen al enfriarse el magma; si lo hace despacio y en profundidad son intrusivas, y si es rápido y en la superficie, extrusivas.</li>
+        <li><strong>Rocas sedimentarias</strong>: nacen de los sedimentos que se acumulan en capas y se compactan y cementan.</li>
+        <li><strong>Rocas metamórficas</strong>: nacen cuando otra roca se transforma por el calor y la presión sin fundirse.</li>
+        <li><strong>Si se funden</strong>, las rocas vuelven a ser magma y el ciclo empieza de nuevo. Las flechas son procesos, no estructuras: no se preguntan en el juego.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres de las rocas y de los procesos de las flechas.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar las 6 estructuras.</li>
+        <li>Seguir con el dedo un recorrido completo: por ejemplo, de magma a roca ígnea, a sedimento, a roca sedimentaria y a roca metamórfica.</li>
+        <li>Traer a clase granito, basalto, arenisca, caliza y mármol, y clasificarlos en el ciclo.</li>
+        <li>Relacionar con las <a href="geologia-capas-tierra.html" style="color:#8a5a22">capas de la Tierra</a>: el magma se forma en el manto y la corteza.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto, dibujada con valores medios de los modelos estándar de la estructura de la Tierra (profundidades de las discontinuidades y espesores aproximados). Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">GEOLOGÍA: ROCAS Y CICLO DE LAS ROCAS</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">6 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Roca ígnea extrusiva": {"grupo": "El ciclo de las rocas", "img": "ficha/geo-roca-ignea-extrusiva.webp", "txt": "También llamada volcánica. Se forma cuando la lava se enfría deprisa en la superficie. Los cristales son diminutos o no llegan a formarse (vidrio volcánico): basalto, riolita, obsidiana o pumita.", "dato": "El basalto es la roca más abundante del fondo de los océanos."}, "Roca ígnea intrusiva": {"grupo": "El ciclo de las rocas", "img": "ficha/geo-roca-ignea-intrusiva.webp", "txt": "También llamada plutónica. Se forma cuando el magma se enfría lentamente en el interior de la corteza. Al tardar mucho tiempo, los cristales crecen y se ven a simple vista: granito, diorita o gabro.", "dato": "El granito, muy usado en construcción, es una roca ígnea intrusiva."}, "Magma": {"grupo": "El ciclo de las rocas", "img": "ficha/geo-magma.webp", "txt": "Roca fundida, con gases y algunos cristales, a unos 700–1 300 °C. Se forma por fusión de rocas del manto o de la corteza y asciende porque es menos densa que la roca que la rodea. Al enfriarse origina las rocas ígneas.", "dato": "Cuando sale a la superficie en una erupción se llama lava."}, "Sedimentos": {"grupo": "El ciclo de las rocas", "img": "ficha/geo-sedimentos.webp", "txt": "Fragmentos sueltos de rocas (gravas, arenas, limos y arcillas) y restos de seres vivos. Los arrastran el agua, el viento o el hielo y se depositan en capas en cuencas como lagos, mares y desembocaduras de ríos.", "dato": "Si se compactan y se cementan, se convierten en roca sedimentaria."}, "Roca sedimentaria": {"grupo": "El ciclo de las rocas", "img": "ficha/geo-roca-sedimentaria.webp", "txt": "Se forma al compactarse y cementarse los sedimentos (diagénesis o litificación). Se dispone en capas llamadas estratos: arenisca, conglomerado, caliza o arcilla compactada.", "dato": "Es la roca donde se conservan casi todos los fósiles."}, "Roca metamórfica": {"grupo": "El ciclo de las rocas", "img": "ficha/geo-roca-metamorfica.webp", "txt": "Roca que cambia de aspecto y de minerales por el calor y la presión, sin llegar a fundirse. Muchas se ven en bandas o láminas (foliación): pizarra, esquisto, gneis, mármol o cuarcita.", "dato": "El mármol procede de la caliza y la pizarra, de la arcilla."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
