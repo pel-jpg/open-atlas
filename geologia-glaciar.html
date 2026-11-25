@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El glaciar — Circo, lengua glaciar, morrenas y valle en U · Atlas Abierto</title>
+<meta name="description" content="El glaciar para ESO: circo glaciar, arista, lengua glaciar, grietas, morrenas lateral, central y frontal, lago glaciar, valle en U y valle colgado, en una vista en perspectiva. Con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-glaciar.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="El glaciar — Circo, lengua glaciar, morrenas y valle en U · Atlas Abierto">
+<meta property="og:description" content="El glaciar para ESO: circo glaciar, arista, lengua glaciar, grietas, morrenas lateral, central y frontal, lago glaciar, valle en U y valle colgado, en una vista en perspectiva. Con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-glaciar.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:2520/1160;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"El glaciar — Circo, lengua glaciar, morrenas y valle en U","description":"El glaciar para ESO: circo glaciar, arista, lengua glaciar, grietas, morrenas lateral, central y frontal, lago glaciar, valle en U y valle colgado, en una vista en perspectiva. Con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-glaciar.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"El glaciar — Circo, lengua glaciar, morrenas y valle en U","item":"https://atlasabierto.org/geologia-glaciar.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / El glaciar</div>
+    <h1>El glaciar</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2520 1160" width="2520" height="1160" role="img" aria-label="Lámina: el glaciar y sus formas"><rect width="2520" height="1160" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="2480" height="1120" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1260" y="90" text-anchor="middle">El glaciar: un valle glaciar y sus formas</text><image href="geologia/glaciar.webp" x="500" y="150" width="1500" height="890"/><text class="sub" x="1260" y="1120" text-anchor="middle">Vista en perspectiva de un glaciar de valle ideal: el relieve está exagerado.</text></g><g id="hitzones"><path class="organo" data-cat="ti-glaciar" data-name="Valle en U" d="M1702 822 L1683 772 L1674 754 L1670 750 L1668 743 L1660 734 L1653 719 L1650 718 L1649 711 L1647 711 L1644 705 L1639 702 L1638 697 L1634 696 L1633 691 L1630 691 L1627 685 L1624 685 L1621 679 L1617 678 L1616 669 L1612 667 L1610 653 L1606 652 L1604 643 L1601 643 L1589 634 L1584 634 L1575 619 L1571 617 L1567 608 L1567 600 L1564 594 L1560 574 L1561 564 L1558 554 L1558 526 L1555 518 L1555 510 L1558 509 L1561 487 L1567 483 L1572 471 L1575 449 L1581 427 L1580 423 L1529 450 L1484 468 L1466 473 L1459 483 L1455 485 L1445 497 L1420 515 L1400 534 L1381 548 L1371 551 L1366 555 L1332 567 L1326 571 L1313 574 L1305 573 L1305 567 L1307 566 L1307 563 L1293 566 L1292 568 L1268 574 L1261 574 L1260 576 L1215 580 L1214 582 L1176 582 L1155 578 L1154 576 L1146 574 L1138 577 L1135 582 L1128 582 L1118 578 L1105 568 L1100 560 L1099 549 L1097 548 L1099 511 L1102 509 L1102 502 L1104 501 L1107 488 L1112 481 L1116 469 L1074 461 L1046 462 L1010 459 L996 461 L990 465 L970 467 L932 450 L911 448 L905 450 L898 457 L894 458 L874 479 L866 481 L837 501 L825 506 L824 510 L815 513 L811 518 L805 520 L804 523 L791 530 L790 533 L785 536 L768 533 L750 521 L737 524 L730 524 L728 521 L721 522 L719 537 L716 538 L714 550 L710 552 L708 575 L704 578 L702 593 L698 605 L694 606 L691 615 L684 625 L681 635 L675 640 L664 642 L659 639 L650 639 L650 643 L646 649 L646 658 L642 665 L643 678 L645 680 L644 695 L646 696 L646 709 L648 711 L647 726 L649 728 L648 739 L650 740 L652 785 L654 786 L654 798 L656 799 L655 810 L704 826 L778 861 L824 889 L893 922 L929 949 L948 958 L966 963 L1408 958 L1434 950 L1463 936 L1579 859 L1621 821 L1647 789 L1653 789 L1671 797 L1691 815Z M1465 802 L1460 835 L1455 841 L1453 849 L1450 851 L1447 859 L1439 868 L1437 875 L1425 885 L1420 893 L1409 902 L1400 914 L1396 915 L1394 919 L1388 920 L1385 924 L1376 926 L1367 934 L1362 934 L1359 937 L1348 937 L1347 939 L1331 939 L1330 941 L1303 944 L1302 946 L1268 946 L1267 944 L1259 944 L1258 942 L1245 943 L1243 941 L1207 941 L1206 944 L1157 944 L1156 942 L1149 942 L1148 940 L1137 941 L1136 938 L1079 939 L1078 936 L1070 935 L1051 936 L1050 932 L1048 932 L1047 936 L993 936 L992 934 L969 930 L965 926 L953 923 L952 920 L937 908 L935 902 L930 899 L928 892 L924 890 L924 885 L920 880 L915 865 L908 860 L908 856 L902 850 L902 845 L897 843 L897 840 L892 837 L892 833 L887 832 L887 828 L882 824 L880 817 L875 813 L875 807 L871 804 L871 799 L867 793 L867 784 L877 783 L887 786 L933 819 L938 825 L937 839 L939 841 L941 853 L946 861 L970 886 L999 903 L1022 913 L1034 916 L1086 915 L1102 918 L1149 919 L1149 917 L1116 916 L1115 914 L1063 913 L1036 909 L1035 907 L1030 907 L1017 899 L1010 898 L1002 891 L995 890 L985 884 L978 876 L969 872 L968 869 L962 865 L959 855 L957 854 L958 839 L961 838 L970 827 L972 827 L973 823 L987 815 L992 809 L1008 804 L1009 802 L1034 800 L1035 798 L1047 797 L1048 795 L1058 794 L1061 791 L1082 786 L1123 784 L1170 785 L1171 787 L1222 792 L1223 794 L1245 800 L1248 803 L1263 805 L1266 808 L1289 813 L1292 816 L1297 816 L1310 822 L1311 825 L1315 826 L1325 837 L1328 838 L1329 844 L1332 845 L1332 852 L1335 853 L1336 865 L1332 871 L1330 882 L1317 896 L1310 897 L1304 901 L1291 902 L1285 906 L1277 906 L1275 908 L1266 909 L1265 911 L1258 911 L1257 913 L1244 914 L1243 916 L1160 919 L1160 921 L1177 923 L1252 921 L1271 915 L1302 912 L1316 908 L1329 901 L1347 896 L1364 888 L1379 874 L1380 869 L1376 868 L1375 865 L1369 861 L1369 857 L1365 856 L1365 844 L1361 843 L1361 835 L1355 835 L1354 832 L1349 832 L1348 829 L1342 826 L1342 824 L1338 823 L1338 817 L1358 796 L1374 790 L1388 781 L1406 782 L1420 774 L1439 772 L1440 774 L1445 774 L1446 778 L1449 778 L1453 782 L1464 784Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Circo glaciar" d="M1900 222 L1897 215 L1887 212 L1798 199 L1675 186 L1633 187 L1579 184 L1511 184 L1505 193 L1501 206 L1503 249 L1498 251 L1497 257 L1491 257 L1479 250 L1459 247 L1427 231 L1417 233 L1404 232 L1390 220 L1376 221 L1352 228 L1322 233 L1178 234 L1161 244 L1115 246 L1069 246 L1036 222 L1032 222 L1017 248 L1029 252 L1047 252 L1053 254 L1066 268 L1085 275 L1101 284 L1119 298 L1122 304 L1124 304 L1121 299 L1121 293 L1123 291 L1150 284 L1188 277 L1287 272 L1322 277 L1375 281 L1448 293 L1451 295 L1451 307 L1454 307 L1458 304 L1473 301 L1485 301 L1484 284 L1487 278 L1504 267 L1509 252 L1520 244 L1530 241 L1543 241 L1564 250 L1564 256 L1550 265 L1548 270 L1550 270 L1567 259 L1607 240 L1635 232 L1668 226 L1699 224 L1737 225 L1842 236 L1845 234 L1861 232 L1889 232 L1900 234Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Arista" d="M1845 236 L1845 240 L1848 243 L1877 245 L1892 244 L1893 252 L1897 256 L1903 256 L1908 259 L1923 259 L1930 264 L1951 264 L1957 270 L1964 272 L1978 269 L1987 261 L1999 260 L1999 248 L1985 247 L1973 243 L1932 240 L1916 236 L1905 230 L1899 230 L1898 232 L1859 231 L1848 233Z M945 193 L947 199 L951 202 L960 204 L965 208 L1004 212 L1010 215 L1014 215 L1017 212 L1017 207 L1003 192 L989 190 L976 164 L971 164 L967 170 L957 173Z M1449 179 L1450 187 L1458 192 L1472 196 L1505 198 L1509 189 L1513 185 L1529 185 L1529 181 L1517 172 L1509 159 L1505 159 L1495 170 L1488 170 L1479 158 L1474 158 L1461 171Z M636 207 L641 213 L660 221 L665 221 L669 224 L721 224 L722 231 L720 233 L720 238 L722 240 L743 240 L745 238 L755 237 L788 222 L788 217 L769 202 L753 197 L728 185 L703 184 L677 159 L673 150 L655 150 L655 153 L650 156 L641 186 L638 190Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Lengua glaciar" d="M1835 236 L1751 227 L1711 225 L1668 227 L1635 233 L1602 243 L1567 260 L1550 271 L1531 279 L1498 311 L1467 329 L1459 329 L1444 324 L1444 317 L1448 311 L1452 295 L1350 279 L1322 278 L1287 273 L1227 275 L1188 278 L1123 292 L1121 299 L1132 307 L1142 319 L1148 319 L1152 329 L1166 338 L1168 358 L1175 369 L1176 393 L1178 394 L1179 402 L1181 403 L1181 418 L1179 423 L1153 458 L1146 470 L1144 480 L1137 493 L1137 497 L1135 498 L1133 511 L1131 512 L1130 520 L1128 521 L1127 541 L1130 553 L1139 565 L1176 573 L1214 573 L1215 571 L1241 568 L1243 562 L1249 555 L1258 527 L1262 522 L1262 516 L1264 515 L1269 502 L1277 495 L1283 485 L1333 448 L1333 445 L1311 443 L1296 436 L1286 436 L1270 442 L1230 447 L1211 446 L1204 443 L1203 439 L1195 437 L1196 429 L1216 419 L1216 416 L1212 414 L1212 408 L1216 405 L1217 389 L1223 381 L1224 362 L1230 356 L1252 342 L1252 340 L1241 337 L1241 330 L1248 325 L1283 325 L1296 321 L1305 321 L1310 318 L1317 318 L1322 320 L1359 319 L1367 322 L1415 327 L1421 331 L1420 340 L1425 343 L1425 349 L1417 353 L1417 356 L1423 361 L1433 365 L1433 372 L1428 375 L1427 378 L1435 380 L1435 392 L1428 397 L1429 406 L1417 414 L1417 417 L1421 420 L1425 432 L1427 433 L1426 445 L1418 450 L1353 447 L1343 459 L1310 482 L1288 502 L1283 515 L1275 523 L1272 537 L1268 542 L1264 556 L1260 560 L1261 565 L1268 565 L1326 548 L1330 544 L1343 541 L1355 534 L1360 534 L1361 532 L1384 522 L1386 518 L1393 515 L1395 511 L1405 505 L1407 501 L1425 487 L1425 485 L1433 479 L1434 475 L1444 467 L1449 460 L1457 458 L1467 449 L1476 447 L1486 409 L1507 406 L1556 405 L1560 400 L1564 384 L1578 368 L1585 364 L1612 323 L1620 316 L1629 315 L1646 330 L1665 330 L1669 328 L1682 329 L1700 343 L1718 343 L1720 340 L1723 340 L1734 327 L1738 326 L1741 319 L1749 316 L1753 309 L1760 306 L1765 297 L1774 292 L1780 292 L1787 282 L1793 282 L1795 284 L1798 296 L1803 295 L1808 288 L1809 282 L1813 281 L1814 275 L1817 273 L1820 266 L1820 261 L1817 260 L1816 246 L1835 239Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Valle colgado" d="M866 552 L862 554 L855 563 L855 581 L861 642 L864 653 L870 659 L883 661 L888 659 L894 653 L896 648 L889 567 L886 559 L877 552Z M671 400 L667 415 L667 428 L671 443 L678 455 L694 469 L709 475 L718 476 L726 482 L742 489 L786 532 L789 532 L798 524 L804 522 L804 520 L813 513 L818 512 L824 508 L825 505 L828 505 L838 497 L843 496 L863 481 L874 478 L878 473 L874 465 L864 453 L802 393 L760 369 L734 363 L719 363 L707 366 L691 375 L678 388Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Lago glaciar" d="M957 845 L961 862 L963 865 L967 866 L970 871 L983 878 L986 883 L995 889 L1002 890 L1010 897 L1025 901 L1036 908 L1063 912 L1116 913 L1117 915 L1149 916 L1150 918 L1243 915 L1244 913 L1257 912 L1258 910 L1265 910 L1266 908 L1275 907 L1277 905 L1284 905 L1291 901 L1304 900 L1305 898 L1317 895 L1322 891 L1324 886 L1329 882 L1331 871 L1335 865 L1334 853 L1331 852 L1331 846 L1328 845 L1327 838 L1325 838 L1315 827 L1311 826 L1310 823 L1303 821 L1302 819 L1292 817 L1289 814 L1279 813 L1276 810 L1266 809 L1263 806 L1248 804 L1245 801 L1223 795 L1222 793 L1203 792 L1170 786 L1123 785 L1082 787 L1061 792 L1058 795 L1048 796 L1047 798 L1035 799 L1034 801 L1009 803 L1008 805 L992 810 L987 816 L973 824 L973 827 L970 828 L961 839 L959 839Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Morrena frontal" d="M1465 801 L1464 788 L1461 787 L1460 784 L1450 783 L1445 777 L1440 777 L1439 774 L1436 773 L1416 777 L1409 782 L1389 781 L1376 790 L1358 797 L1347 807 L1338 819 L1338 821 L1342 821 L1343 824 L1348 824 L1349 827 L1354 827 L1361 832 L1362 841 L1366 844 L1366 854 L1369 854 L1370 857 L1373 858 L1373 861 L1379 865 L1380 874 L1364 889 L1347 897 L1329 902 L1316 909 L1302 913 L1271 916 L1252 922 L1177 924 L1133 919 L1102 919 L1086 916 L1034 917 L1022 914 L999 904 L970 887 L945 861 L940 853 L939 845 L936 842 L938 826 L933 820 L887 787 L872 783 L867 784 L868 793 L870 794 L872 803 L876 807 L878 815 L881 816 L883 823 L886 824 L888 832 L892 832 L898 841 L903 843 L903 848 L909 853 L909 858 L911 858 L916 864 L920 875 L924 879 L925 889 L929 892 L929 896 L934 899 L936 905 L940 907 L941 910 L953 920 L953 922 L968 926 L969 929 L979 930 L985 934 L993 935 L1070 934 L1071 936 L1078 936 L1079 938 L1136 938 L1137 940 L1156 941 L1157 943 L1206 943 L1207 940 L1243 940 L1245 942 L1258 942 L1259 944 L1302 945 L1303 943 L1313 944 L1314 942 L1322 942 L1323 940 L1330 940 L1331 938 L1347 938 L1348 936 L1359 936 L1362 933 L1367 933 L1376 925 L1380 925 L1381 923 L1385 923 L1386 920 L1394 918 L1394 916 L1398 914 L1400 910 L1404 909 L1408 902 L1412 900 L1424 885 L1435 875 L1435 872 L1446 859 L1454 841 L1459 835 L1459 829 L1462 826 L1462 818 L1464 816 L1463 803Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Morrena lateral" d="M1600 343 L1595 344 L1584 362 L1576 367 L1562 384 L1559 398 L1554 404 L1505 405 L1484 408 L1480 430 L1475 445 L1465 448 L1455 457 L1447 459 L1423 486 L1405 500 L1403 504 L1393 510 L1391 514 L1384 517 L1382 521 L1361 530 L1358 533 L1353 533 L1341 540 L1321 546 L1318 549 L1295 554 L1294 556 L1279 559 L1278 561 L1259 564 L1253 570 L1253 577 L1270 576 L1271 574 L1291 569 L1299 569 L1300 577 L1324 573 L1368 556 L1373 552 L1383 549 L1388 544 L1391 544 L1422 516 L1447 498 L1447 496 L1460 485 L1481 459 L1541 439 L1553 432 L1571 415 L1580 403 L1589 386 L1594 372 L1595 360Z M1121 304 L1124 322 L1130 329 L1137 333 L1141 340 L1140 351 L1142 352 L1146 367 L1148 368 L1149 394 L1152 399 L1151 411 L1141 423 L1141 426 L1122 449 L1122 453 L1118 458 L1118 463 L1113 470 L1113 474 L1111 475 L1111 479 L1106 486 L1106 491 L1101 500 L1101 507 L1098 509 L1096 550 L1099 562 L1104 570 L1116 579 L1133 585 L1137 585 L1137 581 L1140 578 L1152 578 L1174 583 L1225 582 L1226 580 L1235 580 L1241 574 L1241 567 L1213 570 L1212 572 L1178 572 L1141 564 L1131 551 L1128 533 L1129 523 L1131 522 L1131 516 L1134 513 L1136 500 L1138 499 L1138 495 L1145 482 L1147 472 L1154 460 L1180 425 L1182 420 L1182 401 L1179 396 L1176 367 L1174 366 L1170 352 L1168 351 L1167 336 L1153 327 L1150 317 L1142 317 L1126 304Z M1523 286 L1499 285 L1495 289 L1485 290 L1483 300 L1471 300 L1456 303 L1447 309 L1443 316 L1438 320 L1438 325 L1462 331 L1469 330 L1500 312 L1523 290Z M1865 231 L1843 233 L1815 244 L1816 271 L1813 273 L1812 279 L1808 280 L1807 286 L1798 287 L1794 279 L1786 280 L1778 291 L1772 291 L1763 296 L1763 299 L1759 304 L1751 308 L1747 315 L1739 318 L1737 324 L1732 326 L1721 339 L1716 341 L1698 340 L1687 330 L1679 328 L1678 326 L1647 328 L1647 333 L1664 341 L1713 349 L1722 354 L1728 354 L1734 357 L1740 365 L1754 367 L1762 362 L1777 360 L1790 351 L1807 320 L1824 299 L1825 293 L1839 266 L1841 257 L1840 243 L1844 240 L1859 239 L1865 235Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Grietas" d="M1187 433 L1187 437 L1197 439 L1200 441 L1200 444 L1213 448 L1232 448 L1272 443 L1288 437 L1294 437 L1309 444 L1338 446 L1344 439 L1347 439 L1347 431 L1352 418 L1355 416 L1361 416 L1362 429 L1360 430 L1358 437 L1352 441 L1352 448 L1382 451 L1420 451 L1430 443 L1430 436 L1428 435 L1428 431 L1426 430 L1423 421 L1423 413 L1436 403 L1436 394 L1439 392 L1440 379 L1437 377 L1437 371 L1442 368 L1442 364 L1431 363 L1424 359 L1424 353 L1431 348 L1430 333 L1417 326 L1408 324 L1369 321 L1361 318 L1308 317 L1305 319 L1297 319 L1290 322 L1271 325 L1246 324 L1233 332 L1233 336 L1242 340 L1242 346 L1218 364 L1218 386 L1215 389 L1215 394 L1209 399 L1209 408 L1206 410 L1207 422 L1198 425Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-glaciar" data-name="Morrena central" d="M1369 413 L1353 412 L1349 414 L1345 426 L1343 427 L1342 435 L1322 455 L1305 465 L1281 484 L1276 493 L1272 495 L1265 505 L1265 509 L1261 514 L1261 520 L1257 525 L1248 553 L1234 574 L1234 579 L1256 577 L1256 574 L1262 567 L1262 562 L1267 553 L1267 549 L1269 548 L1269 544 L1273 539 L1273 534 L1277 530 L1278 522 L1284 517 L1289 504 L1312 483 L1345 460 L1358 443 L1362 441Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="2030,259 1260,271" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1260" cy="271" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Circo glaciar" x="2040" y="271" text-anchor="start">Circo glaciar</text><text class="sub" x="2040" y="307" text-anchor="start" data-for="Circo glaciar">donde nace el hielo</text><polyline class="leader" points="470,181 670,193" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="670" cy="193" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Arista" x="460" y="193" text-anchor="end">Arista</text><text class="sub" x="460" y="229" text-anchor="end" data-for="Arista">cresta afilada</text><polyline class="leader" points="470,516 1220,486" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1220" cy="486" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Lengua glaciar" x="460" y="528" text-anchor="end">Lengua glaciar</text><text class="sub" x="460" y="564" text-anchor="end" data-for="Lengua glaciar">hielo que fluye valle abajo</text><polyline class="leader" points="2030,469 1325,387" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1325" cy="387" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Grietas" x="2040" y="481" text-anchor="start">Grietas</text><text class="sub" x="2040" y="517" text-anchor="start" data-for="Grietas">fracturas del hielo</text><polyline class="leader" points="2030,364 1770,330" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1770" cy="330" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Morrena lateral" x="2040" y="376" text-anchor="start">Morrena lateral</text><text class="sub" x="2040" y="412" text-anchor="start" data-for="Morrena lateral">derrubios en los bordes</text><polyline class="leader" points="2030,574 1293,488" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1293" cy="488" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Morrena central" x="2040" y="586" text-anchor="start">Morrena central</text><text class="sub" x="2040" y="622" text-anchor="start" data-for="Morrena central">derrubios en el centro</text><polyline class="leader" points="2030,816 1409,828" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1409" cy="828" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Morrena frontal" x="2040" y="828" text-anchor="start">Morrena frontal</text><text class="sub" x="2040" y="864" text-anchor="start" data-for="Morrena frontal">derrubios en el frente</text><polyline class="leader" points="470,849 1163,852" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1163" cy="852" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Lago glaciar" x="460" y="861" text-anchor="end">Lago glaciar</text><text class="sub" x="460" y="897" text-anchor="end" data-for="Lago glaciar">agua tras la morrena</text><polyline class="leader" points="470,744 1106,756" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1106" cy="756" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Valle en U" x="460" y="756" text-anchor="end">Valle en U</text><text class="sub" x="460" y="792" text-anchor="end" data-for="Valle en U">excavado por el hielo</text><polyline class="leader" points="470,411 739,423" style="stroke:#3a2a15;stroke-width:2.2;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="739" cy="423" r="7"/><text class="olabel" data-cat="ti-glaciar" data-name="Valle colgado" x="460" y="423" text-anchor="end">Valle colgado</text><text class="sub" x="460" y="459" text-anchor="end" data-for="Valle colgado">valle afluente elevado</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">GEOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>Un <strong>glaciar</strong> es una masa de hielo que se forma por la acumulación de nieve y que se desliza lentamente por la ladera. Esta lámina muestra un glaciar de valle y las formas que deja a su paso, con <strong>10 partes</strong> señaladas: las del glaciar (el <strong>circo</strong>, la <strong>lengua</strong> y las <strong>grietas</strong>), las <strong>morrenas</strong> que forman los materiales que arrastra, y las del paisaje que modela (el <strong>valle en U</strong>, el <strong>valle colgado</strong> y el <strong>lago glaciar</strong>).</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>En la zona de acumulación</strong>, en el circo, nieva más de lo que se funde y la nieve se transforma en hielo.</li>
+        <li><strong>La lengua glaciar</strong> baja por su peso; arrastra y arranca roca, que se deposita como morrenas en los bordes, en el centro y en el frente.</li>
+        <li><strong>El glaciar erosiona</strong> el valle por el fondo y por los lados: lo ensancha y lo deja con forma de U, con las paredes casi verticales.</li>
+        <li><strong>Cuando el hielo se retira</strong> quedan las formas: el valle en U, los valles colgados con sus cascadas y, tras la morrena frontal, un lago.</li>
+        <li><strong>Es un glaciar ideal</strong>: se ha generado por ordenador en perspectiva, con el relieve exagerado para que se vean bien todas las partes.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba las partes del glaciar y del paisaje glaciar.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar las 10 partes.</li>
+        <li>Comparar con la lámina del <a href="geologia-rio.html" style="color:#8a5a22">río</a>: ¿por qué el valle es en V con un río y en U con un glaciar?</li>
+        <li>Buscar en un mapa o en fotos de los Pirineos un circo, un ibón o un valle en U.</li>
+        <li>Relacionar con la lámina del <a href="geologia-rio.html" style="color:#8a5a22">río</a>: son dos agentes geológicos que modelan el relieve.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: imagen generada por ordenador a partir de un terreno sintético (no representa un glaciar real), con las partes del glaciar y del paisaje glaciar que se estudian en la ESO. Licencia CC BY 4.0: puede copiarse y adaptarse citando la fuente.</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">GEOLOGÍA: EL RELIEVE Y LOS AGENTES GEOLÓGICOS</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">10 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Circo glaciar": {"grupo": "El glaciar", "img": "ficha/geo-circo-glaciar.webp", "txt": "Depresión en forma de anfiteatro o cuenco en la cabecera del glaciar, excavada por el propio hielo. Allí se acumula la nieve que se transforma en hielo y de allí parte el glaciar. Sus paredes son muy empinadas.", "dato": "Es la zona de acumulación: allí nieva más de lo que se funde."}, "Arista": {"grupo": "El glaciar", "img": "ficha/geo-arista.webp", "txt": "Cresta estrecha y afilada que separa dos circos o dos valles glaciares. Se forma cuando la erosión del hielo en los dos lados va desgastando la roca hasta dejar solo un filo.", "dato": "Cuando varias aristas se juntan en la cima forman un pico piramidal, como el Cervino."}, "Lengua glaciar": {"grupo": "El glaciar", "img": "ficha/geo-lengua-glaciar.webp", "txt": "Masa de hielo que fluye lentamente valle abajo por efecto de su propio peso. Arrastra y erosiona la roca del fondo y de los lados. Se mueve entre unos pocos centímetros y varios metros al día.", "dato": "En España solo quedan pequeños glaciares en los Pirineos."}, "Grietas": {"grupo": "El glaciar", "img": "ficha/geo-grietas.webp", "txt": "Fracturas profundas del hielo que se abren cuando el glaciar se curva o se acelera, por ejemplo al pasar por un escalón o por una curva del valle. Pueden tener decenas de metros de profundidad y quedar ocultas bajo la nieve.", "dato": "Son uno de los mayores peligros para quien cruza un glaciar."}, "Morrena lateral": {"grupo": "El glaciar", "img": "ficha/geo-morrena-lateral.webp", "txt": "Cresta de piedras, grava y arena que el glaciar arrastra y deposita en sus bordes. Procede de los fragmentos de roca que caen de las laderas sobre el hielo y de lo que el glaciar arranca de las paredes.", "dato": "Cuando el glaciar se retira, las morrenas laterales quedan como lomas largas a los lados del valle."}, "Morrena central": {"grupo": "El glaciar", "img": "ficha/geo-morrena-central.webp", "txt": "Franja de derrubios sobre el hielo, en el centro del glaciar. Se forma cuando se unen dos glaciares: las morrenas laterales que se encuentran en la confluencia pasan a ser una sola franja en el medio.", "dato": "Se ve como una banda oscura que sigue la dirección del flujo."}, "Morrena frontal": {"grupo": "El glaciar", "img": "ficha/geo-morrena-frontal.webp", "txt": "Arco de piedras, grava y arcilla que se acumula en el frente de la lengua, en el punto más lejano al que llegó el hielo. Marca el límite máximo del avance del glaciar. También se llama morrena terminal.", "dato": "Muchas veces cierra un lago tras ella, como una presa natural."}, "Lago glaciar": {"grupo": "El glaciar", "img": "ficha/geo-lago-glaciar.webp", "txt": "Lago que se forma cuando el agua de fusión queda retenida, normalmente tras una morrena frontal o en una depresión que excavó el hielo. Suele tener aguas turbias y azuladas por el sedimento fino en suspensión, llamado harina glaciar.", "dato": "En los Pirineos los lagos de montaña de origen glaciar se llaman ibones."}, "Valle en U": {"grupo": "El glaciar", "img": "ficha/geo-valle-en-u.webp", "txt": "Valle de fondo ancho y plano y paredes casi verticales, excavado por un glaciar. El hielo, a diferencia del río, ocupa todo el valle y erosiona por igual el fondo y los lados, por eso su sección tiene forma de U.", "dato": "Un río forma valles en V; un glaciar, valles en U."}, "Valle colgado": {"grupo": "El glaciar", "img": "ficha/geo-valle-colgado.webp", "txt": "Valle afluente que queda a mayor altura que el valle principal. El glaciar principal, más grande, excavó mucho más hondo que el afluente; al desaparecer el hielo, el valle lateral queda colgado, normalmente con una cascada.", "dato": "Muchas cascadas famosas, como las del valle de Yosemite, caen desde valles colgados."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
