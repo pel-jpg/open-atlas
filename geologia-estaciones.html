@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estaciones y movimientos de la Tierra — Rotación, traslación y estaciones · Atlas Abierto</title>
+<meta name="description" content="Estaciones y movimientos de la Tierra para ESO: rotación, traslación, eje inclinado, ecuador, equinoccios y solsticios, con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-estaciones.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Estaciones y movimientos de la Tierra — Rotación, traslación y estaciones · Atlas Abierto">
+<meta property="og:description" content="Estaciones y movimientos de la Tierra para ESO: rotación, traslación, eje inclinado, ecuador, equinoccios y solsticios, con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-estaciones.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:3320/1790;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Estaciones y movimientos de la Tierra — Rotación, traslación y estaciones","description":"Estaciones y movimientos de la Tierra para ESO: rotación, traslación, eje inclinado, ecuador, equinoccios y solsticios, con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-estaciones.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"Estaciones y movimientos de la Tierra — Rotación, traslación y estaciones","item":"https://atlasabierto.org/geologia-estaciones.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / Estaciones y movimientos de la Tierra</div>
+    <h1>Estaciones y movimientos de la Tierra</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3320 1790" width="3320" height="1790" role="img" aria-label="Lámina: los movimientos de la Tierra y las estaciones"><defs><marker id="ra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffd36b"/></marker></defs><rect width="3320" height="1790" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="3280" height="1750" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1660" y="95" text-anchor="middle">Los movimientos de la Tierra y las estaciones del año</text><image href="geologia/estaciones.webp" x="60" y="170" width="3200" height="1500"/><ellipse cx="1660" cy="470" rx="1300" ry="230" fill="none" stroke="#cfd8f0" stroke-width="3" stroke-dasharray="14 12" opacity=".85"/><polyline points="2554.8,319.3 2593.0,309.8 2560.4,287.8" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="721.9,327.0 754.5,304.9 716.3,295.4" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="765.2,620.7 727.0,630.2 759.6,652.2" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="2598.1,613.0 2565.5,635.1 2603.7,644.6" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="1710" y="290" text-anchor="start" style="font:italic 34px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">20-21 de marzo</text><text x="408" y="482" text-anchor="start" style="font:italic 34px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">21 de junio</text><text x="1710" y="678" text-anchor="start" style="font:italic 34px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">22-23 de septiembre</text><text x="2912" y="482" text-anchor="end" style="font:italic 34px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">21-22 de diciembre</text><line x1="105" y1="1060" x2="276" y2="1060" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="105" y1="1200" x2="276" y2="1200" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="105" y1="1340" x2="276" y2="1340" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="765" y1="1060" x2="936" y2="1060" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="765" y1="1200" x2="936" y2="1200" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="765" y1="1340" x2="936" y2="1340" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1425" y1="1060" x2="1596" y2="1060" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1425" y1="1200" x2="1596" y2="1200" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1425" y1="1340" x2="1596" y2="1340" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2085" y1="1060" x2="2256" y2="1060" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2085" y1="1200" x2="2256" y2="1200" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2085" y1="1340" x2="2256" y2="1340" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><text x="100" y="985" style="font:italic 34px Georgia,serif;fill:#ffd36b;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Rayos del Sol</text><line x1="540.0" y1="1512.0" x2="540.0" y2="888.0" stroke="#fff" stroke-width="4" stroke-dasharray="16 9"/><path d="M290.0 1200.0 L290.0 1201.6 L290.1 1203.1 L290.3 1204.7 L290.5 1206.2 L290.8 1207.8 L291.1 1209.3 L291.5 1210.9 L292.0 1212.4 L292.5 1214.0 L293.1 1215.5 L293.7 1217.1 L294.4 1218.6 L295.2 1220.1 L296.0 1221.7 L296.9 1223.2 L297.9 1224.7 L298.9 1226.2 L299.9 1227.7 L301.1 1229.2 L302.2 1230.7 L303.5 1232.2 L304.8 1233.6 L306.1 1235.1 L307.6 1236.5 L309.0 1238.0 L310.6 1239.4 L312.1 1240.9 L313.8 1242.3 L315.5 1243.7 L317.2 1245.1 L319.1 1246.5 L320.9 1247.8 L322.8 1249.2 L324.8 1250.5 L326.8 1251.9 L328.9 1253.2 L331.0 1254.5 L333.2 1255.8 L335.5 1257.1 L337.7 1258.4 L340.1 1259.6 L342.5 1260.9 L344.9 1262.1 L347.4 1263.3 L349.9 1264.5 L352.5 1265.7 L355.1 1266.8 L357.8 1268.0 L360.5 1269.1 L363.2 1270.2 L366.0 1271.3 L368.9 1272.4 L371.7 1273.4 L374.7 1274.5 L377.6 1275.5 L380.6 1276.5 L383.7 1277.5 L386.8 1278.5 L389.9 1279.4 L393.1 1280.3 L396.2 1281.2 L399.5 1282.1 L402.7 1283.0 L406.0 1283.8 L409.4 1284.7 L412.7 1285.5 L416.1 1286.2 L419.6 1287.0 L423.0 1287.7 L426.5 1288.5 L430.0 1289.2 L433.6 1289.8 L437.1 1290.5 L440.7 1291.1 L444.3 1291.7 L448.0 1292.3 L451.6 1292.9 L455.3 1293.4 L459.0 1293.9 L462.7 1294.4 L466.5 1294.9 L470.3 1295.3 L474.0 1295.8 L477.8 1296.2 L481.6 1296.5 L485.5 1296.9 L489.3 1297.2 L493.2 1297.5 L497.0 1297.8 L500.9 1298.1 L504.8 1298.3 L508.7 1298.5 L512.6 1298.7 L516.5 1298.8 L520.4 1299.0 L524.3 1299.1 L528.2 1299.2 L532.1 1299.2 L536.1 1299.3 L540.0 1299.3 L543.9 1299.3 L547.9 1299.2 L551.8 1299.2 L555.7 1299.1 L559.6 1299.0 L563.5 1298.8 L567.4 1298.7 L571.3 1298.5 L575.2 1298.3 L579.1 1298.1 L583.0 1297.8 L586.8 1297.5 L590.7 1297.2 L594.5 1296.9 L598.4 1296.5 L602.2 1296.2 L606.0 1295.8 L609.7 1295.3 L613.5 1294.9 L617.3 1294.4 L621.0 1293.9 L624.7 1293.4 L628.4 1292.9 L632.0 1292.3 L635.7 1291.7 L639.3 1291.1 L642.9 1290.5 L646.4 1289.8 L650.0 1289.2 L653.5 1288.5 L657.0 1287.7 L660.4 1287.0 L663.9 1286.2 L667.3 1285.5 L670.6 1284.7 L674.0 1283.8 L677.3 1283.0 L680.5 1282.1 L683.8 1281.2 L686.9 1280.3 L690.1 1279.4 L693.2 1278.5 L696.3 1277.5 L699.4 1276.5 L702.4 1275.5 L705.3 1274.5 L708.3 1273.4 L711.1 1272.4 L714.0 1271.3 L716.8 1270.2 L719.5 1269.1 L722.2 1268.0 L724.9 1266.8 L727.5 1265.7 L730.1 1264.5 L732.6 1263.3 L735.1 1262.1 L737.5 1260.9 L739.9 1259.6 L742.3 1258.4 L744.5 1257.1 L746.8 1255.8 L749.0 1254.5 L751.1 1253.2 L753.2 1251.9 L755.2 1250.5 L757.2 1249.2 L759.1 1247.8 L760.9 1246.5 L762.8 1245.1 L764.5 1243.7 L766.2 1242.3 L767.9 1240.9 L769.4 1239.4 L771.0 1238.0 L772.4 1236.5 L773.9 1235.1 L775.2 1233.6 L776.5 1232.2 L777.8 1230.7 L778.9 1229.2 L780.1 1227.7 L781.1 1226.2 L782.1 1224.7 L783.1 1223.2 L784.0 1221.7 L784.8 1220.1 L785.6 1218.6 L786.3 1217.1 L786.9 1215.5 L787.5 1214.0 L788.0 1212.4 L788.5 1210.9 L788.9 1209.3 L789.2 1207.8 L789.5 1206.2 L789.7 1204.7 L789.9 1203.1 L790.0 1201.6 L790.0 1200.0" fill="none" stroke="#ff8a5c" stroke-width="5.5"/><path d="M491.2 858.7 L488.0 859.4 L484.9 860.2 L481.9 861.0 L479.1 861.9 L476.3 862.8 L473.8 863.7 L471.3 864.7 L469.0 865.7 L466.9 866.7 L464.9 867.8 L463.2 868.9 L461.5 870.0 L460.1 871.2 L458.8 872.3 L457.7 873.5 L456.8 874.7 L456.1 875.9 L455.5 877.1 L455.2 878.3 L455.0 879.5 L455.0 880.8 L455.3 882.0 L455.7 883.2 L456.2 884.4 L457.0 885.6 L458.0 886.8 L459.1 888.0 L460.4 889.1 L461.9 890.3 L463.6 891.4 L465.4 892.5 L467.4 893.5 L469.6 894.6 L471.9 895.6 L474.4 896.5 L477.0 897.5 L479.8 898.4 L482.7 899.2 L485.7 900.0 L488.8 900.8 L492.1 901.5 L495.5 902.1 L498.9 902.8 L502.5 903.3 L506.1 903.8 L509.8 904.3 L513.6 904.7 L517.4 905.1 L521.3 905.4 L525.2 905.6 L529.2 905.8 L533.2 905.9 L537.2 906.0 L541.2 906.0 L545.2 906.0 L549.2 905.8 L553.2 905.7 L557.1 905.5 L561.0 905.2 L564.9 904.9 L568.7 904.5 L572.4 904.0 L576.1 903.5 L579.6 903.0 L583.1 902.4 L586.5 901.8 L589.8 901.1 L593.0 900.3 L596.1 899.5 L599.0 898.7 L601.9 897.8 L604.5 896.9 L607.1 896.0 L609.5 895.0 L611.7 894.0 L613.8 892.9 L615.7 891.8 L617.4 890.7 L619.0 889.6 L620.4 888.5 L621.6 887.3 L622.6 886.1 L623.5 884.9 L624.1 883.7 L624.6 882.5 L624.9 881.3 L625.0 880.0 L624.9 878.8 L624.6 877.6 L624.2 876.4 L623.5 875.2 L622.7 874.0 L621.7 872.8 L620.5 871.6 L619.1 870.5 L617.5 869.3 L615.8 868.2 L613.9 867.2 L611.8 866.1 L609.6 865.1" fill="none" stroke="#9fe0ff" stroke-width="5" stroke-linecap="round"/><polygon points="589.8,855.5 615.3,853.4 604.0,876.8" fill="#9fe0ff"/><line x1="1323.9" y1="1486.3" x2="1076.1" y2="913.7" stroke="#fff" stroke-width="4" stroke-dasharray="16 9"/><path d="M970.6 1299.3 L970.6 1299.3 L970.7 1299.2 L970.8 1299.2 L971.0 1299.1 L971.3 1299.0 L971.6 1298.8 L971.9 1298.7 L972.4 1298.5 L972.9 1298.3 L973.4 1298.1 L974.0 1297.8 L974.6 1297.5 L975.3 1297.2 L976.1 1296.9 L976.9 1296.5 L977.8 1296.2 L978.7 1295.8 L979.7 1295.3 L980.7 1294.9 L981.8 1294.4 L982.9 1293.9 L984.1 1293.4 L985.4 1292.9 L986.7 1292.3 L988.0 1291.7 L989.4 1291.1 L990.9 1290.5 L992.4 1289.8 L994.0 1289.2 L995.6 1288.5 L997.2 1287.7 L998.9 1287.0 L1000.7 1286.2 L1002.5 1285.5 L1004.4 1284.7 L1006.3 1283.8 L1008.2 1283.0 L1010.2 1282.1 L1012.3 1281.2 L1014.4 1280.3 L1016.5 1279.4 L1018.7 1278.5 L1020.9 1277.5 L1023.2 1276.5 L1025.5 1275.5 L1027.9 1274.5 L1030.3 1273.4 L1032.7 1272.4 L1035.2 1271.3 L1037.8 1270.2 L1040.3 1269.1 L1042.9 1268.0 L1045.6 1266.8 L1048.3 1265.7 L1051.0 1264.5 L1053.8 1263.3 L1056.5 1262.1 L1059.4 1260.9 L1062.2 1259.6 L1065.1 1258.4 L1068.1 1257.1 L1071.0 1255.8 L1074.0 1254.5 L1077.1 1253.2 L1080.1 1251.9 L1083.2 1250.5 L1086.3 1249.2 L1089.5 1247.8 L1092.6 1246.5 L1095.8 1245.1 L1099.1 1243.7 L1102.3 1242.3 L1105.6 1240.9 L1108.9 1239.4 L1112.2 1238.0 L1115.5 1236.5 L1118.9 1235.1 L1122.3 1233.6 L1125.7 1232.2 L1129.1 1230.7 L1132.5 1229.2 L1136.0 1227.7 L1139.5 1226.2 L1142.9 1224.7 L1146.4 1223.2 L1149.9 1221.7 L1153.5 1220.1 L1157.0 1218.6 L1160.6 1217.1 L1164.1 1215.5 L1167.7 1214.0 L1171.2 1212.4 L1174.8 1210.9 L1178.4 1209.3 L1182.0 1207.8 L1185.6 1206.2 L1189.2 1204.7 L1192.8 1203.1 L1196.4 1201.6 L1200.0 1200.0 L1203.6 1198.4 L1207.2 1196.9 L1210.8 1195.3 L1214.4 1193.8 L1218.0 1192.2 L1221.6 1190.7 L1225.2 1189.1 L1228.8 1187.6 L1232.3 1186.0 L1235.9 1184.5 L1239.4 1182.9 L1243.0 1181.4 L1246.5 1179.9 L1250.1 1178.3 L1253.6 1176.8 L1257.1 1175.3 L1260.5 1173.8 L1264.0 1172.3 L1267.5 1170.8 L1270.9 1169.3 L1274.3 1167.8 L1277.7 1166.4 L1281.1 1164.9 L1284.5 1163.5 L1287.8 1162.0 L1291.1 1160.6 L1294.4 1159.1 L1297.7 1157.7 L1300.9 1156.3 L1304.2 1154.9 L1307.4 1153.5 L1310.5 1152.2 L1313.7 1150.8 L1316.8 1149.5 L1319.9 1148.1 L1322.9 1146.8 L1326.0 1145.5 L1329.0 1144.2 L1331.9 1142.9 L1334.9 1141.6 L1337.8 1140.4 L1340.6 1139.1 L1343.5 1137.9 L1346.2 1136.7 L1349.0 1135.5 L1351.7 1134.3 L1354.4 1133.2 L1357.1 1132.0 L1359.7 1130.9 L1362.2 1129.8 L1364.8 1128.7 L1367.3 1127.6 L1369.7 1126.6 L1372.1 1125.5 L1374.5 1124.5 L1376.8 1123.5 L1379.1 1122.5 L1381.3 1121.5 L1383.5 1120.6 L1385.6 1119.7 L1387.7 1118.8 L1389.8 1117.9 L1391.8 1117.0 L1393.7 1116.2 L1395.6 1115.3 L1397.5 1114.5 L1399.3 1113.8 L1401.1 1113.0 L1402.8 1112.3 L1404.4 1111.5 L1406.0 1110.8 L1407.6 1110.2 L1409.1 1109.5 L1410.6 1108.9 L1412.0 1108.3 L1413.3 1107.7 L1414.6 1107.1 L1415.9 1106.6 L1417.1 1106.1 L1418.2 1105.6 L1419.3 1105.1 L1420.3 1104.7 L1421.3 1104.2 L1422.2 1103.8 L1423.1 1103.5 L1423.9 1103.1 L1424.7 1102.8 L1425.4 1102.5 L1426.0 1102.2 L1426.6 1101.9 L1427.1 1101.7 L1427.6 1101.5 L1428.1 1101.3 L1428.4 1101.2 L1428.7 1101.0 L1429.0 1100.9 L1429.2 1100.8 L1429.3 1100.8 L1429.4 1100.7 L1429.4 1100.7" fill="none" stroke="#ff8a5c" stroke-width="5.5"/><path d="M1019.7 906.1 L1017.0 908.1 L1014.5 910.0 L1012.1 912.0 L1009.8 913.9 L1007.6 915.8 L1005.6 917.7 L1003.8 919.5 L1002.1 921.4 L1000.6 923.2 L999.2 924.9 L998.0 926.6 L996.9 928.3 L996.0 929.9 L995.3 931.5 L994.8 933.0 L994.4 934.5 L994.3 935.9 L994.2 937.2 L994.4 938.5 L994.7 939.7 L995.2 940.8 L995.9 941.8 L996.8 942.8 L997.8 943.6 L999.0 944.4 L1000.3 945.2 L1001.9 945.8 L1003.5 946.3 L1005.3 946.8 L1007.3 947.1 L1009.4 947.4 L1011.7 947.6 L1014.1 947.6 L1016.6 947.6 L1019.3 947.5 L1022.1 947.4 L1024.9 947.1 L1027.9 946.7 L1031.0 946.2 L1034.2 945.7 L1037.5 945.1 L1040.8 944.3 L1044.3 943.5 L1047.7 942.6 L1051.3 941.7 L1054.9 940.6 L1058.5 939.5 L1062.2 938.3 L1065.8 937.0 L1069.5 935.7 L1073.2 934.3 L1076.9 932.8 L1080.6 931.3 L1084.3 929.7 L1088.0 928.1 L1091.6 926.4 L1095.2 924.7 L1098.7 922.9 L1102.2 921.1 L1105.6 919.3 L1108.9 917.4 L1112.2 915.5 L1115.4 913.6 L1118.4 911.7 L1121.4 909.7 L1124.3 907.8 L1127.0 905.9 L1129.7 903.9 L1132.2 902.0 L1134.5 900.0 L1136.8 898.1 L1138.9 896.2 L1140.8 894.3 L1142.6 892.5 L1144.3 890.7 L1145.7 888.9 L1147.1 887.1 L1148.2 885.4 L1149.2 883.8 L1150.0 882.2 L1150.7 880.6 L1151.2 879.1 L1151.5 877.7 L1151.6 876.3 L1151.6 875.0 L1151.3 873.8 L1150.9 872.6 L1150.4 871.5 L1149.6 870.5 L1148.7 869.6 L1147.6 868.7 L1146.4 868.0 L1145.0 867.3 L1143.4 866.7 L1141.7 866.2 L1139.8 865.7 L1137.8 865.4 L1135.6 865.2 L1133.3 865.0 L1130.9 865.0" fill="none" stroke="#9fe0ff" stroke-width="5" stroke-linecap="round"/><polygon points="1108.9,864.1 1131.4,852.0 1130.3,878.0" fill="#9fe0ff"/><line x1="1860.0" y1="1512.0" x2="1860.0" y2="888.0" stroke="#fff" stroke-width="4" stroke-dasharray="16 9"/><path d="M1610.0 1200.0 L1610.0 1201.6 L1610.1 1203.1 L1610.3 1204.7 L1610.5 1206.2 L1610.8 1207.8 L1611.1 1209.3 L1611.5 1210.9 L1612.0 1212.4 L1612.5 1214.0 L1613.1 1215.5 L1613.7 1217.1 L1614.4 1218.6 L1615.2 1220.1 L1616.0 1221.7 L1616.9 1223.2 L1617.9 1224.7 L1618.9 1226.2 L1619.9 1227.7 L1621.1 1229.2 L1622.2 1230.7 L1623.5 1232.2 L1624.8 1233.6 L1626.1 1235.1 L1627.6 1236.5 L1629.0 1238.0 L1630.6 1239.4 L1632.1 1240.9 L1633.8 1242.3 L1635.5 1243.7 L1637.2 1245.1 L1639.1 1246.5 L1640.9 1247.8 L1642.8 1249.2 L1644.8 1250.5 L1646.8 1251.9 L1648.9 1253.2 L1651.0 1254.5 L1653.2 1255.8 L1655.5 1257.1 L1657.7 1258.4 L1660.1 1259.6 L1662.5 1260.9 L1664.9 1262.1 L1667.4 1263.3 L1669.9 1264.5 L1672.5 1265.7 L1675.1 1266.8 L1677.8 1268.0 L1680.5 1269.1 L1683.2 1270.2 L1686.0 1271.3 L1688.9 1272.4 L1691.7 1273.4 L1694.7 1274.5 L1697.6 1275.5 L1700.6 1276.5 L1703.7 1277.5 L1706.8 1278.5 L1709.9 1279.4 L1713.1 1280.3 L1716.2 1281.2 L1719.5 1282.1 L1722.7 1283.0 L1726.0 1283.8 L1729.4 1284.7 L1732.7 1285.5 L1736.1 1286.2 L1739.6 1287.0 L1743.0 1287.7 L1746.5 1288.5 L1750.0 1289.2 L1753.6 1289.8 L1757.1 1290.5 L1760.7 1291.1 L1764.3 1291.7 L1768.0 1292.3 L1771.6 1292.9 L1775.3 1293.4 L1779.0 1293.9 L1782.7 1294.4 L1786.5 1294.9 L1790.3 1295.3 L1794.0 1295.8 L1797.8 1296.2 L1801.6 1296.5 L1805.5 1296.9 L1809.3 1297.2 L1813.2 1297.5 L1817.0 1297.8 L1820.9 1298.1 L1824.8 1298.3 L1828.7 1298.5 L1832.6 1298.7 L1836.5 1298.8 L1840.4 1299.0 L1844.3 1299.1 L1848.2 1299.2 L1852.1 1299.2 L1856.1 1299.3 L1860.0 1299.3 L1863.9 1299.3 L1867.9 1299.2 L1871.8 1299.2 L1875.7 1299.1 L1879.6 1299.0 L1883.5 1298.8 L1887.4 1298.7 L1891.3 1298.5 L1895.2 1298.3 L1899.1 1298.1 L1903.0 1297.8 L1906.8 1297.5 L1910.7 1297.2 L1914.5 1296.9 L1918.4 1296.5 L1922.2 1296.2 L1926.0 1295.8 L1929.7 1295.3 L1933.5 1294.9 L1937.3 1294.4 L1941.0 1293.9 L1944.7 1293.4 L1948.4 1292.9 L1952.0 1292.3 L1955.7 1291.7 L1959.3 1291.1 L1962.9 1290.5 L1966.4 1289.8 L1970.0 1289.2 L1973.5 1288.5 L1977.0 1287.7 L1980.4 1287.0 L1983.9 1286.2 L1987.3 1285.5 L1990.6 1284.7 L1994.0 1283.8 L1997.3 1283.0 L2000.5 1282.1 L2003.8 1281.2 L2006.9 1280.3 L2010.1 1279.4 L2013.2 1278.5 L2016.3 1277.5 L2019.4 1276.5 L2022.4 1275.5 L2025.3 1274.5 L2028.3 1273.4 L2031.1 1272.4 L2034.0 1271.3 L2036.8 1270.2 L2039.5 1269.1 L2042.2 1268.0 L2044.9 1266.8 L2047.5 1265.7 L2050.1 1264.5 L2052.6 1263.3 L2055.1 1262.1 L2057.5 1260.9 L2059.9 1259.6 L2062.3 1258.4 L2064.5 1257.1 L2066.8 1255.8 L2069.0 1254.5 L2071.1 1253.2 L2073.2 1251.9 L2075.2 1250.5 L2077.2 1249.2 L2079.1 1247.8 L2080.9 1246.5 L2082.8 1245.1 L2084.5 1243.7 L2086.2 1242.3 L2087.9 1240.9 L2089.4 1239.4 L2091.0 1238.0 L2092.4 1236.5 L2093.9 1235.1 L2095.2 1233.6 L2096.5 1232.2 L2097.8 1230.7 L2098.9 1229.2 L2100.1 1227.7 L2101.1 1226.2 L2102.1 1224.7 L2103.1 1223.2 L2104.0 1221.7 L2104.8 1220.1 L2105.6 1218.6 L2106.3 1217.1 L2106.9 1215.5 L2107.5 1214.0 L2108.0 1212.4 L2108.5 1210.9 L2108.9 1209.3 L2109.2 1207.8 L2109.5 1206.2 L2109.7 1204.7 L2109.9 1203.1 L2110.0 1201.6 L2110.0 1200.0" fill="none" stroke="#ff8a5c" stroke-width="5.5"/><path d="M1811.2 858.7 L1808.0 859.4 L1804.9 860.2 L1801.9 861.0 L1799.1 861.9 L1796.3 862.8 L1793.8 863.7 L1791.3 864.7 L1789.0 865.7 L1786.9 866.7 L1784.9 867.8 L1783.2 868.9 L1781.5 870.0 L1780.1 871.2 L1778.8 872.3 L1777.7 873.5 L1776.8 874.7 L1776.1 875.9 L1775.5 877.1 L1775.2 878.3 L1775.0 879.5 L1775.0 880.8 L1775.3 882.0 L1775.7 883.2 L1776.2 884.4 L1777.0 885.6 L1778.0 886.8 L1779.1 888.0 L1780.4 889.1 L1781.9 890.3 L1783.6 891.4 L1785.4 892.5 L1787.4 893.5 L1789.6 894.6 L1791.9 895.6 L1794.4 896.5 L1797.0 897.5 L1799.8 898.4 L1802.7 899.2 L1805.7 900.0 L1808.8 900.8 L1812.1 901.5 L1815.5 902.1 L1818.9 902.8 L1822.5 903.3 L1826.1 903.8 L1829.8 904.3 L1833.6 904.7 L1837.4 905.1 L1841.3 905.4 L1845.2 905.6 L1849.2 905.8 L1853.2 905.9 L1857.2 906.0 L1861.2 906.0 L1865.2 906.0 L1869.2 905.8 L1873.2 905.7 L1877.1 905.5 L1881.0 905.2 L1884.9 904.9 L1888.7 904.5 L1892.4 904.0 L1896.1 903.5 L1899.6 903.0 L1903.1 902.4 L1906.5 901.8 L1909.8 901.1 L1913.0 900.3 L1916.1 899.5 L1919.0 898.7 L1921.9 897.8 L1924.5 896.9 L1927.1 896.0 L1929.5 895.0 L1931.7 894.0 L1933.8 892.9 L1935.7 891.8 L1937.4 890.7 L1939.0 889.6 L1940.4 888.5 L1941.6 887.3 L1942.6 886.1 L1943.5 884.9 L1944.1 883.7 L1944.6 882.5 L1944.9 881.3 L1945.0 880.0 L1944.9 878.8 L1944.6 877.6 L1944.2 876.4 L1943.5 875.2 L1942.7 874.0 L1941.7 872.8 L1940.5 871.6 L1939.1 870.5 L1937.5 869.3 L1935.8 868.2 L1933.9 867.2 L1931.8 866.1 L1929.6 865.1" fill="none" stroke="#9fe0ff" stroke-width="5" stroke-linecap="round"/><polygon points="1909.8,855.5 1935.3,853.4 1924.0,876.8" fill="#9fe0ff"/><line x1="2396.1" y1="1486.3" x2="2643.9" y2="913.7" stroke="#fff" stroke-width="4" stroke-dasharray="16 9"/><path d="M2290.6 1100.7 L2290.6 1100.7 L2290.7 1100.8 L2290.8 1100.8 L2291.0 1100.9 L2291.3 1101.0 L2291.6 1101.2 L2291.9 1101.3 L2292.4 1101.5 L2292.9 1101.7 L2293.4 1101.9 L2294.0 1102.2 L2294.6 1102.5 L2295.3 1102.8 L2296.1 1103.1 L2296.9 1103.5 L2297.8 1103.8 L2298.7 1104.2 L2299.7 1104.7 L2300.7 1105.1 L2301.8 1105.6 L2302.9 1106.1 L2304.1 1106.6 L2305.4 1107.1 L2306.7 1107.7 L2308.0 1108.3 L2309.4 1108.9 L2310.9 1109.5 L2312.4 1110.2 L2314.0 1110.8 L2315.6 1111.5 L2317.2 1112.3 L2318.9 1113.0 L2320.7 1113.8 L2322.5 1114.5 L2324.4 1115.3 L2326.3 1116.2 L2328.2 1117.0 L2330.2 1117.9 L2332.3 1118.8 L2334.4 1119.7 L2336.5 1120.6 L2338.7 1121.5 L2340.9 1122.5 L2343.2 1123.5 L2345.5 1124.5 L2347.9 1125.5 L2350.3 1126.6 L2352.7 1127.6 L2355.2 1128.7 L2357.8 1129.8 L2360.3 1130.9 L2362.9 1132.0 L2365.6 1133.2 L2368.3 1134.3 L2371.0 1135.5 L2373.8 1136.7 L2376.5 1137.9 L2379.4 1139.1 L2382.2 1140.4 L2385.1 1141.6 L2388.1 1142.9 L2391.0 1144.2 L2394.0 1145.5 L2397.1 1146.8 L2400.1 1148.1 L2403.2 1149.5 L2406.3 1150.8 L2409.5 1152.2 L2412.6 1153.5 L2415.8 1154.9 L2419.1 1156.3 L2422.3 1157.7 L2425.6 1159.1 L2428.9 1160.6 L2432.2 1162.0 L2435.5 1163.5 L2438.9 1164.9 L2442.3 1166.4 L2445.7 1167.8 L2449.1 1169.3 L2452.5 1170.8 L2456.0 1172.3 L2459.5 1173.8 L2462.9 1175.3 L2466.4 1176.8 L2469.9 1178.3 L2473.5 1179.9 L2477.0 1181.4 L2480.6 1182.9 L2484.1 1184.5 L2487.7 1186.0 L2491.2 1187.6 L2494.8 1189.1 L2498.4 1190.7 L2502.0 1192.2 L2505.6 1193.8 L2509.2 1195.3 L2512.8 1196.9 L2516.4 1198.4 L2520.0 1200.0 L2523.6 1201.6 L2527.2 1203.1 L2530.8 1204.7 L2534.4 1206.2 L2538.0 1207.8 L2541.6 1209.3 L2545.2 1210.9 L2548.8 1212.4 L2552.3 1214.0 L2555.9 1215.5 L2559.4 1217.1 L2563.0 1218.6 L2566.5 1220.1 L2570.1 1221.7 L2573.6 1223.2 L2577.1 1224.7 L2580.5 1226.2 L2584.0 1227.7 L2587.5 1229.2 L2590.9 1230.7 L2594.3 1232.2 L2597.7 1233.6 L2601.1 1235.1 L2604.5 1236.5 L2607.8 1238.0 L2611.1 1239.4 L2614.4 1240.9 L2617.7 1242.3 L2620.9 1243.7 L2624.2 1245.1 L2627.4 1246.5 L2630.5 1247.8 L2633.7 1249.2 L2636.8 1250.5 L2639.9 1251.9 L2642.9 1253.2 L2646.0 1254.5 L2649.0 1255.8 L2651.9 1257.1 L2654.9 1258.4 L2657.8 1259.6 L2660.6 1260.9 L2663.5 1262.1 L2666.2 1263.3 L2669.0 1264.5 L2671.7 1265.7 L2674.4 1266.8 L2677.1 1268.0 L2679.7 1269.1 L2682.2 1270.2 L2684.8 1271.3 L2687.3 1272.4 L2689.7 1273.4 L2692.1 1274.5 L2694.5 1275.5 L2696.8 1276.5 L2699.1 1277.5 L2701.3 1278.5 L2703.5 1279.4 L2705.6 1280.3 L2707.7 1281.2 L2709.8 1282.1 L2711.8 1283.0 L2713.7 1283.8 L2715.6 1284.7 L2717.5 1285.5 L2719.3 1286.2 L2721.1 1287.0 L2722.8 1287.7 L2724.4 1288.5 L2726.0 1289.2 L2727.6 1289.8 L2729.1 1290.5 L2730.6 1291.1 L2732.0 1291.7 L2733.3 1292.3 L2734.6 1292.9 L2735.9 1293.4 L2737.1 1293.9 L2738.2 1294.4 L2739.3 1294.9 L2740.3 1295.3 L2741.3 1295.8 L2742.2 1296.2 L2743.1 1296.5 L2743.9 1296.9 L2744.7 1297.2 L2745.4 1297.5 L2746.0 1297.8 L2746.6 1298.1 L2747.1 1298.3 L2747.6 1298.5 L2748.1 1298.7 L2748.4 1298.8 L2748.7 1299.0 L2749.0 1299.1 L2749.2 1299.2 L2749.3 1299.2 L2749.4 1299.3 L2749.4 1299.3" fill="none" stroke="#ff8a5c" stroke-width="5.5"/><path d="M2610.8 867.4 L2607.6 866.8 L2604.4 866.3 L2601.3 865.8 L2598.4 865.5 L2595.5 865.2 L2592.8 865.1 L2590.1 865.0 L2587.6 865.0 L2585.3 865.1 L2583.1 865.3 L2581.0 865.6 L2579.0 866.0 L2577.3 866.5 L2575.6 867.0 L2574.1 867.7 L2572.8 868.4 L2571.7 869.2 L2570.7 870.1 L2569.9 871.1 L2569.3 872.1 L2568.8 873.3 L2568.5 874.5 L2568.4 875.8 L2568.5 877.1 L2568.7 878.5 L2569.1 880.0 L2569.7 881.5 L2570.4 883.1 L2571.4 884.8 L2572.4 886.4 L2573.7 888.2 L2575.1 889.9 L2576.7 891.7 L2578.4 893.6 L2580.3 895.4 L2582.4 897.3 L2584.5 899.2 L2586.9 901.2 L2589.3 903.1 L2591.9 905.1 L2594.6 907.0 L2597.4 909.0 L2600.3 910.9 L2603.4 912.8 L2606.5 914.7 L2609.7 916.6 L2613.0 918.5 L2616.4 920.4 L2619.9 922.2 L2623.4 924.0 L2626.9 925.7 L2630.5 927.4 L2634.2 929.0 L2637.9 930.6 L2641.5 932.2 L2645.2 933.7 L2649.0 935.1 L2652.7 936.5 L2656.3 937.8 L2660.0 939.0 L2663.7 940.2 L2667.3 941.2 L2670.8 942.2 L2674.3 943.2 L2677.8 944.0 L2681.2 944.8 L2684.5 945.4 L2687.7 946.0 L2690.8 946.5 L2693.8 946.9 L2696.8 947.3 L2699.6 947.5 L2702.3 947.6 L2704.9 947.7 L2707.3 947.6 L2709.6 947.5 L2711.8 947.2 L2713.9 946.9 L2715.8 946.5 L2717.5 946.0 L2719.1 945.4 L2720.5 944.7 L2721.7 944.0 L2722.8 943.1 L2723.7 942.2 L2724.5 941.2 L2725.1 940.1 L2725.5 939.0 L2725.7 937.7 L2725.8 936.4 L2725.7 935.1 L2725.4 933.6 L2724.9 932.1 L2724.3 930.6 L2723.5 929.0 L2722.5 927.3 L2721.3 925.6 L2720.0 923.9 L2718.5 922.1 L2716.9 920.3" fill="none" stroke="#9fe0ff" stroke-width="5" stroke-linecap="round"/><polygon points="2702.5,903.6 2726.8,911.8 2707.1,928.8" fill="#9fe0ff"/><text x="540.0" y="862.0" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">N</text><text x="540.0" y="1562.0" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">S</text><text x="1061.0" y="890.8" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">N</text><text x="1339.0" y="1533.2" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">S</text><text x="1860.0" y="862.0" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">N</text><text x="1860.0" y="1562.0" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">S</text><text x="2659.0" y="890.8" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">N</text><text x="2381.0" y="1533.2" text-anchor="middle" style="font:700 38px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:6px;paint-order:stroke">S</text><text class="sub" x="1660" y="1750" text-anchor="middle">Esquema fuera de escala. Vista del hemisferio norte: en el hemisferio sur las estaciones son las contrarias.</text></g><g id="hitzones"><path class="organo" data-cat="ti-est" data-name="Equinoccio de primavera" d="M540 942 L495 946 L448 959 L407 979 L370 1006 L346 1030 L328 1053 L304 1096 L288 1145 L282 1200 L286 1245 L299 1292 L319 1333 L346 1370 L370 1394 L393 1412 L436 1436 L485 1452 L540 1458 L585 1454 L632 1441 L673 1421 L710 1394 L734 1370 L752 1347 L776 1304 L792 1255 L798 1200 L794 1155 L781 1108 L761 1067 L734 1030 L710 1006 L687 988 L644 964 L595 948Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Solsticio de verano" d="M1200 942 L1155 946 L1108 959 L1067 979 L1030 1006 L1006 1030 L988 1053 L964 1096 L948 1145 L942 1200 L946 1245 L959 1292 L979 1333 L1006 1370 L1030 1394 L1053 1412 L1096 1436 L1145 1452 L1200 1458 L1245 1454 L1292 1441 L1333 1421 L1370 1394 L1394 1370 L1412 1347 L1436 1304 L1452 1255 L1458 1200 L1454 1155 L1441 1108 L1421 1067 L1394 1030 L1370 1006 L1347 988 L1304 964 L1255 948Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Equinoccio de otoño" d="M1860 942 L1815 946 L1768 959 L1727 979 L1690 1006 L1666 1030 L1648 1053 L1624 1096 L1608 1145 L1602 1200 L1606 1245 L1619 1292 L1639 1333 L1666 1370 L1690 1394 L1713 1412 L1756 1436 L1805 1452 L1860 1458 L1905 1454 L1952 1441 L1993 1421 L2030 1394 L2054 1370 L2072 1347 L2096 1304 L2112 1255 L2118 1200 L2114 1155 L2101 1108 L2081 1067 L2054 1030 L2030 1006 L2007 988 L1964 964 L1915 948Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Solsticio de invierno" d="M2520 942 L2475 946 L2428 959 L2387 979 L2350 1006 L2326 1030 L2308 1053 L2284 1096 L2268 1145 L2262 1200 L2266 1245 L2279 1292 L2299 1333 L2326 1370 L2350 1394 L2373 1412 L2416 1436 L2465 1452 L2520 1458 L2565 1454 L2612 1441 L2653 1421 L2690 1394 L2714 1370 L2732 1347 L2756 1304 L2772 1255 L2778 1200 L2774 1155 L2761 1108 L2741 1067 L2714 1030 L2690 1006 L2667 988 L2624 964 L2575 948Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="El Sol" d="M1660 325 L1636 327 L1610 334 L1585 346 L1560 365 L1544 383 L1528 410 L1518 441 L1515 470 L1517 494 L1524 520 L1536 545 L1555 570 L1573 586 L1600 602 L1631 612 L1660 615 L1684 613 L1710 606 L1735 594 L1760 575 L1776 557 L1792 530 L1802 499 L1805 470 L1803 446 L1796 420 L1784 395 L1765 370 L1747 354 L1720 338 L1689 328Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Órbita terrestre" d="M330 470 L338 503 L353 525 L386 554 L425 576 L472 596 L522 613 L586 631 L655 647 L750 665 L898 687 L1110 709 L1332 723 L1595 730 L1886 727 L2114 716 L2286 702 L2406 689 L2588 662 L2674 645 L2788 616 L2848 596 L2895 576 L2934 554 L2967 525 L2982 503 L2990 470 L2982 437 L2967 415 L2934 386 L2895 364 L2848 344 L2788 324 L2665 293 L2582 277 L2422 253 L2210 231 L1988 217 L1724 210 L1434 213 L1206 224 L1012 240 L914 251 L732 278 L646 295 L539 322 L472 344 L425 364 L386 386 L353 415 L338 437Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Rotación" d="M2553 864 L2550 876 L2554 892 L2562 903 L2591 927 L2629 947 L2674 962 L2707 966 L2729 961 L2737 955 L2742 946 L2744 935 L2741 924 L2732 909 L2725 904 L2717 902 L2706 906 L2700 915 L2701 928 L2692 929 L2648 916 L2621 903 L2595 884 L2616 884 L2627 875 L2628 862 L2619 851 L2598 847 L2577 848 L2560 855Z M1168 867 L1163 858 L1153 851 L1138 847 L1123 849 L1115 857 L1113 865 L1117 876 L1126 882 L1120 889 L1104 900 L1074 915 L1047 925 L1029 929 L1022 928 L1036 914 L1038 906 L1036 898 L1028 890 L1020 888 L1012 890 L1001 897 L980 921 L976 934 L978 947 L982 954 L993 962 L1012 966 L1051 961 L1086 949 L1124 930 L1148 913 L1159 902 L1167 889 L1170 876Z M1757 878 L1758 887 L1764 899 L1779 910 L1802 918 L1845 924 L1896 922 L1929 915 L1943 909 L1955 900 L1961 891 L1963 882 L1961 869 L1957 862 L1945 852 L1930 847 L1922 849 L1914 857 L1913 870 L1919 879 L1911 883 L1876 888 L1842 888 L1814 884 L1804 880 L1822 873 L1827 867 L1829 859 L1825 848 L1819 843 L1811 841 L1792 845 L1767 858 L1761 866Z M437 878 L438 887 L444 899 L459 910 L482 918 L525 924 L576 922 L609 915 L623 909 L635 900 L641 891 L643 882 L641 869 L637 862 L625 852 L610 847 L602 849 L594 857 L593 870 L599 879 L591 883 L556 888 L522 888 L494 884 L484 880 L502 873 L507 867 L509 859 L505 848 L499 843 L491 841 L472 845 L447 858 L441 866Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Eje terrestre" d="M2651 897 L2643 895 L2635 897 L2626 906 L2379 1479 L2380 1494 L2388 1502 L2396 1504 L2404 1502 L2413 1493 L2660 920 L2659 905Z M1068 897 L1060 905 L1059 920 L1306 1493 L1315 1502 L1323 1504 L1331 1502 L1339 1494 L1340 1479 L1093 906 L1084 897 L1076 895Z M1860 870 L1849 874 L1844 880 L1842 888 L1842 1512 L1846 1523 L1852 1528 L1860 1530 L1871 1526 L1876 1520 L1878 1512 L1878 888 L1874 877 L1868 872Z M540 870 L529 874 L524 880 L522 888 L522 1512 L526 1523 L532 1528 L540 1530 L551 1526 L556 1520 L558 1512 L558 888 L554 877 L548 872Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-est" data-name="Ecuador" d="M1595 1200 L1599 1222 L1611 1242 L1634 1262 L1668 1281 L1715 1297 L1750 1305 L1825 1314 L1895 1314 L1945 1309 L1998 1299 L2044 1284 L2080 1266 L2102 1249 L2117 1230 L2125 1206 L2122 1191 L2115 1186 L2105 1186 L2096 1195 L2092 1213 L2073 1234 L2036 1255 L1986 1271 L1910 1283 L1826 1284 L1769 1278 L1706 1263 L1671 1249 L1647 1234 L1628 1213 L1624 1195 L1619 1188 L1610 1185 L1605 1186 L1598 1191Z M275 1200 L279 1222 L291 1242 L314 1262 L348 1281 L395 1297 L430 1305 L505 1314 L575 1314 L625 1309 L678 1299 L724 1284 L760 1266 L782 1249 L797 1230 L805 1206 L802 1191 L795 1186 L785 1186 L776 1195 L772 1213 L753 1234 L716 1255 L666 1271 L590 1283 L506 1284 L449 1278 L386 1263 L351 1249 L327 1234 L308 1213 L304 1195 L299 1188 L290 1185 L285 1186 L278 1191Z M2277 1096 L2276 1101 L2279 1110 L2290 1117 L2740 1312 L2754 1313 L2763 1304 L2764 1299 L2761 1290 L2750 1283 L2300 1088 L2286 1087Z M1443 1096 L1434 1087 L1420 1088 L970 1283 L959 1290 L956 1299 L957 1304 L966 1313 L980 1312 L1430 1117 L1441 1110 L1444 1101Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="1890,408 1720,455" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1720" cy="455" r="7"/><text class="olabel" data-cat="ti-est" data-name="El Sol" x="1890" y="360" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">El Sol</text><text class="sub" x="1890" y="394" text-anchor="start" data-for="El Sol" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">estrella</text><polyline class="leader" points="2700,298 2786,355" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2786" cy="355" r="7"/><text class="olabel" data-cat="ti-est" data-name="Órbita terrestre" x="2700" y="250" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Órbita terrestre</text><text class="sub" x="2700" y="284" text-anchor="middle" data-for="Órbita terrestre" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">traslación: 365 días</text><polyline class="leader" points="1130,843 1130,864" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1130" cy="864" r="7"/><text class="olabel" data-cat="ti-est" data-name="Rotación" x="1130" y="795" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Rotación</text><text class="sub" x="1130" y="829" text-anchor="middle" data-for="Rotación" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">una vuelta cada 24 horas</text><polyline class="leader" points="2845,988 2613,984" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2613" cy="984" r="7"/><text class="olabel" data-cat="ti-est" data-name="Eje terrestre" x="2845" y="940" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Eje terrestre</text><text class="sub" x="2845" y="974" text-anchor="start" data-for="Eje terrestre" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">inclinado 23,4°</text><polyline class="leader" points="2845,1292 2749,1299" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2749" cy="1299" r="7"/><text class="olabel" data-cat="ti-est" data-name="Ecuador" x="2845" y="1330" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Ecuador</text><text class="sub" x="2845" y="1364" text-anchor="start" data-for="Ecuador" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">divide los dos hemisferios</text><polyline class="leader" points="540,1580 645,1350" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="645" cy="1350" r="7"/><text class="olabel" data-cat="ti-est" data-name="Equinoccio de primavera" x="540" y="1618" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Equinoccio de primavera</text><text class="sub" x="540" y="1652" text-anchor="middle" data-for="Equinoccio de primavera" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">20-21 de marzo</text><polyline class="leader" points="1200,1580 1305,1350" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1305" cy="1350" r="7"/><text class="olabel" data-cat="ti-est" data-name="Solsticio de verano" x="1200" y="1618" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Solsticio de verano</text><text class="sub" x="1200" y="1652" text-anchor="middle" data-for="Solsticio de verano" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">21 de junio</text><polyline class="leader" points="1860,1580 1965,1350" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1965" cy="1350" r="7"/><text class="olabel" data-cat="ti-est" data-name="Equinoccio de otoño" x="1860" y="1618" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Equinoccio de otoño</text><text class="sub" x="1860" y="1652" text-anchor="middle" data-for="Equinoccio de otoño" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">22-23 de septiembre</text><polyline class="leader" points="2520,1580 2625,1350" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2625" cy="1350" r="7"/><text class="olabel" data-cat="ti-est" data-name="Solsticio de invierno" x="2520" y="1618" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Solsticio de invierno</text><text class="sub" x="2520" y="1652" text-anchor="middle" data-for="Solsticio de invierno" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">21-22 de diciembre</text></g></svg>
+  </div>
+<section class="anim" id="anim" aria-labelledby="anim-h">
+<style>
+.anim{margin:0 0 28px;padding:20px 22px;background:var(--paper);border:1px solid var(--line-strong);border-radius:2px}
+.anim h2{margin:0 0 6px;font-size:22px}
+.anim>p{margin:0 0 14px;color:var(--ink-soft);font-size:15px}
+.anim-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;align-items:stretch}
+.anim-grid svg{width:100%;height:auto;background:#05091c;border-radius:4px;display:block}
+.anim-ctl{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:14px}
+.anim-ctl button{font:inherit;font-size:14px;padding:7px 14px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);border-radius:999px;cursor:pointer}
+.anim-ctl button:hover{background:#f0e6d3}
+.anim-ctl button.play{background:#c58b2b;border-color:#c58b2b;color:#fff;font-weight:600}
+.anim-ctl input[type=range]{flex:1 1 240px;min-width:180px;accent-color:#c58b2b}
+.anim-date{font-family:'IBM Plex Mono',monospace;font-size:14px;min-width:120px}
+.anim-data{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:14px}
+.anim-data div{border:1px solid var(--line);background:#fff;border-radius:3px;padding:10px 12px;font-size:14px;line-height:1.4}
+.anim-data b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px}
+.anim-data select{font:inherit;font-size:14px;margin-top:4px;max-width:100%}
+.anim-msg{margin-top:18px;font-size:15px;min-height:2.8em}
+@media (max-width:800px){.anim-grid{grid-template-columns:1fr}}
+@media print{.anim{display:none}}
+</style>
+<h2 id="anim-h">Ver en movimiento</h2>
+<p>Mueve el control para recorrer un año. La Tierra avanza por su órbita y el eje mantiene siempre la misma inclinación: por eso cambia la luz que recibe cada hemisferio.</p>
+<div class="anim-grid">
+<svg id="aOrb" viewBox="0 0 700 300" role="img" aria-label="Órbita de la Tierra alrededor del Sol con la fecha seleccionada"></svg>
+<svg id="aGl" viewBox="0 0 400 365" role="img" aria-label="La Tierra vista de lado, con la parte iluminada por el Sol a la izquierda"></svg>
+</div>
+<div class="anim-ctl">
+<button type="button" class="play" id="aPlay">▶ Reproducir</button>
+<input type="range" id="aDay" min="0" max="364" value="79" aria-label="Día del año">
+<span class="anim-date" id="aDate"></span>
+</div>
+<div class="anim-ctl">
+<button type="button" data-d="79">21 mar</button><button type="button" data-d="171">21 jun</button><button type="button" data-d="264">22 sep</button><button type="button" data-d="354">21 dic</button>
+</div>
+<div class="anim-data">
+<div><b>Estación</b><span id="aSeaN"></span><br><span id="aSeaS"></span></div>
+<div><b>Rayos perpendiculares en</b><span id="aSub"></span></div>
+<div><b>Lugar</b><select id="aLat" aria-label="Lugar para calcular el día y la noche">
+<option value="40.4">Madrid (40° N)</option><option value="0">Ecuador (0°)</option><option value="66.6">Círculo polar ártico (66,6° N)</option><option value="90">Polo Norte (90° N)</option><option value="-34.6">Buenos Aires (35° S)</option></select><br>
+<span id="aDay2"></span><br><span id="aAlt"></span></div>
+</div>
+<p class="anim-msg" id="aMsg" aria-live="polite"></p>
+<script>
+(function(){
+var E=23.44*Math.PI/180,SE=Math.sin(E),CE=Math.cos(E),NS='http://www.w3.org/2000/svg';
+var orb=document.getElementById('aOrb'),gl=document.getElementById('aGl');
+function el(p,t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e;}
+/* --- órbita --- */
+var OCX=350,OCY=150,OA=268,OB=92,MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'],ML=[31,28,31,30,31,30,31,31,30,31,30,31];
+var dfs=el(orb,'defs',{});var rg=el(dfs,'radialGradient',{id:'sg'});el(rg,'stop',{offset:'0','stop-color':'#fff2a8'});el(rg,'stop',{offset:'.55','stop-color':'#ffb62e'});el(rg,'stop',{offset:'1','stop-color':'#ff8a1e','stop-opacity':'0'});
+el(orb,'ellipse',{cx:OCX,cy:OCY,rx:OA,ry:OB,fill:'none',stroke:'#cfd8f0','stroke-width':1.6,'stroke-dasharray':'7 6',opacity:.8});
+el(orb,'circle',{cx:OCX,cy:OCY,r:44,fill:'url(#sg)'});el(orb,'circle',{cx:OCX,cy:OCY,r:22,fill:'#ffc94a'});
+[['21 mar',79],['21 jun',171],['22 sep',264],['21 dic',354]].forEach(function(q){var t=th(q[1]);var x=OCX+OA*Math.cos(t),y=OCY+OB*Math.sin(t);el(orb,'circle',{cx:x,cy:y,r:3,fill:'#cfd8f0'});
+ var dx=Math.cos(t)>0.3?24:Math.cos(t)<-0.3?-24:0,dy=Math.abs(Math.cos(t))<=0.3?(Math.sin(t)<0?-20:28):4;
+ el(orb,'text',{x:x+dx,y:y+dy,'text-anchor':dx>0?'start':dx<0?'end':'middle',fill:'#cfd8f0','font-size':14,'font-style':'italic','font-family':'Georgia,serif'},q[0]);});
+var eg=el(orb,'g',{});var ec=el(eg,'circle',{r:11,fill:'#2f78c9',stroke:'#fff','stroke-width':1.5});var ea=el(eg,'line',{x1:0,y1:0,x2:0,y2:0,stroke:'#fff','stroke-width':2,'stroke-linecap':'round'});
+var ed=el(eg,'circle',{r:2.4,fill:'#fff'});
+function th(d){return -Math.PI/2-2*Math.PI*(d-79)/365.24;}
+/* --- globo (vista de lado, luz desde la izquierda) --- */
+var GX=200,GY=170,R=125;
+var d2=el(gl,'defs',{});var cp=el(d2,'clipPath',{id:'gc'});el(cp,'circle',{cx:GX,cy:GY,r:R});
+var og=el(d2,'radialGradient',{id:'og',cx:'.35',cy:'.4',r:'.8'});el(og,'stop',{offset:'0','stop-color':'#4c96dc'});el(og,'stop',{offset:'1','stop-color':'#1f5a98'});
+var arr=el(d2,'marker',{id:'ga',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:5,markerHeight:5,orient:'auto'});el(arr,'path',{d:'M0 0L10 5L0 10z',fill:'#ffd36b'});
+[-80,-40,0,40,80].forEach(function(y){el(gl,'line',{x1:8,y1:GY+y,x2:GX-R-10,y2:GY+y,stroke:'#ffd36b','stroke-width':2.5,'marker-end':'url(#ga)',opacity:.9});});
+el(gl,'text',{x:10,y:GY-100,fill:'#ffd36b','font-size':14,'font-style':'italic','font-family':'Georgia,serif'},'Rayos del Sol');
+el(gl,'circle',{cx:GX,cy:GY,r:R,fill:'url(#og)'});
+var gg=el(gl,'g',{'clip-path':'url(#gc)'});
+el(gg,'rect',{x:GX,y:GY-R,width:R,height:2*R,fill:'#02061a',opacity:.62});
+var lines=el(gl,'g',{fill:'none'});
+el(gl,'circle',{cx:GX,cy:GY,r:R,fill:'none',stroke:'#9cc4ee','stroke-width':1.2,opacity:.6});
+var axl=el(gl,'line',{stroke:'#fff','stroke-width':2.4,'stroke-dasharray':'8 5'});
+var tN=el(gl,'text',{fill:'#fff','font-size':20,'font-weight':700,'font-family':'Georgia,serif','text-anchor':'middle'},'N');
+var tS=el(gl,'text',{fill:'#fff','font-size':20,'font-weight':700,'font-family':'Georgia,serif','text-anchor':'middle'},'S');
+var sub=el(gl,'circle',{r:5.5,fill:'#ffd36b',stroke:'#fff','stroke-width':1.5});
+el(gl,'text',{x:GX,y:GY+R+62,'text-anchor':'middle',fill:'#cfd8f0','font-size':13,'font-family':'IBM Plex Sans,sans-serif'},'Naranja: ecuador · discontinuas: trópicos y círculos polares');
+var LAT=[[0,'#ff8a5c',3,''],[23.44,'#ffd36b',2,'7 5'],[-23.44,'#ffd36b',2,'7 5'],[66.56,'#9fe0ff',2,'7 5'],[-66.56,'#9fe0ff',2,'7 5']];
+function draw(d){
+ var t=th(d),ax=SE*Math.cos(t),ay=CE,az=-SE*Math.sin(t);
+ var ox=OCX+OA*Math.cos(t),oy=OCY+OB*Math.sin(t);
+ eg.setAttribute('transform','translate('+ox+','+oy+')');ea.setAttribute('x2',(SE*26).toFixed(1));ea.setAttribute('y2',(-CE*26).toFixed(1));ea.setAttribute('x1',(-SE*14).toFixed(1));ea.setAttribute('y1',(CE*14).toFixed(1));
+ // base ortonormal perpendicular al eje
+ var ux=ay,uy=-ax,uz=0,ul=Math.hypot(ux,uy);ux/=ul;uy/=ul;
+ var wx=ay*uz-az*uy,wy=az*ux-ax*uz,wz=ax*uy-ay*ux;
+ lines.textContent='';
+ LAT.forEach(function(L){var ph=L[0]*Math.PI/180,c=Math.sin(ph),r=Math.cos(ph),dd='',pen=false;
+  for(var i=0;i<=120;i++){var l=i/120*2*Math.PI,px=ax*c+r*(ux*Math.cos(l)+wx*Math.sin(l)),py=ay*c+r*(uy*Math.cos(l)+wy*Math.sin(l)),pz=az*c+r*(uz*Math.cos(l)+wz*Math.sin(l));
+   if(pz>=0){dd+=(pen?'L':'M')+(GX+R*px).toFixed(1)+' '+(GY-R*py).toFixed(1);pen=true;}else pen=false;}
+  el(lines,'path',{d:dd,stroke:L[1],'stroke-width':L[2],'stroke-dasharray':L[3],fill:'none',opacity:.95});});
+ var L1=R+22;axl.setAttribute('x1',GX-ax*L1);axl.setAttribute('y1',GY+ay*L1);axl.setAttribute('x2',GX+ax*L1);axl.setAttribute('y2',GY-ay*L1);
+ tN.setAttribute('x',GX+ax*(L1+16));tN.setAttribute('y',GY-ay*(L1+16)+7);tS.setAttribute('x',GX-ax*(L1+16));tS.setAttribute('y',GY+ay*(L1+16)+7);
+ // el punto subsolar está en el borde izquierdo, a la altura de la latitud subsolar
+ var dec=Math.asin(-SE*Math.cos(t)),sx=GX-R,sy=GY;sub.setAttribute('cx',sx);sub.setAttribute('cy',sy);
+ return dec;
+}
+/* --- textos --- */
+function fecha(d){var m=0;d=Math.round(d);while(m<11&&d>=ML[m]){d-=ML[m];m++;}return (d+1)+' '+MES[m];}
+function estN(d){return d>=79&&d<171?'primavera':d>=171&&d<264?'verano':d>=264&&d<354?'otoño':'invierno';}
+var OPP={primavera:'otoño',verano:'invierno',otoño:'primavera',invierno:'verano'};
+var MSG={primavera:'Desde el equinoccio de marzo, en que el día y la noche duran lo mismo, el hemisferio norte se va inclinando hacia el Sol: los rayos llegan más verticales y los días se alargan.',
+verano:'El hemisferio norte está inclinado hacia el Sol: recibe los rayos más verticales y los días son más largos. En el hemisferio sur ocurre lo contrario.',
+otoño:'Desde el equinoccio de septiembre, en que el día y la noche duran lo mismo, el hemisferio norte se aleja del Sol: los rayos llegan cada vez más oblicuos y los días se acortan.',
+invierno:'El hemisferio norte está inclinado en sentido contrario al Sol: los rayos llegan oblicuos y los días son más cortos. Para el hemisferio sur es verano.'};
+function fl(x){return (Math.round(Math.abs(x)*10)/10).toString().replace('.',',')+'°'+(x<0?' S':x>0?' N':'');}
+var sl=document.getElementById('aDay');
+function update(){var d=+sl.value,dec=draw(d)*180/Math.PI;
+ document.getElementById('aDate').textContent=fecha(d);
+ var sn=estN(d);document.getElementById('aSeaN').textContent='Hemisferio norte: '+sn;document.getElementById('aSeaS').textContent='Hemisferio sur: '+OPP[sn];
+ document.getElementById('aSub').textContent=Math.abs(dec)<0.4?'el ecuador (0°)':'latitud '+fl(dec)+(Math.abs(Math.abs(dec)-23.44)<0.4?(dec>0?' (trópico de Cáncer)':' (trópico de Capricornio)'):'');
+ var lat=+document.getElementById('aLat').value,ph=lat*Math.PI/180,de=dec*Math.PI/180,x=-Math.tan(ph)*Math.tan(de),h;
+ if(Math.abs(lat)>=89.9){h=de*lat>0?24:0;if(Math.abs(dec)<0.3)h=12;}else h=x>=1?0:x<=-1?24:24/Math.PI*Math.acos(x);
+ var hh=Math.floor(h),mm=Math.round((h-hh)*60);if(mm===60){hh++;mm=0;}
+ document.getElementById('aDay2').textContent=h>=23.99?'Día: 24 h (sol de medianoche)':h<=0.01?'Día: 0 h (noche polar)':'Día: '+hh+' h '+(mm<10?'0':'')+mm+' min';
+ var alt=Math.abs(lat)>=89.9?(lat>0?dec:-dec):90-Math.abs(lat-dec);document.getElementById('aAlt').textContent=alt<=0?'Sol al mediodía: bajo el horizonte':'Sol al mediodía: '+Math.round(alt)+'° sobre el horizonte';
+ document.getElementById('aMsg').textContent=MSG[sn];}
+sl.addEventListener('input',update);document.getElementById('aLat').addEventListener('change',update);
+[].forEach.call(document.querySelectorAll('.anim-ctl button[data-d]'),function(b){b.addEventListener('click',function(){stop();sl.value=b.getAttribute('data-d');update();});});
+var raf=0,last=0,pl=document.getElementById('aPlay'),reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function stop(){if(raf){cancelAnimationFrame(raf);raf=0;}pl.textContent='▶ Reproducir';}
+function step(ts){if(!last)last=ts;var dt=ts-last;last=ts;var v=(+sl.value)+dt/1000*(365/14);if(v>=364.5)v-=364.5;sl.value=v;update();raf=requestAnimationFrame(step);}
+pl.addEventListener('click',function(){if(raf){stop();}else{last=0;pl.textContent='❚❚ Pausa';raf=requestAnimationFrame(step);}});
+update();
+})();
+</script>
+</section>
+
+      <div class="meta-row">
+      <span class="tag category">LA TIERRA Y EL UNIVERSO</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>La Tierra se mueve de dos formas: <strong>gira sobre sí misma</strong> (rotación) y <strong>da vueltas alrededor del Sol</strong> (traslación). Como su eje está inclinado, la luz del Sol llega con distinta inclinación a lo largo del año y aparecen las <strong>estaciones</strong>. Esta lámina muestra sus <strong>9 elementos</strong>.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Rotación:</strong> una vuelta sobre el eje cada 24 horas; origina el día y la noche.</li>
+        <li><strong>Traslación:</strong> una vuelta alrededor del Sol en unos 365 días; origina el año.</li>
+        <li><strong>Eje inclinado 23,4°:</strong> mantiene su dirección durante toda la órbita; por eso unas veces se inclina hacia el Sol y otras en sentido contrario.</li>
+        <li><strong>Solsticios y equinoccios:</strong> los solsticios marcan el día más largo (junio) y el más corto (diciembre) en el hemisferio norte; en los equinoccios el día y la noche duran igual.</li>
+        <li><strong>Hemisferios:</strong> cuando es verano en el norte, es invierno en el sur, y al revés.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba el nombre de cada posición de la Tierra y de cada elemento.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar los 9 elementos.</li>
+        <li>Explicar por qué en diciembre hace frío en España aunque la Tierra esté más cerca del Sol.</li>
+        <li>Relacionar con <a href="geologia-sistema-solar.html" style="color:#8a5a22">El Sistema Solar</a>: el lugar de la Tierra entre los planetas.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: imagen generada por ordenador (el Sol y la Tierra, con continentes reales de GISCO/Eurostat, CC BY 4.0, son representaciones, no fotografías) y esquema fuera de escala. Los datos proceden de valores de referencia de la NASA. Licencia <strong>CC BY 4.0</strong>: puedes copiarla, adaptarla y usarla citando Atlas Abierto (atlasabierto.org).</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">La Tierra y el universo</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">9 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"El Sol": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-el-sol.webp", "txt": "Estrella que proporciona la luz y el calor a la Tierra. Como está tan lejos, sus rayos llegan a nuestro planeta prácticamente paralelos, e iluminan siempre la mitad de la Tierra: la otra mitad está en la noche. Según cómo incidan los rayos sobre cada zona, hará más calor o más frío.", "dato": "La Tierra está a unos 150 millones de km del Sol y su luz tarda unos 8 minutos y 20 segundos en llegar. La distancia al Sol no es la causa de las estaciones: la Tierra está más cerca del Sol en enero que en julio."}, "Órbita terrestre": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-orbita-terrestre.webp", "txt": "Trayectoria que sigue la Tierra alrededor del Sol en su movimiento de traslación. Es una elipse casi circular que se recorre en sentido contrario a las agujas del reloj, visto desde el polo norte. Una vuelta completa dura un año.", "dato": "La traslación dura unos 365 días y 6 horas; por eso cada cuatro años se añade un día (año bisiesto). La Tierra se desplaza a unos 30 km por segundo. En el esquema la órbita está muy exagerada: en realidad es casi un círculo."}, "Rotación": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-rotacion.webp", "txt": "Giro de la Tierra sobre sí misma alrededor de su eje, de oeste a este. Una vuelta completa dura aproximadamente un día. Provoca la sucesión del día y la noche y que el Sol parezca salir por el este y ponerse por el oeste.", "dato": "Una rotación completa dura 23 horas y 56 minutos. En el ecuador la superficie se mueve a unos 1 670 km/h. La rotación también explica las diferencias horarias entre lugares."}, "Eje terrestre": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-eje-terrestre.webp", "txt": "Línea imaginaria que pasa por los dos polos y alrededor de la cual gira la Tierra. Está inclinado respecto a la perpendicular al plano de la órbita y, durante la traslación, mantiene siempre la misma dirección en el espacio. Esa inclinación es la causa de las estaciones.", "dato": "La inclinación es de unos 23,4°. El eje del polo norte apunta aproximadamente hacia la Estrella Polar. Si el eje no estuviera inclinado, no habría estaciones."}, "Ecuador": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-ecuador.webp", "txt": "Círculo imaginario perpendicular al eje, a la misma distancia de los dos polos. Divide la Tierra en dos mitades: el hemisferio norte y el hemisferio sur. Es la línea de latitud 0°.", "dato": "Mide unos 40 075 km. En los equinoccios los rayos del Sol inciden perpendicularmente sobre el ecuador. Las zonas cercanas a él reciben mucha energía todo el año y apenas tienen estaciones térmicas."}, "Equinoccio de primavera": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-equinoccio-de-primavera.webp", "txt": "Momento del año en que los rayos del Sol inciden perpendicularmente sobre el ecuador. El eje no está inclinado ni hacia el Sol ni en sentido contrario, de modo que los dos hemisferios reciben la misma luz: el día y la noche duran lo mismo en todo el planeta. Empieza la primavera en el hemisferio norte y el otoño en el sur.", "dato": "Ocurre el 20 o 21 de marzo. «Equinoccio» significa «noche igual». A partir de esta fecha, en el hemisferio norte los días son cada vez más largos que las noches."}, "Solsticio de verano": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-solsticio-de-verano.webp", "txt": "Momento en que el hemisferio norte está más inclinado hacia el Sol. Los rayos inciden más verticales sobre él, y es el día más largo y la noche más corta. Empieza el verano en el hemisferio norte y el invierno en el sur. Al norte del círculo polar ártico el Sol no se pone («sol de medianoche»).", "dato": "Ocurre el 21 de junio. Los rayos caen perpendiculares sobre el trópico de Cáncer (23,4° N). En el hemisferio sur es el día más corto del año."}, "Equinoccio de otoño": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-equinoccio-de-otono.webp", "txt": "Segundo momento del año en que los rayos del Sol inciden perpendicularmente sobre el ecuador y el día y la noche duran lo mismo en todo el planeta. Empieza el otoño en el hemisferio norte y la primavera en el sur. A partir de esta fecha las noches del hemisferio norte son más largas que los días.", "dato": "Ocurre el 22 o 23 de septiembre. En el esquema la Tierra está en la posición opuesta al equinoccio de primavera, con el eje de nuevo ni hacia el Sol ni en sentido contrario."}, "Solsticio de invierno": {"grupo": "Movimientos de la Tierra", "img": "ficha/geo-solsticio-de-invierno.webp", "txt": "Momento en que el hemisferio norte está más inclinado en sentido contrario al Sol. Los rayos llegan más oblicuos, y es la noche más larga y el día más corto. Empieza el invierno en el hemisferio norte y el verano en el sur. Al norte del círculo polar ártico es de noche durante todo el día.", "dato": "Ocurre el 21 o 22 de diciembre. Los rayos caen perpendiculares sobre el trópico de Capricornio (23,4° S). Aunque en invierno hace frío en el hemisferio norte, es cuando la Tierra está más cerca del Sol (a principios de enero)."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
