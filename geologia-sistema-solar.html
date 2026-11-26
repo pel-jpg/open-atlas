@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Sistema Solar — El Sol, los planetas y los cinturones · Atlas Abierto</title>
+<meta name="description" content="El Sistema Solar para ESO: el Sol, Mercurio, Venus, la Tierra, Marte, el cinturón de asteroides, Júpiter, Saturno, Urano, Neptuno y el cinturón de Kuiper, con el tamaño de los planetas a escala entre sí. Con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-sistema-solar.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="El Sistema Solar — El Sol, los planetas y los cinturones · Atlas Abierto">
+<meta property="og:description" content="El Sistema Solar para ESO: el Sol, Mercurio, Venus, la Tierra, Marte, el cinturón de asteroides, Júpiter, Saturno, Urano, Neptuno y el cinturón de Kuiper, con el tamaño de los planetas a escala entre sí. Con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-sistema-solar.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:3120/1780;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"El Sistema Solar — El Sol, los planetas y los cinturones","description":"El Sistema Solar para ESO: el Sol, Mercurio, Venus, la Tierra, Marte, el cinturón de asteroides, Júpiter, Saturno, Urano, Neptuno y el cinturón de Kuiper, con el tamaño de los planetas a escala entre sí. Con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-sistema-solar.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"El Sistema Solar — El Sol, los planetas y los cinturones","item":"https://atlasabierto.org/geologia-sistema-solar.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / El Sistema Solar</div>
+    <h1>El Sistema Solar</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3120 1780" width="3120" height="1780" role="img" aria-label="Lámina: el Sistema Solar"><rect width="3120" height="1780" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="3080" height="1740" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1560" y="95" text-anchor="middle">El Sistema Solar: el Sol, los ocho planetas y los dos cinturones</text><image href="geologia/sistema-solar.webp" x="60" y="170" width="3000" height="1500"/><text class="sub" x="1560" y="1742" text-anchor="middle">Los planetas están a escala entre sí, pero no las distancias ni el Sol (que en realidad es mucho mayor).</text></g><g id="hitzones"><path class="organo" data-cat="ti-solar" data-name="Sol" d="M172 170 L60 170 L60 1241 L113 1230 L157 1216 L236 1180 L310 1131 L379 1067 L434 996 L476 919 L505 838 L522 747 L524 657 L511 566 L501 528 L482 475 L444 400 L393 329 L326 262 L250 208Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Júpiter" d="M2191 207 L2126 216 L2053 241 L1990 278 L1935 327 L1895 379 L1871 423 L1859 452 L1841 522 L1837 598 L1846 663 L1871 736 L1908 799 L1957 854 L2009 894 L2053 918 L2082 930 L2152 948 L2228 952 L2293 943 L2366 918 L2429 881 L2484 832 L2524 780 L2548 736 L2560 707 L2578 637 L2582 561 L2573 496 L2548 423 L2511 360 L2462 305 L2410 265 L2366 241 L2337 229 L2267 211Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Saturno" d="M1676 1165 L1669 1142 L1654 1115 L1641 1099 L1612 1073 L1548 1036 L1465 1007 L1373 988 L1279 978 L1141 976 L1056 979 L997 969 L933 972 L866 990 L806 1022 L711 1047 L615 1080 L525 1119 L431 1172 L361 1226 L316 1276 L303 1296 L288 1329 L282 1355 L282 1388 L288 1412 L301 1438 L318 1460 L347 1486 L411 1523 L494 1552 L586 1571 L680 1581 L818 1583 L903 1580 L962 1590 L1026 1587 L1093 1569 L1153 1537 L1248 1512 L1344 1479 L1434 1440 L1528 1387 L1598 1333 L1643 1283 L1656 1263 L1673 1223 L1678 1194Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Urano" d="M1898 1145 L1875 1149 L1845 1161 L1823 1176 L1806 1193 L1791 1215 L1779 1245 L1775 1291 L1779 1314 L1791 1344 L1806 1366 L1823 1383 L1845 1398 L1875 1410 L1921 1414 L1944 1410 L1974 1398 L1996 1383 L2013 1366 L2028 1344 L2040 1314 L2044 1268 L2040 1245 L2028 1215 L2013 1193 L1996 1176 L1974 1161 L1944 1149Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Neptuno" d="M2259 1149 L2232 1154 L2206 1165 L2188 1177 L2167 1198 L2155 1216 L2144 1242 L2139 1269 L2139 1290 L2144 1317 L2155 1343 L2167 1361 L2188 1382 L2206 1394 L2232 1405 L2259 1410 L2280 1410 L2307 1405 L2333 1394 L2351 1382 L2372 1361 L2384 1343 L2395 1317 L2400 1290 L2400 1269 L2395 1242 L2384 1216 L2372 1198 L2351 1177 L2333 1165 L2307 1154 L2280 1149Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Cinturón de asteroides" d="M1611 190 L1594 193 L1572 203 L1544 228 L1520 261 L1498 305 L1477 367 L1460 447 L1452 517 L1450 612 L1455 686 L1465 752 L1480 814 L1508 887 L1532 927 L1558 956 L1588 975 L1619 980 L1629 979 L1658 967 L1686 942 L1721 889 L1742 839 L1759 780 L1771 716 L1778 653 L1780 558 L1775 485 L1765 418 L1750 356 L1722 283 L1698 243 L1671 213 L1644 196 L1629 191Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Cinturón de Kuiper" d="M2723 760 L2681 766 L2657 774 L2613 798 L2569 836 L2531 884 L2514 912 L2490 963 L2467 1034 L2454 1106 L2450 1197 L2459 1288 L2475 1355 L2499 1418 L2533 1479 L2553 1506 L2581 1536 L2610 1560 L2634 1575 L2681 1594 L2708 1599 L2737 1600 L2779 1594 L2800 1587 L2847 1562 L2893 1522 L2929 1476 L2945 1450 L2970 1397 L2993 1326 L3006 1254 L3010 1163 L3001 1072 L2984 1002 L2961 942 L2925 878 L2899 845 L2869 815 L2826 785 L2779 766 L2752 761Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Mercurio" d="M780 524 L764 527 L748 537 L737 554 L734 570 L737 586 L747 602 L764 613 L780 616 L796 613 L812 603 L823 586 L826 570 L823 554 L813 538 L796 527Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Venus" d="M960 524 L944 527 L928 537 L917 554 L914 570 L917 586 L927 602 L944 613 L960 616 L976 613 L992 603 L1003 586 L1006 570 L1003 554 L993 538 L976 527Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Tierra" d="M1150 524 L1134 527 L1118 537 L1107 554 L1104 570 L1107 586 L1117 602 L1134 613 L1150 616 L1166 613 L1182 603 L1193 586 L1196 570 L1193 554 L1183 538 L1166 527Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-solar" data-name="Marte" d="M1325 524 L1309 527 L1293 537 L1282 554 L1279 570 L1282 586 L1292 602 L1309 613 L1325 616 L1341 613 L1357 603 L1368 586 L1371 570 L1368 554 L1358 538 L1341 527Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="620,302 390,470" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="390" cy="470" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Sol" x="620" y="290" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Sol</text><text class="sub" x="620" y="324" text-anchor="start" data-for="Sol" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">estrella</text><polyline class="leader" points="780,667 780,570" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="780" cy="570" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Mercurio" x="780" y="705" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Mercurio</text><text class="sub" x="780" y="739" text-anchor="middle" data-for="Mercurio" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">rocoso</text><polyline class="leader" points="960,667 960,570" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="960" cy="570" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Venus" x="960" y="705" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Venus</text><text class="sub" x="960" y="739" text-anchor="middle" data-for="Venus" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">rocoso</text><polyline class="leader" points="1150,667 1150,570" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1150" cy="570" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Tierra" x="1150" y="705" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Tierra</text><text class="sub" x="1150" y="739" text-anchor="middle" data-for="Tierra" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">rocoso</text><polyline class="leader" points="1325,667 1325,570" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1325" cy="570" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Marte" x="1325" y="705" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Marte</text><text class="sub" x="1325" y="739" text-anchor="middle" data-for="Marte" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">rocoso</text><polyline class="leader" points="1615,972 1615,845" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1615" cy="845" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Cinturón de asteroides" x="1615" y="1010" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Cinturón de asteroides</text><text class="sub" x="1615" y="1044" text-anchor="middle" data-for="Cinturón de asteroides" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">fragmentos rocosos</text><polyline class="leader" points="2210,992 2210,700" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2210" cy="700" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Júpiter" x="2210" y="1030" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Júpiter</text><text class="sub" x="2210" y="1064" text-anchor="middle" data-for="Júpiter" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">gigante gaseoso</text><polyline class="leader" points="980,882 980,1250" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="980" cy="1250" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Saturno" x="980" y="870" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Saturno</text><text class="sub" x="980" y="904" text-anchor="middle" data-for="Saturno" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">gigante gaseoso</text><polyline class="leader" points="1910,1452 1910,1280" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1910" cy="1280" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Urano" x="1910" y="1490" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Urano</text><text class="sub" x="1910" y="1524" text-anchor="middle" data-for="Urano" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">gigante helado</text><polyline class="leader" points="2270,1452 2270,1280" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2270" cy="1280" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Neptuno" x="2270" y="1490" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Neptuno</text><text class="sub" x="2270" y="1524" text-anchor="middle" data-for="Neptuno" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">gigante helado</text><polyline class="leader" points="2730,1550 2730,1530" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2730" cy="1530" r="7"/><text class="olabel" data-cat="ti-solar" data-name="Cinturón de Kuiper" x="2730" y="1588" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Cinturón de Kuiper</text><text class="sub" x="2730" y="1622" text-anchor="middle" data-for="Cinturón de Kuiper" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">cuerpos helados</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">GEOLOGÍA</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>El <strong>Sistema Solar</strong> es el conjunto formado por el Sol y los cuerpos que giran a su alrededor. Esta lámina muestra sus <strong>11 elementos</strong>: el Sol, los ocho planetas y los dos cinturones de pequeños cuerpos, con el tamaño de los planetas a escala entre sí.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Los planetas interiores</strong> (Mercurio, Venus, la Tierra y Marte) son rocosos, pequeños y están cerca del Sol.</li>
+        <li><strong>Entre Marte y Júpiter</strong> está el cinturón de asteroides, con restos rocosos que no llegaron a formar un planeta.</li>
+        <li><strong>Los planetas exteriores</strong> son gigantes: Júpiter y Saturno, gaseosos; Urano y Neptuno, helados.</li>
+        <li><strong>Más allá de Neptuno</strong> está el cinturón de Kuiper, con cuerpos helados y planetas enanos como Plutón.</li>
+        <li><strong>Escala:</strong> el tamaño de los planetas es proporcional entre sí, pero las distancias no, y el Sol es mucho mayor de lo que se ve.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba los nombres en orden desde el Sol y clasifique los planetas en rocosos y gigantes.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar los 11 elementos.</li>
+        <li>Comparar el diámetro de cada planeta con el de la Tierra y ordenarlos por tamaño.</li>
+        <li>Relacionar con las <a href="geologia-capas-tierra.html" style="color:#8a5a22">capas de la Tierra</a>: la estructura interna del tercer planeta.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: imagen generada por ordenador, con los planetas dibujados a escala entre sí y las texturas generadas de forma procedural (no son fotografías). Los datos de las fichas proceden de los valores de referencia de la NASA. Licencia <strong>CC BY 4.0</strong>: puedes copiarla, adaptarla y usarla citando Atlas Abierto (atlasabierto.org).</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">GEOLOGÍA: LA TIERRA Y EL UNIVERSO</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">11 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Sol": {"grupo": "El Sistema Solar", "img": "ficha/geo-sol.webp", "txt": "Estrella en torno a la cual giran todos los demás cuerpos del Sistema Solar. Produce su energía por fusión nuclear: en su núcleo, el hidrógeno se transforma en helio y libera luz y calor. Concentra casi toda la masa del Sistema Solar.", "dato": "Contiene el 99,86 % de la masa del Sistema Solar; su diámetro es unas 109 veces el de la Tierra y su luz tarda unos 8 minutos y 20 segundos en llegar hasta nosotros. En su superficie hay unos 5 500 °C y en el núcleo, unos 15 millones."}, "Mercurio": {"grupo": "El Sistema Solar", "img": "ficha/geo-mercurio.webp", "txt": "El planeta más pequeño y el más cercano al Sol. Es rocoso, sin atmósfera apreciable y con la superficie cubierta de cráteres de impacto, parecida a la de la Luna. Al no tener atmósfera que retenga el calor, la temperatura varía enormemente entre el día y la noche.", "dato": "Diámetro: 4 879 km. Distancia media al Sol: 58 millones de km. Año: 88 días terrestres. No tiene satélites. Temperatura: de unos −180 °C de noche a unos 430 °C de día."}, "Venus": {"grupo": "El Sistema Solar", "img": "ficha/geo-venus.webp", "txt": "Planeta rocoso de tamaño casi igual al de la Tierra, rodeado de una atmósfera muy densa de dióxido de carbono. Su efecto invernadero es tan intenso que es el planeta más caliente, aunque no sea el más cercano al Sol. Gira sobre sí mismo muy despacio y en sentido contrario al de la mayoría de los planetas.", "dato": "Diámetro: 12 104 km. Distancia media al Sol: 108 millones de km. Año: 225 días. Temperatura en superficie: unos 465 °C. Su día (243 días terrestres) dura más que su año. No tiene satélites."}, "Tierra": {"grupo": "El Sistema Solar", "img": "ficha/geo-tierra.webp", "txt": "El tercer planeta y el único conocido con agua líquida en la superficie y con vida. Su atmósfera, formada sobre todo por nitrógeno y oxígeno, y su distancia al Sol permiten temperaturas moderadas. Tiene un satélite natural, la Luna.", "dato": "Diámetro: 12 742 km. Distancia media al Sol: 150 millones de km (1 unidad astronómica). Año: 365,25 días. Rotación: unas 24 horas. Su eje está inclinado 23,4°, lo que origina las estaciones."}, "Marte": {"grupo": "El Sistema Solar", "img": "ficha/geo-marte.webp", "txt": "Planeta rocoso más pequeño que la Tierra, de color rojizo por el óxido de hierro de su suelo. Tiene una atmósfera muy fina de dióxido de carbono, casquetes polares y relieves gigantescos, como el volcán Monte Olimpo. Hay señales de que en el pasado tuvo agua líquida en la superficie.", "dato": "Diámetro: 6 779 km. Distancia media al Sol: 228 millones de km. Año: 687 días. Dos satélites pequeños: Fobos y Deimos. El Monte Olimpo mide unos 22 km de altura, el mayor volcán conocido del Sistema Solar."}, "Cinturón de asteroides": {"grupo": "El Sistema Solar", "img": "ficha/geo-cinturon-de-asteroides.webp", "txt": "Región entre las órbitas de Marte y Júpiter donde orbitan millones de fragmentos rocosos de todos los tamaños, los asteroides. Son restos de la formación del Sistema Solar que no llegaron a unirse en un planeta, por la gravedad de Júpiter. Pese a lo que muestran los dibujos, están muy separados unos de otros.", "dato": "Se extiende a unas 2,2–3,2 unidades astronómicas del Sol. Su cuerpo mayor, Ceres (unos 940 km), es un planeta enano. Toda su masa junta es solo unas 4 % de la de la Luna."}, "Júpiter": {"grupo": "El Sistema Solar", "img": "ficha/geo-jupiter.webp", "txt": "El mayor de los planetas: es un gigante gaseoso formado sobre todo por hidrógeno y helio, sin una superficie sólida. Presenta bandas de nubes paralelas al ecuador y la Gran Mancha Roja, una tormenta mayor que la Tierra que dura siglos. Tiene un tenue sistema de anillos y decenas de satélites.", "dato": "Diámetro: 139 820 km (unas 11 veces el de la Tierra). Distancia media al Sol: 778 millones de km. Año: casi 12 años. Su día dura menos de 10 horas. Sus cuatro satélites mayores (Ío, Europa, Ganímedes y Calisto) los descubrió Galileo en 1610."}, "Saturno": {"grupo": "El Sistema Solar", "img": "ficha/geo-saturno.webp", "txt": "Gigante gaseoso famoso por sus anillos, formados por incontables fragmentos de hielo y roca que orbitan en un disco muy fino. Es tan poco denso que flotaría en el agua. Tiene más de un centenar de satélites; el mayor, Titán, posee una atmósfera densa.", "dato": "Diámetro: 116 460 km. Distancia media al Sol: 1 430 millones de km. Año: unos 29,5 años. Los anillos miden cientos de miles de kilómetros de ancho, pero solo decenas de metros de grosor."}, "Urano": {"grupo": "El Sistema Solar", "img": "ficha/geo-urano.webp", "txt": "Gigante helado, de color azul verdoso por el metano de su atmósfera. Su eje de rotación está tan inclinado (98°) que gira prácticamente «tumbado» sobre su órbita. Tiene anillos finos y más de 25 satélites.", "dato": "Diámetro: 50 724 km (4 veces el de la Tierra). Distancia media al Sol: 2 870 millones de km. Año: 84 años. Se descubrió en 1781 con un telescopio, algo que se atribuye a William Herschel."}, "Neptuno": {"grupo": "El Sistema Solar", "img": "ficha/geo-neptuno.webp", "txt": "El planeta más lejano del Sol. Gigante helado de intenso color azul, con los vientos más veloces del Sistema Solar y tormentas oscuras. Su satélite mayor, Tritón, orbita en sentido contrario al giro del planeta. Se detectó en 1846 tras predecir su posición mediante cálculos matemáticos.", "dato": "Diámetro: 49 244 km. Distancia media al Sol: 4 500 millones de km (30 unidades astronómicas). Año: unos 165 años. Sus vientos superan los 2 000 km/h."}, "Cinturón de Kuiper": {"grupo": "El Sistema Solar", "img": "ficha/geo-cinturon-de-kuiper.webp", "txt": "Región más allá de la órbita de Neptuno poblada por cuerpos helados, restos de la formación del Sistema Solar. Allí están varios planetas enanos, como Plutón, y de ella proceden algunos cometas de corto periodo. Es mucho mayor y más extenso que el cinturón de asteroides.", "dato": "Se extiende entre 30 y 50 unidades astronómicas del Sol. Plutón dejó de considerarse planeta en 2006 y pasó a ser planeta enano; la sonda New Horizons lo sobrevoló en 2015."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
