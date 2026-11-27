@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxias y estrellas — Tipos de galaxias y ciclo de vida de las estrellas · Atlas Abierto</title>
+<meta name="description" content="Galaxias y estrellas para ESO: galaxia espiral, elíptica e irregular, la Vía Láctea y el ciclo de vida de las estrellas, de la nebulosa al agujero negro, con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-galaxias-estrellas.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Galaxias y estrellas — Tipos de galaxias y ciclo de vida de las estrellas · Atlas Abierto">
+<meta property="og:description" content="Galaxias y estrellas para ESO: galaxia espiral, elíptica e irregular, la Vía Láctea y el ciclo de vida de las estrellas, de la nebulosa al agujero negro, con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-galaxias-estrellas.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:3320/1890;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Galaxias y estrellas — Tipos de galaxias y ciclo de vida de las estrellas","description":"Galaxias y estrellas para ESO: galaxia espiral, elíptica e irregular, la Vía Láctea y el ciclo de vida de las estrellas, de la nebulosa al agujero negro, con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-galaxias-estrellas.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"Galaxias y estrellas — Tipos de galaxias y ciclo de vida de las estrellas","item":"https://atlasabierto.org/geologia-galaxias-estrellas.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / Galaxias y estrellas</div>
+    <h1>Galaxias y estrellas</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3320 1890" width="3320" height="1890" role="img" aria-label="Lámina: tipos de galaxias y ciclo de vida de las estrellas"><defs><marker id="ra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#cfd8f0"/></marker></defs><rect width="3320" height="1890" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="3280" height="1850" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1660" y="95" text-anchor="middle">Galaxias y vida de las estrellas</text><image href="geologia/estrellas-galaxias.webp" x="60" y="170" width="3200" height="1600"/><text x="100" y="240" text-anchor="start" style="font:italic 600 44px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Galaxias</text><text x="100" y="1010" text-anchor="start" style="font:italic 600 44px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Ciclo de vida de las estrellas</text><line x1="460" y1="1255" x2="735" y2="1180" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="460" y1="1405" x2="725" y2="1505" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="925" y1="1160" x2="1210" y2="1160" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1495" y1="1160" x2="1715" y2="1160" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="925" y1="1530" x2="1185" y2="1530" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1500" y1="1530" x2="1715" y2="1530" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2005" y1="1505" x2="2315" y2="1470" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2005" y1="1575" x2="2615" y2="1598" stroke="#cfd8f0" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><text x="530" y="1050" text-anchor="start" style="font:italic 32px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Estrellas de masa pequeña o media (como el Sol)</text><text x="530" y="1432" text-anchor="start" style="font:italic 32px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Estrellas masivas (más de 8 masas solares)</text><text x="820" y="1657" text-anchor="middle" style="font:italic 40px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Estrella masiva</text><text x="2045" y="1470" text-anchor="start" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">resto poco masivo</text><text x="2060" y="1650" text-anchor="start" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">resto muy masivo</text><text class="sub" x="1660" y="1850" text-anchor="middle">Imágenes generadas por ordenador y fuera de escala: las galaxias son enormes comparadas con las estrellas. La Vía Láctea se muestra vista desde arriba.</text></g><g id="hitzones"><path class="organo" data-cat="ti-star" data-name="Galaxia espiral" d="M780 215 L723 220 L692 227 L659 238 L607 264 L559 300 L535 324 L516 347 L496 377 L478 412 L458 473 L452 509 L450 545 L455 602 L462 633 L473 666 L499 718 L535 766 L559 790 L582 809 L612 829 L647 847 L708 867 L744 873 L780 875 L837 870 L868 863 L901 852 L953 826 L1001 790 L1025 766 L1044 743 L1064 713 L1082 678 L1102 617 L1108 581 L1110 545 L1105 488 L1098 457 L1087 424 L1061 372 L1025 324 L1001 300 L978 281 L948 261 L913 243 L852 223 L816 217Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Brazo espiral" d="M920 500 L902 476 L887 461 L870 449 L840 436 L817 432 L783 433 L758 441 L744 448 L735 456 L728 470 L729 488 L735 498 L748 507 L766 508 L794 496 L816 496 L829 500 L841 507 L859 525 L869 542 L876 565 L878 588 L875 610 L868 629 L854 654 L834 677 L796 702 L767 713 L734 718 L696 717 L666 711 L623 694 L591 673 L566 652 L542 623 L521 589 L500 539 L490 529 L473 524 L456 529 L446 539 L441 556 L444 572 L453 596 L478 643 L490 661 L517 693 L553 725 L582 745 L606 757 L643 771 L692 781 L738 782 L787 774 L838 753 L881 721 L906 692 L919 671 L932 642 L941 602 L942 579 L939 554 L934 532Z M620 472 L617 497 L620 535 L626 560 L639 589 L657 613 L677 632 L703 647 L732 656 L769 657 L791 652 L815 641 L827 629 L831 619 L831 605 L827 595 L821 588 L811 582 L793 581 L765 593 L743 593 L721 584 L695 557 L686 537 L683 524 L681 501 L684 479 L691 460 L705 435 L715 422 L738 402 L763 387 L792 376 L825 371 L870 373 L905 382 L945 400 L990 434 L1014 462 L1038 500 L1059 550 L1065 557 L1075 563 L1086 565 L1103 560 L1113 550 L1118 533 L1112 508 L1089 459 L1069 428 L1031 385 L998 358 L977 344 L953 332 L916 318 L867 308 L821 307 L785 312 L760 319 L721 336 L678 368 L653 397 L633 432Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Núcleo galáctico" d="M780 473 L754 478 L735 489 L721 504 L713 519 L708 545 L713 571 L724 590 L739 604 L754 612 L780 617 L806 612 L825 601 L839 586 L847 571 L852 545 L847 519 L836 500 L821 486 L806 478Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Posición del Sol" d="M965 503 L950 506 L938 513 L926 530 L923 545 L926 560 L933 572 L950 584 L965 587 L980 584 L992 577 L1004 560 L1007 545 L1004 530 L997 518 L980 506Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Galaxia elíptica" d="M1732 428 L1717 463 L1713 502 L1718 535 L1728 562 L1740 586 L1762 618 L1797 655 L1837 686 L1876 709 L1922 729 L1967 742 L2013 749 L2067 748 L2109 739 L2141 725 L2155 716 L2179 694 L2194 671 L2205 639 L2207 607 L2202 575 L2189 541 L2180 524 L2152 485 L2115 448 L2096 433 L2048 403 L1998 381 L1953 368 L1907 361 L1863 361 L1818 369 L1779 385 L1756 401Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Galaxia irregular" d="M2710 339 L2669 343 L2631 354 L2597 371 L2565 395 L2534 430 L2512 469 L2499 509 L2494 555 L2498 596 L2509 634 L2526 668 L2550 700 L2585 731 L2624 753 L2664 766 L2710 771 L2751 767 L2789 756 L2823 739 L2855 715 L2886 680 L2908 641 L2921 601 L2926 555 L2922 514 L2911 476 L2894 442 L2870 410 L2835 379 L2796 357 L2756 344Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Nebulosa" d="M300 1140 L267 1143 L231 1153 L196 1171 L175 1187 L148 1216 L126 1254 L115 1287 L110 1330 L113 1363 L123 1399 L141 1434 L157 1455 L186 1482 L224 1504 L257 1515 L300 1520 L333 1517 L369 1507 L404 1489 L425 1473 L452 1444 L474 1406 L485 1373 L490 1330 L487 1297 L477 1261 L459 1226 L443 1205 L414 1178 L376 1156 L343 1145Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Estrella" d="M820 1086 L796 1090 L773 1103 L763 1113 L752 1131 L746 1160 L750 1184 L763 1207 L773 1217 L791 1228 L820 1234 L844 1230 L867 1217 L877 1207 L888 1189 L894 1160 L890 1136 L877 1113 L867 1103 L849 1092Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Gigante roja" d="M1360 1036 L1338 1038 L1319 1043 L1301 1051 L1278 1067 L1257 1091 L1247 1109 L1239 1133 L1236 1160 L1238 1182 L1243 1201 L1251 1219 L1267 1242 L1291 1263 L1309 1273 L1333 1281 L1360 1284 L1382 1282 L1401 1277 L1419 1269 L1442 1253 L1463 1229 L1473 1211 L1481 1187 L1484 1160 L1482 1138 L1477 1119 L1469 1101 L1453 1078 L1429 1057 L1411 1047 L1387 1039Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Enana blanca" d="M1860 1042 L1839 1044 L1820 1049 L1799 1059 L1785 1069 L1763 1093 L1751 1115 L1745 1134 L1742 1160 L1744 1181 L1749 1200 L1759 1221 L1769 1235 L1793 1257 L1815 1269 L1834 1275 L1860 1278 L1881 1276 L1900 1271 L1921 1261 L1935 1251 L1957 1227 L1969 1205 L1975 1186 L1978 1160 L1976 1139 L1971 1120 L1961 1099 L1951 1085 L1927 1063 L1905 1051 L1886 1045Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Supergigante roja" d="M1360 1386 L1331 1389 L1310 1395 L1287 1406 L1266 1421 L1241 1449 L1227 1475 L1219 1501 L1216 1530 L1219 1559 L1225 1580 L1236 1603 L1251 1624 L1279 1649 L1305 1663 L1331 1671 L1360 1674 L1389 1671 L1410 1665 L1433 1654 L1454 1639 L1479 1611 L1493 1585 L1501 1559 L1504 1530 L1501 1501 L1495 1480 L1484 1457 L1469 1436 L1441 1411 L1415 1397 L1389 1389Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Supernova" d="M1860 1402 L1838 1404 L1813 1411 L1793 1421 L1770 1439 L1751 1463 L1741 1483 L1734 1508 L1732 1530 L1734 1552 L1741 1577 L1751 1597 L1769 1620 L1793 1639 L1813 1649 L1838 1656 L1860 1658 L1882 1656 L1907 1649 L1927 1639 L1950 1621 L1969 1597 L1979 1577 L1986 1552 L1988 1530 L1986 1508 L1979 1483 L1969 1463 L1951 1440 L1927 1421 L1907 1411 L1882 1404Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Estrella de neutrones" d="M2493 1319 L2483 1316 L2473 1319 L2466 1326 L2421 1410 L2407 1411 L2396 1416 L2381 1431 L2376 1442 L2374 1455 L2376 1468 L2383 1483 L2339 1565 L2338 1580 L2346 1590 L2356 1593 L2362 1592 L2373 1583 L2417 1500 L2436 1498 L2452 1488 L2459 1479 L2464 1468 L2466 1455 L2463 1439 L2456 1426 L2500 1344 L2501 1329Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-star" data-name="Agujero negro" d="M3085 1592 L3081 1582 L3073 1572 L3046 1556 L3000 1541 L2948 1533 L2933 1520 L2915 1510 L2899 1505 L2880 1503 L2861 1505 L2845 1510 L2827 1520 L2812 1533 L2760 1541 L2711 1557 L2695 1566 L2682 1577 L2676 1588 L2675 1598 L2677 1605 L2687 1618 L2711 1633 L2760 1649 L2812 1657 L2827 1670 L2845 1680 L2861 1685 L2880 1687 L2899 1685 L2915 1680 L2933 1670 L2948 1657 L3000 1649 L3046 1634 L3074 1617 L3083 1605Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="900,440 900,440" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="900" cy="440" r="0"/><text class="olabel" data-cat="ti-star" data-name="Galaxia espiral" x="780" y="915" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Galaxia espiral</text><text class="sub" x="780" y="949" text-anchor="middle" data-for="Galaxia espiral" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">la Vía Láctea es de este tipo</text><polyline class="leader" points="1140,718 896,346" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="896" cy="346" r="7"/><text class="olabel" data-cat="ti-star" data-name="Brazo espiral" x="1140" y="730" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Brazo espiral</text><text class="sub" x="1140" y="764" text-anchor="start" data-for="Brazo espiral" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">zona de estrellas jóvenes</text><polyline class="leader" points="1140,328 780,545" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="780" cy="545" r="7"/><text class="olabel" data-cat="ti-star" data-name="Núcleo galáctico" x="1140" y="340" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Núcleo galáctico</text><text class="sub" x="1140" y="374" text-anchor="start" data-for="Núcleo galáctico" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">centro denso y brillante</text><polyline class="leader" points="1140,518 965,545" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="965" cy="545" r="7"/><text class="olabel" data-cat="ti-star" data-name="Posición del Sol" x="1140" y="530" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Posición del Sol</text><text class="sub" x="1140" y="564" text-anchor="start" data-for="Posición del Sol" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">a 26 000 años luz del centro</text><polyline class="leader" points="1960,555 1960,555" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1960" cy="555" r="0"/><text class="olabel" data-cat="ti-star" data-name="Galaxia elíptica" x="1960" y="915" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Galaxia elíptica</text><text class="sub" x="1960" y="949" text-anchor="middle" data-for="Galaxia elíptica" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">ovalada, de estrellas viejas</text><polyline class="leader" points="2710,555 2710,555" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2710" cy="555" r="0"/><text class="olabel" data-cat="ti-star" data-name="Galaxia irregular" x="2710" y="915" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Galaxia irregular</text><text class="sub" x="2710" y="949" text-anchor="middle" data-for="Galaxia irregular" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">sin forma definida</text><polyline class="leader" points="300,1330 300,1330" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="300" cy="1330" r="0"/><text class="olabel" data-cat="ti-star" data-name="Nebulosa" x="300" y="1585" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Nebulosa</text><text class="sub" x="300" y="1619" text-anchor="middle" data-for="Nebulosa" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">nube de gas y polvo</text><polyline class="leader" points="820,1160 820,1160" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="820" cy="1160" r="0"/><text class="olabel" data-cat="ti-star" data-name="Estrella" x="820" y="1330" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Estrella</text><text class="sub" x="820" y="1364" text-anchor="middle" data-for="Estrella" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">etapa estable, como el Sol</text><polyline class="leader" points="1360,1160 1360,1160" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1360" cy="1160" r="0"/><text class="olabel" data-cat="ti-star" data-name="Gigante roja" x="1360" y="1330" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Gigante roja</text><text class="sub" x="1360" y="1364" text-anchor="middle" data-for="Gigante roja" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">se agota el hidrógeno del núcleo</text><polyline class="leader" points="1860,1160 1860,1160" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1860" cy="1160" r="0"/><text class="olabel" data-cat="ti-star" data-name="Enana blanca" x="1860" y="1330" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Enana blanca</text><text class="sub" x="1860" y="1364" text-anchor="middle" data-for="Enana blanca" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">resto de una estrella pequeña</text><polyline class="leader" points="1360,1530 1360,1530" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1360" cy="1530" r="0"/><text class="olabel" data-cat="ti-star" data-name="Supergigante roja" x="1360" y="1715" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Supergigante roja</text><text class="sub" x="1360" y="1749" text-anchor="middle" data-for="Supergigante roja" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">estrella masiva envejecida</text><polyline class="leader" points="1860,1530 1860,1530" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1860" cy="1530" r="0"/><text class="olabel" data-cat="ti-star" data-name="Supernova" x="1860" y="1715" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Supernova</text><text class="sub" x="1860" y="1749" text-anchor="middle" data-for="Supernova" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">explosión final de una estrella masiva</text><polyline class="leader" points="2420,1455 2420,1455" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2420" cy="1455" r="0"/><text class="olabel" data-cat="ti-star" data-name="Estrella de neutrones" x="2485" y="1515" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Estrella de neutrones</text><text class="sub" x="2485" y="1549" text-anchor="start" data-for="Estrella de neutrones" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">resto extremadamente denso</text><polyline class="leader" points="2880,1595 2880,1595" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2880" cy="1595" r="0"/><text class="olabel" data-cat="ti-star" data-name="Agujero negro" x="2880" y="1715" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Agujero negro</text><text class="sub" x="2880" y="1749" text-anchor="middle" data-for="Agujero negro" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">ni la luz puede escapar</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">LA TIERRA Y EL UNIVERSO</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>El universo está formado por miles de millones de <strong>galaxias</strong>, y cada galaxia contiene miles de millones de <strong>estrellas</strong>. Las estrellas nacen, viven y mueren, y su final depende de su masa. Esta lámina muestra sus <strong>14 elementos</strong>.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Galaxias:</strong> conjuntos enormes de estrellas, gas y polvo unidos por la gravedad; pueden ser espirales, elípticas o irregulares.</li>
+        <li><strong>Vía Láctea:</strong> nuestra galaxia, espiral; el Sol está en un brazo, a unos 26 000 años luz del centro.</li>
+        <li><strong>Nacimiento:</strong> las estrellas nacen en nebulosas, nubes de gas y polvo que se contraen por la gravedad.</li>
+        <li><strong>Vida estable:</strong> una estrella brilla durante miles de millones de años transformando hidrógeno en helio.</li>
+        <li><strong>Final:</strong> las estrellas como el Sol acaban como enanas blancas; las muy masivas explotan como supernovas y dejan una estrella de neutrones o un agujero negro.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba el nombre de cada tipo de galaxia y de cada etapa de las estrellas.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar los 14 elementos.</li>
+        <li>Explicar por qué el Sol no acabará como supernova.</li>
+        <li>Relacionar con <a href="geologia-sistema-solar.html" style="color:#8a5a22">El Sistema Solar</a>: el Sol es una estrella de la Vía Láctea.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: imágenes generadas por ordenador de forma procedural (no son fotografías de objetos reales) y esquema fuera de escala. Los datos proceden de valores de referencia de la NASA y de la ESA. Licencia <strong>CC BY 4.0</strong>: puedes copiarla, adaptarla y usarla citando Atlas Abierto (atlasabierto.org).</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">La Tierra y el universo</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">14 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Galaxia espiral": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-galaxia-espiral.webp", "txt": "Galaxia con un núcleo brillante rodeado de un disco plano con brazos en forma de espiral, donde hay gas, polvo y estrellas jóvenes. Nuestra galaxia, la Vía Láctea, es espiral (con una barra en el centro), igual que su vecina Andrómeda.", "dato": "La Vía Láctea tiene unos 100 000 años luz de diámetro y contiene cientos de miles de millones de estrellas."}, "Brazo espiral": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-brazo-espiral.webp", "txt": "Cada una de las bandas curvas que salen del centro de una galaxia espiral. En ellas se concentran el gas y el polvo y por eso nacen allí muchas estrellas, que brillan en tonos azules y blancos.", "dato": "Los brazos no son estructuras fijas: son zonas donde las estrellas se amontonan al pasar, como un atasco en una carretera."}, "Núcleo galáctico": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-nucleo-galactico.webp", "txt": "Región central de la galaxia: muy densa y brillante, con muchísimas estrellas viejas de color amarillento y poco gas.", "dato": "En el centro de la Vía Láctea hay un agujero negro supermasivo, Sagitario A*, con unos 4 millones de veces la masa del Sol."}, "Posición del Sol": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-posicion-del-sol.webp", "txt": "El Sol está en un brazo secundario, a unos 26 000 años luz del centro de la galaxia, más o menos a mitad de camino hasta el borde. Desde dentro vemos la Vía Láctea de canto, como una banda blanquecina en el cielo nocturno.", "dato": "El Sol da una vuelta completa a la galaxia en unos 230 millones de años (un «año galáctico»)."}, "Galaxia elíptica": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-galaxia-eliptica.webp", "txt": "Galaxia de forma ovalada o casi esférica, sin brazos y con muy poco gas y polvo. Está formada sobre todo por estrellas viejas, amarillentas o rojizas, y casi no nacen estrellas nuevas.", "dato": "Las hay desde enanas hasta gigantes, que son de las mayores que se conocen, con cientos de miles de millones de estrellas o más."}, "Galaxia irregular": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-galaxia-irregular.webp", "txt": "Galaxia sin forma definida ni estructura regular. Suele tener mucho gas y polvo y forma estrellas nuevas con rapidez, por eso brilla con tonos azulados.", "dato": "Las Nubes de Magallanes, visibles desde el hemisferio sur, son galaxias irregulares que acompañan a la Vía Láctea."}, "Nebulosa": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-nebulosa.webp", "txt": "Enorme nube de gas (sobre todo hidrógeno) y polvo del espacio. Cuando una parte se contrae por su propia gravedad, se calienta y acaba formando una estrella: de ahí nacen las estrellas.", "dato": "La nebulosa de Orión, visible a simple vista en invierno como una mancha borrosa, es una región donde hoy están naciendo estrellas."}, "Estrella": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-estrella.webp", "txt": "Esfera de gas muy caliente que brilla por las reacciones nucleares de su interior, donde el hidrógeno se transforma en helio. Es la etapa más larga de su vida y se mantiene estable porque la gravedad y la presión se equilibran. El Sol está en esta etapa.", "dato": "El Sol lleva unos 4 600 millones de años en esta etapa y le quedan otros 5 000 millones aproximadamente."}, "Gigante roja": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-gigante-roja.webp", "txt": "Cuando se agota el hidrógeno del núcleo, una estrella como el Sol se hincha y se enfría: su superficie se vuelve rojiza y su tamaño aumenta mucho. En su interior, el helio empieza a transformarse en elementos más pesados.", "dato": "Cuando el Sol sea una gigante roja, dentro de unos 5 000 millones de años, engullirá probablemente a Mercurio y a Venus, y quizá a la Tierra."}, "Enana blanca": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-enana-blanca.webp", "txt": "Estrella pequeña, muy densa y caliente que queda cuando una estrella como el Sol expulsa sus capas externas, que forman una nebulosa planetaria. Ya no produce energía: brilla por el calor acumulado y se va enfriando durante miles de millones de años.", "dato": "Tiene un tamaño parecido al de la Tierra pero una masa comparable a la del Sol: una cucharadita de su materia pesaría toneladas."}, "Supergigante roja": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-supergigante-roja.webp", "txt": "Fase final de una estrella muy masiva (más de unas 8 veces la masa del Sol). Es enorme y de color rojo, y en su núcleo se fabrican elementos cada vez más pesados hasta llegar al hierro.", "dato": "Betelgeuse, en la constelación de Orión, es una supergigante roja: si estuviera en el lugar del Sol, llegaría más allá de la órbita de Marte."}, "Supernova": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-supernova.webp", "txt": "Explosión violentísima con la que termina su vida una estrella masiva: el núcleo se hunde por su propia gravedad y las capas externas salen despedidas al espacio. Durante unas semanas puede brillar más que toda su galaxia.", "dato": "Las supernovas dispersan elementos como el carbono, el oxígeno o el hierro: los átomos de nuestro cuerpo se formaron en el interior de estrellas."}, "Estrella de neutrones": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-estrella-de-neutrones.webp", "txt": "Resto de una supernova cuyo núcleo se ha comprimido tanto que está formado casi solo por neutrones. Mide unos 20 km de diámetro pero tiene más masa que el Sol. Si gira y emite haces de radiación, se observa como un púlsar.", "dato": "Una cucharadita de su materia pesaría miles de millones de toneladas."}, "Agujero negro": {"grupo": "Galaxias y estrellas", "img": "ficha/geo-agujero-negro.webp", "txt": "Objeto cuya gravedad es tan intensa que ni la luz puede escapar de él. Se forma cuando el núcleo de una estrella muy masiva colapsa por completo tras una supernova. No se ve directamente: se detecta por el gas caliente que cae a su alrededor (disco de acreción) y por su efecto sobre los astros cercanos.", "dato": "Los agujeros negros supermasivos, de millones de veces la masa del Sol, están en el centro de casi todas las galaxias grandes."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
