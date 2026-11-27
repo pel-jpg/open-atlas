@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paralelos, meridianos y zonas climáticas — Latitud, longitud y climas de la Tierra · Atlas Abierto</title>
+<meta name="description" content="Paralelos, meridianos y zonas climáticas para ESO: ecuador, trópicos, círculos polares, meridiano de Greenwich y las cinco zonas climáticas, con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-paralelos-zonas.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Paralelos, meridianos y zonas climáticas — Latitud, longitud y climas de la Tierra · Atlas Abierto">
+<meta property="og:description" content="Paralelos, meridianos y zonas climáticas para ESO: ecuador, trópicos, círculos polares, meridiano de Greenwich y las cinco zonas climáticas, con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-paralelos-zonas.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:3320/1790;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"Paralelos, meridianos y zonas climáticas — Latitud, longitud y climas de la Tierra","description":"Paralelos, meridianos y zonas climáticas para ESO: ecuador, trópicos, círculos polares, meridiano de Greenwich y las cinco zonas climáticas, con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-paralelos-zonas.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"Paralelos, meridianos y zonas climáticas — Latitud, longitud y climas de la Tierra","item":"https://atlasabierto.org/geologia-paralelos-zonas.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / Paralelos, meridianos y zonas climáticas</div>
+    <h1>Paralelos, meridianos y zonas climáticas</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3320 1790" width="3320" height="1790" role="img" aria-label="Lámina: paralelos, meridianos y zonas climáticas de la Tierra"><rect width="3320" height="1790" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="3280" height="1750" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1660" y="95" text-anchor="middle">Paralelos, meridianos y zonas climáticas</text><image href="geologia/paralelos-zonas.webp" x="60" y="170" width="3200" height="1500"/><text x="246" y="463" text-anchor="end" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">60° N</text><text x="246" y="696" text-anchor="end" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">30° N</text><text x="246" y="930" text-anchor="end" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">0°</text><text x="246" y="1163" text-anchor="end" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">30° S</text><text x="246" y="1396" text-anchor="end" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">60° S</text><text x="260" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">180°</text><text x="493" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">150° O</text><text x="726" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">120° O</text><text x="960" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">90° O</text><text x="1193" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">60° O</text><text x="1426" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">30° O</text><text x="1660" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">0°</text><text x="1893" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">30° E</text><text x="2126" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">60° E</text><text x="2360" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">90° E</text><text x="2593" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">120° E</text><text x="2826" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">150° E</text><text x="3060" y="1656" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">180°</text><text x="100" y="920" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke" transform="rotate(-90 100 920)">Latitud (paralelos)</text><text x="1660" y="206" text-anchor="middle" style="font:italic 30px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Longitud (meridianos)</text><text class="sub" x="1660" y="1750" text-anchor="middle">Mapamundi en proyección cilíndrica equidistante (esquema): los paralelos son las líneas horizontales y los meridianos las verticales.</text></g><g id="hitzones"><path class="organo" data-cat="ti-coord" data-name="Zona polar ártica" d="M260 220 L260 402 L3060 402 L3060 220Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Zona polar antártica" d="M260 1437 L260 1620 L3060 1620 L3060 1437Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Zona templada del norte" d="M260 402 L260 737 L3060 737 L3060 402Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Zona templada del sur" d="M260 1102 L260 1437 L3060 1437 L3060 1102Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Zona cálida" d="M260 737 L260 1102 L3060 1102 L3060 737Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Ecuador (paralelo 0°)" d="M260 898 L260 942 L3060 942 L3060 898Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Trópico de Cáncer" d="M260 715 L260 759 L3060 759 L3060 715Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Trópico de Capricornio" d="M260 1080 L260 1124 L3060 1124 L3060 1080Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Círculo polar ártico" d="M260 380 L260 424 L3060 424 L3060 380Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Círculo polar antártico" d="M260 1415 L260 1459 L3060 1459 L3060 1415Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-coord" data-name="Meridiano de Greenwich" d="M1638 220 L1638 1620 L1682 1620 L1682 220Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="370,920 370,920" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="370" cy="920" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Ecuador (paralelo 0°)" x="310" y="872" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Ecuador (paralelo 0°)</text><text class="sub" x="310" y="906" text-anchor="start" data-for="Ecuador (paralelo 0°)" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">latitud 0°</text><polyline class="leader" points="370,737 370,737" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="370" cy="737" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Trópico de Cáncer" x="310" y="689" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Trópico de Cáncer</text><text class="sub" x="310" y="723" text-anchor="start" data-for="Trópico de Cáncer" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">latitud 23° 26′ N</text><polyline class="leader" points="370,1102 370,1102" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="370" cy="1102" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Trópico de Capricornio" x="310" y="1054" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Trópico de Capricornio</text><text class="sub" x="310" y="1088" text-anchor="start" data-for="Trópico de Capricornio" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">latitud 23° 26′ S</text><polyline class="leader" points="370,402 370,402" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="370" cy="402" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Círculo polar ártico" x="310" y="354" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Círculo polar ártico</text><text class="sub" x="310" y="388" text-anchor="start" data-for="Círculo polar ártico" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">latitud 66° 34′ N</text><polyline class="leader" points="370,1437 370,1437" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="370" cy="1437" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Círculo polar antártico" x="310" y="1389" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Círculo polar antártico</text><text class="sub" x="310" y="1423" text-anchor="start" data-for="Círculo polar antártico" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">latitud 66° 34′ S</text><polyline class="leader" points="1660,313 1660,313" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1660" cy="313" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Meridiano de Greenwich" x="1684" y="307" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Meridiano de Greenwich</text><text class="sub" x="1684" y="341" text-anchor="start" data-for="Meridiano de Greenwich" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">longitud 0°</text><polyline class="leader" points="2790,826 2790,826" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2790" cy="826" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Zona cálida" x="2790" y="812" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Zona cálida</text><text class="sub" x="2790" y="846" text-anchor="middle" data-for="Zona cálida" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">entre los dos trópicos</text><polyline class="leader" points="2790,570 2790,570" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2790" cy="570" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Zona templada del norte" x="2790" y="556" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Zona templada del norte</text><text class="sub" x="2790" y="590" text-anchor="middle" data-for="Zona templada del norte" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">entre el trópico y el círculo polar</text><polyline class="leader" points="2790,1270 2790,1270" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2790" cy="1270" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Zona templada del sur" x="2790" y="1256" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Zona templada del sur</text><text class="sub" x="2790" y="1290" text-anchor="middle" data-for="Zona templada del sur" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">entre el trópico y el círculo polar</text><polyline class="leader" points="2790,321 2790,321" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2790" cy="321" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Zona polar ártica" x="2790" y="307" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Zona polar ártica</text><text class="sub" x="2790" y="341" text-anchor="middle" data-for="Zona polar ártica" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">al norte del círculo polar</text><polyline class="leader" points="2790,1487 2790,1487" style="stroke:#fff;stroke-width:2.4"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2790" cy="1487" r="0"/><text class="olabel" data-cat="ti-coord" data-name="Zona polar antártica" x="2790" y="1473" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Zona polar antártica</text><text class="sub" x="2790" y="1507" text-anchor="middle" data-for="Zona polar antártica" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">al sur del círculo polar</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">LA TIERRA Y EL UNIVERSO</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>Para situar cualquier punto de la Tierra se usan los <strong>paralelos</strong> (que miden la latitud) y los <strong>meridianos</strong> (que miden la longitud). Los paralelos principales dividen la Tierra en cinco <strong>zonas climáticas</strong>. Esta lámina muestra sus <strong>11 elementos</strong>.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Paralelos:</strong> círculos paralelos al ecuador; miden la latitud, de 0° (ecuador) a 90° (polos), al norte o al sur.</li>
+        <li><strong>Meridianos:</strong> semicírculos que unen los polos; miden la longitud, de 0° (Greenwich) a 180°, al este o al oeste.</li>
+        <li><strong>Trópicos y círculos polares:</strong> son los paralelos que limitan las zonas climáticas (23° 26′ y 66° 34′).</li>
+        <li><strong>Zonas climáticas:</strong> una cálida, dos templadas y dos polares, según la inclinación con que llegan los rayos del Sol.</li>
+        <li><strong>Coordenadas:</strong> latitud y longitud juntas dan la posición exacta de un lugar.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba el nombre de cada línea y de cada zona.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar los 11 elementos.</li>
+        <li>Buscar en un mapa las coordenadas de su localidad y decir en qué zona climática está.</li>
+        <li>Relacionar con <a href="geologia-estaciones.html" style="color:#8a5a22">Estaciones y movimientos de la Tierra</a>: por qué hay zonas climáticas.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: mapamundi dibujado a partir de los contornos de los continentes de GISCO/Eurostat (CC BY 4.0), con las líneas y las zonas añadidas por Atlas Abierto. Licencia <strong>CC BY 4.0</strong>: puedes copiarla, adaptarla y usarla citando Atlas Abierto (atlasabierto.org).</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">La Tierra y el universo</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">11 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"Ecuador (paralelo 0°)": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-ecuador-paralelo-0.webp", "txt": "Paralelo 0°: círculo máximo que rodea la Tierra por la mitad, a la misma distancia de los dos polos. Divide la Tierra en dos hemisferios, el norte (boreal) y el sur (austral). Es el origen desde el que se mide la latitud.", "dato": "Mide unos 40 075 km de longitud. En el ecuador los días y las noches duran casi siempre 12 horas y los rayos del Sol llegan casi perpendiculares durante todo el año."}, "Trópico de Cáncer": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-tropico-de-cancer.webp", "txt": "Paralelo situado a 23° 26′ de latitud norte. Es el límite norte de la zona cálida: hasta él llegan los rayos del Sol perpendiculares, el 21 de junio (solsticio de verano en el hemisferio norte).", "dato": "Su latitud coincide con la inclinación del eje terrestre (23,4°). Pasa por países como México, Argelia, Egipto, Arabia Saudí, India y China."}, "Trópico de Capricornio": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-tropico-de-capricornio.webp", "txt": "Paralelo situado a 23° 26′ de latitud sur. Es el límite sur de la zona cálida: hasta él llegan los rayos del Sol perpendiculares, el 21 de diciembre (solsticio de invierno en el hemisferio norte).", "dato": "Pasa por países como Chile, Argentina, Paraguay, Brasil, Namibia, Botsuana, Sudáfrica, Madagascar y Australia."}, "Círculo polar ártico": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-circulo-polar-artico.webp", "txt": "Paralelo situado a 66° 34′ de latitud norte. Es el límite de la zona polar norte: al norte de este círculo hay al menos un día al año en que el Sol no sale (noche polar) y otro en que no se pone (sol de medianoche).", "dato": "Pasa por Noruega, Suecia, Finlandia, Rusia, Estados Unidos (Alaska), Canadá, Groenlandia e Islandia."}, "Círculo polar antártico": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-circulo-polar-antartico.webp", "txt": "Paralelo situado a 66° 34′ de latitud sur. Es el límite de la zona polar sur: al sur de este círculo hay al menos un día al año de noche polar y otro de sol de medianoche, con las estaciones invertidas respecto al norte.", "dato": "La mayor parte de la Antártida, un continente sin población permanente, queda al sur de este círculo."}, "Meridiano de Greenwich": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-meridiano-de-greenwich.webp", "txt": "Meridiano 0°: semicírculo que va de polo a polo y pasa por el observatorio de Greenwich, en Londres. Se toma como origen para medir la longitud: a su este se cuenta longitud este y a su oeste, longitud oeste.", "dato": "Pasa por el Reino Unido, Francia, España, Argelia, Mali, Burkina Faso, Togo y Ghana. El meridiano opuesto, el 180°, sirve de base a la línea internacional de cambio de fecha."}, "Zona cálida": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-zona-calida.webp", "txt": "Zona comprendida entre los dos trópicos, también llamada intertropical. Recibe los rayos del Sol casi perpendiculares durante todo el año, por eso las temperaturas son altas y las estaciones apenas se notan.", "dato": "Ocupa cerca del 40 % de la superficie de la Tierra. En ella hay selvas, sabanas y grandes desiertos."}, "Zona templada del norte": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-zona-templada-del-norte.webp", "txt": "Zona comprendida entre el trópico de Cáncer y el círculo polar ártico. Los rayos del Sol llegan más inclinados que en la zona cálida y hay cuatro estaciones bien marcadas, con temperaturas moderadas.", "dato": "España y casi toda Europa están en esta zona. Concentra la mayor parte de la población mundial."}, "Zona templada del sur": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-zona-templada-del-sur.webp", "txt": "Zona comprendida entre el trópico de Capricornio y el círculo polar antártico. Hay cuatro estaciones, pero con las fechas contrarias a las del hemisferio norte. Casi toda su superficie es océano.", "dato": "Ocupa, por ejemplo, el sur de Sudamérica, el sur de África, el sur de Australia y Nueva Zelanda."}, "Zona polar ártica": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-zona-polar-artica.webp", "txt": "Zona situada al norte del círculo polar ártico. Los rayos del Sol llegan muy inclinados y en invierno hay días enteros de noche, por lo que las temperaturas son muy bajas. Ocupa el océano Glacial Ártico y las tierras que lo rodean.", "dato": "En el polo norte hay aproximadamente seis meses de día y seis meses de noche al año."}, "Zona polar antártica": {"grupo": "Paralelos, meridianos y zonas climáticas", "img": "ficha/geo-zona-polar-antartica.webp", "txt": "Zona situada al sur del círculo polar antártico. Es la más fría de la Tierra y está ocupada casi toda por la Antártida, un continente cubierto de hielo.", "dato": "La temperatura más baja registrada en la Tierra, −89,2 °C, se midió en la Antártida (estación Vostok, 1983)."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
