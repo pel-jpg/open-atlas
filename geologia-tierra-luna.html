@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Tierra y la Luna — Fases, eclipses y mareas · Atlas Abierto</title>
+<meta name="description" content="La Tierra y la Luna para ESO: fases lunares, eclipses de Sol y de Luna, mareas vivas y muertas, con modo juego, versión muda y listo para imprimir.">
+<link rel="canonical" href="https://atlasabierto.org/geologia-tierra-luna.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atlas Abierto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="La Tierra y la Luna — Fases, eclipses y mareas · Atlas Abierto">
+<meta property="og:description" content="La Tierra y la Luna para ESO: fases lunares, eclipses de Sol y de Luna, mareas vivas y muertas, con modo juego, versión muda y listo para imprimir.">
+<meta property="og:url" content="https://atlasabierto.org/geologia-tierra-luna.html">
+<meta property="og:image" content="https://atlasabierto.org/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://atlasabierto.org/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECE4D2; --paper-2:#E2D8C0; --ink:#22301F; --ink-soft:#4B5A45;
+    --water:#3E6180; --gold:#B8862B;
+    --line:rgba(34,48,31,0.18); --line-strong:rgba(34,48,31,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;}
+  .wrap{max-width:1700px;margin:0 auto;padding:0 32px;}
+  .print-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--ink);color:var(--paper);border:none;padding:9px 16px;border-radius:2px;cursor:pointer;}
+  .print-btn:hover{background:#3a4d34;}
+  header{border-bottom:1px solid var(--line-strong);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-mark{font-family:'Fraunces',serif;font-weight:700;font-size:20px;}
+  .brand-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-soft);text-transform:uppercase;}
+  nav a{font-size:13px;text-decoration:none;color:var(--ink-soft);margin-left:20px;}
+  .plate-head{padding:40px 0 20px;}
+  .breadcrumb{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--ink-soft);text-transform:uppercase;margin-bottom:14px;}
+  .breadcrumb a{color:var(--ink-soft);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:38px;}
+  .meta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;align-items:center;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:3px 0;color:var(--ink-soft);background:none;border:none;border-bottom:2px solid var(--line-strong);border-radius:0;margin-right:14px;}
+  .tag.license{border-bottom-color:var(--gold);color:var(--ink);font-weight:600;}
+  .tag.category{border-bottom-color:var(--ink);color:var(--ink);font-weight:600;}
+  .siblings{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+  .siblings a{font-size:12px;text-decoration:none;color:var(--ink-soft);border:1px solid var(--line-strong);padding:5px 10px;border-radius:2px;}
+  .siblings a.current{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .map-frame{background:var(--water);border:1px solid var(--line-strong);border-radius:2px;margin:28px 0;padding:0;overflow:hidden;}
+
+  .land-base{fill:#a8c070;stroke:none;}
+  .hill-zone{opacity:0.85;stroke:none;}
+  .mountain-zone{opacity:0.92;stroke:none;}
+  .peak-halo{fill:#8b3a2e;opacity:0.55;}
+  .peak-tri2{fill:#3a1c14;}
+  .peak-label2{fill:#2a1810;font-size:11px;font-weight:700;font-family:'IBM Plex Sans',sans-serif;}
+  .leader2{stroke:#3a2a15;stroke-width:0.6;stroke-dasharray:1.5,1.5;opacity:0.75;}
+  .river2{fill:none;stroke:#2f5d7a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+  .river-label2{fill:#12283a;font-size:11.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake2{fill:#3E6180;stroke:#1c3346;stroke-width:0.6;}
+  .lake-label2{fill:#12283a;font-size:10.5px;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .range-label2{fill:#3a2a15;font-size:15px;font-weight:700;letter-spacing:2px;font-family:'IBM Plex Sans',sans-serif;}
+  .region-label{fill:#33421f;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.82;}
+  .sea-label2{fill:#d7e4ee;font-weight:600;letter-spacing:1.5px;text-anchor:middle;font-family:'IBM Plex Sans',sans-serif;opacity:0.9;}
+  .ref-line{stroke:#22301F;stroke-width:0.8;stroke-dasharray:5,4;opacity:0.55;}
+  .ref-line-label{fill:#22301F;font-size:9.5px;font-family:'IBM Plex Mono',monospace;opacity:0.7;}
+  .scale-bar line{stroke:#1f2a1b;stroke-width:1.4;}
+  .scale-bar text{fill:#1f2a1b;font-size:10px;font-family:'IBM Plex Mono',monospace;}
+  .legend-bg{fill:var(--paper);opacity:0.92;stroke:var(--ink);stroke-width:1;}
+  .legend-title{fill:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:1px;font-family:'IBM Plex Mono',monospace;}
+  .legend-text{fill:var(--ink);font-size:10.5px;font-family:'IBM Plex Sans',sans-serif;}
+
+  .details{display:grid;grid-template-columns:1.3fr 0.7fr;gap:40px;padding:20px 0 60px;}
+  .details h2{font-family:'Fraunces',serif;font-size:20px;margin-bottom:10px;}
+  .details p{font-size:14.5px;line-height:1.65;color:var(--ink-soft);margin-bottom:14px;}
+  .details ul{font-size:14px;line-height:1.8;color:var(--ink-soft);padding-left:18px;}
+  aside{border-left:1px solid var(--line-strong);padding-left:28px;}
+  .info-row{margin-bottom:16px;}
+  .info-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:4px;}
+  .info-val{font-size:14px;}
+  .callout{font-size:12.5px;color:var(--ink-soft);line-height:1.6;background:var(--paper-2);padding:12px 14px;border-radius:2px;margin-top:8px;}
+  footer{border-top:1px solid var(--line-strong);padding:28px 0;}
+  footer p{font-size:12.5px;color:var(--ink-soft);}
+  @media (max-width:880px){.details{grid-template-columns:1fr;} aside{border-left:none;border-top:1px solid var(--line-strong);padding-left:0;padding-top:20px;}}
+  @media print{
+    @page{ size: 210mm 297mm; margin: 8mm; }
+    html, body{background:#fff; margin:0 !important; padding:0 !important; width:194mm; height:281mm;}
+    header, .breadcrumb, .meta-row, .siblings, .details, footer, .print-btn, .plate-head, .custom-panel{display:none !important;}
+    .wrap{max-width:none;padding:0;margin:0;width:194mm;}
+    .map-frame{margin:0 !important;border:none !important;padding:0 !important;
+      width:194mm !important; height:279mm !important; display:flex !important;
+      align-items:center; justify-content:center;}
+    .map-frame svg{display:block; width:194mm; height:265mm; flex-shrink:0;}
+  }
+  .river{fill:none;stroke:#2f5d7a;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+  .lake{fill:#3E6180;stroke:#24455e;stroke-width:0.5;}
+  .river-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+  .lake-label{fill:#0f2233;font-style:italic;font-family:'IBM Plex Sans',sans-serif;}
+
+  .custom-panel{background:var(--paper-2);border:1px solid var(--line-strong);border-radius:2px;padding:18px 20px;margin:20px 0 0;}
+  .custom-panel-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;}
+  .custom-panel-title{font-family:'Fraunces',serif;font-size:16px;font-weight:600;}
+  .preset-btns{display:flex;gap:8px;}
+  .preset-btns button{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:transparent;border:1px solid var(--line-strong);color:var(--ink);padding:6px 13px;border-radius:999px;cursor:pointer;}
+  .preset-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .cat-toggles{display:flex;flex-wrap:wrap;gap:8px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cat-toggles label{font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .advanced-block{margin-top:14px;}
+  .advanced-block summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-soft);padding:4px 0;}
+  .advanced-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:12px;max-height:340px;overflow-y:auto;}
+  .advanced-group h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .item-row{display:block;font-size:12.5px;padding:2px 0;cursor:pointer;}
+
+  /* impresión: conservar el azul del mar y rotular los mares en negro */
+  @media print{
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+    .map-frame{background:var(--water,#3E6180) !important;}
+    .sea-label,.sea-label2{fill:#000 !important;opacity:1 !important;}
+  }
+  /* personalización: categorías como chips con lista desplegable propia */
+  .cat-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .cat-toggles.enhanced{gap:10px;}
+  .cat-chip{display:inline-flex;align-items:stretch;border:1px solid var(--line-strong);border-radius:999px;background:var(--paper);overflow:hidden;}
+  .cat-chip label{padding:6px 10px 6px 12px;font-size:13px;}
+  .cat-chip.open{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink);}
+  .cat-more{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px;border-left:1px solid var(--line-strong);font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);background:var(--paper-2);}
+  .cat-more:hover,.cat-chip.open .cat-more{background:var(--ink);color:var(--paper);}
+  .cat-more:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;}
+  .cat-more .car{transition:transform .15s;}
+  .cat-chip.open .car{transform:rotate(180deg);}
+  .cat-lists{margin-top:12px;}
+  .cat-list{background:var(--paper);border:1px solid var(--line-strong);border-radius:3px;padding:12px 16px;}
+  .cat-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);}
+  .cat-list-head button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0 18px;max-height:260px;overflow-y:auto;}
+  .cat-chip.nomaster .cat-more{border-left:0;padding:6px 12px;font-size:13px;font-family:inherit;color:var(--ink);}
+  .cat-chip.nomaster .cat-more:hover,.cat-chip.nomaster.open .cat-more{color:var(--paper);}
+  .cat-chip.nomaster .cat-name{font-weight:500;}
+  .cat-chip.nomaster .cat-more span:nth-child(2){font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.75;}
+
+  /* modo mudo: oculta los nombres sin tocar la selección de elementos */
+  body.mudo svg text{display:none !important;}
+  body.mudo svg .leader2,body.mudo svg .leader{display:none !important;}
+  body.mudo svg .legend-block text,body.mudo svg .scale-bar text{display:inline !important;}
+  .custom-panel-head{flex-wrap:wrap;gap:8px 12px;}
+  .cat-list-acts{display:inline-flex;gap:14px;align-items:center;}
+  .cat-list-acts button{all:unset;cursor:pointer;font-size:11px;letter-spacing:0;text-transform:none;color:var(--ink-soft);text-decoration:underline;}
+  .cat-list-acts button:hover{color:var(--ink);}
+  .preset-btns [hidden]{display:none !important;}
+  /*mf-block*/ .map-frame svg{display:block;}
+.grat-label{fill:#22301F;font-size:8.5px;font-family:'IBM Plex Mono',monospace;opacity:0.6;}
+  .bg-country{fill:#D8D0BC;stroke:#B8AA8A;stroke-width:0.6;}
+  
+  /* --- rotulos sobre relieve hipsometrico --- */
+  svg text.range-label2,svg text.peak-label2,svg text.region-label,svg text.island-label,svg text.feature-label,svg text.river-label,svg text.river-label2,svg text.lake-label,svg text.lake-label2,svg text.feature-label2,svg text.region-label2,svg text.label{paint-order:stroke;stroke:rgba(255,255,255,.4);stroke-width:1.1px;stroke-linejoin:round;}
+  svg text.sea-label2{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .river,svg .river2{stroke:#1d6bb5;stroke-width:1.3;filter:drop-shadow(0 0 1.1px rgba(255,255,255,.95)) drop-shadow(0 0 .6px rgba(255,255,255,.9));}
+  svg .river,svg .river2[data-name="Volga"],svg .river,svg .river2[data-name="Danubio"],svg .river,svg .river2[data-name="Dniéper"],svg .river,svg .river2[data-name="Rin"],svg .river,svg .river2[data-name="Don"],svg .river,svg .river2[data-name="Ural"],svg .river,svg .river2[data-name="Vístula"],svg .river,svg .river2[data-name="Elba"],svg .river,svg .river2[data-name="Loira"],svg .river,svg .river2[data-name="Ebro"],svg .river,svg .river2[data-name="Tajo"],svg .river,svg .river2[data-name="Po"],svg .river,svg .river2[data-name="Ródano"]{stroke:#0f5aa8;stroke-width:2.1;}
+  svg text.river-label,svg text.river-label2{fill:#08365f;font-weight:600;font-style:italic;stroke:rgba(255,255,255,.55);}
+  svg .lake,svg .lake2{fill:#9fcbe9;stroke:#3f78a8;stroke-width:.8;}
+  .peak-tri2{fill:#2a1810;stroke:rgba(255,255,255,.75);stroke-width:.8px;}
+  svg text.sea-label{fill:#10304f;paint-order:stroke;stroke:rgba(225,238,248,.35);stroke-width:1.1px;stroke-linejoin:round;opacity:1;}
+  svg .country,svg .bg-country{fill:transparent;stroke:none;}
+  svg .country:hover{fill:rgba(255,255,255,.16);}
+  svg text.biome-label{fill:#2d3a1c;}
+
+  .map-frame{background:#f7f3e8 !important;}
+  .map-frame svg{display:block;width:100%;height:auto;}
+  .layer-hint{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px;}
+  .acts{margin-top:28px}
+  .acts li{margin-bottom:6px}
+  .src li{margin-bottom:6px;font-size:13.5px}
+  @media print{
+    .map-frame{background:#fff !important;width:281mm !important;height:179mm !important;}
+    .map-frame svg{width:281mm !important;height:162mm !important;}
+  }
+  svg text[style*="stroke-width"]{stroke-width:1.1px !important;stroke-opacity:.4 !important;}
+  .map-frame{background:#F5EFE4 !important;}
+  .sub{fill:#7a6a58;font-size:30px;font-style:italic;font-family:'Fraunces',Georgia,serif}
+  .mudo .sub{display:none;}
+  .proc{fill:#2e2014;font-size:27px;font-weight:600;font-family:'Fraunces',Georgia,serif;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round;pointer-events:none}
+  .cap{fill:#7a6a58;font-size:40px;font-style:italic;font-family:'Fraunces',Georgia,serif;pointer-events:none;}
+  .olabel{fill:#2e2014;font-size:38px;font-weight:500;font-style:italic;font-family:'Fraunces',Georgia,serif;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}
+  .mudo .olabel,.mudo .leader{display:none;}
+  .organo{cursor:inherit;}
+  .leader{stroke:#7a6a58;stroke-width:1;fill:none;}.leader-dot{fill:#7a6a58;}
+  .mudo .leader-dot{display:none;}
+  .juego-on .leader-dot{display:none;}
+  .juego-on svg text.reveal.olabel{font-size:38px !important;}
+  .juego-on svg .leader-on.leader-dot{display:block !important;}
+  @media screen and (max-width:760px){.map-frame svg#mapa{width:100% !important;height:auto !important}.olabel{font-size:46px}}
+  @media screen and (min-width:761px){.map-frame svg#mapa{width:100% !important;height:auto !important;aspect-ratio:3320/1790;margin:0 auto;display:block}}
+  </style>
+<link rel="icon" type="image/png" sizes="32x32" href="icono4-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icono4-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icono-192.png?v=3">
+<link rel="shortcut icon" href="icono4.ico">
+<link rel="apple-touch-icon" href="icono-apple.png?v=3">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":["LearningResource","CreativeWork"],"name":"La Tierra y la Luna — Fases, eclipses y mareas","description":"La Tierra y la Luna para ESO: fases lunares, eclipses de Sol y de Luna, mareas vivas y muertas, con modo juego, versión muda y listo para imprimir.","url":"https://atlasabierto.org/geologia-tierra-luna.html","inLanguage":"es","isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","learningResourceType":"Mapa","educationalLevel":["Educación Secundaria Obligatoria","Bachillerato"],"audience":{"@type":"EducationalAudience","educationalRole":"student"},"about":"Geología","image":"https://atlasabierto.org/og-image.jpg","publisher":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"creator":{"@type":"Organization","name":"Atlas Abierto","url":"https://atlasabierto.org/","logo":"https://atlasabierto.org/icon-192.png"},"isPartOf":{"@type":"WebSite","name":"Atlas Abierto","url":"https://atlasabierto.org/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Abierto","item":"https://atlasabierto.org/"},{"@type":"ListItem","position":2,"name":"Biología y Geología","item":"https://atlasabierto.org/biologia-geologia.html"},{"@type":"ListItem","position":3,"name":"La Tierra y la Luna — Fases, eclipses y mareas","item":"https://atlasabierto.org/geologia-tierra-luna.html"}]}]</script>
+</head>
+<body>
+<header>
+  <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;"><img src="logo.svg" alt="" width="26" height="26" style="vertical-align:-5px;margin-right:8px"><span class="brand-mark">Atlas Abierto</span></a><span class="brand-sub">Aprender jugando</span></div>
+  <nav><a href="index.html">Explorar</a><a href="ayuda.html">Ayuda</a><a href="licencias.html">Licencias</a></nav>
+</header>
+<div class="wrap">
+  <div class="plate-head">
+    <div class="breadcrumb"><a href="index.html">Explorar</a> / <a href="biologia-geologia.html">Biología y Geología</a> / La Tierra y la Luna</div>
+    <h1>La Tierra y la Luna</h1>
+  </div>
+
+  <div class="custom-panel" id="customPanel">
+    <div class="custom-panel-head">
+      <span class="custom-panel-title">Personaliza este mapa</span>
+      <div class="preset-btns">
+        <button data-preset="mudo">Mudo</button>
+        <button data-preset="completo" class="active">Completo</button>
+      </div>
+    </div>
+    <p class="layer-hint">«Mudo» quita los nombres para que el alumnado los escriba. Pulsa cualquier estructura para ver su <strong>ficha</strong> con imagen ampliada y su función, o <strong>Jugar</strong> para localizar las partes señalándolas.</p>
+  </div>
+
+  <div class="map-frame">
+<svg id="mapa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3320 1790" width="3320" height="1790" role="img" aria-label="Lámina: la Tierra y la Luna, fases, eclipses y mareas"><defs><marker id="ra" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffd36b"/></marker></defs><rect width="3320" height="1790" fill="#F5EFE4"/><g id="dibujo"><rect x="20" y="20" width="3280" height="1750" rx="14" fill="#F8F2E7" stroke="#a98c75" stroke-width="2"/><text class="cap" x="1660" y="95" text-anchor="middle">La Tierra y la Luna: fases, eclipses y mareas</text><image href="geologia/tierra-luna.webp" x="60" y="170" width="3200" height="1500"/><line x1="100.0" y1="400.0" x2="390.0" y2="400.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="100.0" y1="520.0" x2="390.0" y2="520.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="100.0" y1="640.0" x2="390.0" y2="640.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><text x="100" y="345" style="font:italic 34px Georgia,serif;fill:#ffd36b;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Rayos del Sol</text><line x1="160.0" y1="1070.0" x2="390.0" y2="1070.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="160.0" y1="1145.0" x2="390.0" y2="1145.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="160.0" y1="1220.0" x2="390.0" y2="1220.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="160.0" y1="1295.0" x2="390.0" y2="1295.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="160.0" y1="1370.0" x2="390.0" y2="1370.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1160.0" y1="1070.0" x2="1350.0" y2="1070.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1160.0" y1="1145.0" x2="1350.0" y2="1145.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1141.0" y1="1220.0" x2="1331.0" y2="1220.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1160.0" y1="1295.0" x2="1350.0" y2="1295.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="1160.0" y1="1370.0" x2="1350.0" y2="1370.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2235.0" y1="1160.0" x2="2350.0" y2="1160.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2235.0" y1="1220.0" x2="2350.0" y2="1220.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2235.0" y1="1280.0" x2="2350.0" y2="1280.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2760.0" y1="1190.0" x2="2905.0" y2="1190.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2760.0" y1="1260.0" x2="2905.0" y2="1260.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><line x1="2760.0" y1="1330.0" x2="2905.0" y2="1330.0" stroke="#ffd36b" stroke-width="5" marker-end="url(#ra)" opacity=".9"/><polyline points="883.6,284.4 848.3,286.0 872.1,312.1" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="524.4,396.4 526.0,431.7 552.1,407.9" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="636.4,755.6 671.7,754.0 647.9,727.9" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="995.6,643.6 994.0,608.3 967.9,632.1" fill="none" stroke="#cfd8f0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="140" y="232" style="font:italic 600 44px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Fases de la Luna</text><text x="760" y="885" text-anchor="middle" style="font:italic 32px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Vista desde el polo norte</text><text x="2595" y="232" text-anchor="middle" style="font:italic 32px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:6px;paint-order:stroke">Como se ve desde la Tierra (hemisferio norte)</text><text x="140" y="982" style="font:italic 600 44px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Eclipses</text><text x="2240" y="982" style="font:italic 600 44px Georgia,serif;fill:#cfd8f0;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Mareas</text><text x="2430" y="500" text-anchor="middle" style="font:italic 40px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Luna creciente</text><text x="3090" y="500" text-anchor="middle" style="font:italic 40px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Gibosa creciente</text><text x="2430" y="820" text-anchor="middle" style="font:italic 40px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Gibosa menguante</text><text x="3090" y="820" text-anchor="middle" style="font:italic 40px Georgia,serif;fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke">Luna menguante</text><text class="sub" x="1660" y="1750" text-anchor="middle">Esquema fuera de escala: la Luna es mucho más pequeña y está mucho más lejos de la Tierra. Los rayos del Sol (flechas amarillas) llegan desde la izquierda.</text></g><g id="hitzones"><path class="organo" data-cat="ti-luna" data-name="Órbita lunar" d="M748 242 L697 249 L644 267 L599 293 L575 312 L552 335 L519 381 L498 426 L486 471 L483 493 L482 531 L489 583 L507 636 L531 678 L552 705 L575 728 L621 761 L666 782 L711 794 L733 797 L771 798 L827 790 L876 773 L918 749 L945 728 L968 705 L1002 658 L1022 614 L1034 569 L1037 547 L1038 508 L1031 457 L1013 404 L987 359 L968 335 L945 312 L898 278 L854 258 L809 246 L787 243Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="La Luna" d="M1680 372 L1648 375 L1616 384 L1591 396 L1564 415 L1541 439 L1520 472 L1506 513 L1502 550 L1505 582 L1514 614 L1526 639 L1545 666 L1569 689 L1602 710 L1643 724 L1680 728 L1712 725 L1744 716 L1769 704 L1796 685 L1819 661 L1840 628 L1854 587 L1858 550 L1855 518 L1846 486 L1834 461 L1815 434 L1791 411 L1758 390 L1717 376Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Luna nueva" d="M510 465 L490 469 L475 478 L466 488 L460 499 L456 519 L460 539 L469 554 L479 563 L490 569 L510 573 L530 569 L545 560 L554 550 L560 539 L564 519 L560 499 L551 484 L541 475 L530 469Z M2100 284 L2069 290 L2045 304 L2034 315 L2022 334 L2016 352 L2014 370 L2020 401 L2034 425 L2045 436 L2064 448 L2082 454 L2100 456 L2131 450 L2155 436 L2166 425 L2178 406 L2184 388 L2186 370 L2180 339 L2166 315 L2155 304 L2136 292 L2118 286Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Cuarto creciente" d="M760 716 L740 720 L725 729 L716 739 L710 750 L706 770 L710 790 L719 805 L729 814 L740 820 L760 824 L780 820 L795 811 L804 801 L810 790 L814 770 L810 750 L801 735 L791 726 L780 720Z M2760 284 L2729 290 L2705 304 L2694 315 L2682 334 L2676 352 L2674 370 L2680 401 L2694 425 L2705 436 L2724 448 L2742 454 L2760 456 L2791 450 L2815 436 L2826 425 L2838 406 L2844 388 L2846 370 L2840 339 L2826 315 L2815 304 L2796 292 L2778 286Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Luna llena" d="M2100 604 L2069 610 L2045 624 L2034 635 L2022 654 L2016 672 L2014 690 L2020 721 L2034 745 L2045 756 L2064 768 L2082 774 L2100 776 L2131 770 L2155 756 L2166 745 L2178 726 L2184 708 L2186 690 L2180 659 L2166 635 L2155 624 L2136 612 L2118 606Z M1010 466 L990 470 L975 479 L966 489 L960 500 L956 520 L960 540 L969 555 L979 564 L990 570 L1010 574 L1030 570 L1045 561 L1054 551 L1060 540 L1064 520 L1060 500 L1051 485 L1041 476 L1030 470Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Cuarto menguante" d="M2760 604 L2729 610 L2705 624 L2694 635 L2682 654 L2676 672 L2674 690 L2680 721 L2694 745 L2705 756 L2724 768 L2742 774 L2760 776 L2791 770 L2815 756 L2826 745 L2838 726 L2844 708 L2846 690 L2840 659 L2826 635 L2815 624 L2796 612 L2778 606Z M760 216 L740 220 L725 229 L716 239 L710 250 L706 270 L710 290 L719 305 L729 314 L740 320 L760 324 L780 320 L795 311 L804 301 L810 290 L814 270 L810 250 L801 235 L791 226 L780 220Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Eclipse de Sol" d="M1080 990 L636 1168 L620 1166 L600 1170 L585 1179 L576 1189 L570 1200 L566 1220 L570 1240 L579 1255 L589 1264 L600 1270 L620 1274 L636 1272 L1080 1450Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Eclipse de Luna" d="M2180 960 L1460 1105 L1460 1335 L2180 1480Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Mareas vivas" d="M2670 1186 L2659 1188 L2647 1195 L2640 1204 L2636 1220 L2638 1231 L2645 1243 L2654 1250 L2670 1254 L2681 1252 L2693 1245 L2700 1236 L2704 1220 L2702 1209 L2695 1197 L2686 1190Z M2370 1198 L2366 1213 L2366 1227 L2370 1242 L2380 1259 L2399 1277 L2411 1284 L2432 1293 L2458 1299 L2492 1300 L2508 1298 L2528 1293 L2549 1284 L2565 1274 L2580 1259 L2590 1242 L2594 1227 L2594 1213 L2590 1198 L2583 1185 L2565 1166 L2536 1150 L2501 1141 L2458 1141 L2432 1147 L2417 1153 L2391 1170 L2377 1185Z " fill="transparent" fill-rule="evenodd"/><path class="organo" data-cat="ti-luna" data-name="Mareas muertas" d="M3003 1146 L2991 1149 L2974 1158 L2959 1172 L2950 1184 L2940 1204 L2933 1227 L2930 1248 L2930 1272 L2937 1308 L2944 1325 L2956 1345 L2970 1359 L2984 1368 L3003 1374 L3017 1374 L3032 1370 L3045 1363 L3064 1345 L3070 1336 L3086 1298 L3090 1272 L3090 1248 L3083 1212 L3067 1179 L3049 1160 L3038 1153 L3022 1147Z M3010 1036 L2999 1038 L2987 1045 L2980 1054 L2976 1070 L2978 1081 L2985 1093 L2994 1100 L3010 1104 L3021 1102 L3033 1095 L3040 1086 L3044 1070 L3042 1059 L3035 1047 L3026 1040Z " fill="transparent" fill-rule="evenodd"/></g><g id="nombres"><polyline class="leader" points="1680,550 1680,550" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1680" cy="550" r="0"/><text class="olabel" data-cat="ti-luna" data-name="La Luna" x="1680" y="782" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">La Luna</text><text class="sub" x="1680" y="816" text-anchor="middle" data-for="La Luna" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">satélite natural de la Tierra</text><polyline class="leader" points="1100,348 990,424" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="990" cy="424" r="7"/><text class="olabel" data-cat="ti-luna" data-name="Órbita lunar" x="1100" y="300" text-anchor="start" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Órbita lunar</text><text class="sub" x="1100" y="334" text-anchor="start" data-for="Órbita lunar" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">una vuelta cada 27,3 días</text><polyline class="leader" points="2100,370 2100,370" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2100" cy="370" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Luna nueva" x="2100" y="500" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Luna nueva</text><text class="sub" x="2100" y="534" text-anchor="middle" data-for="Luna nueva" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">no se ve la cara iluminada</text><polyline class="leader" points="2760,370 2760,370" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2760" cy="370" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Cuarto creciente" x="2760" y="500" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Cuarto creciente</text><text class="sub" x="2760" y="534" text-anchor="middle" data-for="Cuarto creciente" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">mitad derecha iluminada</text><polyline class="leader" points="2100,690 2100,690" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2100" cy="690" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Luna llena" x="2100" y="820" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Luna llena</text><text class="sub" x="2100" y="854" text-anchor="middle" data-for="Luna llena" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">se ve el disco completo</text><polyline class="leader" points="2760,690 2760,690" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2760" cy="690" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Cuarto menguante" x="2760" y="820" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Cuarto menguante</text><text class="sub" x="2760" y="854" text-anchor="middle" data-for="Cuarto menguante" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">mitad izquierda iluminada</text><polyline class="leader" points="620,1220 620,1220" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="620" cy="1220" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Eclipse de Sol" x="700" y="1550" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Eclipse de Sol</text><text class="sub" x="700" y="1584" text-anchor="middle" data-for="Eclipse de Sol" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">la Luna se interpone entre el Sol y la Tierra</text><polyline class="leader" points="1850,1220 1850,1220" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="1850" cy="1220" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Eclipse de Luna" x="1700" y="1550" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Eclipse de Luna</text><text class="sub" x="1700" y="1584" text-anchor="middle" data-for="Eclipse de Luna" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">la Tierra se interpone entre el Sol y la Luna</text><polyline class="leader" points="2480,1220 2480,1220" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="2480" cy="1220" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Mareas vivas" x="2480" y="1550" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Mareas vivas</text><text class="sub" x="2480" y="1584" text-anchor="middle" data-for="Mareas vivas" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">Sol, Tierra y Luna alineados</text><polyline class="leader" points="3010,1260 3010,1260" style="stroke:#fff;stroke-width:2.4;filter:drop-shadow(0 0 2px #000) drop-shadow(0 0 2px #000)"/><circle class="leader-dot" style="stroke:#fff;stroke-width:3" cx="3010" cy="1260" r="0"/><text class="olabel" data-cat="ti-luna" data-name="Mareas muertas" x="3020" y="1550" text-anchor="middle" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round">Mareas muertas</text><text class="sub" x="3020" y="1584" text-anchor="middle" data-for="Mareas muertas" style="fill:#fff;stroke:#050a1c;stroke-width:7px;paint-order:stroke;stroke-linejoin:round;fill:#dfe6f5;stroke-width:6px">Sol y Luna en ángulo recto</text></g></svg>
+  </div>
+      <div class="meta-row">
+      <span class="tag category">LA TIERRA Y EL UNIVERSO</span>
+      <span class="tag license">CC BY 4.0 — Dibujo original</span>
+      <span class="tag">Nivel: ESO · 1º y 4º</span>
+      <button class="print-btn" onclick="window.print()">🖶 Imprimir en A4 vertical</button>
+    </div>
+  <div class="details">
+    <div>
+      <h2>Sobre este dibujo</h2>
+      <p>La <strong>Luna</strong> es el satélite natural de la Tierra y gira a su alrededor. Según su posición respecto al Sol y a la Tierra vemos distintas <strong>fases</strong>, y a veces se producen <strong>eclipses</strong>. Además, su atracción provoca las <strong>mareas</strong>. Esta lámina muestra sus <strong>10 elementos</strong>.</p>
+      <h2>Cómo leerlo</h2>
+      <ul>
+        <li><strong>Fases:</strong> la Luna no tiene luz propia; siempre está iluminada la mitad que mira al Sol, y desde la Tierra vemos más o menos de esa mitad. El ciclo dura 29,5 días.</li>
+        <li><strong>Siempre la misma cara:</strong> la Luna tarda lo mismo en girar sobre sí misma que en dar una vuelta a la Tierra.</li>
+        <li><strong>Eclipse de Sol:</strong> la Luna se interpone entre el Sol y la Tierra (luna nueva).</li>
+        <li><strong>Eclipse de Luna:</strong> la Tierra se interpone entre el Sol y la Luna (luna llena).</li>
+        <li><strong>Mareas:</strong> vivas cuando Sol, Tierra y Luna están alineados; muertas cuando forman un ángulo recto.</li>
+      </ul>
+      <h2>Actividades para clase</h2>
+      <ul class="acts">
+        <li>Con la versión <strong>Mudo</strong>, que el alumnado escriba el nombre de cada fase y de cada elemento.</li>
+        <li>Pulsar <strong>Jugar</strong> y localizar los 10 elementos.</li>
+        <li>Explicar por qué no hay un eclipse cada mes aunque haya luna nueva y luna llena.</li>
+        <li>Relacionar con <a href="geologia-estaciones.html" style="color:#8a5a22">Estaciones y movimientos de la Tierra</a>: el otro gran movimiento de nuestro planeta.</li>
+      </ul>
+      <h2>Fuente y licencia</h2><p>Lámina original de Atlas Abierto: imagen generada por ordenador (la Luna y la Tierra, con continentes reales de GISCO/Eurostat, CC BY 4.0, son representaciones, no fotografías) y esquema fuera de escala. Los datos proceden de valores de referencia de la NASA. Licencia <strong>CC BY 4.0</strong>: puedes copiarla, adaptarla y usarla citando Atlas Abierto (atlasabierto.org).</p>
+    </div>
+    <aside>
+      <div class="info-row"><span class="info-label">Categoría</span><span class="info-val">La Tierra y el universo</span></div>
+      <div class="info-row"><span class="info-label">Contenido</span><span class="info-val">10 estructuras</span></div>
+      <div class="info-row"><span class="info-label">Origen</span><span class="info-val">Dibujo original de Atlas Abierto</span></div>
+      <div class="info-row"><span class="info-label">Licencia</span><span class="info-val">CC BY 4.0 — citar la fuente</span></div>
+    </aside>
+  </div>
+</div>
+<footer><div class="wrap"><p>Atlas Abierto — mapas educativos de dominio público, para usar sin fricción en el aula.</p></div></footer>
+<script>
+(function(){
+  var cbs=[].slice.call(document.querySelectorAll('[data-layer]'));
+  function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none';}
+  var btns=[].slice.call(document.querySelectorAll('.preset-btns button'));
+  function setBtn(n){btns.forEach(function(b){b.classList.toggle('active',b.dataset.preset===n);});document.body.classList.toggle('mudo',n==='mudo');}
+  cbs.forEach(function(c){c.addEventListener('change',function(){show(c.dataset.layer,c.checked);if(c.dataset.layer==='nombres')setBtn(c.checked?'completo':'mudo');});});
+  btns.forEach(function(b){b.addEventListener('click',function(){var on=b.dataset.preset==='completo';cbs.forEach(function(c){if(c.dataset.layer==='nombres'){c.checked=on;show('nombres',on);}});setBtn(b.dataset.preset);});});
+})();
+</script>
+<script type="application/json" id="fichas-data">{"La Luna": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-la-luna.webp", "txt": "Único satélite natural de la Tierra. Es un cuerpo rocoso sin atmósfera, de unos 3 475 km de diámetro (algo más de la cuarta parte del de la Tierra). Gira sobre sí misma en el mismo tiempo que tarda en dar una vuelta a la Tierra, por eso siempre vemos la misma cara. Las zonas oscuras son los «mares», antiguas llanuras de lava, y las claras son tierras altas llenas de cráteres.", "dato": "Está a unos 384 000 km de la Tierra y su luz, que es luz del Sol reflejada, tarda poco más de 1 segundo en llegar. Se aleja de nosotros unos 3,8 cm cada año."}, "Órbita lunar": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-orbita-lunar.webp", "txt": "Trayectoria que sigue la Luna alrededor de la Tierra, en sentido contrario al de las agujas del reloj visto desde el polo norte. Una vuelta respecto a las estrellas dura 27,3 días; como la Tierra avanza a la vez alrededor del Sol, el ciclo completo de las fases dura 29,5 días (un mes lunar o lunación).", "dato": "La órbita es una elipse y está inclinada unos 5° respecto a la órbita de la Tierra alrededor del Sol. Por eso no hay un eclipse en cada luna nueva ni en cada luna llena."}, "Luna nueva": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-luna-nueva.webp", "txt": "Fase en la que la Luna está entre la Tierra y el Sol. La cara iluminada mira al Sol y la que vemos desde la Tierra queda a oscuras, así que la Luna no se ve en el cielo nocturno. Es el comienzo del ciclo lunar.", "dato": "Solo en luna nueva puede producirse un eclipse de Sol. La luna nueva sale y se pone casi a la vez que el Sol, por eso durante el día está en el cielo pero no se ve."}, "Cuarto creciente": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-cuarto-creciente.webp", "txt": "Una semana después de la luna nueva, la Luna forma un ángulo recto con el Sol visto desde la Tierra y vemos iluminada la mitad de su disco: la mitad derecha en el hemisferio norte. Cada noche se ve más iluminada hasta llegar a la luna llena.", "dato": "Se llama «creciente» porque la parte iluminada va aumentando. Se ve sobre todo por la tarde y en las primeras horas de la noche. En el hemisferio sur las fases se ven al revés: la mitad iluminada es la izquierda."}, "Luna llena": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-luna-llena.webp", "txt": "Fase en la que la Tierra queda entre el Sol y la Luna. La cara iluminada es la que mira hacia nosotros y vemos el disco completo. Sale cuando el Sol se pone y se ve durante toda la noche.", "dato": "Solo en luna llena puede producirse un eclipse de Luna. Ocurre unos 14,8 días después de la luna nueva, a mitad del ciclo."}, "Cuarto menguante": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-cuarto-menguante.webp", "txt": "Una semana después de la luna llena, la Luna vuelve a formar un ángulo recto con el Sol. Vemos iluminada la otra mitad del disco, la izquierda en el hemisferio norte, y cada noche se ve menos iluminada hasta llegar a la luna nueva.", "dato": "Se llama «menguante» porque la parte iluminada va disminuyendo. Sale pasada la medianoche y se ve por la mañana. En el hemisferio sur la mitad iluminada es la derecha."}, "Eclipse de Sol": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-eclipse-de-sol.webp", "txt": "Se produce cuando la Luna pasa entre el Sol y la Tierra (siempre en luna nueva) y su sombra cae sobre una zona de la Tierra. Dentro de la sombra, o umbra, el eclipse es total y se hace de noche en pleno día; en la penumbra, mucho más extensa, el eclipse es parcial.", "dato": "El eclipse total solo se ve desde una franja estrecha de la Tierra (de unos 270 km como máximo) y dura, como mucho, unos 7 minutos. Nunca debe mirarse al Sol sin protección ocular especial."}, "Eclipse de Luna": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-eclipse-de-luna.webp", "txt": "Se produce cuando la Tierra se interpone entre el Sol y la Luna (siempre en luna llena) y la Luna entra en la sombra de la Tierra. Se ve desde todo el lado de la Tierra donde es de noche. Si la Luna entra del todo en la umbra, el eclipse es total y la Luna se ve de color rojizo.", "dato": "El color rojizo se debe a que la atmósfera terrestre desvía hacia la Luna la luz roja del Sol. La fase total puede durar más de una hora y, a diferencia del eclipse de Sol, es seguro mirarlo a simple vista."}, "Mareas vivas": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-mareas-vivas.webp", "txt": "Mareas de mayor amplitud: la pleamar es más alta y la bajamar más baja. Se producen cuando el Sol, la Tierra y la Luna están alineados (en luna nueva y en luna llena), porque la atracción del Sol y la de la Luna se suman.", "dato": "Las mareas se deben sobre todo a la atracción de la Luna, que forma dos abultamientos de agua: uno hacia la Luna y otro en el lado opuesto. La Tierra gira bajo ellos y por eso hay dos pleamares al día. Las mareas vivas ocurren cada unas dos semanas."}, "Mareas muertas": {"grupo": "La Tierra y la Luna", "img": "ficha/geo-mareas-muertas.webp", "txt": "Mareas de menor amplitud. Se producen cuando el Sol y la Luna forman un ángulo recto visto desde la Tierra (en cuarto creciente y cuarto menguante): sus atracciones se contrarrestan en parte y la diferencia entre pleamar y bajamar es menor.", "dato": "Ocurren también cada unas dos semanas, alternando con las vivas. En el Cantábrico la diferencia entre pleamar y bajamar puede superar los 4 metros en mareas vivas, mientras que en el Mediterráneo es de apenas unos decímetros."}}</script>
+<script src="zoom.js?v=3" defer></script>
+<script src="ficha.js?v=3" defer></script>
+<script src="juego.js?v=20261123f" defer></script>
+<!-- goatcounter -->
+<script data-goatcounter="https://atlasabierto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body></html>
